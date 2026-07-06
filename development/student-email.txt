@@ -1,0 +1,13 @@
+Hi,
+
+This Fall semsester we are piloting a new course about the creation and management of Open Source Software projects.  Whis will be CS 301R - Section 001.  While similar to the 301R we offered last year and covering similar topics, this one focuses on the skills to create an lead a project instead of just contributing to one.  It has CS 340 as a prerequisite which is why you are receiving this e-mail.
+
+The course description (with a bit more detail than in the catalog) is:
+
+"This course introduces the practices required to conceive, justify, and found a lasting, open-source software project. Working individually and then (optionally) in small teams, students discover a real user need, scope a product, write proposal and design documentation, set up an open-source-ready repository with the governance and processes future contributors need, and build an initial MVP/prototype. Topics include product discovery and needfinding, feasibility and scope analysis, software design documents, git-based collaboration, technical communication, open-source licensing and governance, issue and pull-request workflows, and early-stage project management. The course emphasizes engineering judgment, technical communication, and building software that serves a real need and that others can join and build on."
+
+Longer term, this will be the intital course in a 3-semester capstone class for the Software Engineering Emphasis but it is really designed for anyone that wants to start and manage an open source project of their own.  Projects developed during this course in the Fall 2026 semester will be eligible for selection as projects built by the Software Engineering Capstone teams in Winter 2027, subject to selection by the capstone instructors.  If you are planning on taking that capstone class, this is an opportunity to develop a project you may get to build the following semester with your fellow classmates.  And even if you are not in the Software Engineering Emphasis, this is an opportunity to found a contributor-ready open source project of your own.
+
+If this sounds like something you'd be interested in, we'd love to have you register for the class this coming semester.  The class is currently limited to 20 students, so sign up sooner rather than later to make sure you get in.  If we get a large wait list, we may open the enrollment somewhat.
+
+- Dr. Stephens

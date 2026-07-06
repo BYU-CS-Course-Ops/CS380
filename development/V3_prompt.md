@@ -1,0 +1,9 @@
+Using the prompt in the `SECoursePrompt.docx` file, Codex generated the initial version of the this course as found in the `CS301R-ProjectCreation.docx` file.  I then had it read the repo at  `../2025-2026/open-source-project-course` and give recommendations on how to fold in the relevant modules from the earlier version of this course along with some changes to the course content.  The results of this is found in the `CS301R-ProjectCreation_v2.docx` file.  A summary version of this is in the `software_engineering_course_summary_updated.docx` file.
+
+What we want to do how is syntesize all of this into a single cohesive class plan, but we also want to fold in some additional information that may change the course structure somewhat.  Specifically, you should look at the file at `../../../Committees/SoftwareEngineering/byu-se-emphasis/product/product.md`.  This describes the full 3 semester capstone program that we are working toward.  This course is the prototype for the first semester of this 3 semester sequence.  However, we are also aiming this course a the general CS student body to learn to create and manage an open source project generally, not just for the capstone.  
+
+Finally, there is an e-mail thread discussing this class, kicked off by sharing that summary document at `Re  First Draft 301R class - Jonathan Sillito (sillito@cs.byu.edu) - 2026-05-06 0930.eml`.
+
+What we want is a detailed outline of the course, week by week with topics, assignments, and assessments, much like in the two "CS301R-*" files.  Collect all the information from those files and repositories, and ask any clarifying questions you need to.  I want this to be fairly interactive.
+
+When we are all done, write the output to `CS301R-ProjectCreation_v3.md` for now, we can convert it to a docx file later.

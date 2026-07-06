@@ -1,0 +1,147 @@
+# Assignment — Idea Briefs
+
+**CS 301R · Software Engineering Studio I: Founding an Open-Source Project**
+**Checkpoint 1 (CP1) · Individual work**
+**Assigned:** Wed, Sep 2 · **Due:** start of class **Wed, Sep 23** (bring to the convergence workshop)
+**Weight:** part of the 10% Discovery grade (≈5%)
+
+---
+
+## The short version
+
+Produce **three one-page Idea Briefs** — three genuinely different problems worth founding a software project around — plus a **short reflection** on what makes a project worth building to last. This is the opening move of the course: before you commit to *one* idea, you deliberately explore *several*.
+
+You are not choosing a project yet. You are stocking the shelf with real options.
+
+---
+
+## Why this assignment exists
+
+Most of your coursework so far has handed you a problem. Founding a project is different: the first and hardest job is to **find a problem worth solving** and to convince yourself (and later your classmates) that it's real.
+
+This assignment trains the *divergent* half of the course's Creative Problem Solving cycle. Good founders generate many candidate problems and defer judgment before converging on one. Three briefs force you out of the "I already know what I want to build" trap and into genuine exploration. The strongest idea you carry into your proposal (CP3) and pitch (CP4) is often *not* the first one you thought of — it's the one that survived comparison against alternatives.
+
+These briefs also feed everything downstream: the idea you converge on becomes your **Product Definition Brief** (CP2), your **proposal**, and — if it's selected — the project you may carry into the capstone as its sponsor.
+
+---
+
+## What to produce
+
+Submit a single document (or PDF) containing:
+
+1. **Three Idea Briefs**, one page each, following the template below.
+2. **One short reflection** (½–1 page): *What makes a software project worth building to last?*
+
+That's it — four pages or so total. Concision is part of the grade.
+
+### The three briefs must be genuinely different
+
+Three variations on the same app do not count as three ideas. Aim for briefs that differ in **who they serve** and **what domain they touch** — e.g., a tool for a campus group, a service for a hobbyist community, and something for a small local organization. Breadth now gives you real choices later.
+
+---
+
+## Idea Brief template (one page each)
+
+Use these headings. Keep the whole thing to a single page — tight writing is the point.
+
+**Working title.** A memorable name or one-line handle.
+
+**The problem / need.** What's broken, missing, or painful? State it as a *need*, not a solution. Two or three sentences.
+
+**Who has this problem.** Name a specific, reachable userbase — not "everyone." Who feels this need most acutely?
+
+**Signal that it's real.** Any early evidence the need exists: something you observed, a conversation, a forum thread, your own repeated frustration. Preliminary is fine; honesty about how thin the signal is counts in your favor.
+
+**A possible shape of a solution.** A *light* sketch of what software might address this. Stay high-level — you're exploring, not designing.
+
+**Why it could be rich.** Could this grow into a project big enough for a multi-disciplinary team over multiple semesters — touching design, data, UI, infrastructure, operations? Name the dimensions it might exercise. (This is the course's north star; see the selection criteria below.)
+
+**What you'd need to learn.** The biggest unknowns — technical, about the users, or about feasibility.
+
+**Why it interests you.** One or two sentences. Founding a project is a long commitment; genuine interest matters.
+
+---
+
+## The reflection
+
+In ½–1 page, answer: **What makes a software project worth building to last?**
+
+Draw on the Week 1 discussion of the founder/maintainer mindset and the project "shape" we steer toward. This is not a summary of the readings — it's your own developing criteria for what separates a throwaway exercise from a project others would want to join and keep building. Strong answers usually come back to the people on the other side of the work: who a project actually serves, and who will join to help build it. You'll be applying these criteria to your own ideas in the Week 3 convergence workshop.
+
+---
+
+## How this fits the first three weeks
+
+You have three weeks to build these briefs. Don't write them the night before — use the class sessions:
+
+| When | Session | How it feeds your briefs |
+|---|---|---|
+| Wed, Sep 2 | Course overview; founder mindset; selection criteria; intro to CPS | Start your **idea journal** — capture problems, not solutions |
+| Wed, Sep 9 | Divergent problem-space workshop | Generate breadth; practice deferring judgment |
+| Mon–Wed, Sep 14/16 | Open source & discovery methods | Learn to spot and probe real needs; gather early signal |
+| Mon, Sep 21 | Feasibility & richness check | Pressure-test which ideas could be rich and buildable |
+| **Wed, Sep 23** | **Convergence workshop — briefs due** | Score your ideas against the criteria; pick 1–2 to carry forward |
+
+**Keep an idea journal** across these weeks. The briefs are the polished output of a messier exploration; graders can tell the difference between three ideas developed over three weeks and three invented in one evening.
+
+---
+
+## Requirements & constraints
+
+- **Individual work.** This checkpoint is done alone (Weeks 1–5 are individual).
+- **Length.** Three briefs, one page each; reflection ½–1 page. Going long works against you.
+- **Format.** Markdown or PDF. Plain and readable beats decorated.
+- **Real needs, real users.** Toy problems and purely self-serving tools score low on real-need orientation. Founding software is ultimately about serving real people, so the strongest ideas start from someone else's genuine need, not just a build you'd find fun. Talk to or observe potential users where you can — even one conversation sharpens a brief.
+- **AI use.** You may use AI tools to brainstorm or tighten prose, but the ideas, judgment, and reflection must be yours and you must be able to explain them. Disclose substantial AI use.
+
+---
+
+## Project selection criteria (what "good" looks like)
+
+Your briefs — and later your proposal and pitch — are judged against the course's selection criteria. A strong project idea:
+
+- **Serves a real need for a real, reachable userbase** — not a toy.
+- **Is rich / broad** — could a multi-disciplinary team grow into it?
+- **Is open-source-worthy** — appropriate to build and release in the open.
+- **Has a one-semester MVP** — a coherent vertical slice is achievable at ~10 hrs/week.
+- **Is extensible** — others could keep building on it as the team grows.
+- **Has a tractable stack** — technologies you could justify and support.
+- **Has room to grow** — others can join and build on it, with you leading (potentially into the capstone as its sponsor).
+
+At the brief stage you don't need to satisfy all of these fully — but the best briefs already gesture at real need, richness, and feasibility.
+
+---
+
+## Grading
+
+Scored on a 100-point analytic rubric; counts toward the 10% Discovery grade. Reach at least **Developing** on every criterion to stay on a passing track.
+
+| Criterion | Weight | What it measures |
+|---|---|---|
+| **Divergence & breadth** | 25 | Three genuinely distinct problem spaces spanning different users/domains — evidence of real divergent exploration, not one idea in three costumes. |
+| **Real-need orientation** | 25 | Each idea names a plausible real user and a felt need, with at least a hint of evidence. Keeps the focus on serving someone. |
+| **Richness potential** | 20 | At least one idea visibly could grow into a multi-dimensional, lasting project. |
+| **Clarity & concision** | 15 | Crisp, one-page discipline; ideas are easy to grasp quickly. |
+| **Reflection** | 15 | A thoughtful, personal take on what makes a project worth building to last — not a generic summary. |
+
+**Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Your score on each criterion = (level ÷ 4) × weight.
+
+---
+
+## Tips and common pitfalls
+
+- **Deferring judgment is the skill.** Don't kill an idea early because you can't see the whole solution. Capture it; evaluate later.
+- **"Everyone" is not a userbase.** The tighter and more reachable your user, the stronger the brief.
+- **Don't design.** A one-page brief that dives into database schemas has missed the point — you're exploring problems, not committing to architecture.
+- **Thin signal, honestly labeled, beats fake confidence.** "I've felt this myself and found two forum threads about it" is more credible than an unsupported claim that millions need this.
+- **Make them different on purpose.** If two of your briefs could merge, replace one.
+
+---
+
+## Submission
+
+Bring your briefs + reflection to the **convergence workshop on Wed, Sep 23** (submit through the course LMS by the start of class). You'll use them live that day to score your own ideas against the criteria and get peer and instructor feedback before choosing which 1–2 to develop into your **Product Definition Brief (CP2)** and **Written Proposal (CP3)**.
+
+---
+
+*Part of the Discovery sequence: **CP1 Idea Briefs → CP2 Product Definition Brief → CP3 Written Proposal → CP4 Pitch #1**. See the course schedule (`CS301R-Schedule-Fall2026.md`) and rubrics (`rubrics.md`) for the full picture.*

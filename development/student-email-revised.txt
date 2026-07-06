@@ -1,0 +1,29 @@
+Subject: Found your own open-source project - new CS 301R this Fall
+
+Hi,
+
+Have you ever wanted to start your own software project - not a class assignment, but a real, open-source project of your choosing that other people could use and help build? This Fall we're piloting a new course on exactly that: CS 301R, Section 001 - Founding an Open-Source Project.
+
+Most CS courses hand you the problem. This one flips it: you'll find a real user need, prove it's worth solving, and lay the foundation for a project others can join. By the end of the semester you'll have:
+
+- a working MVP of a project you founded,
+- an open-source-ready repository - license, governance, and docs ready for contributors, and
+- a public demo where you pitch what you built.
+
+Along the way you'll practice the founder's skill set: product discovery and need-finding, feasibility and scoping, design documents, git-based collaboration, open-source licensing and governance, technical communication, and early-stage project management.
+
+You're receiving this because you've completed CS 340, the prerequisite.
+
+Why it might be worth your time: longer term, this will become the first course in the Software Engineering Emphasis's three-semester studio (capstone) sequence. Projects you found this Fall are eligible to be built by Software Engineering Capstone teams in Winter 2027 (subject to the capstone instructors' selection) - with you as the project's sponsor. If you're heading for capstone, this is your chance to develop the project you might lead there. And if you're not in the SE Emphasis, it's simply a great chance to found a contributor-ready, open-source project of your own.  Either way, you'll have a project in your portfolio when applying to jobs or grad school that you can talk about in interviews.
+
+The official course description:
+
+"This course introduces the practices required to conceive, justify, and found a lasting, open-source software project. Working individually and then (optionally) in small teams, students discover a real user need, scope a product, write proposal and design documentation, set up an open-source-ready repository with the governance and processes future contributors need, and build an initial MVP/prototype. Topics include product discovery and need-finding, feasibility and scope analysis, software design documents, git-based collaboration, technical communication, open-source licensing and governance, issue and pull-request workflows, and early-stage project management. The course emphasizes engineering judgment, technical communication, and building software that serves a real need and that others can join and build on."
+
+The class is capped at 20 students, so register sooner rather than later to be sure of a spot - if the wait list grows, we may open a few more seats.
+
+Interested? You can register via MyMap directly, no Add Code required.
+
+- Dr. Stephens
+
+P.S. - If you took our 301R Open Source Project course last year, this one covers some of the same topics but from the founder instead of contributor mindset, and also covers some topics not covered in that class.
