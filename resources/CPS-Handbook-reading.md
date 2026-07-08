@@ -8,7 +8,8 @@
 
 **"Creative Problem Solving — a quick, down-and-dirty handbook"** — Knowinnovation & Inclusive Innovation (© 2012–2017). This is the same handbook the 2025–2026 course linked (hosted on a Berkeley site).
 
-- **Link:** https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf
+- **Local copy (use this):** `resources/cps_handbook.pdf` — saved in this folder for the LMS.
+- *Original source:* https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf
 - **What it is:** a 33-page practitioner handbook on the Osborn–Parnes CPS process.
 
 **Why it's the right pick for us — it's tightly aligned with what we already teach.** The divergent/convergent principles and the specific tools named in our Session 1 and Session 2 outlines come straight from this document:
@@ -46,7 +47,7 @@ This keeps the load reasonable for a first pre-reading while covering everything
 
 ## Storage note
 
-I could not download the binary PDF directly into this folder (tool limitation — I can read web content but not save arbitrary files). To store it here, grab it from the link above and drop it in `resources/`, or I can save a plain-text/markdown rendition if you'd prefer a self-hosted copy. If you do redistribute the PDF to enrolled students, keep the Knowinnovation / Inclusive Innovation attribution and © notice intact (educational use).
+The handbook is stored locally at **`resources/cps_handbook.pdf`** — reference that copy in the outlines and post it (or the assigned excerpt) to the LMS. Keep the Knowinnovation / Inclusive Innovation attribution and © notice intact when redistributing to enrolled students (educational use). The original source URL is retained above and in Sources for provenance.
 
 ---
 

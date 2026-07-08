@@ -9,8 +9,8 @@
 
 **Read both of these before you come — we'll build on them right away:**
 
-1. **Creative Problem Solving handbook** — the assigned excerpt (posted on the LMS / in course resources). Focus on the *divergent vs. convergent thinking* section and the tool write-ups; you can skim the parts about facilitated group sessions.
-2. **"Channeling Your Creativity,"** Elder Robert D. Hales (*New Era*, Feb 2004).
+1. **[Creative Problem Solving handbook](https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf)** — the assigned excerpt (also posted on the LMS). Focus on the *divergent vs. convergent thinking* section and the tool write-ups; you can skim the parts about facilitated group sessions.
+2. **["Channeling Your Creativity,"](https://www.churchofjesuschrist.org/study/new-era/2004/02/channeling-your-creativity?lang=eng)** Elder Robert D. Hales (*New Era*, Feb 2004).
 
 **Also bring:** your idea journal — with a week's worth of entries — and a handful of raw problems you've noticed.
 

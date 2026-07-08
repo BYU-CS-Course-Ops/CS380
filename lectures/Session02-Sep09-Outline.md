@@ -2,7 +2,7 @@
 
 **CS 301R · Software Engineering Studio I: Founding an Open-Source Project**
 **Session 2 of 27 · Wed, Sep 9, 2026 · 75-minute block**
-**Prior reading:** YES — the first session with pre-reading. Two assigned readings: (1) a focused excerpt of the Creative Problem Solving (Osborn–Parnes) handbook — see `resources/CPS-Handbook-reading.md` for the recommended page subset; and (2) *"Channeling Your Creativity,"* Elder Robert D. Hales (New Era, Feb 2004).
+**Prior reading:** YES — the first session with pre-reading. Two assigned readings: (1) a focused excerpt of the [Creative Problem Solving (Osborn–Parnes) handbook](https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf) — see `resources/CPS-Handbook-reading.md` for the recommended page subset (a local copy is in `resources/cps_handbook.pdf`); and (2) [*"Channeling Your Creativity,"* Elder Robert D. Hales](https://www.churchofjesuschrist.org/study/new-era/2004/02/channeling-your-creativity?lang=eng) (New Era, Feb 2004).
 **Maps to:** Design Week 1, Session B — *divergent problem-space workshop: brainstorm needs and users (not solutions yet); practice deferring judgment; feed the idea journal.*
 
 > **Status: OUTLINE (initial draft).** Second of the two opening Wednesdays. Session 1 planted the CPS vocabulary and launched the idea journal; today students *do* CPS for real. This is the first true workshop — minimal lecture, maximum doing.
@@ -35,8 +35,8 @@ By the end of Session 2, a student can:
 ## Instructor prep / materials
 
 - **Assign both pre-readings in advance** and expect them done — this is the session where the reading habit starts:
-  - the **CPS handbook** focused subset (see `resources/CPS-Handbook-reading.md`), and
-  - **"Channeling Your Creativity,"** Elder Robert D. Hales (New Era, Feb 2004).
+  - the **[CPS handbook](https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf)** focused subset (see `resources/CPS-Handbook-reading.md`; local copy `resources/cps_handbook.pdf`), and
+  - **["Channeling Your Creativity,"](https://www.churchofjesuschrist.org/study/new-era/2004/02/channeling-your-creativity?lang=eng)** Elder Robert D. Hales (New Era, Feb 2004).
 - **Egg-drop is paper-only** (design + reasoning; no build, no drop) — it's there to *demonstrate the process*. Prepare the **constraint set** (see §3) on a card or slide to hand out or reveal on request.
 - **Real sticky notes** and markers, plus wall/board space for each group; **printed brainwriting sheets** (paper) for the build phase; a visible timer.
 - The one-page **Idea Journal** and **CP1 Idea Briefs** handouts on hand.
