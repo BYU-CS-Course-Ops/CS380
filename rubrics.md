@@ -285,5 +285,5 @@ This is a **first-draft set of rubrics** — one per graded assignment (checkpoi
 
 - **Calibrate point weights** against a couple of real student artifacts once the first cohort submits — the within-rubric weights are first estimates.
 - **Decide bundle splits** explicitly (Discovery, Git+Tech-Comm, Final) rather than the suggested even splits if some artifacts deserve more.
-- **Peer-evaluation rubric** for the Week-5 pitch scoring and the midpoint/end confidential peer evals is referenced but not yet written — worth its own short rubric.
+- **Peer-evaluation system:** drafted — see `development/Peer-Evaluation-System.md` (design + grade-flow mechanics), `resources/Pitch-Evaluation-Sheet.md` (Pitch Day instrument), and `resources/Peer-Evaluation-Form.md` (midpoint/end confidential evals).
 - **Revision-window mechanics** (how regrades after revision are averaged or replaced) should be pinned down before the term.
