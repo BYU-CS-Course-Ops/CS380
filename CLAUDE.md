@@ -50,9 +50,9 @@ Students **found** an open-source project (vs. contributing to one): find and va
 
 1. **License/OSS short response due date** — handout + Session 4 materials say Mon Sep 21; the Session 3 *deck* wrap slide still says "before Wed, Sep 16." Reconcile once decided (deck rebuild needed either way).
 2. **Peer-eval ⚑ items** in `development/Peer-Evaluation-System.md`: platform, whether presenters see numeric averages, multiplier bounds (±10% proposed), midpoint weight, submission-required.
-3. Policy floors proposed in outlines, not ratified: ≥1 non-author PR approval; MVP testing floor ("core slice logic has tests"); spike required vs. recommended; debug-log floor; demo-week main-freeze rule; recorded-clip fallback allowed as declared last resort; team-size/oversubscription handling.
+3. Policy floors proposed in outlines, not ratified: ≥1 non-author PR approval; MVP testing floor ("core slice logic has tests"); debug-log floor; demo-week main-freeze rule; recorded-clip fallback allowed as declared last resort; team-size/oversubscription handling. *(**Spike: ratified** — at least one spike required, graded in CP3 Feasibility.)*
 4. **Pitch Day arithmetic** — fits ~8 pitches in 75 min; needs an enrollment-triggered plan (announced in Session 9).
-5. CP1+CP2 same-day turn-in mechanics; CP7/CP8 submission = repo pointer (recommended).
+5. ~~CP1+CP2 same-day turn-in mechanics~~ **resolved:** CP2 moved to Mon, Sep 28 (Session 7) so students converge at the Sep 23 workshop *then* write CP2; CP1 still due at the workshop. Only the CP1 in-class turn-in time is left to confirm (start-of-class recommended). CP7/CP8 submission = repo pointer (recommended).
 
 ## Work queue (rough priority)
 

@@ -49,14 +49,14 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 2 | Sep 9 | Wed | Wk 1 | B | Divergent **problem-space** workshop — brainstorm needs & users (not solutions); defer judgment | — |
 | 3 | Sep 14 | Mon | Wk 2 | A | Open-source model & license comparison; governance basics; lead-as-sponsor | — |
 | 4 | Sep 16 | Wed | Wk 2 | B | Discovery workshop — interviewing, good questions, honest persona/proxy construction, consent/ethics | License/OSS short response |
-| 5 | Sep 21 | Mon | Wk 3 | A | Feasibility & risk categories; learning-plan template; richness check | — |
-| 6 | Sep 23 | Wed | Wk 3 | B | Convergence workshop — score ideas vs. criteria; peer + instructor feedback; pick 1–2 | **CP1 Idea Briefs** + **CP2 Product Definition Brief** |
+| 5 | Sep 21 | Mon | Wk 3 | A | Feasibility & risk categories; self-directed learning & the learning plan | — |
+| 6 | Sep 23 | Wed | Wk 3 | B | Convergence workshop — richness check; score ideas vs. criteria; peer + instructor feedback; pick 1–2 | **CP1 Idea Briefs** |
 
 ### Phase 2 — Ideate & Pitch → Form Teams
 
 | # | Date | Day | Design Wk | Session | Topic & in-class focus | Due / Checkpoint |
 |---|---|---|---|---|---|---|
-| 7 | Sep 28 | Mon | Wk 4 | A | Proposal anatomy; arguing feasibility without overpromising; strong vs. weak examples | — |
+| 7 | Sep 28 | Mon | Wk 4 | A | Proposal anatomy; arguing feasibility without overpromising; strong vs. weak examples | **CP2 Product Definition Brief** |
 | 8 | Sep 30 | Wed | Wk 4 | B | Peer review of proposal scope & risk; scope-narrowing clinic | — |
 | 9 | Oct 5 | Mon | Wk 5 | A | Pitch workshop; proposal-evaluation rubric; giving constructive critique | **CP3 Written Proposal** (individual) |
 | 10 | Oct 7 | Wed | Wk 5 | B | **Pitch Presentation #1 (course hinge)** — persuade + recruit; peer scoring; instructor input; **selection & team formation** | **CP4 Pitch #1**; teams form + team charter |
@@ -109,7 +109,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | CP | Checkpoint | Real due date | Session |
 |---|---|---|---|
 | 1 | Idea Briefs | Wed, Sep 23 | 6 |
-| 2 | Product Definition Brief | Wed, Sep 23 | 6 |
+| 2 | Product Definition Brief | Mon, Sep 28 | 7 |
 | 3 | Written Proposal (individual) | Mon, Oct 5 | 9 |
 | 4 | Pitch Presentation #1 + team formation | Wed, Oct 7 | 10 |
 | 5 | Design Document (revised) | Wed, Oct 21 | 14 |
