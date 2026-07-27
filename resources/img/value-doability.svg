@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 660" font-family="Segoe UI, Calibri, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="660" fill="#FFFFFF"/>
+
+  <!-- quadrant fills -->
+  <!-- TL: high value, low do-ability -->
+  <rect x="180" y="70"  width="240" height="240" fill="#E8A33D" fill-opacity="0.16" stroke="#E8A33D" stroke-width="1.5"/>
+  <!-- TR: high value, high do-ability -->
+  <rect x="420" y="70"  width="240" height="240" fill="#3E9C6B" fill-opacity="0.16" stroke="#3E9C6B" stroke-width="1.5"/>
+  <!-- BL: low value, low do-ability -->
+  <rect x="180" y="310" width="240" height="240" fill="#D9614C" fill-opacity="0.16" stroke="#D9614C" stroke-width="1.5"/>
+  <!-- BR: low value, high do-ability -->
+  <rect x="420" y="310" width="240" height="240" fill="#5F7284" fill-opacity="0.16" stroke="#5F7284" stroke-width="1.5"/>
+
+  <!-- axes -->
+  <line x1="180" y1="560" x2="180" y2="58"  stroke="#14233A" stroke-width="2.5"/>
+  <line x1="170" y1="550" x2="672" y2="550" stroke="#14233A" stroke-width="2.5"/>
+  <polygon points="180,48 174,62 186,62" fill="#14233A"/>
+  <polygon points="682,550 668,544 668,556" fill="#14233A"/>
+
+  <!-- axis titles -->
+  <text x="42" y="310" transform="rotate(-90 42 310)" text-anchor="middle" font-size="21" font-weight="700" fill="#14233A" letter-spacing="3">VALUE</text>
+  <text x="420" y="632" text-anchor="middle" font-size="21" font-weight="700" fill="#14233A" letter-spacing="3">DO-ABILITY</text>
+
+  <!-- axis low/high markers -->
+  <text x="168" y="80"  text-anchor="end" font-size="14" fill="#5F7284">high</text>
+  <text x="168" y="548" text-anchor="end" font-size="14" fill="#5F7284">low</text>
+  <text x="190" y="576" text-anchor="start" font-size="14" fill="#5F7284">low</text>
+  <text x="650" y="576" text-anchor="end" font-size="14" fill="#5F7284">high</text>
+
+  <!-- TR: PURSUE (with star) -->
+  <polygon points="540,143 543.06,151.79 552.37,151.98 544.95,157.61 547.64,166.52 540,161.2 532.36,166.52 535.05,157.61 527.63,151.98 536.94,151.79" fill="#E8A33D"/>
+  <text x="540" y="196" text-anchor="middle" font-size="26" font-weight="700" fill="#2C7A50">PURSUE</text>
+  <text x="540" y="222" text-anchor="middle" font-size="14" fill="#14233A">high value &#183; high do-ability</text>
+
+  <!-- TL: narrow or spike -->
+  <text x="300" y="172" text-anchor="middle" font-size="19" font-weight="700" fill="#B9781C">NARROW SCOPE</text>
+  <text x="300" y="196" text-anchor="middle" font-size="19" font-weight="700" fill="#B9781C">or SPIKE FIRST</text>
+  <text x="300" y="224" text-anchor="middle" font-size="14" fill="#14233A">high value &#183; low do-ability</text>
+
+  <!-- BL: drop -->
+  <text x="300" y="424" text-anchor="middle" font-size="24" font-weight="700" fill="#B23F2C">DROP</text>
+  <text x="300" y="452" text-anchor="middle" font-size="14" fill="#14233A">low value &#183; low do-ability</text>
+
+  <!-- BR: only if trivial -->
+  <text x="540" y="424" text-anchor="middle" font-size="19" font-weight="700" fill="#47586B">ONLY IF TRIVIAL</text>
+  <text x="540" y="452" text-anchor="middle" font-size="14" fill="#14233A">low value &#183; high do-ability</text>
+</svg>

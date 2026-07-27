@@ -2,8 +2,10 @@
   export-pptx-png.ps1 - export a .pptx to one PNG per slide using the installed
   Windows PowerPoint (COM automation). Called by render-deck.sh from WSL.
 
-  Refuses to run if PowerPoint is already open, because COM would attach to and
-  then quit that instance, closing the deck you're reviewing.
+  Guard: if PowerPoint is genuinely open (a visible window), this refuses so it
+  won't disturb an interactive review session. But a *headless* leftover
+  instance from an earlier COM run (a process with no window) is cleared
+  automatically, so a stale process never blocks a render.
 
   Params take WINDOWS paths (render-deck.sh translates them with wslpath -w).
 
@@ -21,10 +23,20 @@ $ErrorActionPreference = "Stop"
 $msoFalse = 0
 $msoTrue  = -1
 
-if (Get-Process -Name POWERPNT -ErrorAction SilentlyContinue) {
-  Write-Error "PowerPoint is already running. Close it first; automation would disrupt your open session."
-  exit 3
+$ppts = Get-Process -Name POWERPNT -ErrorAction SilentlyContinue
+if ($ppts) {
+  # A process with a non-empty main-window title is a real, interactive session.
+  $interactive = @($ppts | Where-Object { $_.MainWindowTitle -ne "" })
+  if ($interactive.Count -gt 0) {
+    Write-Error "PowerPoint is open (a window is showing). Close it first; automation would disrupt your session."
+    exit 3
+  }
+  # Otherwise these are headless leftovers from an earlier run - clear them.
+  Write-Output ("Clearing {0} stale headless PowerPoint process(es)..." -f $ppts.Count)
+  $ppts | Stop-Process -Force -ErrorAction SilentlyContinue
+  Start-Sleep -Milliseconds 800
 }
+
 if (-not (Test-Path -LiteralPath $InPath)) { Write-Error "Input not found: $InPath"; exit 2 }
 if (-not (Test-Path -LiteralPath $OutDir)) { New-Item -ItemType Directory -Path $OutDir -Force | Out-Null }
 Get-ChildItem -LiteralPath $OutDir -Filter *.PNG -ErrorAction SilentlyContinue | Remove-Item -Force -ErrorAction SilentlyContinue

@@ -78,6 +78,7 @@ most necessary for **founding a project that serves real users and that others c
 
 - product discovery, needfinding, and proposal writing
 - feasibility and scope analysis; MVP thinking
+- evaluating and selecting ideas — your own and your peers' — against explicit criteria
 - git and maintainer-centered collaboration workflows
 - open-source setup, licensing, and governance
 - issue tracking, triage, and project planning
@@ -185,6 +186,18 @@ evaluate options, then select a small number to carry forward" process the facul
 - **Weeks 6–14 are team-based** (or solo): the team carries the project through design, repo foundation,
   MVP, and launch.
 
+**A recurring throughline — evaluation as transferable judgment.** Woven through the whole course is a
+single portable skill: *evaluating an idea against explicit criteria and deciding.* Its moves — decide
+what "good" means in this context (choose the criteria), score candidates against them deliberately, weigh
+value against effort/do-ability, pressure-test with structured feedback, and commit with a defensible
+rationale — are the same whether the idea is a semester project, a feature proposal at work, or a startup.
+Students practice it at rising stakes: self-evaluating candidate ideas at convergence (Wk 3), scoring their
+peers' pitches at selection (Wk 5), and defending choices in the final demo — and they reuse the same
+judgment on later artifacts (design reviews, repo audits, demos). The project **selection criteria (§9) are
+one instance** of the method, tuned to founding a lasting open-source project; *what transfers is the
+method, not the list.* This is why **idea evaluation and constructive critique are themselves graded** (§8),
+not merely inputs to a decision.
+
 **Real users — ideal, with a first-iteration substitute.** Because the project lead becomes the capstone
 sponsor/customer-voice, **understanding real users is the goal**: identify users → understand their needs →
 involve them in shaping the design. Students are strongly encouraged to talk to real people, and faculty
@@ -225,6 +238,11 @@ By the end of the course, a student can:
 
 *(Eight outcomes, within the CTL-recommended 5–8 range. If the sequence later requires shared outcomes
 across 380/480/481, these can be aligned to the common set.)*
+
+*Running beneath outcomes 1–3 (and the Week-5 peer selection) is a **cross-cutting capacity: evaluation
+and engineering judgment** — appraising ideas and proposals, one's own and others', against explicit
+criteria, then deciding. It is kept as a throughline rather than a ninth outcome (see §3) and is assessed
+through self-scoring at convergence, peer scoring at Pitch Day, and the final defense.*
 
 ### Outcome crosswalk — Aims of a BYU Education and the SE 5 C's
 
@@ -512,7 +530,9 @@ feedback within a defined window — engineering iteration is the point.
 ## 9. Project Selection Criteria
 
 Used by students for self-evaluation, by peers during Week-5 evaluation, and by the instructor for the
-final-say selection. A strong project:
+final-say selection. **These criteria are one instance of the course's evaluation throughline (§3):** they
+are what "good" means for founding a lasting open-source project — a different goal (a startup, a feature
+at work) would use a different list, but the same method. A strong project:
 
 - **Serves a real need for a real (reachable) userbase** — not a toy or a purely self-serving tool.
 - **Is rich / broad** — meaningfully exercises multiple engineering dimensions (design, architecture, data,

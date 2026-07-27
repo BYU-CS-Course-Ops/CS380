@@ -294,7 +294,7 @@ async function build() {
     ["Room to grow — others can join and build on it", false]
   ];
   for (let i = 0; i < crit.length; i++) {
-    const y = 2.0 + i * 0.66;
+    const y = 2.0 + i * 0.58;
     const star = crit[i][1];
     await iconCircle(s, star ? FA.FaStar : FA.FaCheck, 0.7, y, 0.46, star ? C.amber : C.teal);
     s.addText(crit[i][0], { x: 1.4, y, w: 8.0, h: 0.46, color: C.ink, fontFace: F.body, fontSize: 17.5, bold: star, valign: "middle", margin: 0 });
@@ -303,8 +303,13 @@ async function build() {
   await iconCircle(s, FA.FaBullseye, 10.75, 2.35, 0.9, C.amber, C.navy);
   s.addText("The north star", { x: 9.9, y: 3.4, w: 2.6, h: 0.4, color: C.white, fontFace: F.head, fontSize: 19.5, bold: true, align: "center", margin: 0 });
   s.addText("The two starred criteria — real need and richness — are the ones students most often miss.", { x: 9.9, y: 3.85, w: 2.6, h: 1.6, color: "AEC2D3", fontFace: F.body, fontSize: 15, align: "center", margin: 0 });
+  card(s, 0.6, 6.1, 12.1, 0.64, C.amber);
+  s.addText([
+    { text: "A skill, not just a checklist:  ", options: { bold: true, color: C.navy } },
+    { text: "you'll score ideas against criteria all semester — and the method transfers to any idea you'll ever weigh (a startup, a proposal at work).", options: { color: C.navy } }
+  ], { x: 0.9, y: 6.1, w: 11.5, h: 0.64, fontFace: F.body, fontSize: 13.5, valign: "middle", align: "center", margin: 0, lineSpacingMultiple: 1.02 });
   footer(s);
-  s.addNotes("This is the shared yardstick for the Idea Briefs. Walk the list but linger on the two starred criteria — a real need for a real, reachable userbase, and richness/breadth — because those are the two students most often miss. Note that solo projects and smaller scope are welcome. Preview that Value vs. Do-ability (Week 3) is how they'll weigh these formally. ~2 min.");
+  s.addNotes("This is the shared yardstick for the Idea Briefs. Walk the list but linger on the two starred criteria — a real need for a real, reachable userbase, and richness/breadth — because those are the two students most often miss. Note that solo projects and smaller scope are welcome. Seed the throughline (amber bar): scoring ideas against explicit criteria is a portable skill they'll use all semester — on their own ideas, on peers' pitches, on design docs and demos — and beyond the class; these seven are just what \"good\" means here. Preview that Value vs. Do-ability (Week 3) is how they'll weigh these formally. ~2 min.");
 
   // ===== 12 Weak -> strong =====
   s = mk(); s.background = { color: C.white };

@@ -157,6 +157,7 @@ By the end of Session 1, a student can:
   - has room to grow (others can join and build on it)
 - Emphasize the *"real need for real users"* and *richness* criteria most — they're the ones students most often miss.
 - Note the first-iteration flexibility: **smaller-scope and solo projects are supported**; richness is the aspiration, not a hard floor.
+- **Seed the evaluation throughline.** Say it plainly: *scoring ideas against explicit criteria is a skill you'll practice all semester* — on your own ideas at convergence (Wk 3), on each other's pitches at selection (Wk 5), and on design docs, PRs, and demos after that. These seven are what "good" means *for founding a lasting open-source project*; the **method transfers** to any idea you'll ever weigh (a startup, a feature proposal at work). *(Throughline defined in `CS301R-ProjectCreation_v4.md` §3.)*
 - **Then convert a weak idea into a strong one — applying the criteria live.** This models the convergence move they'll make in Week 3: take a too-small or too-big idea and reshape it until it passes.
   - *"A to-do app"* → **a shared task board for one specific volunteer group**, with role-based assignments and reminders. Same domain, now real users and real richness.
   - *"A new social network"* → **a focused coordination tool for a single community** (one club, one ward, one lab). The unbuildable version becomes a tractable vertical slice.

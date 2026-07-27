@@ -54,10 +54,10 @@ This is a **first-draft set of rubrics** — one per graded assignment (checkpoi
 | Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
 |---|---|---|---|---|---|
 | Target user clarity | 20 | Userbase sharply defined and bounded; who's in/out is clear | User defined | User vague or overbroad | "Everyone" / undefined |
-| Needfinding quality & honesty | 30 | Real interviews/observation *or* a rigorously documented persona/proxy with honest reasoning about its limits | Credible needfinding with some evidence | Thin evidence; reasoning gaps | Asserted needs, no method |
+| Needfinding quality & honesty | 30 | Real interviews/observation **and/or** a rigorously documented persona/proxy (ideally interviews informing a persona) with honest reasoning about its limits | Credible needfinding with some evidence | Thin evidence; reasoning gaps | Asserted needs, no method |
 | Prioritized needs | 20 | Needs prioritized with a defensible rationale | Needs listed and ranked | Needs listed, not prioritized | Needs unclear |
 | Success criteria | 20 | Specific, defensible, observable criteria for "this works" | Reasonable criteria | Vague criteria | Missing |
-| PRD mapping | 10 | Cleanly maps onto the capstone PRD shape | Mostly maps | Partial | Not recognizable as a PRD |
+| PRD mapping | 10 | Cleanly reads as a real PRD — problem and user, not solution | Mostly reads as a PRD | Partial | Not recognizable as a PRD |
 
 **Criterion explanations.**
 - **Target user clarity** — a founder/sponsor must know exactly whose problem they own; fuzziness here undermines everything downstream.

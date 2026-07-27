@@ -21,7 +21,7 @@ Most of your coursework so far has handed you a problem. Founding a project is d
 
 This assignment trains the *divergent* half of the course's Creative Problem Solving cycle. Good founders generate many candidate problems and defer judgment before converging on one. Three briefs force you out of the "I already know what I want to build" trap and into genuine exploration. The strongest idea you carry into your proposal (CP3) and pitch (CP4) is often *not* the first one you thought of — it's the one that survived comparison against alternatives.
 
-These briefs also feed everything downstream: the idea you converge on becomes your **Product Definition Brief** (CP2), your **proposal**, and — if it's selected — the project you may carry into the capstone as its sponsor.
+These briefs also feed everything downstream: the idea you converge on becomes your **Product Definition Brief** (CP2), your **proposal**, and — if it's selected — a project you keep leading and growing as others join (and, in this course, can carry into the capstone as its sponsor).
 
 ---
 
@@ -144,4 +144,4 @@ Bring your briefs + reflection to the **convergence workshop on Wed, Sep 23** (s
 
 ---
 
-*Part of the Discovery sequence: **CP1 Idea Briefs → CP2 Product Definition Brief → CP3 Written Proposal → CP4 Pitch #1**. See the course schedule (`CS301R-Schedule-Fall2026.md`) and rubrics (`rubrics.md`) for the full picture.*
+*Part of the Discovery sequence: **CP1 Idea Briefs → CP2 Product Definition Brief → CP3 Written Proposal → CP4 Pitch #1**. See the course schedule (on the LMS) and the grading rubric above for the full picture.*

@@ -84,6 +84,26 @@ This supports the cycle the course depends on: **draft → review → revise →
 
 ---
 
+## The kind of project you'll found
+
+Not every idea is a good fit for this course. We steer toward a particular *shape* of project — not a particular technology. The target is a **product that serves a real need for a real userbase, with enough surface area across engineering disciplines** — design, architecture, data, interfaces, infrastructure, operations — that others could join and keep building on it. Web and service applications are the common vehicle and the recommended default, but what's being selected for is *real-world relevance and richness*, not the architecture. **Smaller-scope and solo projects are fully supported** this first iteration — the large, multi-faceted product is the north star, not a hard floor.
+
+**The selection criteria — our shared yardstick.** You'll use these to weigh your own ideas; peers use them to score each other's at Pitch Day; and the instructor uses them for the final selection. A strong project:
+
+- **Serves a real need for a real, reachable userbase** — not a toy or a purely self-serving tool.
+- **Is rich / broad** — meaningfully exercises multiple engineering dimensions (design, architecture, data, UI, infrastructure, ops). *Could a multi-disciplinary team grow into this?*
+- **Is open-source-worthy** — appropriate to develop and release in the open.
+- **Has a one-semester MVP** — a coherent vertical slice is achievable at ~10 hrs/week over 14 weeks.
+- **Is extensible** — others can credibly keep building on it as the team grows.
+- **Has a tractable stack** — technologies you can justify and support; complexity only where it earns its keep.
+- **Has room to grow** — others can join and build on it with you still leading (and, if it's selected, potentially into the capstone as its sponsor).
+
+These criteria drive the whole first phase of the course: you diverge to find candidates, then **converge** by scoring them against this list. A project that's fun to build but serves no one — or is too thin for anyone else to build on — scores low here on purpose.
+
+**The habit is what transfers.** Evaluating *any* idea — a proposal at work, a startup, a side project — is the same method: decide what "good" means, score candidates against those criteria, weigh value against effort, get feedback, and commit with a rationale. What changes between contexts is the *criteria*; the seven above are ours because we're founding lasting open-source projects. Learn the method here and you can run it anywhere.
+
+---
+
 ## Checkpoints and schedule at a glance
 
 Twelve graded checkpoints (CP1–CP12) build toward the culminating artifact. CP1–CP4 are individual; CP5 onward are team (or solo). A handful of smaller **completion-graded** deliverables (Team Charter, License/OSS short response, MVP Plan) support the checkpoints.

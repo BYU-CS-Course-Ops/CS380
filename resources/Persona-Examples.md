@@ -1,6 +1,6 @@
 # Persona Examples — Honest vs. Made-Up
 
-*For Session 4, §5. Show these side by side to make "documented honestly" concrete. Both are about the **same need** (commuter parking) on purpose — the difference is the *method*, not the topic.*
+*These two personas are about the **same need** (commuter parking) on purpose — the difference is the *method*, not the topic. Read them side by side to see what "documented honestly" means in practice.*
 
 ---
 
