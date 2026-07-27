@@ -48,7 +48,7 @@ Students **found** an open-source project (vs. contributing to one): find and va
 
 ## Pending decisions (Tom's calls, flagged in the files)
 
-1. **License/OSS short response due date** — handout + Session 4 materials say Mon Sep 21; the Session 3 *deck* wrap slide still says "before Wed, Sep 16." Reconcile once decided (deck rebuild needed either way).
+1. ~~**License/OSS short response due date**~~ **resolved: Mon, Sep 21.** All materials now agree — handout, Session 4 materials, syllabus, schedule, and the Session 3 deck (rebuilt as `lectures/Session03-OpenSource-v2.pptx`; wrap slide now reads "before next class — Wed, Sep 16" for readings/journal and "License/OSS short response — due Mon, Sep 21" separately). *Consolidate v2 over the original once reviewed in PowerPoint.*
 2. **Peer-eval ⚑ items** in `development/Peer-Evaluation-System.md`: platform, whether presenters see numeric averages, multiplier bounds (±10% proposed), midpoint weight, submission-required.
 3. Policy floors proposed in outlines, not ratified: ≥1 non-author PR approval; MVP testing floor ("core slice logic has tests"); debug-log floor; demo-week main-freeze rule; recorded-clip fallback allowed as declared last resort; team-size/oversubscription handling. *(**Spike: ratified** — at least one spike required, graded in CP3 Feasibility.)*
 4. **Pitch Day arithmetic** — fits ~8 pitches in 75 min; needs an enrollment-triggered plan (announced in Session 9).
