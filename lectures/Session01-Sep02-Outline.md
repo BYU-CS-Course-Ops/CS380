@@ -151,7 +151,7 @@ By the end of Session 1, a student can:
   - serves a real need for a real, reachable userbase
   - rich / broad (multi-disciplinary growth potential) — the north star
   - open-source-worthy
-  - has a one-semester MVP (vertical slice at ~10 hrs/week)
+  - has a one-semester MVP (a vertical slice that fits the real build window — the ~10 hrs/week covers class, reading, writing, and reviews too, and building runs roughly five weeks)
   - extensible
   - tractable stack
   - has room to grow (others can join and build on it)

@@ -15,10 +15,10 @@ Students **found** an open-source project (vs. contributing to one): find and va
 
 ## Directory map
 
-- `lectures/` — 27 instructor outlines (`SessionNN-MonDD-Outline.md`, all complete) + finished decks (`Session01-CourseLaunch.pptx`, `Session02-Divergent.pptx`, `Session03-OpenSource.pptx`, `Session04-Discovery.pptx`). `Session04-Discovery-v2.pptx` is a byte-identical stray — safe to delete.
+- `lectures/` — 27 instructor outlines (`SessionNN-MonDD-Outline.md`, all complete) + finished decks for **Sessions 1–6** (`Session01-CourseLaunch.pptx`, `Session02-Divergent.pptx`, `Session03-OpenSource.pptx`, `Session04-Discovery.pptx`, `Session05-Feasibility.pptx`, `Session06-Convergence.pptx`). Session 7 onward have outlines only.
 - `assignments/` — 17 student handouts, complete: CP1–CP12, Idea-Journal, Discovery-Notes, License-OSS-Short-Response, Team-Charter, MVP-Plan. All follow a fixed format (see Conventions).
-- `resources/` — student handouts/templates: License-Cheat-Sheet, Mom-Test-Summary, Good-vs-Leading-Questions, Interview-Prompt-Cards, Interview-Ethics-for-Students (BYU IRB-grounded), Persona-Template, Persona-Examples (honest "Commuter Cara" vs. fabricated "Busy Ben"), CPS-Handbook-reading (points to local `cps_handbook.pdf`), Feasibility-Risk-Worksheet, Learning-Plan-Template, Idea-Scoring-Sheet, Pitch-Evaluation-Sheet, Peer-Evaluation-Form.
-- `canvas_material/lectures/` — student-facing LMS pages, **Sessions 1–4 only so far**.
+- `resources/` — student handouts/templates: License-Cheat-Sheet, Mom-Test-Summary, Good-vs-Leading-Questions, Interview-Prompt-Cards, Interview-Ethics-for-Students (BYU IRB-grounded), Persona-Template, Persona-Examples (honest "Commuter Cara" vs. fabricated "Busy Ben"), CPS-Handbook-reading (points to local `cps_handbook.pdf`), Feasibility-Risk-Worksheet, Learning-Plan-Template, Idea-Scoring-Sheet, Pitch-Evaluation-Sheet, Peer-Evaluation-Form, Spikes-Reading, PRD-Reference, Proposal-Anatomy-Reading (Session 7's primary reading; nine sections + the four checks + the order to write them in), and the paired teaching samples Sample-Proposal-Strong / Sample-Proposal-Weak (*same* project — a community-theater costume catalog — written well and badly; invented evidence, labeled as such; dissected in Session 7 §4).
+- `canvas_material/lectures/` — student-facing LMS pages, **Sessions 1–6 only so far**.
 - `development/` — design docs, schedule, `V3_prompt.md`.
 - `tools/` — the pptx deck build scripts (`build-sessionNN.js`).
 - `open-source-project-course/` — the 2025–26 course (readings bank in `modules/`; Canvas Jinja deploy infra in `_canvas_material/`; outreach email drafts in `emails/`).
@@ -56,6 +56,8 @@ Students **found** an open-source project (vs. contributing to one): find and va
 3. Policy floors proposed in outlines, not ratified: ≥1 non-author PR approval; MVP testing floor ("core slice logic has tests"); debug-log floor; demo-week main-freeze rule; recorded-clip fallback allowed as declared last resort; team-size/oversubscription handling. *(**Spike: ratified** — at least one spike required, graded in CP3 Feasibility.)*
 4. **Pitch Day arithmetic** — fits ~8 pitches in 75 min; needs an enrollment-triggered plan (announced in Session 9).
 5. ~~CP1+CP2 same-day turn-in mechanics~~ **resolved:** CP2 moved to Mon, Sep 28 (Session 7) so students converge at the Sep 23 workshop *then* write CP2; CP1 still due at the workshop. Only the CP1 in-class turn-in time is left to confirm (start-of-class recommended). CP7/CP8 submission = repo pointer (recommended).
+6. ~~CP3 draft turn-in~~ **resolved:** the Sep 30 workshop draft is a required turn-in — LMS upload (completion-checked) **plus two printed copies** marked up on paper in class; scans/photos of both go in with the final on Oct 5. **No draft on file caps *Argument & revision* at Developing.** Reflected in CP3, `rubrics.md`, and the Session 7 + 8 outlines.
+7. **Scope language, standardized:** ~10 hrs/week is the *total* course load (class, reading, discovery, writing, reviews included) and real building runs **roughly five weeks** (Weeks 9–13). Never gloss the one-semester MVP as "achievable at ~10 hrs/week"; the "10 × 14 = 140 hours" arithmetic is explicitly the failure mode. Swept through CP1, CP3, `rubrics.md` (CP3 + CP5), Idea-Scoring-Sheet, Pitch-Evaluation-Sheet, the syllabus, and v4 §9.
 
 ## Work queue (rough priority)
 

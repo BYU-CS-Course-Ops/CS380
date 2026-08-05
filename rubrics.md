@@ -1,6 +1,6 @@
 # CS 301R — Assignment Rubrics (Initial Cut)
 
-*Software Engineering Studio I: Founding an Open-Source Project.* Companion to `CS301R-ProjectCreation_v3.md` (design) and `CS301R-Schedule-Fall2026.md` (dates).
+*Software Engineering Studio I: Founding an Open-Source Project.* Companion to `CS301R-ProjectCreation_v4.md` (design) and `CS301R-Schedule-Fall2026.md` (dates).
 
 This is a **first-draft set of rubrics** — one per graded assignment (checkpoints CP1–CP12 in design §6). Each rubric is an **analytic grid**: weighted criteria scored across four performance levels, followed by a short explanation of what each criterion is really measuring and why it's here. They are derived from the rubric dimensions in design §12, the selection criteria in §9, and the assessment weights in §8.
 
@@ -78,7 +78,7 @@ This is a **first-draft set of rubrics** — one per graded assignment (checkpoi
 | Problem & user clarity | 15 | Problem and users compelling and evidence-backed | Clear problem and users | Somewhat vague | Unclear |
 | Solution & core features (+ non-goals) | 15 | Coherent solution; sharp feature set; explicit non-goals | Solution and features defined | Features fuzzy; no non-goals | Solution unclear |
 | Feasibility & technical approach | 20 | Stack/dependencies researched; approach credible and justified | Reasonable, mostly justified | Approach asserted, thin | Infeasible or absent |
-| Scope realism (1-semester MVP) | 15 | Clear, achievable vertical slice at ~10 hrs/wk | Plausible scope | Over- or under-scoped | Wildly unrealistic |
+| Scope realism (MVP for this term) | 15 | Clear, achievable vertical slice, sized against the *real* build window — roughly five weeks — with the arithmetic shown | Plausible scope | Over- or under-scoped | Wildly unrealistic (e.g. "10 hrs × 14 weeks = 140 hours") |
 | Richness & extensibility | 15 | Exercises multiple engineering dimensions; clear path for a larger team | Some breadth and extensibility | Narrow | Toy-scale |
 | Risks & mitigation | 10 | Real risks named with credible mitigations | Risks identified | Generic risks | None |
 | Argument & revision | 10 | Persuasive, well-written; visible response to peer feedback | Clear writing; some revision | Rough; little revision | Poor / no revision |
@@ -86,7 +86,8 @@ This is a **first-draft set of rubrics** — one per graded assignment (checkpoi
 **Criterion explanations.**
 - **Problem & user clarity** and **Solution & features** carry the product case; **non-goals** are graded because scoping *out* is as important as scoping in.
 - **Feasibility & technical approach** rewards real homework on stack and dependencies — arguing feasibility without overpromising.
-- **Scope realism** is checked against the concrete one-semester / ~10-hrs-week budget.
+- **Scope realism** is checked against the honest budget: ~10 hrs/week is the *total* course load — class, reading, discovery, writing, and reviews all come out of it — so the build time left is a fraction of ten, spread over the weeks that remain (roughly five, Weeks 9–13). A proposal that sizes its MVP by multiplying 10 × 14 has already failed this criterion.
+- **Argument & revision** requires a draft on file. The Sep 30 workshop draft (uploaded to the LMS, two printed copies marked up in class, scans submitted with the final) is what revision is measured against; **with no draft on file this criterion caps at Developing.**
 - **Richness & extensibility** apply the §9 selection criteria the proposal will be judged on at pitch time.
 - **Risks & mitigation** assess engineering judgment about what could go wrong.
 - **Argument & revision** grades the proposal as technical communication and rewards iteration.
@@ -129,7 +130,7 @@ This is a **first-draft set of rubrics** — one per graded assignment (checkpoi
 **Criterion explanations.**
 - **Architecture clarity**, **Data & interface design**, and **Tech choices & rationale** are the core engineering content — can the team show the system's shape and defend its decisions.
 - **Appropriate detail** is a 300-level judgment skill: documenting enough without over-specifying.
-- **Implementability** ties the design to the one-semester MVP reality.
+- **Implementability** ties the design to the MVP reality — the roughly five weeks of real building the term actually leaves, not the nominal ~10 hrs/week × 14.
 - **Readability** is graded through the *future-contributor* lens central to the course — the doc must serve a stranger who joins the project.
 
 ## CP6 — Git Workflow Lab

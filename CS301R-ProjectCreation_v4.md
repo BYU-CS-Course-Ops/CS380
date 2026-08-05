@@ -539,7 +539,7 @@ at work) would use a different list, but the same method. A strong project:
   UI, infrastructure, ops); *"could a multi-disciplinary team grow into this?"* (Smaller-scope solo
   projects are allowed this iteration, but richness is the north star.)
 - **Is open-source-worthy** — appropriate to develop and release in the open.
-- **Has a one-semester MVP** — a coherent vertical slice is achievable at ~10 hrs/week over 14 weeks.
+- **Has a one-semester MVP** — a coherent vertical slice fits the *real* build window: the ~10 hrs/week is the total load (class, reading, discovery, writing, reviews included), and building runs for roughly five weeks.
 - **Is extensible** — others can credibly keep building on it as the team grows.
 - **Has a tractable stack** — technologies the team can justify and support; complexity only where it earns
   its keep. *Web/service applications are the recommended default; other types allowed case-by-case.*

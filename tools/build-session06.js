@@ -169,7 +169,7 @@ async function build() {
   const crows = [
     ["Real need, reachable users", "A specific userbase with a felt, evidenced need — not a toy.", true],
     ["Richness / breadth", "Exercises multiple engineering dimensions; room for a team to grow.", true],
-    ["One-semester MVP", "A coherent vertical slice fits ~10 hrs/week over 14 weeks.", false],
+    ["One-semester MVP", "A coherent vertical slice fits the real build window — about five weeks.", false],
     ["Feasibility", "Risks named and reducible — the Session-5 read.", false],
     ["Extensible / room to grow", "Others can credibly keep building on it as the team grows.", false],
     ["Open-source-worthy", "Appropriate to develop and release in the open.", false],
@@ -357,7 +357,7 @@ async function build() {
   s.addText("Groups of 3–4. A round-robin: everyone presents once, ~4 minutes each. Same three challenges for every idea.", { x: 1.75, y: 1.9, w: 10.65, h: 1.0, color: "CFE0E9", fontFace: F.body, fontSize: 16, valign: "middle", margin: 0, lineSpacingMultiple: 1.05 });
   const axes = [
     [FA.FaUserCheck, "Need real, user reachable?", "Is there a felt need, and can you actually reach the people who have it?"],
-    [FA.FaCalendarAlt, "Feasible at one-semester scope?", "Is there a vertical slice you could ship at ~10 hrs/week?"],
+    [FA.FaCalendarAlt, "Feasible at one-semester scope?", "Is there a vertical slice you could ship in ~5 build weeks?"],
     [FA.FaLayerGroup, "Rich enough to found on?", "Does it exercise multiple dimensions and leave room for others?"]
   ];
   const px = [0.6, 4.63, 8.66], pw = 3.84;

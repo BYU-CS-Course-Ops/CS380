@@ -12,7 +12,7 @@ Rate each idea **1 (weak) → 3 (strong)** on each criterion. The last column is
 |---|---|---|---|---|
 | **Real need, reachable users** | A specific userbase with a felt, evidenced need | | | |
 | **Richness / breadth** | Exercises multiple engineering dimensions | | | |
-| **One-semester MVP** | A coherent vertical slice fits ~10 hrs/week | | | |
+| **One-semester MVP** | A coherent vertical slice fits the real build window — roughly five weeks, out of a ~10 hrs/week that also covers class, reading, writing, and reviews | | | |
 | **Feasibility** | Risks named and reducible (see risk worksheet) | | | |
 | **Extensible / room to grow** | Others could join and keep building | | | |
 | **Open-source-worthy** | Appropriate to build and release in the open | | | |

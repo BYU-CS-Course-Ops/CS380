@@ -288,7 +288,7 @@ async function build() {
     ["Serves a real need for a real, reachable userbase", true],
     ["Rich / broad — exercises many engineering dimensions", true],
     ["Open-source-worthy", false],
-    ["Has a one-semester MVP (~10 hrs/week)", false],
+    ["Has a one-semester MVP (~5 real build weeks)", false],
     ["Extensible", false],
     ["Tractable stack — complexity only where it earns its keep", false],
     ["Room to grow — others can join and build on it", false]

@@ -76,6 +76,8 @@ Scored on a 100-point analytic rubric; **completes the 10% Discovery grade** (wi
 
 **Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Your score on each criterion = (level ÷ 4) × weight.
 
+**The table above summarizes what each criterion measures. For the full four-level grid — exactly what Exemplary, Proficient, Developing, and Beginning look like on each criterion — see `rubrics.md` (Product Definition Brief), the rubric document you received in Week 1.** Read the levels before you write, not after you're graded.
+
 ---
 
 ## Tips and common pitfalls

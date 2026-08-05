@@ -103,7 +103,7 @@ Your briefs — and later your proposal and pitch — are judged against the cou
 - **Serves a real need for a real, reachable userbase** — not a toy.
 - **Is rich / broad** — could a multi-disciplinary team grow into it?
 - **Is open-source-worthy** — appropriate to build and release in the open.
-- **Has a one-semester MVP** — a coherent vertical slice is achievable at ~10 hrs/week.
+- **Has a one-semester MVP** — a coherent vertical slice fits the *real* build window. The course's ~10 hrs/week is the total load (class, reading, discovery, writing, and reviews all come out of it), and building runs for roughly five weeks, so the slice has to be small.
 - **Is extensible** — others could keep building on it as the team grows.
 - **Has a tractable stack** — technologies you could justify and support.
 - **Has room to grow** — others can join and build on it, with you leading (potentially into the capstone as its sponsor).
@@ -125,6 +125,8 @@ Scored on a 100-point analytic rubric; counts toward the 10% Discovery grade. Re
 | **Reflection** | 15 | A thoughtful, personal take on what makes a project worth building to last — not a generic summary. |
 
 **Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Your score on each criterion = (level ÷ 4) × weight.
+
+**The table above summarizes what each criterion measures. For the full four-level grid — exactly what Exemplary, Proficient, Developing, and Beginning look like on each criterion — see `rubrics.md` (Idea Briefs), the rubric document you received in Week 1.** Read the levels before you write, not after you're graded.
 
 ---
 

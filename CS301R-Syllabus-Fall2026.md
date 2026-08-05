@@ -93,7 +93,7 @@ Not every idea is a good fit for this course. We steer toward a particular *shap
 - **Serves a real need for a real, reachable userbase** — not a toy or a purely self-serving tool.
 - **Is rich / broad** — meaningfully exercises multiple engineering dimensions (design, architecture, data, UI, infrastructure, ops). *Could a multi-disciplinary team grow into this?*
 - **Is open-source-worthy** — appropriate to develop and release in the open.
-- **Has a one-semester MVP** — a coherent vertical slice is achievable at ~10 hrs/week over 14 weeks.
+- **Has a one-semester MVP** — a coherent vertical slice fits the *real* build window. The ~10 hrs/week above is the total load — class, reading, discovery, writing, and reviews come out of it — and building runs for roughly five weeks, so the slice has to be small.
 - **Is extensible** — others can credibly keep building on it as the team grows.
 - **Has a tractable stack** — technologies you can justify and support; complexity only where it earns its keep.
 - **Has room to grow** — others can join and build on it with you still leading (and, if it's selected, potentially into the capstone as its sponsor).
