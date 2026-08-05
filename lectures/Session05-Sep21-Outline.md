@@ -6,7 +6,7 @@
 - **Peter Norvig — [*Teach Yourself Programming in Ten Years*](https://norvig.com/21-days.html)** — the mindset behind self-directed learning and tech-stack discipline: depth over shortcuts, learn by doing, choose tools deliberately.
 - **DIY Genius — [*How to Create Your Own Self-Directed Learning Plan*](https://www.diygenius.com/how-to-create-a-self-directed-learning-plan/)** — the concrete mechanics we'll use in class: your *why*, SMART goals, a real schedule, an accountability partner, and building something to prove it. Norvig motivates the habit; this operationalizes it.
 - **Course reading — [*Spikes — Buying a Cheap Answer to Your Scariest Unknown*](../resources/Spikes-Reading.md)** (`resources/Spikes-Reading.md`) — the time-boxed investigation you'll use to de-risk an unknown before committing; the green/red framing you'll use in class. *Optional companion:* [Mike Cohn — *Agile Spikes*](https://www.mountaingoatsoftware.com/blog/spikes) for the standard industry framing.
-- **Re-skim:** the **Value vs. Do-ability** section of the CPS handbook (p. 27) — `resources/CPS-Handbook-reading.md` — you'll use it Wednesday to converge.
+- **Re-skim:** the **Value vs. Do-ability** section of the CPS handbook (p. 27) — `resources/cps_handbook.pdf` — you'll use it Wednesday to converge.
 
 **Optional (deeper on *how* learning works):**
 - **Maestro — [*What is the Learning Curve? The Science of Boosting Knowledge Retention*](https://maestrolearning.com/blogs/what-is-the-learning-curve-2/)** — the forgetting curve and why retrieval and spacing beat re-reading; the science behind the plateau we name in §4.
@@ -167,7 +167,7 @@ By the end of this session, a student can:
 - **Learning-Plan template:** `resources/Learning-Plan-Template.md`
 - **Feasibility & Risk worksheet** (six categories + know/learn/avoid): `resources/Feasibility-Risk-Worksheet.md`
 - **Selection criteria (§9)** — from `CS301R-ProjectCreation_v4.md` / the Session 1 deck
-- **CPS handbook — Value vs. Do-ability (p. 27):** `resources/CPS-Handbook-reading.md`
+- **CPS handbook — Value vs. Do-ability (p. 27):** `resources/cps_handbook.pdf`
 
 ---
 

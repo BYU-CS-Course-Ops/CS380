@@ -50,11 +50,11 @@ An unscheduled plan is a wish. Block real time on a real calendar — then two t
 
 Your *why* is intrinsic motivation. A person who's expecting an update is extrinsic — you want both. They encourage you when it's grim, and knowing there's a check-in is often what gets you started.
 
-**You already have one in this course:** your neighbor now, your teammate after Oct 7. Name them, and tell them what you're learning and by when.
+Working engineers build this in deliberately: a manager who asks about it in a 1:1, a mentor, a study group, a public commitment in a standup or an issue thread. The mechanism is the same everywhere — say out loud, to a specific person, what you're learning and by when. *(In this course the nearest one is your neighbor today, and your teammate once teams form.)*
 
 ### 2e. Build something
 
-Learning aimed at a concrete artifact beats learning in the abstract — and the debugging teaches as much as the building does. **In this course, your spike *is* the build:** one time-boxed experiment that de-risks the project *and* proves the learning. One activity, two jobs.
+Learning aimed at a concrete artifact beats learning in the abstract — and the debugging teaches as much as the building does. The efficient move is to pick an artifact that does **two jobs at once**: it teaches you the thing, and it answers a real question the project needs answered. A time-boxed spike is exactly that artifact, which is why experienced engineers reach for one when facing an unfamiliar technology on a real deadline. *(In this course, the spike required for your proposal is usually the same experiment as the "build something" step here — one activity, two jobs.)*
 
 - **The spike:** a **time-boxed experiment (1–3 days)** proving you can do the hard part — a throwaway prototype or focused proof-of-concept. What question does it answer, and what counts as **"green"** (feasible) vs. **"red"** (rethink)?
 
@@ -89,18 +89,20 @@ The techniques that reliably pay, when the plan says "learn it":
 
 ## Step 3 — Use AI as a *learning* aid, honestly
 
-AI tools are fair game for **accelerating understanding** — explaining a concept, scaffolding a spike, unblocking an error. They are **not** a way to skip understanding. The course standard holds: **you must understand and be able to defend everything you submit.** A good test: *could you explain how this works, and change it, without the tool?* If not, that's still a "Learn" gap — plan for it.
+AI tools are fair game for **accelerating understanding** — explaining a concept, scaffolding a spike, unblocking an error. They are **not** a way to skip understanding, and the reason isn't a rule someone imposed on you. Code you don't understand is code you can't review, debug, extend, or defend, and the bill always comes due somewhere: in a code review you can't answer for, in an interview, in an outage at 2 a.m. when the person who has to reason about the system is you. A good test: *could you explain how this works, and change it, without the tool?* If not, that's still a "Learn" gap — plan for it. *(In this course that principle is also the standard you're held to: you must understand and be able to defend everything you submit.)*
 
 ---
 
 ## Step 4 — Reality-check against your time budget
 
-Be honest about your budget. This course expects about **10 hours a week total** — and that includes class, reading, discovery interviews, writing, and reviews. Your actual learning-and-building time is a fraction of it. Count your "Learn" items against the fraction, not the ten:
+Every project has a budget, and **learning competes with delivery inside it.** The mistake is universal: people count their learning against the calendar rather than against the hours that actually remain after meetings, reviews, writing, testing, and the rest of life come out. Count your "Learn" items against the real remainder, not the nominal number:
 
 - **1–2 real gaps** with clear plans → healthy; this is a normal, ambitious project.
 - **3+ deep gaps** in unfamiliar areas → a **schedule/skill risk.** Shrink scope, move something to "Avoid," or pick a more tractable idea.
 
-Learning is expected — that's the point of the course. But learning time is *build time you're not spending*, so plan it, don't discover it in Week 10.
+Learning time is *build time you're not spending*. That's not an argument against learning — it's the reason to plan it deliberately rather than discover it late, when there's no room left to react.
+
+*Your numbers in this course:* about **10 hours a week total**, and that includes class, reading, discovery interviews, writing, and reviews — with real building running roughly **five weeks**. Your learning-and-building time is a fraction of ten, so budget against the fraction.
 
 ---
 

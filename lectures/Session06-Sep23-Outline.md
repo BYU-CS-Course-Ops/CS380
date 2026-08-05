@@ -3,7 +3,7 @@
 **CS 301R · Software Engineering Studio I: Founding an Open-Source Project**
 **Session 6 of 27 · Wed, Sep 23, 2026 · 75-minute block**
 **Prior reading (all free — nothing to buy):**
-- **Re-read:** the **Value vs. Do-ability** section of the CPS handbook (p. 27) — `resources/CPS-Handbook-reading.md` — the convergence tool you'll use today.
+- **Re-read:** the **Value vs. Do-ability** section of the CPS handbook (p. 27) — `resources/cps_handbook.pdf` — the convergence tool you'll use today.
 - **Atlassian — [*Prioritization frameworks*](https://www.atlassian.com/agile/product-management/prioritization-framework)** — the modern product-world cousin of Value vs. Do-ability (the value/effort 2×2); optional but useful.
 - **Bring:** your **Discovery Notes** (Session 4) and **2–3 candidate ideas** with the feasibility read from Session 5. *(The richness test is taught today, before you score.)*
 **Maps to:** Design Week 3, Session B — *convergence workshop: score candidate ideas against the selection criteria; instructor + peer feedback; pick 1–2.*
@@ -55,7 +55,7 @@ By the end of this session, a student can:
 
 ### 3. Evaluating ideas — the portable method, our criteria, and Value vs. Do-ability — 16 min
 - **The portable method (lead here).** Evaluating an idea is a transferable skill — five moves: **(1)** decide what "good" means (pick criteria that fit the goal), **(2)** score against them, **(3)** weigh value vs. do-ability, **(4)** pressure-test, **(5)** commit with a rationale. It works on any idea — a feature at work, a startup, a side project. **Only move 1 changes between contexts;** today we aim it at *our* criteria.
-- **Our criteria (move 1, for this course):** real need for a real, reachable userbase · richness/breadth · open-source-worthy · one-semester MVP (~10 hrs/week) · extensible · tractable stack · room to grow. These are what a *founded, lasting, open-source* project needs; a different goal would list different criteria. The two students most often miss are **real need** and **richness** — so teach richness properly before they score. *(Students have these on the Idea Scoring Sheet and saw them in the Session 1 deck.)*
+- **Our criteria (move 1, for this course):** real need for a real, reachable userbase · richness/breadth · open-source-worthy · one-semester MVP (~5 real build weeks) · extensible · tractable stack · room to grow. These are what a *founded, lasting, open-source* project needs; a different goal would list different criteria. The two students most often miss are **real need** and **richness** — so teach richness properly before they score. *(Students have these on the Idea Scoring Sheet and saw them in the Session 1 deck.)*
 - **The richness test — *is it worth founding on?* (6 min).** Monday's feasibility work asked *can I build it?* That's only half the question: **an idea can be perfectly feasible and still too thin to found a project on.**
   - **The check:** does it **exercise multiple engineering dimensions** (data, interfaces, logic, integration, maybe real-time or ML) — and does it have **room to grow**, so others could join and build on it after your slice ships?
   - **The two failure modes.** *Too thin:* a weekend script — you'd finish it and there'd be nothing left to found, nothing for a contributor to do. *Too big:* feasible only as a fantasy; no slice you could actually ship. Both feel fine on Monday's feasibility worksheet, which is exactly why richness is a separate test.
@@ -63,7 +63,7 @@ By the end of this session, a student can:
   - **Two calibration candidates — worked (put both up; ask "which is the better founding bet?").** Quantify each so the contrast is concrete:
     - **A — "ClassClock" (thin-but-easy).** A browser extension that reads your class schedule and counts down to your next class. *Value: low* — your phone calendar already does it; no one has an unmet need. *Do-ability: high* — one data source, one screen, a weekend, ~200 lines. *Richness: fails* — one component, nothing to hand a contributor; finish it and the project is over. **Plots bottom-right → here, just drop.**
     - **B — legal-defense crowdsourcing (rich-but-scary).** A platform that invites the world to help defend someone in legal danger: structured intake, AI-assisted guidance, crowd-sourced pro-bono research, crowd funding, document management, and hooks into court systems. *Value: high* — a real, underserved need (access to justice). *Do-ability as stated: low* — the source design is 10–12 teams / ~50 people over three semesters; there is no as-is one-semester build. *Richness: very high* — six feature areas plus data, services, UX, and compliance. **Plots top-left: high value, low do-ability → narrow or spike, don't drop.** *(Drawn from the SE Studio proposal's legal-assistance cohort example.)*
-    - **The move — narrow B to a slice.** The better founding bet is B, **shrunk to a buildable vertical slice:** e.g., a structured **intake + document-assembly tool for one low-stakes case type** (small-claims self-filing), with a **queue where a volunteer reviews a submission.** One semester — realistically five weeks of building, out of a ~10 hrs/week that also covers class, reading, writing, and reviews — can ship that — and finishing it leaves obvious next work (AI guidance, funding, more case types, court integration) for contributors. **That's the sweet spot: a rich core with a slice you can actually ship.**
+    - **The move — narrow B to a slice.** The better founding bet is B, **shrunk to a buildable vertical slice:** e.g., a structured **intake + document-assembly tool for one low-stakes case type** (small-claims self-filing), with a **queue where a volunteer reviews a submission.** One semester — realistically five weeks of building, out of a ~10 hrs/week that also covers class, reading, writing, and reviews — can ship that, and finishing it leaves obvious next work (AI guidance, funding, more case types, court integration) for contributors. **That's the sweet spot: a rich core with a slice you can actually ship.**
     - *Swap in an idea the room actually raised in Session 2 if that contrast lands better — the point is the pattern, not these two examples.*
 - **The scoring grid:** rate each candidate on **value, feasibility (from your Session-5 risk read), richness, scope realism, and real-need** — high/medium/low or 1–3.
 - **Value vs. Do-ability (the CPS 2×2, and Atlassian's value/effort cousin):** plot each idea — **high value + high do-ability = your quick wins to pursue;** high value + low do-ability = narrow the scope or run a spike first; low value = drop regardless of ease.
@@ -136,7 +136,7 @@ By the end of this session, a student can:
 - **CP2 Product Definition Brief assignment:** `assignments/CP2-Product-Definition-Brief.md`
 - **PRD reference** (what a PRD contains): `resources/PRD-Reference.md`
 - **CP2 rubric:** `rubrics.md`
-- **CPS handbook — Value vs. Do-ability (p. 27):** `resources/CPS-Handbook-reading.md`
+- **CPS handbook — Value vs. Do-ability (p. 27):** `resources/cps_handbook.pdf`
 - **Discovery Notes (from Session 4):** `assignments/Discovery-Notes.md`
 
 ---

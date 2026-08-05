@@ -1,6 +1,6 @@
 # Feasibility & Risk Worksheet — can I actually build this?
 
-*Use this in Week 3 on each candidate idea before you converge. Feasibility isn't a yes/no verdict — it's a set of **risks you name honestly and then reduce.** Hiding a risk doesn't remove it; it just moves the surprise to Week 10.*
+*Use this in Week 3 on each candidate idea before you converge. Feasibility isn't a yes/no verdict — it's a set of **risks you name honestly and then reduce.** That's how feasibility is assessed on any engineering effort, at any scale. Hiding a risk doesn't remove it; it just moves the surprise later, to the point where it costs the most — a schedule you can no longer recover, or, here, Week 10.*
 
 ---
 

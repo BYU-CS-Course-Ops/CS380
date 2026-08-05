@@ -37,7 +37,7 @@ Some situations need more care — or a different problem space for a class proj
 - **Health, mental-health, legal, or financial-distress topics** (and anything that could cause real harm): clear it with the instructor before proceeding. Often a different, lower-stakes problem serves your learning just as well.
 - **People who can't freely consent, or who might feel pressured** by their relationship to you.
 
-**When in doubt, ask the instructor *before* you collect data — not after.**
+**When in doubt, ask the instructor *before* you collect data — not after.** The habit generalizes: every organization that talks to users has someone who owns this question — a privacy or legal reviewer, a user-research lead, an ethics board — and checking with them before you collect is always cheaper than explaining afterward. Knowing *when to ask* is the professional skill; the instructor is just who you ask right now.
 
 ## A consent script you can actually use
 
