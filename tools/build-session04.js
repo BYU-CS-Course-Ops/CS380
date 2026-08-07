@@ -177,6 +177,37 @@ async function build() {
   footer(s);
   s.addNotes("Emphasize this is not bureaucratic — treating people well gets you better information, and you'll do this for years. Make the key point from the ethics reading: this is a classroom project, not 'research' in BYU's sense, so no IRB is needed — BUT ethics still fully apply, and if anyone later wants to publish or make generalizable claims, that DOES require IRB approval first, so talk to me. Flag the power-imbalance issue (don't lean on people who feel they can't say no). Read the consent script aloud and tell them to actually use something like it. Point them to resources/Interview-Ethics-for-Students.md.");
 
+  // 7b Ethics gate — before you interview a real person
+  s = mk(); s.background = { color: C.white };
+  header(s, "Before you interview a real person", "Four things you confirm — hands up");
+  const gate = [
+    [FA.FaHandshake, "Ask, and say why", "Who you are, what you're learning, how long it takes."],
+    [FA.FaMicrophoneSlash, "No recording without a yes", "Notes are fine. Ask before you start."],
+    [FA.FaUserShield, "Anonymize your notes", "\"A club officer,\" not a name. Collect only what you need."],
+    [FA.FaQuestionCircle, "Sensitive topic? Ask me first", "Minors, health, legal, money trouble — before you collect."]
+  ];
+  const gw = 2.92, ggap = 0.16;
+  for (let i = 0; i < 4; i++) {
+    const x = 0.6 + i * (gw + ggap);
+    card(s, x, 1.9, gw, 2.35, C.cardBg);
+    await iconCircle(s, gate[i][0], x + (gw - 0.66) / 2, 2.14, 0.66, C.teal);
+    s.addText(gate[i][1], { x: x + 0.16, y: 2.94, w: gw - 0.32, h: 0.6, color: C.ink, fontFace: F.body, fontSize: 16, bold: true, align: "center", valign: "middle", margin: 0, lineSpacingMultiple: 1.0 });
+    s.addText(gate[i][2], { x: x + 0.2, y: 3.56, w: gw - 0.4, h: 0.6, color: C.slate, fontFace: F.body, fontSize: 13, align: "center", valign: "top", margin: 0, lineSpacingMultiple: 1.04 });
+  }
+  card(s, 0.6, 4.45, 12.1, 1.1, C.navy);
+  await iconCircle(s, FA.FaBalanceScale, 0.95, 4.71, 0.58, C.amber, C.navy);
+  s.addText([
+    { text: "Is this \"research\"? Not here.  ", options: { color: C.amber, bold: true } },
+    { text: "A classroom project isn't research in BYU's sense, so no IRB review is needed. Ethics still apply in full — and if you ever want to publish or make generalizable claims, that DOES need IRB approval first. Ask me before you collect more data.", options: { color: C.white } }
+  ], { x: 1.76, y: 4.45, w: 10.6, h: 1.1, fontFace: F.body, fontSize: 14, valign: "middle", margin: 0, lineSpacingMultiple: 1.05 });
+  card(s, 0.6, 5.68, 12.1, 1.05, "FBEEDA");
+  s.addText([
+    { text: "Watch the power imbalance.  ", options: { bold: true, color: C.tealDk } },
+    { text: "If someone might feel they can't say no to you — a roommate, an employee, someone you lead — a real \"no\" is harder to give. Pick people who can freely decline, and mean it when you offer the out.", options: { color: C.ink } }
+  ], { x: 0.95, y: 5.68, w: 11.4, h: 1.05, fontFace: F.body, fontSize: 14, valign: "middle", margin: 0, lineSpacingMultiple: 1.05 });
+  footer(s);
+  s.addNotes("Two minutes, and run it as a gate rather than a lecture — you just taught the norms, so this is the confirmation before they go talk to real humans this week. Read the four aloud and ask for hands on each; a room that can't raise hands on \"anonymize your notes\" hasn't read the ethics handout, and that's worth knowing before Thursday. The two bands are the parts the norms slide doesn't cover and the reading does: the IRB boundary (classroom project, not research — but publishing changes the answer, so come ask) and the power imbalance, which is the one students trip on because their easiest interviewees are exactly the people who can least comfortably refuse.");
+
   // 8 Mock interviews (activity)
   s = mk(); s.background = { color: C.navy };
   s.addShape(pres.shapes.OVAL, { x: 11.4, y: -1.3, w: 3.6, h: 3.6, fill: { color: "1C3252" } });

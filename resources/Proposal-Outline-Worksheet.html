@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Proposal Outline — 6-Minute Solo Sketch</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, "Segoe UI", sans-serif;
+    color: #1E2A36;
+    font-size: 10.2pt;
+    line-height: 1.25;
+  }
+  h1 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 17pt; color: #14233A; margin: 0 0 1pt 0; letter-spacing: -0.2pt;
+  }
+  .kicker { font-size: 8.6pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+  .head { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2pt solid #12908F; padding-bottom: 4pt; margin-bottom: 6pt; }
+  .nameline { font-size: 9pt; color: #5F7284; white-space: nowrap; padding-bottom: 1pt; }
+  .nameline span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 1.55in; }
+  .lede { font-size: 9.4pt; color: #1E2A36; margin: 0 0 7pt 0; }
+  .lede b { color: #14233A; }
+
+  h2 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 11.4pt; color: #14233A; margin: 0 0 3pt 0;
+  }
+  h2 .n { color: #12908F; }
+  .hint { font-size: 8.5pt; color: #5F7284; font-style: italic; margin: 0 0 4pt 0; }
+  section { margin-bottom: 7pt; }
+
+  /* Part 1 — nine lines */
+  table.skel { width: 100%; border-collapse: collapse; }
+  table.skel td { padding: 0; vertical-align: bottom; }
+  table.skel td.lbl {
+    width: 1.9in; font-size: 8.4pt; color: #14233A; font-weight: bold;
+    text-transform: uppercase; letter-spacing: 0.2pt; padding-bottom: 2.5pt; white-space: nowrap;
+  }
+  table.skel td.lbl i { font-weight: normal; text-transform: none; letter-spacing: 0; color: #5F7284; font-size: 7.8pt; font-style: italic; }
+  table.skel td.rule { border-bottom: 0.7pt solid #9BB0BF; height: 0.335in; }
+
+  /* Part 2 — risks */
+  table.risk { width: 100%; border-collapse: collapse; }
+  table.risk th {
+    font-size: 8.2pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284;
+    text-align: left; font-weight: bold; padding: 0 4pt 2pt 0; border-bottom: 1pt solid #12908F;
+  }
+  table.risk td { border-bottom: 0.7pt solid #9BB0BF; height: 0.36in; padding: 0 4pt 0 0; }
+  .cats { font-size: 8.2pt; color: #5F7284; margin: 3pt 0 0 0; }
+  .cats b { color: #14233A; }
+
+  /* Part 3 — arithmetic */
+  .math { background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 6pt 8pt; }
+  .math .row { font-size: 9.6pt; margin-bottom: 5pt; }
+  .math .row:last-child { margin-bottom: 0; }
+  .blank { display: inline-block; border-bottom: 0.9pt solid #5F7284; min-width: 0.6in; }
+  .blank.wide { min-width: 3.9in; }
+  .blank.med { min-width: 0.85in; }
+
+  /* Part 4 */
+  .star { font-size: 9.6pt; }
+
+  /* footer strip */
+  .next { margin-top: 8pt; border-top: 1pt dashed #9BB0BF; padding-top: 5pt; }
+  .next h3 { font-family: Cambria, Georgia, serif; font-size: 9.6pt; color: #14233A; margin: 0 0 2pt 0; }
+  .next ol { margin: 0; padding-left: 15pt; font-size: 8.8pt; color: #1E2A36; }
+  .next li { margin-bottom: 1pt; }
+  .next .capture { font-size: 8.4pt; color: #5F7284; font-style: italic; margin-top: 3pt; }
+  .foot { margin-top: 5pt; font-size: 7.6pt; color: #5F7284; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Session 7 · Proposal Anatomy</p>
+    <h1>Proposal Outline — 6-Minute Solo Sketch</h1>
+  </div>
+  <div class="nameline">Name <span></span></div>
+</div>
+
+<p class="lede">Six minutes, on paper, before you trade with a neighbor. Write fast — this is a <b>skeleton, not a draft</b>. Full guidance: <i>The Anatomy of a Software Proposal</i>; the graded version is <b>CP3, due Mon, Oct 5</b>.</p>
+
+<section>
+  <h2><span class="n">1 ·</span> The nine-line skeleton</h2>
+  <p class="hint">One line per section — what that section will <b>claim</b>, not what the section is. "Wardrobe volunteers at three small theaters can't tell what they already own" is a claim; "describes the problem" is not.</p>
+  <table class="skel">
+    <tr><td class="lbl">Problem &amp; users</td><td class="rule"></td></tr>
+    <tr><td class="lbl">Success criteria</td><td class="rule"></td></tr>
+    <tr><td class="lbl">Solution overview</td><td class="rule"></td></tr>
+    <tr><td class="lbl">Core features <i>(ranked)</i></td><td class="rule"></td></tr>
+    <tr><td class="lbl">Non-goals <i>(+ why)</i></td><td class="rule"></td></tr>
+    <tr><td class="lbl">Technical approach</td><td class="rule"></td></tr>
+    <tr><td class="lbl">Spike <i>(Q &amp; result)</i></td><td class="rule"></td></tr>
+    <tr><td class="lbl">MVP <i>(this term)</i></td><td class="rule"></td></tr>
+    <tr><td class="lbl">Exec summary <i>(last)</i></td><td class="rule"></td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span class="n">2 ·</span> Your three biggest risks</h2>
+  <p class="hint">A mitigation needs a <b>date or a trigger</b>. "I'll be careful" is not a mitigation. If a risk could appear in anyone's proposal, it isn't yours — go get a specific one.</p>
+  <table class="risk">
+    <tr><th style="width:41%">Risk — specific to your project</th><th style="width:15%">Category</th><th>Mitigation — with a date or trigger</th></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+  </table>
+  <p class="cats"><b>Categories:</b> technical · schedule · dependency · skill · adoption · maintenance</p>
+</section>
+
+<section>
+  <h2><span class="n">3 ·</span> The five-week arithmetic</h2>
+  <div class="math">
+    <div class="row">Hours a week I <i>actually</i> have for building, after class, reading, writing, reviews, and the rest of my life: &nbsp;<span class="blank"></span> hrs</div>
+    <div class="row"><span class="blank"></span> hrs &nbsp;×&nbsp; 5 build weeks &nbsp;=&nbsp; <span class="blank med"></span> total hours</div>
+    <div class="row">What that honestly buys me: <span class="blank" style="min-width:4.55in"></span></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">4 ·</span> Star your weakest section</h2>
+  <p class="star">The section I have the <b>least evidence</b> for: <span class="blank wide"></span> ★</p>
+  <p class="hint" style="margin-top:3pt">Put a star next to it in Part 1. That is where Wednesday's reviewers start — and where a skeptical reader will too.</p>
+</section>
+
+<div class="next">
+  <h3>Next (6b) — trade with a neighbor</h3>
+  <ol>
+    <li><b>Which section is weakest?</b> Name it in criteria language — "the users aren't bounded," not "it's vague."</li>
+    <li><b>Which claim most needs evidence?</b> Point at one line and ask "how do you know?"</li>
+    <li><b>Do you believe the five-week arithmetic?</b> Yes or no, and why.</li>
+  </ol>
+  <p class="capture">Authors: capture, don't defend. Write down what you hear; decide later what to act on.</p>
+</div>
+
+<div class="foot">
+  <span>Bring a <b>draft + two printed copies</b> to Wednesday's peer-review workshop (Sep 30).</span>
+  <span>CS 301R · Software Engineering Studio I</span>
+</div>
+
+</body>
+</html>

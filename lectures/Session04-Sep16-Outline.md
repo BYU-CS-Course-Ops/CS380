@@ -36,6 +36,7 @@ By the end of this session, a student can:
 - **Assign the reading in advance** and expect it done.
 - **Print / post the handouts:** `resources/Good-vs-Leading-Questions.md`, `resources/Interview-Prompt-Cards.md`, `resources/Persona-Template.md` (and the `Mom-Test-Summary.md` reading).
 - A slide with the **three Mom Test rules** and one with the **mock-interview process** (§4).
+- **The ethics gate (deck slide 8)** — the hands-up confirmation that closes §3. Run it every time this session is taught; it is the last gate before students interview real people.
 - The **Discovery Notes assignment** (`assignments/Discovery-Notes.md`) ready to hand out.
 - *Reusable from the prior course:* discovery/needfinding material in `open-source-project-course/`.
 
@@ -67,6 +68,9 @@ By the end of this session, a student can:
   - **Protect privacy** — anonymize in your notes/brief.
   - **Check with the instructor first** for sensitive topics/populations (minors, health info, etc.).
   - *(Anchor readings: the consent section of the Good-vs-Leading handout and `resources/Interview-Ethics-for-Students.md`, which is grounded in BYU IRB guidance.)*
+- **Then close the section with the gate (~2 min, deck slide 8).** You've just taught the norms; now confirm them, because this is the last checkpoint before students go talk to real people on their own. Read the four aloud — *ask and say why · no recording unless they say yes · anonymize your notes · sensitive topic, ask me first* — and take hands on each. A room that can't raise hands on "anonymize" hasn't read the ethics handout, and that is worth finding out now rather than after someone's name lands in a brief. Two points on the gate slide are **not** in the norms list above, because they come from the reading:
+  - **The IRB boundary.** A classroom project isn't "research" in BYU's sense, so no IRB review is required — but ethics apply in full, and publishing or making generalizable claims later *would* require IRB approval first. Tell them to come ask before collecting more data if they think they're crossing that line.
+  - **Power imbalance.** Someone who might feel they can't refuse you — a roommate, an employee, someone you lead — can't give a real "no." Students trip here because their easiest interviewees are exactly the people who can least comfortably decline.
 
 ### 4. Practice — mock interviews (3 rounds) — 24 min
 - **Triads: Interviewer · User · Observer**, rotating so **everyone interviews once — three rounds** (three roles → three rotations).

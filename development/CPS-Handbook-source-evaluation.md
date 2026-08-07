@@ -1,5 +1,7 @@
 # CPS Handbook — reading-source evaluation
 
+> **Instructor document — not a student handout.** This is the decision record for which CPS reading the course assigns and why. Students get the handbook itself (`resources/cps_handbook.pdf`) plus the assigned page range, posted to the LMS.
+
 *For the Session 2 (Wed, Sep 9) pre-reading. Students will have had no prior exposure to Creative Problem Solving, so the reading needs to be clear, self-contained, and focused on the divergent/convergent thinking we emphasize.*
 
 ---
