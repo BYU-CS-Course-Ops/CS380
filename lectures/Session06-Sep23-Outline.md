@@ -3,7 +3,7 @@
 **CS 301R · Software Engineering Studio I: Founding an Open-Source Project**
 **Session 6 of 27 · Wed, Sep 23, 2026 · 75-minute block**
 **Prior reading (all free — nothing to buy):**
-- **Re-read:** the **Value vs. Do-ability** section of the CPS handbook (p. 27) — `resources/cps_handbook.pdf` — the convergence tool you'll use today.
+- **Re-read:** the **Value vs. Do-ability** section of the CPS handbook (p. 27) — [download the PDF](https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf) — the convergence tool you'll use today.
 - **Atlassian — [*Prioritization frameworks*](https://www.atlassian.com/agile/product-management/prioritization-framework)** — the modern product-world cousin of Value vs. Do-ability (the value/effort 2×2); optional but useful.
 - **Bring:** your **Discovery Notes** (Session 4) and **2–3 candidate ideas** with the feasibility read from Session 5. *(The richness test is taught today, before you score.)*
 **Maps to:** Design Week 3, Session B — *convergence workshop: score candidate ideas against the selection criteria; instructor + peer feedback; pick 1–2.*
@@ -136,7 +136,7 @@ By the end of this session, a student can:
 - **CP2 Product Definition Brief assignment:** `assignments/CP2-Product-Definition-Brief.md`
 - **PRD reference** (what a PRD contains): `resources/PRD-Reference.md`
 - **CP2 rubric:** `rubrics.md`
-- **CPS handbook — Value vs. Do-ability (p. 27):** `resources/cps_handbook.pdf`
+- **CPS handbook — Value vs. Do-ability (p. 27):** [download the PDF](https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf)
 - **Discovery Notes (from Session 4):** `assignments/Discovery-Notes.md`
 
 ---

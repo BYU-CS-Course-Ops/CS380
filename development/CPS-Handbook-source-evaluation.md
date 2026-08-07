@@ -1,6 +1,6 @@
 # CPS Handbook — reading-source evaluation
 
-> **Instructor document — not a student handout.** This is the decision record for which CPS reading the course assigns and why. Students get the handbook itself (`resources/cps_handbook.pdf`) plus the assigned page range, posted to the LMS.
+> **Instructor document — not a student handout.** This is the decision record for which CPS reading the course assigns and why. Students get the handbook itself (linked below) plus the assigned page range, posted to the LMS.
 
 *For the Session 2 (Wed, Sep 9) pre-reading. Students will have had no prior exposure to Creative Problem Solving, so the reading needs to be clear, self-contained, and focused on the divergent/convergent thinking we emphasize.*
 
@@ -10,8 +10,7 @@
 
 **"Creative Problem Solving — a quick, down-and-dirty handbook"** — Knowinnovation & Inclusive Innovation (© 2012–2017). This is the same handbook the 2025–2026 course linked (hosted on a Berkeley site).
 
-- **Local copy (use this):** `resources/cps_handbook.pdf` — saved in this folder for the LMS.
-- *Original source:* https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf
+- **Download (link students to this):** https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf — the Berkeley-hosted copy; free, no sign-up, no paywall.
 - **What it is:** a 33-page practitioner handbook on the Osborn–Parnes CPS process.
 
 **Why it's the right pick for us — it's tightly aligned with what we already teach.** The divergent/convergent principles and the specific tools named in our Session 1 and Session 2 outlines come straight from this document:
@@ -47,9 +46,9 @@ This keeps the load reasonable for a first pre-reading while covering everything
 
 ---
 
-## Storage note
+## Distribution note
 
-The handbook is stored locally at **`resources/cps_handbook.pdf`** — reference that copy in the outlines and post it (or the assigned excerpt) to the LMS. Keep the Knowinnovation / Inclusive Innovation attribution and © notice intact when redistributing to enrolled students (educational use). The original source URL is retained above and in Sources for provenance.
+The handbook is **not committed to this repo** — it is third-party copyrighted material (Knowinnovation / Inclusive Innovation, © 2012–2017) and this repo is public. Reference it by **link** in the outlines, and post it (or just the assigned excerpt) to the LMS behind course authentication. Keep the Knowinnovation / Inclusive Innovation attribution and © notice intact when redistributing to enrolled students (educational use). A local working copy may sit at `resources/cps_handbook.pdf`; it is gitignored.
 
 ---
 

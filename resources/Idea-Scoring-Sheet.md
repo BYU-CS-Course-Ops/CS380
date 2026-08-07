@@ -77,4 +77,4 @@ This is a **working direction**, not an irreversible vow — but from here, your
 
 ---
 
-*Pairs with `Feasibility-Risk-Worksheet.md`, `Learning-Plan-Template.md`, and the selection criteria (from the Session 1 deck, scored in Part 1 above). CPS source: the Value vs. Do-ability section of the CPS handbook (`resources/cps_handbook.pdf`, p. 27).*
+*Pairs with `Feasibility-Risk-Worksheet.md`, `Learning-Plan-Template.md`, and the selection criteria (from the Session 1 deck, scored in Part 1 above). CPS source: the Value vs. Do-ability section of the CPS handbook ([download the PDF](https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf), p. 27).*

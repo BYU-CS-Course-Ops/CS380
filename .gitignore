@@ -2,3 +2,7 @@ open-source-project-course/
 notes.txt
 node_modules/
 *-png/
+
+# local-only: private correspondence and third-party copyrighted material
+development/*.eml
+resources/cps_handbook.pdf
