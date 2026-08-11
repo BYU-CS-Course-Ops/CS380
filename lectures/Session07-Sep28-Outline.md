@@ -6,7 +6,7 @@
 - **Course reading — [*The Anatomy of a Software Proposal*](../resources/Proposal-Anatomy-Reading.md)** (`resources/Proposal-Anatomy-Reading.md`) — **the primary reading.** Section-by-section: what each part contains, what it's for, where the material comes from, how to write it, and how it fails; the four checks; the order to write the sections in. **Class assumes this has been read** — the skeleton is reviewed, not taught.
 - **Sample proposal (weak) — `resources/Sample-Proposal-Weak.md`** — read it and mark the places you stop believing the author. We dissect it in class.
 - **Kislay Verma — [*Why programmers don't write documentation*](https://kislayverma.com/why-programmers-dont-write-documentation/)** — short; why clear writing is hard, and why it's engineering work rather than overhead.
-- *Optional:* **Write the Docs — [*A beginner's guide to writing documentation*](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)** — audience, purpose, and structure. The course reading covers this ground applied to proposals; this is the general version for anyone who wants it.
+- *Optional:* **Write the Docs — [*How to write software documentation*](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)** — audience, purpose, and structure. The course reading covers this ground applied to proposals; this is the general version for anyone who wants it.
 - **Finalize and submit your CP2 Product Definition Brief** — **due at the start of class today**; the proposal is built directly on it.
 **Maps to:** Design Week 4, Session A — *proposal structure (executive summary, problem & users, solution, core features, non-goals, technical approach, risks & mitigation, MVP, success criteria); dissect strong vs. weak examples.*
 
