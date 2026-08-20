@@ -71,4 +71,5 @@ Then revise. Start at the top of your edit list, not with the easiest fix.
 
 - **CP3 Written Proposal — due Mon, Oct 5** at the start of class, submitted **with images of both annotated draft copies.** Visible response to peer feedback is exactly what *Argument & revision* rewards.
 - **Monday, Oct 5 — the pitch workshop.** Same argument, compressed to 6–8 minutes and delivered out loud. The students who revise this weekend will find slide-building far easier than the ones who wait.
-- **Wednesday, Oct 7 — Pitch Day.** You pitch to persuade *and* to recruit; teams form that day.
+- **Read CP4 (Pitch Presentation #1) before Monday** — it's posted today. Monday's workshop is built on it and won't re-read it to you.
+- **Wednesday, Oct 7 — Pitch Day.** You pitch to persuade *and* to recruit, the room scores every pitch, and everyone submits a ranked preference before leaving. **Teams are announced Mon, Oct 12**, after a weekend to read the anchor projects' proposals.

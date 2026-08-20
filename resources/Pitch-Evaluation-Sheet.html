@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pitch Evaluation Sheet</title>
+<style>
+  @page { size: letter; margin: 0.34in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 9.6pt; line-height: 1.16; }
+
+  .sheet { height: 4.92in; padding-bottom: 2pt; }
+  .cutline { border-top: 1px dashed #9BB0BF; margin: 0 0 9pt 0; padding-top: 2pt;
+             font-size: 7pt; color: #9BB0BF; letter-spacing: 1pt; text-transform: uppercase; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 5pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 14pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 7.6pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .who { font-size: 9pt; color: #5F7284; white-space: nowrap; padding-bottom: 1pt; }
+  .who span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 1.85in; }
+
+  h2 { font-family: Cambria, Georgia, serif; font-size: 9.8pt; color: #14233A; margin: 0 0 2pt 0; }
+  h2 .n { color: #12908F; }
+  .hint { font-size: 7.8pt; color: #5F7284; font-style: italic; margin: 0 0 3pt 0; }
+
+  table.sc { width: 100%; border-collapse: collapse; font-size: 8.8pt; }
+  table.sc th { font-size: 7.4pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284;
+                text-align: left; padding: 0 4pt 2pt 0; border-bottom: 1pt solid #12908F; font-weight: bold; }
+  table.sc th.num { text-align: center; width: 0.86in; }
+  table.sc td { padding: 2.4pt 4pt 2.4pt 0; border-bottom: 0.6pt solid #DCE5EB; vertical-align: top; }
+  table.sc td.c { font-weight: bold; color: #14233A; width: 1.28in; }
+  table.sc td.n { text-align: center; color: #5F7284; letter-spacing: 2.5pt; font-size: 10.5pt; }
+  table.sc tr:last-child td { border-bottom: 0; }
+
+  .join { margin-top: 5pt; background: #F2F6F8; border-left: 2.5pt solid #E8A33D; padding: 4pt 7pt 5pt 7pt; }
+  .join .q { font-size: 9.6pt; color: #14233A; font-weight: bold; }
+  .join .opts { font-size: 9.6pt; letter-spacing: 0.3pt; }
+  .join .obs { margin-top: 3pt; font-size: 8pt; color: #1E2A36; line-height: 1.14; }
+  .join .obs b { color: #0E6E6D; }
+  .join .why { margin-top: 4pt; font-size: 9pt; }
+  .join .why b { color: #14233A; }
+  .blank { display: inline-block; border-bottom: 0.8pt solid #9BB0BF; }
+  .why .blank { width: 4.35in; }
+
+  .fb { margin-top: 5pt; }
+  .fb .lbl { font-size: 8.4pt; color: #14233A; font-weight: bold; }
+  .fb .line { border-bottom: 0.7pt solid #9BB0BF; height: 0.235in; margin-bottom: 1pt; }
+
+  .foot { margin-top: 4pt; font-size: 7.4pt; color: #5F7284; display: flex; justify-content: space-between; gap: 8pt; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+<!-- half-sheet template repeated twice; cut along the dashed line -->
+<div class="sheet">
+  <div class="head">
+    <div>
+      <p class="kicker">CS 301R · Pitch Day · Wed, Oct 7</p>
+      <h1>Pitch Evaluation Sheet</h1>
+    </div>
+    <div class="who">Pitch / presenter <span></span></div>
+  </div>
+
+  <h2><span class="n">1 ·</span> Score the idea — 1 weak · 2 adequate · 3 strong</h2>
+  <p class="hint">The same yardstick you've used since Week 3. Score the <b>idea as pitched</b>, not the presenter's likability — and each criterion on its own, not against the last pitch.</p>
+  <table class="sc">
+    <tr><th>Criterion</th><th>What a 3 looks like</th><th class="num">Score</th></tr>
+    <tr><td class="c">Value / real need</td><td>A specific, reachable userbase with an evidenced, felt need</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Feasibility</td><td>Risks named honestly; scope, stack, and mitigation credible</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Richness / breadth</td><td>Several engineering dimensions; room for a team to grow into</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Scope realism</td><td>The MVP plausibly fits the real build window — roughly five weeks</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Extensibility</td><td>Others could credibly keep building on it</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Maintainability</td><td>A tractable stack the team could own, explain, and support</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Preparedness</td><td>Knows the idea's weaknesses; answered questions honestly</td><td class="n">1 2 3</td></tr>
+  </table>
+
+  <div class="join">
+    <span class="q">Would you join this project?</span> &nbsp; <span class="opts">☐ Yes &nbsp; ☐ Maybe &nbsp; ☐ No</span>
+    <div class="obs"><b>Answer as an outside observer:</b> <i>if you walked in with no project of your own, looking for something worth a semester — would this be it?</i> "I already have my own idea" is not an answer; everyone does. Checking Yes commits you to nothing.</div>
+    <div class="why"><b>Why — one line:</b> <span class="blank"></span></div>
+  </div>
+
+  <div class="fb">
+    <span class="lbl">Strongest moment of the pitch</span> <span style="font-size:7.8pt;color:#5F7284;font-style:italic">— shared with the presenter, anonymized</span>
+    <div class="line"></div>
+    <span class="lbl">Sharpest concern</span> <span style="font-size:7.8pt;color:#5F7284;font-style:italic">— name the criterion; write the sentence you'd want to receive</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="foot">
+    <span><b>Score during Q&amp;A</b> · hand in before the next pitch begins · "Yes" is a signal, not a compliment</span>
+    <span>CS 301R</span>
+  </div>
+</div>
+
+<div class="cutline">cut here</div>
+
+<div class="sheet">
+  <div class="head">
+    <div>
+      <p class="kicker">CS 301R · Pitch Day · Wed, Oct 7</p>
+      <h1>Pitch Evaluation Sheet</h1>
+    </div>
+    <div class="who">Pitch / presenter <span></span></div>
+  </div>
+
+  <h2><span class="n">1 ·</span> Score the idea — 1 weak · 2 adequate · 3 strong</h2>
+  <p class="hint">The same yardstick you've used since Week 3. Score the <b>idea as pitched</b>, not the presenter's likability — and each criterion on its own, not against the last pitch.</p>
+  <table class="sc">
+    <tr><th>Criterion</th><th>What a 3 looks like</th><th class="num">Score</th></tr>
+    <tr><td class="c">Value / real need</td><td>A specific, reachable userbase with an evidenced, felt need</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Feasibility</td><td>Risks named honestly; scope, stack, and mitigation credible</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Richness / breadth</td><td>Several engineering dimensions; room for a team to grow into</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Scope realism</td><td>The MVP plausibly fits the real build window — roughly five weeks</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Extensibility</td><td>Others could credibly keep building on it</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Maintainability</td><td>A tractable stack the team could own, explain, and support</td><td class="n">1 2 3</td></tr>
+    <tr><td class="c">Preparedness</td><td>Knows the idea's weaknesses; answered questions honestly</td><td class="n">1 2 3</td></tr>
+  </table>
+
+  <div class="join">
+    <span class="q">Would you join this project?</span> &nbsp; <span class="opts">☐ Yes &nbsp; ☐ Maybe &nbsp; ☐ No</span>
+    <div class="obs"><b>Answer as an outside observer:</b> <i>if you walked in with no project of your own, looking for something worth a semester — would this be it?</i> "I already have my own idea" is not an answer; everyone does. Checking Yes commits you to nothing.</div>
+    <div class="why"><b>Why — one line:</b> <span class="blank"></span></div>
+  </div>
+
+  <div class="fb">
+    <span class="lbl">Strongest moment of the pitch</span> <span style="font-size:7.8pt;color:#5F7284;font-style:italic">— shared with the presenter, anonymized</span>
+    <div class="line"></div>
+    <span class="lbl">Sharpest concern</span> <span style="font-size:7.8pt;color:#5F7284;font-style:italic">— name the criterion; write the sentence you'd want to receive</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="foot">
+    <span><b>Score during Q&amp;A</b> · hand in before the next pitch begins · "Yes" is a signal, not a compliment</span>
+    <span>CS 301R</span>
+  </div>
+</div>
+
+</body>
+</html>

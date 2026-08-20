@@ -112,6 +112,7 @@ By the end of this session, a student can:
 ## Deliverable / after class
 
 - **Revise the proposal** against review feedback. **CP3 Written Proposal due Mon, Oct 5** (start of class, via LMS) — submitted **with scans or photos of both annotated draft copies.**
+- **Post CP4 today** (`assignments/CP4-Pitch-Presentation.md`) and say so out loud in the wrap: it is **prior reading for Monday's pitch workshop**, which points at the assignment rather than re-teaching it.
 - Start thinking about the pitch: same argument, 6–8 minutes, persuade + recruit.
 
 ---

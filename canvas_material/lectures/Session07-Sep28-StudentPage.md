@@ -70,4 +70,4 @@ Then the **dissection**. Two sample proposals argue for the *same project* — s
 
 - **CP3 Written Proposal — due Mon, Oct 5** at the start of class, submitted **with scans or photos of both annotated draft copies.**
 - **Your proposal must report at least one spike** — the question you asked, the time box, your pre-declared green/red lines, and the honest result. A red spike, honestly reported, scores better than a green one that only tested the easy part — and far better than one you only promised to run.
-- **Pitch #1 — Wed, Oct 7.** Same argument, out loud and compressed. Teams form that day.
+- **Pitch #1 — Wed, Oct 7.** Same argument, out loud and compressed. That day the room evaluates every pitch and you rank the projects you'd join; **teams are announced the following Monday**, after a weekend with the written proposals.

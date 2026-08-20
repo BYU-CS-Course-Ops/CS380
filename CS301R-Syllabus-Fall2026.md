@@ -77,7 +77,8 @@ This supports the cycle the course depends on: **draft → review → revise →
 
 - **Weeks 1–5 are individual.** Everyone explores problems, does discovery, writes a proposal, and pitches an idea. The pitch is persuasive — you are recruiting classmates.
 - **Pitch Day (Wed, Oct 7) is the hinge.** Each student pitches; peers evaluate and signal interest; the instructor gives input and has final say on which ideas are rich and feasible enough to anchor a team. Selection blends **peer scores + author recruiting + instructor judgment.**
-- **Teams form around the surviving ideas** (~2–4 people; the count is emergent). **You may instead continue solo** on a necessarily smaller-scope project. No student's idea is killed out from under them.
+- **You evaluate on Wednesday and commit on Monday.** Pitch Day ends with the anchor ideas announced and a **private ranked preference** submitted by every student — not with people sorting themselves into groups on the spot. Over the weekend the anchor projects' **written proposals** go up alongside the tallied scores, you read them, and you can revise your preference through Sunday night. **Teams are announced at the start of class Mon, Oct 12**, and charters are written in that class. Choosing a semester's work deserves more than the last ten minutes of a class period.
+- **Teams form around the surviving ideas** (~2–4 people; the count is emergent), assigned from your ranked preferences with first or second choices honored wherever possible. **You may instead continue solo** on a necessarily smaller-scope project. No student's idea is killed out from under them.
 - **Weeks 6–14 are team-based (or solo):** the team carries the project through design, repo foundation, MVP, and launch.
 
 **Real users — the ideal, with an honest substitute.** Because the project lead can become the capstone sponsor, understanding real users is the goal: identify users → understand their needs → involve them in shaping the design. You are strongly encouraged to talk to real people. For this first iteration, **a documented persona/proxy is an accepted substitute** where real access isn't available — as long as you are honest about your method and its limits. Any real-user engagement follows the basic consent/ethics norms covered in Week 2.
@@ -115,7 +116,7 @@ Twelve graded checkpoints (CP1–CP12) build toward the culminating artifact. CP
 | 2 | Product Definition Brief | Individual | Mon, Sep 28 *(S7)* |
 | 3 | Written Proposal | Individual | Mon, Oct 5 *(S9)* |
 | 4 | Pitch Presentation #1 + team formation | Individual | Wed, Oct 7 *(S10)* |
-| — | *Team Charter* (completion) | Team | Mon, Oct 12 *(S11)* |
+| — | *Team Charter* (completion) | Team | Written in class Mon, Oct 12 *(S11)* |
 | 5 | Design Document (revised) | Team | Wed, Oct 21 *(S14)* |
 | 6 | Git Workflow Lab | Team | Wed, Oct 21 *(S14)* |
 | 7 | Project Infrastructure Package | Team | Wed, Oct 28 *(S16)* |

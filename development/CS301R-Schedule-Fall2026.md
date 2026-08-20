@@ -59,13 +59,13 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 7 | Sep 28 | Mon | Wk 4 | A | Proposal anatomy; arguing feasibility without overpromising; strong vs. weak examples | **CP2 Product Definition Brief** |
 | 8 | Sep 30 | Wed | Wk 4 | B | Peer review of proposal scope & risk; scope-narrowing clinic | — |
 | 9 | Oct 5 | Mon | Wk 5 | A | Pitch workshop; proposal-evaluation rubric; giving constructive critique | **CP3 Written Proposal** (individual) |
-| 10 | Oct 7 | Wed | Wk 5 | B | **Pitch Presentation #1 (course hinge)** — persuade + recruit; peer scoring; instructor input; **selection & team formation** | **CP4 Pitch #1**; teams form + team charter |
+| 10 | Oct 7 | Wed | Wk 5 | B | **Pitch Presentation #1 (course hinge)** — persuade + recruit; peer scoring; instructor input; **selection + anchor ideas announced; preference slips collected** | **CP4 Pitch #1**; team preference (Canvas) |
 
 ### Phase 3 — Develop & Design
 
 | # | Date | Day | Design Wk | Session | Topic & in-class focus | Due / Checkpoint |
 |---|---|---|---|---|---|---|
-| 11 | Oct 12 | Mon | Wk 6 | A | Read & dissect a sample design doc; detail vs. over-specification | — |
+| 11 | Oct 12 | Mon | Wk 6 | A | **Teams announced**; read & dissect a sample design doc; detail vs. over-specification; **charter written in class** | Team Charter (end of day) |
 | 12 | Oct 14 | Wed | Wk 6 | B | Architecture & data-flow diagram workshop on the team's project | Design Document **draft** |
 | 13 | Oct 19 | Mon | Wk 7 | A | Live git workflow walkthrough; commit-message critique | — |
 | 14 | Oct 21 | Wed | Wk 7 | B | Hands-on branch/merge/PR lab on team repo; set git standards | **CP5 Design Document** + **CP6 Git Workflow Lab** |
@@ -121,7 +121,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 11 | Launch Package + Retrospective | Wed, Dec 2 | 25 |
 | 12 | Final Pitch + Demo (mastery artifact) | Dec 12–17 (finals) | Demo Day |
 
-**Phase boundaries on real dates:** Individual work (CP1–4) runs **Sep 2 – Oct 7**; team/solo work begins at team formation on **Oct 7** and runs through finals. The team-formation hinge (Oct 7) lands comfortably after the Sep 10 add/drop deadline, so rosters are stable before teams commit.
+**Phase boundaries on real dates:** Individual work (CP1–4) runs **Sep 2 – Oct 7**; pitches are evaluated and ranked on **Oct 7**, students spend the weekend with the anchor projects' written proposals, and **teams are announced Mon, Oct 12**, running through finals. The hinge lands comfortably after the Sep 10 add/drop deadline, so rosters are stable before teams commit.
 
 ---
 

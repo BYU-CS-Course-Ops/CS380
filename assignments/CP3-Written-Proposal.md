@@ -97,4 +97,6 @@ Your pitch (CP4, Wed Oct 7) delivers this same argument in 6–8 minutes — and
 
 ---
 
-*Part of the arc: **CP2 Product Definition Brief → CP3 Written Proposal → CP4 Pitch #1 → team formation.** See `rubrics.md` for the full grid, `resources/Proposal-Anatomy-Reading.md` for the section-by-section guide, `resources/Sample-Proposal-Strong.md` and `resources/Sample-Proposal-Weak.md` for the worked contrast, `resources/Spikes-Reading.md`, `resources/Feasibility-Risk-Worksheet.md`, and `resources/Learning-Plan-Template.md`.*
+*Part of the arc: **CP2 Product Definition Brief → CP3 Written Proposal → CP4 Pitch #1 → teams announced Oct 12.** Note that your proposal gets a second life: if your idea anchors a team, classmates read this document over the Oct 9–11 weekend while deciding where to spend their semester.*
+
+*See `rubrics.md` for the full grid, `resources/Proposal-Anatomy-Reading.md` for the section-by-section guide, `resources/Sample-Proposal-Strong.md` and `resources/Sample-Proposal-Weak.md` for the worked contrast, `resources/Spikes-Reading.md`, `resources/Feasibility-Risk-Worksheet.md`, and `resources/Learning-Plan-Template.md`.*

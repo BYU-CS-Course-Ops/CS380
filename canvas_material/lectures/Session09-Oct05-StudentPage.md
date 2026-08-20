@@ -1,0 +1,81 @@
+# Session 9 — Pitch Workshop: Persuade & Recruit
+
+**CS 301R · Software Engineering Studio I: Founding an Open-Source Project**
+**Monday, October 5, 2026**
+
+---
+
+## Before class
+
+Read before you come — all free, nothing to buy:
+
+1. **Simon Peyton Jones, John Hughes & John Launchbury — [*How to give a good research talk*](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/giving-a-talk.pdf)** (4 pages) — **the primary reading.** Two questions organize the whole thing: *who is my primary audience?* and *if someone remembers only one thing, what should it be?* What to cut, what to show, how to open, how to handle questions — all of it falls out of the answers. **Note the date: this paper is from 1993**, and it shows in the section on visual aids, which is written for overhead projectors and 35mm slides. Read it the way you read any older engineering source: **take the reasoning, not the format.** What it says about audiences, and about what a talk is *for*, has not aged at all.
+2. **Guy Kawasaki — [*The 10/20/30 Rule of PowerPoint*](https://guykawasaki.com/the_102030_rule/)** — short, opinionated, and right about the essentials: few slides, big fonts, respect the clock.
+3. **The CP4 assignment** (posted Sep 30) — **read it before class.** Today is built on the assumption you already know what Wednesday asks of you: the length, the two jobs, the rubric, and what "slides loaded before class" means. We won't read it to you.
+4. **Your own CP3 proposal** — the pitch is that same argument, compressed and spoken.
+
+*Optional — skim only:* **Kawasaki, [*The Only 10 Slides You Need in Your Pitch*](https://guykawasaki.com/the-only-10-slides-you-need-in-your-pitch/)** repeats the 10/20/30 argument almost word for word, so don't read it twice. Skim it for the **slide roles** — what each slide in a pitch is *for*.
+
+*Optional — worth keeping for any talk you ever give:*
+
+- **Zach Holman — [speaking.io](https://speaking.io/)** — a free field guide to planning, designing, practicing, and delivering a talk. The pages on nerves, live demos, and handling questions are the useful ones this week.
+- **Nancy Duarte — [*The Secret Structure of Great Talks*](https://www.ted.com/talks/nancy_duarte_the_secret_structure_of_great_talks)** (18 min, free transcript) — why persuasive talks are shaped the way they are: they move between *what is* and *what could be*, and end on a call to action. That call to action is your ask.
+- **Michael Alley — [the assertion–evidence approach](https://www.assertion-evidence.com/)** — the source behind several of the slide contrasts we'll work through in class: a **sentence assertion supported by visual evidence**, instead of a phrase headline over a bullet list. Free tutorial and templates, with research on audience comprehension behind it.
+
+**Also due today:**
+
+- **CP3 Written Proposal — due at the start of class**, with images of both annotated draft copies from Wednesday's review.
+
+---
+
+## Purpose
+
+You've written the argument. Now you have to **say it** — in six to eight minutes, to a room that owes you nothing, ending with an ask.
+
+A pitch is not a shorter proposal. The reader of a document can re-read a sentence they didn't follow; a listener cannot. That single difference drives everything about how a talk gets built: one idea per slide, evidence you can say out loud, a structure someone can hold in their head, and a clear statement of what you want from them at the end. The reading puts it best — decide who your primary audience is, and decide the one thing you want them to remember. Everything you cut, you cut against those two answers.
+
+There's a second job here that most talks don't have. You aren't only defending the idea; you're **recruiting**. A pitch succeeds when a classmate thinks *I want to spend my time building that* — which is the same move an open-source maintainer makes to attract contributors, a founder makes to attract a cofounder, and an engineer makes to get headcount for the thing they believe in.
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Structure a 6–8 minute pitch** that argues need → solution → feasibility → why join → ask, with a time budget for each beat.
+2. **Build slides that help rather than hurt** — few, large, one idea each, carrying evidence rather than text.
+3. **Handle questions honestly** — including "I don't know yet, and here's how I'd find out."
+4. **Score a pitch against shared criteria**, consistently and independently — and know which instrument does what.
+5. **Answer the recruiting question without bias** — as an outside observer, not as someone defending their own project.
+
+---
+
+## What we'll do together
+
+We start with **the arc**: five beats, each with a time budget, because the most common failure is five minutes on the problem and thirty seconds on feasibility. Then **slides**, taught as five contrasts — the same claim made badly and made well. A photograph of the workaround people use today versus three bullets summarizing it. A number versus an adjective. One boxes-and-arrows diagram versus a wall of framework logos. Your ask left standing on screen versus "Questions?" in 60-point type. Then **Q&A**, where the graded behavior is composure and honesty rather than omniscience.
+
+Next, the two instruments, side by side, because it matters that you know the difference: the **CP4 rubric** is the instructor's and decides your grade; the **Pitch Evaluation Sheet** is yours, one per pitch you watch, and it feeds team selection. We'll calibrate together on scope realism — what a 3, a 2, and a 1 actually sound like — and talk about the bias that would otherwise wreck the recruiting data: everyone in the room has their own project, so *"no, I have my own idea"* is not an answer to "would you join this?" The question is what you'd say if you had no project of your own and were looking for something worth spending your time on.
+
+The last half hour is yours. **Ten minutes of quiet build time** on a worksheet — not making slides, *deciding what the pitch says*: the five beats with budgets, the one piece of evidence you'll say out loud, your ask written word for word, and a list of 5–7 slide titles. Then **one practice round**: you deliver beats 1–3 standing, from notes, against the clock, to a partner who's genuinely cold, and they give you two scores and one question back.
+
+---
+
+## What you'll leave with
+
+- **A pitch that exists** — beats, budgets, evidence line, ask, and a slide list — instead of a proposal you're planning to read aloud.
+- **The experience of saying the front of it out loud** to someone who doesn't know your project, while there's still time to fix what didn't land.
+- **A working knowledge of both instruments**, so nothing about Wednesday's scoring is a surprise.
+
+### Wednesday, Oct 7 — Pitch Day mechanics
+
+- **The order is drawn at random and shown at the start of class.** There's no back-of-the-room strategy and no watching two pitches to see how it's done — **be ready to go first.**
+- **6–8 minutes + 2–3 minutes of Q&A.** The limit is real and it's timed.
+- **Slides posted or loaded before class starts.** No day-of fiddling with dongles and downloads.
+- **You'll get paper evaluation sheets at the door** — one per pitch you watch. Score during each Q&A, before the next pitch begins.
+- **You will not pick teams that day.** Pitch Day ends with the anchor ideas announced and everyone submitting a **ranked team preference** — you fill in a worksheet in class and submit it in Canvas, and you can edit that submission until **Sunday 11:59pm**.
+
+### Coming up
+
+- **Thursday:** the anchor projects' **written proposals** go up on Canvas with the tallied scores and the anonymized comments on your own pitch. **Read them over the weekend** — six minutes tells you whether someone can present; the proposal tells you whether the scope is real and whether there's something in it you'd want to build.
+- **Monday, Oct 12:** **teams are announced** at the start of class, and you'll write your **team charter** together in class that day. Phase 3 begins — design.
+- **Tonight:** rehearse **out loud, against the clock, twice.** Cut until it fits. *Then* build the 5–7 slides you listed — in that order, because slides built before the words are decided end up becoming the words.
