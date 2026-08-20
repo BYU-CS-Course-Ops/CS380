@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Proposal Review Protocol</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, "Segoe UI", sans-serif;
+    color: #1E2A36;
+    font-size: 10pt;
+    line-height: 1.19;
+  }
+  h1 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 17pt; color: #14233A; margin: 0 0 1pt 0; letter-spacing: -0.2pt;
+  }
+  .kicker { font-size: 8.6pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+  .head { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2pt solid #12908F; padding-bottom: 4pt; margin-bottom: 6pt; }
+  .nameline { font-size: 9pt; color: #5F7284; white-space: nowrap; padding-bottom: 1pt; }
+  .nameline span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 1.5in; }
+  .lede { font-size: 9.2pt; margin: 0 0 6pt 0; }
+  .lede b { color: #14233A; }
+
+  h2 { font-family: Cambria, Georgia, serif; font-size: 11pt; color: #14233A; margin: 0 0 3pt 0; }
+  h2 .n { color: #12908F; }
+  .hint { font-size: 8.4pt; color: #5F7284; font-style: italic; margin: 0 0 4pt 0; }
+  section { margin-bottom: 5pt; }
+
+  /* two-column protocol block */
+  .cols { display: flex; gap: 11pt; }
+  .col { flex: 1; }
+  .card { background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 4.5pt 7pt 5pt 7pt; height: 100%; }
+  .card.amber { border-left-color: #E8A33D; }
+  .card h3 { font-family: Cambria, Georgia, serif; font-size: 10.2pt; color: #14233A; margin: 0 0 3pt 0; }
+  .card ol, .card ul { margin: 0; padding-left: 13pt; font-size: 9.1pt; }
+  .card li { margin-bottom: 2pt; }
+  .card li:last-child { margin-bottom: 0; }
+  .card b { color: #14233A; }
+
+  /* register table */
+  table.reg { width: 100%; border-collapse: collapse; font-size: 8.9pt; }
+  table.reg th {
+    font-size: 8pt; text-transform: uppercase; letter-spacing: 0.3pt; text-align: left;
+    padding: 0 5pt 2pt 0; border-bottom: 1pt solid #12908F; font-weight: bold;
+  }
+  table.reg th.yes { color: #3E9C6B; }
+  table.reg th.no { color: #D9614C; }
+  table.reg td { padding: 2pt 5pt 2pt 0; vertical-align: top; border-bottom: 0.6pt solid #DCE5EB; width: 50%; }
+  table.reg tr:last-child td { border-bottom: 0; }
+
+  /* rubric table */
+  table.rub { width: 100%; border-collapse: collapse; font-size: 8.8pt; }
+  table.rub th {
+    font-size: 8pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284;
+    text-align: left; padding: 0 5pt 2pt 0; border-bottom: 1pt solid #12908F; font-weight: bold;
+  }
+  table.rub td { padding: 2.2pt 5pt 2.2pt 0; border-bottom: 0.6pt solid #DCE5EB; vertical-align: top; }
+  table.rub td.c { font-weight: bold; color: #14233A; width: 1.72in; }
+  table.rub td.w { width: 0.34in; color: #5F7284; text-align: right; padding-right: 8pt; }
+  table.rub tr.hot td.c { color: #0E6E6D; }
+  table.rub tr.hot td.c .mk { color: #12908F; font-weight: bold; margin-right: 1pt; }
+  table.rub tr:last-child td { border-bottom: 0; }
+  .rubnote { font-size: 8.2pt; color: #5F7284; margin: 3pt 0 0 0; }
+  .rubnote b { color: #14233A; }
+
+  /* narrowing moves */
+  ul.moves { margin: 0; padding-left: 13pt; font-size: 9.1pt; }
+  ul.moves li { margin-bottom: 1.5pt; }
+  ul.moves b { color: #14233A; }
+  .budget { margin-top: 4pt; background: #F2F6F8; border-left: 2.5pt solid #E8A33D; padding: 4pt 8pt; font-size: 8.9pt; }
+
+  /* revision list */
+  table.rev { width: 100%; border-collapse: collapse; }
+  table.rev td { padding: 0; vertical-align: bottom; }
+  table.rev td.num { width: 0.24in; font-size: 9pt; color: #12908F; font-weight: bold; padding-bottom: 2.5pt; }
+  table.rev td.rule { border-bottom: 0.7pt solid #9BB0BF; height: 0.29in; }
+  .one { font-size: 9.3pt; margin: 5pt 0 0 0; }
+  .blank { display: inline-block; border-bottom: 0.8pt solid #9BB0BF; min-width: 4.05in; }
+
+  .foot { margin-top: 6pt; border-top: 1pt dashed #9BB0BF; padding-top: 4pt; font-size: 8.2pt; color: #5F7284; display: flex; justify-content: space-between; gap: 10pt; }
+  .foot span:last-child { white-space: nowrap; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Session 8 · Peer Review Workshop</p>
+    <h1>Proposal Review Protocol</h1>
+  </div>
+  <div class="nameline">Reviewing for <span></span> &nbsp; &amp; <span></span></div>
+</div>
+
+<p class="lede">Work only its author has read is a guess. Review is how engineers find the flaw before it gets expensive — and it runs on the same three moves whether the artifact is a proposal, a design, or a pull request. <b>This is the protocol we use all semester</b> (design review Wk 6, code review Wk 7, repo audit Wk 11); today it runs on proposal drafts. <b>CP3 due Mon, Oct 5.</b></p>
+
+<section>
+  <div class="cols">
+    <div class="col">
+      <div class="card">
+        <h3>As a reviewer</h3>
+        <ol>
+          <li><b>Read silently</b>, rubric in front of you, pen on the author's page. Start with <b>scope realism</b> and <b>risks</b> — where proposals fail — then problem &amp; users.</li>
+          <li><b>Mark three things in writing:</b> strongest section and why · sharpest concern, in <b>criteria language</b> · one suggestion they could act on this week. <b>Initial your comments.</b></li>
+          <li><b>Discuss.</b> A question lands better than a verdict: <i>"what evidence supports this?"</i> beats <i>"this seems thin."</i></li>
+        </ol>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card amber">
+        <h3>As an author</h3>
+        <ul>
+          <li><b>Capture, don't defend.</b> You decide later what to act on — but you can't act on what you argued away.</li>
+          <li><b>Probe for the specific.</b> "Which paragraph made you doubt it?" turns a worry into an edit.</li>
+          <li><b>Keep both marked-up copies.</b> They are the evidence for <b>Argument &amp; revision</b>, submitted with CP3.</li>
+          <li><b>Both readers come in cold</b> — round 2 is an <i>independent</i> read, and adds one question: <b>"Would this pitch recruit you?"</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">1 ·</span> The register — say it so it can be used</h2>
+  <table class="reg">
+    <tr><th class="yes" style="width:50%">Usable — specific, criteria-anchored</th><th class="no">Not usable — taste, or a shrug</th></tr>
+    <tr>
+      <td>"Scope realism — I don't believe the calendar sync fits five weeks of real building."</td>
+      <td>"This seems like a lot."</td>
+    </tr>
+    <tr>
+      <td>"Problem &amp; users — 'students' isn't bounded. Which ones, how many, how did you reach them?"</td>
+      <td>"The problem section is vague."</td>
+    </tr>
+    <tr>
+      <td>"Risks — these could be in anyone's proposal. Which one is specific to <i>this</i> stack?"</td>
+      <td>"Good risks section."</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2><span class="n">2 ·</span> What you are reading for — the CP3 rubric</h2>
+  <p class="hint">The two criteria marked ★ are where proposals fail — start your read there, then work the rest. Name the criterion when you raise a concern; that is what makes feedback actionable instead of personal.</p>
+  <table class="rub">
+    <tr><th>Criterion</th><th style="text-align:right; padding-right:8pt">Wt</th><th>Strong looks like</th></tr>
+    <tr><td class="c">Problem &amp; user clarity</td><td class="w">15</td><td>A compelling, evidence-backed problem and a bounded userbase — not "students" or "everyone."</td></tr>
+    <tr><td class="c">Solution &amp; core features</td><td class="w">15</td><td>A coherent solution, a sharp ranked feature set, and <b>explicit non-goals</b>.</td></tr>
+    <tr><td class="c">Feasibility &amp; approach</td><td class="w">20</td><td>Stack and dependencies actually researched; the approach is justified, not asserted.</td></tr>
+    <tr class="hot"><td class="c"><span class="mk">★</span> Scope realism (MVP)</td><td class="w">15</td><td>A vertical slice sized against the <i>real</i> build window — roughly five weeks — <b>with the arithmetic shown</b>.</td></tr>
+    <tr><td class="c">Richness &amp; extensibility</td><td class="w">15</td><td>Exercises several engineering dimensions; a credible path for others to build on it.</td></tr>
+    <tr class="hot"><td class="c"><span class="mk">★</span> Risks &amp; mitigation</td><td class="w">10</td><td>Real, project-specific risks with mitigations that carry a date or a trigger.</td></tr>
+    <tr><td class="c">Argument &amp; revision</td><td class="w">10</td><td>Persuasive writing with <b>visible response to peer feedback</b> — measured against today's draft.</td></tr>
+  </table>
+  <p class="rubnote"><b>Argument &amp; revision requires a draft on file.</b> Today's LMS upload is what your revision is measured against; with no draft on file the criterion caps at Developing.</p>
+</section>
+
+<section>
+  <h2><span class="n">3 ·</span> If the finding is "too big" — the narrowing moves</h2>
+  <ul class="moves">
+    <li><b>Cut the platform, keep the slice</b> — one user type, one workflow, end to end.</li>
+    <li><b>Demote features to non-goals</b> — naming what you are <i>not</i> building strengthens the proposal.</li>
+    <li><b>Shrink the user</b> — one club, one ward, one lab, one theater.</li>
+    <li><b>Defer the hard integration</b> — v1 proves the core; the sync is the roadmap's job.</li>
+  </ul>
+  <div class="budget"><b>Then check the arithmetic out loud.</b> The ~10 hrs/week is <i>everything</i> — class, reading, discovery, writing, reviews. Subtract those first, then multiply what's left by <b>roughly five weeks of real building</b>. Most overscoped proposals die on this line.</div>
+</section>
+
+<section>
+  <h2><span class="n">4 ·</span> Your revision list — three edits, ranked</h2>
+  <p class="hint">Start with anything <b>both</b> readers flagged — that one is the proposal, not the reader.</p>
+  <table class="rev">
+    <tr><td class="num">1</td><td class="rule"></td></tr>
+    <tr><td class="num">2</td><td class="rule"></td></tr>
+    <tr><td class="num">3</td><td class="rule"></td></tr>
+  </table>
+  <p class="one">The one narrowing move my proposal most needs: <span class="blank"></span></p>
+</section>
+
+<div class="foot">
+  <span><b>Tonight:</b> scan or photograph <b>both</b> copies — a scan is cleaner, a photo is fine if legible. <b>Mon, Oct 5:</b> CP3 + both images.</span>
+  <span>CS 301R · Studio I</span>
+</div>
+
+</body>
+</html>

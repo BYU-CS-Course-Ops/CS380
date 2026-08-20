@@ -44,10 +44,10 @@ A 3–5 page document with these sections (the Session 7 skeleton):
 - **Individual work.** 3–5 pages, Markdown or PDF.
 - **Evidence over adjectives.** "Three of four commuters I interviewed described this workaround" persuades; "this is a huge problem" doesn't.
 - **At least one spike is required.** Run a time-boxed investigation on your project's scariest unknown and report the result — the question, the time box, and green (feasible) or red (what you'll change) — in your technical-approach/risks sections. This is the difference between an argued feasibility claim and a hoped-for one; it's graded under *Feasibility & technical approach*. (See `resources/Spikes-Reading.md`.)
-- **The draft is a required turn-in, not just something to bring.** By the start of class **Wed, Sep 30**: upload your draft to the LMS *and* bring **two printed copies** to class. Minimum sections: problem & users, solution, non-goals, and risks. A fuller draft gets you a better review.
+- **The draft is a required turn-in, not just something to bring.** By the start of class **Wed, Sep 30**: upload your draft to the LMS *and* bring **two printed copies** to class (print them yourself — the LMS deadline is set to the start of the period). Minimum sections: problem & users, solution, non-goals, and risks. A fuller draft gets you a better review.
   - The uploaded draft is **completion-checked, not scored** — it exists so revision can be graded against something.
   - **No draft on file caps *Argument & revision* at Developing.** Half of what that criterion measures is your response to feedback, and with no draft there is nothing to show improvement against. Arriving empty-handed also costs a classmate their review.
-- **Keep both annotated copies.** Your reviewers mark up the printed drafts on paper; you submit **scans or photos of both** with the final proposal. Visible response to peer feedback is what *Argument & revision* rewards — the annotated pages are the evidence.
+- **Keep both annotated copies.** Your reviewers mark up the printed drafts on paper; you submit **scans or phone photos of both** with the final proposal — no particular format, they just have to be **clearly legible** (flat page, good light, the reviewer's handwriting readable). Visible response to peer feedback is what *Argument & revision* rewards — the annotated pages are the evidence.
 - **AI use:** allowed for tightening prose and organizing; the argument, evidence, and judgment must be yours, defensibly. Disclose substantial use.
 
 ---
@@ -91,7 +91,7 @@ Scored on a 100-point analytic rubric; **12% of the course grade.** Reach at lea
 
 **Mon, Oct 5 (final):** submit via the LMS by the start of class:
 1. The final proposal (3–5 pages, Markdown or PDF), and
-2. **Scans or photos of both annotated draft copies** from Wednesday's review.
+2. **Scans or photos of both annotated draft copies** from Wednesday's review — legible enough to read.
 
 Your pitch (CP4, Wed Oct 7) delivers this same argument in 6–8 minutes — and if your idea anchors a team, the proposal is revised into the **team proposal** your teammates build from.
 
