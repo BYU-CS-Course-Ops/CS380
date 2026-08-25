@@ -11,7 +11,7 @@ const C = {
   ink: "1E2A36", slate: "5F7284", cardBg: "F2F6F8", ice: "E4EEF1", white: "FFFFFF"
 };
 const F = { head: "Cambria", body: "Calibri" };
-const VDIMG = path.resolve(__dirname, "../resources/img/value-doability.png");
+const VDIMG = path.resolve(__dirname, "../canvas_material/resources/img/value-doability.png");
 
 const iconCache = {};
 async function ic(Comp, color) {

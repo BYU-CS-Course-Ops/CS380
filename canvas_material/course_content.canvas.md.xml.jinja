@@ -1,0 +1,185 @@
+{#
+   CS 301R — top-level Canvas content file.
+
+   This is the file mdxcanvas is pointed at. It declares course settings and
+   assignment groups, pulls in every generated resource, and then lays out the
+   modules that students actually navigate.
+
+   Modules follow the course's own five-phase CPS arc rather than calendar
+   weeks, because that is the structure the course teaches and the structure
+   the checkpoints hang off. Two standing modules bracket them: Start Here for
+   orientation, and Course Resources for the readings and instruments students
+   return to all term.
+
+   Deploy:
+       ./deploy.sh sandbox     # rehearse
+       ./deploy.sh fall26      # live
+
+   Ids are permanent. Changing one orphans the Canvas resource it names, and
+   every <item content_id> pointing at it starts referring to nothing.
+#}
+<div>
+
+    {# ---- course-wide settings ------------------------------------------ #}
+
+    <syllabus>
+        <include path="pages/syllabus.md.jinja" usediv="false" />
+    </syllabus>
+
+    <course-settings name="{{ COURSE_NAME }}" code="{{ COURSE_CODE }}" />
+
+    {# Canvas shows the front page at the top of the course home page. It has
+       to be a <page> (not <md-page>, which drops the extra attributes) and it
+       has to be published. #}
+    <page id="course-home" title="Welcome to CS 301R" front_page="true" published="true">
+        <div class="cs301r-banner">
+            <div class="cs301r-banner-kicker">C S 301R · {{ SEMESTER }}</div>
+            <div class="cs301r-banner-title">Software Engineering Studio I</div>
+            <div class="cs301r-banner-meta">Founding an Open-Source Project</div>
+        </div>
+        <include path="pages/course-home.md.jinja" usediv="false" />
+    </page>
+
+    {# ---- assignment groups ---------------------------------------------
+       Weights reproduce the syllabus grade table. Every checkpoint is scored
+       out of 100 against its rubric; the group weight turns that into the
+       percentage. The bundles all split evenly (5/5, 6/6, 5/5), which is why
+       equal-points-within-a-group lands on the published numbers exactly.
+
+       Completion deliverables sit at weight 0 and are also flagged
+       omit_from_final_grade, so they are required without being scored.
+       ------------------------------------------------------------------- #}
+
+    <assignment-groups>
+        <group id="grp-discovery"    name="Discovery (CP1, CP2)"                weight="10" position="1" />
+        <group id="grp-proposal"     name="Written Proposal (CP3)"              weight="12" position="2" />
+        <group id="grp-pitch"        name="Pitch Presentation (CP4)"            weight="8"  position="3" />
+        <group id="grp-design"       name="Design Document (CP5)"               weight="12" position="4" />
+        <group id="grp-infra"        name="Infrastructure Package (CP7)"        weight="12" position="5" />
+        <group id="grp-git-techcomm" name="Git + Tech Comm (CP6, CP9)"          weight="12" position="6" />
+        <group id="grp-plan"         name="Project Plan &amp; Roadmap (CP8)"    weight="8"  position="7" />
+        <group id="grp-mvp"          name="MVP / Prototype (CP10)"              weight="16" position="8" />
+        <group id="grp-final"        name="Launch &amp; Final Demo (CP11, CP12)" weight="10" position="9" />
+        <group id="grp-completion"   name="Completion Deliverables"             weight="0"  position="10" />
+    </assignment-groups>
+
+    {# ---- generated resources -------------------------------------------
+       Everything below produces Canvas resources. The modules further down
+       only reference them by id; nothing is created there.
+       ------------------------------------------------------------------- #}
+
+    <include path="pages/pages.canvas.md.xml.jinja"
+             args="pages/pages-args.md" />
+
+    <include path="lectures/session-pages.canvas.md.xml.jinja"
+             args="lectures/session-pages-args.md.jinja" />
+
+    <include path="assignments/checkpoints.canvas.md.xml.jinja"
+             args="assignments/checkpoints-args.md.jinja" />
+
+    <include path="assignments/completion-items.canvas.md.xml.jinja"
+             args="assignments/completion-items-args.md.jinja" />
+
+    {# ---- modules -------------------------------------------------------- #}
+
+    <module id="mod-start-here" title="Start Here" published="true">
+        <item type="page"     content_id="course-home" title="Welcome to CS 301R" />
+        <item type="syllabus" id="mod-syllabus-item" title="Syllabus &amp; Course Policies" />
+        <item type="page"     content_id="pg-idea-journal" />
+    </module>
+
+    <module id="mod-resources" title="Course Resources" published="true">
+        <item type="subheader" id="sub-res-discovery" title="Discovery" />
+            <item type="page" content_id="pg-mom-test-summary" indent="1" />
+            <item type="page" content_id="pg-good-vs-leading-questions" indent="1" />
+            <item type="page" content_id="pg-interview-prompt-cards" indent="1" />
+            <item type="page" content_id="pg-interview-ethics" indent="1" />
+            <item type="page" content_id="pg-discovery-notes" indent="1" />
+            <item type="page" content_id="pg-persona-template" indent="1" />
+            <item type="page" content_id="pg-persona-examples" indent="1" />
+
+        <item type="subheader" id="sub-res-scoping" title="Scoping &amp; feasibility" />
+            <item type="page" content_id="pg-idea-scoring-sheet" indent="1" />
+            <item type="page" content_id="pg-feasibility-risk-worksheet" indent="1" />
+            <item type="page" content_id="pg-learning-plan-template" indent="1" />
+            <item type="page" content_id="pg-spikes-reading" indent="1" />
+
+        <item type="subheader" id="sub-res-writing" title="Writing &amp; proposals" />
+            <item type="page" content_id="pg-proposal-anatomy-reading" indent="1" />
+            <item type="page" content_id="pg-prd-reference" indent="1" />
+            <item type="page" content_id="pg-sample-proposal-weak" indent="1" />
+            <item type="page" content_id="pg-sample-proposal-strong" indent="1" />
+
+        <item type="subheader" id="sub-res-openSource" title="Open source" />
+            <item type="page"        content_id="pg-license-cheat-sheet" indent="1" />
+            <item type="ExternalURL" id="res-cps-handbook" title="Creative Problem Solving handbook (PDF)"
+                  external_url="{{ CPS_HANDBOOK_URL }}" indent="1" />
+
+        <item type="subheader" id="sub-res-evaluation" title="Evaluation instruments" />
+            <item type="page" content_id="pg-pitch-evaluation-sheet" indent="1" />
+            <item type="page" content_id="pg-peer-evaluation-form" indent="1" />
+    </module>
+
+    <module id="mod-phase-1" title="Phase 1 — Clarify &amp; Explore" published="true">
+        <item type="page"       content_id="s01" />
+        <item type="page"       content_id="s02" />
+        <item type="page"       content_id="s03" />
+        <item type="page"       content_id="s04" />
+        <item type="page"       content_id="s05" />
+            <item type="assignment" content_id="license-oss" indent="1" />
+        <item type="page"       content_id="s06" />
+            <item type="assignment" content_id="cp1" indent="1" />
+    </module>
+
+    <module id="mod-phase-2" title="Phase 2 — Ideate &amp; Pitch" published="true">
+        <item type="page"       content_id="s07" />
+            <item type="assignment" content_id="cp2" indent="1" />
+        <item type="page"       content_id="s08" />
+            <item type="assignment" content_id="cp3-draft" indent="1" />
+        <item type="page"       content_id="s09" />
+            <item type="assignment" content_id="cp3" indent="1" />
+        <item type="page"       content_id="s10" />
+            <item type="assignment" content_id="cp4" indent="1" />
+            <item type="assignment" content_id="team-preference" indent="1" />
+    </module>
+
+    <module id="mod-phase-3" title="Phase 3 — Develop &amp; Design" published="true">
+        <item type="page"       content_id="s11" />
+            <item type="assignment" content_id="charter" indent="1" />
+        <item type="page"       content_id="s12" />
+        <item type="page"       content_id="s13" />
+        <item type="page"       content_id="s14" />
+            <item type="assignment" content_id="cp5" indent="1" />
+            <item type="assignment" content_id="cp6" indent="1" />
+        <item type="page"       content_id="s15" />
+        <item type="page"       content_id="s16" />
+            <item type="assignment" content_id="cp7" indent="1" />
+    </module>
+
+    <module id="mod-phase-4" title="Phase 4 — Implement &amp; Build" published="true">
+        <item type="page"       content_id="s17" />
+        <item type="page"       content_id="s18" />
+            <item type="assignment" content_id="cp8" indent="1" />
+        <item type="page"       content_id="s19" />
+        <item type="page"       content_id="s20" />
+            <item type="assignment" content_id="mvp-plan" indent="1" />
+        <item type="page"       content_id="s21" />
+        <item type="page"       content_id="s22" />
+            <item type="assignment" content_id="cp9" indent="1" />
+            <item type="assignment" content_id="cp10" indent="1" />
+    </module>
+
+    <module id="mod-phase-5" title="Phase 5 — Launch &amp; Reflect" published="true">
+        <item type="page"       content_id="s23" />
+        <item type="page"       content_id="s24" />
+        <item type="page"       content_id="s25" />
+            <item type="assignment" content_id="cp11" indent="1" />
+        <item type="page"       content_id="s26" />
+        <item type="page"       content_id="s27" />
+    </module>
+
+    <module id="mod-demo-day" title="Demo Day" published="true">
+        <item type="assignment" content_id="cp12" />
+    </module>
+
+</div>

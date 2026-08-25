@@ -1,0 +1,119 @@
+/* CS 301R Canvas styling.
+ *
+ * mdxcanvas bakes this into inline style="..." attributes with BeautifulSoup's
+ * CSS selector engine (see mdxcanvas/xml_processing/inline_styling.py). Two
+ * consequences:
+ *   - Only plain selectors work. No :hover, no @media, no pseudo-elements —
+ *     they are silently dropped.
+ *   - Every rule must target an element the templates actually emit, because
+ *     the style lands on the tag itself, not in a stylesheet.
+ *
+ * Palette is the deck palette, so Canvas and the slides read as one course:
+ *   navy 14233A · navy2 1E3352 · teal 12908F · tealDk 0E6E6D
+ *   amber E8A33D · coral D9614C · green 3E9C6B
+ *   ink 1E2A36 · slate 5F7284 · cardBg F2F6F8
+ */
+
+/* ---- page banner ------------------------------------------------------- */
+
+.cs301r-banner {
+    background-color: #14233A;
+    color: #FFFFFF;
+    padding: 18px 22px;
+    border-radius: 8px;
+    border-left: 8px solid #12908F;
+    margin-bottom: 22px;
+}
+
+.cs301r-banner-kicker {
+    color: #9FC3C3;
+    font-family: Calibri, Candara, Segoe, sans-serif;
+    font-size: 11pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.cs301r-banner-title {
+    color: #FFFFFF;
+    font-family: Cambria, Georgia, serif;
+    font-size: 22pt;
+    font-weight: bold;
+    margin: 4px 0 2px 0;
+}
+
+.cs301r-banner-meta {
+    color: #C9D6E4;
+    font-family: Calibri, Candara, Segoe, sans-serif;
+    font-size: 12pt;
+}
+
+/* ---- callout cards ----------------------------------------------------- */
+
+.cs301r-card {
+    background-color: #F2F6F8;
+    border-left: 5px solid #5F7284;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 18px 0;
+}
+
+.cs301r-card-title {
+    font-family: Cambria, Georgia, serif;
+    font-size: 13pt;
+    font-weight: bold;
+    color: #14233A;
+    margin-bottom: 6px;
+}
+
+.cs301r-due {
+    border-left-color: #D9614C;
+}
+
+.cs301r-slides {
+    border-left-color: #E8A33D;
+}
+
+.cs301r-materials {
+    border-left-color: #12908F;
+}
+
+.cs301r-note {
+    border-left-color: #3E9C6B;
+}
+
+/* ---- tables ------------------------------------------------------------ */
+
+.cs301r-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.cs301r-table th {
+    background-color: #14233A;
+    color: #FFFFFF;
+    font-family: Calibri, Candara, Segoe, sans-serif;
+    text-align: left;
+    padding: 7px 12px;
+    border: 1px solid #5F7284;
+}
+
+.cs301r-table td {
+    padding: 7px 12px;
+    border: 1px solid #5F7284;
+    vertical-align: top;
+}
+
+/* ---- misc -------------------------------------------------------------- */
+
+.cs301r-meta-line {
+    color: #5F7284;
+    font-family: Calibri, Candara, Segoe, sans-serif;
+    font-size: 11pt;
+}
+
+.cs301r-rule {
+    border: 0;
+    border-top: 2px solid #12908F;
+    margin: 26px 0 18px 0;
+}

@@ -1,0 +1,59 @@
+{#
+   Shared Jinja macros for CS 301R Canvas content.
+
+   Import at the top of a template:
+       {% import "macros.jinja" as m %}
+
+   Every macro emits classes defined in canvas.css, which mdxcanvas bakes
+   into inline styles at deploy time.
+#}
+
+{# --------------------------------------------------------------------------
+   banner(kicker, title, meta)
+
+   The page header. `kicker` is the small uppercase line (e.g. "Session 7 of
+   27"), `title` the page name, `meta` the date / audience line beneath it.
+   -------------------------------------------------------------------------- #}
+{% macro banner(kicker, title, meta='') %}
+<div class="cs301r-banner">
+    {% if kicker %}<div class="cs301r-banner-kicker">{{ kicker }}</div>{% endif %}
+    <div class="cs301r-banner-title">{{ title }}</div>
+    {% if meta %}<div class="cs301r-banner-meta">{{ meta }}</div>{% endif %}
+</div>
+{% endmacro %}
+
+{# --------------------------------------------------------------------------
+   card(title, variant)
+
+   A callout block. `variant` picks the accent color:
+     due       coral   — deadlines and what is due today
+     slides    amber   — slide decks and downloads
+     materials teal    — handouts, worksheets, readings
+     note      green   — everything else
+   Used with {% call %}:
+       {% call m.card('Due today', 'due') %}...body...{% endcall %}
+   -------------------------------------------------------------------------- #}
+{% macro card(title, variant='note') %}
+<div class="cs301r-card cs301r-{{ variant }}">
+    {% if title %}<div class="cs301r-card-title">{{ title }}</div>{% endif %}
+    {{ caller() }}
+</div>
+{% endmacro %}
+
+{# --------------------------------------------------------------------------
+   date_at(date, time, year)
+
+   Builds the "MMM D, YYYY, H:MM AM" string Canvas wants for due_at,
+   available_from, available_to, and student_todo_at.
+
+   Every date in this course comes from global_args, so a semester roll is a
+   change to one file. Never hard-code a date in a template.
+   -------------------------------------------------------------------------- #}
+{% macro date_at(date, time, year) %}{{ date }}, {{ year }}, {{ time }}{% endmacro %}
+
+{# --------------------------------------------------------------------------
+   long_date(day, date, year)
+
+   Human-readable date for student-facing prose: "Wed, Sep 23, 2026".
+   -------------------------------------------------------------------------- #}
+{% macro long_date(day, date, year) %}{{ day }}, {{ date }}, {{ year }}{% endmacro %}

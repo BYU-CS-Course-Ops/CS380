@@ -1,0 +1,28 @@
+{#
+   CS 301R — standalone content pages.
+
+   Readings, handouts, templates, and reference sheets: anything whose source
+   is Markdown prose and that students should be able to link to, search, and
+   read in the browser. Printable worksheets are files, not pages, and live in
+   canvas_material/resources/ instead.
+
+   The template is deliberately thin — banner plus the file. Titles come from
+   the args table rather than an H1, because the banner already renders one and
+   two titles in a row reads like a mistake.
+
+   Paths resolve relative to canvas_material/pages/.
+
+   Args: pages-args.md
+#}
+{% import "macros.jinja" as m %}
+{% for page in args %}
+<page id="{{ page['Id'] }}"
+      title="{{ page['Title'] }}"
+      published="{{ page['Publish'] }}">
+
+    {{ m.banner(page['Kicker'], page['Title'], page['Subtitle']) }}
+
+    <include path="{{ page['Path'] }}" usediv="false" />
+
+</page>
+{% endfor %}

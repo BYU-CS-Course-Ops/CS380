@@ -1,0 +1,88 @@
+{#
+   CS 301R — session (lecture) pages.
+
+   One Canvas page per class session. The template supplies the chrome; the
+   hand-written prose lives in session-pages/SessionNN-StudentPage.md.jinja and
+   is pulled in with <include>. That split is deliberate: the narrative voice of
+   those pages is the course's, and it should be edited as prose, not as table
+   cells.
+
+   Rendered order:
+       banner  ->  due-today card  ->  prose  ->  materials card  ->  slides card
+
+   Paths in this file resolve relative to canvas_material/lectures/ (mdxcanvas
+   resolves <file path> against the directory of the file containing the tag).
+   Paths written inside an included prose page resolve against
+   canvas_material/lectures/session-pages/ instead.
+
+   Args: session-pages-args.md.jinja
+#}
+{% import "macros.jinja" as m %}
+{% for key, info in args.items() %}
+{# markdowndata hoists the === block to the top level when a session has no
+   ## subsections, and nests it under 'content' when it does. Handle both. #}
+{% set meta = info['content'] if 'content' in info else info %}
+<page id="{{ meta['Id'] }}"
+      title="Session {{ meta['Num'] }} — {{ meta['Title'] }}"
+      published="{{ meta.get('Publish', 'false') }}"
+      student_todo_at="{{ meta['Date'] }}, {{ YEAR }}, {{ START_OF_DAY }}">
+
+    {{ m.banner(
+        'Session ' ~ meta['Num'] ~ ' of 27',
+        meta['Title'],
+        meta['Day'] ~ ', ' ~ meta['Date'] ~ ', ' ~ YEAR
+    ) }}
+
+    {% if info.get('Due') %}
+    {% call m.card('Due today', 'due') %}
+    <ul>
+        {% for d in info['Due'] %}
+        <li>
+            {% if d['Type'] in ('assignment', 'quiz', 'page') and d['Ref'] %}
+            <course-link type="{{ d['Type'] }}" id="{{ d['Ref'] }}">{{ d['Label'] }}</course-link>
+            {% else %}
+            {{ d['Label'] }}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endcall %}
+    {% endif %}
+
+    {% if meta.get('Page') and exists(meta['Page']) %}
+    <include path="{{ meta['Page'] }}" usediv="false" />
+    {% else %}
+    {% call m.card('Page in progress', 'note') %}
+    <p>The detail for this session has not been posted yet. It will appear here before class.</p>
+    {% endcall %}
+    {% endif %}
+
+    {% if info.get('Materials') %}
+    {% call m.card('Materials for this session', 'materials') %}
+    <ul>
+        {% for item in info['Materials'] %}
+        <li>
+            {% if item['Type'] == 'file' %}
+            <file path="{{ item['Ref'] }}" canvas_folder="Course Handouts" /> — {{ item['Label'] }}
+            {% elif item['Type'] == 'url' %}
+            <a href="{{ item['Ref'] }}">{{ item['Label'] }}</a>
+            {% else %}
+            <course-link type="{{ item['Type'] }}" id="{{ item['Ref'] }}">{{ item['Label'] }}</course-link>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endcall %}
+    {% endif %}
+
+    {% if meta.get('Deck') and exists(meta['Deck']) %}
+    {% call m.card('Slides', 'slides') %}
+    <p>
+        The deck used in class:
+        <file path="{{ meta['Deck'] }}" canvas_folder="Slide Decks" />
+    </p>
+    {% endcall %}
+    {% endif %}
+
+</page>
+{% endfor %}

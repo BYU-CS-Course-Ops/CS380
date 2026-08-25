@@ -1,0 +1,543 @@
+{#
+   Args for session-pages.canvas.md.xml.jinja — one block per class session.
+
+   Rules:
+     - No date literals. Every Date/Day comes from global_args (SNN_DATE /
+       SNN_DAY), so rolling the course to a new semester is one file edit.
+     - Title values are YAML, and the `===` block is parsed as YAML: a value
+       containing a colon MUST be quoted, or the parse fails.
+     - Write `&amp;` for an ampersand. Titles land in an XML attribute.
+     - Publish: "true" only when the student page is actually written. A
+       session with no page still gets an entry (dates, due items, module
+       placement); it just deploys unpublished until the prose exists.
+     - Deck / Page paths resolve relative to canvas_material/lectures/.
+       Materials paths of Type=file resolve there too, hence ../resources/.
+#}
+
+# Session 01
+
+===
+Id: s01
+Num: 1
+Title: "Course Launch"
+Date: {{ S01_DATE }}
+Day: {{ S01_DAY }}
+Publish: "true"
+Page: session-pages/Session01-StudentPage.md.jinja
+Deck: powerpoint/Session01-CourseLaunch.pptx
+===
+
+## Materials
+
+| Type | Ref             | Label                              |
+|------|-----------------|------------------------------------|
+| page | pg-idea-journal | Idea Journal — how to keep one     |
+
+# Session 02
+
+===
+Id: s02
+Num: 2
+Title: "Divergent Problem-Space Workshop"
+Date: {{ S02_DATE }}
+Day: {{ S02_DAY }}
+Publish: "true"
+Page: session-pages/Session02-StudentPage.md.jinja
+Deck: powerpoint/Session02-Divergent.pptx
+===
+
+## Materials
+
+| Type | Ref                         | Label                                          |
+|------|-----------------------------|------------------------------------------------|
+| url  | {{ CPS_HANDBOOK_URL }}      | Creative Problem Solving handbook (PDF)        |
+| page | pg-idea-journal             | Idea Journal — how to keep one                 |
+
+# Session 03
+
+===
+Id: s03
+Num: 3
+Title: "Open Source, Licensing &amp; Governance"
+Date: {{ S03_DATE }}
+Day: {{ S03_DAY }}
+Publish: "true"
+Page: session-pages/Session03-StudentPage.md.jinja
+Deck: powerpoint/Session03-OpenSource.pptx
+===
+
+## Materials
+
+| Type | Ref                    | Label                          |
+|------|------------------------|--------------------------------|
+| page | pg-license-cheat-sheet | License Cheat Sheet            |
+
+# Session 04
+
+===
+Id: s04
+Num: 4
+Title: "Discovery Workshop: Talking to Users"
+Date: {{ S04_DATE }}
+Day: {{ S04_DAY }}
+Publish: "true"
+Page: session-pages/Session04-StudentPage.md.jinja
+Deck: powerpoint/Session04-Discovery.pptx
+===
+
+## Materials
+
+| Type | Ref                          | Label                             |
+|------|------------------------------|-----------------------------------|
+| page | pg-mom-test-summary          | The Mom Test — course summary     |
+| page | pg-good-vs-leading-questions | Good vs. Leading Questions        |
+| page | pg-interview-prompt-cards    | Interview Prompt Cards            |
+| page | pg-interview-ethics          | Interview Ethics for Students     |
+| page | pg-persona-template          | Persona Template                  |
+| page | pg-persona-examples          | Persona Examples — honest vs. fabricated |
+| page | pg-discovery-notes           | Discovery Notes — what to record  |
+
+# Session 05
+
+===
+Id: s05
+Num: 5
+Title: "Feasibility, Self-Directed Learning &amp; the Learning Plan"
+Date: {{ S05_DATE }}
+Day: {{ S05_DAY }}
+Publish: "true"
+Page: session-pages/Session05-StudentPage.md.jinja
+Deck: powerpoint/Session05-Feasibility.pptx
+===
+
+## Due
+
+| Type       | Ref         | Label                                     |
+|------------|-------------|-------------------------------------------|
+| assignment | license-oss | License / Open-Source Short Response      |
+
+## Materials
+
+| Type | Ref                          | Label                                   |
+|------|------------------------------|-----------------------------------------|
+| page | pg-spikes-reading            | Spikes — a short course reading         |
+| page | pg-feasibility-risk-worksheet| Feasibility &amp; Risk Worksheet        |
+| page | pg-learning-plan-template    | Learning Plan Template                  |
+| url  | {{ CPS_HANDBOOK_URL }}       | CPS handbook — Value vs. Do-ability     |
+
+# Session 06
+
+===
+Id: s06
+Num: 6
+Title: "Convergence: Narrowing to a Defensible Idea"
+Date: {{ S06_DATE }}
+Day: {{ S06_DAY }}
+Publish: "true"
+Page: session-pages/Session06-StudentPage.md.jinja
+Deck: powerpoint/Session06-Convergence.pptx
+===
+
+## Due
+
+| Type       | Ref | Label                                  |
+|------------|-----|----------------------------------------|
+| assignment | cp1 | CP1 Idea Briefs — start of class       |
+
+## Materials
+
+| Type | Ref                    | Label                               |
+|------|------------------------|-------------------------------------|
+| page | pg-idea-scoring-sheet  | Idea Scoring Sheet                  |
+| url  | {{ CPS_HANDBOOK_URL }} | CPS handbook — Value vs. Do-ability |
+
+# Session 07
+
+===
+Id: s07
+Num: 7
+Title: "Proposal Anatomy: Arguing for a Project"
+Date: {{ S07_DATE }}
+Day: {{ S07_DAY }}
+Publish: "true"
+Page: session-pages/Session07-StudentPage.md.jinja
+Deck: powerpoint/Session07-ProposalAnatomy.pptx
+===
+
+## Due
+
+| Type       | Ref | Label                                              |
+|------------|-----|----------------------------------------------------|
+| assignment | cp2 | CP2 Product Definition Brief — start of class      |
+
+## Materials
+
+| Type | Ref                                           | Label                                        |
+|------|-----------------------------------------------|----------------------------------------------|
+| page | pg-proposal-anatomy-reading                   | The Anatomy of a Software Proposal           |
+| page | pg-sample-proposal-weak                       | Sample Proposal — CostumeHub (weak)          |
+| page | pg-sample-proposal-strong                     | Sample Proposal — CostumeHub (strong)        |
+| page | pg-prd-reference                              | PRD Reference                                |
+| file | ../resources/Proposal-Outline-Worksheet.pdf   | Proposal Outline Worksheet (printable)       |
+
+# Session 08
+
+===
+Id: s08
+Num: 8
+Title: "Peer Review: Your Draft Meets Its Readers"
+Date: {{ S08_DATE }}
+Day: {{ S08_DAY }}
+Publish: "true"
+Page: session-pages/Session08-StudentPage.md.jinja
+Deck: powerpoint/Session08-PeerReview.pptx
+===
+
+## Due
+
+| Type       | Ref       | Label                                                    |
+|------------|-----------|----------------------------------------------------------|
+| assignment | cp3-draft | CP3 Written Proposal — required draft (upload + 2 printed copies) |
+
+## Materials
+
+| Type | Ref                                      | Label                                |
+|------|------------------------------------------|--------------------------------------|
+| file | ../resources/Review-Protocol-Sheet.pdf   | Review Protocol Sheet (printable)    |
+| url  | {{ CPS_HANDBOOK_URL }}                   | CPS handbook — convergent thinking, pp. 6–10 |
+
+# Session 09
+
+===
+Id: s09
+Num: 9
+Title: "Pitch Workshop: Persuade &amp; Recruit"
+Date: {{ S09_DATE }}
+Day: {{ S09_DAY }}
+Publish: "true"
+Page: session-pages/Session09-StudentPage.md.jinja
+Deck: powerpoint/Session09-PitchWorkshop.pptx
+===
+
+## Due
+
+| Type       | Ref | Label                                        |
+|------------|-----|----------------------------------------------|
+| assignment | cp3 | CP3 Written Proposal — start of class        |
+
+## Materials
+
+| Type | Ref                                       | Label                              |
+|------|-------------------------------------------|------------------------------------|
+| file | ../resources/Pitch-Build-Sheet.pdf        | Pitch Build Sheet (printable)      |
+| page | pg-pitch-evaluation-sheet                 | Pitch Evaluation Sheet             |
+
+# Session 10
+
+===
+Id: s10
+Num: 10
+Title: "Pitch Day #1: Present, Evaluate, Select"
+Date: {{ S10_DATE }}
+Day: {{ S10_DAY }}
+Publish: "false"
+Page: session-pages/Session10-StudentPage.md.jinja
+Deck: ""
+===
+
+## Due
+
+| Type       | Ref            | Label                                              |
+|------------|----------------|----------------------------------------------------|
+| assignment | cp4            | CP4 Pitch Presentation — presented live in class   |
+| assignment | team-preference| Team Preference Worksheet — editable until {{ TEAM_PREF_DUE }} |
+
+## Materials
+
+| Type | Ref                                          | Label                                  |
+|------|----------------------------------------------|----------------------------------------|
+| file | ../resources/Pitch-Evaluation-Sheet.pdf      | Pitch Evaluation Sheet (printable)     |
+| file | ../resources/Team-Preference-Worksheet.pdf   | Team Preference Worksheet (printable)  |
+
+# Session 11
+
+===
+Id: s11
+Num: 11
+Title: "Design Documents: Dissecting the Real Thing"
+Date: {{ S11_DATE }}
+Day: {{ S11_DAY }}
+Publish: "false"
+Page: session-pages/Session11-StudentPage.md.jinja
+Deck: ""
+===
+
+## Due
+
+| Type       | Ref     | Label                                     |
+|------------|---------|-------------------------------------------|
+| assignment | charter | Team Charter — written in class today     |
+
+# Session 12
+
+===
+Id: s12
+Num: 12
+Title: "Architecture &amp; Data-Flow Workshop"
+Date: {{ S12_DATE }}
+Day: {{ S12_DAY }}
+Publish: "false"
+Page: session-pages/Session12-StudentPage.md.jinja
+Deck: ""
+===
+
+## Due
+
+| Type | Ref | Label                                            |
+|------|-----|--------------------------------------------------|
+| none |     | Design Document draft — bring to the workshop    |
+
+# Session 13
+
+===
+Id: s13
+Num: 13
+Title: "Git for Maintainers: The Workflow You'll Enforce"
+Date: {{ S13_DATE }}
+Day: {{ S13_DAY }}
+Publish: "false"
+Page: session-pages/Session13-StudentPage.md.jinja
+Deck: ""
+===
+
+# Session 14
+
+===
+Id: s14
+Num: 14
+Title: "Git Workflow Lab: Run the Loop, Set Your Standards"
+Date: {{ S14_DATE }}
+Day: {{ S14_DAY }}
+Publish: "false"
+Page: session-pages/Session14-StudentPage.md.jinja
+Deck: ""
+===
+
+## Due
+
+| Type       | Ref | Label                              |
+|------------|-----|------------------------------------|
+| assignment | cp5 | CP5 Design Document                |
+| assignment | cp6 | CP6 Git Workflow Lab               |
+
+# Session 15
+
+===
+Id: s15
+Num: 15
+Title: "Repo Infrastructure: The Front Door of Your Project"
+Date: {{ S15_DATE }}
+Day: {{ S15_DAY }}
+Publish: "false"
+Page: session-pages/Session15-StudentPage.md.jinja
+Deck: ""
+===
+
+# Session 16
+
+===
+Id: s16
+Num: 16
+Title: "Infrastructure Build Workshop: Ship the Front Door"
+Date: {{ S16_DATE }}
+Day: {{ S16_DAY }}
+Publish: "false"
+Page: session-pages/Session16-StudentPage.md.jinja
+Deck: ""
+===
+
+## Due
+
+| Type       | Ref | Label                                  |
+|------------|-----|----------------------------------------|
+| assignment | cp7 | CP7 Project Infrastructure Package     |
+
+# Session 17
+
+===
+Id: s17
+Num: 17
+Title: "From Design to Work: Epics, Milestones &amp; Issues"
+Date: {{ S17_DATE }}
+Day: {{ S17_DAY }}
+Publish: "false"
+Page: session-pages/Session17-StudentPage.md.jinja
+Deck: ""
+===
+
+# Session 18
+
+===
+Id: s18
+Num: 18
+Title: "Estimation, Sequencing &amp; the Vertical Slice"
+Date: {{ S18_DATE }}
+Day: {{ S18_DAY }}
+Publish: "false"
+Page: session-pages/Session18-StudentPage.md.jinja
+Deck: ""
+===
+
+## Due
+
+| Type       | Ref | Label                             |
+|------------|-----|-----------------------------------|
+| assignment | cp8 | CP8 Project Plan &amp; Roadmap    |
+
+# Session 19
+
+===
+Id: s19
+Num: 19
+Title: "MVP Thinking &amp; Systematic Debugging"
+Date: {{ S19_DATE }}
+Day: {{ S19_DAY }}
+Publish: "false"
+Page: session-pages/Session19-StudentPage.md.jinja
+Deck: ""
+===
+
+# Session 20
+
+===
+Id: s20
+Num: 20
+Title: "MVP-Plan Review &amp; Studio Build"
+Date: {{ S20_DATE }}
+Day: {{ S20_DAY }}
+Publish: "false"
+Page: session-pages/Session20-StudentPage.md.jinja
+Deck: ""
+===
+
+## Due
+
+| Type       | Ref      | Label      |
+|------------|----------|------------|
+| assignment | mvp-plan | MVP Plan   |
+
+# Session 21
+
+===
+Id: s21
+Num: 21
+Title: "Check-in &amp; Troubleshooting Studio"
+Date: {{ S21_DATE }}
+Day: {{ S21_DAY }}
+Publish: "false"
+Page: session-pages/Session21-StudentPage.md.jinja
+Deck: ""
+===
+
+# Session 22
+
+===
+Id: s22
+Num: 22
+Title: "Progress Demos &amp; the Repo Audit"
+Date: {{ S22_DATE }}
+Day: {{ S22_DAY }}
+Publish: "false"
+Page: session-pages/Session22-StudentPage.md.jinja
+Deck: ""
+===
+
+## Due
+
+| Type       | Ref  | Label                                        |
+|------------|------|----------------------------------------------|
+| assignment | cp9  | CP9 Technical Communication Portfolio        |
+| assignment | cp10 | CP10 Progress Demo + Repo Audit              |
+
+## Materials
+
+| Type | Ref                     | Label                              |
+|------|-------------------------|------------------------------------|
+| page | pg-peer-evaluation-form | Peer Evaluation Form               |
+
+# Session 23
+
+===
+Id: s23
+Num: 23
+Title: "Contributor-Readiness: Built to Be Joined"
+Date: {{ S23_DATE }}
+Day: {{ S23_DAY }}
+Publish: "false"
+Page: session-pages/Session23-StudentPage.md.jinja
+Deck: ""
+===
+
+# Session 24
+
+===
+Id: s24
+Num: 24
+Title: "The Honest Retrospective &amp; Framing the Final Pitch"
+Date: {{ S24_DATE }}
+Day: {{ S24_DAY }}
+Publish: "false"
+Page: session-pages/Session24-StudentPage.md.jinja
+Deck: ""
+===
+
+## Materials
+
+| Type | Ref                     | Label                  |
+|------|-------------------------|------------------------|
+| page | pg-peer-evaluation-form | Peer Evaluation Form   |
+
+# Session 25
+
+===
+Id: s25
+Num: 25
+Title: "Launch Studio: Assemble the Package, Test the On-Ramp"
+Date: {{ S25_DATE }}
+Day: {{ S25_DAY }}
+Publish: "false"
+Page: session-pages/Session25-StudentPage.md.jinja
+Deck: ""
+===
+
+## Due
+
+| Type       | Ref  | Label                                            |
+|------------|------|--------------------------------------------------|
+| assignment | cp11 | CP11 Launch Package + Retrospective              |
+
+# Session 26
+
+===
+Id: s26
+Num: 26
+Title: "Demo Dry-Run: The Full Rehearsal"
+Date: {{ S26_DATE }}
+Day: {{ S26_DAY }}
+Publish: "false"
+Page: session-pages/Session26-StudentPage.md.jinja
+Deck: ""
+===
+
+# Session 27
+
+===
+Id: s27
+Num: 27
+Title: "Final Studio: Polish, Freeze &amp; Close the Loop"
+Date: {{ S27_DATE }}
+Day: {{ S27_DAY }}
+Publish: "false"
+Page: session-pages/Session27-StudentPage.md.jinja
+Deck: ""
+===

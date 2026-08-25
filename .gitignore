@@ -1,4 +1,5 @@
 .claude
+.idea/
 open-source-project-course/
 notes.txt
 node_modules/
@@ -6,4 +7,7 @@ node_modules/
 
 # local-only: private correspondence and third-party copyrighted material
 development/*.eml
-resources/cps_handbook.pdf
+canvas_material/resources/cps_handbook.pdf
+
+# mdxcanvas deploy artifacts
+canvas_material/deploy-report*.json

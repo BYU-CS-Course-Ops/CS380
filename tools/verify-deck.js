@@ -18,7 +18,7 @@
  * array order gives us paint order directly.
  *
  * It parses the .pptx XML, so it works on any deck. Run after every build:
- *     node tools/verify-deck.js lectures/SessionNN-*.pptx
+ *     node tools/verify-deck.js canvas_material/lectures/powerpoint/SessionNN-*.pptx
  * Exit code is non-zero when issues are found, so it can gate a build.
  *
  * KNOWN LIMITS (worth an occasional visual pass via render-deck.sh):

@@ -1,0 +1,52 @@
+{#
+   CS 301R — graded checkpoints CP1–CP12.
+
+   One <assignment> per checkpoint. The description is a short metadata card
+   followed by an <include> of the student handout, which already carries the
+   full analytic rubric as a table. mdxcanvas has no native Canvas rubric
+   object, and the handouts are the published rubric anyway — students see the
+   same grid in Canvas that they see on paper.
+
+   Grade weights live on the assignment groups (see course_content), not on
+   points. Every checkpoint is scored out of 100, matching its rubric; the
+   group weight turns that into the syllabus percentage.
+
+   Paths resolve relative to canvas_material/assignments/.
+
+   Args: checkpoints-args.md.jinja
+#}
+{% import "macros.jinja" as m %}
+{% for cp in args %}
+<assignment id="{{ cp['Id'] }}"
+            title="{{ cp['Title'] }}"
+            due_at="{{ cp['Due_Date'] }}, {{ YEAR }}, {{ cp['Due_Time'] }}"
+            available_from="{{ SEM_START }}, {{ YEAR }}, {{ START_OF_DAY }}"
+            available_to="{{ SEM_END }}, {{ YEAR }}, {{ END_OF_DAY }}"
+            points_possible="{{ cp['Points'] }}"
+            assignment_group="{{ cp['Group'] }}"
+            submission_types="{{ cp['Submission'] }}"
+            published="true">
+
+    {{ m.banner(
+        'Checkpoint ' ~ cp['CP'] ~ ' · ' ~ cp['Scope'],
+        cp['Short_Title'],
+        'Due ' ~ cp['Due_Day'] ~ ', ' ~ cp['Due_Date'] ~ ', ' ~ YEAR ~ ' · ' ~ cp['Weight'] ~ ' of the course grade'
+    ) }}
+
+    {% call m.card('At a glance', 'due') %}
+    <table class="cs301r-table">
+        <tbody>
+        <tr><td><strong>Due</strong></td><td>{{ cp['Due_Day'] }}, {{ cp['Due_Date'] }}, {{ YEAR }} — {{ cp['Due_Note'] }}</td></tr>
+        <tr><td><strong>Worked</strong></td><td>{{ cp['Scope'] }}</td></tr>
+        <tr><td><strong>Weight</strong></td><td>{{ cp['Weight'] }} of the course grade, scored on a 100-point analytic rubric</td></tr>
+        <tr><td><strong>Submit</strong></td><td>{{ cp['Submit_Note'] }}</td></tr>
+        <tr><td><strong>Revision</strong></td>
+            <td>{% if cp['Revisable'] == 'yes' %}Eligible for revision — submit within one week of receiving graded feedback; the revised score replaces the original on the criteria you improved.{% else %}Single submission.{% endif %}</td></tr>
+        </tbody>
+    </table>
+    {% endcall %}
+
+    <include path="handouts/{{ cp['Handout'] }}" usediv="false" />
+
+</assignment>
+{% endfor %}

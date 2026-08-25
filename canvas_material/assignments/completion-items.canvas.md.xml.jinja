@@ -1,0 +1,51 @@
+{#
+   CS 301R — completion-graded deliverables.
+
+   These are credit / no-credit: required, feeding directly into a graded
+   checkpoint, and worth no points of their own. They sit in a 0%-weight
+   assignment group with grading_type="pass_fail" so Canvas shows a
+   complete/incomplete rather than a score, and omit_from_final_grade keeps
+   them out of the running total entirely.
+
+   Not weightless in practice: non-submission is noted under professionalism,
+   and two of these cap the checkpoint they feed (a missing CP3 draft caps
+   *Argument and revision* at Developing). The description says so.
+
+   Paths resolve relative to canvas_material/assignments/.
+
+   Args: completion-items-args.md.jinja
+#}
+{% import "macros.jinja" as m %}
+{% for item in args %}
+<assignment id="{{ item['Id'] }}"
+            title="{{ item['Title'] }}"
+            due_at="{{ item['Due_Date'] }}, {{ YEAR }}, {{ item['Due_Time'] }}"
+            available_from="{{ SEM_START }}, {{ YEAR }}, {{ START_OF_DAY }}"
+            available_to="{{ SEM_END }}, {{ YEAR }}, {{ END_OF_DAY }}"
+            points_possible="0"
+            grading_type="pass_fail"
+            omit_from_final_grade="true"
+            assignment_group="grp-completion"
+            submission_types="{{ item['Submission'] }}"
+            published="true">
+
+    {{ m.banner(
+        'Completion-graded · ' ~ item['Scope'],
+        item['Short_Title'],
+        'Due ' ~ item['Due_Day'] ~ ', ' ~ item['Due_Date'] ~ ', ' ~ YEAR
+    ) }}
+
+    {% call m.card('Credit / no credit', 'due') %}
+    <p>
+        This one is graded complete/incomplete and carries no points.
+        {{ item['Stakes'] }}
+    </p>
+    <p><strong>Submit:</strong> {{ item['Submit_Note'] }}</p>
+    {% endcall %}
+
+    {% if item['Handout'] %}
+    <include path="handouts/{{ item['Handout'] }}" usediv="false" />
+    {% endif %}
+
+</assignment>
+{% endfor %}
