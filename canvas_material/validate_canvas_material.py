@@ -32,6 +32,11 @@ through every <include> — and then checks the result.
                           the raw source, because they only become <img> tags
                           after the Markdown pass that happens at deploy time.
     group weights         Assignment group weights that do not total 100.
+    unparseable dates     A due_at / available_from / available_to /
+                          student_todo_at that mdxcanvas cannot parse. Every
+                          date in this course is assembled from global_args
+                          pieces, so one typo'd key yields something like
+                          ", 2026, 9:30 AM" that fails deep inside the deploy.
 
 Exit code is 0 on success, 1 if anything failed.
 """
@@ -42,6 +47,7 @@ import json
 import pathlib
 import re
 import sys
+from datetime import datetime
 
 CM = pathlib.Path(__file__).resolve().parent
 
@@ -65,6 +71,11 @@ PATH_TAGS = {"include", "file", "md-page", "zip"}
 # <img> is the odd one out: it carries src rather than path, and mdxcanvas
 # leaves remote and already-resolved sources alone.
 SKIP_SRC_PREFIXES = ("http", "data:", "__@@")
+
+# Date attributes, and the formats mdxcanvas accepts for them
+# (see mdxcanvas/xml_processing/attributes.py: parse_date).
+DATE_ATTRS = ("due_at", "available_from", "available_to", "student_todo_at", "publish_at", "late_due")
+DATE_FORMATS = ("%b %d, %Y, %I:%M %p", "%b %d %Y %I:%M %p", "%Y-%m-%dT%H:%M:%S%z")
 
 # Markdown image syntax, which only becomes an <img> after the Markdown pass.
 MD_IMAGE = re.compile(r"!\[[^\]]*\]\(\s*<?([^)\s>]+)>?\s*(?:\"[^\"]*\")?\s*\)")
@@ -148,6 +159,21 @@ def load_args_file(path: pathlib.Path, global_args: dict, report: Report):
         return json.loads(text)
     report.error(f"{rel(path)}: unsupported args file type")
     return None
+
+
+def parseable_date(value: str) -> bool:
+    try:
+        datetime.fromisoformat(value)
+        return True
+    except ValueError:
+        pass
+    for fmt in DATE_FORMATS:
+        try:
+            datetime.strptime(value, fmt)
+            return True
+        except ValueError:
+            continue
+    return False
 
 
 def rel(path: pathlib.Path) -> str:
@@ -247,6 +273,17 @@ class Walker:
                 grp = tag.get("assignment_group")
                 if grp:
                     self.references.append(("assignment_group", grp, rel(origin)))
+
+            # --- dates ---
+            for attr in DATE_ATTRS:
+                value = tag.get(attr)
+                if not value:
+                    continue
+                if not parseable_date(value):
+                    self.report.error(
+                        f'<{name} id="{tag.get("id", "?")}"> has an unparseable '
+                        f'{attr}="{value}" in {rel(origin)}'
+                    )
 
             # --- paths ---
             if name == "img":
