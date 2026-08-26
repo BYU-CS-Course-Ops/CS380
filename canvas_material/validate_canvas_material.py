@@ -32,6 +32,11 @@ through every <include> — and then checks the result.
                           the raw source, because they only become <img> tags
                           after the Markdown pass that happens at deploy time.
     group weights         Assignment group weights that do not total 100.
+    course id drift       GLOBAL_ARGS.COURSE_ID disagreeing with
+                          CANVAS_COURSE_ID. Templates cannot see the top-level
+                          field, so the id is duplicated into GLOBAL_ARGS to
+                          build direct course links; if the two drift, every
+                          such link silently points at another course.
     unparseable dates     A due_at / available_from / available_to /
                           student_todo_at that mdxcanvas cannot parse. Every
                           date in this course is assembled from global_args
@@ -105,7 +110,7 @@ class Report:
         return 0
 
 
-def load_global_args(target: str) -> dict:
+def load_global_args(target: str, report: Report | None = None) -> dict:
     """Merge GLOBAL_ARGS from course_info with the --global-args file.
 
     Same precedence mdxcanvas uses: the global-args file wins.
@@ -113,6 +118,15 @@ def load_global_args(target: str) -> dict:
     course_info = json.loads((CM / "course_info" / f"cs301r_{target}.json").read_text(encoding="utf-8"))
     args = dict(course_info.get("GLOBAL_ARGS", {}))
     args.update(json.loads((CM / "course_info" / f"global_args_{target}.json").read_text(encoding="utf-8")))
+
+    if report is not None:
+        canvas_id = course_info.get("CANVAS_COURSE_ID")
+        exposed = args.get("COURSE_ID")
+        if exposed is not None and str(exposed) != str(canvas_id):
+            report.error(
+                f"cs301r_{target}.json: GLOBAL_ARGS.COURSE_ID is {exposed} but "
+                f"CANVAS_COURSE_ID is {canvas_id} — direct course links would point elsewhere"
+            )
     return args
 
 
@@ -341,7 +355,7 @@ def main() -> int:
 
     report = Report()
     try:
-        global_args = load_global_args(opts.target)
+        global_args = load_global_args(opts.target, report)
     except FileNotFoundError as exc:
         print(f"no such target '{opts.target}': {exc}")
         return 1

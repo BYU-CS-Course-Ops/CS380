@@ -15,6 +15,8 @@
     "Settings"
   ],
   "GLOBAL_ARGS": {
+    "COURSE_ID": 36756,
+    "CANVAS_BASE_URL": "https://byu.instructure.com",
     "COURSE_NAME": "C S 301R: Software Engineering Studio I — Founding an Open-Source Project (Fall 2026)",
     "COURSE_CODE": "C S 301R (Fall 2026)",
     "SEMESTER": "Fall 2026"

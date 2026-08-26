@@ -84,7 +84,13 @@
 
     <module id="mod-start-here" title="Start Here" published="true">
         <item type="page"     content_id="course-home" title="Welcome to CS 301R" />
-        <item type="syllabus" id="mod-syllabus-item" title="Syllabus &amp; Course Policies" />
+        {# <item type="syllabus"> becomes an ExternalUrl whose new_tab defaults to
+           true, and Canvas renders that as an interstitial with a "load in a new
+           window" button — an extra click to reach a page inside this very course.
+           Link the syllabus URL directly and keep it in the same tab. #}
+        <item type="ExternalURL" id="mod-syllabus-item" title="Syllabus &amp; Course Policies"
+              external_url="{{ CANVAS_BASE_URL }}/courses/{{ COURSE_ID }}/assignments/syllabus"
+              new_tab="false" />
         <item type="page"     content_id="pg-idea-journal" />
     </module>
 
