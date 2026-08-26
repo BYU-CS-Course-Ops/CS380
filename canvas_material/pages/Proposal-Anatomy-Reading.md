@@ -2,7 +2,7 @@
 
 *What follows is about a genre you will write for the rest of your career: the document that argues a piece of software should exist. It shows up as a startup's seed memo, an internal one-pager arguing for a new service, an RFC or design proposal on an open-source project, a grant application, a request to your manager for two engineers and a quarter. The sections have different names in different places, but the argument underneath is always the same, and so are the ways it fails. Where this course has a specific version of something — a checkpoint, a rubric, a deadline — it appears as an **example** of the general move, not as the point.*
 
-*The running example is an invented project: a **shift-coverage and callout log for a rural volunteer EMS squad**. Two full sample proposals for a different project (a community-theater costume catalog), one strong and one weak, are in `resources/Sample-Proposal-Strong.md` and `resources/Sample-Proposal-Weak.md`.*
+*The running example is an invented project: a **shift-coverage and callout log for a rural volunteer EMS squad**. Two full sample proposals for a different project (a community-theater costume catalog), one strong and one weak, are in <course-link type="page" id="pg-sample-proposal-strong">the strong sample</course-link> and <course-link type="page" id="pg-sample-proposal-weak">the weak sample</course-link>.*
 
 ---
 
@@ -22,7 +22,7 @@ Almost every proposal has three kinds of reader, and they read for different thi
 
 - **The skeptic.** Someone with no stake in your success who reads to find the hole — a reviewer, a senior engineer, a funder, a maintainer who has seen forty proposals like yours. Every unsupported claim is a hole. This reader is not hostile; they are doing their job, which is to not be fooled.
 - **The person you're recruiting.** Anyone deciding whether to spend their own time on your project: a coworker choosing between your effort and another, a potential co-founder, a contributor deciding whether this repo is worth their weekends, an engineer deciding whether to transfer onto your team. They're asking *is this real, is it interesting, and is this person going to be organized?* They read your risks section hardest, because it tells them what working with you will feel like. **This is the reader most authors forget**, and the reason a proposal is a recruiting document whether or not you meant it to be. *(In this course, this reader is literal and immediate: your classmates decide at Pitch Day whether to join your project.)*
-- **The evaluator.** Someone applying explicit criteria — a grant panel with a scoring sheet, a design-review board with a checklist, a promotion committee, a request-for-proposals with stated requirements. The move that matters here is universal: **find out what the criteria are before you write.** They usually exist in writing, and asking for them is normal. *(Here, they're the CP3 grid in `rubrics.md`, handed to you in advance.)*
+- **The evaluator.** Someone applying explicit criteria — a grant panel with a scoring sheet, a design-review board with a checklist, a promotion committee, a request-for-proposals with stated requirements. The move that matters here is universal: **find out what the criteria are before you write.** They usually exist in writing, and asking for them is normal. *(Here, they're the grid printed in <course-link type="assignment" id="cp3">the proposal assignment</course-link> itself, published before you write.)*
 
 None of them reads start to finish on the first pass. They skim headings, read the summary, and dive into whichever section they most doubt. That's why the structure is conventional and the headings are boring: a boring heading is a navigation aid, and a reader who can find the section they doubt is a reader you can still convince.
 
@@ -116,7 +116,7 @@ Names vary by context; the jobs don't. For each: what goes in it, what it's *for
 
 **What it's for.** It's where "can this person build it?" gets answered. The question isn't whether your stack is impressive — it's whether the choices were *made* rather than defaulted to, and whether you know which part is hardest.
 
-**Where it comes from.** Your feasibility analysis, your plan for closing skill gaps, and your spike log. *(In this course: Session 5's feasibility work, the Learning-Plan template, and the spike CP3 requires.)*
+**Where it comes from.** Your feasibility analysis, your plan for closing skill gaps, and your spike log. *(In this course: <course-link type="page" id="s05">Session 5's feasibility work</course-link>, the <course-link type="page" id="pg-learning-plan-template">Learning Plan Template</course-link>, and the spike <course-link type="assignment" id="cp3">CP3</course-link> requires.)*
 
 **How to write it.** A small table: choice, and why *for this project*. Good reasons sound like constraints ("no IT staff at the site," "half the users are offline at home," "I've shipped this stack before, and the admin panel is free"). Bad reasons sound like adjectives ("modern," "industry-standard," "flexible") and would fit any project on earth. Name what you don't know and how long you've budgeted to learn it — an honest gap with a plan is a *strength* here, because the alternative reading is that you didn't notice the gap.
 
@@ -207,7 +207,7 @@ Every factual claim should have a traceable source, and you should know which on
 | What you'll need to learn | Your skill-gap plan | "~4 hours, with a documented fallback" |
 | Whether it fits the time available | The calendar, minus everything that isn't building | "roughly five weeks of real building" |
 
-*In this course, those map to your Discovery Notes and CP2 tags, your spike log, the Learning-Plan template, and the course calendar.*
+*In this course, those map to your <course-link type="page" id="pg-discovery-notes">Discovery Notes</course-link> and <course-link type="assignment" id="cp2">CP2</course-link> tags, your spike log, the <course-link type="page" id="pg-learning-plan-template">Learning Plan Template</course-link>, and the course calendar.*
 
 ## 8. Length, format, and the last mile
 
@@ -231,8 +231,8 @@ Before you submit, check that:
 
 Wherever a proposal is evaluated, the criteria exist — sometimes published, sometimes in a reviewer's head, sometimes in an RFP nobody read carefully. Finding them out first is free, and not doing it is the most avoidable way to lose.
 
-*In this course they're published:* CP3 is scored on the seven-criterion grid in `rubrics.md` (Written Proposal). Read the four performance levels before you write. The heaviest single criterion is **Feasibility & technical approach** (20 points), with **Scope realism** and the non-goals-bearing **Solution & core features** at 15 each — a deliberate signal that *arguing feasibility without overpromising* is the skill this genre lives or dies on.
+*In this course they're published:* <course-link type="assignment" id="cp3">CP3</course-link> is scored on the seven-criterion grid printed in the assignment itself. Read the four performance levels before you write. The heaviest single criterion is **Feasibility & technical approach** (20 points), with **Scope realism** and the non-goals-bearing **Solution & core features** at 15 each — a deliberate signal that *arguing feasibility without overpromising* is the skill this genre lives or dies on.
 
 ---
 
-*Related: `assignments/CP3-Written-Proposal.md` · `resources/Sample-Proposal-Strong.md` · `resources/Sample-Proposal-Weak.md` · `resources/Spikes-Reading.md` · `resources/Feasibility-Risk-Worksheet.md` · `resources/Learning-Plan-Template.md` · `rubrics.md`*
+*Related: <course-link type="assignment" id="cp3">CP3 Written Proposal</course-link> · <course-link type="page" id="pg-sample-proposal-strong">the strong sample</course-link> · <course-link type="page" id="pg-sample-proposal-weak">the weak sample</course-link> · <course-link type="page" id="pg-spikes-reading">Spikes</course-link> · <course-link type="page" id="pg-feasibility-risk-worksheet">Feasibility &amp; Risk Worksheet</course-link> · <course-link type="page" id="pg-learning-plan-template">Learning Plan Template</course-link>*

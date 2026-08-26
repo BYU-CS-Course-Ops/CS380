@@ -1,6 +1,6 @@
 > **This is a teaching sample.** The theater, the volunteers, the interviews, and the spike result are invented for CS 301R. Read it for *shape, voice, and evidence discipline* — not as a project to copy. In your own proposal, every piece of evidence must be real and yours.
 >
-> A **weak** proposal for the same project is in `resources/Sample-Proposal-Weak.md`. Read them side by side; that contrast is the whole lesson. The section-by-section guide is in `resources/Proposal-Anatomy-Reading.md`.
+> A **weak** proposal for the same project is <course-link type="page" id="pg-sample-proposal-weak">here</course-link>. Read them side by side; that contrast is the whole lesson. The section-by-section guide is <course-link type="page" id="pg-proposal-anatomy-reading">The Anatomy of a Software Proposal</course-link>.
 
 ---
 

@@ -1,4 +1,4 @@
-> **This is a teaching sample.** It proposes the *same project* as `resources/Sample-Proposal-Strong.md`, written by someone who skipped discovery and never cut anything. It is not a strawman — it is the proposal a capable student writes in one evening, and most of the mistakes in it are mistakes of *speed*, not ability.
+> **This is a teaching sample.** It proposes the *same project* as the strong sample, written by someone who skipped discovery and never cut anything. **Read this one first and mark it up before you go looking for the strong version** — the contrast only teaches you anything if you found the problems yourself. It is not a strawman — it is the proposal a capable student writes in one evening, and most of the mistakes in it are mistakes of *speed*, not ability.
 >
 > Read it before class. Mark the places you stop believing the author. We will dissect it together in Session 7, and you will review a real classmate's draft in Session 8 — the failures below are the ones you will actually see.
 

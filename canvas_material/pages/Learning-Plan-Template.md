@@ -104,4 +104,4 @@ Learning time is *build time you're not spending*. That's not an argument agains
 
 ---
 
-*Pairs with the `Feasibility-Risk-Worksheet.md` (the six risk categories) and the `Idea-Scoring-Sheet.md` (converging in Week 3). Feeds the feasibility section of your Written Proposal (CP3).*
+*Pairs with the <course-link type="page" id="pg-feasibility-risk-worksheet">Feasibility &amp; Risk Worksheet</course-link> (the six risk categories) and the <course-link type="page" id="pg-idea-scoring-sheet">Idea Scoring Sheet</course-link> (converging in Week 3). Feeds the feasibility section of your <course-link type="assignment" id="cp3">Written Proposal (CP3)</course-link>.*

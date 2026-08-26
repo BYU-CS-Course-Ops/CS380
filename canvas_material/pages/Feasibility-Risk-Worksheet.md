@@ -23,10 +23,10 @@ Rate each **Low / Medium / High** for your idea, and jot the specific reason. Th
 
 For each risk you circled, pick a move:
 
-- **Technical / Skill →** run a **spike** (a time-boxed 1–3 day experiment that proves the hard part) and make a **learning plan** — see `Learning-Plan-Template.md`.
+- **Technical / Skill →** run a **spike** (a time-boxed 1–3 day experiment that proves the hard part) and make a **learning plan** — see <course-link type="page" id="pg-learning-plan-template">Learning Plan Template</course-link>.
 - **Schedule →** cut scope to a smaller vertical slice; move features to "later."
 - **Dependency →** find a fallback, confirm the terms/limits/cost now, or design so the dependency is swappable.
-- **Adoption →** go do more discovery — one more real conversation beats a guess (see `Good-vs-Leading-Questions.md`).
+- **Adoption →** go do more discovery — one more real conversation beats a guess (see <course-link type="page" id="pg-good-vs-leading-questions">good vs. leading questions</course-link>).
 - **Maintenance →** favor a **tractable stack** you can own, explain, and onboard others into.
 
 **My top risk:** _______ → **my move:** _______
@@ -46,4 +46,4 @@ When two designs both work, prefer the one you can **own, explain, and support**
 - **The single biggest thing I must prove first:** _______
 - **If I keep this idea, my first spike is:** _______
 
-*Pairs with `Learning-Plan-Template.md` and `Idea-Scoring-Sheet.md`. The feasibility read here feeds the feasibility section of your Written Proposal (CP3).*
+*Pairs with the <course-link type="page" id="pg-learning-plan-template">Learning Plan Template</course-link> and the <course-link type="page" id="pg-idea-scoring-sheet">Idea Scoring Sheet</course-link>. The feasibility read here feeds the feasibility section of your <course-link type="assignment" id="cp3">Written Proposal (CP3)</course-link>.*

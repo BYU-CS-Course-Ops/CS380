@@ -27,7 +27,7 @@ Fuller PRDs may also sketch **high-level requirements** (functional and non-func
 
 ## How your Product Definition Brief maps to a PRD
 
-Your CP2 brief is a deliberately lightweight PRD. Its five sections line up directly:
+Your <course-link type="assignment" id="cp2">CP2 brief</course-link> is a deliberately lightweight PRD. Its five sections line up directly:
 
 | Your CP2 section | PRD element |
 |---|---|
@@ -37,10 +37,10 @@ Your CP2 brief is a deliberately lightweight PRD. Its five sections line up dire
 | Success criteria | Success criteria / metrics |
 | Open questions / what you'd still verify | Assumptions & open questions |
 
-Get these right and your written proposal (CP3) almost writes itself; leave them fuzzy and every later artifact inherits the fog.
+Get these right and your <course-link type="assignment" id="cp3">written proposal (CP3)</course-link> almost writes itself; leave them fuzzy and every later artifact inherits the fog.
 
 *(In this course, the same skill carries forward: a project you keep leading — and, if it's selected, carry into the capstone — starts from a PRD like this one. But the reason to learn it is general: every product team you'll ever join begins here.)*
 
 ---
 
-*Pairs with `assignments/CP2-Product-Definition-Brief.md`, `resources/Persona-Template.md`, and `resources/Good-vs-Leading-Questions.md`.*
+*Pairs with the <course-link type="assignment" id="cp2">Product Definition Brief</course-link>, the <course-link type="page" id="pg-persona-template">persona template</course-link>, and <course-link type="page" id="pg-good-vs-leading-questions">good vs. leading questions</course-link>.*
