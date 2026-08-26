@@ -24,9 +24,13 @@ through every <include> — and then checks the result.
                           items by module|content_id and each records a pointer
                           to the previous one, so a duplicate can close a loop
                           in the dependency graph that the deploy cannot order.
-    missing files         An <include>, <file>, or <img> path that is not on
-                          disk, resolved the way mdxcanvas resolves it: relative
-                          to the directory of the file containing the tag.
+    missing files         An <include>, <file>, or <zip> path, an <img src>, or
+                          a Markdown ![](...) image that is not on disk —
+                          resolved the way mdxcanvas resolves it: relative to
+                          the directory of the file containing the reference,
+                          not the deploy root. Markdown images are checked in
+                          the raw source, because they only become <img> tags
+                          after the Markdown pass that happens at deploy time.
     group weights         Assignment group weights that do not total 100.
 
 Exit code is 0 on success, 1 if anything failed.
@@ -36,6 +40,7 @@ from __future__ import annotations
 import argparse
 import json
 import pathlib
+import re
 import sys
 
 CM = pathlib.Path(__file__).resolve().parent
@@ -55,7 +60,14 @@ except ImportError as exc:  # pragma: no cover - environment problem, not conten
 DECLARING_TAGS = {"page", "md-page", "assignment", "quiz", "announcement", "discussion", "module", "group"}
 
 # Tags whose path attribute must exist on disk.
-PATH_TAGS = {"include", "file", "img", "md-page", "zip"}
+PATH_TAGS = {"include", "file", "md-page", "zip"}
+
+# <img> is the odd one out: it carries src rather than path, and mdxcanvas
+# leaves remote and already-resolved sources alone.
+SKIP_SRC_PREFIXES = ("http", "data:", "__@@")
+
+# Markdown image syntax, which only becomes an <img> after the Markdown pass.
+MD_IMAGE = re.compile(r"!\[[^\]]*\]\(\s*<?([^)\s>]+)>?\s*(?:\"[^\"]*\")?\s*\)")
 
 
 class Report:
@@ -161,11 +173,25 @@ class Walker:
             return
         text = render(path, self.global_args, args, self.report) if ".jinja" in path.suffixes \
             else path.read_text(encoding="utf-8")
+        self.check_markdown_images(text, path)
         if self.dump is not None:
             out = self.dump / (path.name + ".rendered")
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(text, encoding="utf-8")
         self.walk_xml(text, path)
+
+    def check_markdown_images(self, text: str, origin: pathlib.Path) -> None:
+        """Catch ![](path) before the Markdown pass turns it into an <img>.
+
+        By the time mdxcanvas raises on one of these the deploy is already
+        underway, and the path it reports is relative to whichever file the
+        image was written in — which is easy to get wrong after a file moves.
+        """
+        for src in MD_IMAGE.findall(text):
+            if src.startswith(SKIP_SRC_PREFIXES) or src.startswith("#"):
+                continue
+            if not (origin.parent / src).resolve().is_file():
+                self.report.error(f"![]({src}) not found, from {rel(origin)}")
 
     def walk_xml(self, text: str, origin: pathlib.Path) -> None:
         soup = BeautifulSoup(text, "html.parser")
@@ -223,6 +249,14 @@ class Walker:
                     self.references.append(("assignment_group", grp, rel(origin)))
 
             # --- paths ---
+            if name == "img":
+                src = tag.get("src") or ""
+                if src and not src.startswith(SKIP_SRC_PREFIXES):
+                    if not (origin.parent / src).resolve().is_file():
+                        self.report.error(
+                            f'<img src="{src}"> not found, from {rel(origin)}'
+                        )
+
             if name in PATH_TAGS:
                 p = tag.get("path")
                 if p:

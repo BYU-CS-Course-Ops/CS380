@@ -148,6 +148,13 @@ ids.
 from `lectures/`, which is why resource links there start `../resources/`. The
 same tag inside an included prose page resolves from `lectures/session-pages/`.
 
+**This bites hardest on images, because a Markdown `![](...)` is invisible to a
+grep for `path=`.** It only becomes an `<img src>` during the Markdown pass at
+deploy time, so a stale one blows up mid-deploy rather than up front. Images
+live in `resources/img/`, so a page in `pages/` writes
+`![alt](../resources/img/thing.png)`. The validator checks Markdown image
+syntax in the raw source for exactly this reason.
+
 **CSS is baked into inline styles with BeautifulSoup selectors.** No `:hover`,
 no `@media`, no pseudo-elements — they are silently dropped. Every rule must
 target an element the templates actually emit.
