@@ -27,7 +27,7 @@
             omit_from_final_grade="true"
             assignment_group="grp-completion"
             submission_types="{{ item['Submission'] }}"
-            published="true">
+            published="{{ item['Publish'] }}">
 
     {{ m.banner(
         'Completion-graded · ' ~ item['Scope'],

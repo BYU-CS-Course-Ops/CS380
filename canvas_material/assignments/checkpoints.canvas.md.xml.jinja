@@ -25,7 +25,7 @@
             points_possible="{{ cp['Points'] }}"
             assignment_group="{{ cp['Group'] }}"
             submission_types="{{ cp['Submission'] }}"
-            published="true">
+            published="{{ cp['Publish'] }}">
 
     {{ m.banner(
         'Checkpoint ' ~ cp['CP'] ~ ' · ' ~ cp['Scope'],

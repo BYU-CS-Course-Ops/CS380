@@ -167,6 +167,12 @@ target an element the templates actually emit.
 - `pages/rubrics.md.jinja` carries the grids for CP1–CP4 only. Port each remaining
   grid from the instructor-side `rubrics.md` as its handout is reviewed; the
   handouts all link to that page for the full four-level grid.
+- **CP5–CP12, the Team Charter, and the MVP Plan deploy unpublished** — their
+  handouts are not finalized. The `Publish` column in
+  `assignments/checkpoints-args.md.jinja` and
+  `assignments/completion-items-args.md.jinja` is the switch; flip a row to
+  `true` when its handout is reviewed, and port its grid to the rubrics page at
+  the same time.
 - Session pages 10–27 deploy **unpublished** — they have no prose yet, only
   dates, due items, and module placement. Write the page, flip `Publish` to
   `"true"` in `session-pages-args.md.jinja`.
