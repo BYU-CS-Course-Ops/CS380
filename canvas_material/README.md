@@ -61,7 +61,7 @@ gitignored, never uploaded, and always linked at its Berkeley URL through
 ```
 export CANVAS_API_TOKEN=...
 ./canvas_material/deploy.sh sandbox      # rehearse
-./canvas_material/deploy.sh fall26       # live (asks you to type the course id)
+./canvas_material/deploy.sh fall26       # live
 ```
 
 `deploy.sh` validates first and refuses to continue if validation fails.
@@ -75,9 +75,8 @@ python3 canvas_material/validate_canvas_material.py --target fall26 --dump /tmp/
 ```
 
 `--cleanup` is always on, which is what makes this repo the source of truth: a
-resource deleted here is deleted in Canvas. It is also what makes a mistake
-expensive, so `deploy.sh` requires you to type the course id for any target that
-is not `sandbox`.
+resource deleted here is deleted in Canvas. Naming the target is the
+confirmation — there is no second prompt, so the script works unattended.
 
 > **Sandbox currently points at the live course (36756).** Until a real sandbox
 > shell exists, "rehearsing" means deploying to students. Change

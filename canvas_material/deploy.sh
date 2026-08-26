@@ -41,18 +41,10 @@ COURSE_ID="$(grep -o '"CANVAS_COURSE_ID"[^,]*' "$COURSE_INFO" | grep -o '[0-9]\+
 echo "==> validating"
 python3 "$CM/validate_canvas_material.py" --target "$TARGET"
 
-# --cleanup deletes Canvas resources that are not in the content file, which is
-# what makes this repo the source of truth. It is also what makes a mistake
-# expensive, so confirm anything that is not the sandbox.
-if [[ "$TARGET" != "sandbox" ]]; then
-    echo ""
-    echo "About to deploy to Canvas course $COURSE_ID with --cleanup."
-    echo "Resources not present in course_content will be DELETED."
-    read -r -p "Type the course id to continue: " confirm
-    [[ "$confirm" == "$COURSE_ID" ]] || { echo "aborted"; exit 1; }
-fi
-
-echo "==> deploying to course $COURSE_ID"
+# --cleanup deletes Canvas resources that are not in the content file. That is
+# what makes this repo the source of truth, and it is the intended behavior of
+# naming a target.
+echo "==> deploying to course $COURSE_ID (--cleanup: resources absent from course_content are removed)"
 mdxcanvas \
     --course-info "$COURSE_INFO" \
     --global-args "$GLOBAL_ARGS" \
