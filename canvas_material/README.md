@@ -154,10 +154,10 @@ target an element the templates actually emit.
 
 ## Still open
 
-- `CLASS_START_TIME` is a placeholder (9:00 AM). Every "due at the start of
-  class" deadline uses it. Fix it once the registrar sets the meeting time.
 - `CP12_DUE` is a placeholder within `DEMO_DAY_WINDOW`. BYU assigns the finals
-  block by meeting time, so this cannot be settled before the line above.
+  block by class meeting time — now known (M/W 9:30 AM) — so the slot can be
+  confirmed with the registrar and pinned here.
+- Room is still TBD in the syllabus.
 - Session pages 10–27 deploy **unpublished** — they have no prose yet, only
   dates, due items, and module placement. Write the page, flip `Publish` to
   `"true"` in `session-pages-args.md.jinja`.

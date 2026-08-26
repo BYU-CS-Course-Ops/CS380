@@ -91,7 +91,7 @@ Both paths must be Windows-style. **Verify before delivering:** confirm one page
 4. **Sample artifacts** needing lead time: strong/weak sample proposals (S7), imperfect design doc to dissect (S11), demo repo with planted bug (S13/S19), example MVPs incl. a broad-shallow cautionary case (S19), infra comparison repos (S15).
 5. **External logistics:** Demo Day slot + capstone faculty invitations (registrar); pre-term partner/alumni outreach before Sep 2 (drafts in `open-source-project-course/emails/`); catalog/number with Katie (v4 §14); decide whether the old mentor pipeline carries over.
 6. ~~**LMS build-out**~~ **done** — mdxcanvas infrastructure lives in `canvas_material/` (see its README). Still open there:
-   - `CLASS_START_TIME` is a placeholder (9:00 AM) and every "due at the start of class" deadline uses it; fix once the registrar sets the meeting time. `CP12_DUE` (Demo Day) depends on the same decision.
+   - `CP12_DUE` (Demo Day) is still a placeholder inside `DEMO_DAY_WINDOW`. The meeting time is settled — **M/W 9:30–10:45 AM**, in `CLASS_START_TIME` / `CLASS_END_TIME` — so the finals slot can now be confirmed with the registrar. Room is still TBD in the syllabus.
    - `course_info/cs301r_sandbox.json` currently points at the **live** course (36756). Repoint it at a real sandbox shell before the term starts — until then, "rehearsing" a deploy means deploying to students.
    - Session decks 1–9 carry slide text naming old repo paths (`resources/License-Cheat-Sheet.md`, `assignments/Discovery-Notes.md`). Those files are now Canvas pages; the slides should point students at the Canvas page instead. Needs a rebuild + QA pass on the affected decks (3, 4, 6).
 
