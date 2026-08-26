@@ -54,7 +54,7 @@ Working engineers build this in deliberately: a manager who asks about it in a 1
 
 Learning aimed at a concrete artifact beats learning in the abstract — and the debugging teaches as much as the building does. The efficient move is to pick an artifact that does **two jobs at once**: it teaches you the thing, and it answers a real question the project needs answered. A time-boxed spike is exactly that artifact, which is why experienced engineers reach for one when facing an unfamiliar technology on a real deadline. *(In this course, the spike required for your proposal is usually the same experiment as the "build something" step here — one activity, two jobs.)*
 
-- **The spike:** a **time-boxed experiment (1–3 days)** proving you can do the hard part — a throwaway prototype or focused proof-of-concept. What question does it answer, and what counts as **"green"** (feasible) vs. **"red"** (rethink)?
+- **The <course-link type="page" id="pg-spikes-reading">spike</course-link>:** a **time-boxed experiment (1–3 days)** proving you can do the hard part — a throwaway prototype or focused proof-of-concept. What question does it answer, and what counts as **"green"** (feasible) vs. **"red"** (rethink)?
 
 ### Put it together (repeat per gap)
 

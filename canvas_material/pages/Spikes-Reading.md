@@ -37,7 +37,7 @@ The genuinely bad outcome is neither green nor red: **the spike with no time box
 
 ## The join: your spike is also your learning
 
-Here's the part specific to how this course works. When the scary unknown is a **skill you don't have yet**, your spike usually *is* the "build something" step of your learning plan. The throwaway prototype that proves the hard part is feasible is the same throwaway prototype that teaches you the skill. **One activity, two jobs:** it de-risks the project *and* closes the gap. That's why the spike sits in both your Feasibility & Risk worksheet and your Learning Plan — it's the hinge between them.
+Here's the part specific to how this course works. When the scary unknown is a **skill you don't have yet**, your spike usually *is* the "build something" step of your <course-link type="page" id="pg-learning-plan-template">learning plan</course-link>. The throwaway prototype that proves the hard part is feasible is the same throwaway prototype that teaches you the skill. **One activity, two jobs:** it de-risks the project *and* closes the gap. That's why the spike sits in both your Feasibility & Risk worksheet and your Learning Plan — it's the hinge between them.
 
 ## Common mistakes
 

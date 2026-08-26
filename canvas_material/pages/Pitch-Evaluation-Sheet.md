@@ -51,4 +51,4 @@ _______________________________________________
 - **Don't grade on a curve in your head.** Each pitch against the criteria, not against the previous pitch.
 - **Comments are for the presenter.** Write the sentence you'd want to receive: specific, usable, kind.
 
-*How this is used: scores + "Yes" counts are tallied in the selection huddle; the instructor blends them with recruiting interest and their own judgment to surface the anchor ideas, and holds final say. Peer input informs the CP4 grade; the instructor scores the rubric.*
+*How this is used: scores + "Yes" counts are tallied in the selection huddle; the instructor blends them with recruiting interest and their own judgment against the <course-link type="page" id="pg-rubrics">CP4 rubric</course-link> to surface the anchor ideas, and holds final say. Peer input informs the CP4 grade; the instructor scores the rubric.*

@@ -37,6 +37,6 @@ Ben is a 20-year-old sophomore in computer science with a 3.8 GPA. He works 15 h
 
 - **The bad one reads great and feels "done."** That's exactly the trap — a polished character *feels* like research.
 - **Every "fact" in Ben is invented and unsourced:** the 3.8 GPA, "an hour every day," "definitely pay $10/month." None of it came from a real person, and nothing is marked as a guess.
-- **"Would definitely pay $10/month" is a hypothetical dressed as fact** — the exact Mom Test trap. Future promises aren't evidence.
+- **"Would definitely pay $10/month" is a hypothetical dressed as fact** — the exact <course-link type="page" id="pg-mom-test-summary">Mom Test</course-link> trap. Future promises aren't evidence.
 - **Cara is less tidy but honest.** You can see precisely what's *evidence* vs. *assumption*, where each claim came from, and what you still need to verify.
 - **Bottom line:** a founder who builds on Ben is building confidently on fiction. Cara tells you what you actually know — and what to go find out in a real conversation.

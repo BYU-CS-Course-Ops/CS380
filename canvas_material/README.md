@@ -164,6 +164,9 @@ target an element the templates actually emit.
   block by class meeting time — now known (M/W 9:30 AM) — so the slot can be
   confirmed with the registrar and pinned here.
 - Room is still TBD in the syllabus.
+- `pages/rubrics.md.jinja` carries the grids for CP1–CP4 only. Port each remaining
+  grid from the instructor-side `rubrics.md` as its handout is reviewed; the
+  handouts all link to that page for the full four-level grid.
 - Session pages 10–27 deploy **unpublished** — they have no prose yet, only
   dates, due items, and module placement. Write the page, flip `Publish` to
   `"true"` in `session-pages-args.md.jinja`.

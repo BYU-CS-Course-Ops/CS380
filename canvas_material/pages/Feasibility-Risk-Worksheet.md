@@ -15,7 +15,7 @@ Rate each **Low / Medium / High** for your idea, and jot the specific reason. Th
 | 5 | **Adoption** | Will real users actually use it, or is the need too weak? | | |
 | 6 | **Maintenance** | Can you — and future contributors — keep it running and understandable? | | |
 
-> **Reading the ratings:** a project can carry a High or two if you have a plan for them. What sinks projects is *unacknowledged* High risk. One High with a spike planned is fine; three Highs with no plan means shrink the scope or pick another idea.
+> **Reading the ratings:** a project can carry a High or two if you have a plan for them. What sinks projects is *unacknowledged* High risk. One High with a <course-link type="page" id="pg-spikes-reading">spike</course-link> planned is fine; three Highs with no plan means shrink the scope or pick another idea.
 
 ---
 
