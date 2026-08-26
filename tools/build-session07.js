@@ -649,11 +649,11 @@ async function build() {
   card(s, 0.6, 5.98, 12.1, 0.78, C.navy);
   await iconCircle(s, FA.FaBookOpen, 0.92, 6.14, 0.46, C.amber, C.navy);
   s.addText([
-    { text: "The four performance levels are in rubrics.md  ", options: { color: C.amber, bold: true } },
+    { text: "The four performance levels are on the Assignment Rubrics page  ", options: { color: C.amber, bold: true } },
     { text: "— you've had it since week one. Reach at least Developing on every criterion to stay on a passing track.", options: { color: C.white } }
   ], { x: 1.55, y: 5.98, w: 10.9, h: 0.78, fontFace: F.body, fontSize: 14.5, valign: "middle", margin: 0 });
   footer(s);
-  s.addNotes("Leave this up and jump back to the previous slide as the feasibility discussion runs — that is why it sits here. Walk only the two highlighted rows: twenty points on feasibility and technical approach, fifteen on scope realism, so a third of the grade rides on arguing honestly about what you can build. Say plainly that this is deliberate, not arithmetic — the course is claiming that scope honesty is the skill that separates a credible founder from an optimistic one. Point at Argument & revision (10) too, since Wednesday's draft is what makes it scoreable. Levels live in rubrics.md; don't read them aloud.");
+  s.addNotes("Leave this up and jump back to the previous slide as the feasibility discussion runs — that is why it sits here. Walk only the two highlighted rows: twenty points on feasibility and technical approach, fifteen on scope realism, so a third of the grade rides on arguing honestly about what you can build. Say plainly that this is deliberate, not arithmetic — the course is claiming that scope honesty is the skill that separates a credible founder from an optimistic one. Point at Argument & revision (10) too, since Wednesday's draft is what makes it scoreable. Levels live on the Assignment Rubrics page in Canvas; don't read them aloud.");
 
   // 22 The spike
   s = mk(); s.background = { color: C.white };

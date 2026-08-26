@@ -428,7 +428,7 @@ async function build() {
   // 17 Wire it to CP2
   s = mk(); s.background = { color: C.white };
   header(s, "This weekend", "Your idea becomes the Product Definition Brief");
-  s.addText("The idea you just chose is what CP2 documents — a lightweight PRD (see resources/PRD-Reference.md). Five sections:", { x: 0.6, y: 1.72, w: 12.1, h: 0.4, color: C.slate, fontFace: F.body, fontSize: 14.5, italic: true, margin: 0 });
+  s.addText("The idea you just chose is what CP2 documents — a lightweight PRD (see the PRD Reference on Canvas). Five sections:", { x: 0.6, y: 1.72, w: 12.1, h: 0.4, color: C.slate, fontFace: F.body, fontSize: 14.5, italic: true, margin: 0 });
   const pdb = [
     [FA.FaUser, "Target user", "Sharply defined and bounded — who's in, who's out."],
     [FA.FaClipboardList, "The needs", "What they're trying to do; tagged [E] evidence / [A] assumption."],

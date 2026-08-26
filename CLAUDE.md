@@ -93,7 +93,7 @@ Both paths must be Windows-style. **Verify before delivering:** confirm one page
 6. ~~**LMS build-out**~~ **done** — mdxcanvas infrastructure lives in `canvas_material/` (see its README). Still open there:
    - `CP12_DUE` (Demo Day) is still a placeholder inside `DEMO_DAY_WINDOW`. The meeting time is settled — **M/W 9:30–10:45 AM**, in `CLASS_START_TIME` / `CLASS_END_TIME` — so the finals slot can now be confirmed with the registrar. Room is still TBD in the syllabus.
    - `course_info/cs301r_sandbox.json` currently points at the **live** course (36756). Repoint it at a real sandbox shell before the term starts — until then, "rehearsing" a deploy means deploying to students.
-   - Session decks 1–9 carry slide text naming old repo paths (`resources/License-Cheat-Sheet.md`, `assignments/Discovery-Notes.md`). Those files are now Canvas pages; the slides should point students at the Canvas page instead. Needs a rebuild + QA pass on the affected decks (3, 4, 6).
+   - ~~Session decks naming old repo paths~~ **done** — decks 3, 4, 6, and 7 named `resources/*.md`, `assignments/*.md`, and `rubrics.md` on slides and in presenter notes. They now name the Canvas page ("Canvas → Course Resources", "the Assignment Rubrics page"). Rebuilt and linted clean; all nine decks scan free of path references. **Slide text that names a course document should name it the way students find it on Canvas, not by repo path.**
 
 ## Working preferences
 

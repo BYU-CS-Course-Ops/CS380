@@ -164,7 +164,7 @@ async function build() {
     return r.map((cell, j) => ({ text: cell, options: { fill: { color: z }, color: j === 0 ? C.tealDk : C.ink, bold: j === 0, fontFace: F.body, fontSize: 14, align: (j === 2 || j === 3) ? "center" : "left" } }));
   });
   s.addTable([tHead, ...tBody], { x: 0.6, y: 2.2, w: 12.1, colW: [1.9, 2.2, 2.9, 1.9, 3.2], rowH: 0.85, valign: "middle", margin: [4, 8, 4, 8], border: { type: "solid", color: "FFFFFF", pt: 2 } });
-  s.addText("Full one-pager: resources/License-Cheat-Sheet.md — includes BSD, LGPL, MPL, and public domain.", { x: 0.6, y: 6.5, w: 12.1, h: 0.35, color: C.slate, fontFace: F.body, fontSize: 13, italic: true, align: "center", margin: 0 });
+  s.addText("Full one-pager: the License Cheat Sheet on Canvas — includes BSD, LGPL, MPL, and public domain.", { x: 0.6, y: 6.5, w: 12.1, h: 0.35, color: C.slate, fontFace: F.body, fontSize: 13, italic: true, align: "center", margin: 0 });
   footer(s);
   s.addNotes("Compare the four they'll actually consider: MIT, Apache-2.0, GPL-3.0, AGPL-3.0. Explain the patent-grant column carefully — code carries copyright AND possibly patents; MIT grants copyright but is SILENT on patents, so a contributor could later sue users over a patent on the code they contributed. Apache-2.0, GPL-3.0, and AGPL-3.0 include an explicit patent grant (each contributor licenses the patents needed to use their contribution), and Apache adds patent retaliation (sue the project over a patent and your license ends). Practical takeaway: want enterprise adoption or to shield your users? Apache-2.0 is a plus; a small personal project? MIT is fine. This is general background, not legal advice — point them to the full cheat sheet. ~4 min.");
 
@@ -292,7 +292,7 @@ async function build() {
     { text: "Explain in plain terms what it lets others do (and not do), and why it fits your goals.", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 12 } },
     { text: "Name one governance choice you'd make (e.g., code of conduct, contribution process) and why.", options: { bullet: { indent: 16 } } }
   ], { x: 1.15, y: 3.5, w: 11.2, h: 2.4, color: C.ink, fontFace: F.body, fontSize: 16.5, valign: "top", margin: 0 });
-  s.addText("Reference: resources/License-Cheat-Sheet.md · choosealicense.com", { x: 0.6, y: 6.25, w: 12.1, h: 0.4, color: "BFE7E4", fontFace: F.body, fontSize: 14, italic: true, align: "center", margin: 0 });
+  s.addText("Reference: License Cheat Sheet (Canvas \u2192 Course Resources) · choosealicense.com", { x: 0.6, y: 6.25, w: 12.1, h: 0.4, color: "BFE7E4", fontFace: F.body, fontSize: 14, italic: true, align: "center", margin: 0 });
   s.addNotes("Walk through the License/OSS short response — about one page: pick and name a license for the project they're imagining, explain in plain terms what it lets others do and not do and why it fits their goals, and name one governance choice they'd make and why. Point them to the cheat sheet and choosealicense.com. Confirm the due date aloud (Mon, Sep 21) so it matches the LMS. ~2 min.");
 
   // 13 Wrap
