@@ -87,5 +87,9 @@
   "CPS_HANDBOOK_URL": "https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf",
   "INSTRUCTOR_NAME": "Dr. Tom Stephens",
   "INSTRUCTOR_EMAIL": "tstephen@cs.byu.edu",
+  "OFFICE_HOURS_URL": "https://calendly.com/byu-cs-tstephen/office-hours",
+  "_COURSE_FACTS": "Room and prerequisites. Both are read by the syllabus.",
+  "CLASSROOM": "TMCB 1149",
+  "PREREQUISITES": "CS 340",
   "PEER_EVAL_MID_DUE_DAY": "Fri"
 }

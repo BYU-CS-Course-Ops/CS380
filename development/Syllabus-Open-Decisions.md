@@ -10,8 +10,8 @@ published; resolve an item and fold the resolution into the syllabus itself.*
 
 These are the places where the syllabus fills a gap the design docs left open. Each has a proposed default above; flagged here so they can be ratified or changed before publishing.
 
-1. **Logistics TBD** — room, meeting time (which also pins the finals-week Demo Day slot per the schedule doc), office location/hours, and the prerequisite line. Fill in once registration and rooming are set.
-2. **Grade-scale cutoffs** — I used a common A–E scale; confirm the department's preferred cutoffs (and whether +/– is used).
+1. ~~**Logistics**~~ **resolved:** M/W 9:30-10:45 AM in TMCB 1149; prerequisite CS 340; office hours are drop-in any time plus booked slots via Calendly. All of it lives in `global_args` (`CLASS_START_TIME`, `CLASS_END_TIME`, `CLASSROOM`, `PREREQUISITES`, `OFFICE_HOURS_URL`) and is read by the syllabus. **Still open:** the finals-week Demo Day slot, which BYU assigns from the meeting time -- now known, so it can be confirmed with the registrar.
+2. ~~**Grade-scale cutoffs**~~ **resolved:** the common A-E scale in the syllabus is correct. Rendered as a two-column table so it is readable.
 3. **Bundle splits (rubrics.md).** I applied the suggested even splits — Discovery 5/5, Git+Tech-Comm 6/6, Final 5/5. Confirm, or reweight (e.g., the Final bundle could favor CP12).
 4. **Revision-window mechanics.** Proposed: 1-week window on CP3/CP5/CP7; revised score *replaces* the original. Alternatives you flagged in rubrics.md: average original and revised, or cap the maximum bump. Pick one.
 5. **Late policy + grace extension.** Proposed: −10%/day for 3 days, one 48-hr grace token on CP1–CP4. Entirely a proposal — adjust the numbers or scope to your preference.

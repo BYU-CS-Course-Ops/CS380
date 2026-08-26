@@ -83,6 +83,13 @@
 
 /* ---- tables ------------------------------------------------------------ */
 
+/* ORDER MATTERS, and not the way CSS normally works. mdxcanvas bakes these
+   rules into inline style attributes by walking the stylesheet in order and
+   merging with `{**rule, **already_on_the_tag}` — so whatever is written on the
+   tag FIRST wins, and specificity never enters into it. The class rules must
+   therefore come before the bare element rules, or `th` would overwrite
+   `.cs301r-table th` and the template tables would lose their navy headers. */
+
 .cs301r-table {
     border-collapse: collapse;
     width: 100%;
@@ -99,6 +106,30 @@
 }
 
 .cs301r-table td {
+    padding: 7px 12px;
+    border: 1px solid #5F7284;
+    vertical-align: top;
+}
+
+/* Markdown tables carry no class, so without a bare selector they render
+   borderless — unreadable for anything wider than two columns, which is most
+   of them: the grade scale, and the rubric grid in every assignment handout. */
+
+table {
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+
+th {
+    background-color: #F2F6F8;
+    color: #14233A;
+    font-family: Calibri, Candara, Segoe, sans-serif;
+    text-align: left;
+    padding: 7px 12px;
+    border: 1px solid #5F7284;
+}
+
+td {
     padding: 7px 12px;
     border: 1px solid #5F7284;
     vertical-align: top;

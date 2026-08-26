@@ -7,9 +7,12 @@
 
    Modules follow the course's own five-phase CPS arc rather than calendar
    weeks, because that is the structure the course teaches and the structure
-   the checkpoints hang off. Two standing modules bracket them: Start Here for
-   orientation, and Course Resources for the readings and instruments students
-   return to all term.
+   the checkpoints hang off. Start Here sits in front of them.
+
+   The course readings and instruments are a *page* rather than a module. A
+   module can only group items under bare subheaders, and a bare subheader
+   cannot say what the things under it are for or when you will need them —
+   which is most of the value of collecting them in one place.
 
    Deploy:
        ./deploy.sh sandbox     # rehearse
@@ -90,39 +93,8 @@
            new_tab false iframes the target — which, for a Canvas URL, means
            Canvas inside Canvas. The syllabus is in the course navigation and is
            linked from the front page, which is friction-free either way. #}
+        <item type="page"     content_id="pg-course-resources" />
         <item type="page"     content_id="pg-idea-journal" />
-    </module>
-
-    <module id="mod-resources" title="Course Resources" published="true">
-        <item type="subheader" id="sub-res-discovery" title="Discovery" />
-            <item type="page" content_id="pg-mom-test-summary" indent="1" />
-            <item type="page" content_id="pg-good-vs-leading-questions" indent="1" />
-            <item type="page" content_id="pg-interview-prompt-cards" indent="1" />
-            <item type="page" content_id="pg-interview-ethics" indent="1" />
-            <item type="page" content_id="pg-discovery-notes" indent="1" />
-            <item type="page" content_id="pg-persona-template" indent="1" />
-            <item type="page" content_id="pg-persona-examples" indent="1" />
-
-        <item type="subheader" id="sub-res-scoping" title="Scoping &amp; feasibility" />
-            <item type="page" content_id="pg-idea-scoring-sheet" indent="1" />
-            <item type="page" content_id="pg-feasibility-risk-worksheet" indent="1" />
-            <item type="page" content_id="pg-learning-plan-template" indent="1" />
-            <item type="page" content_id="pg-spikes-reading" indent="1" />
-
-        <item type="subheader" id="sub-res-writing" title="Writing &amp; proposals" />
-            <item type="page" content_id="pg-proposal-anatomy-reading" indent="1" />
-            <item type="page" content_id="pg-prd-reference" indent="1" />
-            <item type="page" content_id="pg-sample-proposal-weak" indent="1" />
-            <item type="page" content_id="pg-sample-proposal-strong" indent="1" />
-
-        <item type="subheader" id="sub-res-openSource" title="Open source" />
-            <item type="page"        content_id="pg-license-cheat-sheet" indent="1" />
-            <item type="ExternalURL" id="res-cps-handbook" title="Creative Problem Solving handbook (PDF)"
-                  external_url="{{ CPS_HANDBOOK_URL }}" indent="1" />
-
-        <item type="subheader" id="sub-res-evaluation" title="Evaluation instruments" />
-            <item type="page" content_id="pg-pitch-evaluation-sheet" indent="1" />
-            <item type="page" content_id="pg-peer-evaluation-form" indent="1" />
     </module>
 
     <module id="mod-phase-1" title="Phase 1 — Clarify &amp; Explore" published="true">
