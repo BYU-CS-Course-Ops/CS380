@@ -124,7 +124,7 @@ Fall 2026 runs **27 sessions**. The term opens on two isolated Wednesdays (Sep 2
 | 12 | Nov 23 | Contributor-readiness checklist; what a new contributor actually needs; known-issues and technical-debt logs *(Nov 25 — no class)* | — |
 | 13 | Nov 30, Dec 2 | Honest retrospective writing; framing future work without overselling; studio to assemble the launch package | **CP11 Launch Package + Retrospective** (Dec 2) |
 | 14 | Dec 7, 9 | Demo dry-run with peer feedback; tightening the three final questions; final studio and repo cleanup | Launch package submitted (Dec 9) |
-| Finals | Dec 12–17 | **Final Pitch + Demo Day** — 3-hour block, capstone faculty invited | **CP12 Final Pitch + Demo** |
+| Finals | Mon, Dec 14 | **Final Pitch + Demo Day** — 7:00–10:00 AM, capstone faculty invited | **CP12 Final Pitch + Demo** |
 
 *A full session-by-session schedule with dates, in-class activities, and readings is maintained separately.*
 
@@ -206,9 +206,9 @@ Each of the seventeen assignments is distributed as a full handout: why the assi
 ## Notes for faculty
 
 - **First iteration, taught standalone.** The course is designed to feed the capstone but does not depend on it. Projects that prove out become capstone seeds; the founder can carry the project forward as its sponsor.
-- **Demo Day is the evaluation point.** The 3-hour finals-week block (Dec 12–17, slot pinned by the assigned final-exam time) is where capstone faculty are invited to observe and judge which projects to carry forward.
+- **Demo Day is the evaluation point.** The 3-hour finals-week block (**Mon, Dec 14, 7:00–10:00 AM**) is where capstone faculty are invited to observe and judge which projects to carry forward.
 - **Enrollment-sensitive elements.** Team count is emergent, and both Pitch Day and Demo Day are the tightest time-boxed sessions — pitch length and format scale with class size.
-- **Anchor sessions.** Pitch Day (Oct 7), Progress Demo + Repo Audit (Nov 18), and Demo Day are attendance-required; the rest of the studio runs on regular participation.
+- **Anchor sessions.** Pitch Day (Oct 7), Progress Demo + Repo Audit (Nov 18), and Demo Day (Dec 14) are attendance-required; the rest of the studio runs on regular participation.
 - **Companion documents.** The full course design document (outcomes, weekly plan, assessment, selection criteria, policies), the session-by-session schedule, the syllabus, and the complete rubric set are maintained alongside this summary.
 
 

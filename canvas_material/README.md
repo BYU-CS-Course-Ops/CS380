@@ -160,10 +160,11 @@ target an element the templates actually emit.
 
 ## Still open
 
-- `CP12_DUE` is a placeholder within `DEMO_DAY_WINDOW`. BYU assigns the finals
+- ~~`CP12_DUE` is a placeholder~~ **confirmed:** Demo Day is Mon, Dec 14, 7:00-10:00 AM,
+  in `DEMO_DAY_DATE` / `DEMO_DAY_DAY` / `DEMO_DAY_START` / `DEMO_DAY_END`. Old note: BYU assigns the finals
   block by class meeting time — now known (M/W 9:30 AM) — so the slot can be
   confirmed with the registrar and pinned here.
-- Room is still TBD in the syllabus.
+- Room is set: TMCB 1149 (`CLASSROOM`).
 - `pages/rubrics.md.jinja` carries the grids for CP1–CP4 only. Port each remaining
   grid from the instructor-side `rubrics.md` as its handout is reviewed; the
   handouts all link to that page for the full four-level grid.

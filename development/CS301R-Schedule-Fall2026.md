@@ -19,7 +19,7 @@ Companion to `CS301R-ProjectCreation_v3.md`. This document maps the v3 **14-week
 | Thu–Fri, Nov 26–27, 2026 | Thanksgiving holiday | (no M/W impact) |
 | **Thu, Dec 10, 2026** | Last day of class | Last M/W session is **Wed, Dec 9** |
 | Fri, Dec 11, 2026 | Exam Preparation Day | — |
-| **Sat Dec 12 – Thu Dec 17, 2026** | **Final Exam period** | **Final Demo Day** (3-hr block) is held here — see note below |
+| **Sat Dec 12 – Thu Dec 17, 2026** | **Final Exam period** | **Final Demo Day** — **Mon, Dec 14, 7:00–10:00 AM** (assigned block) |
 
 ---
 
@@ -98,9 +98,9 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 
 | Date | Event | Deliverable |
 |---|---|---|
-| **Within Dec 12–17, 2026** (3-hr block, slot TBD) | **Final Pitch + Demo Day** — capstone faculty invited | **CP12 Final Pitch + Demo** (mastery artifact, defended) |
+| **Mon, Dec 14, 2026, 7:00–10:00 AM** (assigned 3-hr block) | **Final Pitch + Demo Day** — capstone faculty invited | **CP12 Final Pitch + Demo** (mastery artifact, defended) |
 
-> **Final-slot note:** BYU assigns each course's final-exam block by its *class meeting time*, within Dec 12–17. The exact 3-hour Demo Day slot can't be fixed until the course's meeting time is set; confirm the assigned slot (or request a specific block from the registrar) once scheduling is finalized. Dec 11 is Exam Preparation Day (no exams).
+> **Final-slot note:** **Confirmed — Monday, Dec 14, 2026, 7:00–10:00 AM**, the block BYU assigned from the M/W 9:30 AM meeting time. Invite capstone faculty against this slot. Dec 11 is Exam Preparation Day (no exams).
 
 ---
 
@@ -119,7 +119,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 9 | Technical Communication Portfolio | Wed, Nov 18 | 22 |
 | 10 | Progress Demo + Repo Audit | Wed, Nov 18 | 22 |
 | 11 | Launch Package + Retrospective | Wed, Dec 2 | 25 |
-| 12 | Final Pitch + Demo (mastery artifact) | Dec 12–17 (finals) | Demo Day |
+| 12 | Final Pitch + Demo (mastery artifact) | Mon, Dec 14, 7:00–10:00 AM | Demo Day |
 
 **Phase boundaries on real dates:** Individual work (CP1–4) runs **Sep 2 – Oct 7**; pitches are evaluated and ranked on **Oct 7**, students spend the weekend with the anchor projects' written proposals, and **teams are announced Mon, Oct 12**, running through finals. The hinge lands comfortably after the Sep 10 add/drop deadline, so rosters are stable before teams commit.
 
@@ -141,7 +141,7 @@ BYU's Winter calendar shifts the same 14-week design in a few schedule-relevant 
 
 ## Open scheduling items
 
-- **Confirm the class meeting time** so BYU's assigned final-exam block (within Dec 12–17) can pin the Demo Day slot; coordinate with capstone faculty so they can attend.
+- ~~Confirm the class meeting time so the Demo Day slot can be pinned~~ **done** — M/W 9:30–10:45 AM gives an assigned Demo Day block of **Mon, Dec 14, 7:00–10:00 AM.** Still to do: coordinate with capstone faculty so they can attend.
 - **Pre-term partner outreach** (alumni/orgs to seed real users for discovery) should complete before **Sep 2** so Week 1–3 discovery has live contacts.
 - If enrollment is large, **Pitch Day (Oct 7)** and **Final Demo Day** may need extra time or a split format; both are the tightest time-boxed sessions.
 

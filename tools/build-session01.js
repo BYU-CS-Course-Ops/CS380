@@ -193,7 +193,7 @@ async function build() {
     const cx = x0 + i * step, hi = road[i][2];
     const dd = hi ? 0.5 : 0.34;
     s.addShape(pres.shapes.OVAL, { x: cx - dd / 2, y: lineY - dd / 2, w: dd, h: dd, fill: { color: hi ? C.amber : C.teal }, line: { color: C.white, width: 2 } });
-    s.addText(road[i][0], { x: cx - 1.05, y: lineY - 1.15, w: 2.1, h: 0.6, color: hi ? C.amber : C.tealDk, fontFace: F.body, fontSize: 17, bold: true, align: "center", valign: "bottom", margin: 0 });
+    s.addText(road[i][0], { x: cx - 1.05, y: lineY - 1.15, w: 2.1, h: 0.6, color: hi ? "A9791F" : C.tealDk, fontFace: F.body, fontSize: 17, bold: true, align: "center", valign: "bottom", margin: 0 });
     s.addText(road[i][1], { x: cx - 1.05, y: lineY + 0.35, w: 2.1, h: 0.9, color: C.ink, fontFace: F.body, fontSize: 14.5, bold: hi, align: "center", valign: "top", margin: 0, lineSpacingMultiple: 1.0 });
   }
   await iconCircle(s, FA.FaFlagCheckered, x1 - 0.28, lineY + 1.35, 0.56, C.navy, C.amber);
@@ -221,7 +221,7 @@ async function build() {
   await iconCircle(s, FA.FaComments, 8.8, 2.3, 0.6, C.amber, C.navy);
   s.addText("The through-line: technical communication", { x: 9.55, y: 2.32, w: 3.0, h: 0.6, color: C.white, fontFace: F.body, fontSize: 17, bold: true, valign: "middle", margin: 0 });
   s.addText("Almost everything you produce here is an act of technical communication — the proposal, the pitch, the design doc, the issues, the PRs, the reviews, the launch docs.\n\nWe treat writing and reviewing clearly as core engineering work, not a soft skill — you'll do more of it than writing fresh code.", { x: 8.75, y: 2.95, w: 3.75, h: 3.45, color: "CFE0E9", fontFace: F.body, fontSize: 13, margin: 0, lineSpacingMultiple: 1.03 });
-  s.addText("These are the course outcomes — what you'll do by end of term — distinct from today's session objectives.", { x: 0.6, y: 6.65, w: 7.7, h: 0.35, color: C.slate, fontFace: F.body, fontSize: 13.5, italic: true, margin: 0 });
+  s.addText("Course outcomes — what you'll do by end of term, not today's objectives.", { x: 0.6, y: 6.62, w: 7.7, h: 0.4, color: C.slate, fontFace: F.body, fontSize: 13.5, italic: true, margin: 0 });
   footer(s);
   s.addNotes("Distinguish these from today's session objectives — these are what they'll be able to DO by end of term. Walk the five capabilities briefly, then spotlight the navy card: technical communication is the through-line — proposals, pitches, design docs, issues, PRs, reviews, launch docs. Say plainly they'll do more writing and reviewing than fresh coding, and that we treat it as core engineering work, not a soft skill. This is the outcome students most underrate. ~2-3 min.");
 
@@ -524,18 +524,18 @@ async function build() {
   }
   s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 8.2, y: 2.05, w: 4.5, h: 3.45, fill: { color: "FCF3E3" }, line: { color: C.amber, width: 1.5, dashType: "dash" }, rectRadius: 0.09 });
   await iconCircle(s, FA.FaFileAlt, 8.5, 2.35, 0.55, C.amber, C.white);
-  s.addText("SYLLABUS TOPICS", { x: 9.2, y: 2.42, w: 3.3, h: 0.4, color: "A9791F", fontFace: F.body, fontSize: 16, bold: true, valign: "middle", margin: 0 });
-  s.addText("[ PLACEHOLDER — add your syllabus items ]", { x: 8.5, y: 3.15, w: 3.9, h: 0.35, color: "A9791F", fontFace: F.body, fontSize: 14, italic: true, bold: true, margin: 0 });
+  s.addText("IT'S ALL IN CANVAS", { x: 9.2, y: 2.42, w: 3.3, h: 0.4, color: "A9791F", fontFace: F.body, fontSize: 16, bold: true, valign: "middle", margin: 0 });
+  s.addText("Syllabus, schedule, rubrics, and every handout live in Canvas.", { x: 8.5, y: 3.02, w: 3.9, h: 0.5, color: C.ink, fontFace: F.body, fontSize: 14, margin: 0 });
   s.addText([
     { text: "grading breakdown", options: { bullet: { indent: 14 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "late work & attendance", options: { bullet: { indent: 14 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "collaboration & Honor Code", options: { bullet: { indent: 14 }, breakLine: true, paraSpaceAfter: 6 } },
-    { text: "accommodations & support", options: { bullet: { indent: 14 }, breakLine: true, paraSpaceAfter: 6 } },
-    { text: "where everything lives (LMS)", options: { bullet: { indent: 14 } } }
-  ], { x: 8.55, y: 3.6, w: 3.9, h: 1.8, color: C.ink, fontFace: F.body, fontSize: 14.5, valign: "top", margin: 0 });
-  s.addText("Keep this segment tight — resist reading the syllabus aloud; point them to the LMS.", { x: 0.6, y: 5.75, w: 7.4, h: 0.5, color: C.slate, fontFace: F.body, fontSize: 14, italic: true, margin: 0 });
+    { text: "accommodations & support", options: { bullet: { indent: 14 } } }
+  ], { x: 8.55, y: 3.58, w: 3.9, h: 1.35, color: C.ink, fontFace: F.body, fontSize: 14.5, valign: "top", margin: 0 });
+  s.addText("Read the syllabus this week.", { x: 8.55, y: 4.98, w: 3.9, h: 0.4, color: "A9791F", fontFace: F.body, fontSize: 15, bold: true, margin: 0 });
+  s.addText("Keep this segment tight — resist reading the syllabus aloud; point them to Canvas.", { x: 0.6, y: 5.75, w: 7.4, h: 0.5, color: C.slate, fontFace: F.body, fontSize: 14, italic: true, margin: 0 });
   footer(s);
-  s.addNotes("Keep this tight — do NOT read the syllabus aloud; point them to the LMS. Say the workload plainly: about 10 hours a week (roughly 2.5 in class, 7.5 outside). Stress that process and founding artifacts carry real weight — strong code alone won't compensate. On AI: it's a tool, not the topic — fine for brainstorming, learning, and drafting, but they must understand and be able to defend everything they submit. Fill the placeholder card with your actual syllabus items before class. ~2-3 min.");
+  s.addNotes("Keep this tight — do NOT read the syllabus aloud; point them to Canvas. Say the workload plainly: about 10 hours a week (roughly 2.5 in class, 7.5 outside). Stress that process and founding artifacts carry real weight — strong code alone won't compensate. On AI: it's a tool, not the topic — fine for brainstorming, learning, and drafting, but they must understand and be able to defend everything they submit. The amber card is the whole message: it's all in Canvas, and they are expected to read the syllabus this week. Don't walk the bullets one by one. ~2-3 min.");
 
   // ===== 20 Idea Briefs + Idea Journal intro =====
   s = mk(); s.background = { color: "0E7C7B" };
