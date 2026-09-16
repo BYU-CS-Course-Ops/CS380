@@ -59,7 +59,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 7 | Sep 28 | Mon | Wk 4 | A | Proposal anatomy; arguing feasibility without overpromising; strong vs. weak examples | **CP2 Product Definition Brief** |
 | 8 | Sep 30 | Wed | Wk 4 | B | Peer review of proposal scope & risk; scope-narrowing clinic | — |
 | 9 | Oct 5 | Mon | Wk 5 | A | Pitch workshop; proposal-evaluation rubric; giving constructive critique | **CP3 Written Proposal** (individual) |
-| 10 | Oct 7 | Wed | Wk 5 | B | **Pitch Presentation #1 (course hinge)** — persuade + recruit; peer scoring; instructor input; **selection + anchor ideas announced; preference slips collected** | **CP4 Pitch #1**; team preference (Canvas) |
+| 10 | Oct 7 | Wed | Wk 5 | B | **Pitch Presentation #1 (course hinge)** — persuade + recruit; peer scoring; instructor input; **selection + anchor ideas announced; ranked preferences submitted in Canvas** | **CP4 Pitch #1**; team preference (Canvas) |
 
 ### Phase 3 — Develop & Design
 

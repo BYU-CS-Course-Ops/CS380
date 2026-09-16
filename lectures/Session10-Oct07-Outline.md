@@ -114,4 +114,4 @@ By the end of this session, a student can:
 
 ---
 
-*Next step: build the Session 10 deck (minimal — mostly a timer, the anchor-idea reveal, and the preference-slip instructions) and student page. Related: `Session09-Oct05-Outline.md`, `Session11-Oct12-Outline.md`, `CS301R-ProjectCreation_v4.md` (§7 Week 5).*
+*Next step: build the Session 10 deck (minimal — mostly a timer, the anchor-idea reveal, and the preference instructions) and student page. Related: `Session09-Oct05-Outline.md`, `Session11-Oct12-Outline.md`, `CS301R-ProjectCreation_v4.md` (§7 Week 5).*

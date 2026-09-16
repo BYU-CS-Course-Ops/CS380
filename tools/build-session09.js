@@ -447,13 +447,13 @@ async function build() {
     { text: "6–8 min + 2–3 min Q&A — timed, and the limit is real", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "Slides posted or loaded before class starts — no day-of fiddling", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "Paper evaluation sheets at the door — one per pitch you watch", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
-    { text: "You leave with a ranked preference slip, not a team — proposals post Thursday", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
+    { text: "You leave with a ranked preference, submitted in Canvas — not a team. Proposals post Thursday", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "Teams announced Mon, Oct 12; charters written in class that day", options: { bullet: { indent: 16 } } }
   ], { x: 0.95, y: 3.75, w: 11.7, h: 2.0, color: "CBD8E6", fontFace: F.body, fontSize: 15.5, valign: "top", margin: 0 });
   card(s, 0.6, 5.9, 12.1, 0.85, C.amber);
   s.addText("Tonight: rehearse out loud, against a timer, twice. Cut until it fits. Then build the slides you listed.", { x: 0.9, y: 5.9, w: 11.5, h: 0.85, color: C.navy, fontFace: F.body, fontSize: 15.5, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Close fast and concretely — logistics first, because an unclear Pitch Day costs everyone. Say the Monday piece clearly: Wednesday ends with a private ranked slip rather than people sorting into groups, the anchor proposals go up Thursday, and teams are announced Monday — so the weekend reading is real work. Stress the random draw: the order is generated and shown Wednesday at the start of class, so there is no back-of-the-room strategy and nobody gets to watch two pitches first. Everyone prepares to go first. Then the order of operations tonight: rehearse first, build slides second — slides built before the words are decided become the words. End on the line at the top: six minutes to make someone want to build it with you.");
+  s.addNotes("Close fast and concretely — logistics first, because an unclear Pitch Day costs everyone. Say the Monday piece clearly: Wednesday ends with a private ranked preference, submitted in Canvas, rather than people sorting into groups, the anchor proposals go up Thursday, and teams are announced Monday — so the weekend reading is real work. Stress the random draw: the order is generated and shown Wednesday at the start of class, so there is no back-of-the-room strategy and nobody gets to watch two pitches first. Everyone prepares to go first. Then the order of operations tonight: rehearse first, build slides second — slides built before the words are decided become the words. End on the line at the top: six minutes to make someone want to build it with you.");
 
   const OUT = "Session09-PitchWorkshop.pptx";
   await pres.writeFile({ fileName: OUT });
