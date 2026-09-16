@@ -1,4 +1,6 @@
-*Printed version: `Pitch-Evaluation-Sheet.pdf` — two half-sheets per page, cut in half. You'll complete one for **every pitch** (except your own). Score during the Q&A; submit before the next pitch begins. Your scores and recruiting answer feed the selection; your two comment lines go back to the presenter (anonymized). Score honestly — evaluating peers fairly against shared criteria is part of your professionalism in this course, and it's practice for design review, code review, and every hiring or funding decision you'll someday help make.*
+**Printable version:** <file path="../resources/Pitch-Evaluation-Sheet.pdf" canvas_folder="Course Handouts" /> — two half-sheets per page, cut in half.
+
+*You'll complete one for **every pitch** (except your own). Score during the Q&A; submit before the next pitch begins. Your scores and recruiting answer feed the selection; your two comment lines go back to the presenter (anonymized). Score honestly — evaluating peers fairly against shared criteria is part of your professionalism in this course, and it's practice for design review, code review, and every hiring or funding decision you'll someday help make.*
 
 ---
 
