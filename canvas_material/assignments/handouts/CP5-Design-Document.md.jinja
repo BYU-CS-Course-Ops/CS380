@@ -1,0 +1,74 @@
+## The short version
+
+Write your project's **design document** (roughly 3–6 pages + diagrams): system context, architecture and major components, data model, interface sketches, technology choices argued against real alternatives, risks and open questions, and an implementation plan. The Wednesday workshop produces most of it at the whiteboard; the graded version is the revised doc a week later.
+
+---
+
+## Why this assignment exists
+
+Code is a terrible medium for making design decisions — by the time a decision is expressed in code, changing it is expensive. A design doc is where you make the expensive choices *while they're still cheap*: what the components are, where state lives, what talks to what, and — the heart of the genre — **why this design beats the alternatives you considered.** As the Google design-doc reading puts it, our job isn't to produce code; it's to solve problems, and prose-plus-diagrams is often the sharpest tool early.
+
+Two habits trained here will follow you everywhere. First, **arguing with alternatives**: "we chose Postgres" is an assertion; "we chose Postgres over SQLite because two of our flows need concurrent writes" is engineering. Design reviews at every serious company run on exactly this move. Second, **writing for the person who isn't in the room**: this doc is graded through the eyes of a future contributor who joins in January and asks "where's the design doc?" — the course's contributor-ready thread, applied to your thinking itself. And practically: a real design doc makes Weeks 9–13 dramatically easier, because decomposition (CP8) falls straight out of a good component diagram.
+
+---
+
+## What to produce
+
+A 3–6 page document (in the repo — it becomes `docs/architecture.md`'s foundation) containing:
+
+1. **Context & scope** — the landscape in a paragraph: what's being built, for whom (link your CP2/proposal; don't repeat them).
+2. **Goals & non-goals** — carried from the proposal, now bounding the *design*.
+3. **System-context diagram** — the system as one box; every user role and external service around it; labeled arrows.
+4. **Architecture & components** — 3–6 components, each with a one-paragraph responsibility and rough interface; the component diagram; one **core user flow traced end-to-end** (your MVP's vertical slice).
+5. **Data model** — entities, key fields, relationships. MVP entities solid; roadmap entities dashed.
+6. **Technology choices & rationale** — each major choice argued against **one real alternative**.
+7. **Risks & open questions** — what you're not sure of yet, honestly (including the traced failure case: what happens when the external service is down?).
+8. **Implementation plan** — the build order at milestone altitude (this seeds CP8).
+
+---
+
+## Requirements & constraints
+
+- **Team artifact** (solo at solo scope), committed via your own PR workflow.
+- **The draft ({{ S12_DATE }}) can be rough:** photographed whiteboard diagrams + skeleton prose + two argued decisions is a legitimate draft. The revision is where polish happens — and revision is graded.
+- **Right altitude:** decisions and trade-offs in; mechanics out. No copy-pasted schemas, no pseudo-code for CRUD, no pinned library versions.
+- **Diagrams must agree with prose.** A component in the text that's missing from the diagram (or vice versa) is the most common defect.
+- **AI use:** fine for diagram tooling and prose cleanup; the design decisions and their defense must be the team's.
+
+---
+
+## Grading
+
+Scored on a 100-point analytic rubric; **12% of the course grade.** Team grade, adjusted by individual-contribution evidence.
+
+| Criterion | Weight | What it measures |
+|---|---|---|
+| **Architecture clarity** | 20 | Components, interfaces, data, and external services clearly modeled — the system's shape is visible. |
+| **Appropriate detail** | 15 | The right altitude: neither hand-wavy nor over-specified. A 300-level judgment skill in its own right. |
+| **Tech choices & rationale** | 15 | Choices justified against real alternatives — the alternatives-considered discipline. |
+| **Data & interface design** | 15 | A sound data model and interface sketch that the traced flow actually exercises. |
+| **Risk & open questions** | 10 | Honest unknowns surfaced — including failure cases — rather than hidden. |
+| **Implementability** | 15 | The plan is clearly buildable in the semester that remains, by this team. |
+| **Readability & revision** | 10 | A future contributor could navigate it; visible improvement from draft to final. |
+
+**Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
+
+---
+
+## Tips and common pitfalls
+
+- **The God component** (one box doing everything) and the **mystery arrow** (unlabelable data) are the two whiteboard smells — if you can't label the arrow, you've found a real design question. Good; answer it.
+- **A straw-man alternative fools no one.** The alternative must be something a reasonable team might actually choose.
+- **Trace the flow before you polish anything.** If your core user action doesn't traverse your components cleanly, the architecture isn't done, however pretty the diagram.
+- **Un-owned state is the classic gap.** Every piece of data your flow touches must live in some box.
+- **Write the doc you'd want to inherit.** In January, someone might.
+
+---
+
+## Submission
+
+Draft due end of class **{{ S12_DAY }}, {{ S12_DATE }}** (LMS pointer to the repo). Revised version merged and submitted by end of day **{{ S14_DAY }}, {{ S14_DATE }}** (alongside CP6). The design doc's diagrams reappear as `docs/architecture.md` in your launch package (CP11).
+
+---
+
+*Part of the arc: **team proposal → CP5 Design Document → CP6 git workflow → CP7 infrastructure → CP8 plan.** Reading: [Design Docs at Google](https://www.industrialempathy.com/posts/design-docs-at-google/). See the grading rubric above and `resources/Design-Doc-Template.md` (if provided).*

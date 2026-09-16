@@ -37,7 +37,7 @@ By the end of this session, a student can:
 - **Print / post the handouts:** `resources/Good-vs-Leading-Questions.md`, `resources/Interview-Prompt-Cards.md`, `resources/Persona-Template.md` (and the `Mom-Test-Summary.md` reading).
 - A slide with the **three Mom Test rules** and one with the **mock-interview process** (§4).
 - **The ethics gate (deck slide 8)** — the hands-up confirmation that closes §3. Run it every time this session is taught; it is the last gate before students interview real people.
-- The **Discovery Notes assignment** (`assignments/Discovery-Notes.md`) ready to hand out.
+- The **Discovery Notes assignment** (`canvas_material/assignments/handouts/Discovery-Notes.md.jinja`) ready to hand out.
 - *Reusable from the prior course:* discovery/needfinding material in `open-source-project-course/`.
 
 ---
@@ -97,7 +97,7 @@ By the end of this session, a student can:
 - **Real conversations are required.** Everyone **must talk to at least one real person (aim for 1–3)** who *actually has* the problem. **There are no seeded users — you find your own** (roommates, classmates, family, club/ward members, people in the affected community).
 - **Plus: build one honest persona** (template) for a need you couldn't reach directly — kept modest.
 - **Capture the needs, not solutions:** who they are, the problem *in their words*, how they handle it today, what it costs them, and one thing that surprised you.
-- Hand out **`assignments/Discovery-Notes.md`**. It feeds your **Product Definition Brief** (Week 3).
+- Hand out **`canvas_material/assignments/handouts/Discovery-Notes.md.jinja`**. It feeds your **Product Definition Brief** (Week 3).
 
 ### 7. Wrap + before next class — 8 min
 - Recap the three rules in one breath.
@@ -126,7 +126,7 @@ By the end of this session, a student can:
 
 ## Deliverable / after class
 
-- **Discovery Notes** (`assignments/Discovery-Notes.md`): notes from **1–3 real conversations** + **one honest persona**, for your starred problem spaces. Feeds the Product Definition Brief.
+- **Discovery Notes** (`canvas_material/assignments/handouts/Discovery-Notes.md.jinja`): notes from **1–3 real conversations** + **one honest persona**, for your starred problem spaces. Feeds the Product Definition Brief.
 
 ---
 
@@ -138,7 +138,7 @@ By the end of this session, a student can:
 - **Persona Template (honest, evidence-tagged):** `resources/Persona-Template.md`
 - **Persona examples (honest vs. made-up):** `resources/Persona-Examples.md`
 - **Interview ethics for students (reading):** `resources/Interview-Ethics-for-Students.md`
-- **Discovery Notes assignment:** `assignments/Discovery-Notes.md`
+- **Discovery Notes assignment:** `canvas_material/assignments/handouts/Discovery-Notes.md.jinja`
 
 ---
 

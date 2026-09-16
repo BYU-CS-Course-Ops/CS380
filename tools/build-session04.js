@@ -39,14 +39,17 @@ function header(slide, kicker, title, titleColor) {
   slide.addText(kicker.toUpperCase(), { x: 0.87, y: 0.44, w: 11.5, h: 0.34, color: C.teal, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   slide.addText(title, { x: 0.6, y: 0.82, w: 12.1, h: 1.0, color: titleColor || C.ink, fontFace: F.head, fontSize: 31, bold: true, margin: 0, valign: "top" });
 }
-function card(slide, x, y, w, h, fill) {
-  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow() });
+// `extra` passes pptxgenjs options through — e.g. REVEAL(1) to animate the shape in on a click.
+function card(slide, x, y, w, h, fill, extra) {
+  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow(), ...extra });
 }
-async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor) {
-  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor } });
+async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor, extra) {
+  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor }, ...extra });
   const pad = d * 0.27;
-  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad });
+  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad, ...extra });
 }
+// Click-to-reveal: every shape given REVEAL(n) appears together on click n (tools/add-animations.js).
+const REVEAL = (n, effect) => ({ objectName: effect ? `click-${n}:${effect}` : `click-${n}` });
 
 async function build() {
   let s;
@@ -290,14 +293,14 @@ async function build() {
   header(s, "Persona example — made-up", "\"Busy Ben\" — what NOT to do");
   card(s, 0.6, 2.05, 12.1, 2.3, "FBECE8");
   s.addText("Ben is a 20-year-old sophomore in CS with a 3.8 GPA. He works 15 hours a week, loves productivity apps, and is always on the go. He can never find parking and wastes about an hour every single day circling the lots. He would definitely pay $10/month for an app that shows open spots in real time — and he'd tell all his friends.", { x: 0.95, y: 2.25, w: 11.4, h: 1.95, color: C.ink, fontFace: F.body, fontSize: 16.5, italic: true, valign: "top", margin: 0, lineSpacingMultiple: 1.1 });
-  card(s, 0.6, 4.55, 12.1, 2.0, C.navy);
-  await iconCircle(s, FA.FaExclamationTriangle, 0.95, 4.9, 0.62, C.amber, C.navy);
+  card(s, 0.6, 4.55, 12.1, 2.0, C.navy, REVEAL(1));
+  await iconCircle(s, FA.FaExclamationTriangle, 0.95, 4.9, 0.62, C.amber, C.navy, REVEAL(1));
   s.addText([
     { text: "Feels done. It's fiction.  ", options: { bold: true, color: C.amber } },
     { text: "Every detail is invented and unsourced (the GPA, \"an hour every day\"). Nothing is marked as a guess. And \"would definitely pay $10/month\" is a hypothetical dressed up as a fact — the exact Mom Test trap. A founder who builds on Ben builds confidently on fiction.", options: { color: C.white } }
-  ], { x: 1.9, y: 4.55, w: 10.5, h: 2.0, fontFace: F.body, fontSize: 16, valign: "middle", margin: 0, lineSpacingMultiple: 1.06 });
+  ], { x: 1.9, y: 4.55, w: 10.5, h: 2.0, fontFace: F.body, fontSize: 16, valign: "middle", margin: 0, lineSpacingMultiple: 1.06, ...REVEAL(1) });
   footer(s);
-  s.addNotes("The trap to name: Ben reads better than Cara — it's tidy, specific, confident — and that's exactly why it's dangerous. Ask the room to spot the problems before you reveal the callout: none of it has a source, nothing is tagged as a guess, and the money line is a hypothetical stated as fact. Contrast directly with Cara: Cara is messier but honest — you know what she knows and what she doesn't. Bottom line for them: when they build their own persona for the assignment, it should look like Cara, not Ben. Better to admit low confidence than to invent certainty.");
+  s.addNotes("The trap to name: Ben reads better than Cara — it's tidy, specific, confident — and that's exactly why it's dangerous. Ask the room to spot the problems before you click to reveal the callout: none of it has a source, nothing is tagged as a guess, and the money line is a hypothetical stated as fact. Contrast directly with Cara: Cara is messier but honest — you know what she knows and what she doesn't. Bottom line for them: when they build their own persona for the assignment, it should look like Cara, not Ben. Better to admit low confidence than to invent certainty.");
 
   // 12 The assignment
   s = mk(); s.background = { color: "0E7C7B" };
@@ -324,7 +327,7 @@ async function build() {
   s.addText("BEFORE MONDAY, SEP 21", { x: 0.92, y: 4.4, w: 11, h: 0.35, color: C.amber, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   s.addText([
     { text: "Do your discovery conversations + one honest persona (Discovery Notes)", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 8 } },
-    { text: "Turn in your License / OSS short response (from Session 3)", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 8 } },
+    { text: "Turn in your License / OSS short response (from Session 3) and your Discovery Notes (from today)", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 8 } },
     { text: "Keep feeding your idea journal — Week 3: feasibility + the Product Definition Brief", options: { bullet: { indent: 16 } } }
   ], { x: 0.95, y: 4.82, w: 11.7, h: 1.6, color: "CBD8E6", fontFace: F.body, fontSize: 16, valign: "top", margin: 0 });
   s.addNotes("Close on the one-liner — it's the whole method in a sentence. Recap the three rules one more time if there's a beat. Preview Week 3: they'll turn their discovery into a Product Definition Brief (users, needs, success criteria), so the quality of this week's conversations directly determines how strong that brief is. Make the deliverables and dates concrete before they leave.");
@@ -332,6 +335,8 @@ async function build() {
   const OUT = "Session04-Discovery.pptx";
   await pres.writeFile({ fileName: OUT });
   console.log("WROTE", PAGE, "slides");
+  const anim = await require("./add-animations.js").addAnimations(OUT);
+  if (anim.length) console.log("ANIMATED", anim.join("; "));
   try {
     const { verifyDeck, reportText } = require("./verify-deck.js");
     console.log(reportText(await verifyDeck(OUT)));

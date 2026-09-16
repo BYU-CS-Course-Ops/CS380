@@ -39,14 +39,17 @@ function header(slide, kicker, title, titleColor) {
   slide.addText(kicker.toUpperCase(), { x: 0.87, y: 0.44, w: 11.5, h: 0.34, color: C.teal, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   slide.addText(title, { x: 0.6, y: 0.82, w: 12.1, h: 1.0, color: titleColor || C.ink, fontFace: F.head, fontSize: 31, bold: true, margin: 0, valign: "top" });
 }
-function card(slide, x, y, w, h, fill) {
-  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow() });
+// `extra` passes pptxgenjs options through — e.g. REVEAL(1) to animate the shape in on a click.
+function card(slide, x, y, w, h, fill, extra) {
+  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow(), ...extra });
 }
-async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor) {
-  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor } });
+async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor, extra) {
+  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor }, ...extra });
   const pad = d * 0.27;
-  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad });
+  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad, ...extra });
 }
+// Click-to-reveal: every shape given REVEAL(n) appears together on click n (tools/add-animations.js).
+const REVEAL = (n, effect) => ({ objectName: effect ? `click-${n}:${effect}` : `click-${n}` });
 
 async function build() {
   let s;
@@ -97,16 +100,16 @@ async function build() {
     s.addText(why[i][1], { x: 1.55, y: y + 0.02, w: 6.7, h: 0.4, color: C.ink, fontFace: F.body, fontSize: 19, bold: true, margin: 0 });
     s.addText(why[i][2], { x: 1.55, y: y + 0.42, w: 6.7, h: 0.4, color: C.slate, fontFace: F.body, fontSize: 14.5, margin: 0 });
   }
-  card(s, 8.5, 2.05, 4.2, 4.35, C.navy);
-  await iconCircle(s, FA.FaComments, 8.8, 2.35, 0.62, C.amber, C.navy);
-  s.addText("Talk about it", { x: 9.55, y: 2.4, w: 3.0, h: 0.55, color: C.white, fontFace: F.body, fontSize: 18, bold: true, valign: "middle", margin: 0 });
+  card(s, 8.5, 2.05, 4.2, 4.35, C.navy, REVEAL(1));
+  await iconCircle(s, FA.FaComments, 8.8, 2.35, 0.62, C.amber, C.navy, REVEAL(1));
+  s.addText("Talk about it", { x: 9.55, y: 2.4, w: 3.0, h: 0.55, color: C.white, fontFace: F.body, fontSize: 18, bold: true, valign: "middle", margin: 0, ...REVEAL(1) });
   s.addText([
     { text: "What's scary about building in public — and how real is it?", options: { breakLine: true, paraSpaceAfter: 12 } },
     { text: "\"Given enough eyeballs, all bugs are shallow\" — do you buy it?", options: { breakLine: true, paraSpaceAfter: 12 } },
     { text: "Why would anyone contribute to your project?", options: {} }
-  ], { x: 8.8, y: 3.15, w: 3.65, h: 3.1, color: "CFE0E9", fontFace: F.body, fontSize: 14.5, valign: "top", margin: 0, lineSpacingMultiple: 1.04 });
+  ], { x: 8.8, y: 3.15, w: 3.65, h: 3.1, color: "CFE0E9", fontFace: F.body, fontSize: 14.5, valign: "top", margin: 0, lineSpacingMultiple: 1.04, ...REVEAL(1) });
   footer(s);
-  s.addNotes("Draw the benefits out of the room where you can: contributors, feedback and trust (\"many eyes\"), reuse and reach, and longevity plus a public portfolio. Then use the navy discussion card to keep it honest — what's actually scary about building in public, whether \"given enough eyeballs, all bugs are shallow\" holds up, and the key founder question: why would anyone contribute to YOUR project? Let them wrestle with that last one. ~4-5 min.");
+  s.addNotes("Draw the benefits out of the room where you can: contributors, feedback and trust (\"many eyes\"), reuse and reach, and longevity plus a public portfolio. Then click to reveal the navy discussion card and use it to keep things honest — what's actually scary about building in public, whether \"given enough eyeballs, all bugs are shallow\" holds up, and the key founder question: why would anyone contribute to YOUR project? Let them wrestle with that last one. ~4-5 min.");
 
   // 4 Licenses — the big idea
   s = mk(); s.background = { color: C.white };
@@ -198,12 +201,12 @@ async function build() {
   card(s, 0.6, 2.15, 12.1, 1.7, C.cardBg);
   await iconCircle(s, FA.FaSitemap, 1.0, 2.62, 0.72, C.teal);
   s.addText("Governance = the rules and expectations that let strangers contribute safely — the license, the code of conduct, the contribution process, and who decides. Without it, even great code stays a solo repo.", { x: 2.0, y: 2.15, w: 10.4, h: 1.7, color: C.ink, fontFace: F.body, fontSize: 17, valign: "middle", margin: 0, lineSpacingMultiple: 1.05 });
-  card(s, 0.6, 4.15, 12.1, 2.05, C.navy);
-  await iconCircle(s, FA.FaUserFriends, 1.0, 4.75, 0.72, C.amber, C.navy);
-  s.addText("A contributor's-eye view", { x: 2.0, y: 4.35, w: 10, h: 0.5, color: C.amber, fontFace: F.body, fontSize: 17, bold: true, margin: 0 });
-  s.addText("\"I'd like to help with this project… but do I know how to contribute? What's expected of me? And am I even allowed to use this?\"  Good governance answers all three before they have to ask.", { x: 2.0, y: 4.9, w: 10.4, h: 1.2, color: "CFE0E9", fontFace: F.body, fontSize: 16, valign: "top", margin: 0, lineSpacingMultiple: 1.05 });
+  card(s, 0.6, 4.15, 12.1, 2.05, C.navy, REVEAL(1));
+  await iconCircle(s, FA.FaUserFriends, 1.0, 4.75, 0.72, C.amber, C.navy, REVEAL(1));
+  s.addText("A contributor's-eye view", { x: 2.0, y: 4.35, w: 10, h: 0.5, color: C.amber, fontFace: F.body, fontSize: 17, bold: true, margin: 0, ...REVEAL(1) });
+  s.addText("\"I'd like to help with this project… but do I know how to contribute? What's expected of me? And am I even allowed to use this?\"  Good governance answers all three before they have to ask.", { x: 2.0, y: 4.9, w: 10.4, h: 1.2, color: "CFE0E9", fontFace: F.body, fontSize: 16, valign: "top", margin: 0, lineSpacingMultiple: 1.05, ...REVEAL(1) });
   footer(s);
-  s.addNotes("Define governance plainly: the rules and expectations that let strangers contribute safely — the license, the code of conduct, the contribution process, and who decides. Without it, even great code stays a solo repo. Use the contributor's-eye view to make it visceral: a would-be helper asks \"do I know how to contribute? what's expected of me? am I even allowed to use this?\" — good governance answers all three before they have to ask. ~3 min.");
+  s.addNotes("Define governance plainly: the rules and expectations that let strangers contribute safely — the license, the code of conduct, the contribution process, and who decides. Without it, even great code stays a solo repo. Click to reveal the contributor's-eye view and use it to make it visceral: a would-be helper asks \"do I know how to contribute? what's expected of me? am I even allowed to use this?\" — good governance answers all three before they have to ask. ~3 min.");
 
   // 9 Governance — strong vs weak
   s = mk(); s.background = { color: C.white };
@@ -311,6 +314,8 @@ async function build() {
   const OUT = "Session03-OpenSource.pptx";
   await pres.writeFile({ fileName: OUT });
   console.log("WROTE", PAGE, "slides");
+  const anim = await require("./add-animations.js").addAnimations(OUT);
+  if (anim.length) console.log("ANIMATED", anim.join("; "));
   try {
     const { verifyDeck, reportText } = require("./verify-deck.js");
     console.log(reportText(await verifyDeck(OUT)));

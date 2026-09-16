@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Good vs. Leading Questions</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, "Segoe UI", sans-serif;
+    color: #1E2A36;
+    font-size: 10.6pt;
+    line-height: 1.24;
+  }
+
+  h1 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 20pt; color: #14233A; margin: 0 0 1pt 0; letter-spacing: -0.2pt;
+  }
+  .kicker { font-size: 8.8pt; color: #5F7284; letter-spacing: 0.5pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+  .head { border-bottom: 2.4pt solid #12908F; padding-bottom: 4pt; margin-bottom: 8pt; }
+  .lede { font-size: 9.6pt; color: #5F7284; font-style: italic; margin: 3pt 0 0 0; }
+
+  h2 {
+    font-family: Cambria, Georgia, serif; font-size: 13pt; color: #14233A;
+    margin: 0 0 4pt 0; border-bottom: 0.8pt solid #DCE5EB; padding-bottom: 2pt;
+  }
+  section { margin-bottom: 9pt; }
+  p { margin: 0 0 4pt 0; }
+  ul { margin: 0; padding-left: 15pt; }
+  li { margin-bottom: 2.6pt; }
+  li:last-child { margin-bottom: 0; }
+  b, strong { color: #14233A; }
+
+  .card { background: #F2F6F8; border-left: 3pt solid #12908F; padding: 6pt 9pt; }
+  .card.amber { border-left-color: #E8A33D; }
+  .card.coral { border-left-color: #D9614C; }
+
+  table.q { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 10.4pt; }
+  table.q th {
+    font-size: 8.8pt; text-transform: uppercase; letter-spacing: 0.4pt; color: #FFFFFF;
+    text-align: left; padding: 4pt 7pt; font-weight: bold;
+  }
+  table.q th.lead { background: #D9614C; }
+  table.q th.learn { background: #0E6E6D; }
+  table.q th.arrow { background: #14233A; }
+  table.q td { padding: 4.4pt 7pt; border-bottom: 0.6pt solid #DCE5EB; vertical-align: top; }
+  table.q tr:nth-child(even) td { background: #F2F6F8; }
+  table.q tr:last-child td { border-bottom: 1pt solid #12908F; }
+  table.q td.lead { color: #5F7284; }
+  table.q td.learn { color: #14233A; font-weight: bold; }
+  table.q td.arrow { text-align: center; color: #12908F; font-weight: bold; }
+  col.c1 { width: 45%; } col.c2 { width: 5%; } col.c3 { width: 50%; }
+
+  .two { display: flex; gap: 12pt; }
+  .two > div { flex: 1; }
+
+  .foot { font-size: 8.8pt; color: #5F7284; font-style: italic; border-top: 0.8pt solid #DCE5EB; padding-top: 3pt; margin-top: 2pt; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <p class="kicker">CS 301R &middot; Software Engineering Studio I</p>
+  <h1>Good vs. Leading Questions</h1>
+  <p class="lede">A quick reference for Session 4 and for your own discovery conversations.</p>
+</div>
+
+<section>
+  <h2>The move: from <i>leading</i> to <i>learning</i></h2>
+  <p>Leading questions invite a polite "yes" or a made-up answer. Good questions ask about <b>real, past behavior.</b></p>
+  <table class="q">
+    <colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
+    <thead>
+      <tr><th class="lead">Instead of (leading)</th><th class="arrow"></th><th class="learn">Ask (learning)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="lead">"Would you use an app that does X?"</td><td class="arrow">&rarr;</td><td class="learn">"Tell me about the last time you dealt with [problem]."</td></tr>
+      <tr><td class="lead">"Do you think this is a good idea?"</td><td class="arrow">&rarr;</td><td class="learn">"How do you handle this today?"</td></tr>
+      <tr><td class="lead">"Wouldn't it be great if…?"</td><td class="arrow">&rarr;</td><td class="learn">"What's the most frustrating part of…?"</td></tr>
+      <tr><td class="lead">"Do you usually…?"</td><td class="arrow">&rarr;</td><td class="learn">"Walk me through the last time you did…"</td></tr>
+      <tr><td class="lead">"How much would you pay for this?"</td><td class="arrow">&rarr;</td><td class="learn">"What do you currently spend (time or money) on this?"</td></tr>
+      <tr><td class="lead">"Does this problem bother you?"</td><td class="arrow">&rarr;</td><td class="learn">"When did this last cost you time or money?"</td></tr>
+      <tr><td class="lead">"You'd want feature Y, right?"</td><td class="arrow">&rarr;</td><td class="learn">"What have you tried to solve this? What happened?"</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="two">
+  <div>
+    <h2>Four follow-up moves</h2>
+    <div class="card">
+      <ul>
+        <li><b>"Walk me through the last time…"</b> — anchors to a real instance instead of a generality.</li>
+        <li><b>"Why?" / "What happened next?"</b> — dig past the first, surface-level answer.</li>
+        <li><b>"How do you deal with it now?"</b> — surfaces workarounds (proof the problem is real).</li>
+        <li><b>Silence</b> — let them fill it. Don't rush to talk.</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h2>Don't</h2>
+    <div class="card coral">
+      <ul>
+        <li>Pitch your idea, then ask what they think.</li>
+        <li>Treat compliments as data.</li>
+        <li>Ask about the future ("would you…") — ask about the past.</li>
+        <li>Do most of the talking.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Consent &amp; ethics (course norms)</h2>
+  <p>You're talking to real people — treat it with care. This is <b>course-level needfinding, not formal human-subjects research</b> (no IRB needed), but the norms still apply:</p>
+  <div class="card amber">
+    <ul>
+      <li><b>Ask permission and say why.</b> <i>"I'm a student learning about [problem] — could I ask you a few questions? About 10 minutes."</i></li>
+      <li><b>Be honest.</b> You're there to learn, not to sell. Don't pretend to be doing something you're not.</li>
+      <li><b>No recording without explicit permission.</b> Notes are fine; ask first for audio/video.</li>
+      <li><b>Respect their time and their "no."</b> They can stop, skip a question, or decline.</li>
+      <li><b>Protect their privacy.</b> Don't put names or identifying details in your notes or brief without consent — summarize and anonymize.</li>
+      <li><b>Check with the instructor first</b> before interviewing sensitive populations or topics (minors, health information, anything you're unsure about).</li>
+    </ul>
+  </div>
+</section>
+
+<p class="foot">Go deeper: The Mom Test — Key Ideas &middot; Interview Ethics for Students &middot; Interview Prompt Cards (all on Canvas &rarr; Course Resources).</p>
+
+</body>
+</html>

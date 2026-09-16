@@ -1,3 +1,7 @@
+# Open Source License Cheat Sheet
+
+**Printable version:** <file path="../resources/License-Cheat-Sheet.pdf" canvas_folder="Course Handouts" /> — the same reference on one sheet.
+
 *A quick reference for CS 301R. Not legal advice — for authoritative text, read the license itself and [choosealicense.com](https://choosealicense.com/).*
 
 ## The one-minute version

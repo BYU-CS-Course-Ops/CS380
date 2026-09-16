@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Interview Prompt Cards</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, "Segoe UI", sans-serif;
+    color: #1E2A36;
+    font-size: 10.2pt;
+    line-height: 1.22;
+  }
+
+  h1 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 20pt; color: #14233A; margin: 0 0 1pt 0; letter-spacing: -0.2pt;
+  }
+  .kicker { font-size: 8.8pt; color: #5F7284; letter-spacing: 0.5pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+  .head { border-bottom: 2.4pt solid #12908F; padding-bottom: 4pt; margin-bottom: 7pt; }
+  .lede { font-size: 9.4pt; color: #5F7284; font-style: italic; margin: 3pt 0 0 0; }
+
+  h2 {
+    font-family: Cambria, Georgia, serif; font-size: 12.6pt; color: #14233A;
+    margin: 0 0 3.5pt 0; border-bottom: 0.8pt solid #DCE5EB; padding-bottom: 2pt;
+  }
+  section { margin-bottom: 8pt; }
+  p { margin: 0 0 4pt 0; }
+  ul, ol { margin: 0; padding-left: 15pt; }
+  li { margin-bottom: 2.4pt; }
+  li:last-child { margin-bottom: 0; }
+  b, strong { color: #14233A; }
+
+  .card { background: #F2F6F8; border-left: 3pt solid #12908F; padding: 5.5pt 9pt; }
+  .card.amber { border-left-color: #E8A33D; }
+
+  .roles { display: flex; gap: 7pt; margin-bottom: 4pt; }
+  .role { flex: 1; background: #F2F6F8; border-top: 3pt solid #12908F; padding: 4pt 7pt; font-size: 9.8pt; }
+  .role b { display: block; font-family: Cambria, Georgia, serif; font-size: 11pt; }
+  .role.user { border-top-color: #E8A33D; }
+  .role.obs { border-top-color: #5F7284; }
+
+  .funnel li { margin-bottom: 3pt; }
+  .funnel li::marker { color: #12908F; font-weight: bold; }
+
+  .dialog { font-size: 9.6pt; margin: 0; padding: 0; list-style: none; }
+  .dialog li { margin-bottom: 1.6pt; padding-left: 16pt; text-indent: -16pt; }
+  .dialog .who { display: inline-block; width: 16pt; text-indent: 0; font-weight: bold; color: #0E6E6D; }
+  .dialog .u .who { color: #B87A1E; }
+  .dialog .tag { color: #5F7284; font-style: italic; }
+  .insight { margin-top: 5pt; font-size: 9.8pt; }
+
+  .pagebreak { break-before: page; page-break-before: always; }
+
+  /* cut-apart problem cards */
+  .cuthint { font-size: 8.8pt; color: #5F7284; font-style: italic; margin: 0 0 4pt 0; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1pt dashed #5F7284; border-left: 1pt dashed #5F7284; }
+  .pc { border-right: 1pt dashed #5F7284; border-bottom: 1pt dashed #5F7284; padding: 8pt 11pt; height: 0.98in; display: flex; gap: 9pt; align-items: flex-start; }
+  .pc .n {
+    flex: none; width: 24pt; height: 24pt; border-radius: 50%; background: #14233A; color: #FFFFFF;
+    font-family: Cambria, Georgia, serif; font-weight: bold; font-size: 13pt; text-align: center; line-height: 24pt;
+  }
+  .pc .t { font-family: Cambria, Georgia, serif; font-size: 13.4pt; color: #14233A; font-weight: bold; line-height: 1.12; margin-bottom: 2pt; }
+  .pc .d { font-size: 10.2pt; color: #5F7284; }
+
+  /* observer tally */
+  table.tally { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  table.tally th {
+    background: #14233A; color: #FFFFFF; font-size: 8.8pt; text-transform: uppercase; letter-spacing: 0.4pt;
+    text-align: left; padding: 3.5pt 6pt;
+  }
+  table.tally td { border: 0.8pt solid #DCE5EB; vertical-align: top; padding: 3pt 6pt; font-size: 9.4pt; color: #5F7284; }
+  table.tally td.lbl { background: #F2F6F8; color: #14233A; font-weight: bold; }
+  table.tally tr.tall td { height: 1.0in; }
+  table.tally tr.short td { height: 0.5in; }
+  col.t1 { width: 22%; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <p class="kicker">CS 301R &middot; Software Engineering Studio I &middot; Session 4</p>
+  <h1>Interview Prompt Cards</h1>
+  <p class="lede">For the mock-interview rounds. The "user" picks a real problem area they genuinely have and answers truthfully. Interviewers do <b>not</b> pitch — they learn.</p>
+</div>
+
+<section>
+  <h2>How to use (triads — 3 rounds)</h2>
+  <div class="roles">
+    <div class="role"><b>Interviewer</b>Good, non-leading questions to understand the problem — no solutions, no pitching.</div>
+    <div class="role user"><b>User</b>Pick a card (page 2) you <i>actually</i> experience; answer from your own life.</div>
+    <div class="role obs"><b>Observer</b>Tally leading questions and capture the real needs that surface (page 2).</div>
+  </div>
+  <p style="font-size:9.6pt;color:#5F7284;margin:0;">Rotate roles each round so everyone is Interviewer once.</p>
+</section>
+
+<section>
+  <h2>Interviewer's funnel <span style="font-family:Calibri,sans-serif;font-size:9.6pt;color:#5F7284;font-weight:normal;">— works for any topic; you're starting cold</span></h2>
+  <div class="card">
+    <ol class="funnel">
+      <li><b>Open the area (~30 sec):</b> "Tell me about [their topic] — how does that usually go for you?"</li>
+      <li><b>Get a real, recent instance:</b> "When did it last go wrong or frustrate you? Walk me through it."</li>
+      <li><b>Follow what they actually do:</b> "What do you do about it now?" — their <b>workaround</b> is where the hidden need lives.</li>
+      <li><b>Ladder to the root — ask "why" 2–3 times:</b> "Why was that the hard part?" &rarr; "And why does <i>that</i> matter?"</li>
+      <li><b>Measure the pain:</b> "How often does this happen? What does it cost you — time, money, stress?"</li>
+      <li><b>Reflect it back:</b> "So it sounds like the real headache is ___ — is that right?"</li>
+      <li><b>If time:</b> "If you could wave a wand and fix one part of this, which would it be?"</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>Reaching the issue they haven't named</h2>
+  <p>People hand you a <b>symptom</b> ("group projects are stressful"), not the root problem. You reach the real, often-unspoken need by <b>following the workaround</b> (a pain they've quietly accepted), asking <b>"why / what happens then"</b> a couple of times to climb from symptom to stake, and <b>reflecting it back</b> until they say <i>"yeah — exactly."</i></p>
+</section>
+
+<section>
+  <h2>Worked example <span style="font-family:Calibri,sans-serif;font-size:9.6pt;color:#5F7284;font-weight:normal;">— topic the "user" picked: group projects</span></h2>
+  <div class="card amber">
+    <ul class="dialog">
+      <li><span class="who">I:</span>"Tell me about group projects — how do they usually go?"</li>
+      <li class="u"><span class="who">U:</span>"Honestly, stressful."</li>
+      <li><span class="who">I:</span>"When did one last stress you out? Walk me through it."</li>
+      <li class="u"><span class="who">U:</span>"Last week I ended up doing most of the slides the night before."</li>
+      <li><span class="who">I:</span>"How did it get to that point?"</li>
+      <li class="u"><span class="who">U:</span>"People said they'd do their parts and didn't — I found out too late."</li>
+      <li><span class="who">I:</span>"What do you do about that now?" <span class="tag">(workaround)</span></li>
+      <li class="u"><span class="who">U:</span>"I just assume I'll have to redo things, so I over-prepare."</li>
+      <li><span class="who">I:</span>"Why is finding out <i>late</i> the hard part?" <span class="tag">(why-ladder)</span></li>
+      <li class="u"><span class="who">U:</span>"Because by then there's no time to fix it without doing it myself."</li>
+      <li><span class="who">I:</span>"So the real headache is you can't tell whether the work is actually happening until it's too late to react — is that it?" <span class="tag">(reflect back)</span></li>
+      <li class="u"><span class="who">U:</span>"Yeah, exactly. It's not the work — it's the not-knowing."</li>
+    </ul>
+    <p class="insight">Surface complaint: "stressful group projects." The real, previously-unnamed need: <b>visibility into whether teammates are on track, early enough to act</b> — reached in five questions, on a topic the interviewer knew nothing about going in.</p>
+  </div>
+</section>
+
+<div class="pagebreak"></div>
+
+<div class="head">
+  <p class="kicker">CS 301R &middot; Interview Prompt Cards &middot; Page 2</p>
+  <h1>Problem-Area Cards &amp; Observer Tally</h1>
+  <p class="lede">User: pick one you truly relate to. Cut along the dashed lines if you want loose cards.</p>
+</div>
+
+<section>
+  <div class="grid">
+    <div class="pc"><div class="n">1</div><div><div class="t">Commuting / parking / getting to class</div><div class="d">The daily logistics that go wrong.</div></div></div>
+    <div class="pc"><div class="n">2</div><div><div class="t">Group projects</div><div class="d">Coordinating, dividing work, dealing with free-riders.</div></div></div>
+    <div class="pc"><div class="n">3</div><div><div class="t">Managing money as a student</div><div class="d">Budgeting, splitting costs, tracking spending.</div></div></div>
+    <div class="pc"><div class="n">4</div><div><div class="t">Finding and protecting time</div><div class="d">Study, work, church, social, sleep.</div></div></div>
+    <div class="pc"><div class="n">5</div><div><div class="t">A hobby or side interest</div><div class="d">The genuinely annoying part of doing it.</div></div></div>
+    <div class="pc"><div class="n">6</div><div><div class="t">A job or campus role</div><div class="d">A task that's more painful than it should be.</div></div></div>
+    <div class="pc"><div class="n">7</div><div><div class="t">Health / fitness routines</div><div class="d">Starting, tracking, and sticking with them.</div></div></div>
+    <div class="pc"><div class="n">8</div><div><div class="t">Keeping up with a club / ward / community</div><div class="d">Communication, events, coordination.</div></div></div>
+    <div class="pc"><div class="n">9</div><div><div class="t">Cooking / meals / groceries</div><div class="d">The recurring hassle.</div></div></div>
+    <div class="pc"><div class="n">10</div><div><div class="t">A tool or app you use that frustrates you</div><div class="d">Where it falls short.</div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Observer's tally sheet</h2>
+  <table class="tally">
+    <colgroup><col class="t1"><col><col><col></colgroup>
+    <thead><tr><th></th><th>Round 1</th><th>Round 2</th><th>Round 3</th></tr></thead>
+    <tbody>
+      <tr class="short"><td class="lbl">Topic card #</td><td></td><td></td><td></td></tr>
+      <tr class="short"><td class="lbl">Leading questions caught</td><td></td><td></td><td></td></tr>
+      <tr class="tall"><td class="lbl">Real needs / pain points heard</td><td></td><td></td><td></td></tr>
+      <tr class="tall"><td class="lbl">Best "walk me through the last time" moment</td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+</section>
+
+</body>
+</html>

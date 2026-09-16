@@ -112,7 +112,7 @@ Fall 2026 runs **27 sessions**. The term opens on two isolated Wednesdays (Sep 2
 |:--|:--------|:--------------------------------------------------------------|:-----------------------|
 | 1 | Sep 2, 9 | What makes a project worth founding: studio model, CPS arc, founder mindset, selection criteria; divergent **problem-space** workshop — needs and users, not solutions | Idea journal started |
 | 2 | Sep 14, 16 | Open source, licensing, and governance basics; discovery workshop — interviewing, good vs. leading questions, honest personas, consent/ethics | — |
-| 3 | Sep 21, 23 | Feasibility and risk categories; self-directed learning and the learning plan; convergence workshop — score ideas against the criteria and pick 1–2 | License/OSS response (Sep 21); **CP1 Idea Briefs** (Sep 23) |
+| 3 | Sep 21, 23 | Feasibility and risk categories; self-directed learning and the learning plan; convergence workshop — score ideas against the criteria and pick 1–2 | Discovery Notes and License/OSS response (Sep 21); **CP1 Idea Briefs** (Sep 23) |
 | 4 | Sep 28, 30 | Proposal anatomy; arguing feasibility without overpromising; strong vs. weak proposals dissected; peer review of scope and risk; scope-narrowing clinic | **CP2 Product Definition Brief** (Sep 28); proposal draft marked up in class (Sep 30) |
 | 5 | Oct 5, 7 | Pitch craft and slide design; the proposal-evaluation rubric and constructive critique; **Pitch Day** — persuade, recruit, peer scoring, selection, ranked preferences | **CP3 Written Proposal** (Oct 5); **CP4 Pitch #1** (Oct 7) |
 | 6 | Oct 12, 14 | **Teams announced**; design documents in software engineering; appropriate detail vs. over-specification; architecture and data-flow diagram workshop on the team's project | Team Charter written in class (Oct 12); design doc draft (Oct 14) |
@@ -147,7 +147,7 @@ Twelve graded checkpoints build toward the culminating artifact. CP1–CP4 are i
 | 10 | **MVP → Progress Demo + Repo Audit** | Team | A working vertical slice demoed live, plus a peer/instructor onboarding test: can a stranger clone, build, run, and find where a new feature would go? |
 | 11 | **Launch & Onboarding Package + Retrospective** | Team | Architecture overview, setup verification, roadmap, known issues, technical-debt log, contributor onboarding guide, honest retrospective |
 | 12 | **Final Pitch + Demo** | Team | The mastery artifact, defended at Demo Day |
-| — | *License/OSS short response · Team Charter (written in class Oct 12) · MVP Plan* | Mixed | Completion-graded supports feeding CP2, CP5, and CP10 |
+| — | *Discovery Notes · License/OSS short response · Team Charter (written in class Oct 12) · MVP Plan* | Mixed | Completion-graded supports feeding CP2, CP5, and CP10 |
 
 **The culminating experience.** A **launched open-source project, defended at Demo Day**: a working MVP that proves core viability, an open-source-ready repository with full governance and onboarding documentation, a Launch & Onboarding Package, and a final pitch and live demo before an audience that includes capstone faculty. The demo answers the three questions the whole semester builds toward — **What need does this serve? What has been built? Where does it go next, and how can others join you in building it?**
 

@@ -1,3 +1,5 @@
+**Printable version:** <file path="../resources/Interview-Prompt-Cards.pdf" canvas_folder="Course Handouts" /> — page 1 is the funnel and worked example; page 2 is the cut-apart problem cards and an observer tally for all three rounds.
+
 *For the Session 4 mock-interview rounds. The "user" picks a real problem area they genuinely have (from the list, or their own) and answers truthfully. Interviewers do **not** pitch — they learn.*
 
 ---

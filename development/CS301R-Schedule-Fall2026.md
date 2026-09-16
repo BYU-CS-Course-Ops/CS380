@@ -49,7 +49,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 2 | Sep 9 | Wed | Wk 1 | B | Divergent **problem-space** workshop — brainstorm needs & users (not solutions); defer judgment | — |
 | 3 | Sep 14 | Mon | Wk 2 | A | Open-source model & license comparison; governance basics; lead-as-sponsor | — |
 | 4 | Sep 16 | Wed | Wk 2 | B | Discovery workshop — interviewing, good questions, honest persona/proxy construction, consent/ethics | — |
-| 5 | Sep 21 | Mon | Wk 3 | A | Feasibility & risk categories; self-directed learning & the learning plan | License/OSS short response |
+| 5 | Sep 21 | Mon | Wk 3 | A | Feasibility & risk categories; self-directed learning & the learning plan | Discovery Notes; License/OSS short response |
 | 6 | Sep 23 | Wed | Wk 3 | B | Convergence workshop — richness check; score ideas vs. criteria; peer + instructor feedback; pick 1–2 | **CP1 Idea Briefs** |
 
 ### Phase 2 — Ideate & Pitch → Form Teams

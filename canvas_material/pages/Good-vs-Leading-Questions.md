@@ -1,3 +1,5 @@
+**Printable version:** <file path="../resources/Good-vs-Leading-Questions.pdf" canvas_folder="Course Handouts" /> — one page, for your pocket during discovery conversations.
+
 *A quick reference for Session 4 and for your own discovery conversations.*
 
 ---
