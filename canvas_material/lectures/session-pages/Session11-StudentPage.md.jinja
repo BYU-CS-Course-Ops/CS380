@@ -1,0 +1,63 @@
+## Before class
+
+1. **Malte Ubl — [*Design Docs at Google*](https://www.industrialempathy.com/posts/design-docs-at-google/)** — **the primary reading.** The anatomy of a design doc (context and scope, goals and **non-goals**, the design itself, **alternatives considered**, cross-cutting concerns), why the trade-offs are the whole point, and when *not* to write one at all. Read it with two things in mind, because we'll take both up in class: it describes one company's culture, where design docs are informal working documents — that is not true everywhere — and "alternatives considered" can rest on anything from a hallway conversation to weeks of measured work. *(Heads-up: one embedded meme in the "The actual design" section has profanity in its caption. The point it makes is a fair one; the rest of the article is clean.)*
+2. **<course-link type="page" id="pg-working-agreements">Working Agreements</course-link>** — a short course reading, about five minutes. Why groups that intend to last write down how they'll work together, and what belongs in one. You'll start your team's version at the end of class.
+3. **Bring** your pitch-day feedback and the **written proposal for the project you ranked first.** The design doc starts from the winning argument.
+
+**Teams are announced at the start of class today.**
+
+---
+
+## Purpose
+
+A proposal argues that something is worth building. A **design document** decides *how* it gets built — and writes the reasoning down so someone else can follow it.
+
+The audience has changed, and that changes everything about how you write. Your proposal had to convince a skeptic. Your design doc has to **guide a builder**: your teammates now, and the contributor who arrives in January, reads your repository, and asks "where's the design doc?" It is the cheapest place in the whole project to be wrong, because prose costs less to change than code does. A decision made in a document takes an afternoon to reverse; the same decision, discovered three weeks into the build, takes a rewrite.
+
+The heart of the genre is **alternatives considered.** "We chose Postgres" is an assertion. "We chose Postgres over SQLite because two of our flows need concurrent writes" is engineering — it tells a reader what you weighed, and it tells a future maintainer what would have to change for the decision to flip. Design reviews at every serious company run on that move.
+
+Today you learn to read one critically before you write one, which is the fastest way into any genre.
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Name the sections of a design doc** and say what each one is *for*.
+2. **Explain why trade-offs and alternatives are the heart of it**, and cite the evidence behind a decision.
+3. **Judge appropriate detail** — enough to guide a builder, not so much that you've written a second, worse copy of the codebase.
+4. **Read a design doc critically** — find the unstated assumption, the missing alternative, the hand-wave.
+5. **Map your own project onto the design-doc shape**, and start the working agreement your team will be held to.
+
+---
+
+## What we'll do together
+
+**The anatomy, quickly** — you read it, so we recall it rather than re-teach it, and spend the time on the section everyone skips.
+
+**Then two things the reading doesn't tell you.** First, **how formal a design document gets depends on where you work.** At many software companies it's an informal working document. In aerospace, medical devices, and government systems it's a formal deliverable: a document number, named reviewers who sign it, change control, and a design review that gates the spending. We'll look at a real one — <course-link type="page" id="pg-formal-design-doc-example">a NASA detailed design document your instructor wrote</course-link> for a spacecraft mission's data system, signatures and change record included. Second, **alternatives considered can rest on real work** — a conversation, a benchmark, or a full trade study. Your CP3 spike was exactly this kind of evidence.
+
+**Appropriate detail, and then the complication.** "Decisions in, mechanics out" is the rule for a document like yours. Then we'll look at the NASA document specifying every message field, every configuration parameter, and every database table — everything our rubric forbids — and work out why it's right there and wrong here. The answer is a judgment you'll use for the rest of your career: **altitude follows the reader, the lifetime, and the cost of being wrong.**
+
+**The dissection — the main event.** In teams, you'll read the <course-link type="page" id="pg-sample-design-doc">Sample Design Document</course-link> for the costume-catalog project you met in the Session 7 proposals. It follows our template and parts of it are genuinely good. Other parts would stall a builder on day one. Four questions: could you start building from this? Where's the unstated assumption? Which decision has no alternative? Where is it over-specified? *(Every one of those has at least one honest answer in the document.)*
+
+**Your own skeleton**, sketched: a system-context diagram, three to five components, the data entities, and the two biggest decisions you'll have to argue. Rough is the point — it's Wednesday's starting point, not Wednesday's output.
+
+**And your working agreement.** We'll talk about what one is and why groups that last write their norms down, then answer the two questions teams skip when left alone: *who breaks a deadlock, and by what rule?* and *what happens the first time someone misses a commitment?* You answer those in the room, with the instructor circulating. The rest of the charter is the agenda for your first team meeting.
+
+---
+
+## What you'll leave with
+
+- **A read on the genre's quality bar** — from a document you critiqued rather than a description you were given.
+- **Your project's skeleton on paper**, ready for Wednesday's whiteboard workshop.
+- **The <course-link type="page" id="pg-design-doc-template">design document template</course-link>**, which is the required structure for <course-link type="assignment" id="cp5">CP5</course-link> — download the Markdown and it becomes `docs/design.md` in your repo. Organizations standardize these so reviewers always know where to look; conforming to one is part of the job.
+- **Your charter's two hardest answers**, written down, and a first team meeting to schedule.
+
+### Coming up
+
+- **Before <course-link type="page" id="s12">{{ S12_DAY }}, {{ S12_DATE }}</course-link>: hold your first team meeting.** Finish the <course-link type="assignment" id="charter">team charter</course-link> there — it's due **end of day {{ S12_DAY }}** — and bring your skeleton sketch to class.
+- **{{ S12_DAY }} is a whiteboard workshop.** Teams draw the real diagrams with the instructor circulating as design reviewer, and the **design document draft is due at the end of that class.**
+- **<course-link type="assignment" id="cp5">CP5 — the revised design document</course-link> is due {{ S14_DAY }}, {{ S14_DATE }}.** Draft, review, revise: the same loop the proposal used, and the revision is graded.
+- *Working solo? Everything above still applies at solo scope — and the charter becomes the working agreement you hold yourself to, then hand to contributors later.*

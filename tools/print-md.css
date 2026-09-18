@@ -1,0 +1,40 @@
+/* Print styling for course Markdown handouts (tools/print-md.sh).
+   Same palette and fonts as the hand-authored worksheets; margins are wide
+   enough on the right for a student to mark the page up. */
+@page { size: letter; margin: 0.55in 0.6in 0.5in 0.6in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 10.6pt; line-height: 1.32; }
+
+.head { border-bottom: 2.4pt solid #12908F; padding-bottom: 4pt; margin-bottom: 8pt; }
+.head .kicker { font-size: 8.8pt; color: #5F7284; letter-spacing: 0.5pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+.head h1 { font-family: Cambria, Georgia, serif; font-size: 19pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+
+h1 { font-family: Cambria, Georgia, serif; font-size: 16pt; color: #14233A; margin: 10pt 0 4pt 0; }
+h2 { font-family: Cambria, Georgia, serif; font-size: 13pt; color: #14233A; margin: 10pt 0 3pt 0;
+     border-bottom: 0.8pt solid #DCE5EB; padding-bottom: 2pt; break-after: avoid; page-break-after: avoid; }
+h3 { font-family: Cambria, Georgia, serif; font-size: 11.6pt; color: #0E6E6D; margin: 8pt 0 2pt 0; break-after: avoid; page-break-after: avoid; }
+p { margin: 0 0 5pt 0; }
+ul, ol { margin: 0 0 5pt 0; padding-left: 16pt; }
+li { margin-bottom: 2.5pt; }
+b, strong { color: #14233A; }
+a { color: #0E6E6D; text-decoration: none; }
+code { font-family: Consolas, "Courier New", monospace; font-size: 9.2pt; background: #F2F6F8; padding: 0 2pt; }
+
+blockquote { background: #F2F6F8; border-left: 3pt solid #E8A33D; margin: 0 0 8pt 0; padding: 6pt 10pt; font-size: 10pt; }
+blockquote p { margin: 0 0 4pt 0; }
+blockquote p:last-child { margin: 0; }
+blockquote ol, blockquote ul { margin-bottom: 0; }
+
+table { width: 100%; border-collapse: collapse; margin: 0 0 8pt 0; font-size: 9.6pt; break-inside: avoid; page-break-inside: avoid; }
+th { background: #14233A; color: #FFFFFF; font-size: 8.6pt; text-transform: uppercase; letter-spacing: 0.3pt;
+     text-align: left; padding: 3.5pt 5pt; font-weight: bold; }
+td { border-bottom: 0.6pt solid #DCE5EB; padding: 3pt 5pt; vertical-align: top; }
+tr:nth-child(even) td { background: #F8FAFB; }
+
+pre { background: #F2F6F8; border-left: 3pt solid #5F7284; padding: 6pt 8pt; margin: 0 0 8pt 0;
+      font-family: Consolas, "Courier New", monospace; font-size: 8.6pt; line-height: 1.15;
+      white-space: pre; overflow: hidden; break-inside: avoid; page-break-inside: avoid; }
+pre code { background: none; padding: 0; font-size: inherit; }
+
+hr { border: none; border-top: 0.8pt solid #DCE5EB; margin: 9pt 0; }

@@ -110,3 +110,27 @@ A criterion contributes **(level ÷ 4) × its weight**, and the weights sum to 1
 - **Feasibility defense** and **Handling of questions** test whether you can think on your feet about your own project's risks. Honest answers score better than confident ones.
 - **Slide & visual quality** and **Delivery** assess pitch craft as a professional communication skill.
 - Peer scores from the <course-link type="page" id="pg-pitch-evaluation-sheet">pitch evaluation sheet</course-link> inform the instructor's judgment here, but the grade is the instructor's.
+
+---
+
+## <course-link type="assignment" id="cp5">CP5 — Design Document</course-link>
+
+*How it gets built, and why this way · Team (or solo, at solo scope) · Course weight: 12%*
+
+| Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
+|---|---|---|---|---|---|
+| Architecture clarity | 20 | Components, interfaces, data, and external services clearly modeled — the system's shape is visible | Architecture clear | Partial or ambiguous | Missing or incoherent |
+| Appropriate detail | 15 | Right altitude — neither hand-wavy nor over-specified | Mostly right | Too shallow or too deep | Unusable |
+| Tech choices & rationale | 15 | Each significant choice argued against a real alternative | Choices justified | Asserted, little rationale | Unjustified |
+| Data & interface design | 15 | Sound data model and interface sketch that the traced flow exercises | Present and reasonable | Incomplete | Missing |
+| Risk & open questions | 10 | Honest risks and open questions surfaced, including failure cases | Some risks noted | Token | None |
+| Implementability | 15 | Plan clearly buildable in the semester that remains, by this team | Buildable | Doubtful | Not actionable |
+| Readability & revision | 10 | A future contributor could navigate it; visible improvement from draft to final | Readable; some revision | Rough | Poor or no revision |
+
+**What each criterion is looking for.**
+
+- **Architecture clarity**, **Data & interface design**, and **Tech choices & rationale** are the engineering core: can your team show the shape of the system and defend the decisions that produced it. A straw-man alternative fools no one — the alternative has to be something a reasonable team might actually pick.
+- **Appropriate detail** is a judgment skill in its own right, and the one this assignment is really teaching. Decisions and trade-offs belong in the document; mechanics belong in the code. Copied schemas, pseudo-code for routine work, and pinned library versions cost you here.
+- **Implementability** ties the design to the reality of the build: roughly five weeks of real building, not a nominal semester.
+- **Readability & revision** is graded through the future-contributor lens the whole course runs on — plus visible improvement between the draft and the final. Revision is graded, so keep the draft.
+- Use the <course-link type="page" id="pg-design-doc-template">design document template</course-link>: its sections map onto these criteria one for one.

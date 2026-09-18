@@ -147,7 +147,7 @@ Twelve graded checkpoints build toward the culminating artifact. CP1–CP4 are i
 | 10 | **MVP → Progress Demo + Repo Audit** | Team | A working vertical slice demoed live, plus a peer/instructor onboarding test: can a stranger clone, build, run, and find where a new feature would go? |
 | 11 | **Launch & Onboarding Package + Retrospective** | Team | Architecture overview, setup verification, roadmap, known issues, technical-debt log, contributor onboarding guide, honest retrospective |
 | 12 | **Final Pitch + Demo** | Team | The mastery artifact, defended at Demo Day |
-| — | *Discovery Notes · License/OSS short response · Team Charter (written in class Oct 12) · MVP Plan* | Mixed | Completion-graded supports feeding CP2, CP5, and CP10 |
+| — | *Discovery Notes · License/OSS short response · Team Charter (started in class Oct 12, due Oct 14) · MVP Plan* | Mixed | Completion-graded supports feeding CP2, CP5, and CP10 |
 
 **The culminating experience.** A **launched open-source project, defended at Demo Day**: a working MVP that proves core viability, an open-source-ready repository with full governance and onboarding documentation, a Launch & Onboarding Package, and a final pitch and live demo before an audience that includes capstone faculty. The demo answers the three questions the whole semester builds toward — **What need does this serve? What has been built? Where does it go next, and how can others join you in building it?**
 
