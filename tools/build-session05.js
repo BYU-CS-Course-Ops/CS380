@@ -39,14 +39,17 @@ function header(slide, kicker, title, titleColor) {
   slide.addText(kicker.toUpperCase(), { x: 0.87, y: 0.44, w: 11.5, h: 0.34, color: C.teal, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   slide.addText(title, { x: 0.6, y: 0.82, w: 12.1, h: 1.0, color: titleColor || C.ink, fontFace: F.head, fontSize: 31, bold: true, margin: 0, valign: "top" });
 }
-function card(slide, x, y, w, h, fill) {
-  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow() });
+// `extra` passes pptxgenjs options through — e.g. REVEAL(1) to animate the shape in on a click.
+function card(slide, x, y, w, h, fill, extra) {
+  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow(), ...extra });
 }
-async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor) {
-  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor } });
+async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor, extra) {
+  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor }, ...extra });
   const pad = d * 0.27;
-  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad });
+  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad, ...extra });
 }
+// Click-to-reveal: every shape given REVEAL(n) appears together on click n (tools/add-animations.js).
+const REVEAL = (n, effect) => ({ objectName: effect ? `click-${n}:${effect}` : `click-${n}` });
 
 async function build() {
   let s;
@@ -143,36 +146,52 @@ async function build() {
   footer(s);
   s.addNotes("Introduce the example that carries the whole session — spend a full minute here so it's concrete before the feasibility pass. Read the one-liner, then say why it's a good teaching case: reachable users are literally down the hall, it has one genuinely scary unknown (real-time sync), and it's rich enough — two roles, a live data model, room to grow — to be worth founding on. Stress it's a vehicle, not a suggested project: students find their own idea. Then flip to the live six-risk pass on it.");
 
-  // 6 Model it live — QueueUp risk table
+  // 6 Model it live — QueueUp risk table (filled live, one row per click)
   s = mk(); s.background = { color: C.white };
-  header(s, "Model it live — QueueUp", "Two risk boxes, one root cause");
+  header(s, "Model it live — QueueUp", "Six risks, one honest pass");
   s.addText("QueueUp — a live office-hours help queue. Rate its six risks with the room:", { x: 0.6, y: 1.72, w: 12.1, h: 0.35, color: C.slate, fontFace: F.body, fontSize: 14.5, italic: true, margin: 0 });
-  const rHead = ["Category", "Read", "Why"].map((t, i) => ({ text: t, options: { fill: { color: C.navy }, color: C.white, bold: true, fontFace: F.body, fontSize: 14, align: i === 1 ? "center" : "left" } }));
+
+  // Column geometry — the grid is built from shapes, not addTable, so rows can
+  // animate individually (PowerPoint animates a table as a single object).
+  const CAT_X = 0.72, CAT_W = 2.26, READ_X = 3.10, READ_W = 1.30, WHY_X = 4.52, WHY_W = 8.06;
+  const HDR_Y = 2.12, HDR_H = 0.50, ROW_Y0 = 2.68, ROW_H = 0.495, ROW_PITCH = 0.535;
+  const HILITE = "FBEAD2";
+
+  s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y: HDR_Y, w: 12.1, h: HDR_H, fill: { color: C.navy }, line: { type: "none" } });
+  const hdrOpts = { y: HDR_Y, h: HDR_H, color: C.white, fontFace: F.body, fontSize: 14, bold: true, valign: "middle", margin: 0 };
+  s.addText("Category", { ...hdrOpts, x: CAT_X, w: CAT_W });
+  s.addText("Read", { ...hdrOpts, x: READ_X, w: READ_W, align: "center" });
+  s.addText("Why", { ...hdrOpts, x: WHY_X, w: WHY_W });
+
+  // [category, read, why, isHighRisk]
   const rrows = [
     ["Technical", "High", "Live queue pushed to every client in ~1s — never done real-time", true],
     ["Schedule", "Med", "One course, add / see-position / claim — that slice fits", false],
     ["Dependency", "Med", "Build WebSockets or lean on a managed service (rate limits?)", false],
     ["Skill", "High", "Built request/response apps, never real-time — same root as Technical", true],
-    ["Adoption", "Med", "Will students open an app vs. just walk in?", false],
+    ["Adoption", "Med", "Will students open an app vs. just walk in? Confirm the \u201cI get skipped\u201d pain is real", false],
     ["Maintenance", "Med", "Runs live every session; a crash is very visible", false]
   ];
-  const rBody = rrows.map((r) => {
-    const z = r[3] ? "FBEAD2" : C.white;
-    return [
-      { text: r[0], options: { fill: { color: z }, color: C.ink, bold: true, fontFace: F.body, fontSize: 14 } },
-      { text: r[1], options: { fill: { color: z }, color: r[3] ? C.coral : C.slate, bold: true, fontFace: F.body, fontSize: 14, align: "center" } },
-      { text: r[2], options: { fill: { color: z }, color: C.ink, fontFace: F.body, fontSize: 13.5 } }
-    ];
+  rrows.forEach((r, i) => {
+    const y = ROW_Y0 + i * ROW_PITCH;
+    // Base band + category are up from the start — the empty grid is the question.
+    s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y, w: 12.1, h: ROW_H, fill: { color: C.cardBg }, line: { type: "none" } });
+    // The two high-risk bands land together on the last click, under text already shown.
+    if (r[3]) s.addShape(pres.shapes.RECTANGLE, { x: 0.6, y, w: 12.1, h: ROW_H, fill: { color: HILITE }, line: { type: "none" }, ...REVEAL(7) });
+    s.addText(r[0], { x: CAT_X, y, w: CAT_W, h: ROW_H, color: C.ink, fontFace: F.body, fontSize: 14, bold: true, valign: "middle", margin: 0 });
+    // Read + Why fill in together, one row per click.
+    s.addText(r[1], { x: READ_X, y, w: READ_W, h: ROW_H, color: r[3] ? C.coral : C.slate, fontFace: F.body, fontSize: 14, bold: true, align: "center", valign: "middle", margin: 0, ...REVEAL(i + 1) });
+    s.addText(r[2], { x: WHY_X, y, w: WHY_W, h: ROW_H, color: C.ink, fontFace: F.body, fontSize: 14, valign: "middle", margin: 0, ...REVEAL(i + 1) });
   });
-  s.addTable([rHead, ...rBody], { x: 0.6, y: 2.12, w: 12.1, colW: [2.5, 1.3, 8.3], rowH: 0.52, valign: "middle", margin: [3, 9, 3, 9], border: { type: "solid", color: "FFFFFF", pt: 2 } });
-  card(s, 0.6, 5.78, 12.1, 0.98, C.navy);
-  await iconCircle(s, FA.FaExclamationCircle, 0.92, 6.02, 0.5, C.amber, C.navy);
+
+  card(s, 0.6, 5.93, 12.1, 0.83, C.navy, REVEAL(7));
+  await iconCircle(s, FA.FaExclamationCircle, 0.92, 6.09, 0.5, C.amber, C.navy, REVEAL(7));
   s.addText([
     { text: "Technical (high) and Skill (high) are the same unknown", options: { color: C.amber, bold: true } },
     { text: " — real-time sync. Two boxes, one root cause. That's what you de-risk first.", options: { color: C.white } }
-  ], { x: 1.6, y: 5.78, w: 10.8, h: 0.98, fontFace: F.body, fontSize: 15, valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
+  ], { x: 1.6, y: 5.93, w: 10.8, h: 0.83, fontFace: F.body, fontSize: 15, valign: "middle", margin: 0, lineSpacingMultiple: 1.04, ...REVEAL(7) });
   footer(s);
-  s.addNotes("Fill this table live rather than revealing it — ask the room for each read and why. The teaching moment is the two highlighted rows: Technical and Skill both point at real-time sync. Say it out loud — two scary boxes collapse into one thing to investigate. That single unknown is what the spike (next) targets, and what the learning plan (later) closes. QueueUp is a teaching vehicle, not a suggested project — students find their own.");
+  s.addNotes("Fill this table live — the slide is the board. The six categories and the empty grid are up; each click fills one row's Read and Why, so ask the room first, take the answer, then click. Rows 2, 3, 5 and 6 all read Med — if someone argues High, take it and then give your read rather than letting the click contradict them. The two that must land are Technical and Skill. On Adoption, push past \"would you use it\" to the discovery habit from last week: the pain to confirm is \"I get skipped / I don't know my place,\" not the app idea. Only after all six are rated does the last click drop the two amber bands and the takeaway — that's the second move from the previous slide: rate all six, then look across and circle. Say it out loud: two scary boxes, one root cause, and that single unknown is what the spike targets next and what the learning plan closes later. QueueUp is a teaching vehicle, not a suggested project.");
 
   // 6 Know / Learn / Avoid
   s = mk(); s.background = { color: C.white };
@@ -395,6 +414,8 @@ async function build() {
   const OUT = "Session05-Feasibility.pptx";
   await pres.writeFile({ fileName: OUT });
   console.log("WROTE", PAGE, "slides");
+  const anim = await require("./add-animations.js").addAnimations(OUT);
+  if (anim.length) console.log("ANIMATED", anim.join("; "));
   try {
     const { verifyDeck, reportText } = require("./verify-deck.js");
     console.log(reportText(await verifyDeck(OUT)));
