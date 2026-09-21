@@ -5,7 +5,7 @@
 **Prior reading (all free — nothing to buy):**
 - **Peter Norvig — [*Teach Yourself Programming in Ten Years*](https://norvig.com/21-days.html)** — the mindset behind self-directed learning and tech-stack discipline: depth over shortcuts, learn by doing, choose tools deliberately.
 - **DIY Genius — [*How to Create Your Own Self-Directed Learning Plan*](https://www.diygenius.com/how-to-create-a-self-directed-learning-plan/)** — the concrete mechanics we'll use in class: your *why*, SMART goals, a real schedule, an accountability partner, and building something to prove it. Norvig motivates the habit; this operationalizes it.
-- **Course reading — [*Spikes — Buying a Cheap Answer to Your Scariest Unknown*](../resources/Spikes-Reading.md)** (`resources/Spikes-Reading.md`) — the time-boxed investigation you'll use to de-risk an unknown before committing; the green/red framing you'll use in class. *Optional companion:* [Mike Cohn — *Agile Spikes*](https://www.mountaingoatsoftware.com/blog/spikes) for the standard industry framing.
+- **Course reading — [*Spikes — Buying a Cheap Answer to Your Scariest Unknown*](../canvas_material/pages/Spikes-Reading.md)** (Canvas → Course Resources; `canvas_material/pages/Spikes-Reading.md`) — the time-boxed investigation you'll use to de-risk an unknown before committing; the green/red framing you'll use in class. *Optional companion:* [Mike Cohn — *Agile Spikes*](https://www.mountaingoatsoftware.com/blog/spikes) for the standard industry framing.
 - **Re-skim:** the **Value vs. Do-ability** section of the CPS handbook (p. 27) — [download the PDF](https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf) — you'll use it Wednesday to converge.
 
 **Optional (deeper on *how* learning works):**
@@ -42,7 +42,7 @@ By the end of this session, a student can:
 
 - **Assign the reading in advance** and expect it done.
 - **Slides:** the six risk categories; the know / learn / avoid triage; the learning curve (plateau); the five learning-plan steps; SMART with the live good/bad contrast; the techniques toolkit.
-- **Print / post the handouts:** the **Feasibility & Risk worksheet** (`resources/Feasibility-Risk-Worksheet.md`) and the **Learning-Plan template** (`resources/Learning-Plan-Template.md`).
+- **Print the handout:** one **Feasibility Pass Worksheet** per student (`canvas_material/resources/Feasibility-Pass-Worksheet.pdf`) — the §6 exercise on one page: the six risks rated across three candidate ideas (A in class, B and C before Wednesday), know / learn / avoid, and a one-gap learning plan. The fuller guidance lives on two Canvas pages: the **Feasibility & Risk Worksheet** (`canvas_material/pages/Feasibility-Risk-Worksheet.md`) and the **Learning Plan Template** (`canvas_material/pages/Learning-Plan-Template.md`).
 - Have the **worked example — QueueUp, a live office-hours help queue (*Appendix B*)** — ready to model the feasibility pass, the spike, and the learning plan live. It's a teaching vehicle, not a suggested project; the Session-1 reservation tool stays an illustration, not a template.
 - **Be ready to name your own learning plan.** §4 lands far better if you can say what *you* had to learn recently, how you went about it, and where you stalled. Students discount the advice if it sounds theoretical.
 - *Reusable from the prior course:* the **Learning to Learn** module — `open-source-project-course/modules/curious/learning.md` — is the direct source for §4–§5 (discussion prompts, the five-step plan, the techniques list). Feasibility/scope material elsewhere in that repo.
@@ -147,8 +147,8 @@ By the end of this session, a student can:
 
 ## Open questions / decisions before we flesh this out
 
-- **Learning-Plan template + Feasibility/Risk worksheet:** created — `resources/Learning-Plan-Template.md` and `resources/Feasibility-Risk-Worksheet.md` (kept as two short handouts).
-- **CP2 Product Definition Brief handout:** created — `assignments/Product-Definition-Brief.md`.
+- **Learning-Plan template + Feasibility/Risk worksheet:** created — Canvas pages `canvas_material/pages/Learning-Plan-Template.md` and `canvas_material/pages/Feasibility-Risk-Worksheet.md` (kept as two short readings), plus the one-page printable `canvas_material/resources/Feasibility-Pass-Worksheet.pdf` for §6.
+- **CP2 Product Definition Brief handout:** created — `canvas_material/assignments/handouts/CP2-Product-Definition-Brief.md.jinja`.
 - **Spike expectation:** *resolved* — **at least one spike is required.** Every student runs one time-boxed spike on their chosen idea's scariest unknown before the proposal, and reports the result (green/red + what they'll do about it) in **CP3's technical-approach/risks section**, where it's graded under *Feasibility*. A hand-waved feasibility claim with no spike behind it is the failure case this closes.
 
 ---
@@ -164,8 +164,9 @@ By the end of this session, a student can:
 
 ## Appendix A — classroom handouts (Session 5)
 
-- **Learning-Plan template:** `resources/Learning-Plan-Template.md`
-- **Feasibility & Risk worksheet** (six categories + know/learn/avoid): `resources/Feasibility-Risk-Worksheet.md`
+- **Feasibility Pass Worksheet** (printable, one per student — §6): `canvas_material/resources/Feasibility-Pass-Worksheet.pdf` (source `.html` alongside)
+- **Learning Plan Template** (Canvas page): `canvas_material/pages/Learning-Plan-Template.md`
+- **Feasibility & Risk Worksheet** (Canvas page — six categories + de-risk moves): `canvas_material/pages/Feasibility-Risk-Worksheet.md`
 - **Selection criteria (§9)** — from `CS301R-ProjectCreation_v4.md` / the Session 1 deck
 - **CPS handbook — Value vs. Do-ability (p. 27):** [download the PDF](https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf)
 
@@ -220,4 +221,4 @@ By the end of this session, a student can:
 
 ---
 
-*Deck built: `lectures/Session05-Feasibility.pptx` (16 slides, source `tools/build-session05.js`). Student page: `canvas_material/lectures/Session05-Sep21-StudentPage.md`. Related: `Session06-Sep23-Outline.md`, `assignments/CP2-Product-Definition-Brief.md`, `resources/Learning-Plan-Template.md`, `resources/Feasibility-Risk-Worksheet.md`, `resources/Spikes-Reading.md`, `CS301R-ProjectCreation_v4.md` (§7 Week 3), `rubrics.md` (CP2).*
+*Deck built: `canvas_material/lectures/powerpoint/Session05-Feasibility.pptx` (16 slides, source `tools/build-session05.js`). Student page: `canvas_material/lectures/session-pages/Session05-StudentPage.md.jinja`. Related: `Session06-Sep23-Outline.md`, `canvas_material/assignments/handouts/CP2-Product-Definition-Brief.md.jinja`, `canvas_material/pages/Learning-Plan-Template.md`, `canvas_material/pages/Feasibility-Risk-Worksheet.md`, `canvas_material/pages/Spikes-Reading.md`, `canvas_material/resources/Feasibility-Pass-Worksheet.pdf`, `CS301R-ProjectCreation_v4.md` (§7 Week 3), `rubrics.md` (CP2).*

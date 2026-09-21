@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Feasibility Pass — Risks, Triage, and a One-Gap Learning Plan</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, "Segoe UI", sans-serif;
+    color: #1E2A36;
+    font-size: 10.2pt;
+    line-height: 1.25;
+  }
+  h1 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 17pt; color: #14233A; margin: 0 0 1pt 0; letter-spacing: -0.2pt;
+  }
+  .kicker { font-size: 8.6pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+  .head { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2pt solid #12908F; padding-bottom: 4pt; margin-bottom: 6pt; }
+  .nameline { font-size: 9pt; color: #5F7284; white-space: nowrap; padding-bottom: 1pt; }
+  .nameline span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 1.55in; }
+  .lede { font-size: 9.4pt; color: #1E2A36; margin: 0 0 7pt 0; }
+  .lede b { color: #14233A; }
+
+  h2 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 11.4pt; color: #14233A; margin: 0 0 3pt 0;
+  }
+  h2 .n { color: #12908F; }
+  h2 .t { font-family: Calibri, "Segoe UI", sans-serif; font-size: 8.6pt; color: #5F7284; font-weight: normal; font-style: italic; }
+  .hint { font-size: 8.5pt; color: #5F7284; font-style: italic; margin: 0 0 4pt 0; }
+  .hint b { color: #14233A; font-style: normal; }
+  section { margin-bottom: 5pt; }
+
+  /* Part 1 — risk grid, three ideas */
+  table.grid { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  table.grid th {
+    font-size: 8.2pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284;
+    text-align: left; font-weight: bold; padding: 0 4pt 2pt 0; border-bottom: 1pt solid #12908F;
+    vertical-align: bottom;
+  }
+  table.grid th.idea { text-align: center; padding: 0 3pt 2pt 3pt; }
+  table.grid th.idea .nm { display: block; border-bottom: 0.7pt solid #9BB0BF; height: 0.2in; margin-top: 2pt; }
+  table.grid td { border-bottom: 0.7pt solid #9BB0BF; height: 0.3in; padding: 0 4pt 0 0; vertical-align: middle; }
+  table.grid td.cat { font-size: 8.9pt; line-height: 1.12; }
+  table.grid td.cat b { color: #14233A; font-size: 9.2pt; }
+  table.grid td.cat i { color: #5F7284; font-size: 7.9pt; }
+  table.grid td.lmh { text-align: center; font-size: 8.4pt; color: #5F7284; letter-spacing: 1.6pt; border-left: 0.7pt solid #DCE5EB; padding: 0; }
+  table.grid tr.sum td { background: #F2F6F8; height: 0.34in; }
+  table.grid tr.sum td.cat b { font-size: 8.8pt; }
+  table.grid tr.sum td.lmh { font-size: 7.4pt; letter-spacing: 0; color: #5F7284; line-height: 1.15; }
+  .read { font-size: 8.2pt; color: #5F7284; margin: 3pt 0 0 0; }
+  .read b { color: #14233A; }
+
+  /* Part 2 — know / learn / avoid */
+  .kla { display: flex; gap: 8pt; }
+  .kla .col { flex: 1; border-top: 2pt solid #12908F; background: #F2F6F8; padding: 3pt 6pt 4pt 6pt; }
+  .kla .col.learn { border-top-color: #E8A33D; }
+  .kla .col.avoid { border-top-color: #D9614C; }
+  .kla .col h3 { font-family: Cambria, Georgia, serif; font-size: 10pt; color: #14233A; margin: 0; }
+  .kla .col p { font-size: 7.9pt; color: #5F7284; font-style: italic; margin: 0 0 1pt 0; }
+  .kla .col .ln { border-bottom: 0.7pt solid #9BB0BF; height: 0.24in; }
+
+  /* Part 3 — learning plan */
+  table.plan { width: 100%; border-collapse: collapse; }
+  table.plan td { padding: 0; vertical-align: bottom; }
+  table.plan td.lbl {
+    width: 1.75in; font-size: 8.4pt; color: #14233A; font-weight: bold;
+    text-transform: uppercase; letter-spacing: 0.2pt; padding-bottom: 2.5pt; white-space: nowrap;
+  }
+  table.plan td.lbl i { font-weight: normal; text-transform: none; letter-spacing: 0; color: #5F7284; font-size: 7.8pt; font-style: italic; }
+  table.plan td.rule { border-bottom: 0.7pt solid #9BB0BF; height: 0.29in; }
+  .smart { font-size: 8.2pt; color: #5F7284; margin: 3pt 0 0 0; }
+  .smart b { color: #14233A; }
+
+  /* footer strip — de-risk moves */
+  .next { margin-top: 6pt; border-top: 1pt dashed #9BB0BF; padding-top: 5pt; }
+  .next h3 { font-family: Cambria, Georgia, serif; font-size: 9.6pt; color: #14233A; margin: 0 0 2pt 0; }
+  .next ul { margin: 0; padding-left: 13pt; font-size: 8.6pt; color: #1E2A36; columns: 2; column-gap: 14pt; }
+  .next li { margin-bottom: 1pt; break-inside: avoid; }
+  .foot { margin-top: 5pt; font-size: 7.6pt; color: #5F7284; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Session 5 · Feasibility &amp; the Learning Plan</p>
+    <h1>Feasibility Pass</h1>
+  </div>
+  <div class="nameline">Name <span></span></div>
+</div>
+
+<p class="lede">Feasibility isn't a yes/no verdict. It's a set of <b>risks you name honestly and then reduce</b>. In class: <b>Idea A</b> plus Parts 2–3. Before the convergence workshop: add <b>B</b> and <b>C</b>. Full guidance: the <i>Feasibility &amp; Risk Worksheet</i> and <i>Learning Plan Template</i> pages.</p>
+
+<section>
+  <h2><span class="n">1 ·</span> Rate the six risks <span class="t">— 3 min in class</span></h2>
+  <p class="hint">Circle <b>L / M / H</b> in each column. Then, for each idea, <b>star the one or two risks</b> that could actually sink it. Those are the ones you de-risk first.</p>
+  <table class="grid">
+    <colgroup><col style="width:52%"><col style="width:16%"><col style="width:16%"><col style="width:16%"></colgroup>
+    <tr>
+      <th>Risk · the question to ask</th>
+      <th class="idea">Idea A <span class="nm"></span></th>
+      <th class="idea">Idea B <span class="nm"></span></th>
+      <th class="idea">Idea C <span class="nm"></span></th>
+    </tr>
+    <tr><td class="cat"><b>Technical</b> — is the core hard part actually doable?<br><i>real-time sync, offline, ML accuracy…</i></td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td></tr>
+    <tr><td class="cat"><b>Schedule</b> — does a real vertical slice fit the time you actually have?</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td></tr>
+    <tr><td class="cat"><b>Dependency</b> — an API, dataset, device, or service that could vanish, cost money, or rate-limit you?</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td></tr>
+    <tr><td class="cat"><b>Skill</b> — a gap between what the build needs and what you know today?</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td></tr>
+    <tr><td class="cat"><b>Adoption</b> — will real users actually use it, or is the need too weak?</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td></tr>
+    <tr><td class="cat"><b>Maintenance</b> — can you, and future contributors, keep it running and understandable?</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td><td class="lmh">L &nbsp;M &nbsp;H</td></tr>
+    <tr class="sum"><td class="cat"><b>Overall, at one-semester scope</b></td><td class="lmh">healthy · stretch ·<br>not realistic</td><td class="lmh">healthy · stretch ·<br>not realistic</td><td class="lmh">healthy · stretch ·<br>not realistic</td></tr>
+    <tr class="sum"><td class="cat"><b>The one thing I must prove first</b></td><td></td><td></td><td></td></tr>
+  </table>
+  <p class="read"><b>Reading the ratings:</b> one High with a spike planned is fine. What sinks projects is <i>unacknowledged</i> High risk. Three Highs and no plan means shrink the scope or pick another idea.</p>
+</section>
+
+<section>
+  <h2><span class="n">2 ·</span> Know / Learn / Avoid, for Idea A <span class="t">— 2 min</span></h2>
+  <p class="hint">Sort what the build takes. Every <b>Avoid</b> you can justify makes the project more feasible. Routing around complexity is a skill, not a cop-out.</p>
+  <div class="kla">
+    <div class="col"><h3>Know</h3><p>can already do it — no plan needed</p><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+    <div class="col learn"><h3>Learn</h3><p>a real but learnable gap — gets a plan</p><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+    <div class="col avoid"><h3>Avoid</h3><p>cut it, defer it, or use a library / service</p><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">3 ·</span> A one-gap learning plan <span class="t">— 4 min · your biggest Learn item</span></h2>
+  <table class="plan">
+    <tr><td class="lbl">The gap</td><td class="rule"></td></tr>
+    <tr><td class="lbl">Why <i>+ what "done" means</i></td><td class="rule"></td></tr>
+    <tr><td class="lbl">One SMART goal</td><td class="rule"></td></tr>
+    <tr><td class="lbl">When <i>(real calendar blocks)</i></td><td class="rule"></td></tr>
+    <tr><td class="lbl">Who I'll tell</td><td class="rule"></td></tr>
+    <tr><td class="lbl">Spike <i>(question · time box)</i></td><td class="rule"></td></tr>
+    <tr><td class="lbl">Green means…</td><td class="rule"></td></tr>
+  </table>
+  <p class="smart"><b>SMART</b> = Specific · Measurable · Achievable · Relevant · Timed. "Learn WebSockets" isn't a goal; "two tabs exchange messages through a server I wrote" is — you can tell when it's done.</p>
+</section>
+
+<div class="next">
+  <h3>De-risk moves — pick one for each starred risk</h3>
+  <ul>
+    <li><b>Technical / Skill →</b> run a spike; make a learning plan</li>
+    <li><b>Schedule →</b> cut to a smaller vertical slice</li>
+    <li><b>Dependency →</b> find a fallback; confirm terms and cost now</li>
+    <li><b>Adoption →</b> one more real user conversation</li>
+    <li><b>Maintenance →</b> the boring stack you can own and explain</li>
+  </ul>
+</div>
+
+<div class="foot">
+  <span>Bring this sheet, <b>with B and C filled in</b>, to the convergence workshop.</span>
+  <span>CS 301R · Software Engineering Studio I</span>
+</div>
+
+</body>
+</html>
