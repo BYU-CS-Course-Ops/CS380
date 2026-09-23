@@ -41,14 +41,17 @@ function header(slide, kicker, title, titleColor) {
   slide.addText(kicker.toUpperCase(), { x: 0.87, y: 0.44, w: 11.5, h: 0.34, color: C.teal, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   slide.addText(title, { x: 0.6, y: 0.82, w: 12.1, h: 1.0, color: titleColor || C.ink, fontFace: F.head, fontSize: 31, bold: true, margin: 0, valign: "top" });
 }
-function card(slide, x, y, w, h, fill) {
-  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow() });
+// `extra` passes pptxgenjs options through — e.g. REVEAL(1) to animate the shape in on a click.
+function card(slide, x, y, w, h, fill, extra) {
+  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow(), ...extra });
 }
-async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor) {
-  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor } });
+async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor, extra) {
+  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor }, ...extra });
   const pad = d * 0.27;
-  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad });
+  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad, ...extra });
 }
+// Click-to-reveal: every shape given REVEAL(n) appears together on click n (tools/add-animations.js).
+const REVEAL = (n, effect) => ({ objectName: effect ? `click-${n}:${effect}` : `click-${n}` });
 // navy "work instructions" slide used for the three workshop parts (stays on screen while students work)
 async function workSlide(kicker, title, subtitle, steps) {
   const s = mk(); s.background = { color: C.navy };
@@ -239,9 +242,9 @@ async function build() {
   footer(s);
   s.addNotes("The CPS convergence tool, and the same value/effort 2x2 the product world uses. Have them physically place each idea. The teaching point is the top-left: a high-value idea with low do-ability is not a reject — it's a 'narrow the scope or run a spike' idea, the exact move we'll demo on the two calibration candidates next. Low value is a drop regardless of how easy it is. This is the picture printed on their scoring sheet.");
 
-  // 8 Calibration candidate A — thin but easy
+  // 8 Calibration candidate A — thin but easy (scored live: 3 verdicts, colors, conclusion)
   s = mk(); s.background = { color: C.white };
-  header(s, "Calibration · candidate A", "ClassClock — thin, but easy");
+  header(s, "Calibration · candidate A", "ClassClock");
   card(s, 0.6, 1.9, 12.1, 1.0, C.cardBg);
   await iconCircle(s, FA.FaClock, 0.95, 2.14, 0.56, C.teal);
   s.addText("A browser extension that reads your class schedule and counts down to your next class.", { x: 1.75, y: 1.9, w: 10.7, h: 1.0, color: C.ink, fontFace: F.body, fontSize: 16.5, valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
@@ -251,25 +254,38 @@ async function build() {
     [C.coral, "FBECE8", "Richness", "FAILS", "One component. Finish it and there's nothing left to found."]
   ];
   const ax = [0.6, 4.63, 8.66], aw = 3.84;
+  // Scored live: each card starts as a blank heading, fills in on its own click (clicks 1-3),
+  // then click 4 lays tinted copies over all three at once so the colors land together.
+  const aRating = (x, extra) => ({ x: x + 0.28, y: 3.74, w: aw - 0.56, h: 0.6, fontFace: F.head, fontSize: 26, bold: true, valign: "middle", margin: 0, ...extra });
+  const aReason = (x, extra) => ({ x: x + 0.28, y: 4.42, w: aw - 0.56, h: 1.05, color: C.ink, fontFace: F.body, fontSize: 14, valign: "top", margin: 0, lineSpacingMultiple: 1.06, ...extra });
+  const aLabel = (x, extra) => ({ x: x + 0.28, y: 3.32, w: aw - 0.56, h: 0.44, color: C.slate, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 1, valign: "middle", margin: 0, ...extra });
   for (let i = 0; i < 3; i++) {
     const x = ax[i];
-    card(s, x, 3.1, aw, 2.5, aEval[i][1]);
-    s.addText(aEval[i][2], { x: x + 0.28, y: 3.32, w: aw - 0.56, h: 0.44, color: C.slate, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 1, valign: "middle", margin: 0 });
-    s.addText(aEval[i][3], { x: x + 0.28, y: 3.74, w: aw - 0.56, h: 0.6, color: aEval[i][0], fontFace: F.head, fontSize: 26, bold: true, valign: "middle", margin: 0 });
-    s.addText(aEval[i][4], { x: x + 0.28, y: 4.42, w: aw - 0.56, h: 1.05, color: C.ink, fontFace: F.body, fontSize: 14, valign: "top", margin: 0, lineSpacingMultiple: 1.06 });
+    card(s, x, 3.1, aw, 2.5, C.cardBg);
+    s.addText(aEval[i][2], aLabel(x));
+    s.addText(aEval[i][3], aRating(x, { color: C.ink, ...REVEAL(i + 1) }));
+    s.addText(aEval[i][4], aReason(x, REVEAL(i + 1)));
   }
-  card(s, 0.6, 5.85, 12.1, 0.9, C.navy);
-  await iconCircle(s, FA.FaArrowRight, 0.92, 6.07, 0.48, C.amber, C.navy);
+  // click 4 — the same three cards again, tinted, with the verdict colors
+  for (let i = 0; i < 3; i++) {
+    const x = ax[i];
+    card(s, x, 3.1, aw, 2.5, aEval[i][1], REVEAL(4));
+    s.addText(aEval[i][2], aLabel(x, REVEAL(4)));
+    s.addText(aEval[i][3], aRating(x, { color: aEval[i][0], ...REVEAL(4) }));
+    s.addText(aEval[i][4], aReason(x, REVEAL(4)));
+  }
+  card(s, 0.6, 5.85, 12.1, 0.9, C.navy, REVEAL(5));
+  await iconCircle(s, FA.FaArrowRight, 0.92, 6.07, 0.48, C.amber, C.navy, REVEAL(5));
   s.addText([
     { text: "Plots bottom-right — high do-ability, low value.  ", options: { color: C.amber, bold: true } },
     { text: "Easy is not a reason. Drop it.", options: { color: C.white } }
-  ], { x: 1.58, y: 5.85, w: 10.9, h: 0.9, fontFace: F.body, fontSize: 15.5, valign: "middle", margin: 0 });
+  ], { x: 1.58, y: 5.85, w: 10.9, h: 0.9, fontFace: F.body, fontSize: 15.5, valign: "middle", margin: 0, ...REVEAL(5) });
   footer(s);
-  s.addNotes("First calibration candidate — walk the evaluation aloud. It's tempting because it's easy and finishable, which is exactly the trap: high do-ability seduces. Score it live — low value (the need is already met), fails richness (one component, nothing to hand a contributor). It lands bottom-right on the 2x2, and low value means drop regardless of how quick it is. Set up the contrast: the next candidate is the opposite shape.");
+  s.addNotes("First calibration candidate, scored live rather than revealed. Read the idea, then ask the room for each verdict before you click it in: value, then do-ability, then richness — three clicks, one card each, and the ratings come up in plain ink so nobody reads the answer off the color. Click four colors all three at once, which is the moment the shape of the thing shows: one green in the middle, red on both sides. Then the last click lands the conclusion. It's tempting because it's easy and finishable, which is exactly the trap — high do-ability seduces. Low value means drop regardless of how quick it is. Set up the contrast: the next candidate is the opposite shape.");
 
   // 9 Calibration candidate B — rich but scary
   s = mk(); s.background = { color: C.white };
-  header(s, "Calibration · candidate B", "CrowdDefense — rich, but scary");
+  header(s, "Calibration · candidate B", "CrowdDefense");
   card(s, 0.6, 1.82, 12.1, 0.92, C.cardBg);
   await iconCircle(s, FA.FaGavel, 0.95, 2.02, 0.54, C.teal);
   s.addText("A platform that invites the world to help defend someone facing a serious legal problem — pooling volunteer expertise, research, funding, and documents around their case.", { x: 1.72, y: 1.82, w: 10.75, h: 0.92, color: C.ink, fontFace: F.body, fontSize: 15, valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
@@ -292,16 +308,17 @@ async function build() {
     const x = bx[i];
     card(s, x, 5.12, bw, 0.82, C.cardBg);
     s.addText(bEval[i][0] + ":", { x: x + 0.24, y: 5.12, w: 1.7, h: 0.82, color: C.slate, fontFace: F.body, fontSize: 14.5, bold: true, valign: "middle", margin: 0 });
-    s.addText(bEval[i][1], { x: x + 1.7, y: 5.12, w: bw - 1.9, h: 0.82, color: bEval[i][2], fontFace: F.head, fontSize: 20, bold: true, align: "right", valign: "middle", margin: 0 });
+    // one click per rating — ask the room, then click
+    s.addText(bEval[i][1], { x: x + 1.7, y: 5.12, w: bw - 1.9, h: 0.82, color: bEval[i][2], fontFace: F.head, fontSize: 20, bold: true, align: "right", valign: "middle", margin: 0, ...REVEAL(i + 1) });
   }
-  card(s, 0.6, 6.06, 12.1, 0.72, C.navy);
-  await iconCircle(s, FA.FaArrowRight, 0.9, 6.19, 0.46, C.amber, C.navy);
+  card(s, 0.6, 6.06, 12.1, 0.72, C.navy, REVEAL(4));
+  await iconCircle(s, FA.FaArrowRight, 0.9, 6.19, 0.46, C.amber, C.navy, REVEAL(4));
   s.addText([
     { text: "Plots top-left — high value, low do-ability.  ", options: { color: C.amber, bold: true } },
     { text: "Don't drop it. Narrow it.", options: { color: C.white } }
-  ], { x: 1.55, y: 6.06, w: 10.9, h: 0.72, fontFace: F.body, fontSize: 15.5, valign: "middle", margin: 0 });
+  ], { x: 1.55, y: 6.06, w: 10.9, h: 0.72, fontFace: F.body, fontSize: 15.5, valign: "middle", margin: 0, ...REVEAL(4) });
   footer(s);
-  s.addNotes("Second candidate — the opposite shape, and the one that teaches the lesson. Don't describe it by scope or team size; describe it by the work. Read the six build components: each is a serious subsystem, which is exactly why richness is very high and do-ability, as-is, is low — no single team ships all of that soon. High value plus low do-ability lands top-left: the 2x2 says narrow or spike, not drop. Next slide does the narrowing.");
+  s.addNotes("Second candidate — the opposite shape, and the one that teaches the lesson. Same live scoring as the last slide: read the six build components first, then take each verdict from the room before clicking it in — value, do-ability, richness — and click the conclusion last. Don't describe it by scope or team size; describe it by the work. Read the six build components: each is a serious subsystem, which is exactly why richness is very high and do-ability, as-is, is low — no single team ships all of that soon. High value plus low do-ability lands top-left: the 2x2 says narrow or spike, not drop. Next slide does the narrowing.");
 
   // 10 The move — narrow to a slice
   s = mk(); s.background = { color: C.white };
@@ -503,6 +520,8 @@ async function build() {
   const OUT = "Session06-Convergence.pptx";
   await pres.writeFile({ fileName: OUT });
   console.log("WROTE", PAGE, "slides");
+  const anim = await require("./add-animations.js").addAnimations(OUT);
+  if (anim.length) console.log("ANIMATED", anim.join("; "));
   try {
     const { verifyDeck, reportText } = require("./verify-deck.js");
     console.log(reportText(await verifyDeck(OUT)));
