@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Idea Scoring Sheet</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 10pt; line-height: 1.2; }
+
+  h1 { font-family: Cambria, Georgia, serif; font-size: 19pt; color: #14233A; margin: 0 0 1pt 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 8.6pt; color: #5F7284; letter-spacing: 0.5pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+  .head { border-bottom: 2.4pt solid #12908F; padding-bottom: 4pt; margin-bottom: 6pt; display: flex; justify-content: space-between; align-items: flex-end; gap: 14pt; }
+  .head .lede { font-size: 9.2pt; color: #5F7284; font-style: italic; margin: 2pt 0 0 0; max-width: 5.1in; }
+  .field { font-size: 9.4pt; color: #5F7284; white-space: nowrap; }
+  .field .blank { display: inline-block; width: 1.9in; border-bottom: 0.8pt solid #5F7284; height: 11pt; vertical-align: bottom; }
+
+  h2 { font-family: Cambria, Georgia, serif; font-size: 12.2pt; color: #14233A; margin: 0 0 2pt 0; }
+  h2 .n { color: #12908F; }
+  h2 .sub { font-family: Calibri, sans-serif; font-size: 9.2pt; color: #5F7284; font-weight: normal; font-style: italic; }
+  section { margin-bottom: 7pt; }
+  .prompt { font-size: 9pt; color: #5F7284; font-style: italic; margin: 0 0 3pt 0; }
+  .q { font-size: 9.6pt; color: #14233A; font-weight: bold; margin: 4pt 0 0 0; }
+  .line { border-bottom: 0.8pt solid #B9C6D0; height: 20pt; }
+
+  table.score { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  table.score th { background: #14233A; color: #FFFFFF; font-size: 8.4pt; text-transform: uppercase; letter-spacing: 0.3pt; text-align: left; padding: 3pt 5pt; }
+  table.score th.idea { text-align: center; }
+  table.score td { border-bottom: 0.7pt solid #DCE5EB; padding: 3.5pt 5pt; vertical-align: middle; height: 28pt; }
+  table.score td.crit { font-weight: bold; color: #14233A; font-size: 9.6pt; }
+  table.score td.what { color: #5F7284; font-size: 8.9pt; line-height: 1.12; }
+  table.score td.cell { border-left: 0.7pt solid #DCE5EB; background: #F8FAFB; }
+  table.score tr.total td { background: #F2F6F8; border-bottom: 1.4pt solid #12908F; height: 22pt; }
+  table.score tr.total td.crit { color: #0E6E6D; }
+  col.c1 { width: 23%; } col.c2 { width: 41%; } col.cc { width: 12%; }
+  .namerow td { height: 17pt; border-bottom: none; padding-bottom: 0; }
+  .namerow .nm { border-bottom: 0.8pt solid #5F7284; height: 13pt; margin: 0 4pt; }
+
+  .note { background: #F2F6F8; border-left: 3pt solid #E8A33D; padding: 4.5pt 8pt; font-size: 9pt; margin-top: 5pt; }
+
+  /* value / do-ability grid */
+  .gridwrap { display: flex; gap: 12pt; align-items: flex-start; }
+  .plot { position: relative; width: 3.6in; height: 3.05in; flex: none; }
+  .plot .box { position: absolute; left: 20pt; right: 0; top: 0; bottom: 18pt; border: 0.9pt solid #5F7284; }
+  .plot .vline { position: absolute; left: 50%; top: 0; bottom: 0; border-left: 0.7pt dashed #5F7284; }
+  .plot .hline { position: absolute; top: 50%; left: 0; right: 0; border-top: 0.7pt dashed #5F7284; }
+  .plot .quad { position: absolute; font-size: 8.2pt; color: #5F7284; line-height: 1.1; padding: 3pt 5pt; width: 50%; }
+  .plot .q1 { top: 0; right: 0; text-align: right; color: #0E6E6D; font-weight: bold; }
+  .plot .q2 { top: 0; left: 0; }
+  .plot .q3 { bottom: 0; left: 0; }
+  .plot .q4 { bottom: 0; right: 0; text-align: right; }
+  .plot .ylab { position: absolute; left: 0; top: 0; bottom: 18pt; width: 18pt; display: flex; align-items: center; justify-content: center; }
+  .plot .ylab span { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 8.6pt; font-weight: bold; color: #14233A; letter-spacing: 0.3pt; }
+  .plot .xlab { position: absolute; left: 20pt; right: 0; bottom: 0; text-align: center; font-size: 8.6pt; font-weight: bold; color: #14233A; letter-spacing: 0.3pt; }
+  .gridside { flex: 1; font-size: 9pt; }
+  .gridside ul { margin: 0 0 5pt 0; padding-left: 13pt; }
+  .gridside li { margin-bottom: 2.5pt; }
+  .landed { font-size: 9.2pt; }
+  .landed .row { display: flex; align-items: baseline; gap: 5pt; margin-top: 4pt; }
+  .landed .lbl { font-weight: bold; color: #14233A; white-space: nowrap; }
+  .landed .fill { flex: 1; border-bottom: 0.8pt solid #B9C6D0; height: 13pt; }
+
+  .protocol { display: flex; gap: 7pt; margin: 3pt 0 5pt 0; }
+  .step { flex: 1; background: #F2F6F8; border-top: 2.4pt solid #12908F; padding: 4pt 7pt; font-size: 8.8pt; line-height: 1.15; }
+  .step b { display: block; font-family: Cambria, Georgia, serif; font-size: 10pt; color: #14233A; }
+
+  .foot { font-size: 8.2pt; color: #5F7284; border-top: 0.8pt solid #DCE5EB; padding-top: 3pt; margin-top: 6pt; display: flex; justify-content: space-between; }
+  .pagebreak { break-before: page; page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R &middot; Software Engineering Studio I &middot; Convergence workshop</p>
+    <h1>Idea Scoring Sheet</h1>
+    <p class="lede">Narrow to <b>1–2 ideas</b> deliberately, against a shared yardstick — not by defaulting to whichever one you're most attached to. Score first, then hear feedback, then choose.</p>
+  </div>
+  <div class="field">Name <span class="blank"></span></div>
+</div>
+
+<section>
+  <h2><span class="n">1 &middot;</span> Score each candidate <span class="sub">— 1 (weak) &middot; 2 &middot; 3 (strong)</span></h2>
+  <table class="score">
+    <colgroup><col class="c1"><col class="c2"><col class="cc"><col class="cc"><col class="cc"></colgroup>
+    <thead>
+      <tr><th>Criterion</th><th>What a "3" looks like</th><th class="idea">Idea A</th><th class="idea">Idea B</th><th class="idea">Idea C</th></tr>
+    </thead>
+    <tbody>
+      <tr class="namerow"><td></td><td class="what" style="text-align:right;font-style:italic">name each idea &rarr;</td>
+        <td class="cell"><div class="nm"></div></td><td class="cell"><div class="nm"></div></td><td class="cell"><div class="nm"></div></td></tr>
+      <tr><td class="crit">Real need, reachable users</td><td class="what">A specific userbase with a felt, evidenced need</td><td class="cell"></td><td class="cell"></td><td class="cell"></td></tr>
+      <tr><td class="crit">Richness / breadth</td><td class="what">Exercises multiple engineering dimensions</td><td class="cell"></td><td class="cell"></td><td class="cell"></td></tr>
+      <tr><td class="crit">One-semester MVP</td><td class="what">A coherent vertical slice fits the real build window — roughly five weeks, out of a ~10 hrs/week that also covers class, reading, writing, and reviews</td><td class="cell"></td><td class="cell"></td><td class="cell"></td></tr>
+      <tr><td class="crit">Feasibility</td><td class="what">Risks named and reducible (see the risk worksheet)</td><td class="cell"></td><td class="cell"></td><td class="cell"></td></tr>
+      <tr><td class="crit">Extensible / room to grow</td><td class="what">Others could join and keep building</td><td class="cell"></td><td class="cell"></td><td class="cell"></td></tr>
+      <tr><td class="crit">Open-source-worthy</td><td class="what">Appropriate to build and release in the open</td><td class="cell"></td><td class="cell"></td><td class="cell"></td></tr>
+      <tr><td class="crit">Tractable stack</td><td class="what">Tech you can own, explain, and support</td><td class="cell"></td><td class="cell"></td><td class="cell"></td></tr>
+      <tr class="total"><td class="crit">Total</td><td class="what">Higher = stronger — but a fatal flaw on <b>real need</b> or <b>feasibility</b> outweighs a high total</td><td class="cell"></td><td class="cell"></td><td class="cell"></td></tr>
+    </tbody>
+  </table>
+  <div class="note"><b>The two students most often miss:</b> <i>real need</i> and <i>richness</i>. An idea that's easy and fun to build but serves no one, or is too thin to grow, scores low here on purpose. <b>These criteria are ours, on purpose</b> — chosen for founding a lasting, open-source project. What transfers is the method: score against explicit criteria, weigh value against do-ability, get feedback, commit.</div>
+</section>
+
+<section>
+  <h2><span class="n">2 &middot;</span> Plot on Value vs. Do-ability <span class="sub">— mark A, B, and C where they land</span></h2>
+  <div class="gridwrap">
+    <div class="plot">
+      <div class="ylab"><span>VALUE &rarr;</span></div>
+      <div class="box">
+        <div class="vline"></div><div class="hline"></div>
+        <div class="quad q2">Shrink the scope,<br>or run a spike</div>
+        <div class="quad q1">Pursue</div>
+        <div class="quad q3">Drop</div>
+        <div class="quad q4">Only if trivial</div>
+      </div>
+      <div class="xlab">DO-ABILITY &rarr;</div>
+    </div>
+    <div class="gridside">
+      <ul>
+        <li><b>High value + high do-ability</b> &rarr; your best candidates. <b>Pursue.</b></li>
+        <li><b>High value + low do-ability</b> &rarr; worth it <i>if</i> you can shrink the scope or run a spike to raise do-ability. Note how.</li>
+        <li><b>Low value</b> &rarr; drop, however easy. Easy-but-pointless is still pointless.</li>
+      </ul>
+      <div class="landed">
+        <b>Where each landed — and its biggest risk</b> <span style="color:#5F7284;font-style:italic">(pull the risk from your Feasibility &amp; Risk Worksheet)</span>
+        <div class="row"><span class="lbl">A · quadrant</span><span class="fill"></span><span class="lbl">risk</span><span class="fill"></span></div>
+        <div class="row"><span class="lbl">B · quadrant</span><span class="fill"></span><span class="lbl">risk</span><span class="fill"></span></div>
+        <div class="row"><span class="lbl">C · quadrant</span><span class="fill"></span><span class="lbl">risk</span><span class="fill"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="foot"><span>Page 1 of 2 &middot; Score solo first. The grid is a conversation-starter, not a verdict.</span><span>CS 301R</span></div>
+
+<div class="pagebreak"></div>
+
+<section>
+  <h2><span class="n">3 &middot;</span> Peer feedback <span class="sub">— capture, don't defend</span></h2>
+  <p class="prompt">Small groups of 3–4, round-robin, about four minutes each. Everyone presents once.</p>
+  <div class="protocol">
+    <div class="step"><b>Present ~90 sec</b>Your top 1–2 ideas: the user, the real need, why it scored well. If it's high-value but low-do-ability, say how you'd shrink it.</div>
+    <div class="step"><b>Pressure-test ~2.5 min</b>The group challenges it: is the need real and the user reachable? feasible at one-semester scope? rich enough to found on?</div>
+    <div class="step"><b>Each response</b>Affirm what's strong &rarr; name the sharpest concern &rarr; one concrete suggestion.</div>
+  </div>
+  <p class="q">Is the need real, and the user reachable?</p>
+  <div class="line"></div><div class="line"></div>
+  <p class="q">Feasible at one-semester scope?</p>
+  <div class="line"></div><div class="line"></div>
+  <p class="q">Rich enough to found on?</p>
+  <div class="line"></div><div class="line"></div>
+  <p class="q">The one change that would most strengthen it</p>
+  <div class="line"></div><div class="line"></div><div class="line"></div>
+  <div class="note">Write down what you hear. Don't argue, don't explain — you'll weigh it in Part 4. Defending in the moment is how feedback gets wasted.</div>
+</section>
+
+<section>
+  <h2><span class="n">4 &middot;</span> Converge <span class="sub">— pick 1–2, and write the rationale</span></h2>
+  <p class="prompt">Weigh the scores <i>and</i> the feedback. A working direction, not an irreversible vow — but your discovery and proposal work focus here from now on.</p>
+  <p class="q">Chosen idea</p>
+  <div class="line"></div>
+  <p class="q">Rationale — it's for <span style="font-weight:normal;color:#5F7284">(who)</span>, who need <span style="font-weight:normal;color:#5F7284">(the real need)</span>; feasible because <span style="font-weight:normal;color:#5F7284">(scope / risk read)</span>; rich because <span style="font-weight:normal;color:#5F7284">(dimensions it touches)</span></p>
+  <div class="line"></div><div class="line"></div><div class="line"></div>
+  <p class="q">Second idea, if you're carrying two — and its rationale</p>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</section>
+
+<div class="foot"><span>Page 2 of 2 &middot; Your chosen idea becomes your Product Definition Brief (CP2).</span><span>CS 301R</span></div>
+
+</body>
+</html>

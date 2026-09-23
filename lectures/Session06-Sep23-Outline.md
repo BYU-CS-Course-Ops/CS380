@@ -36,7 +36,7 @@ By the end of this session, a student can:
 - **Assign the reading in advance;** expect the feasibility read from Session 5 done.
 - **Slides:** the convergent-thinking principles; **the portable evaluation method** and **the criteria we chose** (one instance of it); the richness test (dimensions · room to grow · thin vs. too big); the Value vs. Do-ability 2×2; the peer-feedback protocol; the CP2 shape.
 - **Two worked calibration candidates for §3 are provided** — a thin *ClassClock* vs. the rich legal-defense platform (from the SE Studio proposal). Use them as-is, or swap in an idea the room actually raised in Session 2 if that contrast lands better.
-- **Print / post the handouts:** the **Idea Scoring Sheet** (includes the Value vs. Do-ability grid) — `resources/Idea-Scoring-Sheet.md`; the **CP2 Product Definition Brief** assignment — `assignments/CP2-Product-Definition-Brief.md`; the **PRD reference** — `resources/PRD-Reference.md`.
+- **Print / post the handouts:** the **Idea Scoring Sheet** (includes the Value vs. Do-ability grid) — `canvas_material/resources/Idea-Scoring-Sheet.pdf`, **two pages, print double-sided, one per student**; the **CP2 Product Definition Brief** assignment — `assignments/CP2-Product-Definition-Brief.md`; the **PRD reference** — `resources/PRD-Reference.md`.
 - Have the **CP2 rubric** (`rubrics.md`) visible so students see what the brief is graded on.
 - *Reusable from the prior course:* convergence/scoping material in `open-source-project-course/`.
 
@@ -116,7 +116,7 @@ By the end of this session, a student can:
 ## Open questions / decisions before we flesh this out
 
 - **CP2 Product Definition Brief handout:** created — `assignments/CP2-Product-Definition-Brief.md`.
-- **Idea Scoring Sheet + Value/Do-ability grid:** created — `resources/Idea-Scoring-Sheet.md`.
+- **Idea Scoring Sheet + Value/Do-ability grid:** created — Canvas page `pg-idea-scoring-sheet`, printable at `canvas_material/resources/Idea-Scoring-Sheet.pdf` (`.html` source alongside).
 - **CP1 / CP2 sequencing:** *resolved* — CP1 is due at the workshop; CP2 was moved off the same day to **Mon, Sep 28**, so students converge first and then document the chosen idea. (Was: "same-day due," which asked for a CP2 draft before the idea existed.) Only the CP1 in-class turn-in time still needs confirming (start-of-class recommended).
 - **Solo path:** students converging toward a solo project should still get a full feedback round — confirm grouping so no one is left out.
 
@@ -132,7 +132,7 @@ By the end of this session, a student can:
 
 ## Appendix — classroom handouts (Session 6)
 
-- **Idea Scoring Sheet** (selection criteria + Value vs. Do-ability grid): `resources/Idea-Scoring-Sheet.md`
+- **Idea Scoring Sheet** (selection criteria + Value vs. Do-ability grid): `canvas_material/resources/Idea-Scoring-Sheet.pdf` — one per student
 - **CP2 Product Definition Brief assignment:** `assignments/CP2-Product-Definition-Brief.md`
 - **PRD reference** (what a PRD contains): `resources/PRD-Reference.md`
 - **CP2 rubric:** `rubrics.md`
