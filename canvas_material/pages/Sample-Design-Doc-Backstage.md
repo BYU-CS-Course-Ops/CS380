@@ -54,13 +54,7 @@ Each theater gets its own deployment on a small VPS.
 
 ## 3. System-context diagram
 
-```
-  [Wardrobe lead] ──edits items, manages volunteers──┐
-                                                     ▼
-  [Volunteer] ──searches, adds items, checks out──▶ ┌───────────┐ ──nightly backup──▶ [Backup storage]
-                                                    │ Backstage │
-  [Actor] ◀──────── overdue reminder email ──────── └───────────┘
-```
+![System-context diagram. A single box labelled Backstage sits in the middle. A wardrobe lead sends "edits items, manages volunteers" into it; a volunteer sends "searches, adds items, checks out"; Backstage sends an "overdue reminder email" out to an actor, and a "nightly backup" out to backup storage.](../resources/img/backstage-context-flawed.png)
 
 ## 4. Architecture and components
 
@@ -72,16 +66,7 @@ Each theater gets its own deployment on a small VPS.
 | **Image store** | Saves and serves photos. | Local disk | A storage interface, so object storage can replace the disk later |
 | **Auth** | Two roles: wardrobe lead and volunteer. | Database | Django's built-in authentication |
 
-```
-  ┌─────────┐      ┌──────────┐      ┌─────────────┐
-  │ Web UI  │─────▶│ Catalog  │─────▶│ Image store │
-  └────┬────┘      └────┬─────┘      └─────────────┘
-       │                │
-       ▼                ▼
-  ┌──────────┐     ┌──────────┐      ┌────────────────┐
-  │ Checkout │────▶│ Database │◀─────│ Email notifier │
-  └──────────┘     └──────────┘      └────────────────┘
-```
+![Component diagram. Web UI points to Catalog, which points to Image store. Web UI also points down to Checkout. Catalog points down to a Database cylinder, Checkout points across to the same Database, and an Email notifier points back into it from the right. No arrow is labelled.](../resources/img/backstage-components-flawed.png)
 
 ### Core flow, traced end to end: a volunteer checks out a costume
 

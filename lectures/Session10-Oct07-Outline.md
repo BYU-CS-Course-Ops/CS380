@@ -92,7 +92,7 @@ By the end of this session, a student can:
 
 - **Enrollment arithmetic** (the big one): N pitches × ~8.5 min ≈ fits 75 min only for N ≤ 8. For larger N: shorten to 5+1, split across Oct 5/7, or add an out-of-class block. Decide early — it changes Session 9's announcements.
 - **Team-charter template:** created — `assignments/Team-Charter.md`. **Now written in class on Mon, Oct 12** and submitted by end of that day.
-- **Revised team proposal:** confirm what "revise into a team proposal" requires (v4 §7 Wk5 Outside) and its due date (suggest: with the design doc draft, Wed Oct 14, to keep Week 6 light).
+- **Revised team proposal:** confirm what "revise into a team proposal" requires (v4 §7 Wk5 Outside) and its due date (suggest: with the design doc draft, Thu Oct 15, to keep Week 6 light).
 - **Oversubscription policy:** with ranked preferences this is now a scheduling problem rather than a scene in the room — the instructor honors first choices where possible and falls back to second. Still to confirm: whether an anchor founder gets a say in who joins, or the instructor assigns outright. *(Recommend: instructor assigns, founder consulted — it keeps the founder from having to reject a classmate face to face.)*
 
 ---

@@ -1,0 +1,68 @@
+## Before class
+
+This is a **working session**. There's no new reading — there's prep, and the session only works if you bring it.
+
+1. **Bring your team's skeleton sketch from Monday** — the system-context sketch, the component list, the data entities, and the two biggest decisions. Rough is expected. Arriving without it costs your team most of the first round.
+2. **Re-skim** the *Anatomy* and *System-context diagram* sections of [*Design Docs at Google*](https://www.industrialempathy.com/posts/design-docs-at-google/) — ten minutes, so the shape is fresh.
+3. **Have the <course-link type="page" id="pg-design-doc-template">Design Document Template</course-link> open.** Today's five rounds fill sections 3, 4, 5 and 6 of it, in that order.
+4. **Bring a phone** you can take photos with, and come ready to stand up. Boards and markers are provided.
+
+**Your <course-link type="assignment" id="charter">team charter</course-link> is due end of day today.**
+
+---
+
+## Purpose
+
+Any group that sets out to build something together has to answer a small set of questions early — where does the data live, what talks to what, who owns which piece, and what happens when something you don't control stops working. They're cheap to answer now and expensive to answer in week nine, when the answer is already spread across a codebase.
+
+Diagrams are how teams force those questions into the open, because the notation won't let you dodge. You can't draw a box without saying what it's for, and you can't draw an arrow without saying what crosses it. When you can't label an arrow, you haven't hit a drawing problem — you've found a design question nobody had noticed yet. That's the whole reason this is a session and not a homework assignment: the conversations happen out loud, in front of the board, where a teammate can disagree.
+
+One thing to expect, because it catches people. **You have drawn all of these before** — sequence diagrams, class diagrams, ERDs, layered architectures. What's different today is the altitude. Those diagrams described the inside of one program: objects, methods, lifelines. Today's describe a whole system: components, stores, services, and the boundary between what you own and what you merely depend on. Same instincts, one level up. If a box on your board ends up with a method list on it, you've slipped back down a level.
+
+*(And the thing neither of your previous courses asked you to do: in CS 240 and CS 340, the architecture arrived with the assignment. Today you choose it, and defend the choice.)*
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Draw a system-context diagram** — your system, its users, and the external services it depends on.
+2. **Decompose a system into components** with clear responsibilities and named interfaces.
+3. **Trace a core user action end to end** through those components — and trace it again when something breaks.
+4. **Sketch a data model** — entities, key fields, relationships, and what's in the MVP versus what's roadmap.
+5. **Argue a design decision against a real alternative**, in writing, against your own goals.
+
+---
+
+## What we'll do together
+
+Five rounds at the whiteboard, with the instructor circulating as a design reviewer. Each one fills a numbered section of the template.
+
+**Round 1 — system context.** Your whole system as *one box*. Every kind of person who touches it and every external service it depends on, arranged around it, with every arrow labelled by what actually crosses. This is the one genuinely new diagram of the day, and it's usually the slowest: deciding where your system *ends* is a design decision, not an observation. Inside the box means you own it, test it, and fix it at eleven at night. Outside means you inherit its downtime.
+
+**Round 2 — components and interfaces.** Open the box. Three to six components, each with a one-line job written on it, and every arrow between them named — a function call, an HTTP request, a queue, a scheduled job. Rough is the right amount of detail. Watch for the three smells: one box doing everything, an arrow you can't label, and data that no box owns.
+
+**Round 3 — one core flow, traced.** Pick the single user action that, if it didn't work, would make the whole thing pointless — then number the steps across your boxes, starting at the user's finger and ending at what the user sees. Then do it again in red, for when something outside your control breaks. **Choose that flow carefully:** it's your vertical slice, it's the first milestone in your implementation plan, and it's what you'll demo in November.
+
+**Round 4 — data model, first cut.** Entities, their key fields, and how they relate. *Key fields, not every column* — a full schema dump is stale in a week and buries the decisions. Then the cross-check that makes the round worth its ten minutes: every step of your trace that reads or writes data has to land on an entity, and every entity has to be touched by something.
+
+**Round 5 — decisions and alternatives.** Your two biggest decisions, five lines each: what you chose, one alternative a reasonable team would actually have picked, why yours wins *given your goals*, what evidence you have, and what would change your mind. That last line takes ten seconds and is what separates a decision from a commitment.
+
+Throughout, we work from a **worked example** — the same costume-catalog project whose design document you took apart on Monday, with its diagrams drawn the way they should have been.
+
+---
+
+## What you'll leave with
+
+- **Four diagrams on a whiteboard**, photographed before anyone erases anything. A photo of a whiteboard is a legitimate diagram for your draft; polish is not the point today.
+- **Two decisions argued in writing**, which is section 6 of your design document already drafted.
+- **A section of the draft assigned to each person** on your team, named out loud before you leave the room.
+- **The hard 80% of the design document**, which is why the draft is due the next day rather than the next week. The boards are the work; the evening is transcription.
+
+### Coming up
+
+- **The Design Document draft is due end of day {{ DESIGN_DRAFT_DUE_DAY }}, {{ DESIGN_DRAFT_DUE }}** — the day after the workshop. Photographed diagrams, skeleton prose, and your two argued decisions is a complete draft. Submit a pointer to it in your repository.
+- **<course-link type="page" id="s13">{{ S13_DAY }}, {{ S13_DATE }}</course-link> — git for maintainers:** the branching and pull-request discipline your project will run on from here to December.
+- **<course-link type="assignment" id="cp5">CP5 — Design Document (revised)</course-link> is due {{ S14_DAY }}, {{ S14_DATE }}.** Draft, review, revise — the same loop the proposal used, and the revision is what's graded.
+- *Working solo? Every round runs the same way at solo scope. You'll pair with another solo founder as a review partner: after each round you get ninety seconds to explain your board to them, which is the fastest way to find out whether it holds together.*

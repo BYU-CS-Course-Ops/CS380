@@ -272,7 +272,7 @@ async function build() {
 
   // 10 The template
   s = mk(); s.background = { color: C.white };
-  header(s, "The template — required for CP5", "Conforming to a standard is part of the job");
+  header(s, "The template — required for the Design Document", "Conforming to a standard is part of the job");
   const tmpl = [
     ["1", "Context & scope"], ["2", "Goals & non-goals"], ["3", "System-context diagram"], ["4", "Architecture & components"],
     ["5", "Data model"], ["6", "Tech choices & alternatives"], ["7", "Risks & open questions"], ["8", "Implementation plan"]
@@ -298,7 +298,7 @@ async function build() {
   card(s, 0.6, 6.25, 12.1, 0.6, C.amber);
   s.addText("Canvas → Design Document Template. Download the Markdown; it becomes docs/design.md in your repo.", { x: 0.9, y: 6.25, w: 11.5, h: 0.6, color: C.navy, fontFace: F.body, fontSize: 15.5, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s);
-  s.addNotes("Two minutes. Walk the headings, don't read them — they map one-to-one onto the CP5 rubric criteria, which is the point: a reviewer always knows where to look, and a missing alternatives section is visible instantly. Say why every organization that takes design docs seriously has a template, and that conforming to one is part of the job rather than a course quirk. Point out the status line, revision history, and sign-off table as the lightweight version of what they just saw in GSSC-0012.");
+  s.addNotes("Two minutes. Walk the headings, don't read them — they map one-to-one onto the Design Document rubric criteria, which is the point: a reviewer always knows where to look, and a missing alternatives section is visible instantly. Say why every organization that takes design docs seriously has a template, and that conforming to one is part of the job rather than a course quirk. Point out the status line, revision history, and sign-off table as the lightweight version of what they just saw in GSSC-0012.");
 
   // 11 Dissect — work slide
   s = await workSlide(
@@ -349,9 +349,9 @@ async function build() {
       ["The data entities the core flow touches.", "entities"],
       ["The two biggest decisions you'll have to argue with alternatives.", "2 decisions"]
     ],
-    "Bring this Wednesday. The workshop turns it into the draft — due at the end of that class."
+    "Bring this Wednesday. The workshop turns it into the draft — due end of day Thursday, Oct 15."
   );
-  s.addNotes("Ten minutes, and the goal is a page of boxes, not a finished diagram. Circulate with two questions: what does this system depend on that you don't control, and where does the data live? Teams that can't name two real decisions usually haven't found their risky part yet — send them back to their proposal's risks and spike. Say clearly that Wednesday's workshop produces the draft and the draft is due at the end of that class, so today's sketch is the thing that makes Wednesday survivable.");
+  s.addNotes("Ten minutes, and the goal is a page of boxes, not a finished diagram. Circulate with two questions: what does this system depend on that you don't control, and where does the data live? Teams that can't name two real decisions usually haven't found their risky part yet — send them back to their proposal's risks and spike. Say clearly that Wednesday's workshop produces the draft, which is then due end of day Thursday — the boards are the work and Thursday night is transcription — so today's sketch is the thing that makes Wednesday survivable.");
 
   // 14 The charter — work slide
   s = mk(); s.background = { color: C.white };
@@ -389,7 +389,7 @@ async function build() {
     ],
     "Finish the charter at your first team meeting. Submit by end of day Wednesday."
   );
-  s.addNotes("Five minutes, and only these two questions — they are the ones teams skip when left alone and the ones worth your coaching. Circulate while they talk: the team that says \"we'll all do everything and communicate constantly\" is the one that fails in Week 10, so push it for a named tiebreaker and a real response time. Deciding the deadlock rule now takes four minutes; deciding it during the deadlock costs a week. Solo students answer the abbreviated version on the same worksheet — the solo box says which sections. Then set the expectation out loud: the rest of the charter is the agenda for a first team meeting held before Wednesday, and the finished charter is due end of day Wednesday alongside the design-doc draft.");
+  s.addNotes("Five minutes, and only these two questions — they are the ones teams skip when left alone and the ones worth your coaching. Circulate while they talk: the team that says \"we'll all do everything and communicate constantly\" is the one that fails in Week 10, so push it for a named tiebreaker and a real response time. Deciding the deadlock rule now takes four minutes; deciding it during the deadlock costs a week. Solo students answer the abbreviated version on the same worksheet — the solo box says which sections. Then set the expectation out loud: the rest of the charter is the agenda for a first team meeting held before Wednesday, and the finished charter is due end of day Wednesday. The design-doc draft is a day behind it, Thursday, so the two do not land on the same evening.");
 
   // 15 Wrap
   s = mk(); s.background = { color: C.navy };
@@ -401,12 +401,12 @@ async function build() {
     { text: "Hold your first team meeting — finish the charter there, submit by end of day Wednesday", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Bring your skeleton sketch — context, components, entities, two decisions", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Re-skim the anatomy and system-context sections of the reading", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
-    { text: "Wednesday is a whiteboard workshop — the design doc draft is due at the end of it", options: { bullet: { indent: 16 } } }
+    { text: "Wednesday is a whiteboard workshop — the design doc draft is due end of day Thursday, Oct 15", options: { bullet: { indent: 16 } } }
   ], { x: 0.95, y: 3.85, w: 11.7, h: 1.95, color: "CBD8E6", fontFace: F.body, fontSize: 16, valign: "top", margin: 0 });
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);
-  s.addText("CP5 — the revised design doc — is due Wed, Oct 21. Draft, review, revise: the same loop as the proposal.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 15.5, bold: true, align: "center", valign: "middle", margin: 0 });
+  s.addText("CP5 — Design Document (revised) — is due Wed, Oct 21. Draft, review, revise: the same loop as the proposal.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 15.5, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Close in two minutes. The one-liner at the top is the session in a sentence — say it, then the logistics. Charter tonight, skeleton Wednesday, draft due at the end of Wednesday's workshop, CP5 a week later. Name the loop out loud: draft, review, revise, exactly as with the proposal, because revision is graded here too. If the room looks daunted, remind them Wednesday is three-quarters whiteboard time with you circulating as design reviewer.");
+  s.addNotes("Close in two minutes. The one-liner at the top is the session in a sentence — say it, then the logistics. Charter finished at the first team meeting and submitted end of day Wednesday, skeleton sketch brought Wednesday, draft due end of day Thursday, the revised Design Document a week later. Name the loop out loud: draft, review, revise, exactly as with the proposal, because revision is graded here too. If the room looks daunted, remind them Wednesday is three-quarters whiteboard time with you circulating as design reviewer.");
 
   const OUT = "Session11-DesignDocs.pptx";
   await pres.writeFile({ fileName: OUT });

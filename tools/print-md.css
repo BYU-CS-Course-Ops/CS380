@@ -38,3 +38,10 @@ pre { background: #F2F6F8; border-left: 3pt solid #5F7284; padding: 6pt 8pt; mar
 pre code { background: none; padding: 0; font-size: inherit; }
 
 hr { border: none; border-top: 0.8pt solid #DCE5EB; margin: 9pt 0; }
+
+/* Diagrams. Pandoc wraps `![alt](src)` in a <figure> and repeats the alt text as
+   a <figcaption>; that alt is written for screen readers on Canvas and reads as
+   redundant noise under a picture, so it is hidden on paper. */
+figure { margin: 10pt 0; break-inside: avoid; page-break-inside: avoid; text-align: center; }
+figcaption { display: none; }
+img { max-width: 100%; height: auto; }
