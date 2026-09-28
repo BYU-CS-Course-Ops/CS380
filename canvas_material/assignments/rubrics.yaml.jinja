@@ -1,0 +1,793 @@
+{#
+   CS 301R — the checkpoint rubrics. THE SOURCE OF TRUTH for every grid.
+
+   Everything rubric-shaped is generated from this file:
+
+     Canvas rubric objects   canvas_material/deploy_rubrics.py (attached to each
+                             checkpoint, used for grading in SpeedGrader)
+     Assignment Rubrics page pages/rubrics.md.jinja (pg-rubrics)
+     Handout grading tables  the "What it measures" table in each CP handout,
+                             via macros.jinja → rubric_summary()
+     Instructor view         rubrics.md at the repo root, regenerated with
+                             `python3 canvas_material/deploy_rubrics.py instructor-md`
+
+   Edit here, never in those outputs.
+
+   This file is Jinja-rendered with the target's global args before it is
+   parsed as YAML, so a date is written {{ S08_DATE }}, never literally.
+
+   Per rubric:
+     title, subtitle   heading and italic line on the rubrics page
+     phase             CPS phase heading in the instructor view
+     publish           true once the grid has been reviewed in student-facing
+                       wording. Gates the rubrics page AND the Canvas rubric.
+                       Flip it in the same pass as the assignment's Publish
+                       column in checkpoints-args.md.jinja.
+     criteria          name, weight (weights sum to 100), measures (one line,
+                       student-facing: the handout table and the Canvas
+                       criterion description), levels (the four-level grid)
+     looking_for       student-facing "what each criterion is looking for"
+     instructor_notes  instructor-only commentary; appears in rubrics.md only
+
+   Field text is Markdown. <course-link> tags are fine; the Canvas deploy
+   strips them (and Markdown emphasis) to plain text.
+#}
+scale:
+  - level: Exemplary
+    points: 4
+    meaning: Professional quality. Could serve as a model for the class.
+  - level: Proficient
+    points: 3
+    meaning: Solid and complete; meets the founder-grade bar.
+  - level: Developing
+    points: 2
+    meaning: Present but thin, uneven, or partly missing. Needs another pass.
+  - level: Beginning
+    points: 1
+    meaning: Missing, superficial, or seriously flawed.
+  - level: Absent
+    points: 0
+    meaning: Not submitted; no evidence.
+
+phases:
+  1: Phase 1 — Clarify & Explore
+  2: Phase 2 — Ideate & Pitch → Form Teams
+  3: Phase 3 — Develop & Design
+  4: Phase 4 — Implement & Build
+  5: Phase 5 — Launch & Reflect
+
+rubrics:
+
+  # ---------------------------------------------------------------- CP1
+  cp1:
+    title: CP1 — Idea Briefs
+    subtitle: Three one-page candidate concepts · Individual · Part of the 10% Discovery bundle, with CP2
+    phase: 1
+    publish: true
+    criteria:
+      - name: Divergence & breadth
+        weight: 25
+        measures: Three genuinely distinct problem spaces spanning different users/domains — evidence of real divergent exploration, not one idea in three costumes.
+        levels:
+          exemplary: Three genuinely distinct problem spaces spanning different users/domains
+          proficient: Three distinct ideas, some overlap
+          developing: Ideas are minor variants of one another
+          beginning: Effectively one idea, or fewer than three
+      - name: Real-need orientation
+        weight: 25
+        measures: Each idea names a plausible real user and a felt need, with at least a hint of evidence. Keeps the focus on serving someone.
+        levels:
+          exemplary: Each names a plausible real user and a felt need, with a hint of evidence
+          proficient: Each names a user and need
+          developing: Needs asserted but vague or self-serving
+          beginning: Toy/hypothetical needs only
+      - name: Richness potential
+        weight: 20
+        measures: At least one idea visibly could grow into a multi-dimensional, lasting project.
+        levels:
+          exemplary: At least one idea visibly could grow into a multi-dimensional, lasting project
+          proficient: One idea shows some breadth
+          developing: Breadth unclear for all three
+          beginning: All ideas trivial in scope
+      - name: Clarity & concision
+        weight: 15
+        measures: Crisp, one-page discipline; ideas are easy to grasp quickly.
+        levels:
+          exemplary: Crisp, one-page discipline; easy to grasp fast
+          proficient: Readable, mostly to length
+          developing: Padded or hard to follow
+          beginning: Disorganized or incomplete
+      - name: Reflection
+        weight: 15
+        measures: A thoughtful, personal take on what makes a project worth building to last — not a generic summary.
+        levels:
+          exemplary: Thoughtful take on what makes a project worth building to last
+          proficient: Reasonable reflection
+          developing: Generic reflection
+          beginning: Missing or perfunctory
+    looking_for:
+      - "**Divergence & breadth** rewards the divergent-thinking discipline the whole first phase depends on: explore *across* the problem space rather than refining one pet idea."
+      - "**Real-need orientation** keeps the focus on real users from day one. The course is selecting for projects that serve someone, not clever toys."
+      - "**Richness potential** asks whether a team could grow into this — the \"is it worth founding on?\" question, applied gently at the idea stage."
+      - "**Clarity & concision** enforces the one-page constraint. Founders have to communicate an idea fast."
+      - "**Reflection** assesses whether you have internalized the founding mindset, not just produced ideas."
+    instructor_notes:
+      - "**Divergence & breadth** rewards the divergent-thinking discipline the CPS spine depends on early: students should explore *across* the problem space, not refine one pet idea."
+      - "**Richness potential** is the \"could a multi-disciplinary team grow into this?\" north star (§9), applied gently at the idea stage."
+
+  # ---------------------------------------------------------------- CP2
+  cp2:
+    title: CP2 — Product Definition Brief
+    subtitle: Users, needs, success criteria · Individual · Completes the 10% Discovery bundle
+    phase: 1
+    publish: true
+    criteria:
+      - name: Target user clarity
+        weight: 20
+        measures: Userbase sharply defined and bounded — who's in and out is clear. Not "everyone."
+        levels:
+          exemplary: Userbase sharply defined and bounded; who's in and out is clear
+          proficient: User defined
+          developing: User vague or overbroad
+          beginning: '"Everyone" / undefined'
+      - name: Needfinding quality & honesty
+        weight: 30
+        measures: Real interviews/observation **and/or** a rigorously documented persona — ideally interviews *informing* a persona — each with honest reasoning about its limits. **Honesty about method is graded as heavily as the findings.**
+        levels:
+          exemplary: Real interviews/observation **and/or** a rigorously documented persona or proxy — ideally interviews informing a persona — with honest reasoning about its limits
+          proficient: Credible needfinding with some evidence
+          developing: Thin evidence; reasoning gaps
+          beginning: Asserted needs, no method
+      - name: Prioritized needs
+        weight: 20
+        measures: Needs prioritized (must-have vs. nice-to-have) with a defensible rationale.
+        levels:
+          exemplary: Needs prioritized with a defensible rationale
+          proficient: Needs listed and ranked
+          developing: Needs listed, not prioritized
+          beginning: Needs unclear
+      - name: Success criteria
+        weight: 20
+        measures: Specific, observable, defensible criteria for "this works."
+        levels:
+          exemplary: Specific, defensible, observable criteria for "this works"
+          proficient: Reasonable criteria
+          developing: Vague criteria
+          beginning: Missing
+      - name: PRD mapping
+        weight: 10
+        measures: Reads like a lightweight product-requirements doc (see the <course-link type="page" id="pg-prd-reference">PRD reference</course-link>) — a clear definition of problem and user, not a solution.
+        levels:
+          exemplary: Cleanly reads as a real PRD — problem and user, not solution
+          proficient: Mostly reads as a PRD
+          developing: Partial
+          beginning: Not recognizable as a PRD
+    looking_for:
+      - "**Target user clarity** — a founder has to know exactly whose problem they own. Fuzziness here undermines everything downstream: you cannot scope an MVP, argue feasibility, or judge whether you succeeded."
+      - "**Needfinding quality & honesty** is the heart of the discovery grade. Because an evidence-tagged persona is an accepted substitute when you genuinely cannot reach a user, *honesty about your method and its limits* is graded as heavily as the findings themselves. A brief built largely on assumptions can still score well if it is straight about that and clear about what it would verify."
+      - "**Prioritized needs** checks that you can tell must-haves from nice-to-haves. That distinction is the basis of every later scoping decision."
+      - "**Success criteria** force a falsifiable definition of success — the one your final demo gets judged against."
+      - "**PRD mapping** ties this to the shape the document takes in industry. See the <course-link type=\"page\" id=\"pg-prd-reference\">PRD reference</course-link>."
+    instructor_notes:
+      - "**Target user clarity** — a founder/sponsor must know exactly whose problem they own; fuzziness here undermines everything downstream."
+      - "**Needfinding quality & honesty** — persona/proxy work is an allowed substitute this iteration, so honesty about method and its limits is graded as heavily as the findings."
+      - "**PRD mapping** ties this artifact to the sponsor role the lead may carry into the capstone."
+
+  # ---------------------------------------------------------------- CP3
+  cp3:
+    title: CP3 — Written Proposal
+    subtitle: "Individual · Course weight: 12%"
+    phase: 2
+    publish: true
+    criteria:
+      - name: Problem & user clarity
+        weight: 15
+        measures: Problem and users compelling and evidence-backed — the discovery trail shows.
+        levels:
+          exemplary: Problem and users compelling and evidence-backed
+          proficient: Clear problem and users
+          developing: Somewhat vague
+          beginning: Unclear
+      - name: Solution & core features (+ non-goals)
+        weight: 15
+        measures: Coherent solution; sharp, prioritized feature set; explicit non-goals. Scoping *out* is as persuasive as scoping in.
+        levels:
+          exemplary: Coherent solution; sharp feature set; explicit non-goals
+          proficient: Solution and features defined
+          developing: Features fuzzy; no non-goals
+          beginning: Solution unclear
+      - name: Feasibility & technical approach
+        weight: 20
+        measures: Stack and dependencies actually researched; **at least one spike run on the scariest unknown, with its result honestly reported**; approach credible and justified — real homework, not hand-waving.
+        levels:
+          exemplary: Stack and dependencies researched; approach credible and justified
+          proficient: Reasonable, mostly justified
+          developing: Approach asserted, thin
+          beginning: Infeasible or absent
+      - name: Scope realism (MVP for this term)
+        weight: 15
+        measures: A clear, achievable vertical slice, sized against the *real* build window — roughly five weeks, with the ~10 hrs/week total already spent on class, reading, writing, and reviews — with the arithmetic shown.
+        levels:
+          exemplary: Clear, achievable vertical slice, sized against the *real* build window — roughly five weeks — with the arithmetic shown
+          proficient: Plausible scope
+          developing: Over- or under-scoped
+          beginning: Wildly unrealistic (e.g. "10 hrs × 14 weeks = 140 hours")
+      - name: Richness & extensibility
+        weight: 15
+        measures: Exercises multiple engineering dimensions; a path for others to join and build.
+        levels:
+          exemplary: Exercises multiple engineering dimensions; clear path for a larger team
+          proficient: Some breadth and extensibility
+          developing: Narrow
+          beginning: Toy-scale
+      - name: Risks & mitigation
+        weight: 10
+        measures: Real, specific risks with credible mitigations — engineering judgment about what could go wrong.
+        levels:
+          exemplary: Real risks named with credible mitigations
+          proficient: Risks identified
+          developing: Generic risks
+          beginning: None
+      - name: Argument & revision
+        weight: 10
+        measures: Persuasive, well-written, and visibly improved in response to peer feedback — measured against your {{ S08_DATE }} draft and the annotated copies you submit with it. **No draft on file caps this criterion at Developing.**
+        levels:
+          exemplary: Persuasive, well-written; visible response to peer feedback
+          proficient: Clear writing; some revision
+          developing: Rough; little revision
+          beginning: Poor or no revision
+    looking_for:
+      - "**Problem & user clarity** and **Solution & core features** carry the product case. **Non-goals** are graded because scoping something *out* is as persuasive as scoping it in."
+      - "**Feasibility & technical approach** is the heaviest criterion here, deliberately. It rewards real homework on stack and dependencies — arguing feasibility without overpromising is the skill this genre lives or dies on."
+      - "**Scope realism** is checked against the honest budget: **~10 hrs/week is the total course load** — class, reading, discovery, writing, and reviews all come out of it — so the build time left is a fraction of ten, spread over roughly **five weeks** of real building. A proposal that sizes its MVP by multiplying 10 × 14 has already failed this criterion."
+      - "**Richness & extensibility** applies the same \"worth founding on?\" test your pitch will be judged on."
+      - "**Risks & mitigation** assesses engineering judgment about what can go wrong, and whether your mitigations are real."
+      - "**Argument & revision** grades the proposal as technical communication, and rewards iteration. **It requires a draft on file.** The <course-link type=\"assignment\" id=\"cp3-draft\">required draft</course-link> — uploaded, plus two printed copies marked up in class and submitted as images with the final — is what revision is measured against. **With no draft on file this criterion caps at Developing**, because there is nothing to measure improvement against."
+    instructor_notes:
+      - "**Scope realism** — the build window is roughly five weeks (Weeks 9–13), not the nominal ~10 hrs/week × 14."
+      - "**Argument & revision** requires a draft on file: the {{ S08_DATE }} workshop draft (uploaded, two printed copies marked up in class, scans submitted with the final). **With no draft on file this criterion caps at Developing** — Canvas will not enforce the cap; apply it when scoring."
+      - "**Richness & extensibility** applies the §9 selection criteria the proposal will be judged on at pitch time."
+
+  # ---------------------------------------------------------------- CP4
+  cp4:
+    title: CP4 — Pitch Presentation
+    subtitle: "Persuade and recruit · Individual · Course weight: 8%"
+    phase: 2
+    publish: true
+    criteria:
+      - name: Problem/solution clarity
+        weight: 20
+        measures: The audience grasps the need and the idea immediately — no rewinding.
+        levels:
+          exemplary: Audience grasps the need and idea immediately
+          proficient: Clear
+          developing: Somewhat muddled
+          beginning: Confusing
+      - name: Persuasiveness & recruiting
+        weight: 25
+        measures: Compelling enough to attract teammates, with a clear call to join. Weighted highest because the pitch's *job* is to recruit — audience effect is part of the grade.
+        levels:
+          exemplary: Compelling enough to attract teammates; clear call to join
+          proficient: Persuasive
+          developing: Flat
+          beginning: Unconvincing
+      - name: Feasibility defense
+        weight: 15
+        measures: Scope and tradeoffs defended convincingly — the <course-link type="assignment" id="cp3">CP3</course-link> honest-confidence move, spoken.
+        levels:
+          exemplary: Defends scope and tradeoffs convincingly
+          proficient: Defends adequately
+          developing: Shaky
+          beginning: Cannot defend
+      - name: Handling of questions
+        weight: 15
+        measures: Direct, composed, honest under questioning — including honest "I don't know yet"s.
+        levels:
+          exemplary: Direct, composed, honest under questioning
+          proficient: Handles most questions
+          developing: Struggles
+          beginning: Deflects or unable
+      - name: Slide & visual quality
+        weight: 10
+        measures: Few, clean, purposeful visuals that help rather than compete.
+        levels:
+          exemplary: Clean, purposeful visuals
+          proficient: Serviceable
+          developing: Cluttered
+          beginning: Poor or absent
+      - name: Delivery & professionalism
+        weight: 15
+        measures: Confident, well-paced, within time.
+        levels:
+          exemplary: Confident, well-paced, within time
+          proficient: Solid delivery
+          developing: Uneven or over time
+          beginning: Unprofessional
+    looking_for:
+      - "**Persuasiveness & recruiting** is weighted highest because of what Pitch Day is for: a pitch *succeeds* if it convinces classmates to spend their semester on your project. This is the one rubric in the course where the effect on your audience is part of the grade."
+      - "**Feasibility defense** and **Handling of questions** test whether you can think on your feet about your own project's risks. Honest answers score better than confident ones."
+      - "**Slide & visual quality** and **Delivery** assess pitch craft as a professional communication skill."
+      - "Peer scores from the <course-link type=\"page\" id=\"pg-pitch-evaluation-sheet\">pitch evaluation sheet</course-link> inform the instructor's judgment here, but the grade is the instructor's."
+    instructor_notes:
+      - "**Persuasiveness & recruiting** is weighted highest because Week 5 is the course hinge."
+
+  # ---------------------------------------------------------------- CP5
+  cp5:
+    title: CP5 — Design Document
+    subtitle: "How it gets built, and why this way · Team (or solo, at solo scope) · Course weight: 12%"
+    phase: 3
+    publish: true
+    criteria:
+      - name: Architecture clarity
+        weight: 20
+        measures: Components, interfaces, data, and external services clearly modeled — the system's shape is visible.
+        levels:
+          exemplary: Components, interfaces, data, and external services clearly modeled — the system's shape is visible
+          proficient: Architecture clear
+          developing: Partial or ambiguous
+          beginning: Missing or incoherent
+      - name: Appropriate detail
+        weight: 15
+        measures: "The right altitude: neither hand-wavy nor over-specified. A 300-level judgment skill in its own right."
+        levels:
+          exemplary: Right altitude — neither hand-wavy nor over-specified
+          proficient: Mostly right
+          developing: Too shallow or too deep
+          beginning: Unusable
+      - name: Tech choices & rationale
+        weight: 15
+        measures: Choices justified against real alternatives — the alternatives-considered discipline.
+        levels:
+          exemplary: Each significant choice argued against a real alternative
+          proficient: Choices justified
+          developing: Asserted, little rationale
+          beginning: Unjustified
+      - name: Data & interface design
+        weight: 15
+        measures: A sound data model and interface sketch that the traced flow actually exercises.
+        levels:
+          exemplary: Sound data model and interface sketch that the traced flow exercises
+          proficient: Present and reasonable
+          developing: Incomplete
+          beginning: Missing
+      - name: Risk & open questions
+        weight: 10
+        measures: Honest unknowns surfaced — including failure cases — rather than hidden.
+        levels:
+          exemplary: Honest risks and open questions surfaced, including failure cases
+          proficient: Some risks noted
+          developing: Token
+          beginning: None
+      - name: Implementability
+        weight: 15
+        measures: The plan is clearly buildable in the semester that remains, by this team.
+        levels:
+          exemplary: Plan clearly buildable in the semester that remains, by this team
+          proficient: Buildable
+          developing: Doubtful
+          beginning: Not actionable
+      - name: Readability & revision
+        weight: 10
+        measures: A future contributor could navigate it; visible improvement from draft to final.
+        levels:
+          exemplary: A future contributor could navigate it; visible improvement from draft to final
+          proficient: Readable; some revision
+          developing: Rough
+          beginning: Poor or no revision
+    looking_for:
+      - "**Architecture clarity**, **Data & interface design**, and **Tech choices & rationale** are the engineering core: can your team show the shape of the system and defend the decisions that produced it. A straw-man alternative fools no one — the alternative has to be something a reasonable team might actually pick."
+      - "**Appropriate detail** is a judgment skill in its own right, and the one this assignment is really teaching. Decisions and trade-offs belong in the document; mechanics belong in the code. Copied schemas, pseudo-code for routine work, and pinned library versions cost you here."
+      - "**Implementability** ties the design to the reality of the build: roughly five weeks of real building, not a nominal semester."
+      - "**Readability & revision** is graded through the future-contributor lens the whole course runs on — plus visible improvement between the draft and the final. Revision is graded, so keep the draft."
+      - "Use the <course-link type=\"page\" id=\"pg-design-doc-template\">design document template</course-link>: its sections map onto these criteria one for one."
+    instructor_notes:
+      - "**Appropriate detail** is a 300-level judgment skill: documenting enough without over-specifying."
+      - "**Readability** is graded through the *future-contributor* lens central to the course — the doc must serve a stranger who joins the project."
+      - "Team grade, adjusted by individual-contribution evidence (design §8)."
+
+  # ---------------------------------------------------------------- CP6
+  # publish: false — levels are still the instructor draft wording.
+  cp6:
+    title: CP6 — Git Workflow Lab
+    subtitle: Team (or solo) · Part of the 12% Git + Tech-Comm bundle, with CP9
+    phase: 3
+    publish: false
+    criteria:
+      - name: Commit hygiene
+        weight: 25
+        measures: Logical, atomic commits; clear, conventional messages in the imperative that explain why.
+        levels:
+          exemplary: Logical, atomic commits; clear, conventional messages
+          proficient: Mostly clean
+          developing: Noisy/uneven
+          beginning: Dumps; poor messages
+      - name: Branch & PR workflow
+        weight: 25
+        measures: "The maintainer-centered flow followed correctly: branch → PR → review → merge under policy."
+        levels:
+          exemplary: Correct maintainer-centered branch→PR→review→merge flow
+          proficient: Workflow followed
+          developing: Inconsistent
+          beginning: Not followed
+      - name: PR quality
+        weight: 20
+        measures: Scoped, reviewable PRs with descriptions that orient the reviewer.
+        levels:
+          exemplary: Reviewable, scoped PRs using the template
+          proficient: Reasonable PRs
+          developing: Large/unclear PRs
+          beginning: Unreviewable
+      - name: Review participation
+        weight: 20
+        measures: Substantive, constructive written review of a peer's PR — a graded skill, not a formality.
+        levels:
+          exemplary: Substantive, constructive review comments on peers' PRs
+          proficient: Some real review
+          developing: Rubber-stamp
+          beginning: None
+      - name: Team git standards
+        weight: 10
+        measures: Standards documented, reasoned, and actually followed in the lab itself.
+        levels:
+          exemplary: Standards documented and actually followed
+          proficient: Documented
+          developing: Vague
+          beginning: Absent
+    looking_for: []
+    instructor_notes:
+      - "This lab grades *mechanics under a real workflow*, not git trivia. The emphasis is the **maintainer-centered** model (branch → logical commits → draft PR → review → merge under policy), not fork-and-upstream."
+      - "**Review participation** is weighted because reviewing others' code well is a graded skill in its own right, not a formality."
+      - "**Team git standards** rewards setting and honoring the team's own conventions — founders write the norms."
+
+  # ---------------------------------------------------------------- CP7
+  cp7:
+    title: CP7 — Project Infrastructure Package
+    subtitle: "Team (or solo) · Course weight: 12%"
+    phase: 3
+    publish: false
+    criteria:
+      - name: Completeness
+        weight: 25
+        measures: All required artifacts present and substantive — the required-artifacts checklist above, honored.
+        levels:
+          exemplary: All required files present and substantive (README, LICENSE, CONTRIBUTING, COC, issue/PR templates, onboarding)
+          proficient: Nearly all present
+          developing: Several gaps
+          beginning: Skeletal
+      - name: Newcomer usability
+        weight: 25
+        measures: A stranger can install, run, and start contributing from the docs alone. Verified again, for a grade, in the Week-11 audit.
+        levels:
+          exemplary: A stranger can install, run, and start contributing from the docs alone
+          proficient: Mostly self-serve
+          developing: Needs hand-holding
+          beginning: Unusable
+      - name: License appropriateness
+        weight: 15
+        measures: A *justified* choice matched to the project's goals — not MIT by reflex.
+        levels:
+          exemplary: License chosen and justified for the project's goals
+          proficient: Appropriate license
+          developing: License present, unjustified
+          beginning: Wrong/missing
+      - name: Governance & comms norms
+        weight: 15
+        measures: Clear maintainer expectations, channels, and decision norms a contributor can rely on.
+        levels:
+          exemplary: Clear maintainer expectations, channels, decision norms
+          proficient: Present
+          developing: Vague
+          beginning: Absent
+      - name: Professionalism & consistency
+        weight: 10
+        measures: Polished and consistent — credible as a real OSS project.
+        levels:
+          exemplary: Polished, consistent, credible as a real OSS project
+          proficient: Solid
+          developing: Uneven
+          beginning: Sloppy
+      - name: Contributor-readiness
+        weight: 10
+        measures: Genuinely built for others to join and build on — the course's defining thread.
+        levels:
+          exemplary: Clearly built for others to join and build on
+          proficient: Mostly
+          developing: Partial
+          beginning: Not considered
+    looking_for: []
+    instructor_notes:
+      - "**Completeness** maps directly to the required repository artifacts in design §10."
+      - "**Newcomer usability** is the package's real test — can someone who's never seen the repo get started? This is verified again in the Week-11 repo audit."
+      - "**License appropriateness** rewards a *justified* choice, not just dropping in MIT by reflex."
+      - "**Governance & comms norms** capture the founder-defining-the-rules emphasis."
+      - "**Contributor-readiness** asks whether the project is genuinely ready for others to join and build on — a defining founder responsibility."
+
+  # ---------------------------------------------------------------- CP8
+  cp8:
+    title: CP8 — Project Plan & Roadmap
+    subtitle: "Team (or solo) · Course weight: 8%"
+    phase: 4
+    publish: false
+    criteria:
+      - name: Work breakdown
+        weight: 25
+        measures: Coherent epics → milestones → issues at the right granularity — vision turned into finishable work.
+        levels:
+          exemplary: Coherent epics → milestones → issues; right granularity
+          proficient: Reasonable breakdown
+          developing: Coarse/uneven
+          beginning: Vague list
+      - name: Prioritization & estimation
+        weight: 20
+        measures: An ordered backlog with credible estimates, checked against real capacity.
+        levels:
+          exemplary: Prioritized backlog with credible estimates
+          proficient: Prioritized
+          developing: Some prioritization
+          beginning: None
+      - name: Definition of done
+        weight: 15
+        measures: A clear, testable, team-wide bar for "done."
+        levels:
+          exemplary: Clear, testable DoD
+          proficient: Present
+          developing: Vague
+          beginning: Absent
+      - name: Contribution pathways
+        weight: 20
+        measures: Good-first-issues and labels that genuinely invite future contributors — weighted heavily on purpose.
+        levels:
+          exemplary: Good-first-issues and labels invite future contributors
+          proficient: Some starter tasks/labels
+          developing: Minimal
+          beginning: None
+      - name: Roadmap into the future
+        weight: 20
+        measures: A credible path into a future semester/team — the project's tomorrow, written down.
+        levels:
+          exemplary: Credible roadmap into a future semester/team
+          proficient: Roadmap present
+          developing: Thin
+          beginning: Missing
+    looking_for: []
+    instructor_notes:
+      - "**Work breakdown** and **Prioritization & estimation** assess turning vision into manageable, sequenced work."
+      - "**Definition of done** grades whether the team has a shared, checkable bar for completion."
+      - "**Contribution pathways** and **Roadmap into the future** are weighted heavily because *creating on-ramps for future contributors* is a defining course goal, not an afterthought."
+
+  # ---------------------------------------------------------------- CP9
+  cp9:
+    title: CP9 — Technical Communication Portfolio
+    subtitle: Individual evidence within the team · Completes the 12% Git + Tech-Comm bundle
+    phase: 4
+    publish: false
+    criteria:
+      - name: Precision & clarity
+        weight: 25
+        measures: Exact and unambiguous — the reader knows precisely what's meant, first pass.
+        levels:
+          exemplary: Exact, unambiguous; reader knows precisely what's meant
+          proficient: Clear
+          developing: Some ambiguity
+          beginning: Vague/confusing
+      - name: Completeness
+        weight: 25
+        measures: Bug reports carry reproduction and expected-vs-actual; requests are fully framed. Anchored to the defect/fault/failure discipline.
+        levels:
+          exemplary: Bug reports include reproduction, expected vs. actual; requests fully framed
+          proficient: Mostly complete
+          developing: Missing elements
+          beginning: Incomplete
+      - name: Actionability
+        weight: 20
+        measures: A maintainer could act immediately — no follow-up interrogation required.
+        levels:
+          exemplary: A maintainer could act immediately
+          proficient: Actionable
+          developing: Needs follow-up
+          beginning: Not actionable
+      - name: Tone & professionalism
+        weight: 15
+        measures: Respectful, collaborative, on-brand for open source — even (especially) when critical.
+        levels:
+          exemplary: Respectful, collaborative, on-brand for OSS
+          proficient: Professional
+          developing: Uneven
+          beginning: Unprofessional
+      - name: Responsiveness to feedback
+        weight: 15
+        measures: Critique engaged thoughtfully; updates made or disagreement reasoned — the two-way half of the skill.
+        levels:
+          exemplary: Engages critique thoughtfully; updates accordingly
+          proficient: Responds adequately
+          developing: Defensive/thin
+          beginning: Ignores
+    looking_for: []
+    instructor_notes:
+      - "Contents: 2 bug reports, 1 feature request, 1 PR description, 2 review comments, 2 responses to feedback — graded on **quality, not quantity**. The counts are a floor; a thoughtful bug report beats six rote ones."
+      - "**Completeness** is anchored to the defect/fault/failure framing taught in Week 8 (reproduction, expected vs. actual)."
+      - "**Responsiveness to feedback** assesses the two-way nature of technical communication — how the student receives and acts on review, not just how they write."
+
+  # ---------------------------------------------------------------- CP10
+  cp10:
+    title: CP10 — Progress Demo + Repo Audit
+    subtitle: "Team (or solo), with individual-contribution adjustment · Course weight: 16% (largest)"
+    phase: 4
+    publish: false
+    criteria:
+      - name: MVP plan quality
+        weight: 15
+        measures: "The one-pager: what's in / deferred / risk addressed / demo plan. (Graded from the {{ S20_DATE }} revision.)"
+        levels:
+          exemplary: "Sharp: what's in, what's deferred, what risk v1 addresses"
+          proficient: Clear plan
+          developing: Vague plan
+          beginning: Missing
+      - name: Proves key claims (vertical slice)
+        weight: 25
+        measures: The working slice clearly proves the project's core viability — the heaviest single criterion in the course.
+        levels:
+          exemplary: Working vertical slice clearly proves project viability
+          proficient: Slice mostly proves it
+          developing: Partial/broad-shallow
+          beginning: Doesn't prove the point
+      - name: Technical coherence
+        weight: 15
+        measures: Implementation clean and aligned with the design doc — the built thing matches the argued thing.
+        levels:
+          exemplary: Clean, coherent implementation aligned to the design
+          proficient: Mostly coherent
+          developing: Patchy
+          beginning: Incoherent
+      - name: Demo readiness
+        weight: 15
+        measures: A smooth, well-framed live demo (or a gracefully run fallback).
+        levels:
+          exemplary: Smooth, well-framed live demo
+          proficient: Works with minor hiccups
+          developing: Rough
+          beginning: Fails to demo
+      - name: Repo audit (peer onboarding)
+        weight: 15
+        measures: A stranger clones, builds, runs, and finds entry points from your docs alone.
+        levels:
+          exemplary: A peer clones, builds, runs, and finds entry points unaided
+          proficient: Minor friction
+          developing: Significant friction
+          beginning: Cannot build/run
+      - name: Documentation & honesty
+        weight: 10
+        measures: Limitations and known issues documented candidly — candor over oversell.
+        levels:
+          exemplary: Limitations and known issues documented candidly
+          proficient: Documented
+          developing: Thin
+          beginning: Absent/overclaims
+      - name: Individual contribution
+        weight: 5
+        measures: Git history and PRs show real, reasonably balanced contribution.
+        levels:
+          exemplary: Git history/PRs show real, balanced contribution
+          proficient: Evident contribution
+          developing: Uneven
+          beginning: Little/none
+    looking_for: []
+    instructor_notes:
+      - "**Proves key claims** is the heaviest single criterion in the course: an MVP's job is to *prove the project's core viability* via a vertical slice, not to be broad and shallow."
+      - "**Repo audit** operationalizes contributor-readiness — a classmate must clone, build, run, and locate where a new feature would go. This is the buildability gate."
+      - "**Documentation & honesty** rewards candor about limitations over polish that oversells."
+      - "**Individual contribution** is where the team grade is adjusted by per-student git/PR evidence and peer evaluation (design §8)."
+
+  # ---------------------------------------------------------------- CP11
+  cp11:
+    title: CP11 — Launch Package + Retrospective
+    subtitle: Team (or solo) · Part of the 10% Final bundle, with CP12
+    phase: 5
+    publish: false
+    criteria:
+      - name: Launch-package completeness
+        weight: 30
+        measures: Architecture, roadmap, known-issues, tech-debt log, and onboarding all present and genuinely useful.
+        levels:
+          exemplary: Architecture overview, roadmap, known-issues, tech-debt log, onboarding all present and useful
+          proficient: Mostly complete
+          developing: Gaps
+          beginning: Skeletal
+      - name: Setup verification
+        weight: 15
+        measures: Setup independently reproducible from the docs — evidenced by the round-2 test sheet.
+        levels:
+          exemplary: Setup independently reproducible from docs
+          proficient: Reproducible with minor friction
+          developing: Unclear
+          beginning: Fails
+      - name: Retrospective honesty & insight
+        weight: 25
+        measures: Candid about what held, what the MVP validated, what's next — evidence over narrative, weighted heavily on purpose.
+        levels:
+          exemplary: Candid about what held, what the MVP validated, what's next
+          proficient: Honest reflection
+          developing: Surface-level
+          beginning: Missing/spin
+      - name: Future-work framing
+        weight: 20
+        measures: Compelling, realistic next steps without overselling — a roadmap a serious outside reader could believe (a potential contributor, a maintainer, a capstone faculty member).
+        levels:
+          exemplary: Compelling, realistic next steps without overselling
+          proficient: Reasonable
+          developing: Vague
+          beginning: Absent or inflated
+      - name: Contributor-readiness
+        weight: 10
+        measures: A new contributor could get up to speed and start building — the course's through-line, at the finish.
+        levels:
+          exemplary: A new contributor could get up to speed and start building
+          proficient: Mostly
+          developing: Partial
+          beginning: "No"
+    looking_for: []
+    instructor_notes:
+      - "**Launch-package completeness** and **Setup verification** assess whether a new contributor can actually get the project running and start building — the central deliverable of the course."
+      - "**Retrospective honesty & insight** is weighted heavily because honest reflection (what assumptions held, what the MVP truly validated) is graded over a rosy narrative."
+      - "**Future-work framing** rewards a credible roadmap that doesn't oversell — the lead may pitch this to capstone faculty."
+
+  # ---------------------------------------------------------------- CP12
+  cp12:
+    title: CP12 — Final Pitch + Demo
+    subtitle: Team (or solo) · Completes the 10% Final bundle · Defended at Demo Day (capstone faculty invited)
+    phase: 5
+    publish: false
+    criteria:
+      - name: '"What need does this serve?"'
+        weight: 20
+        measures: The need is vivid, real, and evidence-backed — the discovery arc, landed.
+        levels:
+          exemplary: Need is vivid, real, and evidence-backed
+          proficient: Clear need
+          developing: Vague
+          beginning: Unconvincing
+      - name: '"What has been built?" (live demo)'
+        weight: 25
+        measures: A confident live demo of a working slice — the heaviest criterion; slides can't earn it.
+        levels:
+          exemplary: Confident live demo of a working slice
+          proficient: Working demo
+          developing: Shaky/partial
+          beginning: Fails
+      - name: '"Where does it go next, and how can others join?"'
+        weight: 20
+        measures: A concrete, credible case for continuation — artifacts, not aspirations.
+        levels:
+          exemplary: Compelling, concrete case for how others can join and keep building
+          proficient: Clear
+          developing: Thin
+          beginning: Missing
+      - name: Integration
+        weight: 15
+        measures: Discovery → proposal → design → build → launch told as one coherent story.
+        levels:
+          exemplary: Ties discovery → proposal → design → build into one coherent story
+          proficient: Mostly coherent
+          developing: Disjointed
+          beginning: No through-line
+      - name: Persuasiveness & delivery
+        weight: 10
+        measures: Polished, well-paced, professional.
+        levels:
+          exemplary: Polished, persuasive, well-paced
+          proficient: Solid
+          developing: Uneven
+          beginning: Poor
+      - name: Q&A handling
+        weight: 10
+        measures: Direct, honest, composed — with faculty asking real questions.
+        levels:
+          exemplary: Direct, honest, composed with faculty
+          proficient: Handles most
+          developing: Struggles
+          beginning: Cannot
+    looking_for: []
+    instructor_notes:
+      - "The first three criteria are the **three questions the final must answer** (design §7, Week 14) — the spine of the mastery artifact, together carrying most of the weight."
+      - "**Integration** rewards showing the whole founding arc as one story, which is what distinguishes a *founded, defensible, contributor-ready project* from strong code alone."
+      - "**Q&A handling** matters because capstone faculty are in the room making carry-forward judgments."

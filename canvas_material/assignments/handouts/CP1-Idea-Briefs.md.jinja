@@ -107,13 +107,8 @@ At the brief stage you don't need to satisfy all of these fully — but the best
 
 Scored on a 100-point analytic rubric; counts toward the 10% Discovery grade. Reach at least **Developing** on every criterion to stay on a passing track.
 
-| Criterion | Weight | What it measures |
-|---|---|---|
-| **Divergence & breadth** | 25 | Three genuinely distinct problem spaces spanning different users/domains — evidence of real divergent exploration, not one idea in three costumes. |
-| **Real-need orientation** | 25 | Each idea names a plausible real user and a felt need, with at least a hint of evidence. Keeps the focus on serving someone. |
-| **Richness potential** | 20 | At least one idea visibly could grow into a multi-dimensional, lasting project. |
-| **Clarity & concision** | 15 | Crisp, one-page discipline; ideas are easy to grasp quickly. |
-| **Reflection** | 15 | A thoughtful, personal take on what makes a project worth building to last — not a generic summary. |
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp1) }}
 
 **Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Your score on each criterion = (level ÷ 4) × weight.
 

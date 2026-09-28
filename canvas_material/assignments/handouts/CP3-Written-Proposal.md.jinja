@@ -47,15 +47,8 @@ A 3–5 page document with these sections (the Session 7 skeleton):
 
 Scored on a 100-point analytic rubric; **12% of the course grade.** Reach at least **Developing** on every criterion to stay on a passing track.
 
-| Criterion | Weight | What it measures |
-|---|---|---|
-| **Problem & user clarity** | 15 | Problem and users compelling and evidence-backed — the discovery trail shows. |
-| **Solution & core features (+ non-goals)** | 15 | Coherent solution; sharp, prioritized feature set; explicit non-goals. Scoping *out* is as persuasive as scoping in. |
-| **Feasibility & technical approach** | 20 | Stack and dependencies actually researched; **at least one spike run on the scariest unknown, with its result honestly reported**; approach credible and justified — real homework, not hand-waving. |
-| **Scope realism (MVP for this term)** | 15 | A clear, achievable vertical slice, sized against the *real* build window — roughly five weeks, with the ~10 hrs/week total already spent on class, reading, writing, and reviews — with the arithmetic shown. |
-| **Richness & extensibility** | 15 | Exercises multiple engineering dimensions; a path for others to join and build. |
-| **Risks & mitigation** | 10 | Real, specific risks with credible mitigations — engineering judgment about what could go wrong. |
-| **Argument & revision** | 10 | Persuasive, well-written, and visibly improved in response to peer feedback — measured against your {{ S08_DATE }} draft and the annotated copies you submit with it. **No draft on file caps this criterion at Developing.** |
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp3) }}
 
 **Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
 

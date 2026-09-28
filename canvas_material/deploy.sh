@@ -7,6 +7,10 @@
 #
 # Run from the repo root. Needs CANVAS_API_TOKEN in the environment.
 #
+# After the content deploy, attaches the Canvas rubrics from
+# assignments/rubrics.yaml.jinja (canvas_material/rubrics.py deploy) — mdxcanvas
+# has no rubric resource of its own.
+#
 # NOTE: mdxcanvas' --dryrun still deploys. Do not reach for it as a safety net;
 # rehearse against the sandbox target or not at all.
 set -euo pipefail
@@ -53,3 +57,7 @@ mdxcanvas \
     --cleanup \
     "$@" \
     "$CM/course_content.canvas.md.xml.jinja"
+
+# Rubrics last: they attach to assignments that must already exist.
+echo "==> attaching rubrics"
+python3 "$CM/rubrics.py" deploy "$TARGET"

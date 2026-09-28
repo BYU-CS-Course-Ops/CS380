@@ -37,6 +37,9 @@ through every <include> — and then checks the result.
                           field, so the id is duplicated into GLOBAL_ARGS to
                           build direct course links; if the two drift, every
                           such link silently points at another course.
+    rubrics               rubrics.yaml.jinja failing `rubrics.py check`:
+                          weights not totaling 100, an empty level, or a
+                          published assignment whose rubric is unpublished.
     unparseable dates     A due_at / available_from / available_to /
                           student_todo_at that mdxcanvas cannot parse. Every
                           date in this course is assembled from global_args
@@ -60,6 +63,7 @@ try:
     from bs4 import BeautifulSoup
     from jinja2 import Environment, FileSystemLoader, StrictUndefined, TemplateError
     import markdowndata
+    import yaml
 except ImportError as exc:  # pragma: no cover - environment problem, not content
     sys.exit(
         f"missing dependency: {exc.name}\n"
@@ -145,6 +149,7 @@ def render(path: pathlib.Path, global_args: dict, args, report: Report) -> str:
         glob=lambda pat: sorted(str(f.relative_to(path.parent)) for f in path.parent.glob(pat)),
         parent=lambda p: str(pathlib.Path(p).parent),
         get_arg=lambda *a: global_args.get(*a),
+        load=lambda p: load_args_file((path.parent / p).resolve(), global_args, report),
         split_list=lambda s: s.split(";"),
         zip=zip,
         enumerate=enumerate,
@@ -171,6 +176,8 @@ def load_args_file(path: pathlib.Path, global_args: dict, report: Report):
             return None
     if path.suffix == ".json":
         return json.loads(text)
+    if path.suffix in (".yaml", ".yml"):
+        return yaml.safe_load(text)
     report.error(f"{rel(path)}: unsupported args file type")
     return None
 
@@ -364,6 +371,10 @@ def main() -> int:
     walker = Walker(global_args, report, dump=opts.dump)
     walker.walk_file(CM / "course_content.canvas.md.xml.jinja")
     walker.check()
+
+    import rubrics
+    for problem in rubrics.check(rubrics.load_rubrics(global_args), rubrics.load_checkpoints(global_args)):
+        report.error(problem)
     return report.summarize()
 
 

@@ -2,10 +2,10 @@
    CS 301R — graded checkpoints CP1–CP12.
 
    One <assignment> per checkpoint. The description is a short metadata card
-   followed by an <include> of the student handout, which already carries the
-   full analytic rubric as a table. mdxcanvas has no native Canvas rubric
-   object, and the handouts are the published rubric anyway — students see the
-   same grid in Canvas that they see on paper.
+   followed by an <include> of the student handout, whose "What it measures"
+   table is generated from assignments/rubrics.yaml.jinja. mdxcanvas has no
+   Canvas rubric resource, so the rubric itself is attached after this deploy
+   by rubrics.py (deploy.sh runs it).
 
    Grade weights live on the assignment groups (see course_content), not on
    points. Every checkpoint is scored out of 100, matching its rubric; the

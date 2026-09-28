@@ -15,3 +15,4 @@ canvas_material/deploy-report*.json
 
 # Student submissions and grading notes: private, never version-controlled
 grading/
+__pycache__/

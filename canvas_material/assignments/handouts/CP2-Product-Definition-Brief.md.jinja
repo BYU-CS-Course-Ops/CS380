@@ -57,13 +57,8 @@ This brief must rest on your **<course-link type="page" id="pg-discovery-notes">
 
 Scored on a 100-point analytic rubric; **completes the 10% Discovery grade** (with CP1). Reach at least **Developing** on every criterion to stay on a passing track.
 
-| Criterion | Weight | What it measures |
-|---|---|---|
-| **Target user clarity** | 20 | Userbase sharply defined and bounded — who's in and out is clear. Not "everyone." |
-| **Needfinding quality & honesty** | 30 | Real interviews/observation **and/or** a rigorously documented persona — ideally interviews *informing* a persona — each with honest reasoning about its limits. **Honesty about method is graded as heavily as the findings.** |
-| **Prioritized needs** | 20 | Needs prioritized (must-have vs. nice-to-have) with a defensible rationale. |
-| **Success criteria** | 20 | Specific, observable, defensible criteria for "this works." |
-| **PRD mapping** | 10 | Reads like a lightweight product-requirements doc (see the <course-link type="page" id="pg-prd-reference">PRD reference</course-link>) — a clear definition of problem and user, not a solution. |
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp2) }}
 
 **Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Your score on each criterion = (level ÷ 4) × weight.
 

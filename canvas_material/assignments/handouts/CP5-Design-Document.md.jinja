@@ -42,15 +42,8 @@ A 3–6 page document, written to the **<course-link type="page" id="pg-design-d
 
 Scored on a 100-point analytic rubric; **12% of the course grade.** Team grade, adjusted by individual-contribution evidence.
 
-| Criterion | Weight | What it measures |
-|---|---|---|
-| **Architecture clarity** | 20 | Components, interfaces, data, and external services clearly modeled — the system's shape is visible. |
-| **Appropriate detail** | 15 | The right altitude: neither hand-wavy nor over-specified. A 300-level judgment skill in its own right. |
-| **Tech choices & rationale** | 15 | Choices justified against real alternatives — the alternatives-considered discipline. |
-| **Data & interface design** | 15 | A sound data model and interface sketch that the traced flow actually exercises. |
-| **Risk & open questions** | 10 | Honest unknowns surfaced — including failure cases — rather than hidden. |
-| **Implementability** | 15 | The plan is clearly buildable in the semester that remains, by this team. |
-| **Readability & revision** | 10 | A future contributor could navigate it; visible improvement from draft to final. |
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp5) }}
 
 **Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
 

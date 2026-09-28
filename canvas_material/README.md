@@ -8,16 +8,18 @@ assignments around it, and lays out the modules.
 
 **The dividing line for the repo:** everything under `canvas_material/` is
 student-facing. Everything outside it — instructor outlines, `rubrics.md`, the
-design doc, `development/` — is not.
+design doc, `development/` — is not. (`rubrics.md` is generated *from* here — see
+Rubrics below.)
 
 ## Layout
 
 ```
 course_content.canvas.md.xml.jinja   top-level: settings, groups, includes, modules
 canvas.css                           course palette, baked into inline styles at deploy
-macros.jinja                         banner() and card(), shared by every template
+macros.jinja                         banner(), card(), rubric tables; shared by every template
 deploy.sh                            ./canvas_material/deploy.sh <target>
 validate_canvas_material.py          pre-deploy checks; never touches Canvas
+rubrics.py                           Canvas rubrics + rubrics.md, from assignments/rubrics.yaml.jinja
 
 course_info/
   cs301r_<target>.json               API url, course id, timezone, nav, course name
@@ -32,6 +34,7 @@ lectures/
 assignments/
   checkpoints.canvas.md.xml.jinja    template: CP1–CP12
   checkpoints-args.md.jinja          due dates, points, groups, submission types
+  rubrics.yaml.jinja                 every checkpoint rubric — the source of truth
   completion-items.canvas.*.jinja    template: the credit/no-credit deliverables
   completion-items-args.md.jinja
   handouts/                          the student handout for each assignment
@@ -78,9 +81,55 @@ python3 canvas_material/validate_canvas_material.py --target fall26 --dump /tmp/
 resource deleted here is deleted in Canvas. Naming the target is the
 confirmation — there is no second prompt, so the script works unattended.
 
-> **Sandbox currently points at the live course (36756).** Until a real sandbox
-> shell exists, "rehearsing" means deploying to students. Change
-> `course_info/cs301r_sandbox.json` as soon as there is somewhere safe to aim it.
+The sandbox target is course **31658** ("Testing"): unpublished, no real
+students. Only its Student View test student exists, and it may carry test
+scores. `fall26` is the live course (36756).
+
+After the content deploy, `deploy.sh` attaches the Canvas rubrics — see Rubrics.
+
+## Rubrics
+
+`assignments/rubrics.yaml.jinja` is the **one** place a checkpoint grid is
+written. Everything else is generated from it:
+
+| Output | How |
+|---|---|
+| The Canvas rubric on each checkpoint, set to grade it | `rubrics.py deploy <target>` (run by `deploy.sh`) |
+| The Assignment Rubrics page (`pg-rubrics`) | `pages/rubrics.md.jinja` loops over the file |
+| The "What it measures" table in each CP handout | `m.rubric_summary(...)` from `macros.jinja` |
+| The instructor view, `rubrics.md` at the repo root | `python3 canvas_material/rubrics.py instructor-md` |
+
+Each rubric has a `publish` flag. It gates the rubrics page and the Canvas
+rubric together. Flip it in the same pass as the assignment's `Publish` column;
+`rubrics.py check` (run by the validator) fails when an assignment is published
+but its rubric is not. After any edit to the file, rerun `instructor-md` and
+commit `rubrics.md` alongside it.
+
+```
+python3 canvas_material/rubrics.py check                         # no network
+python3 canvas_material/rubrics.py deploy sandbox --dry-run      # what would change
+python3 canvas_material/rubrics.py deploy fall26 --only cp3      # one rubric
+```
+
+How the Canvas side behaves (verified against the sandbox):
+
+- **Points.** Each criterion gets five ratings, (level ÷ 4) × weight plus
+  Absent = 0. A weight-15 criterion rates 15 / 11.25 / 7.5 / 3.75 / 0. Scoring
+  the rubric in SpeedGrader sets the grade, out of 100.
+- **Idempotent.** An unchanged rubric is left alone. A changed one is edited in
+  place, and the assignment keeps the same rubric id.
+- **Scored rubrics are protected.** If anyone has been scored with a rubric,
+  `deploy` refuses to change it and exits non-zero. `--force` edits it anyway:
+  existing scores and assessments survive, but the grid they were given
+  against has changed.
+- **Assignment redeploys don't detach it.** mdxcanvas editing the assignment
+  leaves the rubric association intact.
+- **Plain text only.** Canvas rubric fields don't render Markdown, so
+  `<course-link>` tags and `**`/`*` emphasis are stripped on the way in.
+- **Not enforced by Canvas:** the CP3 no-draft cap, the pass conditions
+  (Developing+ everywhere), and team-grade adjustments. For those, score the
+  rubric, then override the total; the rubric scores stay on record.
+- Only checkpoints get rubrics. Completion items are credit/no-credit.
 
 ## Validating
 
@@ -165,15 +214,16 @@ target an element the templates actually emit.
   block by class meeting time — now known (M/W 9:30 AM) — so the slot can be
   confirmed with the registrar and pinned here.
 - Room is set: TMCB 1149 (`CLASSROOM`).
-- `pages/rubrics.md.jinja` carries the grids for CP1–CP4 only. Port each remaining
-  grid from the instructor-side `rubrics.md` as its handout is reviewed; the
-  handouts all link to that page for the full four-level grid.
-- **CP5–CP12, the Team Charter, and the MVP Plan deploy unpublished** — their
+- Rubrics CP1–CP5 are published. CP6–CP12 in `assignments/rubrics.yaml.jinja`
+  still carry the first-cut instructor wording (`publish: false`). As each
+  handout is reviewed: reword its grid for students, add `looking_for` notes,
+  set `publish: true`, and swap the handout's hand-written "What it measures"
+  table for `m.rubric_summary(...)` (as CP1–CP5 do).
+- **CP6–CP12, the Team Charter, and the MVP Plan deploy unpublished** — their
   handouts are not finalized. The `Publish` column in
   `assignments/checkpoints-args.md.jinja` and
   `assignments/completion-items-args.md.jinja` is the switch; flip a row to
-  `true` when its handout is reviewed, and port its grid to the rubrics page at
-  the same time.
+  `true` when its handout is reviewed, and publish its rubric in the same pass.
 - Session pages 10–27 deploy **unpublished** — they have no prose yet, only
   dates, due items, and module placement. Write the page, flip `Publish` to
   `"true"` in `session-pages-args.md.jinja`.

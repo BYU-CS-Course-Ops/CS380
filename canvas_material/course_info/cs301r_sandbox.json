@@ -1,6 +1,6 @@
 {
   "CANVAS_API_URL": "https://byu.instructure.com/",
-  "CANVAS_COURSE_ID": 36756,
+  "CANVAS_COURSE_ID": 31658,
   "LOCAL_TIME_ZONE": "America/Denver",
   "DEPLOY_ROOT": "..",
   "COURSE_NAV": [
@@ -15,11 +15,11 @@
     "Settings"
   ],
   "GLOBAL_ARGS": {
-    "COURSE_ID": 36756,
+    "COURSE_ID": 31658,
     "CANVAS_BASE_URL": "https://byu.instructure.com",
-    "COURSE_NAME": "C S 301R: Software Engineering Studio I — Founding an Open-Source Project (Fall 2026 — SANDBOX)",
-    "COURSE_CODE": "C S 301R (Fall 2026)",
+    "COURSE_NAME": "[Testing] C S 301R: Software Engineering Studio I — Founding an Open-Source Project (Fall 2026)",
+    "COURSE_CODE": "CS 380 [Testing]",
     "SEMESTER": "Fall 2026"
   },
-  "_README": "Sandbox target. TODO: point CANVAS_COURSE_ID at a real sandbox shell before the semester starts. Until then this is the LIVE course - deploying here is deploying to students."
+  "_README": "Sandbox target: the unpublished 'Testing' shell (31658), no students. Deploy here to rehearse; fall26 is the live course (36756)."
 }

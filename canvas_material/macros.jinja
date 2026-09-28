@@ -57,3 +57,31 @@
    Human-readable date for student-facing prose: "Wed, Sep 23, 2026".
    -------------------------------------------------------------------------- #}
 {% macro long_date(day, date, year) %}{{ day }}, {{ date }}, {{ year }}{% endmacro %}
+
+{# --------------------------------------------------------------------------
+   rubric_summary(r) / rubric_grid(r)
+
+   Markdown tables generated from one rubric in assignments/rubrics.yaml.jinja,
+   the source of truth for every grid. Load the file with the path relative
+   to the calling template:
+
+       {{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp1) }}
+
+   rubric_summary: Criterion / Weight / What it measures — the handout table.
+   rubric_grid:    Criterion / Wt / the four levels — the rubrics page.
+   -------------------------------------------------------------------------- #}
+{% macro rubric_summary(r) -%}
+| Criterion | Weight | What it measures |
+|---|---|---|
+{% for c in r.criteria -%}
+| **{{ c.name }}** | {{ c.weight }} | {{ c.measures }} |
+{% endfor -%}
+{%- endmacro %}
+
+{% macro rubric_grid(r) -%}
+| Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
+|---|---|---|---|---|---|
+{% for c in r.criteria -%}
+| {{ c.name }} | {{ c.weight }} | {{ c.levels.exemplary }} | {{ c.levels.proficient }} | {{ c.levels.developing }} | {{ c.levels.beginning }} |
+{% endfor -%}
+{%- endmacro %}

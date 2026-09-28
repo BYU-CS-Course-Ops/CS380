@@ -43,14 +43,8 @@ The deeper skill is **thinking on your feet about your own project's weaknesses.
 
 Scored on a 100-point <course-link type="page" id="pg-rubrics">analytic rubric</course-link>; **8% of the course grade.** Peer scores inform the instructor's judgment; the grade is the instructor's.
 
-| Criterion | Weight | What it measures |
-|---|---|---|
-| **Problem/solution clarity** | 20 | The audience grasps the need and the idea immediately — no rewinding. |
-| **Persuasiveness & recruiting** | 25 | Compelling enough to attract teammates, with a clear call to join. Weighted highest because the pitch's *job* is to recruit — audience effect is part of the grade. |
-| **Feasibility defense** | 15 | Scope and tradeoffs defended convincingly — the <course-link type="assignment" id="cp3">CP3</course-link> honest-confidence move, spoken. |
-| **Handling of questions** | 15 | Direct, composed, honest under questioning — including honest "I don't know yet"s. |
-| **Slide & visual quality** | 10 | Few, clean, purposeful visuals that help rather than compete. |
-| **Delivery & professionalism** | 15 | Confident, well-paced, within time. |
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp4) }}
 
 **Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
 
