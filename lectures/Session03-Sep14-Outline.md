@@ -35,7 +35,7 @@ By the end of this session, a student can:
 - **Assign the reading in advance** (see above) and expect it done.
 - *choosealicense.com* open in the browser for a live license walk-through.
 - **Example repos to demo** (strong governance, **Appendix A**) and **repos for students to audit** (**Appendix B**) — open them in tabs beforehand.
-- The one-page **License Cheat Sheet** — `resources/License-Cheat-Sheet.md` — to hand out or show.
+- The one-page **License Cheat Sheet** — `canvas_material/pages/License-Cheat-Sheet.md` — to hand out or show.
 - The **License/OSS short-response** prompt (this session's deliverable) — pick one from **Appendix D**.
 - *Reusable from the prior course:* `open-source-project-course/modules/introduction/` (Cathedral & Bazaar PDF, possible-projects.md) and `modules/collaborative/` for repo/governance material.
 
@@ -69,7 +69,7 @@ By the end of this session, a student can:
   - The [/no-permission](https://choosealicense.com/no-permission/) page — what "no license" means.
   - The [appendix comparison grid](https://choosealicense.com/appendix/) for a side-by-side of everything.
   - *How to apply it:* add a `LICENSE` file in the repo root (GitHub offers a picker).
-- **Hands-on (~3 min) — "Pick a license":** each student opens choosealicense.com and, for their most promising candidate idea, jots (1) the license name, (2) one sentence on *why* (adoption vs. keeping derivatives open), and (3) one thing it *requires* of people who use their code. Then a 30-second turn-to-a-neighbor: "what did you pick and why?" Take 1–2 aloud — this primes the short-response deliverable. *(Cheat sheet: `resources/License-Cheat-Sheet.md`.)*
+- **Hands-on (~3 min) — "Pick a license":** each student opens choosealicense.com and, for their most promising candidate idea, jots (1) the license name, (2) one sentence on *why* (adoption vs. keeping derivatives open), and (3) one thing it *requires* of people who use their code. Then a 30-second turn-to-a-neighbor: "what did you pick and why?" Take 1–2 aloud — this primes the short-response deliverable. *(Cheat sheet: `canvas_material/pages/License-Cheat-Sheet.md`.)*
 
 ### 4. Governance — the choices a founder makes — 16 min
 - What governance is and **why contributors need it** — people won't contribute to a project whose rules and expectations are unclear.

@@ -39,7 +39,7 @@ By the end of Session 1, a student can:
 - Slides (to be built from this outline).
 - 3–4 concrete example project ideas prepared as **good vs. weak** contrasts (some rich/real, some toy/overscoped) — ideally drawn from real past student or OSS projects.
 - The selection-criteria list on a single visible slide/handout.
-- The one-page **Idea Brief template** (from `assignments/CP1-Idea-Briefs.md`) ready to show.
+- The one-page **Idea Brief template** (from `canvas_material/assignments/handouts/CP1-Idea-Briefs.md.jinja`) ready to show.
 - Index cards or a shared doc for the closing idea-journal kickoff.
 - Syllabus / schedule / rubrics posted to the LMS before class.
 - *Reusable from the prior course:* the CPS module (`open-source-project-course/modules/creative/cps.md`) and its egg-drop exercise — source material for the CPS spine (segment 8) and the Sep 9 divergent workshop; `modules/creative/applying-in-engineering.md` shows CPS applied to a concrete SE problem.
@@ -239,4 +239,4 @@ By the end of Session 1, a student can:
 
 ---
 
-*Next step: flesh this outline into slides + talking points (and decide the example set). Related files: `CS301R-ProjectCreation_v3.md` (design), `CS301R-Schedule-Fall2026.md` (dates), `assignments/CP1-Idea-Briefs.md` (the assignment this session launches).*
+*Next step: flesh this outline into slides + talking points (and decide the example set). Related files: `CS301R-ProjectCreation_v3.md` (design), `CS301R-Schedule-Fall2026.md` (dates), `canvas_material/assignments/handouts/CP1-Idea-Briefs.md.jinja` (the assignment this session launches).*

@@ -5,7 +5,7 @@
 **Prior reading (all free — nothing to buy):**
 - **Simon Peyton Jones, John Hughes & John Launchbury — [*How to give a good research talk*](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/08/giving-a-talk.pdf)** (4 pages) — **the primary reading.** Two questions organize the whole thing: *who is my primary audience?* and *if someone remembers only one thing, what should it be?* Everything else — what to cut, what to show, how to open, how to handle questions — falls out of the answers. **Note the date: this paper is from 1993**, and it shows most in the section on visual aids, which is written for overhead projectors and 35mm slides. Read it the way you read any older engineering source: **take the reasoning, not the format.** The advice about audiences and about what a talk is *for* has not aged at all.
 - **Guy Kawasaki — [*The 10/20/30 Rule of PowerPoint*](https://guykawasaki.com/the_102030_rule/)** — short, opinionated, and right about the essentials: few slides, big fonts, respect the clock.
-- **`assignments/CP4-Pitch-Presentation.md`** — **the assignment itself, posted Wed, Sep 30 and read before today.** Class works toward Wednesday's pitch and assumes you already know what it asks for: the length, the two jobs, the rubric, and what "slides posted before class" means. We won't read it to you.
+- **`canvas_material/assignments/handouts/CP4-Pitch-Presentation.md.jinja`** — **the assignment itself, posted Wed, Sep 30 and read before today.** Class works toward Wednesday's pitch and assumes you already know what it asks for: the length, the two jobs, the rubric, and what "slides posted before class" means. We won't read it to you.
 - **Your own CP3 proposal** — the pitch is the same argument, compressed and spoken.
 
 *Optional — skim only:* **Kawasaki, [*The Only 10 Slides You Need in Your Pitch*](https://guykawasaki.com/the-only-10-slides-you-need-in-your-pitch/)** restates the 10/20/30 argument nearly verbatim, so don't read it twice — skim it for the **slide roles**, what each slide in a pitch is *for*. Ours is 6–8 minutes and smaller than his ten, but the roles transfer.
@@ -170,12 +170,12 @@ Circulate, note the two or three failures the room shares, and name them in the 
 
 ## Appendix — classroom handouts (Session 9)
 
-- **Pitch Evaluation Sheet:** `resources/Pitch-Evaluation-Sheet.md` (reference version) and `resources/Pitch-Evaluation-Sheet.html` / `.pdf` — the printable, **two half-sheets per page**; one half-sheet per pitch watched
-- **CP4 assignment + rubric:** `assignments/CP4-Pitch-Presentation.md` (prior reading) and `rubrics.md` — on screen in §5 beside the peer sheet
+- **Pitch Evaluation Sheet:** `canvas_material/pages/Pitch-Evaluation-Sheet.md` (reference version) and `resources/Pitch-Evaluation-Sheet.html` / `.pdf` — the printable, **two half-sheets per page**; one half-sheet per pitch watched
+- **CP4 assignment + rubric:** `canvas_material/assignments/handouts/CP4-Pitch-Presentation.md.jinja` (prior reading) and `rubrics.md` — on screen in §5 beside the peer sheet
 - **Pitch Build Sheet:** `resources/Pitch-Build-Sheet.html` / `.pdf` — the §6a half-sheet (five beats with time budgets · the beat-1 evidence line · the ask, verbatim · a 5–7 slide list). One per student
 - **The pitch arc** (§2) — slide
 - **Session 7 samples** (`Sample-Proposal-Strong` / `-Weak`) — the §5 calibration example reuses that project
 
 ---
 
-*Session 9 is built: deck `Session09-PitchWorkshop.pptx`, student page `canvas_material/lectures/Session09-Oct05-StudentPage.md`. Handouts: `resources/Pitch-Build-Sheet.pdf`, `resources/Pitch-Evaluation-Sheet.pdf`. Related: `Session08-Sep30-Outline.md`, `Session10-Oct07-Outline.md`, `rubrics.md` (CP3, CP4).*
+*Session 9 is built: deck `Session09-PitchWorkshop.pptx`, student page `canvas_material/lectures/session-pages/Session09-StudentPage.md.jinja`. Handouts: `resources/Pitch-Build-Sheet.pdf`, `resources/Pitch-Evaluation-Sheet.pdf`. Related: `Session08-Sep30-Outline.md`, `Session10-Oct07-Outline.md`, `rubrics.md` (CP3, CP4).*

@@ -3,10 +3,10 @@
 **CS 301R · Software Engineering Studio I: Founding an Open-Source Project**
 **Session 4 of 27 · Wed, Sep 16, 2026 · 75-minute block**
 **Prior reading (all free — nothing to buy):**
-- **Course summary of *The Mom Test*** — `resources/Mom-Test-Summary.md` (the rules and techniques for talking to users without fooling yourself). *(The library has the full book if you want it; not required.)*
+- **Course summary of *The Mom Test*** — `canvas_material/pages/Mom-Test-Summary.md` (the rules and techniques for talking to users without fooling yourself). *(The library has the full book if you want it; not required.)*
 - **Nielsen Norman Group — [*User Interviews 101*](https://www.nngroup.com/articles/user-interviews/)** — how, when, and why to run interviews.
 - **Nielsen Norman Group — [*Personas*](https://www.nngroup.com/articles/persona/)** — background for the persona you'll build.
-- **Interview ethics for students** — `resources/Interview-Ethics-for-Students.md` (short — consent, privacy, and when interviews count as "research").
+- **Interview ethics for students** — `canvas_material/pages/Interview-Ethics-for-Students.md` (short — consent, privacy, and when interviews count as "research").
 **Maps to:** Design Week 2, Session B — *discovery workshop: interviewing, good questions, honest persona/proxy construction, consent/ethics.*
 
 > **Status: OUTLINE (v2 — expanded per instructor notes).** Second half of Week 2 — a hands-on workshop (Session B). Students practice interviewing in class, then talk to real people during the week.
@@ -34,7 +34,7 @@ By the end of this session, a student can:
 ## Instructor prep / materials
 
 - **Assign the reading in advance** and expect it done.
-- **Print / post the handouts:** `resources/Good-vs-Leading-Questions.md`, `resources/Interview-Prompt-Cards.md`, `resources/Persona-Template.md` (and the `Mom-Test-Summary.md` reading).
+- **Print / post the handouts:** `canvas_material/pages/Good-vs-Leading-Questions.md`, `canvas_material/pages/Interview-Prompt-Cards.md`, `canvas_material/pages/Persona-Template.md` (and the `Mom-Test-Summary.md` reading).
 - A slide with the **three Mom Test rules** and one with the **mock-interview process** (§4).
 - **The ethics gate (deck slide 8)** — the hands-up confirmation that closes §3. Run it every time this session is taught; it is the last gate before students interview real people.
 - The **Discovery Notes assignment** (`canvas_material/assignments/handouts/Discovery-Notes.md.jinja`) ready to hand out.
@@ -67,7 +67,7 @@ By the end of this session, a student can:
   - **Respect their time and their "no."**
   - **Protect privacy** — anonymize in your notes/brief.
   - **Check with the instructor first** for sensitive topics/populations (minors, health info, etc.).
-  - *(Anchor readings: the consent section of the Good-vs-Leading handout and `resources/Interview-Ethics-for-Students.md`, which is grounded in BYU IRB guidance.)*
+  - *(Anchor readings: the consent section of the Good-vs-Leading handout and `canvas_material/pages/Interview-Ethics-for-Students.md`, which is grounded in BYU IRB guidance.)*
 - **Then close the section with the gate (~2 min, deck slide 8).** You've just taught the norms; now confirm them, because this is the last checkpoint before students go talk to real people on their own. Read the four aloud — *ask and say why · no recording unless they say yes · anonymize your notes · sensitive topic, ask me first* — and take hands on each. A room that can't raise hands on "anonymize" hasn't read the ethics handout, and that is worth finding out now rather than after someone's name lands in a brief. Two points on the gate slide are **not** in the norms list above, because they come from the reading:
   - **The IRB boundary.** A classroom project isn't "research" in BYU's sense, so no IRB review is required — but ethics apply in full, and publishing or making generalizable claims later *would* require IRB approval first. Tell them to come ask before collecting more data if they think they're crossing that line.
   - **Power imbalance.** Someone who might feel they can't refuse you — a roommate, an employee, someone you lead — can't give a real "no." Students trip here because their easiest interviewees are exactly the people who can least comfortably decline.
@@ -90,7 +90,7 @@ By the end of this session, a student can:
   - **Every claim is tagged** `[E]` **evidence** (with a real source — a forum thread, a review, a community post, your own observation) or `[A]` **assumption** (a labeled guess).
   - **No invented facts** — a guess is marked `[A]`, never dressed up as fact.
   - **A sources list**, and **the top assumptions you'd verify** in a real conversation.
-- Walk the template quickly; show the **honest vs. made-up persona examples** (`resources/Persona-Examples.md`) side by side — same topic (commuter parking), opposite method — then debrief what makes one trustworthy.
+- Walk the template quickly; show the **honest vs. made-up persona examples** (`canvas_material/pages/Persona-Examples.md`) side by side — same topic (commuter parking), opposite method — then debrief what makes one trustworthy.
 - **Scope it modestly** — ~an hour of gathering readily-available evidence, not a research project.
 
 ### 6. The Discovery Notes assignment + capture — 8 min
@@ -117,7 +117,7 @@ By the end of this session, a student can:
 
 ## Open questions / decisions before we flesh this out
 
-- **Consent/ethics reading:** drafted — `resources/Interview-Ethics-for-Students.md` (grounded in BYU IRB's "Is IRB Review Required?" guidance). *Decision needed:* assign it as pre-reading (it's ~2 pages), or just discuss in class from the handout? *(Currently listed under Prior reading.)*
+- **Consent/ethics reading:** drafted — `canvas_material/pages/Interview-Ethics-for-Students.md` (grounded in BYU IRB's "Is IRB Review Required?" guidance). *Decision needed:* assign it as pre-reading (it's ~2 pages), or just discuss in class from the handout? *(Currently listed under Prior reading.)*
 - **Persona scope:** confirmed — everyone builds **one** modest persona *in addition to* the required real conversation(s); ~an hour.
 - **Practice format:** confirmed — triads, **three rounds** so everyone interviews.
 - **Number of conversations:** minimum **one**, aim for **1–3** — confirm the floor you'll grade against.
@@ -132,12 +132,12 @@ By the end of this session, a student can:
 
 ## Appendix — classroom handouts (Session 4)
 
-- **The Mom Test — summary (reading):** `resources/Mom-Test-Summary.md`
-- **Good vs. Leading Questions (+ consent/ethics):** `resources/Good-vs-Leading-Questions.md`
-- **Interview Prompt Cards (mock-interview rounds):** `resources/Interview-Prompt-Cards.md`
-- **Persona Template (honest, evidence-tagged):** `resources/Persona-Template.md`
-- **Persona examples (honest vs. made-up):** `resources/Persona-Examples.md`
-- **Interview ethics for students (reading):** `resources/Interview-Ethics-for-Students.md`
+- **The Mom Test — summary (reading):** `canvas_material/pages/Mom-Test-Summary.md`
+- **Good vs. Leading Questions (+ consent/ethics):** `canvas_material/pages/Good-vs-Leading-Questions.md`
+- **Interview Prompt Cards (mock-interview rounds):** `canvas_material/pages/Interview-Prompt-Cards.md`
+- **Persona Template (honest, evidence-tagged):** `canvas_material/pages/Persona-Template.md`
+- **Persona examples (honest vs. made-up):** `canvas_material/pages/Persona-Examples.md`
+- **Interview ethics for students (reading):** `canvas_material/pages/Interview-Ethics-for-Students.md`
 - **Discovery Notes assignment:** `canvas_material/assignments/handouts/Discovery-Notes.md.jinja`
 
 ---

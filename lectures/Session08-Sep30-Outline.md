@@ -112,7 +112,7 @@ By the end of this session, a student can:
 ## Deliverable / after class
 
 - **Revise the proposal** against review feedback. **CP3 Written Proposal due Mon, Oct 5** (start of class, via LMS) — submitted **with scans or photos of both annotated draft copies.**
-- **Post CP4 today** (`assignments/CP4-Pitch-Presentation.md`) and say so out loud in the wrap: it is **prior reading for Monday's pitch workshop**, which points at the assignment rather than re-teaching it.
+- **Post CP4 today** (`canvas_material/assignments/handouts/CP4-Pitch-Presentation.md.jinja`) and say so out loud in the wrap: it is **prior reading for Monday's pitch workshop**, which points at the assignment rather than re-teaching it.
 - Start thinking about the pitch: same argument, 6–8 minutes, persuade + recruit.
 
 ---
@@ -122,8 +122,8 @@ By the end of this session, a student can:
 - **Review Protocol Sheet:** `resources/Review-Protocol-Sheet.html` / `.pdf` — one page, one per student: reviewer protocol and register, author's side, the **CP3 rubric**, the scope-narrowing moves, and the revision list
 - **CP3 rubric:** on the handout above; full version in `rubrics.md` (Written Proposal) — also put it on a slide for the room
 - **Scope-narrowing moves** (§5) — slide (also on the handout)
-- **Idea Scoring Sheet:** `resources/Idea-Scoring-Sheet.md` (the same criteria, if useful during review)
+- **Idea Scoring Sheet:** `canvas_material/pages/Idea-Scoring-Sheet.md.jinja` (the same criteria, if useful during review)
 
 ---
 
-*Session 8 is built: deck `Session08-PeerReview.pptx`, handout `resources/Review-Protocol-Sheet.pdf`, student page `canvas_material/lectures/Session08-Sep30-StudentPage.md`. Related: `Session07-Sep28-Outline.md`, `Session09-Oct05-Outline.md`, `rubrics.md` (CP3).*
+*Session 8 is built: deck `Session08-PeerReview.pptx`, handout `resources/Review-Protocol-Sheet.pdf`, student page `canvas_material/lectures/session-pages/Session08-StudentPage.md.jinja`. Related: `Session07-Sep28-Outline.md`, `Session09-Oct05-Outline.md`, `rubrics.md` (CP3).*

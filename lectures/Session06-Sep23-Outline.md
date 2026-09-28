@@ -36,7 +36,7 @@ By the end of this session, a student can:
 - **Assign the reading in advance;** expect the feasibility read from Session 5 done.
 - **Slides:** the convergent-thinking principles; **the portable evaluation method** and **the criteria we chose** (one instance of it); the richness test (dimensions · room to grow · thin vs. too big); the Value vs. Do-ability 2×2; the peer-feedback protocol; the CP2 shape.
 - **Two worked calibration candidates for §3 are provided** — a thin *ClassClock* vs. the rich legal-defense platform (from the SE Studio proposal). Use them as-is, or swap in an idea the room actually raised in Session 2 if that contrast lands better.
-- **Print / post the handouts:** the **Idea Scoring Sheet** (includes the Value vs. Do-ability grid) — `canvas_material/resources/Idea-Scoring-Sheet.pdf`, **two pages, print double-sided, one per student**; the **CP2 Product Definition Brief** assignment — `assignments/CP2-Product-Definition-Brief.md`; the **PRD reference** — `resources/PRD-Reference.md`.
+- **Print / post the handouts:** the **Idea Scoring Sheet** (includes the Value vs. Do-ability grid) — `canvas_material/resources/Idea-Scoring-Sheet.pdf`, **two pages, print double-sided, one per student**; the **CP2 Product Definition Brief** assignment — `canvas_material/assignments/handouts/CP2-Product-Definition-Brief.md.jinja`; the **PRD reference** — `canvas_material/pages/PRD-Reference.md`.
 - Have the **CP2 rubric** (`rubrics.md`) visible so students see what the brief is graded on.
 - *Reusable from the prior course:* convergence/scoping material in `open-source-project-course/`.
 
@@ -93,7 +93,7 @@ By the end of this session, a student can:
   - **Target user** — sharply defined and bounded; who's in and out.
   - **Needs** — from your **Discovery Notes** (real conversations + your honest persona), **prioritized** with a rationale.
   - **Success criteria** — specific, observable definitions of "this works."
-  - **PRD mapping** — it should read like a lightweight product-requirements doc. *(Point students to `resources/PRD-Reference.md` for what a PRD contains and what it leaves out.)*
+  - **PRD mapping** — it should read like a lightweight product-requirements doc. *(Point students to `canvas_material/pages/PRD-Reference.md` for what a PRD contains and what it leaves out.)*
 - **Honesty is graded as heavily as findings** — be clear about what came from real users vs. an assumption.
 - **Turn in CP1 today.** CP2 is due **Mon, Sep 28** — the weekend gap is deliberate, so the brief reflects today's feedback instead of being rushed out the same hour you chose the idea.
 
@@ -115,7 +115,7 @@ By the end of this session, a student can:
 
 ## Open questions / decisions before we flesh this out
 
-- **CP2 Product Definition Brief handout:** created — `assignments/CP2-Product-Definition-Brief.md`.
+- **CP2 Product Definition Brief handout:** created — `canvas_material/assignments/handouts/CP2-Product-Definition-Brief.md.jinja`.
 - **Idea Scoring Sheet + Value/Do-ability grid:** created — Canvas page `pg-idea-scoring-sheet`, printable at `canvas_material/resources/Idea-Scoring-Sheet.pdf` (`.html` source alongside).
 - **CP1 / CP2 sequencing:** *resolved* — CP1 is due at the workshop; CP2 was moved off the same day to **Mon, Sep 28**, so students converge first and then document the chosen idea. (Was: "same-day due," which asked for a CP2 draft before the idea existed.) Only the CP1 in-class turn-in time still needs confirming (start-of-class recommended).
 - **Solo path:** students converging toward a solo project should still get a full feedback round — confirm grouping so no one is left out.
@@ -133,12 +133,12 @@ By the end of this session, a student can:
 ## Appendix — classroom handouts (Session 6)
 
 - **Idea Scoring Sheet** (selection criteria + Value vs. Do-ability grid): `canvas_material/resources/Idea-Scoring-Sheet.pdf` — one per student
-- **CP2 Product Definition Brief assignment:** `assignments/CP2-Product-Definition-Brief.md`
-- **PRD reference** (what a PRD contains): `resources/PRD-Reference.md`
+- **CP2 Product Definition Brief assignment:** `canvas_material/assignments/handouts/CP2-Product-Definition-Brief.md.jinja`
+- **PRD reference** (what a PRD contains): `canvas_material/pages/PRD-Reference.md`
 - **CP2 rubric:** `rubrics.md`
 - **CPS handbook — Value vs. Do-ability (p. 27):** [download the PDF](https://brdo.berkeley.edu/sites/default/files/cps_handbook.pdf)
-- **Discovery Notes (from Session 4):** `assignments/Discovery-Notes.md`
+- **Discovery Notes (from Session 4):** `canvas_material/assignments/handouts/Discovery-Notes.md.jinja`
 
 ---
 
-*Next step: build the Session 6 student page (deck built — `lectures/Session06-Convergence.pptx`, 19 slides). Related: `Session05-Sep21-Outline.md`, `assignments/CP2-Product-Definition-Brief.md`, `resources/Idea-Scoring-Sheet.md`, `resources/PRD-Reference.md`, `CS301R-ProjectCreation_v4.md` (§7 Week 3), `rubrics.md` (CP1, CP2).*
+*Next step: build the Session 6 student page (deck built — `canvas_material/lectures/powerpoint/Session06-Convergence.pptx`, 19 slides). Related: `Session05-Sep21-Outline.md`, `canvas_material/assignments/handouts/CP2-Product-Definition-Brief.md.jinja`, `canvas_material/pages/Idea-Scoring-Sheet.md.jinja`, `canvas_material/pages/PRD-Reference.md`, `CS301R-ProjectCreation_v4.md` (§7 Week 3), `rubrics.md` (CP1, CP2).*

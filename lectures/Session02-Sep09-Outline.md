@@ -149,4 +149,4 @@ By the end of Session 2, a student can:
 
 ---
 
-*Next step: confirm the pre-reading, decide the egg-drop format, and flesh the workshop into minute-by-minute facilitation. Related: `Session01-Sep02-Outline.md`, `assignments/CP1-Idea-Briefs.md`, `assignments/Idea-Journal.md`, `open-source-project-course/modules/creative/cps.md`.*
+*Next step: confirm the pre-reading, decide the egg-drop format, and flesh the workshop into minute-by-minute facilitation. Related: `Session01-Sep02-Outline.md`, `canvas_material/assignments/handouts/CP1-Idea-Briefs.md.jinja`, `canvas_material/pages/Idea-Journal.md.jinja`, `open-source-project-course/modules/creative/cps.md`.*

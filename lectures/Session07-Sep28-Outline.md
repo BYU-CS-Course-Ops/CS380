@@ -3,8 +3,8 @@
 **CS 301R · Software Engineering Studio I: Founding an Open-Source Project**
 **Session 7 of 27 · Mon, Sep 28, 2026 · 75-minute block**
 **Prior reading (all free — nothing to buy):**
-- **Course reading — [*The Anatomy of a Software Proposal*](../resources/Proposal-Anatomy-Reading.md)** (`resources/Proposal-Anatomy-Reading.md`) — **the primary reading.** Section-by-section: what each part contains, what it's for, where the material comes from, how to write it, and how it fails; the four checks; the order to write the sections in. **Class assumes this has been read** — the skeleton is reviewed, not taught.
-- **Sample proposal (weak) — `resources/Sample-Proposal-Weak.md`** — read it and mark the places you stop believing the author. We dissect it in class.
+- **Course reading — [*The Anatomy of a Software Proposal*](../canvas_material/pages/Proposal-Anatomy-Reading.md)** (`canvas_material/pages/Proposal-Anatomy-Reading.md`) — **the primary reading.** Section-by-section: what each part contains, what it's for, where the material comes from, how to write it, and how it fails; the four checks; the order to write the sections in. **Class assumes this has been read** — the skeleton is reviewed, not taught.
+- **Sample proposal (weak) — `canvas_material/pages/Sample-Proposal-Weak.md`** — read it and mark the places you stop believing the author. We dissect it in class.
 - **Kislay Verma — [*Why programmers don't write documentation*](https://kislayverma.com/why-programmers-dont-write-documentation/)** — short; why clear writing is hard, and why it's engineering work rather than overhead.
 - *Optional:* **Write the Docs — [*How to write software documentation*](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)** — audience, purpose, and structure. The course reading covers this ground applied to proposals; this is the general version for anyone who wants it.
 - **Finalize and submit your CP2 Product Definition Brief** — **due at the start of class today**; the proposal is built directly on it.
@@ -39,7 +39,7 @@ By the end of this session, a student can:
   - `Sample-Proposal-Strong.md` — *Backstage*, a costume and props catalog for volunteer-run community theaters.
   - `Sample-Proposal-Weak.md` — *CostumeHub*, the same project written by someone who skipped discovery and cut nothing.
   - Both are labeled teaching samples with invented evidence. **Say that out loud** the first time they go on screen — this course grades honesty about evidence, and a sample with fabricated interviews needs its label spoken, not just printed.
-- **Slides: `lectures/Session07-ProposalAnatomy.pptx`** — 30 slides, built from this outline. Slide 2 is a pop-up entry poll on the reading · 8–11 the four checks, one each · 12 the dissection setup · **13 "say what's wrong — specifically"** · **14 the two executive summaries side by side** · 15–20 the three excerpt pairs (weak alone, then the contrast, each with a section locator) · 21–22 the pattern lists · 23 feasibility · **24 the CP3 rubric grid** (jump between 23 and 24 during the feasibility discussion) · 25 the spike · 26 the arithmetic with the "do it right now" callout · 27–28 the two activity slides (they stay up while students work) · 29 Wednesday's mechanics · 30 the wrap.
+- **Slides: `canvas_material/lectures/powerpoint/Session07-ProposalAnatomy.pptx`** — 30 slides, built from this outline. Slide 2 is a pop-up entry poll on the reading · 8–11 the four checks, one each · 12 the dissection setup · **13 "say what's wrong — specifically"** · **14 the two executive summaries side by side** · 15–20 the three excerpt pairs (weak alone, then the contrast, each with a section locator) · 21–22 the pattern lists · 23 feasibility · **24 the CP3 rubric grid** (jump between 23 and 24 during the feasibility discussion) · 25 the spike · 26 the arithmetic with the "do it right now" callout · 27–28 the two activity slides (they stay up while students work) · 29 Wednesday's mechanics · 30 the wrap.
 - **A design rule the deck follows, worth keeping on any rebuild:** students have read the *weak* sample only, so **anything the presenter notes tell you to point at is on the slide.** Excerpts also carry a locator line (which of the nine sections, and what that section is for), and slide 14 shows both executive summaries first, so the paragraphs that follow land somewhere on the map instead of arriving from nowhere.
 - **Print:** the **Proposal Outline worksheet** (`resources/Proposal-Outline-Worksheet.pdf`), one per student — it drives §6 and the students write on it. Also print the weak sample, one per student, if you'd rather they mark paper than screens in §4.
 - **The CP3 rubric** is slide 24 of the deck, so it needs no separate setup — but have `rubrics.md` open if anyone asks about the four performance levels, which the slide deliberately leaves out.
@@ -178,14 +178,14 @@ Authors **capture, don't defend** — the same protocol as the Week-3 workshop a
 ## Appendix — classroom handouts (Session 7)
 
 - **Proposal Outline worksheet:** `resources/Proposal-Outline-Worksheet.pdf` — the §6 in-class sheet, one page, one per student (source: `Proposal-Outline-Worksheet.html`)
-- **Course reading:** `resources/Proposal-Anatomy-Reading.md` (assigned before class)
-- **Sample proposals:** `resources/Sample-Proposal-Strong.md` (*Backstage*) and `resources/Sample-Proposal-Weak.md` (*CostumeHub*) — same project, two ways
-- **CP3 assignment:** `assignments/CP3-Written-Proposal.md`
+- **Course reading:** `canvas_material/pages/Proposal-Anatomy-Reading.md` (assigned before class)
+- **Sample proposals:** `canvas_material/pages/Sample-Proposal-Strong.md` (*Backstage*) and `canvas_material/pages/Sample-Proposal-Weak.md` (*CostumeHub*) — same project, two ways
+- **CP3 assignment:** `canvas_material/assignments/handouts/CP3-Written-Proposal.md.jinja`
 - **CP3 rubric:** `rubrics.md` (Written Proposal) — the four-level grid
-- **Spikes reading:** `resources/Spikes-Reading.md` (the spike is required for CP3)
-- **Feasibility & Risk worksheet:** `resources/Feasibility-Risk-Worksheet.md` (feeds the risks section)
-- **Learning-Plan template:** `resources/Learning-Plan-Template.md` (feeds the technical approach)
-- **CP2 Product Definition Brief:** `assignments/CP2-Product-Definition-Brief.md` (the foundation)
+- **Spikes reading:** `canvas_material/pages/Spikes-Reading.md` (the spike is required for CP3)
+- **Feasibility & Risk worksheet:** `canvas_material/pages/Feasibility-Risk-Worksheet.md` (feeds the risks section)
+- **Learning-Plan template:** `canvas_material/pages/Learning-Plan-Template.md` (feeds the technical approach)
+- **CP2 Product Definition Brief:** `canvas_material/assignments/handouts/CP2-Product-Definition-Brief.md.jinja` (the foundation)
 
 ---
 
