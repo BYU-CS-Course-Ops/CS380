@@ -8,12 +8,17 @@
 #
 #   tools/print-md.sh <in.md> <out.pdf> "<Title>" ["<Kicker>"]
 #
+# PRINT_MD_EXTRA_CSS, if set, is appended after print-md.css: a per-document
+# nudge (e.g. to pull a one-line orphan page back) without touching the shared
+# stylesheet.
+#
 # Pipeline: strip mdxcanvas tags -> pandoc to HTML with the course print CSS ->
 # headless Chrome to PDF. Chrome needs Windows paths, so the output must live
 # under /mnt/<drive>/... LibreOffice is not installed and is not needed.
 #
-# <course-link ...>text</course-link> becomes plain text, and <file .../> is
-# dropped: neither means anything on paper.
+# <course-link ...>text</course-link> becomes plain text, and any line carrying a
+# <file .../> is dropped whole (it's the page's "Printable copy" link, which
+# means nothing on paper).
 set -euo pipefail
 
 IN="${1:-}"; OUT="${2:-}"; TITLE="${3:-}"; KICKER="${4:-CS 301R · Software Engineering Studio I}"
@@ -27,7 +32,7 @@ TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
 # 1. strip the mdxcanvas-only tags
-sed -E -e 's:<course-link[^>]*>::g' -e 's:</course-link>::g' -e 's:<file[^>]*/>::g' "$IN" > "$TMP/body.md"
+sed -E -e '/<file[^>]*\/>/d' -e 's:<course-link[^>]*>::g' -e 's:</course-link>::g' "$IN" > "$TMP/body.md"
 
 # 2. markdown -> html fragment
 pandoc "$TMP/body.md" -f markdown -t html --wrap=none > "$TMP/body.html"
@@ -40,6 +45,7 @@ HTML="$TMP/page.html"
 <html lang="en"><head><meta charset="utf-8"><title>$TITLE</title><style>
 HEAD
   cat "$HERE/print-md.css"
+  printf '%s\n' "${PRINT_MD_EXTRA_CSS:-}"
   cat <<HEAD
 </style></head><body>
 <div class="head"><p class="kicker">$KICKER</p><h1>$TITLE</h1></div>

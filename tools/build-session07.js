@@ -40,14 +40,17 @@ function header(slide, kicker, title, titleColor) {
   slide.addText(kicker.toUpperCase(), { x: 0.87, y: 0.44, w: 11.5, h: 0.34, color: C.teal, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   slide.addText(title, { x: 0.6, y: 0.82, w: 12.1, h: 1.0, color: titleColor || C.ink, fontFace: F.head, fontSize: 31, bold: true, margin: 0, valign: "top" });
 }
-function card(slide, x, y, w, h, fill) {
-  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow() });
+// `extra` passes pptxgenjs options through — e.g. REVEAL(1) to animate the shape in on a click.
+function card(slide, x, y, w, h, fill, extra) {
+  slide.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: fill || C.cardBg }, line: { type: "none" }, rectRadius: 0.09, shadow: mkShadow(), ...extra });
 }
-async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor) {
-  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor } });
+async function iconCircle(slide, Comp, x, y, d, circleColor, iconColor, extra) {
+  slide.addShape(pres.shapes.OVAL, { x, y, w: d, h: d, fill: { color: circleColor }, ...extra });
   const pad = d * 0.27;
-  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad });
+  slide.addImage({ data: await ic(Comp, iconColor || "FFFFFF"), x: x + pad, y: y + pad, w: d - 2 * pad, h: d - 2 * pad, ...extra });
 }
+// Click-to-reveal: every shape given REVEAL(n) appears together on click n (tools/add-animations.js).
+const REVEAL = (n, effect) => ({ objectName: effect ? `click-${n}:${effect}` : `click-${n}` });
 // navy "work instructions" slide — stays on screen while students work
 async function workSlide(kicker, title, subtitle, steps) {
   const s = mk(); s.background = { color: C.navy };
@@ -72,11 +75,11 @@ async function workSlide(kicker, title, subtitle, steps) {
   return s;
 }
 // weak/strong excerpt card: label chip + up to three quoted lines
-function excerptCard(s, x, y, w, h, kind, lines, titleOverride) {
+function excerptCard(s, x, y, w, h, kind, lines, titleOverride, extra) {
   const weak = kind === "weak";
-  card(s, x, y, w, h, weak ? C.weakBg : C.strongBg);
+  card(s, x, y, w, h, weak ? C.weakBg : C.strongBg, extra);
   s.addText(titleOverride || (weak ? "CostumeHub — the weak version" : "Backstage — the strong version"),
-    { x: x + 0.28, y: y + 0.16, w: w - 0.56, h: 0.42, color: weak ? C.coral : C.tealDk, fontFace: F.body, fontSize: 15, bold: true, charSpacing: 0.4, valign: "middle", margin: 0 });
+    { x: x + 0.28, y: y + 0.16, w: w - 0.56, h: 0.42, color: weak ? C.coral : C.tealDk, fontFace: F.body, fontSize: 15, bold: true, charSpacing: 0.4, valign: "middle", margin: 0, ...extra });
   const runs = [];
   lines.forEach((ln, i) => {
     runs.push({
@@ -84,7 +87,7 @@ function excerptCard(s, x, y, w, h, kind, lines, titleOverride) {
       options: { breakLine: true, paraSpaceAfter: i === lines.length - 1 ? 0 : 9, color: C.ink, italic: true }
     });
   });
-  s.addText(runs, { x: x + 0.28, y: y + 0.62, w: w - 0.56, h: h - 0.82, fontFace: F.body, fontSize: 15, valign: "top", margin: 0, lineSpacingMultiple: 1.05 });
+  s.addText(runs, { x: x + 0.28, y: y + 0.62, w: w - 0.56, h: h - 0.82, fontFace: F.body, fontSize: 15, valign: "top", margin: 0, lineSpacingMultiple: 1.05, ...extra });
 }
 function locator(s, label, sectionName, job) {
   s.addText([
@@ -92,12 +95,12 @@ function locator(s, label, sectionName, job) {
     { text: "— " + job, options: { color: C.slate } }
   ], { x: 0.6, y: 1.62, w: 12.1, h: 0.34, fontFace: F.body, fontSize: 13, valign: "middle", margin: 0 });
 }
-function noticeBand(s, y, leadText, bodyText, h) {
-  card(s, 0.6, y, 12.1, h || 0.92, C.navy);
+function noticeBand(s, y, leadText, bodyText, h, extra) {
+  card(s, 0.6, y, 12.1, h || 0.92, C.navy, extra);
   s.addText([
     { text: leadText + "  ", options: { color: C.amber, bold: true } },
     { text: bodyText, options: { color: C.white } }
-  ], { x: 1.0, y, w: 11.3, h: h || 0.92, fontFace: F.body, fontSize: 15, valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
+  ], { x: 1.0, y, w: 11.3, h: h || 0.92, fontFace: F.body, fontSize: 15, valign: "middle", margin: 0, lineSpacingMultiple: 1.04, ...extra });
 }
 
 async function build() {
@@ -203,10 +206,10 @@ async function build() {
     card(s, x, y, sw, 1.56, C.cardBg);
     await iconCircle(s, sk[i][0], x + 0.26, y + 0.24, 0.5, C.teal);
     s.addText(sk[i][1], { x: x + 0.86, y: y + 0.22, w: sw - 1.05, h: 0.54, color: C.ink, fontFace: F.body, fontSize: 15.5, bold: true, valign: "middle", margin: 0 });
-    s.addText(sk[i][2], { x: x + 0.26, y: y + 0.82, w: sw - 0.52, h: 0.62, color: C.slate, fontFace: F.body, fontSize: 13, valign: "top", margin: 0, lineSpacingMultiple: 1.04 });
+    s.addText(sk[i][2], { x: x + 0.26, y: y + 0.82, w: sw - 0.52, h: 0.62, color: C.slate, fontFace: F.body, fontSize: 13, valign: "top", margin: 0, lineSpacingMultiple: 1.04, ...REVEAL(1, "fade") });
   }
   footer(s);
-  s.addNotes("Seven minutes, and run it as recall — you read the reading, so tell me. Call on the room by section: what is non-goals FOR? Where does the material for technical approach come from? Two or three exchanges is enough; do not lecture the grid. The subtitles are the answers if the room stalls. If the entry poll went badly, this is where you spend three extra minutes — take them from the §4 buffer, never from the feasibility block.");
+  s.addNotes("Seven minutes, and run it as recall — you read the reading, so tell me. Call on the room by section: what is non-goals FOR? Where does the material for technical approach come from? Two or three exchanges is enough; do not lecture the grid. The subtitles are the answers — they stay hidden until you click, so take answers first and click only once the room has tried (or stalled). If the entry poll went badly, this is where you spend three extra minutes — take them from the §4 buffer, never from the feasibility block.");
 
   // 6 Write them out of order
   s = mk(); s.background = { color: C.white };
@@ -316,27 +319,27 @@ async function build() {
   card(s, 0.6, 1.88, 12.1, 0.92, C.navy);
   await iconCircle(s, FA.FaAlignLeft, 0.95, 2.06, 0.56, C.amber, C.navy);
   s.addText("Read only your first sentences, in order. Do they make the argument by themselves?", { x: 1.75, y: 1.88, w: 10.65, h: 0.92, color: C.white, fontFace: F.body, fontSize: 17, bold: true, valign: "middle", margin: 0 });
-  card(s, 0.6, 3.0, 5.95, 2.55, C.strongBg);
-  s.addText("Backstage — first sentences: summary · problem · solution", { x: 0.92, y: 3.18, w: 5.3, h: 0.42, color: C.tealDk, fontFace: F.body, fontSize: 15, bold: true, valign: "middle", margin: 0 });
-  s.addText([
-    { text: "Volunteer-run community theaters own thousands of costumes and track them in spiral notebooks and one volunteer's memory.", options: { breakLine: true, paraSpaceAfter: 7 } },
-    { text: "Wardrobe and props volunteers at small, volunteer-run community theaters — one to three people per theater.", options: { breakLine: true, paraSpaceAfter: 7 } },
-    { text: "A phone-first web catalog for one theater's collection.", options: {} }
-  ], { x: 0.92, y: 3.66, w: 5.3, h: 1.72, color: C.ink, fontFace: F.body, fontSize: 15, italic: true, valign: "top", margin: 0, lineSpacingMultiple: 1.05 });
-  card(s, 6.75, 3.0, 5.95, 2.55, C.weakBg);
-  s.addText("CostumeHub — the same three sentences", { x: 7.07, y: 3.18, w: 5.3, h: 0.42, color: C.coral, fontFace: F.body, fontSize: 15, bold: true, valign: "middle", margin: 0 });
+  card(s, 0.6, 3.0, 5.95, 2.55, C.weakBg);
+  s.addText("CostumeHub — summary · problem · solution", { x: 0.92, y: 3.18, w: 5.3, h: 0.42, color: C.coral, fontFace: F.body, fontSize: 15, bold: true, valign: "middle", margin: 0 });
   s.addText([
     { text: "Costume management is a huge problem for theaters everywhere.", options: { breakLine: true, paraSpaceAfter: 7 } },
     { text: "Theaters everywhere struggle to keep track of their costumes.", options: { breakLine: true, paraSpaceAfter: 7 } },
     { text: "CostumeHub will be a complete, modern platform for costume management.", options: {} }
-  ], { x: 7.07, y: 3.66, w: 5.3, h: 1.72, color: C.ink, fontFace: F.body, fontSize: 15, italic: true, valign: "top", margin: 0, lineSpacingMultiple: 1.05 });
-  card(s, 0.6, 5.72, 12.1, 1.04, C.amberBg);
+  ], { x: 0.92, y: 3.66, w: 5.3, h: 1.72, color: C.ink, fontFace: F.body, fontSize: 15, italic: true, valign: "top", margin: 0, lineSpacingMultiple: 1.05 });
+  card(s, 6.75, 3.0, 5.95, 2.55, C.strongBg, REVEAL(1));
+  s.addText("Backstage — the same three sentences", { x: 7.07, y: 3.18, w: 5.3, h: 0.42, color: C.tealDk, fontFace: F.body, fontSize: 15, bold: true, valign: "middle", margin: 0, ...REVEAL(1) });
+  s.addText([
+    { text: "Volunteer-run community theaters own thousands of costumes and track them in spiral notebooks and one volunteer's memory.", options: { breakLine: true, paraSpaceAfter: 7 } },
+    { text: "Wardrobe and props volunteers at small, volunteer-run community theaters — one to three people per theater.", options: { breakLine: true, paraSpaceAfter: 7 } },
+    { text: "A phone-first web catalog for one theater's collection.", options: {} }
+  ], { x: 7.07, y: 3.66, w: 5.3, h: 1.72, color: C.ink, fontFace: F.body, fontSize: 15, italic: true, valign: "top", margin: 0, lineSpacingMultiple: 1.05, ...REVEAL(1) });
+  card(s, 0.6, 5.72, 12.1, 1.04, C.amberBg, REVEAL(2));
   s.addText([
     { text: "One reads as an argument. One reads as a list of moods.  ", options: { bold: true, color: C.tealDk } },
     { text: "If your topic sentences don't carry it, the argument is buried where skimmers will never find it.", options: { color: C.ink } }
-  ], { x: 0.9, y: 5.72, w: 11.5, h: 1.04, fontFace: F.body, fontSize: 15, valign: "middle", align: "center", margin: 0, lineSpacingMultiple: 1.05 });
+  ], { x: 0.9, y: 5.72, w: 11.5, h: 1.04, fontFace: F.body, fontSize: 15, valign: "middle", align: "center", margin: 0, lineSpacingMultiple: 1.05, ...REVEAL(2) });
   footer(s);
-  s.addNotes("Three minutes, demonstrated rather than asserted. Read the left column aloud, then the right, and let the room hear the difference — these are the actual opening sentences of the summary, problem, and solution sections of each proposal. The strong one's form a chain of claims that names a user and a tool; the weak one's are three moods in a row. Then give them the instruction they can act on tonight: after drafting, read only your first sentences in order. It takes two minutes and exposes buried arguments better than any amount of rereading.");
+  s.addNotes("Three minutes, demonstrated rather than asserted. Read the weak column aloud — the one they've read — then click to bring in Backstage's same three sentences, read those, and let the room hear the difference; the second click brings the verdict. These are the actual opening sentences of the summary, problem, and solution sections of each proposal. The weak one's are three moods in a row; the strong one's form a chain of claims that names a user and a tool. Then give them the instruction they can act on tonight: after drafting, read only your first sentences in order. It takes two minutes and exposes buried arguments better than any amount of rereading.");
 
   // 11 Check 4 — Tone
   s = mk(); s.background = { color: C.white };
@@ -355,13 +358,13 @@ async function build() {
     { text: "Honest confidence:  ", options: { bold: true, color: C.tealDk } },
     { text: "here's what I know · here's what I must learn, and my plan · here's what I've cut.", options: { color: C.ink } }
   ], { x: 1.95, y: 4.52, w: 10.5, h: 1.45, fontFace: F.body, fontSize: 17, valign: "middle", margin: 0, lineSpacingMultiple: 1.05 });
-  card(s, 0.6, 6.14, 12.1, 0.72, C.navy);
+  card(s, 0.6, 6.14, 12.1, 0.72, C.navy, REVEAL(1));
   s.addText([
     { text: "Evidence beats adjectives.  ", options: { color: C.amber, bold: true } },
     { text: "“Three of four wardrobe volunteers described the same twenty-minute walk to the racks” persuades. “This is a huge problem” doesn't.", options: { color: C.white } }
-  ], { x: 0.9, y: 6.14, w: 11.5, h: 0.72, fontFace: F.body, fontSize: 14.5, valign: "middle", align: "center", margin: 0 });
+  ], { x: 0.9, y: 6.14, w: 11.5, h: 0.72, fontFace: F.body, fontSize: 14.5, valign: "middle", align: "center", margin: 0, ...REVEAL(1) });
   footer(s);
-  s.addNotes("Three minutes. Both failure directions come from the same place — uncertainty about whether the evidence carries the claim. Salesy language papers over it; apologetic language pre-apologizes for it. The fix is neither: state what you know, what you don't, and what you cut. End on the navy bar, because it's the bridge into the dissection: every weak passage they're about to see substitutes an adjective for a fact, and every strong one does the reverse.");
+  s.addNotes("Three minutes. Both failure directions come from the same place — uncertainty about whether the evidence carries the claim. Salesy language papers over it; apologetic language pre-apologizes for it. The fix is neither: state what you know, what you don't, and what you cut. Click to bring in the navy bar and end on it, because it's the bridge into the dissection: every weak passage they're about to see substitutes an adjective for a fact, and every strong one does the reverse.");
 
   // 12 §4 opener — same project, two proposals
   s = mk(); s.background = { color: C.white };
@@ -399,18 +402,18 @@ async function build() {
     const y = 2.06 + i * 1.24;
     card(s, 0.6, y, 4.5, 1.1, C.weakBg);
     s.addText(trans[i][0], { x: 0.85, y, w: 4.0, h: 1.1, color: C.ink, fontFace: F.body, fontSize: 15.5, italic: true, valign: "middle", margin: 0, lineSpacingMultiple: 1.03 });
-    await iconCircle(s, FA.FaArrowRight, 5.32, y + 0.31, 0.48, C.amber, C.navy);
-    card(s, 6.2, y, 6.5, 1.1, C.strongBg);
-    s.addText(trans[i][1], { x: 6.45, y, w: 6.0, h: 1.1, color: C.ink, fontFace: F.body, fontSize: 15.5, bold: true, valign: "middle", margin: 0, lineSpacingMultiple: 1.03 });
+    await iconCircle(s, FA.FaArrowRight, 5.32, y + 0.31, 0.48, C.amber, C.navy, REVEAL(i + 1));
+    card(s, 6.2, y, 6.5, 1.1, C.strongBg, REVEAL(i + 1));
+    s.addText(trans[i][1], { x: 6.45, y, w: 6.0, h: 1.1, color: C.ink, fontFace: F.body, fontSize: 15.5, bold: true, valign: "middle", margin: 0, lineSpacingMultiple: 1.03, ...REVEAL(i + 1) });
   }
-  card(s, 0.6, 5.86, 12.1, 0.94, C.navy);
-  await iconCircle(s, FA.FaBullseye, 0.95, 6.09, 0.48, C.amber, C.navy);
+  card(s, 0.6, 5.86, 12.1, 0.94, C.navy, REVEAL(4));
+  await iconCircle(s, FA.FaBullseye, 0.95, 6.09, 0.48, C.amber, C.navy, REVEAL(4));
   s.addText([
     { text: "The test is not vocabulary — it's whether the author could act on it.  ", options: { color: C.amber, bold: true } },
     { text: "The CP3 criteria give you ready-made names (problem & user clarity · scope realism · feasibility), and Wednesday's review uses them — but precision is the requirement, in any words.", options: { color: C.white } }
-  ], { x: 1.6, y: 5.86, w: 10.8, h: 0.94, fontFace: F.body, fontSize: 14, valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
+  ], { x: 1.6, y: 5.86, w: 10.8, h: 0.94, fontFace: F.body, fontSize: 14, valign: "middle", margin: 0, lineSpacingMultiple: 1.04, ...REVEAL(4) });
   footer(s);
-  s.addNotes("Ninety seconds, and it pays for itself all session. Students default to reactions — vague, confusing, too much — which feel like feedback but give the author nothing to change. Read the left column, ask the room to convert one before you show the right. Then land the bottom bar: the goal is a sentence the author could act on tonight. The rubric criteria are a convenient set of names and Wednesday's review is anchored to them, but a precise observation in plain words beats criterion jargon attached to a vague complaint. This is the same skill as a useful code-review comment.");
+  s.addNotes("Ninety seconds, and it pays for itself all session. Students default to reactions — vague, confusing, too much — which feel like feedback but give the author nothing to change. Read the left column, and ask the room to convert each one before you click to show the right — three clicks, one per row; the fourth brings the bottom bar. Then land the bottom bar: the goal is a sentence the author could act on tonight. The rubric criteria are a convenient set of names and Wednesday's review is anchored to them, but a precise observation in plain words beats criterion jargon attached to a vague complaint. This is the same skill as a useful code-review comment.");
 
   // 12c The whole argument — both executive summaries
   s = mk(); s.background = { color: C.white };
@@ -422,14 +425,14 @@ async function build() {
   excerptCard(s, 6.75, 2.02, 5.95, 3.45, "strong", [
     "Volunteer-run community theaters track thousands of costumes in spiral notebooks and one volunteer's memory. I interviewed four wardrobe volunteers across three theaters; two named items they had bought twice. Backstage is a phone-first catalog: search what you own, see a photo and a bin, check items in and out. The MVP is one theater, seeded with 60 real items. Out of scope: ticketing, budgets, rentals between theaters."
   ]);
-  card(s, 0.6, 5.68, 12.1, 1.1, C.navy);
-  await iconCircle(s, FA.FaSearch, 0.95, 5.94, 0.58, C.amber, C.navy);
+  card(s, 0.6, 5.68, 12.1, 1.1, C.navy, REVEAL(1));
+  await iconCircle(s, FA.FaSearch, 0.95, 5.94, 0.58, C.amber, C.navy, REVEAL(1));
   s.addText([
     { text: "One of these gives you the problem, the evidence, the scope, and what's excluded.  ", options: { color: C.amber, bold: true } },
     { text: "The other gives you how the author feels about it. Everything we look at next is a paragraph out of one of these two documents.", options: { color: C.white } }
-  ], { x: 1.76, y: 5.68, w: 10.6, h: 1.1, fontFace: F.body, fontSize: 14.5, valign: "middle", margin: 0, lineSpacingMultiple: 1.05 });
+  ], { x: 1.76, y: 5.68, w: 10.6, h: 1.1, fontFace: F.body, fontSize: 14.5, valign: "middle", margin: 0, lineSpacingMultiple: 1.05, ...REVEAL(1) });
   footer(s);
-  s.addNotes("Two minutes, and it is the orientation the rest of the dissection depends on — nobody in the room has read the strong proposal, so without this the excerpts arrive from nowhere. Read both aloud. Ask what each one told them: the right paragraph names a bounded user, an evidence count, a specific tool, a sized MVP, and four exclusions; the left names an adjective and a feature list. This also demonstrates the slide-5 claim on real text — the executive summary is written last because it can only compress an argument that already exists.");
+  s.addNotes("Two minutes, and it is the orientation the rest of the dissection depends on — nobody in the room has read the strong proposal, so without this the excerpts arrive from nowhere. Read both aloud. Ask what each one told them before you click in the bottom bar: the right paragraph names a bounded user, an evidence count, a specific tool, a sized MVP, and four exclusions; the left names an adjective and a feature list. This also demonstrates the slide-5 claim on real text — the executive summary is written last because it can only compress an argument that already exists.");
 
   // 13 Pair 1 — weak only
   s = mk(); s.background = { color: C.white };
@@ -464,9 +467,9 @@ async function build() {
     "Ruth H. keeps the collection in a notebook and a shoebox of photos; finding an item means twenty minutes at the racks.",
     "What I have not established: [A] I have spoken to leads, not to new volunteers."
   ]);
-  noticeBand(s, 5.74, "What changed:", "the user is bounded and countable · needs are ranked and tagged with how many people said it · a specific person replaces “everywhere” · and the author names what they haven't established.", 1.1);
+  noticeBand(s, 5.74, "What changed:", "the user is bounded and countable · needs are ranked and tagged with how many people said it · a specific person replaces “everywhere” · and the author names what they haven't established.", 1.1, REVEAL(1));
   footer(s);
-  s.addNotes("Now reveal. Walk the three moves: bounded users you could actually go find, needs ranked with an evidence count attached, and one concrete human doing a concrete thing. Then read the fourth line aloud — the author admits they only spoke to leads, not new volunteers. Ask the room whether that admission made them trust the document more or less. It's the credibility-economy lesson landing on a real example.");
+  s.addNotes("Now reveal. Ask what specifically changed before you click in the bottom band. Walk the three moves: bounded users you could actually go find, needs ranked with an evidence count attached, and one concrete human doing a concrete thing. Then read the fourth line aloud — the author admits they only spoke to leads, not new volunteers. Ask the room whether that admission made them trust the document more or less. It's the credibility-economy lesson landing on a real example.");
 
   // 15 Pair 2 — weak only
   s = mk(); s.background = { color: C.white };
@@ -501,9 +504,9 @@ async function build() {
     "Client-side downscaling before upload — direct result of the spike; not optional.",
     "Spike, 6-hour box: naive upload = 71 s median, three of ten failed on the venue's wifi. With downscaling: 48 s, zero failures."
   ]);
-  noticeBand(s, 5.74, "What changed:", "every reason is now a constraint — no IT staff, a box the theater can actually operate, a venue where uploads fail — instead of an adjective; and the scariest unknown was answered in six hours, not hoped about.", 1.1);
+  noticeBand(s, 5.74, "What changed:", "every reason is now a constraint — no IT staff, a box the theater can actually operate, a venue where uploads fail — instead of an adjective; and the scariest unknown was answered in six hours, not hoped about.", 1.1, REVEAL(1));
   footer(s);
-  s.addNotes("Reveal and compare reason-types side by side: adjectives on the left, constraints on the right — no IT staff, a box someone can operate, a venue with bad wifi. Constraints are checkable and specific to one project; adjectives are decoration. Then the spike: six hours converted 'photos might be too slow' into a design requirement that's now in the technical approach. Ask the direct question — which of these two authors knows whether their project is possible? Only one of them went and found out.");
+  s.addNotes("Reveal, and ask what changed before you click in the bottom band. Compare reason-types side by side: adjectives on the left, constraints on the right — no IT staff, a box someone can operate, a venue with bad wifi. Constraints are checkable and specific to one project; adjectives are decoration. Then the spike: six hours converted 'photos might be too slow' into a design requirement that's now in the technical approach. Ask the direct question — which of these two authors knows whether their project is possible? Only one of them went and found out.");
 
   // 17 Pair 3 — weak only
   s = mk(); s.background = { color: C.white };
@@ -539,9 +542,9 @@ async function build() {
     "Cutting it is what makes the rest of this proposal credible. It was in my first draft.",
     "MVP: one theater, one workflow, 60 real items — sized against roughly five build weeks."
   ]);
-  noticeBand(s, 5.74, "What changed:", "the cuts are named with reasons — including one the author regretted — and the MVP is one workflow end to end, sized against the weeks that actually exist.", 1.1);
+  noticeBand(s, 5.74, "What changed:", "the cuts are named with reasons — including one the author regretted — and the MVP is one workflow end to end, sized against the weeks that actually exist.", 1.1, REVEAL(1));
   footer(s);
-  s.addNotes("The 'it was in my first draft' sentence is the whole lesson about non-goals, so read it aloud. Naming a cut that hurt proves the author made a decision under real tension rather than listing things they never wanted. Then contrast the two MVPs: four features across four surfaces versus one workflow, one user type, end to end, on real data. Ask which one they'd believe a December demo from — and note that the modest one is also the more ambitious claim, because it's a promise rather than a wish.");
+  s.addNotes("Ask what changed before clicking in the bottom band. The 'it was in my first draft' sentence is the whole lesson about non-goals, so read it aloud. Naming a cut that hurt proves the author made a decision under real tension rather than listing things they never wanted. Then contrast the two MVPs: four features across four surfaces versus one workflow, one user type, end to end, on real data. Ask which one they'd believe a December demo from — and note that the modest one is also the more ambitious claim, because it's a promise rather than a wish.");
 
   // 19 Weak patterns
   s = mk(); s.background = { color: C.white };
@@ -690,24 +693,25 @@ async function build() {
   card(s, 0.6, 1.82, 5.95, 2.25, C.weakBg);
   await iconCircle(s, FA.FaTimesCircle, 0.9, 2.08, 0.56, C.coral);
   s.addText("The fatal version", { x: 1.66, y: 2.12, w: 4.4, h: 0.48, color: C.coral, fontFace: F.body, fontSize: 17, bold: true, valign: "middle", margin: 0 });
-  s.addText("10 hrs/week × 14 weeks = 140 hours", { x: 0.95, y: 2.78, w: 5.3, h: 0.5, color: C.ink, fontFace: F.head, fontSize: 20, bold: true, valign: "middle", margin: 0 });
+  s.addText("10 hrs/week × 10 weeks left = 100 hours", { x: 0.95, y: 2.78, w: 5.3, h: 0.5, color: C.ink, fontFace: F.head, fontSize: 20, bold: true, valign: "middle", margin: 0 });
   s.addText("Counts hours that were never available, over weeks where you weren't building.", { x: 0.95, y: 3.3, w: 5.3, h: 0.62, color: C.ink, fontFace: F.body, fontSize: 14, valign: "top", margin: 0, lineSpacingMultiple: 1.04 });
-  card(s, 6.75, 1.82, 5.95, 2.25, C.strongBg);
-  await iconCircle(s, FA.FaCheckCircle, 7.05, 2.08, 0.56, C.green);
-  s.addText("The honest version", { x: 7.81, y: 2.12, w: 4.4, h: 0.48, color: C.tealDk, fontFace: F.body, fontSize: 17, bold: true, valign: "middle", margin: 0 });
-  s.addText("(hours left after everything) × ~5 weeks", { x: 7.1, y: 2.78, w: 5.3, h: 0.5, color: C.ink, fontFace: F.head, fontSize: 20, bold: true, valign: "middle", margin: 0 });
-  s.addText("The ~10 hrs/week covers class, reading, discovery, writing, and reviews. Building runs Weeks 9–13.", { x: 7.1, y: 3.3, w: 5.3, h: 0.62, color: C.ink, fontFace: F.body, fontSize: 14, valign: "top", margin: 0, lineSpacingMultiple: 1.04 });
-  card(s, 0.6, 4.28, 12.1, 1.62, C.amber);
-  await iconCircle(s, FA.FaStopwatch, 1.0, 4.62, 0.94, C.navy, C.amber);
-  s.addText("Do it right now — 90 seconds", { x: 2.3, y: 4.44, w: 10.1, h: 0.5, color: C.navy, fontFace: F.head, fontSize: 23, bold: true, valign: "middle", margin: 0 });
-  s.addText("On paper: the hours you actually have in a week × 5. Write the number down. If your MVP doesn't fit it, you found out today instead of in Week 12.", { x: 2.3, y: 4.98, w: 10.1, h: 0.78, color: C.navy, fontFace: F.body, fontSize: 15.5, valign: "top", margin: 0, lineSpacingMultiple: 1.05 });
-  card(s, 0.6, 6.06, 12.1, 0.7, C.navy);
+  const R1 = REVEAL(1), R2 = REVEAL(2), R3 = REVEAL(3);
+  card(s, 6.75, 1.82, 5.95, 2.25, C.strongBg, R1);
+  await iconCircle(s, FA.FaCheckCircle, 7.05, 2.08, 0.56, C.green, null, R1);
+  s.addText("The honest version", { x: 7.81, y: 2.12, w: 4.4, h: 0.48, color: C.tealDk, fontFace: F.body, fontSize: 17, bold: true, valign: "middle", margin: 0, ...R1 });
+  s.addText("(hours left after everything) × ~5 weeks", { x: 7.1, y: 2.78, w: 5.3, h: 0.5, color: C.ink, fontFace: F.head, fontSize: 20, bold: true, valign: "middle", margin: 0, ...R1 });
+  s.addText("The ~10 hrs/week covers class, reading, discovery, writing, and reviews. Building runs Weeks 9–13.", { x: 7.1, y: 3.3, w: 5.3, h: 0.62, color: C.ink, fontFace: F.body, fontSize: 14, valign: "top", margin: 0, lineSpacingMultiple: 1.04, ...R1 });
+  card(s, 0.6, 4.28, 12.1, 1.62, C.amber, R2);
+  await iconCircle(s, FA.FaStopwatch, 1.0, 4.62, 0.94, C.navy, C.amber, R2);
+  s.addText("Do it right now — 90 seconds", { x: 2.3, y: 4.44, w: 10.1, h: 0.5, color: C.navy, fontFace: F.head, fontSize: 23, bold: true, valign: "middle", margin: 0, ...R2 });
+  s.addText("On paper: the hours you actually have in a week × 5. Write the number down. If your MVP doesn't fit it, you found out today instead of in Week 12.", { x: 2.3, y: 4.98, w: 10.1, h: 0.78, color: C.navy, fontFace: F.body, fontSize: 15.5, valign: "top", margin: 0, lineSpacingMultiple: 1.05, ...R2 });
+  card(s, 0.6, 6.06, 12.1, 0.7, C.navy, R3);
   s.addText([
     { text: "Underpromise correctly.  ", options: { color: C.amber, bold: true } },
     { text: "A modest MVP you certainly finish beats an impressive one you might. Every explicit non-goal is part of this argument.", options: { color: C.white } }
-  ], { x: 0.9, y: 6.06, w: 11.5, h: 0.7, fontFace: F.body, fontSize: 14.5, valign: "middle", align: "center", margin: 0 });
+  ], { x: 0.9, y: 6.06, w: 11.5, h: 0.7, fontFace: F.body, fontSize: 14.5, valign: "middle", align: "center", margin: 0, ...R3 });
   footer(s);
-  s.addNotes("Stop and actually run the ninety seconds — do not just describe it. Have every student write two numbers on paper: honest hours per week, times five. The room goes quiet when the product lands well under what their draft promises, and that silence is worth more than another slide. Then name the payoff: scope realism is fifteen points, and reviewers reward it. Close on non-goals — the reader can't see features you never listed, only the ones you named and cut.");
+  s.addNotes("Four beats on clicks: the fatal version alone, then the honest version, then the amber do-it-now card, then the underpromise bar. Stop and actually run the ninety seconds — do not just describe it. Have every student write two numbers on paper: honest hours per week, times five. The room goes quiet when the product lands well under what their draft promises, and that silence is worth more than another slide. Then name the payoff: scope realism is fifteen points, and reviewers reward it. Close on non-goals — the reader can't see features you never listed, only the ones you named and cut.");
 
   // 24 §6a solo activity
   const p1 = [
@@ -776,6 +780,8 @@ async function build() {
   const OUT = "Session07-ProposalAnatomy.pptx";
   await pres.writeFile({ fileName: OUT });
   console.log("WROTE", PAGE, "slides");
+  const anim = await require("./add-animations.js").addAnimations(OUT);
+  if (anim.length) console.log("ANIMATED", anim.join("; "));
   try {
     const { verifyDeck, reportText } = require("./verify-deck.js");
     console.log(reportText(await verifyDeck(OUT)));

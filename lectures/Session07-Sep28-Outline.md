@@ -75,7 +75,7 @@ These four are the course's standing frame for technical writing; students meet 
    - **Name your holes.** Where information is genuinely missing, say so — "[A] I haven't observed this yet." A named hole is content; a hidden one is a trap that goes off when the reader finds it.
 
 3. **Clarity** — *short sentences, concrete nouns, one claim per paragraph.*
-   - **Test to demo live:** read only your topic sentences, in order. If they don't form the argument alone, the argument is buried in the middles of paragraphs, where skimming readers will never find it. Demonstrate on the strong sample — its topic sentences do read as an argument — then on the weak one, where they read as a list of moods.
+   - **Test to demo live:** read only your topic sentences, in order. If they don't form the argument alone, the argument is buried in the middles of paragraphs, where skimming readers will never find it. Demonstrate on the weak sample first — the one they've read, where the topic sentences read as a list of moods — then click in the strong one, whose topic sentences do read as an argument.
 
 4. **Tone** — *how it sounds to a stranger who owes you nothing.*
    - Two failure directions: **salesy** ("revolutionize," "seamless," "game-changing") reads as compensation for missing evidence; **apologetic** ("I hope to maybe attempt") invites doubt before the argument starts.

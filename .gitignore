@@ -12,3 +12,6 @@ canvas_material/resources/cps_handbook.pdf
 
 # mdxcanvas deploy artifacts
 canvas_material/deploy-report*.json
+
+# Student submissions and grading notes: private, never version-controlled
+grading/
