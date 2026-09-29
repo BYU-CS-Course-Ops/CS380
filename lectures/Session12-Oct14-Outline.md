@@ -267,7 +267,8 @@ Run all five rounds exactly as written regardless of team sizes — the sequence
 ### 7. Capture + wrap — 10 min
 - Photograph every board — **before anyone erases anything**, including the parked ideas and the red-pen failure arrows. Photos of whiteboards are legitimate diagrams for the draft; the doc says so.
 - Assignments within the team: who turns which diagram/section into the draft tonight. Name a person per template section out loud; §3, §4, §5, §6 are four assignments and the map is already on the wall.
-- **Design Document draft due end of day tomorrow, Thu, Oct 15** (LMS pointer to the repo) — photographed diagrams + skeleton prose + the two argued decisions is a fine draft; polish is next week's job. Say why the extra night exists: *the boards are the work; tonight is transcription.*
+- **Repository + charter due end of day today** (the charter carries the repo URL in §1). Any team without a repo yet creates it tonight, before transcribing — the draft goes in it.
+- **Design Document draft due end of day tomorrow, Thu, Oct 15** (LMS pointer to `docs/design.md` in the repo) — photographed diagrams + skeleton prose + the two argued decisions is a fine draft; polish is next week's job. Say why the extra night exists: *the boards are the work; tonight is transcription.*
 - Preview Monday (Oct 19): **git workflow** — the maintainer-centered branching/PR discipline your team will run from here to December. Reading on the Session 13 page.
 
 ---

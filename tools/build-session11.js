@@ -387,9 +387,9 @@ async function build() {
       ["Who breaks a deadlock, and by what rule? A named tiebreaker beats a stalemate.", "§5"],
       ["What happens the first time someone misses a commitment? Who says something, how soon, what then.", "§6"]
     ],
-    "Finish the charter at your first team meeting. Submit by end of day Wednesday."
+    "First team meeting: create the project's repo, then finish the charter. Submit it, with the repo URL, by Wednesday."
   );
-  s.addNotes("Five minutes, and only these two questions — they are the ones teams skip when left alone and the ones worth your coaching. Circulate while they talk: the team that says \"we'll all do everything and communicate constantly\" is the one that fails in Week 10, so push it for a named tiebreaker and a real response time. Deciding the deadlock rule now takes four minutes; deciding it during the deadlock costs a week. Solo students answer the abbreviated version on the same worksheet — the solo box says which sections. Then set the expectation out loud: the rest of the charter is the agenda for a first team meeting held before Wednesday, and the finished charter is due end of day Wednesday. The design-doc draft is a day behind it, Thursday, so the two do not land on the same evening.");
+  s.addNotes("Five minutes, and only these two questions — they are the ones teams skip when left alone and the ones worth your coaching. Circulate while they talk: the team that says \"we'll all do everything and communicate constantly\" is the one that fails in Week 10, so push it for a named tiebreaker and a real response time. Deciding the deadlock rule now takes four minutes; deciding it during the deadlock costs a week. Solo students answer the abbreviated version on the same worksheet — the solo box says which sections. Then set the expectation out loud: the rest of the charter is the agenda for a first team meeting held before Wednesday, and that meeting starts by creating the project's GitHub organization and public repository — the Canvas guide, Starting Your Project Repository, walks through it. The finished charter carries the repository URL and is submitted end of day Wednesday — it does not go in the repo: it's an internal agreement among teammates, and the public parts of it become the governance docs in the Infrastructure Package. The design-doc draft is a day behind it, Thursday, so the two do not land on the same evening.");
 
   // 15 Wrap
   s = mk(); s.background = { color: C.navy };
@@ -398,7 +398,8 @@ async function build() {
   s.addText("Design docs earn their cost by making trade-offs visible while they're still cheap.", { x: 0.9, y: 2.15, w: 11.9, h: 1.05, color: C.white, fontFace: F.head, fontSize: 27, bold: true, italic: true, margin: 0, lineSpacingMultiple: 1.06 });
   s.addText("BEFORE WEDNESDAY, OCT 14", { x: 0.92, y: 3.4, w: 11, h: 0.35, color: C.amber, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   s.addText([
-    { text: "Hold your first team meeting — finish the charter there, submit by end of day Wednesday", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
+    { text: "First team meeting: create the project's GitHub organization and public repo (Canvas → Starting Your Project Repository)", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
+    { text: "Finish the charter there, with the repo URL in it — submit it by end of day Wednesday", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Bring your skeleton sketch — context, components, entities, two decisions", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Re-skim the anatomy and system-context sections of the reading", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Wednesday is a whiteboard workshop — the design doc draft is due end of day Thursday, Oct 15", options: { bullet: { indent: 16 } } }
@@ -406,7 +407,7 @@ async function build() {
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);
   s.addText("CP5 — Design Document (revised) — is due Wed, Oct 21. Draft, review, revise: the same loop as the proposal.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 15.5, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Close in two minutes. The one-liner at the top is the session in a sentence — say it, then the logistics. Charter finished at the first team meeting and submitted end of day Wednesday, skeleton sketch brought Wednesday, draft due end of day Thursday, the revised Design Document a week later. Name the loop out loud: draft, review, revise, exactly as with the proposal, because revision is graded here too. If the room looks daunted, remind them Wednesday is three-quarters whiteboard time with you circulating as design reviewer.");
+  s.addNotes("Close in two minutes. The one-liner at the top is the session in a sentence — say it, then the logistics. The first team meeting creates the repository before anything else — a GitHub organization named for the project, at least two owners, a public repo with a README paragraph, a .gitignore, and their working license — and nothing private goes in it, ever: no keys, no interview notes — and not the charter either, which stays with the team. Charter finished at that meeting and submitted end of day Wednesday with the repo URL in it; skeleton sketch brought Wednesday, draft due end of day Thursday, the revised Design Document a week later. Name the loop out loud: draft, review, revise, exactly as with the proposal, because revision is graded here too. If the room looks daunted, remind them Wednesday is three-quarters whiteboard time with you circulating as design reviewer.");
 
   const OUT = "Session11-DesignDocs.pptx";
   await pres.writeFile({ fileName: OUT });

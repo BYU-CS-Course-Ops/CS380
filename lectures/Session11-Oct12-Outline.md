@@ -105,13 +105,15 @@ By the end of this session, a student can:
 - **Solo students** do the abbreviated version on the same worksheet (§4 cadence, §5 decision-log habit, §6 what "on track" means; the solo box on page 2 says so) — they'll set these norms for contributors later.
 
 **6c — Finish it at the first team meeting.** The rest of the worksheet — roles, channel, cadence, what "pulling your weight" means — is the agenda for the team's **first working meeting, held before Wednesday.** Typed up, committed to the repo, submitted **by end of day Wed, Oct 14.** Completion-graded; enforced all semester.
+- **Say out loud: that meeting also creates the repository — it's the first item on the agenda.** Nothing before today has asked for one, and everything from here assumes it: the design template becomes `docs/design.md`, Thursday's draft is submitted as a pointer into it, and Sessions 13–16 run in it. Point at the Canvas page *Starting Your Project Repository* (`canvas_material/pages/Starting-Your-Repository.md`). The defaults (Tom's call): **a free GitHub organization per project**, named for the project, with **at least two owners** (founder + one teammate; solo students own it alone for now); **a public repository**, created with a README paragraph, a `.gitignore`, and the team's **working license** — public with no license is all-rights-reserved, and the Session 15 clinic confirms or changes it. **The charter carries the repository URL in §1**, so every repo URL is in hand by Wednesday night. The charter itself **stays out of the repo** (Tom's call, v5): it's an internal working agreement — promises among teammates, amended after hard weeks, and the peer-evaluation yardstick — and a public repo is forever. The stranger-facing parts (maintainer, decision process, channels) go public in CP7's governance & comms norms. Each member's **first push** is a one-line *Maintainers* entry in the README; the guide asks for it.
+- One sentence of warning, because the repo is public from the first push: **no secrets and no interview data, ever** — the guide covers both. Discovery notes promised confidentiality; findings can go in, names and notes cannot.
 
 *Why the split (v4, Tom's call): the concept is new to them, and thirty seconds of introduction followed by twelve minutes of writing produces charters written from politeness. Teaching it, coaching the two questions teams avoid, and letting the rest happen at a real meeting costs one extra minute of class and buys a charter they actually discussed — and it forces the first team meeting to happen inside 48 hours, which is worth something on its own. With a very small cohort, or one where everyone is solo, 6a still runs as taught; 6b becomes each student's own answers.*
 
 
 ### 7. Wrap + before next class — 3 min
 - Recap: design docs earn their cost by making trade-offs visible while they're cheap; alternatives-considered is where the thinking shows.
-- **Wednesday (Oct 14):** architecture & data-flow **workshop** — teams draw the real diagrams and draft the doc. **The team charter is due end of day Wednesday; the Design Document draft is due end of day Thursday, Oct 15** — the workshop boards get typed up with a night in between, and the two deliverables don't land on the same evening.
+- **Wednesday (Oct 14):** architecture & data-flow **workshop** — teams draw the real diagrams and draft the doc. **The repository and team charter are due end of day Wednesday (the charter carries the repo URL); the Design Document draft is due end of day Thursday, Oct 15** — the workshop boards get typed up with a night in between, and the two deliverables don't land on the same evening.
 - **CP5 (revised design doc) due Wed, Oct 21** — the draft→review→revise loop, again.
 
 ---
@@ -137,7 +139,7 @@ By the end of this session, a student can:
 ## Deliverable / after class
 
 - **Today:** the two hard charter questions answered on the worksheet; the first team meeting scheduled.
-- **Before Wednesday:** first team meeting — the charter gets finished there.
+- **Before Wednesday:** first team meeting — create the project's GitHub organization and public repository (*Starting Your Project Repository*), then finish the charter. **Due end of day Wed, Oct 14:** the charter, uploaded, with the repository URL in §1 — the charter itself does not go in the repo.
 - **Wednesday:** bring the skeleton sketch; **team charter due end of day Wed, Oct 14**; **Design Document draft due end of day Thu, Oct 15.**
 
 ---
