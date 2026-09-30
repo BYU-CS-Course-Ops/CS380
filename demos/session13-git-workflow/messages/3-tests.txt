@@ -1,0 +1,6 @@
+Test search by partial and mixed-case names
+
+Cover the three behaviors a volunteer relies on: part of a name finds
+the item, case doesn't matter, and a search with no matches says so.
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

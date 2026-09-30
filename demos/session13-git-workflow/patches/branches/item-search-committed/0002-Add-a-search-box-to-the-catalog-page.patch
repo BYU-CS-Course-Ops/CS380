@@ -1,0 +1,39 @@
+From c274a3ea43f2f3aa9dd875680e76b2c61129a489 Mon Sep 17 00:00:00 2001
+From: Tom Stephens <tstephen@cs.byu.edu>
+Date: Tue, 29 Sep 2026 14:35:11 -0600
+Subject: [PATCH 2/4] Add a search box to the catalog page
+
+Use a plain GET form, so a search is a URL a volunteer can bookmark or
+send to someone. When nothing matches, say so, rather than showing the
+empty-catalog message, which would suggest the catalog itself is empty.
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+---
+ catalog/templates/catalog/item_list.html | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/catalog/templates/catalog/item_list.html b/catalog/templates/catalog/item_list.html
+index 4ed51d0..ad8f70e 100644
+--- a/catalog/templates/catalog/item_list.html
++++ b/catalog/templates/catalog/item_list.html
+@@ -6,6 +6,11 @@
+ </head>
+ <body>
+   <h1>Catalog</h1>
++  <form method="get" role="search">
++    <label for="q">Search by name</label>
++    <input id="q" name="q" type="search" value="{{ query }}">
++    <button type="submit">Search</button>
++  </form>
+   {% if items %}
+     <table>
+       <thead>
+@@ -23,6 +28,8 @@
+         {% endfor %}
+       </tbody>
+     </table>
++  {% elif query %}
++    <p>No items match “{{ query }}”.</p>
+   {% else %}
+     <p>Nothing in the catalog yet. Add items in the admin.</p>
+   {% endif %}

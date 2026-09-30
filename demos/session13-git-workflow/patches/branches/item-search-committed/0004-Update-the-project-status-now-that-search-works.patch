@@ -1,0 +1,40 @@
+From b3a811784c15a93d7b0564ccf839c3aece367d4a Mon Sep 17 00:00:00 2001
+From: Tom Stephens <tstephen@cs.byu.edu>
+Date: Tue, 29 Sep 2026 14:35:11 -0600
+Subject: [PATCH 4/4] Update the project status now that search works
+
+The README and the design document's implementation plan both still
+said search was next.
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+---
+ README.md      | 2 +-
+ docs/design.md | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/README.md b/README.md
+index 46de4ea..2addc1e 100644
+--- a/README.md
++++ b/README.md
+@@ -4,7 +4,7 @@ Prop Loft is a catalog for the things a theater production keeps between shows.
+ 
+ > **A teaching project.** Prop Loft is the worked example for BYU's CS 301R, *Founding an Open-Source Project*. It's built in the open the way the course asks students to build theirs. The theater and the evidence cited in its design documents are invented for teaching.
+ 
+-**Status:** early. The [design](docs/design.md) is approved; the app lists items, and search is next.
++**Status:** early. The [design](docs/design.md) is approved; the app lists items and searches them by name.
+ 
+ ## Why "Prop Loft" and not "Backstage"
+ 
+diff --git a/docs/design.md b/docs/design.md
+index cf666ee..3a8b5f9 100644
+--- a/docs/design.md
++++ b/docs/design.md
+@@ -157,7 +157,7 @@ Each milestone is a **vertical slice**: something a volunteer could use end to e
+ | 4 | Roles: what a volunteer can do versus the wardrobe lead. Phone-friendly layout. | 2, 3 |
+ | 5 | Deploy to the theater's server; seed 60 items; the strike-night trial. | 4 |
+ 
+-**Where the repository stands:** milestone 1 is in progress. The item list works; search is next.
++**Where the repository stands:** milestone 1 is in progress. Items can be listed and searched by name; checkout is next.
+ 
+ ---
+ 

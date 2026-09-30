@@ -1,0 +1,99 @@
+diff --git a/README.md b/README.md
+index 46de4ea..2addc1e 100644
+--- a/README.md
++++ b/README.md
+@@ -4,7 +4,7 @@ Prop Loft is a catalog for the things a theater production keeps between shows.
+ 
+ > **A teaching project.** Prop Loft is the worked example for BYU's CS 301R, *Founding an Open-Source Project*. It's built in the open the way the course asks students to build theirs. The theater and the evidence cited in its design documents are invented for teaching.
+ 
+-**Status:** early. The [design](docs/design.md) is approved; the app lists items, and search is next.
++**Status:** early. The [design](docs/design.md) is approved; the app lists items and searches them by name.
+ 
+ ## Why "Prop Loft" and not "Backstage"
+ 
+diff --git a/catalog/templates/catalog/item_list.html b/catalog/templates/catalog/item_list.html
+index 4ed51d0..ad8f70e 100644
+--- a/catalog/templates/catalog/item_list.html
++++ b/catalog/templates/catalog/item_list.html
+@@ -6,6 +6,11 @@
+ </head>
+ <body>
+   <h1>Catalog</h1>
++  <form method="get" role="search">
++    <label for="q">Search by name</label>
++    <input id="q" name="q" type="search" value="{{ query }}">
++    <button type="submit">Search</button>
++  </form>
+   {% if items %}
+     <table>
+       <thead>
+@@ -23,6 +28,8 @@
+         {% endfor %}
+       </tbody>
+     </table>
++  {% elif query %}
++    <p>No items match “{{ query }}”.</p>
+   {% else %}
+     <p>Nothing in the catalog yet. Add items in the admin.</p>
+   {% endif %}
+diff --git a/catalog/tests.py b/catalog/tests.py
+index 6c2de9f..530b220 100644
+--- a/catalog/tests.py
++++ b/catalog/tests.py
+@@ -20,3 +20,29 @@ class ItemListTests(TestCase):
+         response = self.client.get(reverse("catalog:item_list"))
+ 
+         self.assertContains(response, "Nothing in the catalog yet")
++
++
++class ItemSearchTests(TestCase):
++    def setUp(self):
++        bin_a = Bin.objects.create(label="A-01")
++        Item.objects.create(name="Bustle skirt, black", bin=bin_a)
++        Item.objects.create(name="Bowler hat", bin=bin_a)
++
++    def search(self, query):
++        return self.client.get(reverse("catalog:item_list"), {"q": query})
++
++    def test_finds_items_by_part_of_the_name(self):
++        response = self.search("bustle")
++
++        self.assertContains(response, "Bustle skirt, black")
++        self.assertNotContains(response, "Bowler hat")
++
++    def test_ignores_case(self):
++        response = self.search("BOWLER")
++
++        self.assertContains(response, "Bowler hat")
++
++    def test_says_so_when_nothing_matches(self):
++        response = self.search("tiara")
++
++        self.assertContains(response, "No items match")
+diff --git a/catalog/views.py b/catalog/views.py
+index eb4bc10..b43bc59 100644
+--- a/catalog/views.py
++++ b/catalog/views.py
+@@ -4,5 +4,8 @@ from .models import Item
+ 
+ 
+ def item_list(request):
++    query = request.GET.get("q", "")
+     items = Item.objects.select_related("bin")
+-    return render(request, "catalog/item_list.html", {"items": items})
++    if query:
++        items = items.filter(name__icontains=query)
++    return render(request, "catalog/item_list.html", {"items": items, "query": query})
+diff --git a/docs/design.md b/docs/design.md
+index cf666ee..3a8b5f9 100644
+--- a/docs/design.md
++++ b/docs/design.md
+@@ -157,7 +157,7 @@ Each milestone is a **vertical slice**: something a volunteer could use end to e
+ | 4 | Roles: what a volunteer can do versus the wardrobe lead. Phone-friendly layout. | 2, 3 |
+ | 5 | Deploy to the theater's server; seed 60 items; the strike-night trial. | 4 |
+ 
+-**Where the repository stands:** milestone 1 is in progress. The item list works; search is next.
++**Where the repository stands:** milestone 1 is in progress. Items can be listed and searched by name; checkout is next.
+ 
+ ---
+ 

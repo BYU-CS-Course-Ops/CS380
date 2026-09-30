@@ -1,0 +1,60 @@
+## Before class
+
+1. **cbeams — [*How to Write a Git Commit Message*](https://cbea.ms/git-commit/)** — **the primary reading.** The seven rules, and the argument behind them: a project's history is documentation that only works if someone cared about it at the time. Learn the seven rules; we'll grade eight real commit messages against them in class.
+2. **Google — [*The Standard of Code Review*](https://google.github.io/eng-practices/review/reviewer/standard.html)** and **[*What to Look For in a Code Review*](https://google.github.io/eng-practices/review/reviewer/looking-for.html)** — two short pages from Google's engineering-practices guide, written for reviewers. Then skim the **[author's side](https://google.github.io/eng-practices/review/developer/)**, especially *small changes* and *writing a good description*. You'll write your first review comments in class.
+3. **Nothing to bring today but the reading.** Wednesday is a hands-on lab, and there's a list at the bottom of this page for that.
+
+---
+
+## Purpose
+
+Any project that takes changes from more than one person, or from one person over months, needs an answer to a simple question: **how does a change get in?** Who looks at it first? What counts as reviewed? What does a change have to say about itself? What does "done" mean? On an established project, contributors find those answers already written down. Someone decided them. That someone is the **maintainer**, and the answers are the project's governance, enforced every time a change is merged.
+
+You've all used git, mostly as the person asking to get code in: a student submitting a project, or a contributor following someone else's rules. Starting today, you're the one who sets those rules for your own project. The workflow you choose is the one every future contributor will experience.
+
+This course uses a **maintainer-centered** workflow: the loop run by a project whose people own its repository. Branch, make logical commits, open a pull request, get it reviewed, revise, and merge under the project's policy. It isn't the fork-and-upstream route you'd use to contribute to a stranger's project. That's a good route too; it's just not the one a founder runs. Today you'll watch the whole loop once, live, and then practice the two skills that make it work: **commit messages that say why**, and **code review that makes both the code and the colleague better.**
+
+*(One rule in this course is fixed: every project uses pull requests, even a solo one. The pull request is where the reasoning gets recorded and where a second person gets to look. Everything else about your workflow is your project's call, and Wednesday you'll make those calls.)*
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Run the maintainer-centered loop:** branch, logical commits, draft pull request, review, revise, and merge under your project's policy.
+2. **Write a commit message** that passes the seven rules and explains what changed and why, not how.
+3. **Size and describe a pull request** so a reviewer can actually review it.
+4. **Review a change** to the standard of "does this make the code healthier?", in a register that invites a reply instead of a defense.
+5. **Name the decisions your project has to make**: branch names, commit conventions, pull-request size, who reviews, how changes merge, and what "done" means.
+
+---
+
+## What we'll do together
+
+**The whole loop, live.** On a real project, **Prop Loft**. You know it already: it's the costume catalog from the sample proposals and the design document you took apart, now built for real under a new name. (Why it isn't called Backstage anymore is its own small lesson about naming a project.) A change goes all the way in: a branch, a handful of logical commits, a draft pull request, a review by one of your classmates, a fix in response, and a merge. You'll see what each merge option does to the project's history, and why the choice matters.
+
+**Eight commit messages, graded.** Real ones, from public repositories, including three of your instructor's. The room grades each against the seven rules, then you rewrite two of them. Seeing what a message *should* have said often requires knowing what the commit actually did, and that turns out to be the whole point. We'll also look at a message that discloses AI help the right way.
+
+**Pull requests and review.** What an author owes a reviewer, what a reviewer is actually looking for (in order of importance), and how to phrase a comment so it gets a fix instead of an argument. Then you'll review a small change in pairs, with three problems planted in it.
+
+**Wednesday's decisions.** Six things every project decides about its workflow, each with a suggested default and a reason. The defaults are suggestions, not rules. Choose differently if you have a reason, and write the reason down.
+
+---
+
+## What you'll leave with
+
+- **The loop, seen once end to end**, in a public repository you can go back and read: the demo's pull request, its review, and its history stay up at [github.com/prop-loft/prop-loft-demo](https://github.com/prop-loft/prop-loft-demo). The project itself lives at [github.com/prop-loft/prop-loft](https://github.com/prop-loft/prop-loft).
+- **A working test for any commit message**: *"If applied, this commit will ___."*
+- **A register for review comments**: what you see, why it matters, a question or a suggestion.
+- **Wednesday's agenda**: the six decisions, ready to make for your own project.
+
+### Coming up
+
+- **<course-link type="page" id="s14">{{ S14_DAY }}, {{ S14_DATE }}</course-link> is a lab.** You'll run this same loop on your own project's repository, resolve a merge conflict, and write down your project's git standards. It only works if you come ready:
+  - a **charged laptop**, with your development environment running;
+  - **push access** to your project's repository. Accepting the invitation isn't the same as having pushed once, so push something small tonight to be sure;
+  - your answers, or at least your leanings, on the **six decisions**;
+  - your **design document revisions done or nearly done**, so lab time isn't revision time.
+- **<course-link type="assignment" id="cp5">CP5 — Design Document (revised)</course-link> and <course-link type="assignment" id="cp6">CP6 — Git Workflow Lab</course-link> are both due end of day {{ S14_DAY }}.** CP6 happens in the lab itself.
+- *Working solo? The loop is the same, and you'll still need a reviewer who didn't write the change. That's your review partner, another solo founder. You'll review each other's pull requests Wednesday.*

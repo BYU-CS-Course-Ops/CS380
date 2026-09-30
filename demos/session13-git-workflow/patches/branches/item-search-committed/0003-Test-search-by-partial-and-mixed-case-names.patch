@@ -1,0 +1,47 @@
+From e9aa29d5937e24b65c8893419c501b7e6cefdea8 Mon Sep 17 00:00:00 2001
+From: Tom Stephens <tstephen@cs.byu.edu>
+Date: Tue, 29 Sep 2026 14:35:11 -0600
+Subject: [PATCH 3/4] Test search by partial and mixed-case names
+
+Cover the three behaviors a volunteer relies on: part of a name finds
+the item, case doesn't matter, and a search with no matches says so.
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+---
+ catalog/tests.py | 26 ++++++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+diff --git a/catalog/tests.py b/catalog/tests.py
+index 6c2de9f..530b220 100644
+--- a/catalog/tests.py
++++ b/catalog/tests.py
+@@ -20,3 +20,29 @@ class ItemListTests(TestCase):
+         response = self.client.get(reverse("catalog:item_list"))
+ 
+         self.assertContains(response, "Nothing in the catalog yet")
++
++
++class ItemSearchTests(TestCase):
++    def setUp(self):
++        bin_a = Bin.objects.create(label="A-01")
++        Item.objects.create(name="Bustle skirt, black", bin=bin_a)
++        Item.objects.create(name="Bowler hat", bin=bin_a)
++
++    def search(self, query):
++        return self.client.get(reverse("catalog:item_list"), {"q": query})
++
++    def test_finds_items_by_part_of_the_name(self):
++        response = self.search("bustle")
++
++        self.assertContains(response, "Bustle skirt, black")
++        self.assertNotContains(response, "Bowler hat")
++
++    def test_ignores_case(self):
++        response = self.search("BOWLER")
++
++        self.assertContains(response, "Bowler hat")
++
++    def test_says_so_when_nothing_matches(self):
++        response = self.search("tiara")
++
++        self.assertContains(response, "No items match")

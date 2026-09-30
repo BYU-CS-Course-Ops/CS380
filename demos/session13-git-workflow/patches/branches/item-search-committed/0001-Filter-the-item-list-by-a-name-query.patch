@@ -1,0 +1,31 @@
+From fe2eacf38c22098566a015c0e026681a0d6dae6a Mon Sep 17 00:00:00 2001
+From: Tom Stephens <tstephen@cs.byu.edu>
+Date: Tue, 29 Sep 2026 14:35:11 -0600
+Subject: [PATCH 1/4] Filter the item list by a name query
+
+Read an optional q parameter and keep only the items whose name
+contains it, ignoring case. An empty query shows the whole catalog, as
+before.
+
+This is the first step of the design's core flow: a volunteer finds an
+item by name.
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+---
+ catalog/views.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/catalog/views.py b/catalog/views.py
+index eb4bc10..b43bc59 100644
+--- a/catalog/views.py
++++ b/catalog/views.py
+@@ -4,5 +4,8 @@ from .models import Item
+ 
+ 
+ def item_list(request):
++    query = request.GET.get("q", "")
+     items = Item.objects.select_related("bin")
+-    return render(request, "catalog/item_list.html", {"items": items})
++    if query:
++        items = items.filter(name__icontains=query)
++    return render(request, "catalog/item_list.html", {"items": items, "query": query})

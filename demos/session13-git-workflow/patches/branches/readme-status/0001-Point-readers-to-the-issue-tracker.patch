@@ -1,0 +1,26 @@
+From f3947f56b74747067e68ba249cf4f042964802bb Mon Sep 17 00:00:00 2001
+From: Tom Stephens <tstephen@cs.byu.edu>
+Date: Tue, 29 Sep 2026 14:50:45 -0600
+Subject: [PATCH] Point readers to the issue tracker
+
+A reader who finds a bug or has an idea should know where it goes.
+Add the issue tracker to the status line.
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+---
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index 46de4ea..143c2eb 100644
+--- a/README.md
++++ b/README.md
+@@ -4,7 +4,7 @@ Prop Loft is a catalog for the things a theater production keeps between shows.
+ 
+ > **A teaching project.** Prop Loft is the worked example for BYU's CS 301R, *Founding an Open-Source Project*. It's built in the open the way the course asks students to build theirs. The theater and the evidence cited in its design documents are invented for teaching.
+ 
+-**Status:** early. The [design](docs/design.md) is approved; the app lists items, and search is next.
++**Status:** early. The [design](docs/design.md) is approved; the app lists items, and search is next. Found a bug or have an idea? [Open an issue](../../issues).
+ 
+ ## Why "Prop Loft" and not "Backstage"
+ 

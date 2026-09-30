@@ -1,0 +1,7 @@
+Ignore surrounding spaces in the search query
+
+A query typed or pasted with a stray space, like " bustle ", matched
+nothing, because the spaces became part of the search. Strip them
+before filtering. Found in review.
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

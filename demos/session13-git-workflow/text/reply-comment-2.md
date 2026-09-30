@@ -1,0 +1,1 @@
+It should eventually, and you're right that the design lists it. I'd rather not add it to this PR, though. Name search is the piece the checkout flow needs first, and keeping this PR to one change keeps it reviewable. I've opened an issue for category and size search so it doesn't get lost.

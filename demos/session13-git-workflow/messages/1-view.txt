@@ -1,0 +1,10 @@
+Filter the item list by a name query
+
+Read an optional q parameter and keep only the items whose name
+contains it, ignoring case. An empty query shows the whole catalog, as
+before.
+
+This is the first step of the design's core flow: a volunteer finds an
+item by name.
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>

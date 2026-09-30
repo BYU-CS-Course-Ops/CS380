@@ -1,0 +1,6 @@
+Point readers to the issue tracker
+
+A reader who finds a bug or has an idea should know where it goes.
+Add the issue tracker to the status line.
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
