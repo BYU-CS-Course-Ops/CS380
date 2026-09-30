@@ -62,7 +62,7 @@ By the end of this session, a student can:
 - Instructor circulates: sit with pairs whose discussion stalls; model one strong critique aloud early so the room hears the register.
 
 ### 4. Review round 2 (independent read) — 18 min
-- Re-pair from the round-2 list. **Both readers are cold** — that's how the pairings are built — so what round 2 buys is not a harsher audience but an **independent** one.
+- Re-pair from the round-2 list. The new reader hasn't seen round 1's marks, so what round 2 buys is an **independent** read.
 - Teach the inference, because it transfers to code review and user research alike: **a concern both readers raise is about the proposal** (fix it first); **a concern only one raises is ambiguous** — check it with the other reader rather than discarding it.
 - Guard the independence: an author who opens with "my last reviewer said the scope was too big" has just spent the value of the round. Interrupt that if you hear it.
 - Same protocol, tightened (~8 read / ~7 discuss). Authors close by **marking where the two reviews agree** — that's the top of tonight's edit list.

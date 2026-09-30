@@ -218,9 +218,9 @@ async function build() {
   card(s, 0.6, 2.0, 12.1, 1.5, C.cardBg);
   await iconCircle(s, FA.FaUserFriends, 0.95, 2.32, 0.86, C.teal);
   s.addText([
-    { text: "Both of your readers come in cold — that is the design. What round 2 buys you is not a colder read, it is an ", options: { color: C.ink } },
+    { text: "Your round-2 reader never saw round 1’s notes. What that buys you is an ", options: { color: C.ink } },
     { text: "independent", options: { color: C.tealDk, bold: true } },
-    { text: " one.", options: { color: C.ink } }
+    { text: " read — a check on whether each note is about your proposal or about the person who wrote it.", options: { color: C.ink } }
   ], { x: 2.1, y: 2.0, w: 10.3, h: 1.5, fontFace: F.body, fontSize: 17, valign: "middle", margin: 0, lineSpacingMultiple: 1.05 });
   card(s, 0.6, 3.7, 5.95, 2.05, C.strongBg);
   await iconCircle(s, FA.FaCheckDouble, 0.9, 4.0, 0.62, C.green);
@@ -237,7 +237,7 @@ async function build() {
     { text: "Yes or no, and why — on Oct 7 nobody explains their reasoning.", options: { color: "CFE0E9" } }
   ], { x: 1.6, y: 5.9, w: 10.8, h: 0.88, fontFace: F.body, fontSize: 15.5, valign: "middle", margin: 0, lineSpacingMultiple: 1.03 });
   footer(s);
-  s.addNotes("One minute before the second round. Correct the assumption students bring in: both readers are cold, so round 2 is not a harder audience — it is an independent replication. Teach the inference, because it transfers to code review and user research alike: agreement between two people who never spoke is evidence about the artifact; a lone flag is ambiguous and worth checking, not discarding. Then the recruiting question. A proposal can be technically sound and still attract nobody, and Pitch Day is a week out — tell reviewers an honest no with a reason is the most useful thing they can hand a classmate today.");
+  s.addNotes("One minute before the second round. The point of round 2 is independence: a new reader who hasn't seen round 1's marks is an independent replication. Teach the inference, because it transfers to code review and user research alike: agreement between two people who never spoke is evidence about the artifact; a lone flag is ambiguous and worth checking, not discarding. Then the recruiting question. A proposal can be technically sound and still attract nobody, and Pitch Day is a week out — tell reviewers an honest no with a reason is the most useful thing they can hand a classmate today.");
 
   // 8 Round 2 — work slide
   s = await workSlide(
