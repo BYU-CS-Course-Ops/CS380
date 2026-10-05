@@ -129,7 +129,7 @@ By the end of this session, a student can:
 
 ## Appendix — classroom handouts (Session 13)
 
-- **The loop + policy checklist** — slide + half-sheet
+- **The loop + policy checklist** — slides (the six decisions are deck slide 27); no handout. The decisions, defaults, and alternatives are written out in Part 4 of the **Git Workflow Lab Guide** (`pg-git-lab-guide`), linked from this session's page for Wednesday prep.
 - **The seven rules** — half-sheet (from the reading)
 - **Google review guide** — link (reviewer + author guides)
 - **CP6 rubric:** `rubrics.md` (Git Workflow Lab)

@@ -1,0 +1,63 @@
+## Before class
+
+This is a **lab**. There's no new reading. There's prep, and the lab only works if you bring it, because an author who can't push leaves their reviewer with nothing to review.
+
+1. **Bring a charged laptop** with your development environment running. You'll be in a terminal and on GitHub for the whole hour.
+2. **Make sure you can push** to your project's repository, not just clone it. Accepting the invitation isn't the same as having pushed once. Run `git push --dry-run` in your clone tonight: "Everything up-to-date" means you're ready.
+3. **Working solo? Add your review partner** to your repository: **Settings** → **Collaborators and teams** → **Add people**, role **Write**. They need access to be requested as your reviewer, and you need it on theirs.
+4. **Skim the <course-link type="page" id="pg-git-lab-guide">Git Workflow Lab Guide</course-link>.** It walks the whole lab step by step, with every command. Read Part 4 closely, and come with your leanings on your project's **six git standards**.
+5. **Finish your design document revisions** before class, or nearly. They're due end of day today too, and lab time isn't revision time.
+
+**Due end of day today:** <course-link type="assignment" id="cp5">CP5 — Design Document (revised)</course-link> and <course-link type="assignment" id="cp6">CP6 — Git Workflow Lab</course-link>. CP6 happens in the lab itself.
+
+---
+
+## Purpose
+
+On {{ S13_DAY }} you watched the loop: branch, logical commits, a pull request, a review, a revision, a merge under policy. Today **you drive it**, on your own project's repository, with a real reviewer: a teammate, or on a solo project, your review partner.
+
+The changes you'll make are **trivial on purpose**: a link in the README, a line in `.gitignore`. When the change takes two minutes, all your attention goes to the process, and the process is what you're here to learn. Every lasting project runs this same loop for every change, however small, because it's how a project keeps its history readable, its decisions recorded, and its contributors from stepping on each other. It needs to feel routine before there's real code riding on it. Once your project starts building, every feature goes through it.
+
+You'll also make a merge conflict **on purpose**, somewhere harmless, so the first one you resolve isn't a real one at midnight. And you'll finish by deciding your project's **git standards** and writing them down. Every project has rules for how a change gets in. Most never write them down, and every newcomer has to guess.
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Run the full loop yourself** on a shared repository: issue, branch, commits, pull request, review, revision, merge.
+2. **Write a pull request** that a reviewer can actually review: one change, and a description that says what, why, and where to start.
+3. **Review someone else's change in writing**, substantively and kindly, and **answer every comment** on your own.
+4. **Resolve a merge conflict deliberately**, by reading what each side was for rather than keeping your own.
+5. **Set your project's git standards**, with a reason for each, and ship them through the same loop.
+
+---
+
+## What we'll do together
+
+**Part 1: your change.** Pick a starter task, something small your repository actually needs. **File an issue for it before you touch anything**, written however you think a good issue for your project should read. (How to write a good issue is the next session's topic, and the issues you file today are what we'll hold up against it.) Then branch, commit with a message that passes the seven rules, push, open a pull request that closes the issue, and request your reviewer.
+
+**Part 2: the second reader.** Review the pull request assigned to you: at least two written comments, one of them substantive. Answer every comment on yours: fix it, explain why not, or open an issue for it. Nothing merges today without an approval from someone who didn't write it.
+
+**Part 3: a conflict, on purpose.** Two people, or one solo founder playing both parts, change the same line of the README in different ways. The first change merges; the second now conflicts. You'll resolve it on the command line, reading both sides and keeping what each change was for.
+
+**Part 4: your standards.** Six decisions: branch names, commit messages, pull request size, review, merge strategy, and what "done" means. Each has a suggested default; every one is your project's call. You'll write them into `docs/git-standards.md` with a reason for each, and merge that file the way it says to.
+
+You'll get a printed worksheet in class to track your progress and draft your standards. It's posted with this page's materials, too.
+
+---
+
+## What you'll leave with
+
+- **A complete trip around the loop**, in your project's public history: your issue, your pull request, your reviewer's comments and your answers, and the merge.
+- **A review you wrote** of someone else's work. It's often the more useful skill of the two, and the harder one.
+- **A merge conflict you resolved deliberately**, and the reasoning for how you resolved it.
+- **Your project's git standards**, written down and in force. From here on, every change to your project goes through this loop.
+- **Links worth keeping.** A good pull request description and a good review comment are the kind of writing your <course-link type="assignment" id="cp9">Technical Communication Portfolio</course-link> asks for. Save them as you go.
+
+### Coming up
+
+- **<course-link type="page" id="s15">{{ S15_DAY }}, {{ S15_DATE }}</course-link> — your project's front door:** what a stranger finds when they arrive, and the anatomy of a good issue, held up against the ones you filed today. Don't go back and polish today's issues; the version you wrote cold is the useful one. The reading is on the Session 15 page.
+- **Your git standards become the heart of your `CONTRIBUTING.md`**, the file that tells a stranger how to help. That's part of <course-link type="assignment" id="cp7">CP7 — Project Infrastructure Package</course-link>, due {{ S16_DAY }}, {{ S16_DATE }}.
+- *Working solo? The loop is the same. Your review partner reviews your pull requests and you review theirs, and in Part 3 you play both people in the conflict. It works just as well; the one thing you can't do is skip the second reader.*

@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Git Workflow Lab Worksheet</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, "Segoe UI", sans-serif;
+    color: #1E2A36;
+    font-size: 10pt;
+    line-height: 1.2;
+  }
+  .page { page-break-after: always; break-after: page; }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  h1 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 17pt; color: #14233A; margin: 0 0 1pt 0; letter-spacing: -0.2pt;
+  }
+  .kicker { font-size: 8.6pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+  .head { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2pt solid #12908F; padding-bottom: 4pt; margin-bottom: 6pt; }
+  .nameline { font-size: 9pt; color: #5F7284; white-space: nowrap; padding-bottom: 1pt; }
+  .nameline span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 1.6in; }
+  .lede { font-size: 9.3pt; margin: 0 0 7pt 0; }
+  .lede b { color: #14233A; }
+
+  h2 { font-family: Cambria, Georgia, serif; font-size: 11.2pt; color: #14233A; margin: 0 0 3pt 0; display: flex; justify-content: space-between; align-items: baseline; }
+  h2 .n { color: #12908F; }
+  h2 .t { font-family: Calibri, "Segoe UI", sans-serif; font-size: 8.4pt; color: #5F7284; font-weight: normal; }
+  section { margin-bottom: 9pt; }
+
+  .part { display: flex; gap: 10pt; }
+  .steps { flex: 1.15; }
+  .cmds { flex: 1; background: #14233A; color: #E8EEF3; border-radius: 3pt; padding: 5pt 7pt; font-family: Consolas, "Courier New", monospace; font-size: 8.6pt; line-height: 1.36; white-space: pre; align-self: flex-start; }
+  .cmds .c { color: #9FB4C7; }
+  .cmds .m { color: #E8A33D; }
+
+  ul.check { list-style: none; margin: 0; padding: 0; font-size: 9.6pt; }
+  ul.check li { padding-left: 13pt; position: relative; margin-bottom: 3.2pt; }
+  ul.check li::before { content: ""; position: absolute; left: 0; top: 1.5pt; width: 7pt; height: 7pt; border: 0.9pt solid #12908F; border-radius: 1pt; }
+  ul.check b { color: #14233A; }
+  .fill { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; height: 10pt; vertical-align: bottom; }
+  .w1 { width: 0.55in; } .w2 { width: 1.25in; } .w3 { width: 1.9in; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 8.7pt; color: #0E6E6D; }
+
+  .card { background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 4.5pt 7pt; font-size: 9pt; }
+  .card.amber { border-left-color: #E8A33D; }
+  .card b { color: #14233A; }
+  .cols { display: flex; gap: 10pt; }
+  .cols > div { flex: 1; }
+
+  /* standards page */
+  table.std { width: 100%; border-collapse: collapse; }
+  table.std th {
+    font-size: 8pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284;
+    text-align: left; padding: 0 6pt 2pt 0; border-bottom: 1pt solid #12908F; font-weight: bold;
+  }
+  table.std td { vertical-align: top; padding: 5pt 6pt 5pt 0; border-bottom: 0.6pt solid #DCE5EB; font-size: 8.9pt; }
+  table.std tr:last-child td { border-bottom: 0; }
+  table.std td.d { width: 1.15in; font-family: Cambria, Georgia, serif; font-weight: bold; color: #14233A; font-size: 10.2pt; }
+  table.std td.d .q { display: block; font-family: Calibri, "Segoe UI", sans-serif; font-weight: normal; font-style: italic; color: #5F7284; font-size: 8.3pt; margin-top: 2pt; }
+  table.std td.o { width: 2.35in; }
+  table.std td.o .def { color: #0E6E6D; font-weight: bold; }
+  table.std td.o .alt { color: #5F7284; display: block; margin-top: 2pt; }
+  table.std td.f { padding-right: 0; }
+  .lbl { font-size: 7.6pt; color: #5F7284; text-transform: uppercase; letter-spacing: 0.3pt; }
+  .rule { border-bottom: 0.7pt solid #9BB0BF; height: 0.32in; }
+
+  .foot { margin-top: 6pt; border-top: 1pt dashed #9BB0BF; padding-top: 4pt; font-size: 8.2pt; color: #5F7284; display: flex; justify-content: space-between; gap: 10pt; }
+  .foot span:last-child { white-space: nowrap; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+
+<!-- ============================== PAGE 1 ============================== -->
+<div class="page">
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Git Workflow Lab · 1 of 2</p>
+    <h1>Run the Loop: Lab Tracker</h1>
+  </div>
+  <div class="nameline">Name <span></span></div>
+</div>
+
+<p class="lede">Every lasting project runs the same loop for every change: <b>say what you'll change, make it on a branch, explain it, get a second reader, answer them, merge under the project's rules.</b> Today you run it once, for real, on your own repository. Check off each step and write down the numbers as you go; they're what you'll hand in. <b>The full steps and every command are on the Canvas page <i>Git Workflow Lab Guide</i></b>; this sheet keeps your place.</p>
+
+<section>
+  <h2><span><span class="n">Before you start ·</span> Can you push?</span><span class="t">5 min</span></h2>
+  <div class="part">
+    <div class="steps">
+      <ul class="check">
+        <li><b>Identity set:</b> <code>user.name</code> and <code>user.email</code> are right</li>
+        <li><b>Fresh copy:</b> on <code>main</code>, pulled</li>
+        <li><b>Push works:</b> <code>git push --dry-run</code> says up-to-date</li>
+        <li><b>Reviewer has access</b> (solo: partner added, role Write)</li>
+        <li>My reviewer: <span class="fill w2"></span></li>
+        <li>I review: <span class="fill w2"></span></li>
+      </ul>
+    </div>
+    <div class="cmds"><span class="c"># check, then fix if wrong</span>
+git config --global user.name
+git config --global user.email
+git switch main &amp;&amp; git pull
+git push --dry-run</div>
+  </div>
+</section>
+
+<section>
+  <h2><span><span class="n">Part 1 ·</span> Your change: issue → branch → commit → pull request</span><span class="t">25 min</span></h2>
+  <div class="part">
+    <div class="steps">
+      <ul class="check">
+        <li><b>Task picked</b> (circle): &nbsp;A&nbsp;design&nbsp;link · B&nbsp;license · C&nbsp;.gitignore · D&nbsp;README&nbsp;fix · E&nbsp;docs&nbsp;index</li>
+        <li><b>Issue filed</b>, assigned to me. &nbsp;Issue # <span class="fill w1"></span></li>
+        <li><b>Branched</b> from fresh <code>main</code>: <span class="fill w3"></span></li>
+        <li><b>Committed</b> with a subject <i>and</i> a body. Subject passes "If applied, this commit will ___"</li>
+        <li><b>Pushed</b> with <code>-u</code></li>
+        <li><b>PR opened</b>, with <code>Closes&nbsp;#</code>. &nbsp;PR&nbsp;#&nbsp;<span class="fill w1"></span></li>
+        <li><b>Reviewer requested</b></li>
+      </ul>
+    </div>
+    <div class="cmds">git switch -c docs/link-design-doc
+
+<span class="c"># make the change, then look at it</span>
+git status
+git diff
+
+git add README.md
+git commit         <span class="c"># no -m</span>
+git log -1
+git commit --amend <span class="c"># fix it before pushing</span>
+
+git push -u origin docs/link-design-doc</div>
+  </div>
+</section>
+
+<section>
+  <h2><span><span class="n">Part 2 ·</span> The second reader: review, respond, merge</span><span class="t">15 min</span></h2>
+  <div class="part">
+    <div class="steps">
+      <ul class="check">
+        <li><b>Reviewed</b> PR # <span class="fill w1"></span>: two or more comments, one substantive, nits marked <code>nit:</code></li>
+        <li><b>Every comment on mine answered</b>: fixed (new commit, same branch), explained, or moved to a new issue</li>
+        <li><b>Approved</b> by someone who didn't write it</li>
+        <li><b>Merged</b>; squash message edited; branch deleted; <b>issue closed itself</b></li>
+      </ul>
+    </div>
+    <div class="cmds"><span class="c"># after the merge</span>
+git switch main
+git pull
+git log --oneline -5
+git branch -D docs/link-design-doc</div>
+  </div>
+</section>
+
+<section>
+  <h2><span><span class="n">Part 3 ·</span> A merge conflict, on purpose</span><span class="t">12 min</span></h2>
+  <div class="part">
+    <div class="steps">
+      <ul class="check">
+        <li><b>A and B both branched from the same <code>main</code></b>, before either merged. &nbsp;I'm: &nbsp;A · B · both (solo)</li>
+        <li><b>A</b> changed the README status line to "Design complete…"; <b>B</b> added an issue link to the same line</li>
+        <li><b>A's PR merged</b>; B's now shows a conflict</li>
+        <li><b>B resolved it locally by merge</b>, keeping both changes; pushed</li>
+        <li><b>B's PR reviewed and merged.</b> &nbsp;Conflict PR # <span class="fill w1"></span></li>
+      </ul>
+    </div>
+    <div class="cmds">git switch docs/status-issue-link
+git fetch origin
+git merge origin/main
+<span class="c"># edit README: read both sides,</span>
+<span class="c"># keep both, delete</span> <span class="m">&lt;&lt;&lt;&lt;&lt;&lt;&lt; ======= &gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+git add README.md
+git commit &amp;&amp; git push
+<span class="c"># lost? start over:</span>
+git merge --abort</div>
+  </div>
+</section>
+
+<section>
+  <h2><span><span class="n">Part 4 ·</span> Your project's git standards</span><span class="t">12 min · page 2</span></h2>
+  <div class="cols">
+    <div class="card"><b>Decide</b> the six on the back, a reason for each. Then write them into <code>docs/git-standards.md</code> and <b>ship it through the loop</b>: branch, PR, review, merge, the way it says to.</div>
+    <div class="card amber"><b>Hand in</b> (the repository is the submission): your issue, your PR, the review you wrote, the conflict PR, and <code>docs/git-standards.md</code> on <code>main</code>.</div>
+  </div>
+</section>
+
+<div class="foot">
+  <span><b>Stuck?</b> The guide's <i>When something goes wrong</i> section covers push errors, committing on <code>main</code>, and messy merges. Or say so out loud now.</span>
+  <span>CS 301R · Studio I</span>
+</div>
+
+</div>
+
+<!-- ============================== PAGE 2 ============================== -->
+<div class="page">
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Git Workflow Lab · 2 of 2</p>
+    <h1>Our Git Standards</h1>
+  </div>
+  <div class="nameline">Project <span></span></div>
+</div>
+
+<p class="lede">Every project has rules for how a change gets in. On most, they're never written down, so every newcomer guesses and every maintainer applies them a little differently. <b>Writing them down is the difference between a norm and a hope.</b> Each decision below has a suggested default and some reasonable alternatives. <b>Every one is your project's call.</b> Choosing differently is fine; what isn't fine is a choice without a reason. Fill in your choice and one line of why, then copy it into <code>docs/git-standards.md</code>. That file becomes the heart of your <code>CONTRIBUTING.md</code>.</p>
+
+<table class="std">
+  <tr><th>Decision</th><th>Suggested default · alternatives</th><th>Our choice, and why</th></tr>
+  <tr>
+    <td class="d">Branch names<span class="q">Can a stranger tell what a branch is from its name?</span></td>
+    <td class="o"><span class="def">type/short-description</span> (<code>feat/</code>, <code>fix/</code>, <code>docs/</code>, <code>chore/</code>)<span class="alt">Or: add the issue number (<code>fix/42-empty-search</code>); initials as a prefix</span></td>
+    <td class="f"><span class="lbl">Choice</span><div class="rule"></div><span class="lbl">Why</span><div class="rule"></div></td>
+  </tr>
+  <tr>
+    <td class="d">Commit messages<span class="q">Will the log read like a history?</span></td>
+    <td class="o"><span class="def">The seven rules</span><span class="alt">Or: the seven rules plus a type prefix, as in Conventional Commits (<code>docs: link the design doc</code>)</span></td>
+    <td class="f"><span class="lbl">Choice</span><div class="rule"></div><span class="lbl">Why</span><div class="rule"></div></td>
+  </tr>
+  <tr>
+    <td class="d">Pull request size<span class="q">Can it be reviewed in one sitting?</span></td>
+    <td class="o"><span class="def">One logical change</span>, small enough to review in one sitting<span class="alt">Or: a line-count guideline (split above ~400 changed lines)</span></td>
+    <td class="f"><span class="lbl">Choice</span><div class="rule"></div><span class="lbl">Why</span><div class="rule"></div></td>
+  </tr>
+  <tr>
+    <td class="d">Review<span class="q">Who must read it before it merges?</span></td>
+    <td class="o"><span class="def">One approval from someone who didn't write it</span><span class="alt">Or: two approvals; an owner for certain files. Solo: your review partner, or a self-review checklist when no one's available, said honestly</span></td>
+    <td class="f"><span class="lbl">Choice</span><div class="rule"></div><span class="lbl">Why</span><div class="rule"></div></td>
+  </tr>
+  <tr>
+    <td class="d">Merge strategy<span class="q">What should <code>main</code>'s history look like?</span></td>
+    <td class="o"><span class="def">Squash and merge</span>: one commit per change; the steps stay in the PR<span class="alt">Or: merge commits (every branch commit kept); rebase and merge (every commit kept, and every one must be clean)</span></td>
+    <td class="f"><span class="lbl">Choice</span><div class="rule"></div><span class="lbl">Why</span><div class="rule"></div></td>
+  </tr>
+  <tr>
+    <td class="d">"Done"<span class="q">When is a change finished?</span></td>
+    <td class="o"><span class="def">Reviewed, merged, runs on <code>main</code>, docs updated</span> if behavior changed<span class="alt">Or: add "tests pass" once there are tests; "issue closed with a note"</span></td>
+    <td class="f"><span class="lbl">Choice</span><div class="rule"></div><span class="lbl">Why</span><div class="rule"></div></td>
+  </tr>
+</table>
+
+<section style="margin-top:8pt">
+  <div class="cols">
+    <div class="card"><b>Optional: make GitHub enforce it.</b> Settings → General → Pull Requests: allow only your merge method; if you squash, default the message to <i>Pull request title and description</i>; auto-delete head branches. A required approval is a branch ruleset (Settings → Rules). <b>Solo:</b> GitHub won't let you approve your own PR, so a required approval means every merge waits on your partner.</div>
+    <div class="card amber"><b>The test before you merge it:</b> does the pull request that adds these standards follow them? Branch name, commit message, description, reviewer, merge method. A standard its own PR breaks isn't a standard.</div>
+  </div>
+</section>
+
+<div class="foot">
+  <span><b>Instructor sign-off</b> before you leave: <span class="fill w2"></span> &nbsp; Anything flagged: <span class="fill w3"></span></span>
+  <span>CS 301R · Studio I</span>
+</div>
+
+</div>
+
+</body>
+</html>

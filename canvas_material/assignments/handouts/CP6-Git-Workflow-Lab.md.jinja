@@ -1,0 +1,70 @@
+## The short version
+
+In the lab on {{ S14_DAY }}, {{ S14_DATE }}, every project member runs the full **maintainer-centered loop** on your project's real repo — issue → branch → logical commits → PR with a real description → review another maintainer's PR → respond to review → merge under policy — plus one staged **merge conflict**, resolved. Each project finishes by writing its **git standards** into the repo. Your grade is read directly from the repo: its issues, pull requests, reviews, and history. The <course-link type="page" id="pg-git-lab-guide">Git Workflow Lab Guide</course-link> walks every step, with the commands.
+
+---
+
+## Why this assignment exists
+
+You've used git; this lab is about *running* git — the difference between knowing the commands and operating the collaboration system a real project lives on. From next week until December, every feature your project ships travels through this loop, and the quality of your project's history — its commits, PRs, and reviews — becomes the public record of your engineering. A future contributor (and the Week-11 auditor, and any hiring manager who opens your repo) reads that record the way you'd read someone's prose: it shows whether a developer is a good collaborator.
+
+Three specific habits are being installed. **Commit messages that explain why** — because a diff shows *what* changed, and only the message preserves the reasoning your future self will need. **PRs sized and described to be reviewable** — because review is where teams catch design drift, and an unreviewable PR silently disables it. **Written code review done kindly and substantively** — comment on the code, not the coder; a skill that shapes team culture more than almost any other. The lab makes the content trivial *on purpose*: with nothing hard to build, all attention goes to the process — which is the thing being learned.
+
+---
+
+## What to produce (all in the repo, by end of day {{ S14_DAY }})
+
+Per **member**:
+1. An **issue** for your starter task, filed before you start the work, and a branch (named per your convention) with **1–2 logical commits** whose messages pass the seven rules (subject ≤ ~50 chars, imperative mood, blank line, body explains *what/why*).
+2. A **PR** with a real description (problem · approach · what to look at first) that links and closes the issue.
+3. A **written review** of another maintainer's PR — a teammate's, or on a solo project, your review partner's: at least two comments, one substantive.
+4. **Responses to every comment** received (fix or explain), and a merge under the project's policy. *(Whatever policy your project sets later, the lab itself requires ≥1 approval from someone who didn't write the change — the review is part of what's graded.)*
+
+Per **project**:
+5. One **staged merge conflict** created and correctly resolved, by merging `main` into the branch, so the resolving merge commit is in that PR. *(Solo: open both conflicting branches yourself; your review partner reviews the PR that resolves it.)*
+6. **Git standards** written and merged (e.g., `docs/git-standards.md`): branch naming · commit convention · PR size norms · review requirements · merge strategy · definition of "done" — each with a line of rationale.
+
+---
+
+## Requirements & constraints
+
+- **Everyone drives.** Each member's own branch, PR, review, and responses — this is individually visible by design.
+- **The starter tasks are trivial on purpose** (README additions, doc stubs, typo fixes). Don't gold-plate them.
+- **The pull requests are the submission.** Squash merging is fine (it's the suggested default): the branch commits, the review, and the conflict resolution all stay in each PR, which is where grading reads them. What destroys the evidence is rewriting a branch *before* it merges: squashing or rebasing locally and force-pushing over commits your reviewer read, or over the conflict resolution. Don't.
+- **Working solo?** You run the same loop. Your review partner, another solo founder, reviews your PR, and you review theirs.
+
+---
+
+## Grading
+
+Scored on a 100-point analytic rubric from repo evidence; **≈6% of the course grade** (bundle with CP9).
+
+| Criterion | Weight | What it measures |
+|---|---|---|
+| **Commit hygiene** | 25 | Logical, atomic commits; clear, conventional messages in the imperative that explain why. |
+| **Branch & PR workflow** | 25 | The maintainer-centered flow followed correctly: branch → PR → review → merge under policy. |
+| **PR quality** | 20 | Scoped, reviewable PRs with descriptions that orient the reviewer. |
+| **Review participation** | 20 | Substantive, constructive written review of a peer's PR — a graded skill, not a formality. |
+| **Project git standards** | 10 | Standards documented, reasoned, and actually followed in the lab itself. |
+
+**Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
+
+---
+
+## Tips and common pitfalls
+
+- **The imperative-mood test:** "If applied, this commit will *___*." If your subject line doesn't complete that sentence, rewrite it.
+- **"Fixed stuff" and "WIP" in the final history are self-inflicted wounds.** Amend before you push.
+- **Rubber-stamp review ("LGTM!" with nothing else) scores as Developing** at best. Find something real — a question counts.
+- **In the conflict, read both sides before resolving.** Blindly keeping "mine" is how staged conflicts become real bugs.
+- **Save your links.** Today's PR description and review comments are strong candidates for your CP9 portfolio.
+
+---
+
+## Submission
+
+Everything lives in the repo by **end of day {{ S14_DAY }}, {{ S14_DATE }}**; submit the repo URL plus the links the lab guide's *Before you leave* checklist collects: each member's issue, PR, and written review, the conflict-resolving PR, and `docs/git-standards.md`. Your git standards graduate into `CONTRIBUTING.md` next week (CP7) — and this loop is how all project work ships from now through Demo Day.
+
+---
+
+*Part of the arc: **CP5 design → CP6 workflow → CP7 infrastructure → build phase.** Readings: [How to Write a Git Commit Message](https://cbea.ms/git-commit/), [Google's Code Review Developer Guide](https://google.github.io/eng-practices/). See the grading rubric above.*
