@@ -200,15 +200,15 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 - Team grade, adjusted by individual-contribution evidence (design §8).
 
 ## CP6 — Git Workflow Lab
-*Team (or solo) · Part of the 12% Git + Tech-Comm bundle, with CP9* · **draft — not yet in student-facing wording**
+*Team (or solo) · Part of the 12% Git + Tech-Comm bundle, with CP9* · **published**
 
 | Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
 |---|---|---|---|---|---|
-| Commit hygiene | 25 | Logical, atomic commits; clear, conventional messages | Mostly clean | Noisy/uneven | Dumps; poor messages |
-| Branch & PR workflow | 25 | Correct maintainer-centered branch→PR→review→merge flow | Workflow followed | Inconsistent | Not followed |
-| PR quality | 20 | Reviewable, scoped PRs using the template | Reasonable PRs | Large/unclear PRs | Unreviewable |
-| Review participation | 20 | Substantive, constructive review comments on peers' PRs | Some real review | Rubber-stamp | None |
-| Project git standards | 10 | Standards documented and actually followed | Documented | Vague | Absent |
+| Commit hygiene | 25 | Logical, atomic commits; messages pass the seven rules and explain why | Mostly clean; messages say what changed | Noisy or uneven; "WIP"/"fixed stuff" in the history | Dump commits; messages explain nothing |
+| Branch & PR workflow | 25 | Issue → branch → PR → review → merge under policy, every step visible; conflict resolved in its PR | Workflow followed, minor gaps | Steps skipped or out of order | Not followed |
+| PR quality | 20 | Small, scoped PRs; description gives problem, approach, and where to look first, and closes the issue | Reasonable PRs with a real description | Large or unclear; thin description | Unreviewable |
+| Review participation | 20 | Substantive, kind review of another maintainer's PR; every comment on your own PR answered | Some real review; responses to most comments | Rubber-stamp ("LGTM" alone) | None |
+| Project git standards | 10 | Each standard documented with its rationale, and the lab's own history follows it | Documented | Vague, or contradicted by the history | Absent |
 
 **What it measures** (handout table, Canvas criterion description).
 - **Commit hygiene** — Logical, atomic commits; clear, conventional messages in the imperative that explain why.
@@ -216,6 +216,13 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 - **PR quality** — Scoped, reviewable PRs with descriptions that orient the reviewer.
 - **Review participation** — Substantive, constructive written review of a peer's PR — a graded skill, not a formality.
 - **Project git standards** — Standards documented, reasoned, and actually followed in the lab itself.
+
+**What each criterion is looking for** (student-facing, rubrics page).
+- Everything is read from the repository — its issues, pull requests, reviews, and history. That is how a project's engineering is judged in the world, too: a future contributor or a hiring manager opens the repo, not a write-up about it.
+- **Commit hygiene** and **PR quality** are the record you leave for the next reader. A message that explains *why*, and a PR small enough to actually review, are what make that record useful.
+- **Branch & PR workflow** is about each step being visible, including the merge conflict resolved inside its PR. Rewriting a branch before it merges (force-pushing over commits your reviewer read) erases the evidence; squash-merging afterward does not.
+- **Review participation** is weighted as heavily as PR quality because reviewing someone else's code well is a skill in its own right. "LGTM" with nothing else is a rubber stamp; a real question counts as substance. Answering the comments on your own PR counts here too.
+- **Project git standards** asks whether your project wrote its own norms, gave a reason for each, and then actually followed them.
 
 **Instructor notes.**
 - This lab grades *mechanics under a real workflow*, not git trivia. The emphasis is the **maintainer-centered** model (branch → logical commits → draft PR → review → merge under policy), not fork-and-upstream.

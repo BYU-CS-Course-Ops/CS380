@@ -39,13 +39,8 @@ Per **project**:
 
 Scored on a 100-point analytic rubric from repo evidence; **≈6% of the course grade** (bundle with CP9).
 
-| Criterion | Weight | What it measures |
-|---|---|---|
-| **Commit hygiene** | 25 | Logical, atomic commits; clear, conventional messages in the imperative that explain why. |
-| **Branch & PR workflow** | 25 | The maintainer-centered flow followed correctly: branch → PR → review → merge under policy. |
-| **PR quality** | 20 | Scoped, reviewable PRs with descriptions that orient the reviewer. |
-| **Review participation** | 20 | Substantive, constructive written review of a peer's PR — a graded skill, not a formality. |
-| **Project git standards** | 10 | Standards documented, reasoned, and actually followed in the lab itself. |
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp6) }}
 
 **Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
 

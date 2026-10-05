@@ -386,54 +386,58 @@ rubrics:
       - "Team grade, adjusted by individual-contribution evidence (design §8)."
 
   # ---------------------------------------------------------------- CP6
-  # publish: false — levels are still the instructor draft wording.
   cp6:
     title: CP6 — Git Workflow Lab
     subtitle: Team (or solo) · Part of the 12% Git + Tech-Comm bundle, with CP9
     phase: 3
-    publish: false
+    publish: true
     criteria:
       - name: Commit hygiene
         weight: 25
         measures: Logical, atomic commits; clear, conventional messages in the imperative that explain why.
         levels:
-          exemplary: Logical, atomic commits; clear, conventional messages
-          proficient: Mostly clean
-          developing: Noisy/uneven
-          beginning: Dumps; poor messages
+          exemplary: Logical, atomic commits; messages pass the seven rules and explain why
+          proficient: Mostly clean; messages say what changed
+          developing: Noisy or uneven; "WIP"/"fixed stuff" in the history
+          beginning: Dump commits; messages explain nothing
       - name: Branch & PR workflow
         weight: 25
         measures: "The maintainer-centered flow followed correctly: branch → PR → review → merge under policy."
         levels:
-          exemplary: Correct maintainer-centered branch→PR→review→merge flow
-          proficient: Workflow followed
-          developing: Inconsistent
+          exemplary: Issue → branch → PR → review → merge under policy, every step visible; conflict resolved in its PR
+          proficient: Workflow followed, minor gaps
+          developing: Steps skipped or out of order
           beginning: Not followed
       - name: PR quality
         weight: 20
         measures: Scoped, reviewable PRs with descriptions that orient the reviewer.
         levels:
-          exemplary: Reviewable, scoped PRs using the template
-          proficient: Reasonable PRs
-          developing: Large/unclear PRs
+          exemplary: Small, scoped PRs; description gives problem, approach, and where to look first, and closes the issue
+          proficient: Reasonable PRs with a real description
+          developing: Large or unclear; thin description
           beginning: Unreviewable
       - name: Review participation
         weight: 20
         measures: Substantive, constructive written review of a peer's PR — a graded skill, not a formality.
         levels:
-          exemplary: Substantive, constructive review comments on peers' PRs
-          proficient: Some real review
-          developing: Rubber-stamp
+          exemplary: Substantive, kind review of another maintainer's PR; every comment on your own PR answered
+          proficient: Some real review; responses to most comments
+          developing: Rubber-stamp ("LGTM" alone)
           beginning: None
       - name: Project git standards
         weight: 10
         measures: Standards documented, reasoned, and actually followed in the lab itself.
         levels:
-          exemplary: Standards documented and actually followed
+          exemplary: Each standard documented with its rationale, and the lab's own history follows it
           proficient: Documented
-          developing: Vague
+          developing: Vague, or contradicted by the history
           beginning: Absent
-    looking_for: []
+    looking_for:
+      - "Everything is read from the repository — its issues, pull requests, reviews, and history. That is how a project's engineering is judged in the world, too: a future contributor or a hiring manager opens the repo, not a write-up about it."
+      - "**Commit hygiene** and **PR quality** are the record you leave for the next reader. A message that explains *why*, and a PR small enough to actually review, are what make that record useful."
+      - "**Branch & PR workflow** is about each step being visible, including the merge conflict resolved inside its PR. Rewriting a branch before it merges (force-pushing over commits your reviewer read) erases the evidence; squash-merging afterward does not."
+      - "**Review participation** is weighted as heavily as PR quality because reviewing someone else's code well is a skill in its own right. \"LGTM\" with nothing else is a rubber stamp; a real question counts as substance. Answering the comments on your own PR counts here too."
+      - "**Project git standards** asks whether your project wrote its own norms, gave a reason for each, and then actually followed them."
     instructor_notes:
       - "This lab grades *mechanics under a real workflow*, not git trivia. The emphasis is the **maintainer-centered** model (branch → logical commits → draft PR → review → merge under policy), not fork-and-upstream."
       - "**Review participation** is weighted because reviewing others' code well is a graded skill in its own right, not a formality."
