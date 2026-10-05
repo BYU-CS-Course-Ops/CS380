@@ -208,19 +208,19 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 | Branch & PR workflow | 25 | Correct maintainer-centered branch→PR→review→merge flow | Workflow followed | Inconsistent | Not followed |
 | PR quality | 20 | Reviewable, scoped PRs using the template | Reasonable PRs | Large/unclear PRs | Unreviewable |
 | Review participation | 20 | Substantive, constructive review comments on peers' PRs | Some real review | Rubber-stamp | None |
-| Team git standards | 10 | Standards documented and actually followed | Documented | Vague | Absent |
+| Project git standards | 10 | Standards documented and actually followed | Documented | Vague | Absent |
 
 **What it measures** (handout table, Canvas criterion description).
 - **Commit hygiene** — Logical, atomic commits; clear, conventional messages in the imperative that explain why.
 - **Branch & PR workflow** — The maintainer-centered flow followed correctly: branch → PR → review → merge under policy.
 - **PR quality** — Scoped, reviewable PRs with descriptions that orient the reviewer.
 - **Review participation** — Substantive, constructive written review of a peer's PR — a graded skill, not a formality.
-- **Team git standards** — Standards documented, reasoned, and actually followed in the lab itself.
+- **Project git standards** — Standards documented, reasoned, and actually followed in the lab itself.
 
 **Instructor notes.**
 - This lab grades *mechanics under a real workflow*, not git trivia. The emphasis is the **maintainer-centered** model (branch → logical commits → draft PR → review → merge under policy), not fork-and-upstream.
 - **Review participation** is weighted because reviewing others' code well is a graded skill in its own right, not a formality.
-- **Team git standards** rewards setting and honoring the team's own conventions — founders write the norms.
+- **Project git standards** rewards setting and honoring the project's own conventions — founders write the norms.
 
 ## CP7 — Project Infrastructure Package
 *Team (or solo) · Course weight: 12%* · **draft — not yet in student-facing wording**
@@ -266,13 +266,13 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 **What it measures** (handout table, Canvas criterion description).
 - **Work breakdown** — Coherent epics → milestones → issues at the right granularity — vision turned into finishable work.
 - **Prioritization & estimation** — An ordered backlog with credible estimates, checked against real capacity.
-- **Definition of done** — A clear, testable, team-wide bar for "done."
+- **Definition of done** — A clear, testable, project-wide bar for "done."
 - **Contribution pathways** — Good-first-issues and labels that genuinely invite future contributors — weighted heavily on purpose.
 - **Roadmap into the future** — A credible path into a future semester/team — the project's tomorrow, written down.
 
 **Instructor notes.**
 - **Work breakdown** and **Prioritization & estimation** assess turning vision into manageable, sequenced work.
-- **Definition of done** grades whether the team has a shared, checkable bar for completion.
+- **Definition of done** grades whether the project has a shared, checkable bar for completion.
 - **Contribution pathways** and **Roadmap into the future** are weighted heavily because *creating on-ramps for future contributors* is a defining course goal, not an afterthought.
 
 ## CP9 — Technical Communication Portfolio
