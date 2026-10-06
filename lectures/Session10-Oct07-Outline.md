@@ -35,7 +35,7 @@ By the end of this session, a student can:
 ## Instructor prep / materials
 
 - **Run of show:** **the pitch order is drawn at random and shown in the first minute of class** (generate it beforehand if you like — just don't publish it); visible countdown timer; a hard-nosed timekeeper (TA or volunteer). Because the order is unknown until class starts, every student should arrive ready to present first.
-- **Scoring:** evaluation sheets/form ready; a fast tally mechanism for the selection huddle.
+- **Scoring:** evaluation sheets ready, plus a one-page tally grid — a row per pitch, a column for each of the seven criteria, then Yes and Maybe. Per pitch you record the **mean score for each criterion** (not one total) and the **Yes and Maybe counts**. Presenters don't score their own pitch. The grid: `lectures/Session10-Pitch-Tally-Grid.pdf` (instructor-only, landscape, eight rows — print one).
 - **Print the Team Preference Worksheet** — `resources/Team-Preference-Worksheet.pdf`, two half-sheets per page, cut: one per student for §4. It's the thinking sheet; **the actual submission is a Canvas assignment**, so have that assignment open and accepting submissions before class, set to allow edits through **Sunday 11:59pm**. *(The team-charter template isn't needed today — charters get written in class on Monday.)*
 - **Selection plan:** how you'll run the blend (peer scores + recruit interest + instructor final say) in ~8 minutes, live at the front of the room.
 - **Weekend post plan:** be ready to put up, by Thursday evening — the **anchor ideas**, the **tallied scores**, the **anonymized "would you join" comments**, and the **CP3 proposals for the anchor projects**. That post is what makes Monday's decision better than today's would have been.
@@ -58,6 +58,7 @@ By the end of this session, a student can:
 
 ### 3. Selection huddle — 8 min
 - Collect sheets; tally fast at the front of the room (this is why the mechanics were settled Monday).
+- **What gets tallied, per pitch:** the **mean of each of the seven criteria** (1–3), kept separate rather than summed — a 3 on value and a 1 on scope realism is the signal selection needs, and a total hides it — plus the **Yes and Maybe counts** on "would you join?" Yes is the recruiting signal; Maybe is reported but not weighted as a Yes. The comment lines aren't tallied; they go back to presenters anonymized. These per-pitch numbers are the "tallied scores" in Thursday's post.
 - Instructor reviews: peer scores + recruiting interest ("yes" counts) + own judgment → announce the **anchor ideas** (the set that can support teams of ~2–4, plus approved solo paths).
 - Frame it right, and say it plainly: ideas not selected **didn't lose.** Their founders now choose which anchor to join, bringing everything they learned in discovery — and nobody's idea gets killed out from under them, since a determined founder may elect the solo path.
 - **Anyone whose idea drew no interest hears it from you, here, today** — briefly and in person, not by inference from a list on the LMS over the weekend. That conversation is the reason selection stays in the room even though commitment doesn't.
@@ -108,6 +109,7 @@ By the end of this session, a student can:
 ## Appendix — classroom handouts (Session 10)
 
 - **Pitch Evaluation Sheet:** `resources/Pitch-Evaluation-Sheet.pdf` — one half-sheet per pitch watched
+- **Pitch Tally Grid (instructor):** `lectures/Session10-Pitch-Tally-Grid.html` / `.pdf` — one page, a row per pitch: criterion means + Yes/Maybe/No counts + anchor check
 - **Team Preference Worksheet:** `resources/Team-Preference-Worksheet.html` / `.pdf` — one per student; students keep it and submit their answers via the **Canvas assignment** (editable until Sun 11:59pm)
 - **CP4 rubric:** `rubrics.md` (Pitch Presentation #1)
 - **Team-charter template:** `canvas_material/assignments/handouts/Team-Charter.md.jinja` — *not today*; used in class Mon, Oct 12

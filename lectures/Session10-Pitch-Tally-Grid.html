@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pitch Tally Grid</title>
+<style>
+  @page { size: letter landscape; margin: 0.4in 0.45in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 10pt; line-height: 1.18; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 5pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 17pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 8pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .tag { font-size: 8.4pt; color: #5F7284; font-style: italic; padding-bottom: 2pt; }
+
+  .how { display: flex; gap: 10pt; margin-bottom: 6pt; }
+  .how div { flex: 1; background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 3pt 6pt; font-size: 8.6pt; }
+  .how div.amber { border-left-color: #E8A33D; }
+  .how b { color: #14233A; }
+
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  th { font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284; font-weight: bold;
+       text-align: center; padding: 0 2pt 3pt 2pt; border-bottom: 1.2pt solid #12908F; vertical-align: bottom; }
+  th.l { text-align: left; }
+  th.grp { color: #0E6E6D; border-bottom: 0.8pt solid #12908F; padding-bottom: 1pt; }
+  th.jgrp { color: #B07A22; border-bottom: 0.8pt solid #E8A33D; padding-bottom: 1pt; }
+  td { border: 0.6pt solid #C9D6DF; height: 0.71in; vertical-align: top; position: relative; padding: 2pt 3pt; }
+  td.num { width: 0.28in; text-align: center; vertical-align: middle; font-family: Cambria, Georgia, serif;
+           font-weight: bold; color: #12908F; font-size: 11pt; border-left: 0; }
+  td.pitch { width: 1.75in; }
+  td.n { width: 0.42in; }
+  td.crit { background: #FFFFFF; }
+  td.join { background: #FBF6EC; width: 0.5in; }
+  td.anchor { width: 0.55in; text-align: center; vertical-align: middle; font-size: 13pt; color: #9BB0BF; }
+  td.notes { width: 1.5in; }
+  .mean { position: absolute; right: 2pt; bottom: 2pt; width: 0.34in; height: 0.22in;
+          border: 0.9pt solid #12908F; border-radius: 2pt; background: #F2F6F8; }
+  .mean::before { content: "x\0304"; position: absolute; left: -9pt; bottom: 0; font-size: 8pt; color: #12908F; }
+  .ph { font-size: 7pt; color: #9BB0BF; }
+
+  .foot { margin-top: 5pt; font-size: 8pt; color: #5F7284; display: flex; justify-content: space-between; gap: 10pt; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="kicker">CS 301R · Pitch Day · instructor sheet</div>
+      <h1>Pitch Tally Grid</h1>
+    </div>
+    <div class="tag">One row per pitch · filled in during the selection huddle · numbers go in the weekend post</div>
+  </div>
+
+  <div class="how">
+    <div><b>Criteria — mean, not total.</b> Jot each sheet's score (1–3) in the cell, then write sum ÷ <i>n</i> in the box. Keep the seven separate: a 3 on value with a 1 on scope realism is the signal; a total hides it.</div>
+    <div class="amber"><b>Would you join — count.</b> Yes is the recruiting signal. Maybe is reported but not counted as a Yes. Comment lines aren't tallied; they go back to presenters anonymized.</div>
+    <div><b><i>n</i> = sheets for that pitch</b> (enrollment − 1; presenters don't score themselves). Circle any criterion mean ≤ 1.5. Zero Yes → talk to that founder before they leave the room.</div>
+  </div>
+
+  <table>
+    <colgroup>
+      <col style="width:0.28in"><col style="width:1.6in"><col style="width:0.36in">
+      <col><col><col><col><col><col><col>
+      <col style="width:0.46in"><col style="width:0.46in"><col style="width:0.46in">
+      <col style="width:0.55in"><col style="width:1.45in">
+    </colgroup>
+    <tr>
+      <th rowspan="2" class="l" style="width:0.28in">#</th>
+      <th rowspan="2" class="l" style="width:1.75in">Pitch / presenter</th>
+      <th rowspan="2" style="width:0.42in"><i style="text-transform:none">n</i></th>
+      <th colspan="7" class="grp">Criterion means (1 weak · 2 adequate · 3 strong)</th>
+      <th colspan="3" class="jgrp">Would you join?</th>
+      <th rowspan="2" style="width:0.55in">Anchor?</th>
+      <th rowspan="2" class="l" style="width:1.5in">Notes</th>
+    </tr>
+    <tr>
+      <th>Value</th><th>Feasibility</th><th>Richness</th><th>Scope realism</th>
+      <th>Extensi&shy;bility</th><th>Maintain&shy;ability</th><th>Prepared&shy;ness</th>
+      <th style="width:0.5in">Yes</th><th style="width:0.5in">Maybe</th><th style="width:0.5in">No</th>
+    </tr>
+    <tr><td class="num">1</td><td class="pitch"></td><td class="n"></td>
+      <td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td>
+      <td class="join"></td><td class="join"></td><td class="join"></td><td class="anchor">☐</td><td class="notes"></td></tr>
+    <tr><td class="num">2</td><td class="pitch"></td><td class="n"></td>
+      <td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td>
+      <td class="join"></td><td class="join"></td><td class="join"></td><td class="anchor">☐</td><td class="notes"></td></tr>
+    <tr><td class="num">3</td><td class="pitch"></td><td class="n"></td>
+      <td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td>
+      <td class="join"></td><td class="join"></td><td class="join"></td><td class="anchor">☐</td><td class="notes"></td></tr>
+    <tr><td class="num">4</td><td class="pitch"></td><td class="n"></td>
+      <td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td>
+      <td class="join"></td><td class="join"></td><td class="join"></td><td class="anchor">☐</td><td class="notes"></td></tr>
+    <tr><td class="num">5</td><td class="pitch"></td><td class="n"></td>
+      <td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td>
+      <td class="join"></td><td class="join"></td><td class="join"></td><td class="anchor">☐</td><td class="notes"></td></tr>
+    <tr><td class="num">6</td><td class="pitch"></td><td class="n"></td>
+      <td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td>
+      <td class="join"></td><td class="join"></td><td class="join"></td><td class="anchor">☐</td><td class="notes"></td></tr>
+    <tr><td class="num">7</td><td class="pitch"></td><td class="n"></td>
+      <td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td>
+      <td class="join"></td><td class="join"></td><td class="join"></td><td class="anchor">☐</td><td class="notes"></td></tr>
+    <tr><td class="num">8</td><td class="pitch"></td><td class="n"></td>
+      <td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td><td class="crit"><span class="mean"></span></td>
+      <td class="join"></td><td class="join"></td><td class="join"></td><td class="anchor">☐</td><td class="notes"></td></tr>
+  </table>
+
+  <div class="foot">
+    <span><b>Blend:</b> criterion means + Yes counts + instructor judgment → anchor ideas (teams of ~2–4) and approved solo paths. Instructor holds final say.</span>
+    <span>CS 301R</span>
+  </div>
+</body>
+</html>
