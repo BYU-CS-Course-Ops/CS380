@@ -35,7 +35,7 @@ By the end of this session, a student can:
 ## Instructor prep / materials
 
 - **Run of show:** **the pitch order is drawn at random and shown in the first minute of class** (generate it beforehand if you like — just don't publish it); visible countdown timer; a hard-nosed timekeeper (TA or volunteer). Because the order is unknown until class starts, every student should arrive ready to present first.
-- **Scoring:** evaluation sheets ready, plus a one-page tally grid — a row per pitch, a column for each of the seven criteria, then Yes and Maybe. Per pitch you record the **mean score for each criterion** (not one total) and the **Yes and Maybe counts**. Presenters don't score their own pitch. The grid: `lectures/Session10-Pitch-Tally-Grid.pdf` (instructor-only, landscape, eight rows — print one).
+- **Scoring:** evaluation sheets ready, plus a one-page tally grid — a row per pitch, a column for each of the seven criteria, then Yes and Maybe. Per pitch you record the **mean score for each criterion** (not one total) and the **Yes and Maybe counts**. Presenters don't score their own pitch. The grid: `lectures/Session10-Pitch-Tally-Grid.pdf` (instructor-only, landscape, eight rows — print one). Your own CP4 grades go on a separate sheet as each pitch runs: `lectures/Session10-CP4-Scoring-Sheet.pdf` — a row per pitch, a level box (4–1) per rubric criterion, a comments column, and the rubric summarized at the top.
 - **Print the Team Preference Worksheet** — `resources/Team-Preference-Worksheet.pdf`, two half-sheets per page, cut: one per student for §4. It's the thinking sheet; **the actual submission is a Canvas assignment**, so have that assignment open and accepting submissions before class, set to allow edits through **Sunday 11:59pm**. *(The team-charter template isn't needed today — charters get written in class on Monday.)*
 - **Selection plan:** how you'll run the blend (peer scores + recruit interest + instructor final say) in ~8 minutes, live at the front of the room.
 - **Weekend post plan:** be ready to put up, by Thursday evening — the **anchor ideas**, the **tallied scores**, the **anonymized "would you join" comments**, and the **CP3 proposals for the anchor projects**. That post is what makes Monday's decision better than today's would have been.
@@ -110,6 +110,7 @@ By the end of this session, a student can:
 
 - **Pitch Evaluation Sheet:** `resources/Pitch-Evaluation-Sheet.pdf` — one half-sheet per pitch watched
 - **Pitch Tally Grid (instructor):** `lectures/Session10-Pitch-Tally-Grid.html` / `.pdf` — one page, a row per pitch: criterion means + Yes/Maybe/No counts + anchor check
+- **CP4 Scoring Sheet (instructor):** `lectures/Session10-CP4-Scoring-Sheet.html` / `.pdf` — one page, a row per pitch: a level (4–1) for each of the six CP4 criteria + total + comments; rubric summary with per-level points at the top
 - **Team Preference Worksheet:** `resources/Team-Preference-Worksheet.html` / `.pdf` — one per student; students keep it and submit their answers via the **Canvas assignment** (editable until Sun 11:59pm)
 - **CP4 rubric:** `rubrics.md` (Pitch Presentation #1)
 - **Team-charter template:** `canvas_material/assignments/handouts/Team-Charter.md.jinja` — *not today*; used in class Mon, Oct 12

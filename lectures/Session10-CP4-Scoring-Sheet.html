@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CP4 Scoring Sheet</title>
+<style>
+  @page { size: letter landscape; margin: 0.4in 0.45in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 10pt; line-height: 1.18; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 5pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 17pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 8pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .tag { font-size: 8.4pt; color: #5F7284; font-style: italic; padding-bottom: 2pt; }
+
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+
+  /* rubric summary */
+  table.rub { margin-bottom: 7pt; background: #F2F6F8; }
+  table.rub th { font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284; text-align: left;
+                 padding: 2pt 4pt; border-bottom: 1pt solid #12908F; }
+  table.rub th .lv { color: #0E6E6D; }
+  table.rub td { font-size: 8.4pt; padding: 1.6pt 4pt; border-bottom: 0.5pt solid #DCE5EB; vertical-align: top; }
+  table.rub td.cn { font-weight: bold; color: #14233A; }
+  table.rub td.w { text-align: center; font-weight: bold; color: #0E6E6D; }
+  .p { color: #12908F; font-size: 7.6pt; padding-left: 3pt; }
+
+  /* scoring grid */
+  table.grid th { font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284; font-weight: bold;
+       text-align: center; padding: 0 2pt 3pt 2pt; border-bottom: 1.2pt solid #12908F; vertical-align: bottom; }
+  table.grid th.l { text-align: left; }
+  .wt { color: #0E6E6D; text-transform: none; font-size: 8.4pt; }
+  table.grid td { border: 0.6pt solid #C9D6DF; height: 0.56in; vertical-align: top; position: relative; padding: 2pt 3pt; }
+  td.num { text-align: center; vertical-align: middle !important; font-family: Cambria, Georgia, serif;
+           font-weight: bold; color: #12908F; font-size: 11pt; border-left: 0 !important; }
+  .time { position: absolute; left: 3pt; bottom: 2pt; font-size: 7pt; color: #9BB0BF; }
+  td.sc { text-align: center; }
+  .box { position: absolute; left: 50%; top: 50%; width: 0.36in; height: 0.3in; margin: -0.15in 0 0 -0.18in;
+          border: 0.9pt solid #12908F; border-radius: 2pt; background: #F2F6F8; }
+  td.tot { background: #FBF6EC; }
+
+  .foot { margin-top: 5pt; font-size: 8pt; color: #5F7284; display: flex; justify-content: space-between; gap: 10pt; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="kicker">CS 301R · Pitch Day · instructor sheet</div>
+      <h1>CP4 Scoring Sheet</h1>
+    </div>
+    <div class="tag">One row per pitch · score live · transfer to the Canvas rubric in SpeedGrader</div>
+  </div>
+
+  <table class="rub">
+    <colgroup><col style="width:1.85in"><col style="width:0.42in"><col><col><col><col></colgroup>
+    <tr><th>Criterion</th><th style="text-align:center">Wt</th>
+      <th><span class="lv">4 · Exemplary</span></th><th><span class="lv">3 · Proficient</span></th>
+      <th><span class="lv">2 · Developing</span></th><th><span class="lv">1 · Beginning</span></th></tr>
+<tr><td class="cn">Problem/solution clarity</td><td class="w">20</td><td>Need + idea land immediately <span class="p">· 20 pts</span></td><td>Clear <span class="p">· 15 pts</span></td><td>Somewhat muddled <span class="p">· 10 pts</span></td><td>Confusing <span class="p">· 5 pts</span></td></tr>
+<tr><td class="cn">Persuasiveness & recruiting</td><td class="w">25</td><td>Compelling; clear call to join <span class="p">· 25 pts</span></td><td>Persuasive <span class="p">· 18.75 pts</span></td><td>Flat <span class="p">· 12.5 pts</span></td><td>Unconvincing <span class="p">· 6.25 pts</span></td></tr>
+<tr><td class="cn">Feasibility defense</td><td class="w">15</td><td>Scope &amp; tradeoffs, convincingly <span class="p">· 15 pts</span></td><td>Defends adequately <span class="p">· 11.25 pts</span></td><td>Shaky <span class="p">· 7.5 pts</span></td><td>Cannot defend <span class="p">· 3.75 pts</span></td></tr>
+<tr><td class="cn">Handling of questions</td><td class="w">15</td><td>Direct, composed, honest <span class="p">· 15 pts</span></td><td>Handles most <span class="p">· 11.25 pts</span></td><td>Struggles <span class="p">· 7.5 pts</span></td><td>Deflects / unable <span class="p">· 3.75 pts</span></td></tr>
+<tr><td class="cn">Slide &amp; visual quality</td><td class="w">10</td><td>Clean, purposeful <span class="p">· 10 pts</span></td><td>Serviceable <span class="p">· 7.5 pts</span></td><td>Cluttered <span class="p">· 5 pts</span></td><td>Poor / absent <span class="p">· 2.5 pts</span></td></tr>
+<tr><td class="cn">Delivery &amp; professionalism</td><td class="w">15</td><td>Confident, paced, in time <span class="p">· 15 pts</span></td><td>Solid <span class="p">· 11.25 pts</span></td><td>Uneven or over time <span class="p">· 7.5 pts</span></td><td>Unprofessional <span class="p">· 3.75 pts</span></td></tr>
+  </table>
+
+  <table class="grid">
+    <colgroup>
+      <col style="width:0.28in"><col style="width:1.7in">
+      <col><col><col><col><col><col>
+      <col style="width:0.55in"><col style="width:2.6in">
+    </colgroup>
+    <tr><th class="l">#</th><th class="l">Presenter / project</th><th>Clarity<br><span class="wt">20%</span></th><th>Persuasion &amp; recruiting<br><span class="wt">25%</span></th><th>Feasibility defense<br><span class="wt">15%</span></th><th>Q&amp;A<br><span class="wt">15%</span></th><th>Slides &amp; visuals<br><span class="wt">10%</span></th><th>Delivery<br><span class="wt">15%</span></th><th>Total<br><span class="wt">/100</span></th><th class="l">Comments</th></tr>
+<tr><td class="num">1</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">2</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">3</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">4</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">5</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">6</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">7</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">8</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+  </table>
+
+  <div class="foot">
+    <span><b>Boxes take a level, 4–1</b> (0 = absent). Points = weight × level ÷ 4 — the small numbers in the summary; Canvas does the math. Peer sheets inform, the grade is yours. Honest answers beat confident ones on Feasibility and Q&amp;A.</span>
+    <span>CS 301R</span>
+  </div>
+</body>
+</html>
