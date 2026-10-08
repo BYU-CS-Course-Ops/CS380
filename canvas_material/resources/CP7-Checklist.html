@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CP7 Checklist</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 10pt; line-height: 1.2; }
+
+  h1 { font-family: Cambria, Georgia, serif; font-size: 17pt; color: #14233A; margin: 0 0 1pt 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 8.6pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+  .head { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2pt solid #12908F; padding-bottom: 4pt; margin-bottom: 6pt; }
+  .nameline { font-size: 9pt; color: #5F7284; white-space: nowrap; padding-bottom: 1pt; }
+  .nameline span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 2.3in; }
+  .lede { font-size: 10pt; margin: 0 0 9pt 0; }
+  .lede b { color: #14233A; }
+
+  .cols { display: flex; gap: 14pt; }
+  .cols > div { flex: 1; }
+
+  section { margin-bottom: 10pt; break-inside: avoid; }
+  h2 { font-family: Cambria, Georgia, serif; font-size: 12pt; color: #14233A; margin: 0 0 2.5pt 0;
+       border-bottom: 0.7pt solid #DCE5EB; padding-bottom: 1.5pt; display: flex; justify-content: space-between; align-items: baseline; }
+  h2 .n { color: #12908F; }
+  h2 .t { font-family: Consolas, "Courier New", monospace; font-size: 8pt; color: #0E6E6D; font-weight: normal; }
+
+  ul.check { list-style: none; margin: 0; padding: 0; font-size: 10pt; }
+  ul.check li { padding-left: 14pt; position: relative; margin-bottom: 3.4pt; }
+  ul.check li::before { content: ""; position: absolute; left: 0; top: 1.6pt; width: 7.5pt; height: 7.5pt; border: 0.9pt solid #12908F; border-radius: 1pt; }
+  ul.check b { color: #14233A; }
+  .why { font-size: 8.8pt; color: #5F7284; font-style: italic; margin: 0 0 2.5pt 0; }
+  code { font-family: Consolas, "Courier New", monospace; font-size: 8.6pt; color: #0E6E6D; }
+
+  .card { background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 5pt 8pt; font-size: 9.6pt; margin-bottom: 7pt; }
+  .card.amber { border-left-color: #E8A33D; }
+  .card b { color: #14233A; }
+
+  .punch .lbl { font-family: Cambria, Georgia, serif; font-size: 11pt; color: #14233A; font-weight: bold; }
+  .punch .hint { font-size: 8.2pt; color: #5F7284; font-style: italic; }
+  .punch .rule { border-bottom: 0.7pt solid #9BB0BF; height: 0.27in; }
+
+  .foot { margin-top: 6pt; border-top: 1pt dashed #9BB0BF; padding-top: 4pt; font-size: 8.2pt; color: #5F7284; display: flex; justify-content: space-between; gap: 10pt; }
+  .foot b { color: #14233A; }
+  .foot span:last-child { white-space: nowrap; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="kicker">CS 301R · CP7 Project Infrastructure Package · your project's front door</div>
+      <h1>CP7 Checklist</h1>
+    </div>
+    <div class="nameline">Project / repo <span></span></div>
+  </div>
+
+  <p class="lede">Every stranger who meets a project — a potential contributor, a user, an employer — meets it through the same few files, in the same order: <b>What is this? Can I run it? May I use it? How do I help? What's it like here?</b> Check each item the way that stranger would, not the way you would. You already know everything, and they don't.</p>
+
+  <div class="cols">
+    <div>
+      <section>
+        <h2><span><span class="n">1 ·</span> README</span><span class="t">README.md</span></h2>
+        <ul class="check">
+          <li>The <b>first sentence</b> says what it is and who it's for</li>
+          <li>A <b>status</b> line: what works today</li>
+          <li>A <b>quickstart</b> that works from a fresh clone</li>
+          <li>Links to CONTRIBUTING; ends with a license line</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span><span class="n">2 ·</span> License</span><span class="t">LICENSE</span></h2>
+        <ul class="check">
+          <li>Exact license text, with year and holder filled in</li>
+          <li>A <b>one-paragraph rationale</b> recorded: why <i>this</i> license for <i>this</i> project, not MIT by reflex</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span><span class="n">3 ·</span> Contributing guide</span><span class="t">CONTRIBUTING.md</span></h2>
+        <ul class="check">
+          <li>Opens with <b>how to get started</b>, not with rules</li>
+          <li>Setup, how to pick work, the PR process, review expectations (grown from your git standards)</li>
+          <li>Says what a newcomer should do <b>first</b></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span><span class="n">4 ·</span> Code of conduct</span><span class="t">CODE_OF_CONDUCT.md</span></h2>
+        <ul class="check">
+          <li><b>Adopted</b> from a standard (Contributor Covenant), not written from scratch</li>
+          <li>Reporting contact and enforcement filled in for your project</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span><span class="n">5 ·</span> Templates + labels</span><span class="t">.github/</span></h2>
+        <ul class="check">
+          <li><b>Bug template</b> asks for steps to reproduce, expected vs. actual, and environment</li>
+          <li><b>Feature template</b> asks for the need, the user, and today's workaround</li>
+          <li><b>PR template</b> checklist pulled from your git standards</li>
+          <li>Labels: <code>bug</code>, <code>enhancement</code>, <code>good first issue</code>, plus your own</li>
+        </ul>
+      </section>
+    </div>
+
+    <div>
+      <section>
+        <h2><span><span class="n">6 ·</span> Setup guide — cold-tested</span><span class="t">docs/</span></h2>
+        <p class="why">The author's machine hides state — the env var you set months ago, the tool you forgot you installed. Only a cold reader finds it.</p>
+        <ul class="check">
+          <li>Someone who <b>didn't write it</b> followed it exactly, from a fresh clone</li>
+          <li>Each failure or confusion filed as an issue</li>
+          <li>Guide fixed and issues closed. The closed issues stay visible; they're your evidence.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span><span class="n">7 ·</span> Communication norms</span><span class="t" style="font-size:7.2pt">docs/communication-norms.md</span></h2>
+        <ul class="check">
+          <li>Where discussion happens</li>
+          <li>Response times you can <b>actually keep</b> ("within a week," not "24/7")</li>
+          <li>Who maintains, and how decisions get made</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span><span class="n">8 ·</span> Seed issues</span><span class="t">Issues tab</span></h2>
+        <ul class="check">
+          <li>2–3 real next-work items, filed <b>through your own templates</b></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span><span class="n">✓ ·</span> Ship it</span><span class="t">Canvas</span></h2>
+        <ul class="check">
+          <li>Everything merged to <code>main</code> through reviewed PRs</li>
+          <li>Repo pointer (tag or commit hash) submitted in Canvas</li>
+        </ul>
+      </section>
+
+      <div class="card amber"><b>Where the points are:</b> the two heaviest criteria are <b>Completeness</b> (everything above, substantive) and <b>Newcomer usability</b> (a stranger installs, runs, and starts contributing from the docs alone), worth 25 each. The same stranger's test comes back in the repo audit.</div>
+    </div>
+  </div>
+
+  <div class="punch">
+    <span class="lbl">Punch list for the build workshop</span> <span class="hint">— what's missing or weak in your repo today, in the order you'll fix it</span>
+    <div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div>
+  </div>
+
+  <div class="foot">
+    <span><b>Adapt, don't invent</b> where a standard exists (license text, code of conduct) · <b>write, don't copy</b> where your project is the content (README, setup, norms)</span>
+    <span>CS 301R</span>
+  </div>
+</body>
+</html>

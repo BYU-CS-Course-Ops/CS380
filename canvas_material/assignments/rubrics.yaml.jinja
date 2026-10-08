@@ -562,51 +562,56 @@ rubrics:
   # ---------------------------------------------------------------- CP9
   cp9:
     title: CP9 — Technical Communication Portfolio
-    subtitle: Individual evidence within the team · Completes the 12% Git + Tech-Comm bundle
+    subtitle: Individual · Completes the 12% Git + Tech-Comm bundle, with CP6
     phase: 4
-    publish: false
+    publish: true
     criteria:
       - name: Precision & clarity
         weight: 25
-        measures: Exact and unambiguous — the reader knows precisely what's meant, first pass.
+        measures: Exact and unambiguous — the reader knows precisely what's meant on the first pass.
         levels:
-          exemplary: Exact, unambiguous; reader knows precisely what's meant
-          proficient: Clear
-          developing: Some ambiguity
-          beginning: Vague/confusing
+          exemplary: Exact and unambiguous throughout; the reader never has to guess what's meant
+          proficient: Clear, with an occasional loose phrase
+          developing: Some ambiguity a reader would have to ask about
+          beginning: Vague or confusing
       - name: Completeness
         weight: 25
-        measures: Bug reports carry reproduction and expected-vs-actual; requests are fully framed. Anchored to the defect/fault/failure discipline.
+        measures: Bug reports carry steps to reproduce and expected vs. actual; feature requests state the need, the user, and the workaround.
         levels:
-          exemplary: Bug reports include reproduction, expected vs. actual; requests fully framed
-          proficient: Mostly complete
-          developing: Missing elements
-          beginning: Incomplete
+          exemplary: Every bug report has the full anatomy; the feature request frames the need, the user, and the workaround
+          proficient: Mostly complete; one part thin
+          developing: Key parts missing, such as expected vs. actual or the environment
+          beginning: Incomplete throughout
       - name: Actionability
         weight: 20
-        measures: A maintainer could act immediately — no follow-up interrogation required.
+        measures: A maintainer could act immediately — no follow-up questions required.
         levels:
-          exemplary: A maintainer could act immediately
-          proficient: Actionable
-          developing: Needs follow-up
+          exemplary: A maintainer could act on each artifact immediately
+          proficient: Actionable, with a question or two
+          developing: Needs a round of follow-up before anyone can act
           beginning: Not actionable
       - name: Tone & professionalism
         weight: 15
-        measures: Respectful, collaborative, on-brand for open source — even (especially) when critical.
+        measures: Respectful and collaborative — even, especially, when critical.
         levels:
-          exemplary: Respectful, collaborative, on-brand for OSS
+          exemplary: Respectful and collaborative, including when critical; on the work, not the person
           proficient: Professional
-          developing: Uneven
+          developing: Uneven; curt or careless in places
           beginning: Unprofessional
       - name: Responsiveness to feedback
         weight: 15
-        measures: Critique engaged thoughtfully; updates made or disagreement reasoned — the two-way half of the skill.
+        measures: Critique engaged thoughtfully — a change made, or a disagreement explained — without defensiveness.
         levels:
-          exemplary: Engages critique thoughtfully; updates accordingly
+          exemplary: Engages critique thoughtfully; fixes it, or explains a reasoned disagreement
           proficient: Responds adequately
-          developing: Defensive/thin
-          beginning: Ignores
-    looking_for: []
+          developing: Defensive or thin
+          beginning: Ignores feedback
+    looking_for:
+      - "The portfolio is graded as a whole, on the writing itself. The counts (two bug reports, one feature request, and so on) are a floor for coverage, not the score. One careful bug report outweighs six rote ones."
+      - "**Precision**, **completeness**, and **actionability** are one question asked three ways: could the person reading this act on it without coming back to you? That's the bar for every bug report and pull request you'll write at work, too."
+      - "**Completeness** follows the bug-report anatomy from Session 15. For the feature request, it means a need and a user, not a solution order."
+      - "**Responsiveness to feedback** is the two-way half of the skill. A disagreement handled well (\"I kept it because X; happy to revisit if Y\") counts as much as a fix."
+      - "Your one- or two-sentence note on each artifact is read. It shows you can tell your best writing from your most recent."
     instructor_notes:
       - "Contents: 2 bug reports, 1 feature request, 1 PR description, 2 review comments, 2 responses to feedback — graded on **quality, not quantity**. The counts are a floor; a thoughtful bug report beats six rote ones."
       - "**Completeness** is anchored to the defect/fault/failure framing taught in Week 8 (reproduction, expected vs. actual)."

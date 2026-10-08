@@ -1,0 +1,66 @@
+## The short version
+
+Assemble **eight artifacts of your own real project communication**, with links: **2 bug reports · 1 feature request · 1 PR description · 2 review comments · 2 responses to feedback.** Each with a one-or-two-sentence note on why you chose it. Graded on **quality, not completion** — eight thoughtful artifacts, not eight boxes checked.
+
+---
+
+## Why this assignment exists
+
+Here's the open secret of software engineering: most of what a working engineer *writes* is not code. It's bug reports, PR descriptions, review comments, issue threads, and replies to feedback — thousands of small texts that collectively determine whether a team (or an open-source community) functions. This writing is engineering: a reproducible bug report saves a maintainer an hour; a clear PR description makes review possible; a kind, precise review comment improves both the code and the colleague. And in open source, this writing *is your public face* — it's genuinely the thing strangers know you by.
+
+The portfolio exists to make you treat this writing as work worth doing well — and worth *curating*. By collecting your best instead of your most recent, you're forced to reread your own communication with an editor's eye, which is how the standard becomes internal. The eighth-grade version of this skill is "wrote it down"; the professional version is *precise, complete, actionable, kind* — and the gap between them is one of the most career-shaping gaps there is. Notice, too, that two of the eight artifacts are **responses to feedback**: communication is two-way, and how you receive critique is as visible, and as reputation-defining, as how you give it.
+
+---
+
+## What to produce
+
+A single document (Markdown or PDF) with **eight linked artifacts**, each with a 1–2 sentence note on why it represents your best work:
+
+| # | Artifact | The bar |
+|---|---|---|
+| 2× | **Bug reports** | The anatomy from Session 15: one failure, a title that names it, numbered steps to reproduce, expected vs. actual, environment, evidence. |
+| 1× | **Feature request** | The need, the user, the current workaround — your product-definition thinking in miniature, not "add X pls." |
+| 1× | **PR description** | Problem · approach · what to look at first; a reviewer could start cold. |
+| 2× | **Review comments** | Substantive, specific, kind; on the code, not the coder; a question that improves the work counts. |
+| 2× | **Responses to feedback** | You engaging critique — fixing, or explaining a reasoned disagreement — without defensiveness. |
+
+Legitimate sources: your project's repository, the Session 14 git lab, the issues your cold tester filed against your setup guide (and your replies), issues or reviews you've written on a classmate's project, and any real open-source interaction you've had this semester. Everything must be **yours** and **from this course period.**
+
+---
+
+## Requirements & constraints
+
+- **Quality over quantity is literal:** the counts are a floor for coverage, but one thoughtful bug report outweighs six rote ones — the rubric grades the writing, not the tally.
+- **Links must resolve** (public repo or instructor-accessible). Screenshots as backup if a thread might move.
+- **Choose deliberately.** The 1–2 sentence "why I chose this" notes are read; "it was my most recent one" is not curation.
+- **Start collecting now, not the night before it's due.** The good artifacts are the ones you wrote carefully in the moment — retroactive polish shows.
+
+---
+
+## Grading
+
+Scored on a 100-point analytic rubric across the portfolio as a whole; **≈6% of the course grade** (bundle with CP6).
+
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp9) }}
+
+**Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
+
+---
+
+## Tips and common pitfalls
+
+- **Your best artifacts probably already exist** — the cold-test issue that saved your reader an hour, the review comment that caught a design problem. Curating means finding them, not manufacturing new ones this week.
+- **The feature request is the most commonly botched piece:** it needs a *need*, not a solution order.
+- **A disagreement handled well is portfolio gold.** "I kept it as-is because X; happy to revisit if Y" shows more skill than ten easy fixes.
+- **Reread before you submit — as the recipient.** Would you know what to do? Would you feel respected? Those are the two graded questions, fused.
+
+---
+
+## Submission
+
+Submit the portfolio document via LMS **before class {{ S22_DAY }}, {{ S22_DATE }}** (the same day as CP10 — assemble it the weekend before, not that morning). 
+
+---
+
+*Part of the Git + Tech-Comm bundle: **CP6 (the workflow) + CP9 (the writing that flows through it).** Anchors: the Session 15 bug-report anatomy, the Google review guide's register from Session 13, and Session 8's feedback protocol. See the grading rubric above.*

@@ -283,22 +283,29 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 - **Contribution pathways** and **Roadmap into the future** are weighted heavily because *creating on-ramps for future contributors* is a defining course goal, not an afterthought.
 
 ## CP9 — Technical Communication Portfolio
-*Individual evidence within the team · Completes the 12% Git + Tech-Comm bundle* · **draft — not yet in student-facing wording**
+*Individual · Completes the 12% Git + Tech-Comm bundle, with CP6* · **published**
 
 | Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
 |---|---|---|---|---|---|
-| Precision & clarity | 25 | Exact, unambiguous; reader knows precisely what's meant | Clear | Some ambiguity | Vague/confusing |
-| Completeness | 25 | Bug reports include reproduction, expected vs. actual; requests fully framed | Mostly complete | Missing elements | Incomplete |
-| Actionability | 20 | A maintainer could act immediately | Actionable | Needs follow-up | Not actionable |
-| Tone & professionalism | 15 | Respectful, collaborative, on-brand for OSS | Professional | Uneven | Unprofessional |
-| Responsiveness to feedback | 15 | Engages critique thoughtfully; updates accordingly | Responds adequately | Defensive/thin | Ignores |
+| Precision & clarity | 25 | Exact and unambiguous throughout; the reader never has to guess what's meant | Clear, with an occasional loose phrase | Some ambiguity a reader would have to ask about | Vague or confusing |
+| Completeness | 25 | Every bug report has the full anatomy; the feature request frames the need, the user, and the workaround | Mostly complete; one part thin | Key parts missing, such as expected vs. actual or the environment | Incomplete throughout |
+| Actionability | 20 | A maintainer could act on each artifact immediately | Actionable, with a question or two | Needs a round of follow-up before anyone can act | Not actionable |
+| Tone & professionalism | 15 | Respectful and collaborative, including when critical; on the work, not the person | Professional | Uneven; curt or careless in places | Unprofessional |
+| Responsiveness to feedback | 15 | Engages critique thoughtfully; fixes it, or explains a reasoned disagreement | Responds adequately | Defensive or thin | Ignores feedback |
 
 **What it measures** (handout table, Canvas criterion description).
-- **Precision & clarity** — Exact and unambiguous — the reader knows precisely what's meant, first pass.
-- **Completeness** — Bug reports carry reproduction and expected-vs-actual; requests are fully framed. Anchored to the defect/fault/failure discipline.
-- **Actionability** — A maintainer could act immediately — no follow-up interrogation required.
-- **Tone & professionalism** — Respectful, collaborative, on-brand for open source — even (especially) when critical.
-- **Responsiveness to feedback** — Critique engaged thoughtfully; updates made or disagreement reasoned — the two-way half of the skill.
+- **Precision & clarity** — Exact and unambiguous — the reader knows precisely what's meant on the first pass.
+- **Completeness** — Bug reports carry steps to reproduce and expected vs. actual; feature requests state the need, the user, and the workaround.
+- **Actionability** — A maintainer could act immediately — no follow-up questions required.
+- **Tone & professionalism** — Respectful and collaborative — even, especially, when critical.
+- **Responsiveness to feedback** — Critique engaged thoughtfully — a change made, or a disagreement explained — without defensiveness.
+
+**What each criterion is looking for** (student-facing, rubrics page).
+- The portfolio is graded as a whole, on the writing itself. The counts (two bug reports, one feature request, and so on) are a floor for coverage, not the score. One careful bug report outweighs six rote ones.
+- **Precision**, **completeness**, and **actionability** are one question asked three ways: could the person reading this act on it without coming back to you? That's the bar for every bug report and pull request you'll write at work, too.
+- **Completeness** follows the bug-report anatomy from Session 15. For the feature request, it means a need and a user, not a solution order.
+- **Responsiveness to feedback** is the two-way half of the skill. A disagreement handled well ("I kept it because X; happy to revisit if Y") counts as much as a fix.
+- Your one- or two-sentence note on each artifact is read. It shows you can tell your best writing from your most recent.
 
 **Instructor notes.**
 - Contents: 2 bug reports, 1 feature request, 1 PR description, 2 review comments, 2 responses to feedback — graded on **quality, not quantity**. The counts are a floor; a thoughtful bug report beats six rote ones.
