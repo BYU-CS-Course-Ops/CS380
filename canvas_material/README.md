@@ -161,6 +161,22 @@ Handouts and session prose are `.md.jinja` for the same reason. A file becomes
 `.md.jinja` the moment it contains a `{{ }}`; a plain `.md` never gets rendered,
 and its braces ship to students verbatim.
 
+## Pitch Day results
+
+The Team Preference assignment shows the Pitch Day tallies (per-criterion
+averages, sheet counts, and "would you join" counts) and links to the written
+proposals. The handout is a fixed template; the numbers come from a
+per-semester YAML file in `course_info/`, named by `PITCH_DAY_RESULTS` in
+global_args. Each semester, after Pitch Day:
+
+1. Copy `course_info/pitch-day-results.example.yaml` to the file
+   `PITCH_DAY_RESULTS` names (e.g. `pitch-day-results-fall26.yaml`).
+2. Fill it in from the tally grid, add the proposal link(s), and redeploy.
+
+The real file is **gitignored**, because it holds peer scores tied to named
+students. When it is missing or has no projects, the assignment says the
+results are coming instead, so a fresh checkout still validates and deploys.
+
 ## Things that bite
 
 **A missing args key does not raise at deploy time.** Jinja renders an undefined

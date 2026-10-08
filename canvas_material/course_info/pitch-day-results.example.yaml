@@ -1,0 +1,35 @@
+# Pitch Day results — the data behind the "Pitch Day results" section of the
+# Team Preference assignment (assignments/handouts/Team-Preference-Worksheet.md.jinja).
+#
+# Each semester: copy this file to pitch-day-results-<semester>.yaml, point
+# PITCH_DAY_RESULTS in global_args at it, fill it in from the tally grid
+# (lectures/Session10-Pitch-Tally-Grid), and redeploy. The real file is
+# gitignored: it holds peer scores tied to named students.
+#
+# Scores are the per-criterion MEANS from the pitch evaluation sheets (1–3),
+# kept separate, never totaled. `sheets` is how many sheets the pitch got
+# (presenters don't score themselves). Join counts are the "Would you join?"
+# answers (join_yes etc. — not a nested yes:/no: map, which YAML reads as
+# true/false). Comments are NOT posted here — each presenter gets their own.
+
+# One link to all the anchor proposals (a Canvas folder, a shared drive...).
+# Optional; leave "" if every project carries its own proposal_url instead.
+proposals_url: ""
+
+projects:
+  - name: Costume Catalog            # project name as pitched
+    founder: Sample Student          # presenter
+    anchor: true                     # announced as an anchor idea
+    proposal_url: ""                 # optional: this project's written proposal
+    sheets: 3
+    scores:
+      value: 2.7
+      feasibility: 2.3
+      richness: 2.0
+      scope: 2.3
+      extensibility: 2.7
+      maintainability: 3.0
+      preparedness: 2.7
+    join_yes: 2                      # "Would you join?" answers
+    join_maybe: 1
+    join_no: 0

@@ -3,6 +3,38 @@
 On Pitch Day you hear every proposal in the room. Before you leave, you rank the projects you would want to help build — and say whether you would rather go solo. Think it through on the paper worksheet in class, then type your answers in here. **You can resubmit until {{ TEAM_PREF_DUE_DAY }} night**, so a weekend of second thoughts is not just allowed, it is expected.
 
 ---
+{#
+   Pitch Day results. The data is a per-semester YAML file in course_info/,
+   named by PITCH_DAY_RESULTS in global_args (format and instructions:
+   course_info/pitch-day-results.example.yaml). It is gitignored, so on a
+   fresh checkout or a new semester it is absent and this renders the
+   "coming" note instead.
+#}
+{% set results_path = '../../course_info/' ~ PITCH_DAY_RESULTS %}
+{% set R = load(results_path) if PITCH_DAY_RESULTS and exists(results_path) else none %}
+{% set criteria = [
+     ('value', 'Value'), ('feasibility', 'Feasibility'), ('richness', 'Richness'),
+     ('scope', 'Scope realism'), ('extensibility', 'Extensi&shy;bility'),
+     ('maintainability', 'Maintain&shy;ability'), ('preparedness', 'Prepared&shy;ness')] %}
+
+## Pitch Day results
+
+{% if R and R.projects %}
+{% set per_project = R.projects | selectattr('proposal_url') | list | length > 0 %}
+{% if R.proposals_url %}**[Read the written proposals]({{ R.proposals_url }}).** {% endif %}Each row is one pitch. The scores are the room's **average on each criterion** from the evaluation sheets (1 weak · 2 adequate · 3 strong), kept separate on purpose: a strong *Value* next to a weak *Scope realism* tells you more than any total would. *Sheets* is how many evaluations the pitch received, and *Join* counts the answers to "Would you join this project?" **Anchor** projects are the ones open for you to rank.
+
+| Project | Anchor | {% for k, label in criteria %}{{ label }} | {% endfor %}Sheets | Join: Yes · Maybe · No |{% if per_project %} Proposal |{% endif %}
+|---|:-:|{% for c in criteria %}:-:|{% endfor %}:-:|:-:|{% if per_project %}---|{% endif %}
+{% for p in R.projects -%}
+| **{{ p.name }}**<br>{{ p.founder }} | {{ '✓' if p.anchor else '' }} | {% for k, label in criteria %}{{ '—' if p.scores[k] is none else '%.1f' | format(p.scores[k]) }} | {% endfor %}{{ '—' if p.sheets is none else p.sheets }} | {{ '—' if p.join_yes is none else p.join_yes }} · {{ '—' if p.join_maybe is none else p.join_maybe }} · {{ '—' if p.join_no is none else p.join_no }} |{% if per_project %} {% if p.proposal_url %}[Proposal]({{ p.proposal_url }}){% endif %} |{% endif %}
+{% endfor %}
+
+Use the numbers as a starting point, not a verdict. They record how the pitch landed in the room; the proposal is where you check whether the scope is real and whether there's work in it you'd want.
+{% else %}
+The tallied scores from Pitch Day and the written proposals for the anchor projects are posted here after Pitch Day, before the weekend. Come back and read them before you finalize your ranking.
+{% endif %}
+
+---
 
 ## Why this assignment exists
 

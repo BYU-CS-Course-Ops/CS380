@@ -16,3 +16,7 @@ canvas_material/deploy-report*.json
 # Student submissions and grading notes: private, never version-controlled
 grading/
 __pycache__/
+
+# Pitch Day peer tallies (named students + peer scores); the format is in
+# canvas_material/course_info/pitch-day-results.example.yaml
+canvas_material/course_info/pitch-day-results-*.yaml
