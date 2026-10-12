@@ -391,7 +391,21 @@ async function build() {
   );
   s.addNotes("Five minutes, and only these two questions — they are the ones teams skip when left alone and the ones worth your coaching. Circulate while they talk: the team that says \"we'll all do everything and communicate constantly\" is the one that fails in Week 10, so push it for a named tiebreaker and a real response time. Deciding the deadlock rule now takes four minutes; deciding it during the deadlock costs a week. Solo students answer the abbreviated version on the same worksheet — the solo box says which sections. Then set the expectation out loud: the rest of the charter is the agenda for a first team meeting held before Wednesday, and that meeting starts by creating the project's GitHub organization and public repository — the Canvas guide, Starting Your Project Repository, walks through it. The finished charter carries the repository URL and is submitted end of day Wednesday — it does not go in the repo: it's an internal agreement among teammates, and the public parts of it become the governance docs in the Infrastructure Package. The design-doc draft is a day behind it, Thursday, so the two do not land on the same evening.");
 
-  // 15 Wrap
+  // 16 Solo founders — this semester's version of the charter work
+  s = await workSlide(
+    "This semester · founding solo · 5 min",
+    "Your charter is a contract with yourself",
+    "No teammate will hold you to it, so every line has to be one a stranger could check:",
+    [
+      ["Cadence: when you work, and what every session must produce — a push, an issue moved, a line in the log.", "§4"],
+      ["Decisions: where you record each call and why. A one-line log entry beats a memory you argue with in November.", "§5"],
+      ["On track: what a good week looks like, checkably — and what you cut the first time you miss it.", "§6"]
+    ],
+    "These become your project's norms; your first contributor meets them. Before Wednesday: create your repo, then finish and submit the charter."
+  );
+  s.addNotes("Use this slide when the room is solo; skip it when everyone is on a team. Slides 14 and 15 still run, framed as what a good team does and what you'll ask of the contributors you recruit. Then turn it to them: with no teammates, the charter's job shifts from a promise to each other to a contract with yourself, and the stake shifts from peer evaluation to self-accountability. Give them five minutes on §4 to §6 of the worksheet; the solo box on page 2 says the same thing. Push on the same test as slide 14 — checkable, and survives a bad week. \"I'll work on it regularly\" fails; \"Tuesday and Thursday evenings, and every session ends with a push\" passes. §6 is the hard one for solo founders: nobody notices when they slip, so the line has to name what gets cut, not just what gets done. Close on the logistics: repo first, then the charter with its URL, due end of day Wednesday.");
+
+  // 17 Wrap
   s = mk(); s.background = { color: C.navy };
   s.addShape(pres.shapes.OVAL, { x: -1.3, y: 5.2, w: 3.6, h: 3.6, fill: { color: "1C3252" } });
   await iconCircle(s, FA.FaDraftingCompass, 0.9, 1.15, 0.85, C.amber, C.navy);
