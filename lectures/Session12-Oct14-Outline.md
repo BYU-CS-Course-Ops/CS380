@@ -3,7 +3,7 @@
 **CS 301R · Software Engineering Studio I: Founding an Open-Source Project**
 **Session 12 of 27 · Wed, Oct 14, 2026 · 75-minute block**
 **Prior prep:**
-- **Bring:** your team's design-doc skeleton from Monday (system-context sketch, component list, data entities, the two big decisions).
+- **Bring:** your team's Design Doc Skeleton sheet from Monday (system-context sketch, component list, data entities, the two big decisions).
 - **Re-skim:** the "Anatomy" and "System-context-diagram" sections of [*Design Docs at Google*](https://www.industrialempathy.com/posts/design-docs-at-google/).
 - **Have open:** the **Design Document Template** (Canvas) — today's five rounds are §3, §4, §4 *core flow*, §5, and §6 of it, in order.
 **Maps to:** Design Week 6, Session B — *architecture & data-flow diagram workshop on the team's project.*

@@ -349,9 +349,9 @@ async function build() {
       ["The data entities the core flow touches.", "entities"],
       ["The two biggest decisions you'll have to argue with alternatives.", "2 decisions"]
     ],
-    "Bring this Wednesday. The workshop turns it into the draft — due end of day Thursday, Oct 15."
+    "On the Design Doc Skeleton sheet — bring it Wednesday. The workshop turns it into the draft, due end of day Thursday, Oct 15."
   );
-  s.addNotes("Ten minutes, and the goal is a page of boxes, not a finished diagram. Circulate with two questions: what does this system depend on that you don't control, and where does the data live? Teams that can't name two real decisions usually haven't found their risky part yet — send them back to their proposal's risks and spike. Say clearly that Wednesday's workshop produces the draft, which is then due end of day Thursday — the boards are the work and Thursday night is transcription — so today's sketch is the thing that makes Wednesday survivable.");
+  s.addNotes("Hand out the Design Doc Skeleton sheet, one per team and one per solo student; its four parts match the four items here and point at the template sections they become. Ten minutes, and the goal is a page of boxes, not a finished diagram. Circulate with two questions: what does this system depend on that you don't control, and where does the data live? Teams that can't name two real decisions usually haven't found their risky part yet — send them back to their proposal's risks and spike. Say clearly that Wednesday's workshop produces the draft, which is then due end of day Thursday — the boards are the work and Thursday night is transcription — so today's sketch is the thing that makes Wednesday survivable.");
 
   // 14 The charter — work slide
   s = mk(); s.background = { color: C.white };
@@ -409,7 +409,7 @@ async function build() {
   footer(s, "7E92A8");
   s.addNotes("Close in two minutes. The one-liner at the top is the session in a sentence — say it, then the logistics. The first team meeting creates the repository before anything else — a GitHub organization named for the project, at least two owners, a public repo with a README paragraph, a .gitignore, and their working license — and nothing private goes in it, ever: no keys, no interview notes — and not the charter either, which stays with the team. Charter finished at that meeting and submitted end of day Wednesday with the repo URL in it; skeleton sketch brought Wednesday, draft due end of day Thursday, the revised Design Document a week later. Name the loop out loud: draft, review, revise, exactly as with the proposal, because revision is graded here too. If the room looks daunted, remind them Wednesday is three-quarters whiteboard time with you circulating as design reviewer.");
 
-  const OUT = "Session11-DesignDocs.pptx";
+  const OUT = process.env.OUT || "Session11-DesignDocs.pptx";
   await pres.writeFile({ fileName: OUT });
   console.log("WROTE", PAGE, "slides");
   const anim = await require("./add-animations.js").addAnimations(OUT);

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Design Doc Skeleton — 10-Minute Team Sketch</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: Calibri, "Segoe UI", sans-serif;
+    color: #1E2A36;
+    font-size: 10.2pt;
+    line-height: 1.25;
+  }
+  h1 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 17pt; color: #14233A; margin: 0 0 1pt 0; letter-spacing: -0.2pt;
+  }
+  .kicker { font-size: 8.6pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 2pt 0; }
+  .head { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.2pt solid #12908F; padding-bottom: 4pt; margin-bottom: 6pt; }
+  .nameline { font-size: 9pt; color: #5F7284; white-space: nowrap; padding-bottom: 1pt; }
+  .nameline span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 1.9in; }
+  .lede { font-size: 9.4pt; color: #1E2A36; margin: 0 0 7pt 0; }
+  .lede b { color: #14233A; }
+
+  h2 {
+    font-family: Cambria, Georgia, serif;
+    font-size: 11.4pt; color: #14233A; margin: 0 0 2pt 0;
+  }
+  h2 .n { color: #12908F; }
+  h2 .tpl { font-family: Calibri, "Segoe UI", sans-serif; font-size: 8pt; font-weight: normal; color: #5F7284; letter-spacing: 0.2pt; margin-left: 4pt; }
+  .hint { font-size: 8.5pt; color: #5F7284; font-style: italic; margin: 0 0 4pt 0; }
+  .hint b { color: #14233A; font-style: normal; }
+  section { margin-bottom: 7pt; }
+
+  /* Part 1 — system context */
+  .ctx {
+    position: relative; height: 2.4in;
+    border: 1pt dashed #9BB0BF; border-radius: 4pt; background: #FFFFFF;
+  }
+  .ctx .zone { position: absolute; top: 5pt; font-size: 7.8pt; font-weight: bold; color: #5F7284; text-transform: uppercase; letter-spacing: 0.3pt; }
+  .ctx .zone.l { left: 7pt; }
+  .ctx .zone.r { right: 7pt; text-align: right; }
+  .ctx .sys {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: 2.1in; height: 1.0in; border: 1.6pt solid #14233A; border-radius: 4pt; background: #F2F6F8;
+  }
+  .ctx .sys span { position: absolute; top: 4pt; left: 0; right: 0; text-align: center; font-size: 7.8pt; color: #5F7284; text-transform: uppercase; letter-spacing: 0.3pt; font-weight: bold; }
+  .ctx .sys i { position: absolute; bottom: 5pt; left: 8pt; right: 8pt; border-bottom: 0.7pt solid #9BB0BF; }
+  .ctx .tip { position: absolute; bottom: 5pt; left: 0; right: 0; text-align: center; font-size: 7.8pt; color: #5F7284; font-style: italic; }
+
+  /* Parts 2 and 3 — tables */
+  table.grid { width: 100%; border-collapse: collapse; }
+  table.grid th {
+    font-size: 8.2pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284;
+    text-align: left; font-weight: bold; padding: 0 4pt 2pt 0; border-bottom: 1pt solid #12908F;
+  }
+  table.grid th i { text-transform: none; letter-spacing: 0; font-weight: normal; }
+  table.grid td { border-bottom: 0.7pt solid #9BB0BF; height: 0.29in; padding: 0 4pt 0 0; }
+  table.grid td.opt { color: #9BB0BF; font-size: 8pt; text-align: center; }
+
+  /* Part 4 — decisions */
+  .decs { display: flex; gap: 10pt; }
+  .dec { flex: 1; background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 5pt 8pt 6pt 8pt; }
+  .dec .row { display: flex; align-items: flex-end; font-size: 8.6pt; margin-top: 6pt; }
+  .dec .row:first-child { margin-top: 0; }
+  .dec .row b { color: #14233A; white-space: nowrap; margin-right: 4pt; }
+  .dec .row span { flex: 1; border-bottom: 0.9pt solid #5F7284; height: 12pt; }
+
+  .foot { margin-top: 7pt; border-top: 1pt dashed #9BB0BF; padding-top: 4pt; font-size: 8.4pt; color: #5F7284; display: flex; justify-content: space-between; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Session 11 · Design Documents</p>
+    <h1>Design Doc Skeleton — 10-Minute Team Sketch</h1>
+  </div>
+  <div class="nameline">Project <span></span></div>
+</div>
+
+<p class="lede">Ten minutes, as a team, out loud. <b>Boxes, not a finished diagram</b> — this is the starting point for the architecture workshop, not its output. Each part lines up with a section of the <i>Design Document Template</i>.</p>
+
+<section>
+  <h2><span class="n">1 ·</span> System context <span class="tpl">→ TEMPLATE §3</span></h2>
+  <p class="hint">Your system is the one box. Around it: <b>every kind of user</b> and <b>every service you depend on but don't control</b>. Label each arrow with what crosses the boundary.</p>
+  <div class="ctx">
+    <div class="zone l">Users</div>
+    <div class="zone r">External services</div>
+    <div class="sys"><span>Your system</span><i></i></div>
+    <div class="tip">What does it depend on that you don't control? &nbsp;Where does the data live?</div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">2 ·</span> Three to five components <span class="tpl">→ TEMPLATE §4</span></h2>
+  <p class="hint">One job each, in one line. If two rows have the same job, merge them; if a row needs "and," it may be two.</p>
+  <table class="grid">
+    <tr><th style="width:24%">Component</th><th style="width:48%">Its one job</th><th>Talks to</th></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span class="n">3 ·</span> Data the core flow touches <span class="tpl">→ TEMPLATE §5</span></h2>
+  <p class="hint">Entities and a few key fields — not every column. Stick to the data your most important user action reads or writes.</p>
+  <table class="grid">
+    <tr><th style="width:24%">Entity</th><th style="width:48%">Key fields</th><th>Relates to</th></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span class="n">4 ·</span> The two biggest decisions <span class="tpl">→ TEMPLATE §6</span></h2>
+  <p class="hint">The choices you'll have to argue, each against an alternative a reasonable team would <b>actually pick</b>. Can't name two? Go back to your proposal's risks and your spike — that's where they are.</p>
+  <div class="decs">
+    <div class="dec">
+      <div class="row"><b>Decision</b><span></span></div>
+      <div class="row"><b>Leaning toward</b><span></span></div>
+      <div class="row"><b>Real alternative</b><span></span></div>
+      <div class="row"><b>What would settle it</b><span></span></div>
+    </div>
+    <div class="dec">
+      <div class="row"><b>Decision</b><span></span></div>
+      <div class="row"><b>Leaning toward</b><span></span></div>
+      <div class="row"><b>Real alternative</b><span></span></div>
+      <div class="row"><b>What would settle it</b><span></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="foot">
+  <span><b>Bring this to the architecture workshop.</b> The workshop turns it into your draft.</span>
+  <span>CS 301R · Software Engineering Studio I</span>
+</div>
+
+</body>
+</html>
