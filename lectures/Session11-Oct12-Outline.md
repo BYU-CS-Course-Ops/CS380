@@ -12,7 +12,7 @@
 - **Bring:** your pitch-day feedback and the proposal for the project you ranked first — the design doc starts from the winning argument.
 **Maps to:** Design Week 6, Session A — *read and dissect a sample design doc; appropriate detail vs. over-specification.*
 
-> **Status: OUTLINE (v3).** Phase 3 begins — first session as **teams**. **Teams are announced at the start of today's class** (Pitch Day evaluated and ranked; the weekend was for reading the anchor proposals), and the **team charter is written in class today** and submitted by end of day. Design Document **draft** due end of day Thu, Oct 15 (produced at Wednesday's workshop); **CP5 Design Document (revised) due Wed, Oct 21.** **(v4) The charter is now *started* in class and due end of day Wed, Oct 14**, with a new prior reading behind it. *(v3, Tom's notes: owl-image heads-up; two reading caveats — formality varies by organization, and alternatives can rest on trade studies; sample doc written (Backstage, imperfect on purpose) with real docs as optional reading; light design-doc template created and required for CP5; printable charter worksheet created.)*
+> **Status: OUTLINE (v3).** Phase 3 begins — first session as **teams**. **Teams are announced at the start of today's class** (Pitch Day evaluated and ranked; the weekend was for reading the anchor proposals), and the **team charter is written in class today** and submitted by end of day. Design Document **draft** due end of day Fri, Oct 16 (produced at Wednesday's workshop); **CP5 Design Document (revised) due Wed, Oct 21.** **(v4) The charter is now *started* in class and due end of day Wed, Oct 14**, with a new prior reading behind it. *(v3, Tom's notes: owl-image heads-up; two reading caveats — formality varies by organization, and alternatives can rest on trade studies; sample doc written (Backstage, imperfect on purpose) with real docs as optional reading; light design-doc template created and required for CP5; printable charter worksheet created.)*
 
 ---
 
@@ -115,7 +115,7 @@ By the end of this session, a student can:
 
 ### 7. Wrap + before next class — 3 min
 - Recap: design docs earn their cost by making trade-offs visible while they're cheap; alternatives-considered is where the thinking shows.
-- **Wednesday (Oct 14):** architecture & data-flow **workshop** — teams draw the real diagrams and draft the doc. **The repository and team charter are due end of day Wednesday (the charter carries the repo URL); the Design Document draft is due end of day Thursday, Oct 15** — the workshop boards get typed up with a night in between, and the two deliverables don't land on the same evening.
+- **Wednesday (Oct 14):** architecture & data-flow **workshop** — teams draw the real diagrams and draft the doc. **The repository and team charter are due end of day Wednesday (the charter carries the repo URL); the Design Document draft is due end of day Friday, Oct 16** — two days to type up the workshop boards, and the two deliverables don't land on the same evening.
 - **CP5 (revised design doc) due Wed, Oct 21** — the draft→review→revise loop, again.
 
 ---
@@ -142,7 +142,7 @@ By the end of this session, a student can:
 
 - **Today:** the two hard charter questions answered on the worksheet; the first team meeting scheduled.
 - **Before Wednesday:** first team meeting — create the project's GitHub organization and public repository (*Starting Your Project Repository*), then finish the charter. **Due end of day Wed, Oct 14:** the charter, uploaded, with the repository URL in §1 — the charter itself does not go in the repo.
-- **Wednesday:** bring the skeleton sketch; **team charter due end of day Wed, Oct 14**; **Design Document draft due end of day Thu, Oct 15.**
+- **Wednesday:** bring the skeleton sketch; **team charter due end of day Wed, Oct 14**; **Design Document draft due end of day Fri, Oct 16.**
 
 ---
 

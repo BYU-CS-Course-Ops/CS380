@@ -349,7 +349,7 @@ async function build() {
       ["The data entities the core flow touches.", "entities"],
       ["The two biggest decisions you'll have to argue with alternatives.", "2 decisions"]
     ],
-    "On the Design Doc Skeleton sheet — bring it Wednesday. The workshop turns it into the draft, due end of day Thursday, Oct 15."
+    "On the Design Doc Skeleton sheet — bring it Wednesday. The workshop turns it into the draft, due end of day Friday, Oct 16."
   );
   s.addNotes("Hand out the Design Doc Skeleton sheet, one per team and one per solo student; its four parts match the four items here and point at the template sections they become. Ten minutes, and the goal is a page of boxes, not a finished diagram. Circulate with two questions: what does this system depend on that you don't control, and where does the data live? Teams that can't name two real decisions usually haven't found their risky part yet — send them back to their proposal's risks and spike. Say clearly that Wednesday's workshop produces the draft, which is then due end of day Thursday — the boards are the work and Thursday night is transcription — so today's sketch is the thing that makes Wednesday survivable.");
 
@@ -416,7 +416,7 @@ async function build() {
     { text: "Finish the charter there, with the repo URL in it — submit it by end of day Wednesday", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Bring your skeleton sketch — context, components, entities, two decisions", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Re-skim the anatomy and system-context sections of the reading", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
-    { text: "Wednesday is a whiteboard workshop — the design doc draft is due end of day Thursday, Oct 15", options: { bullet: { indent: 16 } } }
+    { text: "Wednesday is a whiteboard workshop — the design doc draft is due end of day Friday, Oct 16", options: { bullet: { indent: 16 } } }
   ], { x: 0.95, y: 3.85, w: 11.7, h: 1.95, color: "CBD8E6", fontFace: F.body, fontSize: 16, valign: "top", margin: 0 });
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);
   s.addText("CP5 — Design Document (revised) — is due Wed, Oct 21. Draft, review, revise: the same loop as the proposal.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 15.5, bold: true, align: "center", valign: "middle", margin: 0 });

@@ -274,7 +274,7 @@ async function build(preclass, out) {
 
   // 4 The plan
   s = mk(); s.background = { color: C.white };
-  header(s, "The plan", "Five rounds — and the draft writes itself tonight");
+  header(s, "The plan", "Five rounds — and the draft is mostly written here");
   const seq = [
     [FA.FaVectorSquare, "1 · System context", "§3", "10 min"],
     [FA.FaCubes, "2 · Components & interfaces", "§4", "15 min"],
@@ -291,9 +291,9 @@ async function build(preclass, out) {
     s.addText(seq[i][3], { x: 10.5, y, w: 1.9, h: 0.74, color: C.slate, fontFace: F.body, fontSize: 15.5, bold: true, align: "right", valign: "middle", margin: 0 });
   }
   card(s, 0.6, 6.35, 12.1, 0.62, C.navy);
-  s.addText("Each round fills a numbered section of the template, in order. Tonight is transcription, not composition.", { x: 0.95, y: 6.35, w: 11.4, h: 0.62, color: C.white, fontFace: F.body, fontSize: 15.5, bold: true, align: "center", valign: "middle", margin: 0 });
+  s.addText("Each round fills a numbered section of the template, in order. What follows is transcription, not composition.", { x: 0.95, y: 6.35, w: 11.4, h: 0.62, color: C.white, fontFace: F.body, fontSize: 15.5, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s);
-  speaker(s, "One minute. Walk the five rounds and point at the template column — that mapping is the reason the draft is due tomorrow rather than next week. Do not explain the rounds here; each has its own pair of slides. The line at the bottom is the promise worth making explicitly, because students hear whiteboard workshop and assume a second night of writing is coming.");
+  speaker(s, "One minute. Walk the five rounds and point at the template column — that mapping is the reason the draft is due Friday rather than next week. Do not explain the rounds here; each has its own pair of slides. The line at the bottom is the promise worth making explicitly, because students hear whiteboard workshop and assume a second night of writing is coming.");
 
   // 5 The two rules
   s = mk(); s.background = { color: C.white };
@@ -507,7 +507,7 @@ async function build(preclass, out) {
     { text: "§3 context · §4 components + flow · §5 data · §6 decisions. Four sections, four names.", options: { color: "CFE0E9" } }
   ], { x: 7.1, y: 3.75, w: 5.3, h: 1.5, fontFace: F.body, fontSize: 16, valign: "middle", margin: 0, lineSpacingMultiple: 1.05 });
   card(s, 0.6, 5.5, 12.1, 1.25, C.amber);
-  s.addText("A photo of a whiteboard is a legitimate diagram for the draft. The boards are the work — tonight is transcription.", { x: 0.95, y: 5.5, w: 11.4, h: 1.25, color: C.navy, fontFace: F.body, fontSize: 17, bold: true, align: "center", valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
+  s.addText("A photo of a whiteboard is a legitimate diagram for the draft. The boards are the work — what follows is transcription.", { x: 0.95, y: 5.5, w: 11.4, h: 1.25, color: C.navy, fontFace: F.body, fontSize: 17, bold: true, align: "center", valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
   footer(s, "7E92A8");
   speaker(s, "Five minutes, and the first instruction is non-negotiable — nobody erases until every board is photographed, including the red arrows and the parked ideas, because those are the honest content of the risks and open-questions section. Then make the assignments concrete in the room rather than letting the team agree to sort it out later: name a person per template section out loud. The amber band lowers the bar deliberately, because the failure mode tonight is a team trying to write a polished document instead of transcribing what they already decided.");
 
@@ -517,8 +517,8 @@ async function build(preclass, out) {
   card(s, 0.6, 2.0, 12.1, 1.6, C.navy);
   await iconCircle(s, FA.FaClipboardList, 0.98, 2.4, 0.7, C.amber, C.navy);
   s.addText([
-    { text: "Design Document draft — end of day tomorrow, Thu, Oct 15\n", options: { color: C.amber, bold: true, fontSize: 19 } },
-    { text: "Photographed diagrams + skeleton prose + your two argued decisions. That's a complete draft.", options: { color: "CFE0E9" } }
+    { text: "Design Document draft — end of day Fri, Oct 16\n", options: { color: C.amber, bold: true, fontSize: 19 } },
+    { text: "Photographed diagrams + skeleton prose + your two argued decisions. Commit it as docs/design.md and upload a copy to Canvas.", options: { color: "CFE0E9" } }
   ], { x: 2.0, y: 2.0, w: 10.4, h: 1.6, fontFace: F.body, fontSize: 16.5, valign: "middle", margin: 0, lineSpacingMultiple: 1.06 });
   card(s, 0.6, 3.8, 5.95, 1.5, C.cardBg);
   await iconCircle(s, FA.FaHistory, 0.95, 4.1, 0.62, C.teal);
@@ -535,7 +535,7 @@ async function build(preclass, out) {
   card(s, 0.6, 5.5, 12.1, 1.3, C.strongBg);
   s.addText("Draft, review, revise — the same loop as the proposal. The revision is what's graded.", { x: 0.95, y: 5.5, w: 11.4, h: 1.3, color: C.tealDk, fontFace: F.body, fontSize: 17, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s);
-  speaker(s, "Two minutes to close. Say why the draft is due tomorrow rather than tonight: the boards are the work, this is transcription, and a night in between buys a better document while keeping it off the same evening as the team charter. Then the loop — draft, review, revise — named out loud, because it is the same shape as the proposal, and revision is graded on the Design Document exactly as it was on the Written Proposal. If the room looks daunted by Oct 21, remind them the hard eighty percent is already on their phones.");
+  speaker(s, "Two minutes to close. Say why the draft is due Friday rather than tonight: the boards are the work, this is transcription, and a couple of days in between buys a better document while keeping it off the same evening as the team charter. Then the loop — draft, review, revise — named out loud, because it is the same shape as the proposal, and revision is graded on the Design Document exactly as it was on the Written Proposal. If the room looks daunted by Oct 21, remind them the hard eighty percent is already on their phones.");
 
   await pres.writeFile({ fileName: out });
   console.log("WROTE", out, "\u2014", PAGE, "slides");

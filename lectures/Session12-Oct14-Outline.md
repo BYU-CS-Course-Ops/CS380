@@ -8,7 +8,7 @@
 - **Have open:** the **Design Document Template** (Canvas) — today's five rounds are §3, §4, §4 *core flow*, §5, and §6 of it, in order.
 **Maps to:** Design Week 6, Session B — *architecture & data-flow diagram workshop on the team's project.*
 
-> **Status: OUTLINE (v2).** A working session (Session B): teams draw the real diagrams and draft the design doc. **Design Document draft due end of day Thu, Oct 15; CP5 (revised) due Wed, Oct 21.**
+> **Status: OUTLINE (v2).** A working session (Session B): teams draw the real diagrams and draft the design doc. **Design Document draft due end of day Fri, Oct 16; CP5 (revised) due Wed, Oct 21.**
 > *(v2, Tom's notes: (1) the CASE-tool reference is gone — it's a reference students won't have and it never gets said aloud; (2) every round now carries an **Instructor notes** block — key definitions, what to remind, what to teach, and what to say to a stuck team — plus a slide list for each; (3) those blocks are grounded in what students actually did in **CS 240** and **CS 340** (grounding table in Instructor prep); (4) the draft due date moved from end of class to end of the next day — **ratified**, and swept through every file that names it.)*
 
 ---
@@ -268,7 +268,7 @@ Run all five rounds exactly as written regardless of team sizes — the sequence
 - Photograph every board — **before anyone erases anything**, including the parked ideas and the red-pen failure arrows. Photos of whiteboards are legitimate diagrams for the draft; the doc says so.
 - Assignments within the team: who turns which diagram/section into the draft tonight. Name a person per template section out loud; §3, §4, §5, §6 are four assignments and the map is already on the wall.
 - **Repository + charter due end of day today** (the charter carries the repo URL in §1). Any team without a repo yet creates it tonight, before transcribing — the draft goes in it.
-- **Design Document draft due end of day tomorrow, Thu, Oct 15** (LMS pointer to `docs/design.md` in the repo) — photographed diagrams + skeleton prose + the two argued decisions is a fine draft; polish is next week's job. Say why the extra night exists: *the boards are the work; tonight is transcription.*
+- **Design Document draft due end of day Fri, Oct 16** (committed as `docs/design.md`; a copy uploaded to the Canvas **Design Document Draft** completion item, `cp5-draft`) — photographed diagrams + skeleton prose + the two argued decisions is a fine draft; polish is next week's job. Say why the extra time exists: *the boards are the work; what follows is transcription.*
 - Preview Monday (Oct 19): **git workflow** — the maintainer-centered branching/PR discipline your team will run from here to December. Reading on the Session 13 page.
 
 ---
@@ -286,7 +286,7 @@ Run all five rounds exactly as written regardless of team sizes — the sequence
 
 ## Open questions / decisions before we flesh this out
 
-- ~~**Draft due date**~~ **resolved (v2, Tom's call): end of day Thu, Oct 15**, the day after the workshop. Two reasons: the **team charter is already due end of day Wed, Oct 14** (Session 11 §6c), so the old arrangement landed two deliverables on one evening at the start of the teams' first full week; and the draft is a transcription job — photographing boards and typing four template sections goes better after a night than in the ninety minutes after class. Nothing downstream moves: CP5 revised is still Wed, Oct 21, with the weekend and Session 13 in between for feedback. **Swept:** `global_args_fall26.json` + `global_args_sandbox.json` (new `DESIGN_DRAFT_DUE` / `DESIGN_DRAFT_DUE_DAY` keys — the draft is the one deliverable not due at a session, so it gets its own key rather than borrowing `S13`'s; roll it with S12), `canvas_material/assignments/handouts/CP5-Design-Document.md.jinja`, `canvas_material/lectures/session-pages-args.md.jinja`, `canvas_material/lectures/session-pages/Session11-StudentPage.md.jinja`, `lectures/Session11-Oct12-Outline.md`, `lectures/Session10-Oct07-Outline.md`, `CS301R-Course-Summary.md` (+ regenerated `.docx`).
+- ~~**Draft due date**~~ **resolved (v2, Tom's call): end of day Thu, Oct 15**, the day after the workshop; **(v3, Tom's call) moved one more day to Fri, Oct 16** for flexibility — it touches neither Monday nor the revision window. Original reasons for leaving Wednesday: the **team charter is already due end of day Wed, Oct 14** (Session 11 §6c), so the old arrangement landed two deliverables on one evening at the start of the teams' first full week; and the draft is a transcription job — photographing boards and typing four template sections goes better after a night than in the ninety minutes after class. Nothing downstream moves: CP5 revised is still Wed, Oct 21, with the weekend and Session 13 in between for feedback. **Swept:** `global_args_fall26.json` + `global_args_sandbox.json` (new `DESIGN_DRAFT_DUE` / `DESIGN_DRAFT_DUE_DAY` keys — the draft is the one deliverable not due at a session, so it gets its own key rather than borrowing `S13`'s; roll it with S12), `canvas_material/assignments/handouts/CP5-Design-Document.md.jinja`, `canvas_material/lectures/session-pages-args.md.jinja`, `canvas_material/lectures/session-pages/Session11-StudentPage.md.jinja`, `lectures/Session11-Oct12-Outline.md`, `lectures/Session10-Oct07-Outline.md`, `CS301R-Course-Summary.md` (+ regenerated `.docx`).
 - ~~**CASE-tool reference in §1**~~ **resolved (v2):** removed. Replaced with fidelity language students have a referent for (a whiteboard vs. the sequencediagram.org artifact they exported in CS 240 Phase 2).
 - ~~**Per-round instruction**~~ **resolved (v2):** every round now carries an Instructor notes block — key definitions, remind/teach calls grounded in CS 240 and CS 340, common errors with corrections, and stuck-team prompts. **Still to build:** the six slides in the Appendix.
 - ~~**⚑ The corrected diagrams are a spoiler for Session 11**~~ **resolved (Tom, Sep 24): two decks, built from one source.**
@@ -303,7 +303,7 @@ Run all five rounds exactly as written regardless of team sizes — the sequence
 
 ## Deliverable / after class
 
-- **Due end of day Thu, Oct 15:** **Design Document draft** (diagrams photographed + skeleton prose + two argued decisions). *Note the split from the team charter, which is due end of day Wed, Oct 14 — two deliverables, two evenings.*
+- **Due end of day Fri, Oct 16:** **Design Document draft** (diagrams photographed + skeleton prose + two argued decisions). *Note the split from the team charter, which is due end of day Wed, Oct 14 — two deliverables, two evenings.*
 - **Due Wed, Oct 21:** **CP5 Design Document (revised)** — after Monday's git session, revised with feedback.
 
 ---
@@ -325,7 +325,7 @@ Run all five rounds exactly as written regardless of team sizes — the sequence
   18–19. **Round 4 — data model:** the four reminders · *What the system remembers*
   20–21. **Round 5 — decisions:** the five-line block · *Argue two decisions*
   22. **Capture** — photograph everything; name a person per template section
-  23. **Wrap** — draft due Thu Oct 15; Oct 19 git; CP5 — Design Document (revised) Oct 21
+  23. **Wrap** — draft due Fri Oct 16; Oct 19 git; CP5 — Design Document (revised) Oct 21
 - **Checkpoints are named, not numbered, in student-facing slide text** (Tom, Sep 24): *Product Definition Brief*, *Written Proposal*, *Design Document*. The identifier appears only where it's the thing being submitted, and then with the full name — "CP5 — Design Document (revised)". Same rule applied to the Session 11 deck.
 - **QA note:** the PNG render pass only ever shows a slide's *revealed* state, so rendering the **published** deck is also how you check what's on screen pre-click — it is the pre-reveal state, permanently.
 - **Worked example:** the four Backstage diagrams, drawn correct — deck slides 7–10; sources `canvas_material/resources/img/backstage-{context,components,flow,data}.svg|.png`
