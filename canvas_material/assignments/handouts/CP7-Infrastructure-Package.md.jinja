@@ -1,6 +1,6 @@
 ## The short version
 
-Build your repo's complete **front door**, merged via your own PR workflow: a README that onboards, LICENSE (chosen and justified), CONTRIBUTING (grown from your git standards), CODE_OF_CONDUCT, issue and PR templates with starter labels, a setup/onboarding guide that **survives a cold test** by someone who didn't write it, and your communication/maintainer norms. Plus 2–3 well-formed seed issues filed against your own templates.
+Build your repo's complete **front door**, merged via your own PR workflow: a README that onboards, LICENSE (chosen and justified), CONTRIBUTING (grown from your git standards), CODE_OF_CONDUCT, issue and PR templates with starter labels, your communication/maintainer norms, and an honest placeholder for the setup guide. Plus 2–3 well-formed seed issues filed against your own templates. The full setup guide comes later, once there's code to set up.
 
 ---
 
@@ -8,20 +8,20 @@ Build your repo's complete **front door**, merged via your own PR workflow: a RE
 
 Every stranger who ever encounters your project — a potential contributor, a curious user, a capstone faculty member, a recruiter — meets it through the same few files, in the same order, in about ninety seconds: *What is this? Can I run it? May I use it? How do I help? What's it like here?* The infrastructure package is you **designing that encounter** instead of leaving it to chance. It's the governance you chose in Weeks 2 and 8, the workflow you set in Week 7, and the welcome you intend — all made concrete enough that a stranger can act on it without ever talking to you.
 
-The transferable lesson is one of the biggest in the course: **writing things down is how you scale yourself.** Documented processes answer questions before they're asked, make expectations enforceable without being personal, and let a project outgrow its founder's availability — which is the only way anything lasts. That's true of open-source repos, of teams inside companies, and of most organizations you'll ever help run. And the honest test of documentation isn't the author's satisfaction — it's whether a cold reader succeeds. That's why the cold test is required, and why the same test returns in Week 11 with a stranger and a grade.
+The transferable lesson is one of the biggest in the course: **writing things down is how you scale yourself.** Documented processes answer questions before they're asked, make expectations enforceable without being personal, and let a project outgrow its founder's availability — which is the only way anything lasts. That's true of open-source repos, of teams inside companies, and of most organizations you'll ever help run. And the honest test of documentation isn't the author's satisfaction — it's whether a cold reader succeeds. That's why your review partner reads your front door cold in the workshop, and why a stranger reads it again, for a grade, in the Week-11 repo audit.
 
 ---
 
-## What to produce (all merged to main by end of Wednesday)
+## What to produce (all merged to main by the deadline)
 
 These eight items come from the course's required repository artifacts. The same list is also a printable checklist, with a punch-list area for tracking what's left: <file path="../../resources/CP7-Checklist.pdf" canvas_folder="Course Handouts" />
 
-1. **README.md** — one-line what + why → status → quickstart that actually works → how to contribute (link) → license line.
+1. **README.md** — one-line what + why → status → quickstart (or, until the project runs, an honest line pointing to the setup placeholder) → how to contribute (link) → license line.
 2. **LICENSE** — exact text, correct fields, with the project's one-paragraph rationale recorded (in CONTRIBUTING or a docs note).
 3. **CONTRIBUTING.md** — grown from your git-standards doc: how to set up, how to pick work, the PR process, review expectations, and what a newcomer should do first.
 4. **CODE_OF_CONDUCT.md** — adopt a standard ([Contributor Covenant](https://www.contributor-covenant.org/version/3/0/code_of_conduct/) is the usual choice), with the reporting contact and enforcement filled in for your project.
 5. **Issue templates + PR template + starter labels** (`.github/…`) — the bug-report anatomy (steps, expected vs. actual, environment) and feature-request shape built in; labels including `bug`, `enhancement`, `good first issue`.
-6. **Setup/onboarding guide** — **cold-tested:** someone who didn't write it — a teammate, or on a solo project, your review partner — follows it exactly (fresh clone) and files an issue for every failure or confusion; you fix the guide and close the issues. *The closed issues stay visible — they're your evidence.*
+6. **Setup guide placeholder** (`docs/setup.md`) — the stack and prerequisites your design document already commits to, a line saying setup instructions arrive with the first runnable build, and a link to the issue that tracks writing them (it can be one of your seed issues). *The full guide is written and cold-tested in Week 10, once there's something to run, and a stranger follows it in the Week-11 repo audit.*
 7. **Communication & maintainer norms** (`docs/communication-norms.md`) — where discussion happens, realistic response expectations, who maintains.
 8. **2–3 seed issues** filed on your own tracker, following your own templates — real next-work items.
 
@@ -32,7 +32,8 @@ These eight items come from the course's required repository artifacts. The same
 - **Everything ships via PR, cross-reviewed** — the process documents itself.
 - **Adapt, don't invent** where standards exist (CoC, license text); **write, don't copy** where your project is the content (README, setup, norms).
 - **Promises must be keepable.** "Reviews within a week" from a student project is credible; "24/7 support" is not. Credibility is graded.
-- **The cold test is required**, not decorative — CP7's heaviest criterion is whether a stranger succeeds from docs alone.
+- **Read cold by someone else.** In the workshop your review partner reads your README and CONTRIBUTING as a stranger would and fills in a *Stranger's Read* sheet. Act on what they couldn't find, in class or after, and say "from the stranger's read" in the PR or issue that does. Keep the sheet: a photo of it is part of your submission. *Newcomer usability* is one of CP7's two heaviest criteria, and a front door no one has read cold tops out at Proficient there.
+- **A placeholder is honest, not empty.** "Not runnable yet" plus what's coming and where it's tracked is a credible status. A quickstart that doesn't work is not.
 
 ---
 
@@ -40,14 +41,8 @@ These eight items come from the course's required repository artifacts. The same
 
 Scored on a 100-point analytic rubric; **12% of the course grade.** One grade per project; on team projects, adjusted by individual contribution.
 
-| Criterion | Weight | What it measures |
-|---|---|---|
-| **Completeness** | 25 | All required artifacts present and substantive — the required-artifacts checklist above, honored. |
-| **Newcomer usability** | 25 | A stranger can install, run, and start contributing from the docs alone. Verified again, for a grade, in the Week-11 audit. |
-| **License appropriateness** | 15 | A *justified* choice matched to the project's goals — not MIT by reflex. |
-| **Governance & comms norms** | 15 | Clear maintainer expectations, channels, and decision norms a contributor can rely on. |
-| **Professionalism & consistency** | 10 | Polished and consistent — credible as a real OSS project. |
-| **Contributor-readiness** | 10 | Genuinely built for others to join and build on — the course's defining thread. |
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp7) }}
 
 **Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
 
@@ -56,7 +51,7 @@ Scored on a 100-point analytic rubric; **12% of the course grade.** One grade pe
 ## Tips and common pitfalls
 
 - **The README's first sentence is the hardest artifact of the week.** If a stranger can't say what your project *is* after one sentence, iterate.
-- **Setup guides fail on the author's machine's hidden state** — the env var you set months ago, the tool you forgot you installed. That's exactly what the cold test catches.
+- **The author is the worst tester of their own docs.** You already know everything the docs leave out. That's why a cold reader finds in five minutes what you'd miss in five rereads — and why the setup guide, when you write it, gets the same treatment.
 - **A CONTRIBUTING that's all rules and no welcome** tells newcomers they're a burden. Lead with "here's how to get started"; put policy after.
 - **Templates shape behavior.** Whatever your issue template asks for is what you'll get — ask for reproduction steps now or beg for them forever.
 - **Seed issues are a preview of CP8** — write them well and next week's backlog has a head start.
@@ -65,7 +60,17 @@ Scored on a 100-point analytic rubric; **12% of the course grade.** One grade pe
 
 ## Submission
 
-Repo state **is** the submission: everything merged by end of day **{{ S16_DAY }}, {{ S16_DATE }}**; submit the repo pointer (tag or commit hash) via LMS. The package is re-tested by a stranger in the Week-11 repo audit and becomes the foundation of your launch package (CP11).
+Repo state **is** the submission. A tag marks exactly what you're submitting, the way a project marks a release, so work you merge afterward doesn't change what's graded. By end of day **{{ CP7_DUE_DAY }}, {{ CP7_DUE }}**:
+
+1. Merge everything to `main`, then tag it and push the tag:
+   ```
+   git switch main && git pull
+   git tag -a cp7 -m "CP7: infrastructure package"
+   git push origin cp7
+   ```
+2. In Canvas, paste the tag's URL (`https://github.com/YOUR-ORG/YOUR-REPO/tree/cp7`) and add a **photo of your Stranger's Read sheet**: legible, flat page, good light.
+
+To change the submission before the deadline (or for a revision), move the tag to the new state and push it again: `git tag -fa cp7 -m "CP7: infrastructure package"`, then `git push -f origin cp7`, and resubmit. The package is re-tested by a stranger in the Week-11 repo audit and becomes the foundation of your launch package (CP11).
 
 ---
 

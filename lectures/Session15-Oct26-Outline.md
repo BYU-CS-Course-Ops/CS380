@@ -8,7 +8,7 @@
 - **Skim:** your own project's repo *as if you were a stranger seeing it for the first time.* Note what would stop you.
 **Maps to:** Design Week 8, Session A — *compare repos with strong vs. weak project infrastructure; license selection clinic; anatomy of a good issue/bug report (defect/fault/failure, reproduction, expected vs. actual).*
 
-> **Status: OUTLINE (v1).** First half of Week 8 — the founding governance from Session 3 becomes concrete files in your repo. **CP7 Project Infrastructure Package due Wed, Oct 28.** The **Technical Communication Portfolio (CP9)** officially starts this week.
+> **Status: OUTLINE (v1).** First half of Week 8 — the founding governance from Session 3 becomes concrete files in your repo. **CP7 Project Infrastructure Package due Fri, Oct 30** (started in Wednesday's workshop). The **Technical Communication Portfolio (CP9)** officially starts this week.
 
 ---
 
@@ -50,6 +50,7 @@ By the end of this session, a student can:
 ### 2. Strong vs. weak front doors — live comparison — 15 min
 - Walk both repos as a stranger, narrating the experience: What is this? (README first paragraph) Can I run it? (setup steps — do they work?) May I use it? (LICENSE) How do I help? (CONTRIBUTING) What's it like here? (CODE_OF_CONDUCT, issue tone) Where's it going? (roadmap).
 - **README anatomy** distilled: one-line what + why → screenshot/demo if visual → quickstart that actually works → how to contribute (link) → license line. The README is an *onboarding document*, not a spec.
+- **Before there's code:** an honest status beats a broken quickstart. Student repos have nothing to run until the build starts (Week 9), so CP7 asks for a **setup placeholder** (`docs/setup.md`: the stack the design commits to, "instructions arrive with the first runnable build," a link to the issue tracking it) and a README that points to it. The full setup guide is written and partner-cold-tested in **Session 20**, and followed by a stranger in the Session 22 audit. Rich's CONTRIBUTING dev-setup steps are the model to point at now, for later.
 - Note what the strong repo does that costs almost nothing: templates, labels, a roadmap file — process capital, cheap to build early, expensive to retrofit.
 - **Rich — what to point at:**
   - **README:** the one-line what ("a Python library for *rich* text and beautiful formatting in the terminal") followed by a screenshot. But it sits under about twenty lines of badges and translation links. Ask the room how far they scrolled before learning what the project is. Even a strong front door has a weak spot.
@@ -83,7 +84,7 @@ By the end of this session, a student can:
 
 ### 6. Wrap + before next class — 7 min
 - Recap: governance became files; issues have an anatomy; the front door is designable.
-- **Wednesday (Oct 28):** build workshop — the full **CP7 Infrastructure Package** (README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, templates, onboarding guide, communication norms), due end of day. Bring the punch list.
+- **Wednesday (Oct 28):** build workshop — the full **CP7 Infrastructure Package** (README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, templates, setup placeholder, communication norms), started in class and due end of day Fri, Oct 30. Bring the punch list and your review partner's repo link: the first thing Wednesday after the fast items is a cold read of each other's README and CONTRIBUTING.
 - **CP9 portfolio opens:** from now on, save links to your best bug reports, feature requests, PR descriptions, review comments, and feedback responses — 8 artifacts due Week 11, graded on quality.
 
 ---
@@ -108,7 +109,7 @@ By the end of this session, a student can:
 ## Deliverable / after class
 
 - No new checkpoint today; bring the **audit punch list** Wednesday.
-- **Due Wed, Oct 28:** **CP7 Project Infrastructure Package** (built in the workshop). **CP9 portfolio collection begins now.**
+- **Due Fri, Oct 30:** **CP7 Project Infrastructure Package** (started in Wednesday's workshop). **CP9 portfolio collection begins now.**
 
 ---
 

@@ -419,8 +419,9 @@ good issues, bug reports, and feature requests** as a founder defining the proje
 - **Session B:** workshop — build repo scaffolding and templates; draft onboarding docs.
 - **Outside:** complete the infrastructure package; file 2–3 sample/seed issues on your own repo.
 - **Deliverable:** **Checkpoint 7 — Project Infrastructure Package** (README, LICENSE, CONTRIBUTING,
-  CODE_OF_CONDUCT, issue + PR templates, setup/onboarding guide, communication/maintainer norms).
-  *Start the Technical Communication Portfolio here.*
+  CODE_OF_CONDUCT, issue + PR templates, setup placeholder, communication/maintainer norms; due the
+  Friday after Session B). The full setup guide is written and partner-cold-tested in Week 10, once
+  there is code to set up. *Start the Technical Communication Portfolio here.*
 
 ### Phase 4 — Implement & Build (Weeks 9–12)
 

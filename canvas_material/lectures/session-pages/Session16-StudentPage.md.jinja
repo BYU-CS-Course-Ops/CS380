@@ -1,0 +1,72 @@
+## Before class
+
+1. **Bring your punch list** from last class (the bottom of your CP7 Checklist), your project's **license decision and the paragraph that justifies it**, your **git standards** document (it becomes CONTRIBUTING today), and your **template and label sketches**.
+2. **Bring your review partner's repository link.** You'll read their front door cold, and they'll read yours.
+3. **Skim [*Best Practices for Maintainers*](https://opensource.guide/best-practices/) once more**, the "Documenting your processes" section, this time as a build spec rather than a reading.
+4. **Bring a laptop.** Today is a build day.
+
+---
+
+## Purpose
+
+A project's front door is only finished when a stranger can walk through it. Writing the files is the easy part; the test is whether someone who has never heard of the project can read them and say what it is and how they'd start helping, with no one around to explain. That holds for an open-source project, an internal tool at work, or a library you publish: the people who most need the docs are the ones who can't ask you.
+
+Today the front door gets built, and it gets built the way any change to the project gets made: through **pull requests**, under the git standards you wrote. The process documents itself.
+
+Not everything fits in one class, so the session is ordered by what the room is good for. The items where a standard already exists (license text, a code of conduct, issue templates) get **finished** here, where help is close. The items only you can write (CONTRIBUTING, your communication norms) get **started**, far enough for someone to read. And then someone does: your review partner reads your README and CONTRIBUTING cold, the one test an author can't run on their own docs. What they find, you fix, today or by the deadline.
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Adapt standard artifacts** (license text, the Contributor Covenant, issue and pull request templates) to your project rather than copying them blindly or writing your own from scratch, and ship them through pull requests.
+2. **Grow a CONTRIBUTING guide from your git standards**, leading with a welcome and a first step before any policy.
+3. **Read another project's front door as a stranger** and say, in writing, what it is and how you'd start helping, and **act on that kind of read** of your own.
+4. **Write an honest status** for a project that doesn't run yet: a setup placeholder rather than a quickstart that fails.
+5. **Seed your issue tracker** with well-formed issues that follow your own templates.
+
+---
+
+## What we'll do together
+
+**Two rules for the day.** *Adapt, don't invent,* wherever a standard exists: the exact license text, the [Contributor Covenant](https://www.contributor-covenant.org/version/3/0/), the structure of an issue form. Experts wrote those; your job is to fill in your blanks. *Write, don't copy,* wherever your project is the content: README, CONTRIBUTING, communication norms. A stranger can tell a template from a project that knows what it is.
+
+**A worked example.** [Prop Loft](https://github.com/prop-loft/prop-loft/tree/session-16), the course's sample project, has a finished front door at this point in the semester: a CONTRIBUTING guide that opens with a welcome, a code of conduct with only its blanks filled in, issue forms, a pull request template, communication norms, and seed issues. Read it for shape. Your content has to be yours.
+
+**Finish the fast items (20 min).** Each in its own small pull request:
+
+- **README:** your first sentence, rewritten; a status line; how to contribute; a license line. Instead of a quickstart, an honest *not runnable yet* that points to the setup placeholder.
+- **Setup placeholder** (`docs/setup.md`): the stack your design commits to, a line saying setup instructions arrive with the first runnable build, and a link to the issue that tracks writing them. File that issue now; it's your first seed issue.
+- **LICENSE:** the exact text from [choosealicense.com](https://choosealicense.com/licenses/), with the year and holder filled in.
+- **Code of conduct:** the Contributor Covenant, through GitHub's *Add file → CODE_OF_CONDUCT.md* template. Fill in the reporting contact, and read the enforcement section so you know what you've promised.
+- **Templates and labels:** build last class's sketches as [issue forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms) and a [pull request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository), and set up your [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): `bug`, `enhancement`, `good first issue`, plus your project's own.
+
+**Start the write-it-yourself items (20 min).** **CONTRIBUTING**, grown from your git standards: a welcome and what to do first, then how to pick work, the pull request process, and review expectations, with policy last. **Communication norms** (`docs/communication-norms.md`): where discussion happens, response times you can actually keep ("within a week," not "24/7"), who maintains, and how decisions get made. *Working solo? That last question still needs an answer: when a contributor proposes something, how does it get decided, and where?*
+
+**The stranger's read (15 min).** You and your review partner swap repositories. In a private, logged-out browser window, read their README and then their CONTRIBUTING, about five minutes each, without asking them anything. On the **Stranger's Read sheet**, write what the project is, how you'd start helping, and the one thing that most stopped you. Then hand the sheet back. *(With an odd number of people, a group of three rotates: each person reads one repository and is read by one.)*
+
+**Act on it (10 min).** Read your sheet. If your partner's answer to *what is this?* isn't what you meant, your first sentence isn't done. Fix what you can now; file an issue for anything bigger, and say "from the stranger's read" in the pull request or issue, so the fix traces back to the read. Then file two or three real next-work issues through your own templates. They're the start of next week's backlog.
+
+---
+
+## What you'll leave with
+
+- **The fast items merged:** README status, setup placeholder, LICENSE, code of conduct, templates, and labels.
+- **CONTRIBUTING and your communication norms** drafted far enough to read, merged or on an open pull request.
+- **Your Stranger's Read sheet**, with what your partner couldn't find and what you're doing about it. Keep it; it's part of your submission.
+- **Two or three seed issues** on your tracker, written through your own templates.
+
+### Coming up
+
+- **<course-link type="assignment" id="cp7">CP7 — Project Infrastructure Package</course-link> is due end of day {{ CP7_DUE_DAY }}, {{ CP7_DUE }}.** By then: CONTRIBUTING and the norms finished, the stranger's read acted on, everything merged to `main`. To submit, tag what you're submitting, the way a project marks a release, and push the tag:
+  ```
+  git switch main && git pull
+  git tag -a cp7 -m "CP7: infrastructure package"
+  git push origin cp7
+  ```
+  Then submit the tag's URL in Canvas, with a legible photo of your Stranger's Read sheet. The assignment page has the details.
+- **Keep saving links for your <course-link type="assignment" id="cp9">Technical Communication Portfolio</course-link>** (due {{ S22_DAY }}, {{ S22_DATE }}). Today's pull request descriptions, review comments, and seed issues are all candidates.
+- **<course-link type="page" id="s17">{{ S17_DAY }}, {{ S17_DATE }}</course-link> begins Phase 4**, turning your proposal and design into epics, milestones, and a populated issue tracker. Today's seed issues are its first items.
+- *Working solo? Today is built for you. The build blocks are sized for one person, and the stranger's read is the part of the work you can't do alone, which is why class time goes to it.*

@@ -70,7 +70,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 13 | Oct 19 | Mon | Wk 7 | A | Live git workflow walkthrough; commit-message critique | — |
 | 14 | Oct 21 | Wed | Wk 7 | B | Hands-on branch/merge/PR lab on team repo; set git standards | **CP5 Design Document** + **CP6 Git Workflow Lab** |
 | 15 | Oct 26 | Mon | Wk 8 | A | Strong vs. weak repo infrastructure; license clinic; anatomy of a good issue/bug report | — |
-| 16 | Oct 28 | Wed | Wk 8 | B | Workshop — build repo scaffolding & templates; draft onboarding docs | **CP7 Infrastructure Package**; *start* CP9 Tech-Comm Portfolio |
+| 16 | Oct 28 | Wed | Wk 8 | B | Workshop — build repo scaffolding & templates; draft onboarding docs | **CP7 Infrastructure Package** started (due Fri, Oct 30); *start* CP9 Tech-Comm Portfolio |
 
 ### Phase 4 — Implement & Build
 
@@ -114,7 +114,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 4 | Pitch Presentation #1 + team formation | Wed, Oct 7 | 10 |
 | 5 | Design Document (revised) | Wed, Oct 21 | 14 |
 | 6 | Git Workflow Lab | Wed, Oct 21 | 14 |
-| 7 | Project Infrastructure Package | Wed, Oct 28 | 16 |
+| 7 | Project Infrastructure Package | Fri, Oct 30 | 16 (finished outside class) |
 | 8 | Project Plan & Roadmap | Wed, Nov 4 | 18 |
 | 9 | Technical Communication Portfolio | Wed, Nov 18 | 22 |
 | 10 | Progress Demo + Repo Audit | Wed, Nov 18 | 22 |

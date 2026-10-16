@@ -92,7 +92,7 @@ async function build() {
     { text: "Session 15 — repo infrastructure", options: { color: C.amber, bold: true, breakLine: true } },
     { text: "Monday, October 26, 2026", options: { color: "9FB4C7" } }
   ], { x: 0.92, y: 4.7, w: 11, h: 0.9, fontFace: F.body, fontSize: 19, margin: 0, lineSpacingMultiple: 1.2 });
-  s.addNotes("First half of Week 8. Session 3 was why governance matters; Session 13 set the workflow. Today it all becomes files a stranger reads. Before class: open tabs for Textualize/rich, dagorym/SSW, and (optional) prop-loft/prop-loft, plus the bug-report bank in the outline's Appendix. Have the CP7 Checklist printed, one per student, and the License Cheat Sheet page up. Wednesday is the build workshop; CP7 is due end of day Wednesday.");
+  s.addNotes("First half of Week 8. Session 3 was why governance matters; Session 13 set the workflow. Today it all becomes files a stranger reads. Before class: open tabs for Textualize/rich, dagorym/SSW, and (optional) prop-loft/prop-loft, plus the bug-report bank in the outline's Appendix. Have the CP7 Checklist printed, one per student, and the License Cheat Sheet page up. Wednesday is the build workshop; CP7 is due end of day Friday, Oct 30.");
 
   // 2 Today
   s = mk(); s.background = { color: C.white };
@@ -226,7 +226,7 @@ async function build() {
   const readme = [
     ["One line: what it is, and who it's for", "If a stranger can't repeat it, rewrite it"],
     ["A screenshot or demo, if it's visual", "Showing beats describing"],
-    ["A quickstart that actually works", "From a fresh clone, on someone else's machine"],
+    ["A quickstart that actually works", "Nothing runs yet? Say so, and point to docs/setup.md"],
     ["How to contribute", "One line and a link to CONTRIBUTING"],
     ["The license", "One line and a link to LICENSE"]
   ];
@@ -245,7 +245,7 @@ async function build() {
   s.addText("The hardest sentence of the week", { x: 8.75, y: 3.0, w: 3.7, h: 0.8, color: C.tealDk, fontFace: F.body, fontSize: 18, bold: true, valign: "top", margin: 0 });
   s.addText("Your README's first sentence. Most first drafts describe the technology. A stranger needs the problem and who has it.", { x: 8.75, y: 3.85, w: 3.7, h: 2.1, color: C.ink, fontFace: F.body, fontSize: 16, valign: "top", margin: 0, lineSpacingMultiple: 1.05 });
   footer(s);
-  s.addNotes("Two minutes. Five parts, in this order, because it's the order of the stranger's questions. The highlighted two do the most work: the first line, and a quickstart that works on a machine that isn't yours. Read Prop Loft's first sentence aloud as an example if you opened the tab. The amber card sets up the self-audit: every project will write its first sentence before leaving today, and most will rewrite it.");
+  s.addNotes("Two minutes. Five parts, in this order, because it's the order of the stranger's questions. The highlighted two do the most work: the first line, and a quickstart that works on a machine that isn't yours. Their repos have nothing to run until the build starts, so for CP7 the honest version is a status line and a pointer to a setup placeholder, docs/setup.md: the stack, 'instructions arrive with the first runnable build,' and a link to the issue tracking it. The real setup guide is written and partner-tested in Session 20. A broken quickstart is worse than an honest 'not yet.' Read Prop Loft's first sentence aloud as an example if you opened the tab. The amber card sets up the self-audit: every project will write its first sentence before leaving today, and most will rewrite it.");
 
   // 9 Cheap now
   s = mk(); s.background = { color: C.white };
@@ -536,13 +536,13 @@ async function build() {
   s.addText("BEFORE WEDNESDAY, OCT 28", { x: 0.92, y: 3.4, w: 11, h: 0.35, color: C.amber, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   s.addText([
     { text: "Bring your punch list: Wednesday is a build workshop", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
-    { text: "Line up a cold tester: someone who didn't write your setup guide (solo: your review partner)", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
+    { text: "Bring your review partner's repo link: you'll read each other's README cold", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Start saving links for CP9: bug reports, feature requests, PR descriptions, review comments, replies", options: { bullet: { indent: 16 } } }
   ], { x: 0.95, y: 3.85, w: 11.7, h: 1.95, color: "CBD8E6", fontFace: F.body, fontSize: 17, valign: "top", margin: 0 });
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);
-  s.addText("CP7 is due end of day Wednesday, merged to main. CP9 (eight artifacts) is due Nov 18.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 16, bold: true, align: "center", valign: "middle", margin: 0 });
+  s.addText("CP7 is due end of day Friday, Oct 30, merged to main. CP9 (eight artifacts) is due Nov 18.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 16, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Close in a few minutes. Say the one-liner, then the logistics. The cold tester is the item that stalls projects on Wednesday if nobody's arranged it: the setup guide has to be followed by someone who didn't write it, from a fresh clone, and the failures filed as issues. Solo founders use their review partner. CP9 opens today: anything good they write from now on can go in the portfolio, so tell them to save links as they go.");
+  s.addNotes("Close in a few minutes. Say the one-liner, then the logistics. Wednesday starts every piece of CP7 and finishes the quick ones; the rest is due Friday, so nobody has to build the whole front door alone in 75 minutes. The review partner matters: after the fast items, partners read each other's README and CONTRIBUTING cold. The setup guide is only a placeholder for now; say so, so nobody spends Tuesday night writing setup steps for code that doesn't exist. CP9 opens today: anything good they write from now on can go in the portfolio, so tell them to save links as they go.");
 
   const OUT = "Session15-FrontDoor.pptx";
   await pres.writeFile({ fileName: OUT });

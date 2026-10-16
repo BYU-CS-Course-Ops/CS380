@@ -230,31 +230,40 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 - **Project git standards** rewards setting and honoring the project's own conventions — founders write the norms.
 
 ## CP7 — Project Infrastructure Package
-*Team (or solo) · Course weight: 12%* · **draft — not yet in student-facing wording**
+*The front door a stranger walks through · Team (or solo) · Course weight: 12%* · **published**
 
 | Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
 |---|---|---|---|---|---|
-| Completeness | 25 | All required files present and substantive (README, LICENSE, CONTRIBUTING, COC, issue/PR templates, onboarding) | Nearly all present | Several gaps | Skeletal |
-| Newcomer usability | 25 | A stranger can install, run, and start contributing from the docs alone | Mostly self-serve | Needs hand-holding | Unusable |
-| License appropriateness | 15 | License chosen and justified for the project's goals | Appropriate license | License present, unjustified | Wrong/missing |
-| Governance & comms norms | 15 | Clear maintainer expectations, channels, decision norms | Present | Vague | Absent |
-| Professionalism & consistency | 10 | Polished, consistent, credible as a real OSS project | Solid | Uneven | Sloppy |
-| Contributor-readiness | 10 | Clearly built for others to join and build on | Mostly | Partial | Not considered |
+| Completeness | 25 | All eight items present and substantive — README, LICENSE, CONTRIBUTING, code of conduct, templates + labels, setup placeholder, communication norms, seed issues | All present; one or two thin | One or two missing, or several present in name only | Most missing or skeletal |
+| Newcomer usability | 25 | A stranger can say what it is, its honest status, and their first step from the docs alone; the partner's cold read was acted on | Mostly self-serve; one question a stranger would still have to ask | The first sentence or the first step is unclear; a stranger needs the author | A stranger can't tell what this is or how to help |
+| License appropriateness | 15 | Exact text, fields correct, and a rationale that argues this license for this project against a real alternative | Correct license with a reasonable rationale | License present but unjustified, or fields wrong | Missing, or a poor fit for the project's stated goals |
+| Governance & comms norms | 15 | Channels, keepable response times, who maintains, how decisions get made, and a working conduct-reporting contact | All present; one vague or optimistic | Several missing, or promises no student project can keep | Absent |
+| Professionalism & consistency | 10 | Consistent names, promises, and links across every file; every item merged through a reviewed PR | Minor inconsistencies or a broken link | Files contradict each other, or pushed straight to main | Sloppy; reads as unfinished |
+| Contributor-readiness | 10 | Templates ask for what a maintainer needs; labels support triage; 2–3 real seed issues written to the templates' own standard | Templates and labels in place; seed issues adequate | Stock templates unadapted, or seed issues vague | No templates or seed issues |
 
 **What it measures** (handout table, Canvas criterion description).
-- **Completeness** — All required artifacts present and substantive — the required-artifacts checklist above, honored.
-- **Newcomer usability** — A stranger can install, run, and start contributing from the docs alone. Verified again, for a grade, in the Week-11 audit.
-- **License appropriateness** — A *justified* choice matched to the project's goals — not MIT by reflex.
-- **Governance & comms norms** — Clear maintainer expectations, channels, and decision norms a contributor can rely on.
-- **Professionalism & consistency** — Polished and consistent — credible as a real OSS project.
-- **Contributor-readiness** — Genuinely built for others to join and build on — the course's defining thread.
+- **Completeness** — All eight front-door items are in the repository and each one does its job, not just exists.
+- **Newcomer usability** — From the README and CONTRIBUTING alone, a stranger can tell what the project is, what works today, where it's going, and how to start helping.
+- **License appropriateness** — The exact license text, correctly filled in, with a recorded rationale for why it fits this project's goals.
+- **Governance & comms norms** — A contributor knows where to talk, how fast to expect a reply, who decides, and how to report a problem — and every promise is one you can keep.
+- **Professionalism & consistency** — The files agree with each other and the repository, links work, and everything shipped through reviewed pull requests.
+- **Contributor-readiness** — Templates, labels, and seed issues make a good contribution the easy one to make.
+
+**What each criterion is looking for** (student-facing, rubrics page).
+- Everything is read from the repository, the way a stranger meets it: logged out, with no one to ask. That's how a potential contributor, a user, or an employer meets any project in the world.
+- **Completeness** and **Newcomer usability** carry half the points between them. Completeness asks whether each of the eight items is there and doing its job; Newcomer usability asks whether the README and CONTRIBUTING actually orient someone. The README's first sentence and an honest status line matter more than length. **Someone else has to read it cold:** a front door no one has tested on a stranger tops out at Proficient here *(in this course, your partner's Stranger's Read sheet, photographed and submitted with CP7)*.
+- **A project that doesn't run yet should say so.** "Not runnable yet — see `docs/setup.md`", with a placeholder that names the stack and links the issue tracking the real guide, earns full credit. A quickstart that fails costs you under both Newcomer usability and Professionalism. *(Install and run are graded later, in the repo audit, once there's code to set up.)*
+- **License appropriateness** rewards a reasoned choice, not a particular license. MIT can score Exemplary if the rationale argues it for your project's goals; any license scores poorly if the only reason is that it's the default.
+- **Governance & comms norms** is graded on credibility. "Reviews within a week" from a one-person student project is a promise a contributor can rely on; "24/7 support" is not. Solo founders still owe an answer to "how do decisions get made?": how does someone else's proposal get decided, and where?
+- **Professionalism & consistency** catches the front door that contradicts itself: a README promising Discord when the norms say issues only, a CONTRIBUTING that links a file that isn't there. Shipping every item through a pull request is part of it: the process documents itself.
+- **Contributor-readiness** asks whether your templates, labels, and seed issues make the right contribution the easy one. Whatever a template asks for is what you'll get, so adapt the stock forms to what you actually need.
 
 **Instructor notes.**
-- **Completeness** maps directly to the required repository artifacts in design §10.
-- **Newcomer usability** is the package's real test — can someone who's never seen the repo get started? This is verified again in the Week-11 repo audit.
-- **License appropriateness** rewards a *justified* choice, not just dropping in MIT by reflex.
-- **Governance & comms norms** capture the founder-defining-the-rules emphasis.
-- **Contributor-readiness** asks whether the project is genuinely ready for others to join and build on — a defining founder responsibility.
+- **Completeness** maps to the front-door subset of design §10's required repository artifacts. The setup guide is a *placeholder* in CP7 (stack + tracking issue); the full guide is written and partner-cold-tested in Session 20 and followed by the Session 22 auditor.
+- **Newcomer usability** does *not* grade install/run — that's CP10's *Repo audit* criterion. Evidence for the partner read: the photo of the Stranger's Read sheet submitted with CP7, and PRs/issues that cite it. Grade the repo at the `cp7` tag, not at main. A missing read caps this criterion at Proficient — but only for a founder who skipped it: if a partner is absent, the instructor reads, and an odd count makes a triple that rotates (each person reads one repo and is read by one).
+- **Governance & comms norms** is the founder-defining-the-rules emphasis: the public parts of the team charter, rewritten for strangers. The code of conduct's reporting contact belongs here, not under Completeness.
+- **Contributor-readiness** is graded on the machinery (templates, labels, seed issues); the *welcome* lives in Newcomer usability via CONTRIBUTING. Keep them separate when scoring so one weak file isn't penalized twice.
+- One grade per project; on team projects, adjusted by individual contribution (design §8).
 
 
 # Phase 4 — Implement & Build
