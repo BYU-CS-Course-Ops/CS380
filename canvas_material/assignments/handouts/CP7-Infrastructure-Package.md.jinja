@@ -17,19 +17,22 @@ The transferable lesson is one of the biggest in the course: **writing things do
 These eight items come from the course's required repository artifacts. The same list is also a printable checklist, with a punch-list area for tracking what's left: <file path="../../resources/CP7-Checklist.pdf" canvas_folder="Course Handouts" />
 
 1. **README.md** — one-line what + why → status → quickstart (or, until the project runs, an honest line pointing to the setup placeholder) → how to contribute (link) → license line.
-2. **LICENSE** — exact text, correct fields, with the project's one-paragraph rationale recorded (in CONTRIBUTING or a docs note).
-3. **CONTRIBUTING.md** — grown from your git-standards doc: how to set up, how to pick work, the PR process, review expectations, and what a newcomer should do first.
-4. **CODE_OF_CONDUCT.md** — adopt a standard ([Contributor Covenant](https://www.contributor-covenant.org/version/3/0/code_of_conduct/) is the usual choice), with the reporting contact and enforcement filled in for your project.
-5. **Issue templates + PR template + starter labels** (`.github/…`) — the bug-report anatomy (steps, expected vs. actual, environment) and feature-request shape built in; labels including `bug`, `enhancement`, `good first issue`.
+2. **LICENSE** — the exact text, unmodified except for the fields the license itself asks you to fill in. MIT and BSD have them (year and copyright holder); Apache-2.0 and the GPL don't, and Apache's `[yyyy] [name of copyright owner]` line is a template for file headers that stays as written. Record the project's one-paragraph rationale in CONTRIBUTING or a docs note.
+3. **CONTRIBUTING.md** — grown from your git-standards doc: a welcome and what a newcomer should do first, then how to pick work, the PR process, and review expectations, with policy last. For setup, link to `docs/setup.md` rather than repeating it, so there's one place to keep current.
+4. **CODE_OF_CONDUCT.md** — adopt a standard ([Contributor Covenant](https://www.contributor-covenant.org/version/3/0/code_of_conduct/) is the usual choice), with the reporting contact and enforcement filled in for your project. The contact is public and has to work:
+   - **An address you'll check and are willing to publish.** It doesn't have to be your personal one; a BYU address or one created for the project is fine.
+   - **How soon reports are read.** It's a promise like any other, so make it one you'll keep.
+   - **A route for a report about the maintainer.** On a one-person project that's you, so point to someone else who can act: a co-maintainer, or [GitHub's reporting tools](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam).
+5. **Issue templates + PR template + starter labels** (`.github/…`) — the bug-report anatomy (steps, expected vs. actual, environment) and feature-request shape built in; the PR template carries the checklist from your git standards (what to link, what to test, what the author confirms before asking for review); labels including `bug`, `enhancement`, `good first issue`.
 6. **Setup guide placeholder** (`docs/setup.md`) — the stack and prerequisites your design document already commits to, a line saying setup instructions arrive with the first runnable build, and a link to the issue that tracks writing them (it can be one of your seed issues). *The full guide is written and cold-tested in Week 10, once there's something to run, and a stranger follows it in the Week-11 repo audit.*
-7. **Communication & maintainer norms** (`docs/communication-norms.md`) — where discussion happens, realistic response expectations, who maintains.
-8. **2–3 seed issues** filed on your own tracker, following your own templates — real next-work items.
+7. **Communication & maintainer norms** (`docs/communication-norms.md`) — where discussion happens, realistic response expectations, who maintains, and how decisions get made. *Solo, that last one still needs an answer: when a contributor proposes something, how is it decided, and where?*
+8. **2–3 seed issues** filed on your own tracker, following your own templates — real next-work items. Before there's code, most of them are features or tasks rather than bugs. A task that fits neither form (like writing the setup guide) uses the closest one, or you add a third form for tasks.
 
 ---
 
 ## Requirements & constraints
 
-- **Everything ships via PR, cross-reviewed** — the process documents itself.
+- **Everything ships via PR, reviewed under your git standards** — the process documents itself. On a team, a teammate reviews. Solo, you write a self-review in the PR before you merge: what you checked against the PR template, and what you'd want a reviewer to look at.
 - **Adapt, don't invent** where standards exist (CoC, license text); **write, don't copy** where your project is the content (README, setup, norms).
 - **Promises must be keepable.** "Reviews within a week" from a student project is credible; "24/7 support" is not. Credibility is graded.
 - **Read cold by someone else.** In the workshop your review partner reads your README and CONTRIBUTING as a stranger would and fills in a *Stranger's Read* sheet. Act on what they couldn't find, in class or after, and say "from the stranger's read" in the PR or issue that does. Keep the sheet: a photo of it is part of your submission. *Newcomer usability* is one of CP7's two heaviest criteria, and a front door no one has read cold tops out at Proficient there.

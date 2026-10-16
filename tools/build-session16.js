@@ -168,8 +168,8 @@ async function build() {
   const fast = [
     [FA.FaBookOpen, "README", "First sentence, rewritten. A status line. How to contribute, and a license line."],
     [FA.FaHourglassHalf, "Setup placeholder", "docs/setup.md: your stack, \"arrives with the first runnable build,\" and the issue tracking it."],
-    [FA.FaBalanceScale, "LICENSE", "The exact text. Year and holder filled in. Rationale goes in CONTRIBUTING."],
-    [FA.FaHandshake, "Code of conduct", "Contributor Covenant via GitHub's template. Fill in the reporting contact; read the enforcement section."],
+    [FA.FaBalanceScale, "LICENSE", "The exact text. Fill in fields only if it has them (MIT, BSD). Rationale goes in CONTRIBUTING."],
+    [FA.FaHandshake, "Code of conduct", "Contributor Covenant, adopted. A contact you'll check, a response time, and a route if it's about you."],
     [FA.FaTags, "Templates + labels", "Monday's sketches, built: bug, feature, PR template. bug · enhancement · good first issue"]
   ];
   const fw = 2.3, fg = 0.15;
@@ -183,7 +183,7 @@ async function build() {
   card(s, 0.6, 5.9, 12.1, 0.85, C.navy);
   s.addText("File the setup-guide issue now. It's your first seed issue, and the placeholder links to it.", { x: 0.95, y: 5.9, w: 11.4, h: 0.85, color: C.white, fontFace: F.body, fontSize: 17, bold: true, valign: "middle", margin: 0 });
   footer(s);
-  s.addNotes("Twenty minutes, one small PR per item. Rove hard. Spot-check license fields (wrong year and 'Copyright [yyyy] [name]' left in are the common misses). Read README first sentences back to their authors: would a stranger know what this is? The placeholder takes five minutes; don't let anyone write real setup steps for code that doesn't exist yet. That guide comes in Session 20. Warn at ten minutes and at two.");
+  s.addNotes("Twenty minutes, one small PR per item. Rove hard. Spot-check license fields: MIT and BSD need a year and holder; Apache's '[yyyy] [name of copyright owner]' line is a file-header template in the appendix and stays as written, so don't flag it. Check reporting contacts: an address they'll actually read, a response time, and, solo, GitHub's reporting tools for reports about the maintainer. Read README first sentences back to their authors: would a stranger know what this is? The placeholder takes five minutes; don't let anyone write real setup steps for code that doesn't exist yet. That guide comes in Session 20. Warn at ten minutes and at two.");
 
   // 6 An honest status
   s = mk(); s.background = { color: C.white };

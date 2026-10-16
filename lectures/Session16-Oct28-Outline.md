@@ -59,10 +59,10 @@ By the end of this session, a student can:
 Each item goes through its own small PR, reviewed under the project's policy. On a solo project, that means a PR and a self-review against the checklist; the partner reviews later in §5 if time allows.
 - **README:** first sentence (Monday's draft, rewritten), status line, how to contribute (link), license line. Instead of a quickstart, an honest line: *not runnable yet — see `docs/setup.md`*.
 - **Setup placeholder** (`docs/setup.md`): the stack and prerequisites the design doc commits to; "setup instructions arrive with the first runnable build"; a link to the issue that tracks writing them. File that issue now. It's the first seed issue.
-- **LICENSE:** exact text, year and holder filled in. The rationale paragraph from Monday's clinic goes in CONTRIBUTING or a docs note.
-- **CODE_OF_CONDUCT:** Contributor Covenant via GitHub's template; fill in the reporting contact and read the enforcement section.
+- **LICENSE:** exact text, with only the fields the license asks for: MIT and BSD have a year and holder; Apache-2.0 and the GPL have none (Apache's `[yyyy] [name of copyright owner]` line is the appendix's file-header template and stays as written). The rationale paragraph from Monday's clinic goes in CONTRIBUTING or a docs note.
+- **CODE_OF_CONDUCT:** Contributor Covenant via GitHub's template; read the enforcement section. The reporting contact is public and has to work: an address they'll check and are willing to publish (BYU or project-specific is fine; it needn't be personal), how soon reports are read, and a route for a report *about the maintainer*. Solo, that's GitHub's reporting tools or another person who can act. Prop Loft's is the model.
 - **Templates + labels:** build Monday's sketches: bug, feature request, PR template (checklist from the git standards), and labels `bug`, `enhancement`, `good first issue`, plus the project's own.
-- Instructor circulates: spot-check license fields (year, names), read README first sentences back to their authors ("would a stranger know what this *is*?").
+- Instructor circulates: spot-check license fields (MIT/BSD year and holder; an Apache appendix left as written is correct), reporting contacts, read README first sentences back to their authors ("would a stranger know what this *is*?").
 
 ### 3. Build block 2 — start the write-it-yourself items — 20 min
 - **CONTRIBUTING.md**, grown from `docs/git-standards.md`. Lead with welcome and "what to do first," then how to pick work, the PR process, and review expectations; policy last. Push past process into *welcome*: "what should a newcomer do first?"
@@ -77,7 +77,7 @@ Each item goes through its own small PR, reviewed under the project's policy. On
 
 ### 5. Act on the read + seed the tracker — 10 min
 - Fix what the sheet found, or file it as an issue if it's bigger than ten minutes. Record the PR or issue number on the sheet and say "from the stranger's read" in its description, so the fix traces back. Whatever isn't done by the end of class gets finished by Friday; the author photographs the sheet for the CP7 submission.
-- **Seed the tracker:** 2–3 real next-work issues, written through your own templates. The setup-guide issue from §2 counts as one. These are the first items in Monday's backlog (CP8).
+- **Seed the tracker:** 2–3 real next-work issues, written through your own templates. The setup-guide issue from §2 counts as one. Pre-code seeds are mostly features and tasks; a task uses the closest form, or the project adds a task form. These are the first items in Monday's backlog (CP8).
 - If time remains, partners review each other's open PRs.
 
 ### 6. Wrap — 5 min
