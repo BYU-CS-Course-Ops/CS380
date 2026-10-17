@@ -151,7 +151,7 @@ Twelve graded checkpoints build toward the culminating artifact. CP1–CP4 are i
 
 **The culminating experience.** A **launched open-source project, defended at Demo Day**: a working MVP that proves core viability, an open-source-ready repository with full governance and onboarding documentation, a Launch & Onboarding Package, and a final pitch and live demo before an audience that includes capstone faculty. The demo answers the three questions the whole semester builds toward — **What need does this serve? What has been built? Where does it go next, and how can others join you in building it?**
 
-**Required repository artifacts.** Every project repo carries, at minimum: `README.md`, `LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `.github/ISSUE_TEMPLATE/`, `.github/pull_request_template.md`, and `docs/` files for product definition, architecture, onboarding, roadmap, known issues, communication norms, and definition of done. Every project uses git with pull requests (even solo), maintains an issue backlog and milestone plan, and produces a working demo, however narrow.
+**Required repository artifacts.** Every project repo carries, at minimum: `README.md`, `LICENSE`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `.github/ISSUE_TEMPLATE/`, `.github/pull_request_template.md`, and `docs/` files for product definition, architecture, onboarding, roadmap, known issues, communication norms, and git standards (which carry the project's definition of done). Every project uses git with pull requests (even solo), maintains an issue backlog and milestone plan, and produces a working demo, however narrow.
 
 
 ## Assessment

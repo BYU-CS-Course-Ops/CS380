@@ -1,0 +1,65 @@
+## The short version
+
+Turn your design into an actionable, public plan: the MVP decomposed into **epics → issues** (each with acceptance criteria), organized into **dated milestones** that honestly fit the remaining calendar, on a **board** that shows real state — plus **contribution pathways** (`good first issue` labels, starter context) and a **roadmap beyond December** committed to the repo, with your project's **definition of done**.
+
+---
+
+## Why this assignment exists
+
+Between a design document and working software sits an unglamorous skill that separates projects that ship from projects that drift: **decomposition** — breaking a vision into pieces small enough to build, review, and finish. Unwritten work doesn't get done; vaguely written work gets done wrong; and work without acceptance criteria is never *done* at all, just abandoned. Learning to cut an MVP into a hundred finishable pieces, sequence them, and check the arithmetic against real capacity is the core of project management as engineers actually practice it — and it's the skill you'll use on every team, agile or otherwise, for the rest of your career.
+
+But this course adds the founder's twist: your tracker isn't just internal machinery, it's a **public invitation.** A populated backlog, a visible roadmap, and genuinely approachable `good first issue`s are how an open project tells strangers "there's a future here, and here's your way in." That's why contribution pathways and the beyond-December roadmap carry a full 40% of this grade — a plan that only serves the people building it today is only half a founding artifact. And there's a nearer-term stake: your M1 milestone *is* your {{ S22_DATE }} demo commitment. The plan and the demo are the same promise.
+
+---
+
+## What to produce (in the tracker + repo, by end of Wednesday)
+
+1. **Epics** — 3–5, named as user-visible value ("check out and return," not "backend work"), each with its work grouped under it. *Default:* a parent issue labeled `epic`, with the work as sub-issues.
+2. **Issues** — M1 (the demo-able core, due {{ S22_DATE }}) fully decomposed; M2 (MVP complete, ~{{ S25_DATE }}) at least coarse. Each M1 issue: goal, context/links, and **acceptance criteria**; sized (t-shirt or your chosen scheme); the vertical-slice issues labeled. Your CP7 seed issues are triaged into this shape, not left as requests. *Default:* a task issue form that asks for goal, context, and acceptance criteria.
+3. **Milestones** — M1 and M2, dated, with the **slice statement** on M1: *"On {{ S22_DATE }} we will demo: [user] does [end-to-end action] and sees [result]."*
+4. **Prioritization & estimation** — backlog ordered; estimates present; the capacity arithmetic done honestly (members × ~7 hrs × 2 weeks — and cut if it doesn't fit).
+5. **Board** — public, linked from the repository, with columns matching your actual workflow states; populated and true. Whatever else you change, keep a review state: every project works through pull requests, and that column is where your review policy shows. *Default:* a GitHub Project with Backlog → Ready → In progress → In review → Done, and auto-add on.
+6. **Contribution pathways** — 2–3 `good first issue` items with enough context to attempt without asking; labels in use.
+7. **Roadmap** (`docs/roadmap.md`) — where the project goes beyond December as others join: the epics you're *not* doing, framed as invitation.
+8. **Definition of done** — the project-wide bar every change must pass. You already wrote one: it's the *Definition of done* section of `docs/git-standards.md`, from CP6. Revisit it now that there's code, so every item is checkable: name the test command, say what "docs updated" means, say who confirms it. Keep it in that one place, so it can't drift from a copy; link it from CONTRIBUTING if it isn't already.
+
+---
+
+## Requirements & constraints
+
+- **The tracker is the artifact.** No parallel spreadsheet; the plan lives where the work lives.
+- **The defaults are defaults.** The task form, the `epic` label, the board's columns, and the way you notice new issues are suggestions that work for most projects, and the <course-link type="page" id="pg-setting-up-your-board">Setting Up Your Board</course-link> page sets them up step by step. You can change any of them. When you do, write the decision and the reason in CONTRIBUTING, so a contributor knows how your project works. A change with a reason is fine; a missing piece isn't a change.
+- **Issue-size test:** one coherent change that one person can carry and a reviewer can review as a unit. If it splits into pieces that are each useful and reviewable on their own, split it: "implement frontend" is an epic wearing an issue's costume. *At this course's scale, most issues land in a few focused hours to a couple of days.* A bigger one is allowed when the work is genuinely one thing; say so in the issue, and show progress as it moves.
+- **Honesty over ambition.** An M1 that fits capacity and ships beats an impressive M1 that was fiction on day one. Cutting *now* is the skill.
+- **Keep it true.** The board and milestones are living documents through Week 13 — a stale plan reads badly in the Week-11 audit.
+
+---
+
+## Grading
+
+Scored on a 100-point analytic rubric; **8% of the course grade.** One grade per project; on team projects, adjusted by individual contribution.
+
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp8) }}
+
+**Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
+
+---
+
+## Tips and common pitfalls
+
+- **Acceptance criteria are the difference between done and "done."** "Checkout works" is a hope; "checking out an item that's already out shows who has it and saves nothing" is a criterion.
+- **Estimation disagreements are the payload, not the friction.** When two people size an issue differently, a hidden assumption just surfaced — chase it. *(Solo? Compare your sizes with your review partner's read.)*
+- **Sequence the slice first, then risk, then the rest.** The scariest issue goes early, when there's still time for it to be wrong.
+- **A `good first issue` with no context is a trap, not an invitation.** Write the two extra sentences.
+- **The roadmap is allowed to dream** — that's its job — but label dreams as dreams. Overselling here costs credibility at CP11.
+
+---
+
+## Submission
+
+Tracker + repo state by end of day **{{ S18_DAY }}, {{ S18_DATE }}**; submit your public project board's URL in Canvas. The roadmap and definition of done are read from the repository. M1 becomes your **{{ S22_DATE }} progress-demo commitment** (CP10); the roadmap and pathways return in the launch package (CP11) and the final pitch's "how can others join?"
+
+---
+
+*Part of the arc: **CP5 design → CP8 plan → MVP Plan → CP10 demo → CP11 launch.** Readings: <course-link type="page" id="pg-setting-up-your-board">Setting Up Your Board</course-link>, GitHub issues/milestones docs, Atlassian on epics. Worked example: [Prop Loft at `session-17`](https://github.com/prop-loft/prop-loft/tree/session-17). See the grading rubric above.*

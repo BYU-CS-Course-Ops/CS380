@@ -559,7 +559,7 @@ Every project repo should contain, at minimum:
 - `.github/ISSUE_TEMPLATE/`, `.github/pull_request_template.md`
 - `docs/product-definition.md` (users, needs, success criteria — the lead's sponsor knowledge)
 - `docs/architecture.md`, `docs/onboarding.md`, `docs/roadmap.md`, `docs/known-issues.md`
-- `docs/communication-norms.md`, `docs/definition-of-done.md`
+- `docs/communication-norms.md`, `docs/git-standards.md` (branch, commit, PR, review, and merge rules, and the project's **definition of done** as a section of it — one home, so the two can't drift)
 
 Optional but encouraged: `docs/decision-log.md`, `docs/testing.md`, `docs/release-process.md`.
 

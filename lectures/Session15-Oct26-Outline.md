@@ -36,7 +36,7 @@ By the end of this session, a student can:
 - *Optional third tab:* **[prop-loft/prop-loft](https://github.com/prop-loft/prop-loft)** — README and LICENSE, nothing else yet. That's where most student repos are after Session 11, so it's the "you are here" between the other two.
 - **Slides:** the stranger's-eye walkthrough; README anatomy; defect/fault/failure chain; good-vs-bad bug report pair; template examples.
 - **License clinic prep:** each project's Session-3-era license lean (from the short response) at hand; `canvas_material/pages/License-Cheat-Sheet.md` posted.
-- **Print the CP7 Checklist** — `canvas_material/resources/CP7-Checklist.pdf`, one per student. It walks the eight CP7 items with the checks a grader (and the Week-11 auditor) will apply. Those eight are the front-door part of the design doc's required repository artifacts (`CS301R-ProjectCreation_v4.md` §10); the rest of that list arrives with other checkpoints — `docs/architecture.md` with CP5, `docs/roadmap.md` and `docs/definition-of-done.md` with CP8, `docs/known-issues.md` with CP11.
+- **Print the CP7 Checklist** — `canvas_material/resources/CP7-Checklist.pdf`, one per student. It walks the eight CP7 items with the checks a grader (and the Week-11 auditor) will apply. Those eight are the front-door part of the design doc's required repository artifacts (`CS301R-ProjectCreation_v4.md` §10); the rest of that list arrives with other checkpoints — `docs/architecture.md` with CP5, `docs/roadmap.md` with CP8 (which also revisits the definition of done already in `docs/git-standards.md` from CP6), `docs/known-issues.md` with CP11.
 - **Bug-report examples** for §4, open in tabs — the bank is in the Appendix (real issues from the instructor's own repos, weak to strong).
 
 ---

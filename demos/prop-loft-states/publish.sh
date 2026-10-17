@@ -6,7 +6,9 @@
 # request with the matching body from pr-bodies/, squash-merges it (the
 # project's own git standards), and then tags main where a session state is
 # complete. The seed issues are created once the front door is merged, so the
-# setup-guide pull request can close its issue.
+# setup-guide pull request can close its issue. The plan (epics, milestones,
+# the board) is seeded once the roadmap is merged; that stage needs the gh
+# token's project scope (gh auth refresh -s project).
 #
 #   ./publish.sh              # from anywhere; works in $CANONICAL_CLONE
 #   ./publish.sh session-16   # stop once that tag is placed; later branches stay local
@@ -28,11 +30,14 @@ STACK=(
   "chore/issue-and-pr-templates|"
   "docs/contributing|"
   "docs/readme-front-door|session-16"
+  "chore/task-form|"
+  "docs/roadmap|session-17"
   "docs/setup-guide|session-20"
 )
 declare -A TAG_MSG=(
   [session-14]="CS 301R Sessions 14-15: git standards (docs/git-standards.md)"
-  [session-16]="CS 301R Sessions 16-19: the front door (CONTRIBUTING, code of conduct, templates, communication norms)"
+  [session-16]="CS 301R Session 16: the front door (CONTRIBUTING, code of conduct, templates, communication norms)"
+  [session-17]="CS 301R Sessions 17-19: the plan (task form, docs/roadmap.md; on GitHub: epics, milestones, project board)"
   [session-20]="CS 301R Session 20 on: the setup guide (docs/setup.md)"
 )
 
@@ -95,6 +100,11 @@ for entry in "${STACK[@]}"; do
       OUT=$(mktemp); SEED_OUT="$OUT" "$HERE/seed.sh" "$REPO" session-16
       source "$OUT"; rm -f "$OUT"
     fi
+  fi
+
+  # The plan follows the roadmap: the task form and docs/roadmap.md now exist.
+  if [[ "$TAG" == session-17 ]]; then
+    SEED_FROM=17 "$HERE/seed.sh" "$REPO" session-17
   fi
 
   [[ -n "$THROUGH" && "$TAG" == "$THROUGH" ]] && break

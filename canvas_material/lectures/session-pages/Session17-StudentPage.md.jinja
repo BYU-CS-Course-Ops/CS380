@@ -1,0 +1,84 @@
+## Before class
+
+1. **Read <course-link type="page" id="pg-setting-up-your-board">*Setting Up Your Board*</course-link>.** It walks through the task form, epics, milestones, and the project board, each step shown on Prop Loft. Today's workshop assumes you've read it; you'll follow it at your laptop.
+2. **Read GitHub's [*Best practices for Projects*](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/best-practices-for-projects).** It's short, and it gives the reasoning behind the board: break the work down, keep one source of truth, let automation move the status.
+3. **Skim the mechanics** in GitHub's docs: [*About issues*](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues), [*About milestones*](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones), and [*Adding sub-issues*](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/adding-sub-issues). For the vocabulary, Atlassian's [*Epics, stories, themes*](https://www.atlassian.com/agile/project-management/epics-stories-themes).
+4. **Re-read your design doc's implementation plan and your MVP definition.** Today they become your backlog.
+5. **Bring a laptop.** Most of today is a workshop in your own tracker.
+
+---
+
+## Purpose
+
+Until now the project has produced documents. From here it produces software, and the tracker is where the two meet: the place where "the design says we need search" becomes "here is the piece of search someone builds this week, and here is how we'll know it's done."
+
+That's true on any team. A design nobody breaks down stays a design, and work nobody writes down doesn't get done. The tracker is also how everyone else sees the project: a teammate picking up their next task, a solo founder remembering where they left off, a stranger deciding whether there's a place for them. *(In this course, the instructor also reads it when auditing your progress in Week 11.)* A populated, prioritized tracker is how a project shows it has a future.
+
+Today you turn your design into **epics** and **issues**, group them into **milestones** with honest dates, and set up a public **board** that shows where everything stands.
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Decompose an MVP into epics and issues**, each issue one coherent, reviewable unit of work.
+2. **Tell a request from a work item** and turn one into the other: a work item states its goal, its context, and its **acceptance criteria**.
+3. **Group issues into milestones** with dates that fit the hours you actually have.
+4. **Set up a project board** whose columns match how work really moves on your project.
+5. **Mark contribution pathways**: label the issues a newcomer could start on, and tell them where to start.
+
+---
+
+## What we'll do together
+
+**The jobs, then the defaults.** A tracker has five jobs: describe planned work, notice what's new, group work by the value it delivers, group it by when it's due, and show what state everything is in. *Setting Up Your Board* gives a default for each one: a task form, a `needs triage` label, epics as parent issues, milestones, and a five-column board. Most projects take the defaults. You may change any of them, as long as the new way does the same job and CONTRIBUTING says why. The one thing every board keeps is a review state, because every change goes through a pull request.
+
+**The decomposition ladder.** An MVP breaks into **epics**, and epics break into **issues**.
+
+- An **epic** is a slice of value a user can see, named for what they get: "find an item," "check out and return." Read epics off your design's *goals*, not its components. One epic usually touches several components, and that's normal. Three to five epics is typical for an MVP.
+- An **issue** is one coherent change someone can review, usually one pull request: "allow at most one open checkout per item," not "do the backend."
+- On GitHub, an epic is an **ordinary issue labeled `epic`** whose tasks are **sub-issues**. The parent shows a progress bar as they close.
+
+[Prop Loft](https://github.com/prop-loft/prop-loft/tree/session-17), the course's sample project, has five epics: *Find an item*, *Check out and return*, *Add an item*, *Roles and phone layout*, and *Run it at the theater*. Each traces to a goal in its design doc.
+
+**Requests and work items.** The issue forms you built last week are for **requests**: a bug report or feature idea, written by anyone, saying what's wrong or what's needed. Planning produces **work items**, written by a maintainer, saying what will be built and how you'll know it's finished:
+
+- **Goal:** one sentence.
+- **Context:** the design section, the parent epic, and the request it came from.
+- **Acceptance criteria:** a checklist, each line true or false when the pull request merges.
+
+**Triage** turns one into the other. When you accept a request, give it a goal and acceptance criteria, link it to its epic, and set its milestone. Prop Loft's *Search items by name* shows both halves in one issue: the request as filed, then the triage note under it. Triage also split that request, and filtering became its own task.
+
+**How big is an issue?** Big enough to be one coherent change that one person can carry and someone can review. On real projects some issues take weeks, such as a hard concurrency bug or a database migration, because the work really is one thing. What a long issue owes everyone is visible progress: a draft pull request, a checklist, comments as it moves. The rule: **if it splits into pieces that are each useful and reviewable on their own, split it.** "Implement the frontend" is an epic pretending to be an issue. *In this course, with about five build weeks, most issues should take a few focused hours to a couple of days. A two-week issue is 40% of your runway with no checkpoint in it.*
+
+**Milestones and the honest calendar.** Epics are *what*; milestones are *when*. The two cut across each other, so one milestone takes slices of several epics. Work backward from the dates you can't move, then count your capacity: people × the hours each actually has per week × weeks, minus time for review. Then cut to fit. What doesn't fit goes on the roadmap, written down and with no date. *(Here, the fixed dates are the progress demo on {{ S22_DAY }}, {{ S22_DATE }} and the launch package, so most projects plan two milestones: a demo-able core, then the complete MVP. Prop Loft's design plans five slices; its calendar holds two, and slices 4 and 5 go to `docs/roadmap.md`.)*
+
+**The board, live.** A GitHub Project is a separate object that *holds* your issues and pull requests. We'll set one up on Prop Loft together, following the five steps in *Setting Up Your Board*: create it at the organization and import the repository's issues; set the columns; turn on the workflows, including auto-add; make it **public** (a new project is private, even when the repository isn't) and link it to the repository; then add views by milestone or by epic.
+
+**Two layers of "done."** Each issue's acceptance criteria say what *that* change must do. Your project's **definition of done**, already a section of your git standards, says what *every* change must pass. Now that there's code, look at it again: does it name the command that runs your tests?
+
+**Workshop (28 min).** In your own tracker:
+
+1. **Set up** (about 5 min): create the board, then add the `epic` label and the task form, or your alternative with its reason in CONTRIBUTING. Prop Loft's [`task.yml`](https://github.com/prop-loft/prop-loft/blob/session-17/.github/ISSUE_TEMPLATE/task.yml) is a starting point to copy and edit, through a pull request like any other change.
+2. **Epics first** (about 6 min): three to five, named as user value, each linked to its section of the design doc.
+3. **Your first milestone, in full** (about 12 min): break it into sub-issues of their epics, each with real acceptance criteria. Triage your seed issues from last week into work items. Assign owners to the first few.
+4. **Milestones, board, labels** (about 5 min): put dates on both milestones, put issues in them, and set each card's status. Tag two or three genuinely approachable issues `good first issue`, each with a *Where to start* section naming the file, the code to imitate, and the test to copy.
+
+While you work, I'll come around and ask three questions: *Which issue is secretly an epic? What has to be true at the progress demo, and is that your first milestone? What did you change from the defaults, and why?*
+
+---
+
+## What you'll leave with
+
+- **A public project board** linked from your repository, with columns that match your workflow, including a review state.
+- **Three to five epics**, each a parent issue linked to your design.
+- **Your first milestone broken down** into work items with acceptance criteria, owners on the first few, and your seed issues triaged.
+- **Two or three `good first issue` items**, each telling a newcomer where to start.
+
+### Coming up
+
+- **Before next class:** break your second milestone down at a coarser grain, epic-level or rough issues. The first milestone in detail and the second in outline is the right shape for now.
+- **<course-link type="page" id="s18">{{ S18_DAY }}, {{ S18_DATE }}</course-link>:** estimation and sequencing. You'll size the first milestone's issues, check that it fits, find dependency chains, and lock your vertical slice.
+- **<course-link type="assignment" id="cp8">CP8: Project Plan and Roadmap</course-link> is due end of day {{ S18_DAY }}, {{ S18_DATE }}.** Submit your public board's URL; the roadmap and the revisited definition of done are read from your repository. The assignment page and its rubric have the details.
+- *Working solo? Every step applies. Your board is how you'll remember where you were after a week of other classes, and it's where a would-be contributor looks to see what's happening and where they could help.*

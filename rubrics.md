@@ -269,27 +269,38 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 # Phase 4 — Implement & Build
 
 ## CP8 — Project Plan & Roadmap
-*Team (or solo) · Course weight: 8%* · **draft — not yet in student-facing wording**
+*Your plan, in public · Team (or solo) · Course weight: 8%* · **published**
 
 | Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
 |---|---|---|---|---|---|
-| Work breakdown | 25 | Coherent epics → milestones → issues; right granularity | Reasonable breakdown | Coarse/uneven | Vague list |
-| Prioritization & estimation | 20 | Prioritized backlog with credible estimates | Prioritized | Some prioritization | None |
-| Definition of done | 15 | Clear, testable DoD | Present | Vague | Absent |
-| Contribution pathways | 20 | Good-first-issues and labels invite future contributors | Some starter tasks/labels | Minimal | None |
-| Roadmap into the future | 20 | Credible roadmap into a future semester/team | Roadmap present | Thin | Missing |
+| Work breakdown | 25 | Epics named for value; every M1 issue one coherent, reviewable change with checkable acceptance criteria; M2 coarse but real; seed issues triaged; the board is public and true | A sound breakdown; a few issues too big, too vague, or missing acceptance criteria | Epics that are really components, or issues without acceptance criteria; the board out of date or private | A list of features, not a plan someone could work from |
+| Prioritization & estimation | 20 | Ordered with the slice and the riskiest work first; every M1 issue sized; the capacity arithmetic shown, and M1 cut to fit | Ordered and sized; capacity checked loosely | Some order or some sizes; no capacity check | No order and no sizes |
+| Definition of done | 15 | Every item checkable (the test command named, what "docs updated" means, who confirms); linked from CONTRIBUTING | Revisited and mostly checkable; one item vague | Unchanged since CP6, or mostly items no one could check | Absent |
+| Contribution pathways | 20 | 2–3 genuinely small starting-point issues, each with a *Where to start*; labels in use and explained in CONTRIBUTING; the board and roadmap linked from the front door | Starting points marked; one thin on context | Marked but not approachable, or no context to start from | No way in for a newcomer |
+| Roadmap into the future | 20 | Next and later work in order, with what was cut and why; each item framed as a place to help; non-goals stated | A credible roadmap; thin on what was cut or where others fit | A wish list with no order or reasoning | Missing |
 
 **What it measures** (handout table, Canvas criterion description).
-- **Work breakdown** — Coherent epics → milestones → issues at the right granularity — vision turned into finishable work.
-- **Prioritization & estimation** — An ordered backlog with credible estimates, checked against real capacity.
-- **Definition of done** — A clear, testable, project-wide bar for "done."
-- **Contribution pathways** — Good-first-issues and labels that genuinely invite future contributors — weighted heavily on purpose.
-- **Roadmap into the future** — A credible path into a future semester/team — the project's tomorrow, written down.
+- **Work breakdown** — The MVP is cut into epics of user-visible value and issues someone could pick up, each with acceptance criteria, grouped into dated milestones on a public board that shows real state.
+- **Prioritization & estimation** — The backlog is in order, every M1 issue is sized, and the hours were counted — M1 fits the time that actually exists, or something was cut.
+- **Definition of done** — The project-wide bar every change must pass, revisited in your git standards now that there's code, so each item can be checked.
+- **Contribution pathways** — A newcomer can find a real place to start, and has what they need to start it without asking.
+- **Roadmap into the future** — Where the project goes after the MVP, as others join — written down, honest about what was cut, and framed as places to help.
+
+**What each criterion is looking for** (student-facing, rubrics page).
+- Everything is read from the repository and the board, logged out, the way a would-be contributor meets a project: no spreadsheet, no explanation from you. A private board can't be graded, so check its visibility.
+- **The defaults are defaults.** A task form, an `epic` label, the five board columns, and a `needs triage` label are one good way to do each job, not the only one. Changing any of them costs nothing here, provided CONTRIBUTING says what you do instead and why. A board with no review state is the exception: every project works through pull requests, so keep one.
+- **Work breakdown** is graded on the issues as much as the epics. The test for an issue is whether it's one coherent change one person could carry and a reviewer could review as a unit, and whether its acceptance criteria are checkable: "checkout works" is a hope, "an item that's already out can't be checked out again" is a criterion. Detail M1 fully and M2 loosely; that's the right shape, not a shortcut.
+- **Prioritization & estimation** rewards honesty over ambition. Show the capacity arithmetic (who, how many hours, how many weeks) and what you cut to make M1 fit. An M1 that was trimmed scores higher than an impressive one that couldn't fit.
+- **Definition of done** lives in your git standards from CP6; don't copy it into a new file. It's graded on whether a reviewer could check each item, now that there's code to test.
+- **Contribution pathways** and **Roadmap into the future** carry 40% together, on purpose: a plan that only serves the people building it today is half a founding artifact. A starting-point issue with no context is a trap, not an invitation. The roadmap is allowed to dream, as long as dreams are labeled as dreams.
 
 **Instructor notes.**
-- **Work breakdown** and **Prioritization & estimation** assess turning vision into manageable, sequenced work.
-- **Definition of done** grades whether the project has a shared, checkable bar for completion.
+- Grade the repository and the public board as of the due date; the submission is the board URL. If the board is private, ask for it to be made public before grading rather than scoring it as missing.
+- **Work breakdown** and **Prioritization & estimation** assess turning vision into manageable, sequenced work. Sizes are taught in Session 18 (t-shirt + "does M1 fit?"); accept any consistent scheme. The slice statement on M1 belongs here and becomes CP10's commitment.
+- **Departures from the defaults** (task form, `epic` label, columns, intake mechanism) are never a deduction when CONTRIBUTING gives the reason; an unexplained gap is graded as a gap. Only the review state on the board is fixed.
+- **Definition of done** stays a section of `docs/git-standards.md` (decided Oct 2026; v4 §10 updated). Grade the revision since CP6, not the existence of a file.
 - **Contribution pathways** and **Roadmap into the future** are weighted heavily because *creating on-ramps for future contributors* is a defining course goal, not an afterthought.
+- One grade per project; on team projects, adjusted by individual contribution (design §8).
 
 ## CP9 — Technical Communication Portfolio
 *Individual · Completes the 12% Git + Tech-Comm bundle, with CP6* · **published**
