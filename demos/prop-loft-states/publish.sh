@@ -13,6 +13,11 @@
 #   ./publish.sh              # from anywhere; works in $CANONICAL_CLONE
 #   ./publish.sh session-16   # stop once that tag is placed; later branches stay local
 #
+# docs/design-plain-forms (session-18) is meant to be merged live in Session 18,
+# by hand (see the Session 18 outline's run sheet). Run publish.sh session-17
+# before class; after class, a run through session-20 finds it on main and
+# skips it, as long as the pull request kept the commit's subject as its title.
+#
 # Safe to stop and rerun: a branch whose commit is already on main is skipped,
 # and existing tags are left alone.
 set -euo pipefail
@@ -32,12 +37,14 @@ STACK=(
   "docs/readme-front-door|session-16"
   "chore/task-form|"
   "docs/roadmap|session-17"
+  "docs/design-plain-forms|session-18"
   "docs/setup-guide|session-20"
 )
 declare -A TAG_MSG=(
   [session-14]="CS 301R Sessions 14-15: git standards (docs/git-standards.md)"
   [session-16]="CS 301R Session 16: the front door (CONTRIBUTING, code of conduct, templates, communication norms)"
   [session-17]="CS 301R Sessions 17-19: the plan (task form, docs/roadmap.md; on GitHub: epics, milestones, project board)"
+  [session-18]="CS 301R Sessions 18-19: the plan, cut to fit (design §6: plain forms for the MVP; on GitHub: sizes, the slice label, the slice statement)"
   [session-20]="CS 301R Session 20 on: the setup guide (docs/setup.md)"
 )
 

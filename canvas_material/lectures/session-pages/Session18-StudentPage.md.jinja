@@ -1,0 +1,91 @@
+## Before class
+
+1. **Read Henrik Kniberg's [*Making sense of MVP*](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp).** It's short, and it's the source of the skateboard picture: deliver something a person can use end to end at every stage, not a pile of parts. Today you use it to plan your vertical slice; it comes back on {{ S19_DAY }} for MVP thinking.
+2. **Finish breaking down your milestones** from last class: the first milestone in full, the second at least in outline. Today you size, order, and cut the first one.
+3. **Skim §5, step 6 of <course-link type="page" id="pg-setting-up-your-board">*Setting Up Your Board*</course-link>**, the *Size* field. You'll add it to your board in class.
+4. **Bring a laptop with your board open.** Most of today is a workshop in your own tracker.
+
+---
+
+## Purpose
+
+A backlog without sizes and an order is a wish list. Today turns it into a plan you can keep, in three moves: **estimate** the first milestone's issues, **check that they fit** the hours that actually exist, and **sequence** them so the one end-to-end path your demo walks, the **vertical slice**, works as early as possible.
+
+On any team, the numbers matter less than the conversation they force. When two people size the same issue differently, they almost always pictured different work, and that moment is when a hidden assumption comes out, while it's still cheap to fix. The fit check works the same way: it makes you cut now, on paper, instead of the night before a deadline. *(In this course, the deadline the plan protects is the progress demo on {{ S22_DAY }}, {{ S22_DATE }}.)*
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Estimate work relatively**, with t-shirt sizes anchored on finished work, and check the total against your real capacity.
+2. **Surface hidden assumptions** by comparing estimates and asking what each person pictured.
+3. **Cut honestly** when the arithmetic says a milestone doesn't fit, and name the next cut before you need it.
+4. **Sequence a milestone**: the slice first, real dependencies only, risk early.
+5. **Commit to a vertical slice** in one sentence specific enough to rehearse.
+
+---
+
+## What we'll do together
+
+**T-shirt sizes, tied to the hours you have.** Sizes are relative: "is this bigger or smaller than that finished piece of work?" is an easier question than "how many hours?" Pick an **anchor** everyone knows and call it an S. Then translate to hours only to check the total:
+
+| Size | About | What it looks like |
+|---|---|---|
+| **XS** | under an hour | a label, a typo, a config line |
+| **S** | 2 hours | one focused sitting |
+| **M** | 4 hours | two or three sittings |
+| **L** | a whole week of one person's time | split it, or schedule it first |
+| **XL** | more than a week | an epic: split it now |
+
+*(In this course, a week of one person's time is about 7 outside hours, so an L is about 7.)*
+
+**A demo round on Prop Loft.** We'll size three of [Prop Loft](https://github.com/prop-loft/prop-loft/tree/session-17)'s first-milestone issues from their text alone: everyone votes silently, fingers revealed together, then we compare with the maintainer's size. Whatever the vote, the move is the same: **ask what each person pictured.** A disagreement means different work was pictured, and the issue's acceptance criteria decide which work it is. If they can't, the issue needs another criterion.
+
+**The fit check.** Capacity is **people × the hours each actually has a week × weeks, minus review**, and review is real time because every change goes through a pull request. *(A solo founder here has about 14 hours to the progress demo; a team of three, about 42. Prop Loft's one maintainer has about 10 hours a week, so 20.)* Prop Loft's first milestone comes to 21 hours against 20. That fits on paper, which means it doesn't. When a milestone doesn't fit, try these cuts in order:
+
+1. **Off the slice first:** move what the demo doesn't walk to the next milestone.
+2. **Take a fallback:** a simpler way to build the same thing.
+3. **Shrink the acceptance criteria:** less of it, still working.
+4. **Defer to the roadmap**, written down, with no date.
+
+Prop Loft takes its design's own fallback, plain forms instead of HTMX, which brings it to 18 of 20. A cut that changes the design is a design change, so we'll make it live, through a pull request that edits the design doc. Then we'll name the next cut, so that if the milestone falls behind, the decision is already made.
+
+**Sequencing.** Five rules, strongest first:
+
+1. **Slice first.** The one end-to-end path the demo walks should be walkable as early as possible, then widened.
+2. **Dependencies:** only the real edges. Write each one into the issue ("Needs …"), and the order follows.
+3. **Risk early.** The scariest issue goes first, while there's still time for it to be wrong.
+4. **People are dependencies too:** a cold reader, a user to design with, a borrowed phone. Ask now and put a date on it.
+5. **Stagger the reviews.** Two big pull requests in review at once stall a small project.
+
+On the board, **Ready** holds what can start now, in order; the top of **Backlog** holds what's next once its dependencies merge.
+
+**The skateboard, not the pile of parts.** The trap is *broad and shallow*: every screen built, nothing wired, so the demo proves nothing. A thin slice has fewer pieces, all connected, and it demos itself. Kniberg's caveat matters: plain isn't the same as shoddy.
+
+**The slice statement.** One sentence in your first milestone's description: *"On the demo day we will demo: [user] does [end-to-end action] and sees [result]."* It's your demo script and the test of when the milestone is done. Prop Loft's: *"…a wardrobe volunteer searches 'waistcoat,' opens the men's size M waistcoat, checks it out to an actor for the fall show, due back Dec 5, and sees it marked out to that actor."* A real search term, a real item, a real date: if you can't rehearse it, it isn't done.
+
+**Two workshops, in your own tracker.** You'll fill in the **Fit Check Sheet** as you go (handed out in class; keep it, it's your working copy).
+
+1. **Size it and check it fits (11 min).** Add a *Size* field, or your own scheme with its reason in CONTRIBUTING. Size silently, reveal together, and talk only about the disagreements. Question every L; split every XL. Tally against your budget, cut if it doesn't fit, and name your next cut.
+2. **Order it and commit the slice (13 min).** Order Ready and the top of Backlog; write the "Needs" edges into the issues; create a `slice` label and put it on the issues the demo walks; assign the first week's issues; write the slice statement on your first milestone.
+
+*Working solo? Pair with your review partner and size each other's milestone cold, from the issue text alone. Where your partner can't size an issue, its acceptance criteria are missing something: fix them.*
+
+While you work, I'll come around with one question: *If the demo were tomorrow, what breaks first?* That issue goes earlier.
+
+---
+
+## What you'll leave with
+
+- **Your first milestone sized**, checked against your capacity, and cut if it didn't fit, with the next cut named.
+- **An order on your board:** Ready in sequence, blocked issues waiting at the top of Backlog.
+- **The slice labeled** and the **slice statement** on your first milestone.
+- **Asks sent** to anyone you depend on, with a date.
+
+### Coming up
+
+- **Before next class:** start the first slice issue and have it in progress by {{ S19_DAY }}. Send every ask to a person you depend on, with a date.
+- **<course-link type="page" id="s19">{{ S19_DAY }}, {{ S19_DATE }}</course-link>:** MVP thinking (what must your first version prove?) and a method for debugging, right before the heaviest building stretch. The Kniberg reading carries over.
+- **<course-link type="assignment" id="cp8">CP8: Project Plan and Roadmap</course-link> is due end of day today.** Submit your public board's URL, after opening it in a logged-out window: a private board can't be graded. Compare it with [Prop Loft's board](https://github.com/orgs/prop-loft/projects), which shows today's sizes, `slice` label, order, and slice statement; the design change is in Prop Loft's [`session-18`](https://github.com/prop-loft/prop-loft/tree/session-18) state, tagged after class.

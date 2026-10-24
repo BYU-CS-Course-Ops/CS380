@@ -87,7 +87,7 @@ An epic you won't reach for a while doesn't need sub-issues yet. Write its goal 
 
 1. **Issues → Milestones → New milestone.** Give it a title that says what it delivers (*M1 · Demo-able core*), a due date, and a one-line description of what's true when it closes.
 2. **Put each issue in at most one milestone** (the *Milestone* box in the issue's sidebar). The milestone page shows what's open, what's closed, and the percent complete.
-3. **Count the hours before you trust the date.** Add up the hours the people involved actually have before the due date, and leave room for review. If the issues don't fit, cut until they do, and say in your roadmap what moved and why. A milestone that fits and closes on time does more for a project than an ambitious one that slips.
+3. **Count the hours before you trust the date.** Size each issue (the board's *Size* field, §5, step 6), then add up the hours the people involved actually have before the due date, and leave room for review. If the issues don't fit, cut until they do, and say in your roadmap what moved and why. A milestone that fits and closes on time does more for a project than an ambitious one that slips.
 
 Detail the next milestone fully and the one after it loosely. Plans get more accurate as you get closer, so writing detailed issues for work two months out mostly means rewriting them later.
 
@@ -120,6 +120,21 @@ A board isn't part of a repository. On GitHub it's a separate **Project** that h
 3. **Turn on the automation.** Open **⋯** → **Workflows**. Two workflows are on already: *Item closed* and *Pull request merged* both set the status to Done. Turn on **Auto-add to project** too: choose your repository, use the filter `is:issue,pr is:open`, and save. New issues and pull requests then land on the board by themselves. *(A free organization gets one auto-add workflow, and it only catches items created after you turn it on. That's why step 1 imported the existing ones.)*
 4. **Make it public, then link it.** **A new project is private by default**, even when the repository is public, so a visitor would see nothing. Open **⋯** → **Settings**, find **Visibility**, and choose **Public**. Then, in your *repository*, open the **Projects** tab → **Link a project** → choose it. Now the board is one click from the repository, and each issue's sidebar shows its status.
 5. **Add the views you'll actually use.** Views are free, and the board stays the default. Two are worth having: a board **grouped by milestone** (*what's left before the demo?*) and one **grouped by parent issue** (*how is each epic doing?*). Use **+ New view**, then the view's menu → **Group by**.
+6. **Add a Size field.** You can only tell whether a milestone fits (§4, step 3) if you know roughly how big each piece of it is, and the board is where that lives. Open **⋯** → **Settings** → **+ New field**, choose **Single select**, name it **Size**, and give it the options **XS, S, M, L, XL**. Every card now has a size you can set from the board or from the issue's sidebar, and any view can group by it.
+
+   Sizes are relative. Pick a piece of finished work everyone knows, call it an S, and size the rest against it: "is this bigger or smaller than that was?" is easier to answer than "how many hours?" Tie the sizes to the time you actually have, so the total can be checked against it:
+
+   | Size | Roughly |
+   |---|---|
+   | **XS** | Under an hour: a label, a typo, a config line |
+   | **S** | One focused sitting, about 2 hours |
+   | **M** | Two or three sittings, about 4 hours |
+   | **L** | A whole week of one person's time on the project *(in this course, about 7 hours)*. Split it, or schedule it first. |
+   | **XL** | More than a week. It's an epic: split it now. |
+
+   When two people size the same issue differently, stop and ask what each is assuming. Usually they pictured different work, and the issue's acceptance criteria are where that gets settled.
+
+   *Other ways:* a **Number** field for hours or points, which the board totals for each group; or size labels (`size: M`), which work without the board. *In this course, you size your first milestone in Session 18, and CP8 asks for the sizes.*
 
 > **📷 Screenshot to come:** Prop Loft's board, five columns, with cards in Backlog, Ready, and In progress.
 

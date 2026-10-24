@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fit Check Sheet</title>
+<style>
+  @page { size: letter; margin: 0.42in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 9.6pt; line-height: 1.18; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 6pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 16pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 7.8pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .who { font-size: 9pt; color: #5F7284; white-space: nowrap; text-align: right; line-height: 1.55; }
+  .who span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 2.1in; }
+
+  h2 { font-family: Cambria, Georgia, serif; font-size: 10.6pt; color: #14233A; margin: 7pt 0 3pt 0; }
+  h2 .n { color: #12908F; }
+  h2 .hint { font-family: Calibri, "Segoe UI", sans-serif; font-weight: normal; font-size: 8pt; color: #5F7284; font-style: italic; }
+
+  .row { display: flex; gap: 8pt; }
+  .box { background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 4pt 7pt 5pt 7pt; }
+  .box.amber { border-left-color: #E8A33D; }
+
+  table { border-collapse: collapse; width: 100%; }
+  .sizes td { padding: 1.6pt 4pt; vertical-align: top; font-size: 8.8pt; }
+  .sizes td.s { font-family: Cambria, Georgia, serif; font-weight: bold; color: #0E6E6D; width: 0.34in; font-size: 10pt; }
+  .sizes td.h { color: #14233A; font-weight: bold; white-space: nowrap; width: 0.62in; }
+
+  .blank { display: inline-block; border-bottom: 0.8pt solid #9BB0BF; height: 12pt; vertical-align: bottom; }
+  .calc { font-size: 9.4pt; line-height: 2.0; }
+  .calc .small { font-size: 7.8pt; color: #5F7284; line-height: 1.25; display: block; }
+
+  .tally th { font-size: 7.8pt; color: #5F7284; text-transform: uppercase; letter-spacing: 0.3pt; text-align: left;
+              border-bottom: 1pt solid #12908F; padding: 2pt 4pt; font-weight: bold; }
+  .tally td { border-bottom: 0.7pt solid #C9D3DC; height: 0.29in; padding: 0 4pt; }
+  .tally td.c, .tally th.c { text-align: center; }
+  .tally tr.total td { border-bottom: none; font-weight: bold; color: #14233A; height: 0.3in; }
+
+  .verdict { margin-top: 3pt; font-size: 9pt; }
+  .verdict b { color: #14233A; }
+
+  .line { border-bottom: 0.7pt solid #9BB0BF; height: 0.3in; }
+  .lbl { font-size: 8.6pt; color: #14233A; font-weight: bold; margin-top: 3pt; }
+
+  ol.cuts { margin: 2pt 0 0 0; padding-left: 14pt; font-size: 8.8pt; }
+  ol.cuts li { margin-bottom: 1.5pt; }
+  ol.cuts b { color: #14233A; }
+
+  .slice { font-size: 10pt; line-height: 1.95; }
+  .slice b { color: #14233A; }
+  .slice .sl { display: inline-block; width: 0.62in; color: #0E6E6D; font-weight: bold; font-size: 9pt; }
+
+  .foot { margin-top: 7pt; font-size: 7.6pt; color: #5F7284; display: flex; justify-content: space-between; gap: 8pt; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Estimation and sequencing workshop</p>
+    <h1>Fit Check Sheet</h1>
+  </div>
+  <div class="who">Name <span></span><br>Project <span></span></div>
+</div>
+
+<div class="row">
+  <div class="box" style="flex: 1.12">
+    <h2 style="margin-top:0"><span class="n">1 ·</span> The sizes <span class="hint">relative first, hours second</span></h2>
+    <table class="sizes">
+      <tr><td class="s">XS</td><td class="h">&lt; 1 hour</td><td>A label, a typo, a config line</td></tr>
+      <tr><td class="s">S</td><td class="h">≈ 2 hours</td><td>One focused sitting</td></tr>
+      <tr><td class="s">M</td><td class="h">≈ 4 hours</td><td>Two or three sittings; about half a week of one person's time</td></tr>
+      <tr><td class="s">L</td><td class="h">≈ 7 hours</td><td>A whole week of one person's time. <b>Split it, or schedule it first.</b></td></tr>
+      <tr><td class="s">XL</td><td class="h">&gt; a week</td><td>An epic. <b>Split it now.</b></td></tr>
+    </table>
+    <div style="margin-top:4pt; font-size:8.8pt"><b>Our anchor</b>, a finished piece of work everyone knows, called <b>S</b>:</div>
+    <div class="line" style="height:0.24in"></div>
+  </div>
+
+  <div class="box amber" style="flex: 1">
+    <h2 style="margin-top:0"><span class="n">2 ·</span> The budget <span class="hint">the hours that actually exist</span></h2>
+    <div class="calc">
+      People <span class="blank" style="width:0.32in"></span> × hours a week <span class="blank" style="width:0.32in"></span> × weeks <span class="blank" style="width:0.32in"></span><br>
+      = <span class="blank" style="width:0.45in"></span> &nbsp;− review and slack <span class="blank" style="width:0.4in"></span> &nbsp;= <b>budget</b> <span class="blank" style="width:0.45in"></span>
+      <span class="small">In this course: about 7 outside hours a week each, and about 2 weeks to the progress demo. Solo, that's 14 before review. Count review: every change goes through a pull request.</span>
+    </div>
+  </div>
+</div>
+
+<h2><span class="n">3 ·</span> Size the first milestone <span class="hint">size silently, reveal together, talk only about the disagreements · solo: trade sheets with your review partner</span></h2>
+<table class="tally">
+  <tr>
+    <th style="width:42%">Issue (short title)</th>
+    <th class="c" style="width:9%">Mine</th>
+    <th class="c" style="width:9%">Theirs</th>
+    <th class="c" style="width:9%">Agreed</th>
+    <th class="c" style="width:8%">≈ hrs</th>
+    <th class="c" style="width:7%">Slice?</th>
+    <th style="width:16%">Needs</th>
+  </tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr class="total"><td style="text-align:right">Total</td><td></td><td></td><td></td><td style="border-bottom:0.8pt solid #9BB0BF"></td><td colspan="2">against a budget of <span class="blank" style="width:0.45in"></span></td></tr>
+</table>
+<div class="verdict"><b>It:</b> &nbsp;☐ fits, with room to spare &nbsp; ☐ fits on paper, which means it doesn't &nbsp; ☐ doesn't fit</div>
+
+<div class="row" style="margin-top:2pt">
+  <div style="flex:1">
+    <h2><span class="n">4 ·</span> Where we disagreed <span class="hint">what did each of us picture?</span></h2>
+    <div class="lbl">Issue, and the two pictures:</div>
+    <div class="line"></div><div class="line"></div>
+    <div class="lbl">What the issue's acceptance criteria now say, so the next reader can't picture it wrong:</div>
+    <div class="line"></div>
+  </div>
+  <div style="flex:1">
+    <h2><span class="n">5 ·</span> The cut <span class="hint">try these in order</span></h2>
+    <ol class="cuts">
+      <li><b>Off the slice first.</b> Move what the demo doesn't walk to the next milestone.</li>
+      <li><b>Take a fallback.</b> A simpler way to build the same thing.</li>
+      <li><b>Shrink the acceptance criteria.</b> Less of it, still working.</li>
+      <li><b>Defer to the roadmap,</b> written down, with no date.</li>
+    </ol>
+    <div class="lbl">What we cut, and the new total:</div>
+    <div class="line"></div>
+    <div class="lbl">Our next cut, if the midpoint check shows us behind:</div>
+    <div class="line"></div>
+  </div>
+</div>
+
+<h2><span class="n">6 ·</span> The slice statement <span class="hint">goes in the first milestone's description: specific enough to rehearse</span></h2>
+<div class="box slice">
+  <b>On the progress demo, we will demo:</b><br>
+  <span class="sl">who</span><span class="blank" style="width:6.35in"></span><br>
+  <span class="sl">does</span><span class="blank" style="width:6.35in"></span><br>
+  <span class="sl">and sees</span><span class="blank" style="width:6.35in"></span>
+</div>
+
+<div class="foot">
+  <span><b>Then put it on the board:</b> sizes in the Size field, the slice issues labeled <b>slice</b>, Ready in order, this sentence on the first milestone.</span>
+  <span>Keep this sheet; it's your working copy.</span>
+</div>
+
+</body>
+</html>
