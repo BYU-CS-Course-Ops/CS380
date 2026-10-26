@@ -173,7 +173,7 @@ async function build() {
     s.addText(doors[i][3], { x: x + 0.35, y: 4.1, w: 5.3, h: 1.15, color: "CFE0E9", fontFace: F.body, fontSize: 16, valign: "top", margin: 0, lineSpacingMultiple: 1.04 });
   }
   card(s, 0.6, 5.65, 12.1, 1.1, C.amber);
-  s.addText("Optional third tab, prop-loft/prop-loft: a README and a LICENSE, nothing else yet. (Open the session-13 tag) That's probably where your repo is today.", { x: 0.95, y: 5.65, w: 11.4, h: 1.1, color: C.navy, fontFace: F.body, fontSize: 16.5, bold: true, valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
+  s.addText("Optional third tab, prop-loft/prop-loft: a README and a LICENSE, nothing else yet. (Open the session-14 tag) That's probably where your repo is today.", { x: 0.95, y: 5.65, w: 11.4, h: 1.1, color: C.navy, fontFace: F.body, fontSize: 16.5, bold: true, valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
   footer(s, "7E92A8");
   s.addNotes("Leave this up while you switch to the browser. Walk Rich first, about seven minutes, then SSW, about five, using the six questions from slide 3 in order. The next two slides summarize what to point at; use them to recap after each tab, not instead of the tabs. Say plainly that SSW is yours, so nobody else's work is the bad example. Prop Loft is optional: it's the 'you are here' between the two, and it sets up Wednesday.");
 
