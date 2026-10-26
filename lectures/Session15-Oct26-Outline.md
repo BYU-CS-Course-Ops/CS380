@@ -117,7 +117,7 @@ By the end of this session, a student can:
 
 - **Stranger's-eye audit checklist** — *not used today; built with the Session 22 materials* (graded repo audit; also the Session 25 test script). §5 uses the CP7 Checklist instead.
 - **License Cheat Sheet:** `canvas_material/pages/License-Cheat-Sheet.md`
-- **Bug-report anatomy** (§4) — half-sheet
+- **Bug Report Anatomy** (`canvas_material/resources/Bug-Report-Anatomy.html` + `.pdf`, two identical half-sheets per page, one half per student; §4) — **built Oct 26.** Left: the failure chain, the six parts (one failure per report · a title that summarizes the failure, with a weak/strong pair · numbered minimal steps · expected vs. actual · environment and version · evidence) and the not-a-bug note (feature requests: need, user, what they do today). Right: a rewrite frame for the pair exercise (jetbrains-recorder #3), ending in *what we'd have to ask the reporter*.
 - **CP7 Checklist:** `canvas_material/resources/CP7-Checklist.html` / `.pdf` — one per student · **CP7 rubric:** `rubrics.md`
 
 ### Bug-report bank (§4) — real issues, weak to strong

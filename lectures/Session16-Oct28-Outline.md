@@ -117,11 +117,11 @@ Each item goes through its own small PR, reviewed under the project's policy. On
 ## Appendix — classroom handouts (Session 16)
 
 - **CP7 Checklist** (Monday's copy, with the punch list): `canvas_material/resources/CP7-Checklist.pdf`
-- **The deck:** `Session16-FrontDoorWorkshop.pptx`: the order (slide 2), punch-list check and rules of the day (3), Prop Loft model (4), build blocks (5–7), stranger's read (8), act + seed (9), submitting CP7 (10), wrap (11)
+- **The deck:** `Session16-FrontDoorWorkshop.pptx`: the order (slide 2), punch-list check and rules of the day (3), Prop Loft model (4), build block 1 (5), **Prop Loft's bug and feature-request forms side by side (6, added Oct 26:** each required field mapped to the Session 15 anatomy it enforces — steps, expected vs. actual, environment for a bug; the problem, who has it, today's workaround, the idea last and optional for a feature; then the `labels:` line and create-labels-first**)**, honest status (7), build block 2 (8), stranger's read (9), act + seed (10), submitting CP7 (11), wrap (12)
 - **Stranger's Read Sheet** (§4): `canvas_material/resources/Stranger-Read-Sheet.pdf` (half-sheet, two per page)
 - **CP7 rubric:** the Assignment Rubrics page (instructor view: `rubrics.md`)
 - Links: Contributor Covenant · choosealicense.com · GitHub issue-template, PR-template, and label docs
 
 ---
 
-*Deck: `canvas_material/lectures/powerpoint/Session16-FrontDoorWorkshop.pptx` (11 slides; `tools/build-session16.js`). Student page: `canvas_material/lectures/session-pages/Session16-StudentPage.md.jinja` (published in args). Related: `Session15-Oct26-Outline.md`, `Session17-Nov02-Outline.md`, `Session20-Nov11-Outline.md` (setup guide + cold test), `rubrics.md` (CP7).*
+*Deck: `canvas_material/lectures/powerpoint/Session16-FrontDoorWorkshop.pptx` (12 slides; `tools/build-session16.js`). Student page: `canvas_material/lectures/session-pages/Session16-StudentPage.md.jinja` (published in args). Related: `Session15-Oct26-Outline.md`, `Session17-Nov02-Outline.md`, `Session20-Nov11-Outline.md` (setup guide + cold test), `rubrics.md` (CP7).*

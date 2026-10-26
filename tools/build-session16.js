@@ -185,7 +185,45 @@ async function build() {
   footer(s);
   s.addNotes("Twenty minutes, one small PR per item. Rove hard. Spot-check license fields: MIT and BSD need a year and holder; Apache's '[yyyy] [name of copyright owner]' line is a file-header template in the appendix and stays as written, so don't flag it. Check reporting contacts: an address they'll actually read, a response time, and, solo, GitHub's reporting tools for reports about the maintainer. Read README first sentences back to their authors: would a stranger know what this is? The placeholder takes five minutes; don't let anyone write real setup steps for code that doesn't exist yet. That guide comes in Session 20. Warn at ten minutes and at two.");
 
-  // 6 An honest status
+  // 6 Two forms, side by side
+  s = mk(); s.background = { color: C.white };
+  header(s, "Templates · Prop Loft's two issue forms", "Every required field is a norm you only write once");
+  const forms = [
+    ["Bug report", "labels: bug · needs triage", [
+      ["Before you file (required box)", "I searched open and closed issues: no duplicates"],
+      ["Steps to reproduce", "Numbered, from somewhere a stranger can get to"],
+      ["Expected  /  What actually happened", "Two fields, so neither gets skipped"],
+      ["Environment", "An example shows the shape: \"Firefox 131 on Windows 11\""],
+      ["Anything else", "Logs, screenshots, how often: the evidence"]
+    ]],
+    ["Feature request", "labels: enhancement · needs triage", [
+      ["Opening note", "\"Start with the problem, not the solution,\" and a link to the non-goals"],
+      ["The problem", "What you're trying to do, and what gets in the way: the need"],
+      ["Who has this problem", "The user, named"],
+      ["What you do today instead", "The workaround: how much the problem costs now"],
+      ["An idea (optional)", "The solution comes last, and it's optional"]
+    ]]
+  ];
+  for (let i = 0; i < 2; i++) {
+    const x = 0.6 + i * 6.15, rv = i === 1 ? REVEAL(1) : {};
+    card(s, x, 1.9, 5.95, 0.62, i === 0 ? C.coral : C.teal, rv);
+    s.addText([
+      { text: forms[i][0], options: { bold: true, fontSize: 19, color: C.white } },
+      { text: "   " + forms[i][1], options: { fontSize: 15, color: C.white } }
+    ], { x: x + 0.3, y: 1.9, w: 5.4, h: 0.62, fontFace: F.body, valign: "middle", margin: 0, ...rv });
+    card(s, x, 2.62, 5.95, 3.18, C.cardBg, rv);
+    for (let r = 0; r < 5; r++) {
+      const y = 2.72 + r * 0.61;
+      s.addText(forms[i][2][r][0], { x: x + 0.25, y, w: 2.25, h: 0.58, color: C.ink, fontFace: F.body, fontSize: 15, bold: true, valign: "middle", margin: 0, ...rv });
+      s.addText(forms[i][2][r][1], { x: x + 2.6, y, w: 3.15, h: 0.58, color: C.slate, fontFace: F.body, fontSize: 15, valign: "middle", margin: 0, lineSpacingMultiple: 0.98, ...rv });
+    }
+  }
+  card(s, 0.6, 5.98, 12.1, 0.8, C.navy, REVEAL(2));
+  s.addText("Each form's labels: line triages it on arrival. Create the labels first: a form silently skips any label the repo doesn't have.", { x: 0.95, y: 5.98, w: 11.4, h: 0.8, color: C.white, fontFace: F.body, fontSize: 16, bold: true, valign: "middle", margin: 0, ...REVEAL(2) });
+  footer(s);
+  s.addNotes("Two minutes, as block 1 opens, because templates are on its list. Left: the bug form is Monday's anatomy turned into required fields, so a reporter can't skip steps or expected-versus-actual. Click: the feature form is the other half of Monday, the need, the user, and today's workaround, with the solution last and optional. Rich's form said no to new features; this one points at the non-goals instead. Click: labels. Point them at github.com/prop-loft/prop-loft/tree/session-16/.github/ISSUE_TEMPLATE for the YAML; their fields should fit their own project. Say that both kinds are fine: forms (.yml, what Prop Loft uses) can require fields; Markdown templates (.md, what Rich and most repos they'll browse use) are a pre-filled text box, quicker to write. Same folder either way.");
+
+  // 7 An honest status
   s = mk(); s.background = { color: C.white };
   header(s, "Before there's code", "An honest status beats a quickstart that fails");
   s.addText("README.md", { x: 0.6, y: 1.9, w: 5.95, h: 0.4, color: C.tealDk, fontFace: F.mono, fontSize: 16, bold: true, margin: 0 });
@@ -214,7 +252,7 @@ async function build() {
   footer(s);
   s.addNotes("One minute, shown during block 1 for anyone stuck on the README. This is the shape the rubric gives full credit for, and it's true of any project in early development: say what state it's in, what's coming, and where that's tracked. The stack line comes straight from the design doc. Install and run get graded later, in the repo audit, once there's something to run. A quickstart that fails costs points twice.");
 
-  // 7 Build block 2
+  // 8 Build block 2
   s = mk(); s.background = { color: C.white };
   header(s, "Build block 2 · 20 min", "Start the write-it-yourself items");
   card(s, 0.6, 1.95, 5.95, 3.75, C.cardBg);
@@ -240,7 +278,7 @@ async function build() {
   footer(s);
   s.addNotes("Twenty minutes. These can't be finished here, and that's the plan: get both far enough to be read in the next block. The amber steps are the ones first drafts skip; most CONTRIBUTING files start with rules. Push on 'what should a newcomer do first?' The norms are the public parts of the charter, rewritten for a stranger. Solo founders still owe an answer on decisions. At two minutes: push what you have, even rough.");
 
-  // 8 Stranger's read
+  // 9 Stranger's read
   s = mk(); s.background = { color: C.navy };
   darkHeader(s, "Stranger's read · 15 min", "Read your partner's front door cold");
   const steps = [
@@ -262,7 +300,7 @@ async function build() {
   footer(s, "7E92A8");
   s.addNotes("Hand out the sheets. Pairs swap; in a triple, rotate so each person reads one repo and is read by one; read for anyone whose partner is out. Insist on the logged-out window, because a signed-in view hides what a stranger can't see. Readers who finish early should reread the README's first paragraph only and check whether their 'what is this?' still holds. Ten minutes reading, five writing. Authors stay quiet; explaining your docs is the thing the docs should have done.");
 
-  // 9 Act on the read + seed
+  // 10 Act on the read + seed
   s = mk(); s.background = { color: C.white };
   header(s, "Act on it · 10 min", "Read your sheet, then fix or file");
   card(s, 0.6, 1.95, 12.1, 1.05, C.navy);
@@ -282,7 +320,7 @@ async function build() {
   footer(s);
   s.addNotes("Ten minutes. The top line is the test: ask two or three founders to read their partner's 'what is this?' aloud next to their own first sentence. The citation in the PR or issue is how the fix traces back to the read for grading. Seed issues are real next work, not busywork; they're the first items in Monday's backlog (CP8). Anything unfinished is fine as long as it's done by Friday.");
 
-  // 10 Submitting CP7
+  // 11 Submitting CP7
   s = mk(); s.background = { color: C.white };
   header(s, "Submitting CP7", "Tag it, the way a project marks a release");
   s.addText("When everything is merged to main:", { x: 0.6, y: 1.9, w: 12, h: 0.4, color: C.slate, fontFace: F.body, fontSize: 16, italic: true, margin: 0 });
@@ -302,7 +340,7 @@ async function build() {
   footer(s);
   s.addNotes("Two minutes. Run the three commands live on Prop Loft or any repo so they see the tag appear on GitHub. A tag is how real projects mark a release: it names a state that doesn't move when main does. To resubmit before the deadline, or for a revision, move the tag with tag -fa and push -f, then resubmit; the handout has the commands. No sheet photo caps Newcomer usability at Proficient.");
 
-  // 11 Wrap
+  // 12 Wrap
   s = mk(); s.background = { color: C.navy };
   s.addShape(pres.shapes.OVAL, { x: -1.3, y: 5.2, w: 3.6, h: 3.6, fill: { color: "1C3252" } });
   await iconCircle(s, FA.FaDoorOpen, 0.9, 1.15, 0.85, C.amber, C.navy);
