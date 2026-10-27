@@ -13,7 +13,7 @@ A project's front door is only finished when a stranger can walk through it. Wri
 
 Today the front door gets built, and it gets built the way any change to the project gets made: through **pull requests**, under the git standards you wrote. The process documents itself.
 
-Not everything fits in one class, so the session is ordered by what the room is good for. The items where a standard already exists (license text, a code of conduct, issue templates) get **finished** here, where help is close. The items only you can write (CONTRIBUTING, your communication norms) get **started**, far enough for someone to read. And then someone does: your review partner reads your README and CONTRIBUTING cold, the one test an author can't run on their own docs. What they find, you fix, today or by the deadline.
+The one thing taught today is **issue and pull request templates**: where the files go in your repository, the two formats an issue template can take, and real projects' versions to compare. Then you build. Not everything fits in one class, so the session is ordered by what the room is good for. The items where a standard already exists (license text, a code of conduct, issue templates) get **finished** here, where help is close. The items only you can write (CONTRIBUTING, your communication norms) get **started**, far enough for someone to read. And then someone does: your review partner reads your README and CONTRIBUTING cold, the one test an author can't run on their own docs. What they find, you fix, today or by the deadline.
 
 ---
 
@@ -21,11 +21,12 @@ Not everything fits in one class, so the session is ordered by what the room is 
 
 By the end of this session, you'll be able to:
 
-1. **Adapt standard artifacts** (license text, the Contributor Covenant, issue and pull request templates) to your project rather than copying them blindly or writing your own from scratch, and ship them through pull requests.
-2. **Grow a CONTRIBUTING guide from your git standards**, leading with a welcome and a first step before any policy.
-3. **Read another project's front door as a stranger** and say, in writing, what it is and how you'd start helping, and **act on that kind of read** of your own.
-4. **Write an honest status** for a project that doesn't run yet: a setup placeholder rather than a quickstart that fails.
-5. **Seed your issue tracker** with well-formed issues that follow your own templates.
+1. **Set up issue and pull request templates**: put the files where GitHub reads them, choose between a Markdown template and an issue form, and build a pull request template from your git standards.
+2. **Adapt standard artifacts** (license text, the Contributor Covenant, issue and pull request templates) to your project rather than copying them blindly or writing your own from scratch, and ship them through pull requests.
+3. **Grow a CONTRIBUTING guide from your git standards**, leading with a welcome and a first step before any policy.
+4. **Read another project's front door as a stranger** and say, in writing, what it is and how you'd start helping, and **act on that kind of read** of your own.
+5. **Write an honest status** for a project that doesn't run yet: a setup placeholder rather than a quickstart that fails.
+6. **Seed your issue tracker** with well-formed issues that follow your own templates.
 
 ---
 
@@ -35,28 +36,37 @@ By the end of this session, you'll be able to:
 
 **A worked example.** [Prop Loft](https://github.com/prop-loft/prop-loft/tree/session-16), the course's sample project, has a finished front door at this point in the semester: a CONTRIBUTING guide that opens with a welcome, a code of conduct with only its blanks filled in, issue forms, a pull request template, communication norms, and seed issues. Read it for shape. Your content has to be yours.
 
-**Finish the fast items (20 min).** Each in its own small pull request:
+**Templates, taught (15 min).** A template turns your reporting norms into the default: whatever it asks for is what you'll get, in every issue and every pull request.
+
+- **Where the files go.** Everything lives in a `.github/` folder at the root of your repository: issue templates in `.github/ISSUE_TEMPLATE/` (each file becomes one choice when someone clicks **New issue**), an optional `config.yml` beside them that controls that chooser, and `.github/pull_request_template.md`, which pre-fills every new pull request's description. None of it works until it's merged to your default branch.
+- **Two formats for issue templates.** A **Markdown template** (`.md`) pre-fills one text box with your headings; a reporter can delete anything, and it takes minutes to write. An **issue form** (`.yml`) gives separate fields, and a field marked `required: true` can't be skipped. Both are fine, and you can mix them.
+- **The pull request template** is Markdown only. Its top half is the description you've been writing by hand (the problem, the approach, where to look, how you tested); its bottom half is your git standards' definition of done, as a checklist the author ticks before asking for review.
+- **Three real projects**, to read for what they ask: a BYU course-tools project that kept GitHub's generated starter, a popular Python library whose Markdown templates do a lot, and Prop Loft's forms.
+
+The <course-link type="page" id="pg-issue-pr-templates">Issue and Pull Request Templates</course-link> page has all of it, with copy-ready skeletons and links to the three examples. Build from it, in class or after.
+
+**Finish the fast items (15 min).** Each in its own small pull request:
 
 - **README:** your first sentence, rewritten; a status line; how to contribute; a license line. Instead of a quickstart, an honest *not runnable yet* that points to the setup placeholder.
 - **Setup placeholder** (`docs/setup.md`): the stack your design commits to, a line saying setup instructions arrive with the first runnable build, and a link to the issue that tracks writing them. File that issue now; it's your first seed issue.
 - **LICENSE:** the exact text from [choosealicense.com](https://choosealicense.com/licenses/), changed only where the license asks you to fill something in. MIT and BSD want a year and copyright holder. Apache-2.0 and the GPL have nothing to fill in; Apache's `[yyyy] [name of copyright owner]` line is a template for file headers and stays as written.
 - **Code of conduct:** the Contributor Covenant, through GitHub's *Add file → CODE_OF_CONDUCT.md* template. Read the enforcement section so you know what you've promised. The reporting contact is public, and it has to work: an address you'll check and are willing to publish (it needn't be your personal one), how soon reports get read, and where to go if the report is about *you*. On a one-person project, that's [GitHub's reporting tools](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam) or someone else who can act.
-- **Templates and labels:** build last class's sketches as [issue forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms) and a [pull request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository), and set up your [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels): `bug`, `enhancement`, `good first issue`, plus your project's own. Issue forms (`.yml`) or Markdown templates (`.md`) both work, and both live in `.github/ISSUE_TEMPLATE/`: a form can make fields required, so a reporter can't skip them; a Markdown template is quicker to write. Prop Loft uses forms; many projects use Markdown. Create a label *before* a template names it: a form skips any label the repository doesn't have, without a warning. File one test issue through each template to check.
+- **Templates and labels:** create your [labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) first (`bug`, `enhancement`, `good first issue`, plus your project's own), because a form skips any label the repository doesn't have, without a warning. Then build last class's sketches from the templates page's skeletons: a bug template, a feature request, and a pull request template. File one test issue through each template to check. If templates don't finish in this block, finish them by the deadline.
 
-**Start the write-it-yourself items (20 min).** **CONTRIBUTING**, grown from your git standards: a welcome and what to do first, then how to pick work, the pull request process, and review expectations, with policy last. **Communication norms** (`docs/communication-norms.md`): where discussion happens, response times you can actually keep ("within a week," not "24/7"), who maintains, and how decisions get made. *Working solo? That last question still needs an answer: when a contributor proposes something, how does it get decided, and where?* And since a response time is a promise, say how you'll keep it: how will you know which new issues are still waiting for an answer? A label your forms apply and you remove after reading, a *New* column on a project board, a fixed day you read everything new: any of these works. Pick one and name it.
+**Start the write-it-yourself items (15 min).** **CONTRIBUTING**, grown from your git standards: a welcome and what to do first, then how to pick work, the pull request process, and review expectations, with policy last. **Communication norms** (`docs/communication-norms.md`): where discussion happens, response times you can actually keep ("within a week," not "24/7"), who maintains, and how decisions get made. *Working solo? That last question still needs an answer: when a contributor proposes something, how does it get decided, and where?* And since a response time is a promise, say how you'll keep it: how will you know which new issues are still waiting for an answer? A label your forms apply and you remove after reading, a *New* column on a project board, a fixed day you read everything new: any of these works. Pick one and name it.
 
 **The stranger's read (15 min).** You and your review partner swap repositories. In a private, logged-out browser window, read their README and then their CONTRIBUTING, about five minutes each, without asking them anything. On the **Stranger's Read sheet**, write what the project is, how you'd start helping, and the one thing that most stopped you. Then hand the sheet back. *(With an odd number of people, a group of three rotates: each person reads one repository and is read by one.)*
 
-**Act on it (10 min).** Read your sheet. If your partner's answer to *what is this?* isn't what you meant, your first sentence isn't done. Fix what you can now; file an issue for anything bigger, and say "from the stranger's read" in the pull request or issue, so the fix traces back to the read. Then file two or three real next-work issues through your own templates. Before there's code, most will be features or tasks; a task that fits neither form uses the closest one, or you add a task form. They're the start of next week's backlog.
+**Act on it (8 min).** Read your sheet. If your partner's answer to *what is this?* isn't what you meant, your first sentence isn't done. Fix what you can now; file an issue for anything bigger, and say "from the stranger's read" in the pull request or issue, so the fix traces back to the read. Then start filing two or three real next-work issues through your own templates; finish them by the deadline if time runs out. Before there's code, most will be features or tasks; a task that fits neither form uses the closest one, or you add a task form. They're the start of next week's backlog.
 
 ---
 
 ## What you'll leave with
 
-- **The fast items merged:** README status, setup placeholder, LICENSE, code of conduct, templates, and labels.
+- **The fast items merged**, or nearly: README status, setup placeholder, LICENSE, code of conduct, labels, and templates you know how to finish from the templates page.
 - **CONTRIBUTING and your communication norms** drafted far enough to read, merged or on an open pull request.
 - **Your Stranger's Read sheet**, with what your partner couldn't find and what you're doing about it. Keep it; it's part of your submission.
-- **Two or three seed issues** on your tracker, written through your own templates.
+- **Seed issues started** on your tracker, written through your own templates: two or three by the deadline.
 
 ### Coming up
 
@@ -69,4 +79,4 @@ By the end of this session, you'll be able to:
   Then submit the tag's URL in Canvas, with a legible photo of your Stranger's Read sheet. The assignment page has the details.
 - **Keep saving links for your <course-link type="assignment" id="cp9">Technical Communication Portfolio</course-link>** (due {{ S22_DAY }}, {{ S22_DATE }}). Today's pull request descriptions, review comments, and seed issues are all candidates.
 - **<course-link type="page" id="s17">{{ S17_DAY }}, {{ S17_DATE }}</course-link> begins Phase 4**, turning your proposal and design into epics, milestones, and a populated issue tracker. Today's seed issues are its first items.
-- *Working solo? Today is built for you. The build blocks are sized for one person, and the stranger's read is the part of the work you can't do alone, which is why class time goes to it.*
+- *Working solo? Today is built for you. The build blocks are sized for one person, and what doesn't fit them finishes by the deadline, and the stranger's read is the part of the work you can't do alone, which is why class time goes to it.*
