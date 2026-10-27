@@ -1,0 +1,1 @@
+    print([(item.name, item.due_back) for item in items])

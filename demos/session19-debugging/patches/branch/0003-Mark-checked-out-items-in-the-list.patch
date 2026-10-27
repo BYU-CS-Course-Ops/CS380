@@ -1,0 +1,95 @@
+From 19822591d1d14d2347c598a632a99c81b9ba4e57 Mon Sep 17 00:00:00 2001
+From: Tom Stephens <tstephen@cs.byu.edu>
+Date: Sat, 24 Oct 2026 07:48:31 -0600
+Subject: [PATCH 3/3] Mark checked-out items in the list
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+The list gains a Status column: "Out · due Dec 5" for an item with an
+open checkout, "In" otherwise, so a volunteer can see at a glance what
+is out and until when. The due date comes from the open checkout, in
+the same query as the list, rather than one query per row.
+---
+ catalog/templates/catalog/item_list.html |  3 ++-
+ catalog/tests.py                         | 23 +++++++++++++++++++++++
+ catalog/views.py                         |  8 ++++++--
+ 3 files changed, 31 insertions(+), 3 deletions(-)
+
+diff --git a/catalog/templates/catalog/item_list.html b/catalog/templates/catalog/item_list.html
+index ad8f70e..27d2d40 100644
+--- a/catalog/templates/catalog/item_list.html
++++ b/catalog/templates/catalog/item_list.html
+@@ -14,7 +14,7 @@
+   {% if items %}
+     <table>
+       <thead>
+-        <tr><th>Item</th><th>Category</th><th>Size</th><th>Condition</th><th>Bin</th></tr>
++        <tr><th>Item</th><th>Category</th><th>Size</th><th>Condition</th><th>Bin</th><th>Status</th></tr>
+       </thead>
+       <tbody>
+         {% for item in items %}
+@@ -24,6 +24,7 @@
+             <td>{{ item.size_label|default:"—" }}</td>
+             <td>{{ item.get_condition_display }}</td>
+             <td>{{ item.bin }}</td>
++            <td>{% if item.due_back %}Out · due {{ item.due_back|date:"M j" }}{% else %}In{% endif %}</td>
+           </tr>
+         {% endfor %}
+       </tbody>
+diff --git a/catalog/tests.py b/catalog/tests.py
+index 10eafe4..8e2e3b8 100644
+--- a/catalog/tests.py
++++ b/catalog/tests.py
+@@ -88,3 +88,26 @@ class CheckoutTests(TestCase):
+         self.check_out(self.jo)
+ 
+         self.assertEqual(self.item.checkouts.count(), 2)
++
++
++class OutMarkerTests(TestCase):
++    def setUp(self):
++        self.bin_a = Bin.objects.create(label="A-01")
++        self.sam = Person.objects.create(name="Sam Ellis")
++        self.show = Show.objects.create(title="The Importance of Being Earnest")
++
++    def test_marks_an_item_that_is_out_with_its_due_date(self):
++        item = Item.objects.create(name="Victorian waistcoat", bin=self.bin_a)
++        Checkout.objects.create(item=item, person=self.sam, show=self.show, due_date=date(2026, 12, 5))
++
++        response = self.client.get(reverse("catalog:item_list"))
++
++        self.assertContains(response, "Out · due Dec 5")
++
++    def test_shows_an_item_that_is_in_as_in(self):
++        Item.objects.create(name="Bowler hat", bin=self.bin_a)
++
++        response = self.client.get(reverse("catalog:item_list"))
++
++        self.assertNotContains(response, "Out ·")
++        self.assertContains(response, "<td>In</td>", html=True)
+diff --git a/catalog/views.py b/catalog/views.py
+index 0ecbd2c..9124d2c 100644
+--- a/catalog/views.py
++++ b/catalog/views.py
+@@ -1,11 +1,15 @@
++from django.db.models import Subquery
+ from django.shortcuts import render
+ 
+-from .models import Item
++from .models import Checkout, Item
+ 
+ 
+ def item_list(request):
+     query = request.GET.get("q", "").strip()
+-    items = Item.objects.select_related("bin")
++    open_checkouts = Checkout.objects.filter(returned_date__isnull=True)
++    items = Item.objects.select_related("bin").annotate(
++        due_back=Subquery(open_checkouts.values("due_date")[:1])
++    )
+     if query:
+         items = items.filter(name__icontains=query)
+     return render(request, "catalog/item_list.html", {"items": items, "query": query})
+-- 
+2.43.0
+

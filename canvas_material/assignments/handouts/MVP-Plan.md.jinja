@@ -1,0 +1,73 @@
+## The short version
+
+One page: **what's in** v1, **what's deferred**, **what technical risk it addresses**, and the **demo plan** for {{ S22_DATE }} — including the claims your demo will prove and your fallback if the live demo misbehaves. It's your slice statement plus the "what must v1 prove?" work, formalized into a contract with yourselves.
+
+---
+
+## Why this assignment exists
+
+The most expensive mistake teams make in a build phase isn't a bug — it's spending the final weeks polishing things that prove nothing. An MVP is not a small product; it's an **instrument for testing claims**: that the need is real, that the scary technology works, that a user can actually get through the flow. Kniberg's skateboard makes the point — every stage should be *usable and teach you something* — and the discipline of writing down what v1 must prove is what lets a team make a hundred small prioritization decisions correctly under pressure, without meeting about each one.
+
+The one-page constraint is deliberate. A plan you can't fit on a page is a plan you haven't finished thinking about, and a plan nobody rereads governs nothing. In industry this artifact goes by many names — a launch plan, a milestone one-pager, a "what are we actually shipping" memo — and the people who write them well are disproportionately the people trusted to lead. The habit transfers to everything with a deadline: know what this iteration must prove, know what you're explicitly not doing, and know how you'll show the result before the day arrives.
+
+---
+
+## What to produce
+
+One page (in the repo, e.g., `docs/mvp-plan.md`):
+
+**1. What's in.** The features/issues of M1, by name — the slice, walkable end to end. (Reference your tracker; don't duplicate it.)
+
+**2. What's deferred.** What v1 deliberately does not do — moved to M2 or the roadmap, stated without apology. Label any throwaway corners (mocked integration, hardcoded config) so no one mistakes scaffolding for structure, and list them in your known-issues file (`docs/known-issues.md` by default), where a newcomer will find them.
+
+**3. What risk it addresses.** Which risk from your register does v1 retire, and what counts as evidence that it's retired?
+
+**4. The demo plan.** The claims your {{ S22_DATE }} demo will prove, **ranked** (the one v1 most needs to prove first):
+   - **Need:** what shows a real user's need is served? (Trace to CP2's success criteria.)
+   - **Technical:** what does the working slice prove that a mockup couldn't?
+   - **Usability:** can the target user get through unaided?
+   Plus the **falsifier** (what result would tell you something's wrong with the idea?), the **demo script in three lines** (the slice statement, expanded), and the **fallback** (seed data ready? local mode? recorded clip as declared last resort?).
+
+*The <file path="../../resources/V1-Proof-Sheet.pdf" canvas_folder="Course Handouts" /> from {{ S19_DAY }}'s class is the draft of parts 3 and 4.*
+
+---
+
+## Requirements & constraints
+
+- **One page.** Hard limit; it's a contract, not a report.
+- **Bring it {{ S20_DAY }}** for the structured peer pass (the three questions: scope? proof? demo risk?); the revised version — with at least one thing moved or tightened — is due end of day.
+- **It must agree with the tracker.** If the plan says "in" and the board says untouched, the plan is fiction; reconcile them.
+
+---
+
+## How it's graded
+
+As the **MVP plan quality** criterion of CP10 (15 of its 100 points; CP10 = 16% of the course):
+
+| Level | What it looks like |
+|---|---|
+| **Exemplary (4)** | In and deferred both named, throwaway corners labeled; the risk tied to its evidence; ranked claims, a falsifier, a three-line script, and a real fallback |
+| **Proficient (3)** | All four parts present and clear; the claims or the fallback a little thin |
+| **Developing (2)** | Features listed without claims, or nothing honestly deferred, or no fallback |
+| **Beginning (1)** | Missing, or a wish list |
+
+The rest of CP10 (the demo itself, the slice, the audit) is graded {{ S22_DATE }}: see <course-link type="assignment" id="cp10">CP10 — Progress Demo + Repo Audit</course-link>.
+
+---
+
+## Tips and common pitfalls
+
+- **The falsifier test:** if no possible {{ S22_DATE }} outcome could tell you something's *wrong* with your idea, your v1 proves nothing. Sharpen a claim.
+- **Every project is building one thing that proves none of its claims.** Find yours and defer it — that's the cut from {{ S19_DAY }}'s workshop, in writing.
+- **"Demo the slice, not the screens."** Broad-shallow demos badly and proves less.
+- **The fallback isn't pessimism; it's craft.** Demos fail for boring reasons (wifi, login state, empty database). Pre-stage all three.
+
+---
+
+## Submission
+
+Reviewed in class **{{ S20_DAY }}, {{ S20_DATE }}**; revised version merged to `main` by end of day, with its URL submitted in Canvas. On **{{ S22_DATE }}** your demo is scored against *this* plan — changes between now and then are allowed but must be visible (amend the plan, don't quietly diverge from it).
+
+---
+
+*Part of CP10: **MVP Plan → Progress Demo + Repo Audit ({{ S22_DATE }}).** Reading: [Making sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) (Kniberg). See the CP10 assignment's rubric.*

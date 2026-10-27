@@ -1,0 +1,73 @@
+## Before class
+
+1. **Reread Henrik Kniberg's [*Making sense of MVP*](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp), all of it this time.** Last class used the skateboard picture to plan your slice. Today uses the rest of the argument: earliest *testable*, earliest *usable*, earliest *lovable*, and what each stage is supposed to teach you.
+2. **Read <course-link type="page" id="pg-debugging-reading">*Debugging on Purpose*</course-link>.** It's short, and class doesn't re-teach it: we run its loop live on a real bug instead.
+3. **Have your first slice issue in progress.** Today's workshop asks what your first version must prove, and it's easier to answer with code in front of you.
+4. **Bring a laptop** with your design document, your product definition's success criteria, and your risk list open. The workshop draws on all three.
+
+---
+
+## Purpose
+
+Your slice is committed and the build is on. Two things decide how the next week goes.
+
+The first is **judgment about what you're building**. A minimum viable product isn't a small product. It's an instrument for testing claims: that the need is real and gets served, that the risky part of the technology works, that a real user can get through. A team that knows what its first version has to prove makes a hundred small decisions correctly without meeting about each one. A team that doesn't polishes the wrong corners. *(In this course, the progress demo on {{ S22_DAY }}, {{ S22_DATE }} is where your first version proves its claims, or doesn't.)*
+
+The second is **method for when the build fights back**. From here on you'll spend real hours on bugs, and the difference between a one-hour bug and a five-hour bug is rarely what you know. It's whether you guessed, checked, and wrote down what you learned.
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Tell throwaway from evolutionary prototypes**, and say which yours is, and where.
+2. **State what your first version must prove**: the claims, ranked, with a result that would show you're wrong.
+3. **Evaluate an MVP** by asking whether it proves its claims.
+4. **Debug systematically**: hypothesize, test the cheapest guess first, isolate, fix, and log it.
+5. **Write down what doesn't work yet**, honestly, where a newcomer will see it.
+
+---
+
+## What we'll do together
+
+**The MVP is an instrument.** Each of Kniberg's stages exists to teach you something with a thing people can actually use. So the question about any deadline isn't "how much can we build by then?" It's "what will it prove?"
+
+**Throwaway or evolutionary.** A **throwaway** prototype is built to answer a question, then discarded; your spike was one. It's allowed to be ugly, and it isn't allowed to sneak into the code you keep. An **evolutionary** prototype is built to keep: it goes through pull requests and meets your definition of done. Your MVP is evolutionary, almost always with a **throwaway corner** or two inside it: a mocked integration, a hardcoded setting, a stand-in path. That's fine, if it's labeled. An unlabeled corner is a trap for the next person, who builds on it believing it's real.
+
+**What must your first version prove?** You'll answer four questions on the **V1 Proof Sheet** (handed out in class):
+
+1. **The need claim:** what shows a real user's need is actually served? Trace it to your product definition's success criteria.
+2. **The technical claim:** which risk from your risk list does it retire? What can a working slice prove that a mockup can't?
+3. **The usability claim:** can the target user get through the slice unaided? Who will try it?
+4. **The falsifier:** what result would tell you something's wrong with the idea? If no result could, your first version proves nothing.
+
+Then rank the three claims, and name **one thing you're building that proves none of them**. Every project has one. Move it later. We'll do Prop Loft's sheet first: its ranking puts the technical claim last, and the reason is worth hearing before you rank your own.
+
+**Three MVPs, evaluated as a room**, with the same four questions: git's first commit (a thin slice that bet everything on one technical claim), a joke framework that turned into Flask (a throwaway that answered a need question), and Prop Loft built screen-first (every screen styled, nothing behind them, and nothing proven). The eye you use on these is the one that will judge your demo.
+
+**Debugging on purpose.** The reading's loop, run live on a real bug in Prop Loft, including a wrong first guess:
+
+0. **Say the failure exactly**, and make it happen on demand.
+1. **Hypothesize** two or three causes, not one.
+2. **Test the cheapest guess first**, not the one you believe.
+3. **Review:** a dead guess is progress; a standing one gets narrowed until you can point to the defect.
+4. **Fix and verify:** a failing test first, then the fix, then run everything and check the feature still works.
+
+Then **write it down**, in three lines: what you saw, what you suspected, what it was. The log goes in the bug's issue, or in the pull request's description if you hit the bug on your own branch. *(In this course, a three-line log is required for any bug that cost you more than an hour, and for any bug you decide not to fix yet.)* You'll get a **Debugging Loop Card** to keep beside your keyboard.
+
+**Known issues.** A project that says what doesn't work yet reads as one that tells the truth; a project that claims to have no known issues reads as one that hasn't looked. You'll start a short `docs/known-issues.md`, linked from your README: one entry per problem, saying what happens, when it bites, any workaround, and the issue that tracks it. Your throwaway corners go in first. *(In this course, this list is graded at the progress demo, and it grows into the known-issues and tech-debt log in your launch package.)*
+
+---
+
+## What you'll leave with
+
+- **Your V1 Proof Sheet filled in:** three claims with evidence, ranked, a falsifier, your cut, and your corners. It's the draft of your MVP Plan.
+- **A method for the bugs ahead,** on a card, and the three-line log habit.
+- **`docs/known-issues.md` started**, with your labeled corners in it.
+
+### Coming up
+
+- **Before next class:** draft your <course-link type="assignment" id="mvp-plan">MVP Plan</course-link> in `docs/mvp-plan.md`. Today's sheet is its demo plan and its deferrals. Bring the draft for a peer review.
+- **<course-link type="page" id="s20">{{ S20_DAY }}, {{ S20_DATE }}</course-link>:** the MVP Plan review, then your setup guide, written in class and followed cold by your partner. The revised MVP Plan is due end of day.
+- **{{ S22_DAY }}, {{ S22_DATE }}:** <course-link type="assignment" id="cp10">CP10: Progress Demo and Repo Audit</course-link>. Read its handout this week, especially the `cp10` tag that freezes what's graded and the rule for a recorded fallback. One week of building is left before a stranger reads your repository.

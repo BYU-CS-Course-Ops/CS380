@@ -1,0 +1,18 @@
+diff --git a/catalog/tests.py b/catalog/tests.py
+index 8e2e3b8..08b5bd0 100644
+--- a/catalog/tests.py
++++ b/catalog/tests.py
+@@ -111,3 +111,13 @@ class OutMarkerTests(TestCase):
+ 
+         self.assertNotContains(response, "Out ·")
+         self.assertContains(response, "<td>In</td>", html=True)
++
++    def test_marks_only_the_item_that_is_out(self):
++        waistcoat = Item.objects.create(name="Victorian waistcoat", bin=self.bin_a)
++        Item.objects.create(name="Bowler hat", bin=self.bin_a)
++        Checkout.objects.create(item=waistcoat, person=self.sam, show=self.show, due_date=date(2026, 12, 5))
++
++        response = self.client.get(reverse("catalog:item_list"))
++
++        due_back = {item.name: item.due_back for item in response.context["items"]}
++        self.assertEqual(due_back, {"Bowler hat": None, "Victorian waistcoat": date(2026, 12, 5)})

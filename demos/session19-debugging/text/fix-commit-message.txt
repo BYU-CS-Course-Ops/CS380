@@ -1,0 +1,9 @@
+Tie the Out marker to each item's own checkout
+
+The subquery that finds an item's open checkout wasn't filtered by
+item, so once any item was out, every row in the list showed that
+item's due date. Filter it on the outer row's item.
+
+The existing tests each put a single item in the database, so they
+couldn't see the difference. The new test lists an item that's in
+next to one that's out.

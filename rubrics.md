@@ -333,31 +333,42 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 - **Responsiveness to feedback** assesses the two-way nature of technical communication — how the student receives and acts on review, not just how they write.
 
 ## CP10 — Progress Demo + Repo Audit
-*Team (or solo), with individual-contribution adjustment · Course weight: 16% (largest)* · **draft — not yet in student-facing wording**
+*Working and joinable · Team (or solo), with individual-contribution adjustment · Course weight: 16% (largest)* · **published**
 
 | Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
 |---|---|---|---|---|---|
-| MVP plan quality | 15 | Sharp: what's in, what's deferred, what risk v1 addresses | Clear plan | Vague plan | Missing |
-| Proves key claims (vertical slice) | 25 | Working vertical slice clearly proves project viability | Slice mostly proves it | Partial/broad-shallow | Doesn't prove the point |
-| Technical coherence | 15 | Clean, coherent implementation aligned to the design | Mostly coherent | Patchy | Incoherent |
-| Demo readiness | 15 | Smooth, well-framed live demo | Works with minor hiccups | Rough | Fails to demo |
-| Repo audit (peer onboarding) | 15 | A peer clones, builds, runs, and finds entry points unaided | Minor friction | Significant friction | Cannot build/run |
-| Documentation & honesty | 10 | Limitations and known issues documented candidly | Documented | Thin | Absent/overclaims |
-| Individual contribution | 5 | Git history/PRs show real, balanced contribution | Evident contribution | Uneven | Little/none |
+| MVP plan quality | 15 | In and deferred both named, throwaway corners labeled; the risk tied to its evidence; ranked claims, a falsifier, a three-line script, and a real fallback | All four parts present and clear; the claims or the fallback a little thin | Features listed without claims, or nothing honestly deferred, or no fallback | Missing, or a wish list |
+| Proves key claims (vertical slice) | 25 | The whole slice walks, end to end, on real code and data, and each claim in the plan is visibly proven or honestly reported as not | The slice walks with a gap or two, and the main claim is proven | Parts of the slice work but don't connect, or many screens with nothing wired behind them | Nothing walks end to end; the demo can't prove the point |
+| Technical coherence | 15 | Built as designed, or every departure recorded in the design doc; code organized and readable; at least one test exercises the slice's core logic | Mostly as designed; a departure or two not written down | Patchy; the code and the design tell different stories | No recognizable relation to the design |
+| Demo readiness | 15 | Claim first, slice walked smoothly in time, an honest edge named, questions answered directly (or a fallback run calmly) | Works, with minor hiccups or a loose frame; or a declared clip run calmly after the live demo failed | Rough; over time, unframed, or a failure with no fallback ready | No demo |
+| Repo audit (peer onboarding) | 15 | The auditor builds, runs, and locates the code for a starter issue unaided, following the guide as written | Minor friction; the auditor gets through with a small guess or workaround | Significant friction; steps missing or wrong, the way in unclear | The auditor can't build or run it from the docs |
+| Documentation & honesty | 10 | A known-issues list naming the labeled throwaway corners, the deliberate cuts, and the open bugs; README status true; the demo's claims match the code | Limitations documented; a gap or two | Thin; a known limitation left unsaid | Nothing documented, or claims the code doesn't support |
+| Individual contribution | 5 | Team: every member's work visible in commits, PRs, and reviews, reasonably balanced. Solo: steady, reviewable PRs across the fortnight | Team: contribution evident from everyone, somewhat uneven. Solo: steady work, with one or two oversized PRs | Team: uneven, one member's work hard to find. Solo: most of the work in a final burst | Little or no contribution visible |
 
 **What it measures** (handout table, Canvas criterion description).
-- **MVP plan quality** — The one-pager: what's in / deferred / risk addressed / demo plan. (Graded from the Nov 11 revision.)
-- **Proves key claims (vertical slice)** — The working slice clearly proves the project's core viability — the heaviest single criterion in the course.
-- **Technical coherence** — Implementation clean and aligned with the design doc — the built thing matches the argued thing.
-- **Demo readiness** — A smooth, well-framed live demo (or a gracefully run fallback).
-- **Repo audit (peer onboarding)** — A stranger clones, builds, runs, and finds entry points from your docs alone.
-- **Documentation & honesty** — Limitations and known issues documented candidly — candor over oversell.
-- **Individual contribution** — Git history and PRs show real, reasonably balanced contribution.
+- **MVP plan quality** — The one-page plan: what's in, what's deferred, the risk v1 retires, and a demo plan that states the claims it will prove. Graded from the revision due Nov 11.
+- **Proves key claims (vertical slice)** — The slice, walked end to end, proves what the plan said it would: the need is served, the risky part works, a user can get through. The heaviest single criterion in the course.
+- **Technical coherence** — What was built matches what the design argued, or the design was updated where it changed; the code is organized so a contributor could find their way.
+- **Demo readiness** — A live demo inside the time box that opens with the claim, walks the slice, names an honest edge, and handles trouble with a fallback rather than a restart. A declared recorded clip caps this at Proficient, unless the room failed.
+- **Repo audit (peer onboarding)** — A classmate who has never seen the project clones it, follows your setup guide exactly, runs it, and finds where a new feature would go, from your docs alone.
+- **Documentation & honesty** — What doesn't work yet is written down where a newcomer will see it, and the README and demo claim no more than the code does.
+- **Individual contribution** — Git history, pull requests, and reviews show real, reasonably balanced contribution from each member. Solo: the work arrives across the fortnight in reviewable pull requests, not in one late dump.
+
+**What each criterion is looking for** (student-facing, rubrics page).
+- **Working and joinable.** CP10 tests the two things a founded project has to be, with the two instruments that can't be faked: a slice walked live, and a stranger following your docs while you watch silently.
+- **Proves key claims** is the heaviest criterion in the course, and it rewards depth over breadth. One flow walked end to end, on real code and real data, proves more than ten screens with nothing behind them. A demo that shows a claim *wasn't* proven, and says so, can still score well here; a broad tour that proves nothing can't.
+- Your demo is scored against your MVP Plan. If the plan changed between Nov 11 and the demo, amend the plan in the repo: a visible change is honesty, a quiet one reads as a miss.
+- **Documentation & honesty** is read from the repository at your `cp10` tag: a known-issues list (`docs/known-issues.md` is the default) with the throwaway corners you labeled, the cuts you made, and the bugs you know about. A short honest list scores higher than none, and "no known issues" reads as "we didn't look."
+- **Repo audit** is graded on what the auditor experienced, not on how hard you worked. The auditor doesn't score you: their sheet records what happened (did it build and run from the guide as written, where did they stall), and the instructor assigns the level from it. Silence while you're audited is part of the assignment; rescuing your auditor erases the data.
+- **Individual contribution** is read from the commits, pull requests, and reviews, so work done off the record doesn't show here. On a team it's how one project grade becomes fair to each member. Solo, it rewards working in the open: small pull requests across the fortnight, the way a contributor would see the project grow.
+- Everything read from the repository is read at your `cp10` tag, pushed by 11:59 pm the night before. A recorded clip is a declared last resort: it caps **Demo readiness** at Proficient unless the failure was the room's.
 
 **Instructor notes.**
-- **Proves key claims** is the heaviest single criterion in the course: an MVP's job is to *prove the project's core viability* via a vertical slice, not to be broad and shallow.
-- **Repo audit** operationalizes contributor-readiness — a classmate must clone, build, run, and locate where a new feature would go. This is the buildability gate.
-- **Documentation & honesty** rewards candor about limitations over polish that oversells.
+- **Proves key claims** is the heaviest single criterion in the course: an MVP's job is to *prove the project's core viability* via a vertical slice, not to be broad and shallow. Score against the MVP Plan's ranked claims as revised (or visibly amended).
+- **Repo audit** operationalizes contributor-readiness: a classmate must clone, build, run, and locate where a new feature would go. The instructor assigns the level (decided Oct 2026); the auditor's sheet is factual evidence, not a score. Watch the audit or repeat its hardest step, and discount stalls a reasonable newcomer wouldn't hit.
+- **Documentation & honesty** rewards candor about limitations over polish that oversells. Grade the repo at the `cp10` tag (freeze by tag, decided Oct 2026). `docs/known-issues.md` is introduced as the default in Session 19 and grows into CP11's known-issues and tech-debt log; a Known issues section in the README is an acceptable alternative.
+- **Technical coherence:** the MVP testing floor is Exemplary-only (decided Oct 2026): at least one test on the slice's core logic is needed for Exemplary, and missing it caps nothing below that.
+- **Demo readiness:** the recorded-clip cap (Proficient) is waived when the failure is the room's — projector, network, classroom machine — not the project's.
 - **Individual contribution** is where the team grade is adjusted by per-student git/PR evidence and peer evaluation (design §8).
 
 

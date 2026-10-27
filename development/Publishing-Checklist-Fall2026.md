@@ -18,8 +18,8 @@ Rehearse every Canvas deploy on the sandbox first (`./canvas_material/deploy.sh 
 
 ## Before Session 15 — by Fri, Oct 23
 
-- [ ] **Deploy `fall26`.** Picks up the CP7 handout's intake question + label note, the updated CP7 Checklist PDF, and the Session 16 student page. (CP7 and the Session 16 page are already published, so this is an update students will see.) Also publishes the **Session 17 student page** for the first time; its Prop Loft and board-page links stay dead until Oct 29–30.
-- [ ] **Print the CP7 Checklist** (`canvas_material/resources/CP7-Checklist.pdf`), one per student, for Session 15 (Mon, Oct 26).
+- [x] **Deploy `fall26`.** Picks up the CP7 handout's intake question + label note, the updated CP7 Checklist PDF, and the Session 16 student page. (CP7 and the Session 16 page are already published, so this is an update students will see.) Also publishes the **Session 17 student page** for the first time; its Prop Loft and board-page links stay dead until Oct 29–30.
+- [x] **Print the CP7 Checklist** (`canvas_material/resources/CP7-Checklist.pdf`), one per student, for Session 15 (Mon, Oct 26).
 
 ## Before Session 16 — by Tue, Oct 27
 
@@ -69,6 +69,13 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 
 - [ ] **Tag `session-18`** on the merge commit and push it; check with `git ls-remote --tags https://github.com/prop-loft/prop-loft session-18` (run sheet, *After class*).
 - [ ] **Tidy the clone**, keeping the local `docs/design-plain-forms` branch (`publish.sh` reads it).
+
+## Before Session 19 — by Fri, Nov 6: the reading, CP10, and the debugging demo
+
+- [ ] **Deploy sandbox, then `fall26`.** Goes live: *Debugging on Purpose* (`pg-debugging-reading`, assigned before class) and its Course Resources entry, the V1 Proof Sheet and Debugging Loop Card PDFs, the **MVP Plan**, **CP10 with its Canvas rubric** (`deploy.sh` attaches it), and the **Session 19 page** with its deck (marked to publish).
+- [ ] **Spot-check in Canvas:** CP10's rubric is attached and its *What it measures* table renders; the Assignment Rubrics page lists CP10; the MVP Plan links CP10 and the V1 Proof Sheet.
+- [ ] **Rebuild the debugging demo on `session-18`:** `demos/session19-debugging/setup.sh` (it falls back to `docs/design-plain-forms` until the tag exists; rerun after Nov 4 so it builds on the tag). Expect `OK` from the tests. Rehearse the run sheet (`DEMO-SCRIPT.md`) once, then run `setup.sh` again to reset.
+- [ ] **Print** the V1 Proof Sheet (`canvas_material/resources/V1-Proof-Sheet.pdf`), one per student, and the Debugging Loop Card (`Debugging-Loop-Card.pdf`), one half-sheet per student.
 
 ## Before Session 20 — by Mon, Nov 9
 
