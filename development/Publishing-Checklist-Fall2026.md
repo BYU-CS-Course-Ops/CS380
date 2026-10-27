@@ -72,8 +72,8 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 
 ## Before Session 19 — by Fri, Nov 6: the reading, CP10, and the debugging demo
 
-- [ ] **Deploy sandbox, then `fall26`.** Goes live: *Debugging on Purpose* (`pg-debugging-reading`, assigned before class) and its Course Resources entry, the V1 Proof Sheet and Debugging Loop Card PDFs, the **MVP Plan**, **CP10 with its Canvas rubric** (`deploy.sh` attaches it), and the **Session 19 page** with its deck (marked to publish).
-- [ ] **Spot-check in Canvas:** CP10's rubric is attached and its *What it measures* table renders; the Assignment Rubrics page lists CP10; the MVP Plan links CP10 and the V1 Proof Sheet.
+- [x] **Deploy sandbox, then `fall26`.** Goes live: *Debugging on Purpose* (`pg-debugging-reading`, assigned before class) and its Course Resources entry, the V1 Proof Sheet and Debugging Loop Card PDFs, the **MVP Plan**, **CP10 with its Canvas rubric** (`deploy.sh` attaches it), and the **Session 19 page** with its deck (marked to publish).
+- [x] **Spot-check in Canvas:** CP10's rubric is attached and its *What it measures* table renders; the Assignment Rubrics page lists CP10; the MVP Plan links CP10 and the V1 Proof Sheet.
 - [ ] **Rebuild the debugging demo on `session-18`:** `demos/session19-debugging/setup.sh` (it falls back to `docs/design-plain-forms` until the tag exists; rerun after Nov 4 so it builds on the tag). Expect `OK` from the tests. Rehearse the run sheet (`DEMO-SCRIPT.md`) once, then run `setup.sh` again to reset.
 - [ ] **Print** the V1 Proof Sheet (`canvas_material/resources/V1-Proof-Sheet.pdf`), one per student, and the Debugging Loop Card (`Debugging-Loop-Card.pdf`), one half-sheet per student.
 
