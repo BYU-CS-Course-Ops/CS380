@@ -440,9 +440,9 @@ async function build() {
   card(s, 0.6, 1.95, 12.1, 1.05, C.navy);
   s.addText("If your partner's \"what is this?\" doesn't match what you meant, your first sentence isn't done.", { x: 0.95, y: 1.95, w: 11.4, h: 1.05, color: C.white, fontFace: F.head, fontSize: 20, bold: true, valign: "middle", margin: 0 });
   const act = [
-    [FA.FaWrench, "Fix it or file it", "Under ten minutes: fix it now. Bigger: file an issue. Either way, write the number on the sheet and say \"from the stranger's read\" in the description."],
+    [FA.FaWrench, "Fix it or file it", "Under ten minutes: fix it now. Bigger: file an issue. Write the number on the sheet and say \"from the stranger's read\" in the description. Keep the sheet: finish the rest by Friday and photograph it for CP7."],
     [FA.FaSeedling, "Seed the tracker", "2–3 real next-work issues, written through your own templates. The setup-guide issue counts as one. They start Monday's backlog."],
-    [FA.FaExchangeAlt, "Time left?", "Review your partner's open PRs. Unfinished fixes carry to Friday; that's what the sheet is for."]
+    [FA.FaExchangeAlt, "Time left?", "Review your partner's open PRs. A real review comment is CP9 evidence; save the link."]
   ];
   for (let i = 0; i < 3; i++) {
     const x = 0.6 + i * 4.1;

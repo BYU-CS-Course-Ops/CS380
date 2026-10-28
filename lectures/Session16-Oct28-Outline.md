@@ -91,7 +91,7 @@ Each item goes through its own small PR, reviewed under the project's policy. On
 ### 6. Act on the read + seed the tracker — 8 min
 - Fix what the sheet found, or file it as an issue if it's bigger than ten minutes. Record the PR or issue number on the sheet and say "from the stranger's read" in its description, so the fix traces back. Whatever isn't done by the end of class gets finished by Friday; the author photographs the sheet for the CP7 submission.
 - **Seed the tracker:** 2–3 real next-work issues, written through your own templates. The setup-guide issue from §3 counts as one; start the others here and finish by Friday if time runs out. Pre-code seeds are mostly features and tasks; a task uses the closest form, or the project adds a task form. These are the first items in Monday's backlog (CP8).
-- If time remains, partners review each other's open PRs.
+- If time remains, partners review each other's open PRs. A real review comment is CP9 evidence, so save the link.
 
 ### 7. Wrap — 4 min
 - **CP7 due end of day Fri, Oct 30.** By then: CONTRIBUTING and the norms finished, the partner's read acted on, everything merged to main. Repo state is the submission: tag `main` as `cp7`, push the tag, and submit its URL in Canvas with a photo of the Stranger's Read sheet. Show the three commands on the wrap slide.
