@@ -191,7 +191,7 @@ Everything here happens on the canonical repo, `prop-loft/prop-loft`, in front o
    git diff --stat origin/main      # expect: README.md, docs/design.md — nothing else
    ```
    Don't push. Leave the local `docs/design-plain-forms` branch alone: `publish.sh` reads it.
-3. **Add a table view for sizing** (filling 13 sizes on cards is slow): board **+ New view → Table**, **Group by: Milestone**, named *Plan*. The Size column appears in it once the field exists.
+3. **Add a table view for sizing** (filling 13 sizes on cards is slow): board **+ New view → Table**, **Group by: Milestone**, **Show hierarchy off** (on, the table nests every task under its epic and only the milestone-less epics show), named *Plan*, saved. The Size column appears in it once the field exists.
 4. **Open in tabs:** the board; the *Plan* view; Issues filtered `milestone:"M1 · Demo-able core"`; M1's milestone page; `docs/design.md` §6 on `main` (the before); `demos/prop-loft-states/pr-bodies/docs__design-plain-forms.md` (the PR body to paste).
 
 ### A. The design-doc PR — §3, once the cut is decided (~3 min)
@@ -212,7 +212,7 @@ Everything here happens on the canonical repo, `prop-loft/prop-loft`, in front o
 
 ### B. The board — §5, "watch it once" (~4 min)
 
-1. **Size field:** project **⋯ → Settings → + New field** → **Single select**, name **Size**, options **XS, S, M, L, XL** → **Save**. *(Command line: `gh project field-create <number> --owner prop-loft --name Size --data-type SINGLE_SELECT --single-select-options XS,S,M,L,XL`.)*
+1. **Size field:** in the *Plan* table, the **+** at the right end of the header row → **+ Add field** → the *Add issue fields* dialog → **Create a project field** (the link in its top line, not *Manage Issue Fields*) → **Single select** (fields are created from a table; a board's View → Fields only shows existing ones), name **Size**, options **XS, S, M, L, XL** → **Save**. *(Command line: `gh project field-create <number> --owner prop-loft --name Size --data-type SINGLE_SELECT --single-select-options XS,S,M,L,XL`.)*
 2. **Sizes,** in the *Plan* view:
 
    | M1 | Size | M2 | Size |

@@ -73,7 +73,7 @@ Whichever you choose, say it in CONTRIBUTING or your communication norms, so a r
 
 An epic you won't reach for a while doesn't need sub-issues yet. Write its goal and scope, say it gets broken down when it's next, and link it from your roadmap. Prop Loft's [*Roles and phone layout*](https://github.com/prop-loft/prop-loft/issues?q=label%3Aepic) epic is written this way.
 
-> **📷 Screenshot to come:** Prop Loft's *Find an item* epic, showing its sub-issues and progress bar.
+![Prop Loft's issue "Epic: Find an item," number 14, labeled epic, with a 0 of 4 progress counter beside its title. The description has a goal, context, and three acceptance criteria. Below it, a Sub-issues panel lists four open issues: filter items by category and size, say so when a search finds nothing, search items by name, and show an item's detail page, which has a linked pull request. A Create sub-issue button sits at the bottom of the panel.](../resources/img/board-epic-subissues.png)
 
 *Other ways:* an **issue type** named *Epic* (organization settings → Issue types), which does the same job as the label without cluttering the label list; or, when each epic is also a release, **one milestone per epic**. Sub-issues are the part worth keeping either way: they're what gives an epic its progress bar.
 
@@ -108,37 +108,58 @@ A board isn't part of a repository. On GitHub it's a separate **Project** that h
 1. **Create it.** On your organization's page, open **Projects** → **New project** → **Board** (under *Start from scratch*). Name it for the project. Check **Import items from repository** and choose your repository; that brings in every existing issue now.
 2. **Set the columns.** The board's columns are the options of its **Status** field. A new board starts with *Todo / In Progress / Done*. The default here is five:
 
-   | Status | Means |
-   |---|---|
-   | **Backlog** | Decided, but not ready to start |
-   | **Ready** | Acceptance criteria written; anyone can pick it up |
-   | **In progress** | Someone has said they're on it |
-   | **In review** | A pull request is open and waiting for review |
-   | **Done** | Merged and closed, per the definition of done |
+    | Status | Means |
+    |---|---|
+    | **Backlog** | Decided, but not ready to start |
+    | **Ready** | Acceptance criteria written; anyone can pick it up |
+    | **In progress** | Someone has said they're on it |
+    | **In review** | A pull request is open and waiting for review |
+    | **Done** | Merged and closed, per the definition of done |
 
-   Edit them from any column's **⋯** menu, or from the project's **⋯** → **Settings** → **Status**. Change them to fit how your project works (a *New* column if that's how you notice new issues, say), but keep a review state: every project here works through pull requests, and *In review* is where your review policy is either kept or quietly skipped.
-3. **Turn on the automation.** Open **⋯** → **Workflows**. Two workflows are on already: *Item closed* and *Pull request merged* both set the status to Done. Turn on **Auto-add to project** too: choose your repository, use the filter `is:issue,pr is:open`, and save. New issues and pull requests then land on the board by themselves. *(A free organization gets one auto-add workflow, and it only catches items created after you turn it on. That's why step 1 imported the existing ones.)*
-4. **Make it public, then link it.** **A new project is private by default**, even when the repository is public, so a visitor would see nothing. Open **⋯** → **Settings**, find **Visibility**, and choose **Public**. Then, in your *repository*, open the **Projects** tab → **Link a project** → choose it. Now the board is one click from the repository, and each issue's sidebar shows its status.
-5. **Add the views you'll actually use.** Views are free, and the board stays the default. Two are worth having: a board **grouped by milestone** (*what's left before the demo?*) and one **grouped by parent issue** (*how is each epic doing?*). Use **+ New view**, then the view's menu → **Group by**.
-6. **Add a Size field.** You can only tell whether a milestone fits (§4, step 3) if you know roughly how big each piece of it is, and the board is where that lives. Open **⋯** → **Settings** → **+ New field**, choose **Single select**, name it **Size**, and give it the options **XS, S, M, L, XL**. Every card now has a size you can set from the board or from the issue's sidebar, and any view can group by it.
+    Edit them from any column's **⋯** menu (rename, describe, or delete a column), and add one with the **+** to the right of the last column. Change them to fit how your project works (a *New* column if that's how you notice new issues, say), but keep a review state: every project here works through pull requests, and *In review* is where your review policy is either kept or quietly skipped.
 
-   Sizes are relative. Pick a piece of finished work everyone knows, call it an S, and size the rest against it: "is this bigger or smaller than that was?" is easier to answer than "how many hours?" Tie the sizes to the time you actually have, so the total can be checked against it:
+3. **Set up the automation.** Open **Workflows**, the button at the top right of the project, beside *Insights*. A new project comes with a list of built-in workflows, and which ones start out on has changed over time, so check each one rather than trusting the default. The default here is four on and the rest off:
 
-   | Size | Roughly |
-   |---|---|
-   | **XS** | Under an hour: a label, a typo, a config line |
-   | **S** | One focused sitting, about 2 hours |
-   | **M** | Two or three sittings, about 4 hours |
-   | **L** | A whole week of one person's time on the project *(in this course, about 7 hours)*. Split it, or schedule it first. |
-   | **XL** | More than a week. It's an epic: split it now. |
+    - **Item closed** and **Pull request merged**: set Status to **Done**. A merged pull request that says `Closes #N` closes its issue, and the card moves by itself.
+    - **Item added to project**: set Status to **Backlog**, so a new card lands in a column instead of *No Status*.
+    - **Auto-add to project**: choose your repository, use the filter `is:issue is:open`, and save. New issues then land on the board by themselves.
 
-   When two people size the same issue differently, stop and ask what each is assuming. Usually they pictured different work, and the issue's acceptance criteria are where that gets settled.
+    The board holds *issues*, one card per piece of work. A pull request shows on the card of the issue it closes, as Prop Loft's item detail card shows its pull request below. *(A free organization gets one auto-add workflow, and it only catches items created or updated after you turn it on. That's why step 1 imported the existing ones.)*
 
-   *Other ways:* a **Number** field for hours or points, which the board totals for each group; or size labels (`size: M`), which work without the board. *In this course, you size your first milestone in Session 18, and CP8 asks for the sizes.*
+    ![Prop Loft's Workflows page. The left list shows the default workflows; Auto-add to project, Item closed, and Pull request merged have green dots. Auto-add to project is selected and switched on: its filter is the prop-loft repository with is:issue is:open, and its action is "Add the item to the project."](../resources/img/board-auto-add.png)
 
-> **📷 Screenshot to come:** Prop Loft's board, five columns, with cards in Backlog, Ready, and In progress.
+4. **Make it public, and check it's linked.** **A new project is private by default**, even when the repository is public, so a visitor would see nothing. Open **⋯** (top right) → **Settings**, find **Visibility**, and choose **Public**. Then open your *repository*'s **Projects** tab. Importing items in step 1 usually links the project already; if it isn't listed, choose **Link a project** and pick it. Now the board is one click from the repository, and each issue's sidebar shows its status.
 
-> **📷 Screenshot to come:** the Workflows page with *Auto-add to project* turned on.
+5. **Add the views you'll actually use.** Each tab across the top of the project is a view, and the first one stays the default. Two more are worth having: one split by **milestone** (*what's left before the demo?*) and one split by **parent issue** (*how is each epic doing?*). For each:
+
+    1. Click **+ New view** and choose **Board**, which keeps the Status columns. (*Table* and *Roadmap* work too.)
+    2. Click **View**, at the right end of the filter bar, → **Swimlanes** → **Milestone** (or **Parent issue**). The board splits into one horizontal lane per value, with the Status columns inside each lane: one lane per milestone, plus *No milestone* for the issues without one, epics included. *(In a table, the same setting is called **Group by**.)*
+    3. Rename the tab (double-click its name) to *By milestone* or *By epic*.
+    4. **Save.** A dot on the tab means unsaved changes; open the tab's **▾** menu and choose **Save changes**. An unsaved view goes back to how it was the next time anyone opens it.
+
+6. **Add a Size field.** You can only tell whether a milestone fits (§4, step 3) if you know roughly how big each piece of it is, and the board is where that lives. Fields are created from a *table* view; a board's **View** → **Fields** only shows or hides fields that already exist. So add a table first, which is worth having anyway, because sizing a dozen issues is faster in rows than on cards:
+
+    1. Click **+ New view** and choose **Table**. Click **View** → **Group by** → **Milestone**, rename the tab *Plan*, and **Save changes**. If the table shows only your epics, with a **›** beside each, it's nesting sub-issues under their parents, and an epic has no milestone of its own: turn off **Show hierarchy** in the **View** menu so every issue gets its own row.
+    2. Click the **+** at the right end of the table's header row, then **+ Add field**. GitHub first offers the organization's **issue fields**; skip those and click **Create a project field** in the dialog's top line.
+    3. Name it **Size**, choose **Single select**, give it the options **XS, S, M, L, XL**, and save.
+
+    A Size column appears in the table, ready to fill in. Every card now has a size too, which you can set from any view or from the issue's sidebar, and any view can group by it. *(Issue fields, the ones GitHub offers first, are defined for the whole organization and show on every issue in it. Size belongs to this project's plan, so it's a project field.)*
+
+    Sizes are relative. Pick a piece of finished work everyone knows, call it an S, and size the rest against it: "is this bigger or smaller than that was?" is easier to answer than "how many hours?" Tie the sizes to the time you actually have, so the total can be checked against it:
+
+    | Size | Roughly |
+    |---|---|
+    | **XS** | Under an hour: a label, a typo, a config line |
+    | **S** | One focused sitting, about 2 hours |
+    | **M** | Two or three sittings, about 4 hours |
+    | **L** | A whole week of one person's time on the project *(in this course, about 7 hours)*. Split it, or schedule it first. |
+    | **XL** | More than a week. It's an epic: split it now. |
+
+    When two people size the same issue differently, stop and ask what each is assuming. Usually they pictured different work, and the issue's acceptance criteria are where that gets settled.
+
+    *Other ways:* a **Number** field for hours or points, which the board totals for each group; or size labels (`size: M`), which work without the board. *In this course, Session 18 demonstrates this step live on Prop Loft (the field, the sizes, and the fit check), so Prop Loft's board has no Size field until then. You size your first milestone that day, and CP8 asks for the sizes.*
+
+![Prop Loft's project board, public, with five columns, each with its description under the name. Backlog holds 12 cards, including three epics with progress bars at 0 percent. Ready holds the item detail page, with its pull request number 11 on the card, the checkout record, and the setup guide. In Progress holds "Search items by name," assigned to the maintainer, and the epics Find an item and Check out and return. In Review and Done are empty.](../resources/img/board-columns.png)
 
 Then place the cards. Everything starts in **Backlog**. Move to **Ready** only what's actually ready (acceptance criteria written, nothing it depends on unfinished), and to **In progress** only what someone is working on now. A board where everything is "In progress" tells a reader nothing.
 

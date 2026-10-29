@@ -19,7 +19,8 @@
 #
 # SEED_FROM=17 skips the stages before 17 (publish.sh uses it: by then the
 # seed issues exist, and stage 17 finds them by title). M1_DUE and M2_DUE
-# (YYYY-MM-DD) override the milestone dates.
+# (YYYY-MM-DD) override the milestone dates. SKIP_BOARD=1 stops stage 17
+# before the project board and prints each card's column, to build it by hand.
 #
 # Prints the number of each issue it creates. Not idempotent within a stage:
 # stage 17 skips itself if the repo already has an epic.
@@ -162,7 +163,12 @@ if (( N >= 17 && FROM <= 17 )); then
     gh issue edit "$SEARCH" -R "$REPO" --add-assignee "@me" >/dev/null
     echo "    #$SEARCH retitled, split, assigned · #$DETAIL · #$SETUP"
 
-    if ! gh auth status 2>&1 | grep -q "'project'"; then
+    if [[ -n "${SKIP_BOARD:-}" ]]; then
+      echo "==> SKIP_BOARD set; build the board by hand (Setting Up Your Board). Cards:"
+      echo "    In progress: #$SEARCH, epics #$E1 #$E2"
+      echo "    Ready:       #$DETAIL #$MODEL #$SETUP"
+      echo "    Backlog:     #$CHECKOUT #$SHOWOUT #$FILTER #$EMPTY #$RETURNS #$OVERDUE #$ADD #$PHOTO #$HEIC, epics #$E3 #$E4 #$E5"
+    elif ! gh auth status 2>&1 | grep -q "'project'"; then
       echo "!! the gh token lacks the project scope; skipping the board." >&2
       echo "   Run: gh auth refresh -s project   then build the board by hand (Setting Up Your Board)." >&2
     else
@@ -200,9 +206,9 @@ if (( N >= 17 && FROM <= 17 )); then
       card "$E1" "In progress"; card "$E2" "In progress"
       for n in "$E3" "$E4" "$E5"; do card "$n" Backlog; done
       echo "    https://github.com/orgs/$OWNER/projects/$PNUM (public, linked to $REPO)"
-      echo "   By hand, in the project (the API can't set these):"
-      echo "     ⋯ → Workflows → Auto-add to project: repo ${REPO#*/}, filter  is:issue,pr is:open  → enable"
-      echo "     New view → Board, Group by Milestone, named \"By milestone\"; another grouped by Parent issue, \"By epic\""
+      echo "   By hand, in the project (the API can't set these; turn off any other workflow that starts on):"
+      echo "     Workflows → Auto-add to project: repo ${REPO#*/}, filter  is:issue is:open  → enable; Item added to project → Backlog"
+      echo "     New view → Board, View → Swimlanes: Milestone, named \"By milestone\"; another by Parent issue, \"By epic\"; save each"
     fi
   fi
 fi

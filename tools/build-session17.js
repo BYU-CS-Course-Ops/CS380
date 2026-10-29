@@ -521,9 +521,9 @@ async function build() {
   const setup = [
     ["Create it", "Org → Projects → New project → Board. Check Import items from repository."],
     ["Set the columns", "They're the Status field's options. Edit them from any column's ⋯ menu."],
-    ["Turn on auto-add", "⋯ → Workflows → Auto-add: is:issue,pr is:open. Closed and merged → Done is already on."],
+    ["Set up the workflows", "Workflows: auto-add is:issue is:open; new items → Backlog; closed and merged → Done."],
     ["Make it public, then link it", "A new project is private, even in a public org. Then repo → Projects → Link a project."],
-    ["Add two views", "Grouped by milestone (what's left?) and by parent issue (how's each epic?)."]
+    ["Add two views", "Swimlanes by milestone (what's left?) and by parent issue (how's each epic?). Save each."]
   ];
   for (let i = 0; i < setup.length; i++) {
     const y = 1.95 + i * 0.86;
@@ -536,7 +536,7 @@ async function build() {
   }
   s.addText("Every step, with screenshots: Canvas → Course Resources → Setting Up Your Board.", { x: 0.6, y: 6.32, w: 12.1, h: 0.5, color: C.slate, fontFace: F.body, fontSize: 15, italic: true, valign: "middle", margin: 0 });
   footer(s);
-  s.addNotes("Demo it live on Prop Loft or a scratch org, about four minutes, then leave this up during the workshop. Step 1 imports existing issues because auto-add only catches new ones, and free organizations get one auto-add workflow. Step 4 is the trap: projects start private, so a stranger or the auditor sees nothing. Say it twice. The page has every click; students don't need to copy this down.");
+  s.addNotes("Demo it live on Prop Loft or a scratch org, about four minutes, then leave this up during the workshop. Step 1 imports existing issues because auto-add only catches new ones, and free organizations get one auto-add workflow. Step 3: the board holds issues only; a PR shows on the card of the issue it closes. Which workflows start out on varies, so check each one. Step 5: on a board the setting is called Swimlanes, and an unsaved view shows a dot on its tab and reverts. Step 4 is the trap: projects start private, so a stranger or the auditor sees nothing. Say it twice. The page has every click; students don't need to copy this down.");
 
   // 19 Pathways
   s = mk(); s.background = { color: C.white };

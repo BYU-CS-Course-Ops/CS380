@@ -27,41 +27,42 @@ Rehearse every Canvas deploy on the sandbox first (`./canvas_material/deploy.sh 
 
 ## Before Session 17 — by Thu, Oct 29: Prop Loft `session-17`
 
-- [ ] **Give `gh` the project scope:** `gh auth refresh -s project`. Without it, stage 17 skips the board and says so.
-- [ ] **Publish:** `demos/prop-loft-states/publish.sh session-17`. Merges the task form and the roadmap (two PRs, squash), tags `session-17`, then runs `seed.sh` stage 17: `epic` label, milestones M1 (Nov 18) and M2 (Dec 2), five epics, ten tasks as sub-issues, the three seeds triaged, and the board.
-- [ ] **Verify what the script did.** The board code has never run (the token lacked the scope when it was tested), so look at each:
+- [x] **Give `gh` the project scope:** (done Oct 29; non-interactive shells need `-h github.com`) `gh auth refresh -s project`. Without it, stage 17 skips the board and says so.
+- [x] **Publish:** (done Oct 29 with `SKIP_BOARD=1`, so Tom builds the board by hand as students will: PRs #12–#13, epics #14–#18, tasks #19–#28, seeds #8–#10 triaged; an outside contributor's PR #11 for #9 is left open on purpose) `demos/prop-loft-states/publish.sh session-17`. Merges the task form and the roadmap (two PRs, squash), tags `session-17`, then runs `seed.sh` stage 17: `epic` label, milestones M1 (Nov 18) and M2 (Dec 2), five epics, ten tasks as sub-issues, the three seeds triaged, and the board.
+- [x] **Build the board by hand** (done Oct 29: views *Everything*, *Milestones*, *Epics* (swimlanes), and the Session 18 *Plan* table; workflows auto-add `is:issue is:open`, item added → Backlog, closed and merged → Done) from *Setting Up Your Board*: public project *Prop Loft*, linked to the repo; Status options renamed to the five columns; cards In progress #8, #14, #15 · Ready #9, #21, #10 · Backlog #19, #20, #22–#28, #16–#18.
+- [x] **Verify what the script did.** (Oct 29: board built by hand instead, so the checks below were done in the UI) The board code has never run (the token lacked the scope when it was tested), so look at each:
   - the board is **public** and listed on the repo's **Projects** tab;
   - columns are **Backlog → Ready → In progress → In review → Done**, in that order;
   - cards: search *In progress*; item detail, checkout model, setup guide *Ready*; the rest *Backlog*; epics E1–E2 *In progress*, E3–E5 *Backlog*;
   - the search seed is retitled *Search items by name*, assigned to you, with its *Triaged* note; filters are their own M2 task;
   - each epic shows its sub-issues and progress bar;
   - the README links (board, roadmap, `session-17` tag row) all resolve.
-- [ ] **Finish the board by hand** (the API can't; the script prints these):
-  - **⋯ → Workflows → Auto-add to project:** repo `prop-loft`, filter `is:issue,pr is:open`, enable;
-  - **New view → Board**, group by **Milestone**, named *By milestone*;
-  - **New view → Board**, group by **Parent issue**, named *By epic*.
+- [x] **Finish the board by hand** (the API can't; the script prints these):
+  - **Workflows → Auto-add to project:** repo `prop-loft`, filter `is:issue is:open` (issues only, decided Oct 29), enable; **Item added to project → Backlog** on; everything else but *Item closed* and *Pull request merged* off;
+  - **New view → Board**, **View → Swimlanes: Milestone**, named *By milestone*, saved;
+  - **New view → Board**, **View → Swimlanes: Parent issue**, named *By epic*, saved.
 
   This pass is also the rehearsal for Session 17 §4.
-- [ ] **Update the prop-loft-states README** if anything differed from the plan (it records stage 17 as tested "board excepted").
+- [x] **Update the prop-loft-states README** if anything differed from the plan (it records stage 17 as tested "board excepted").
 
 ## Before Session 17 — by Fri, Oct 30: the board page and CP8
 
-- [ ] **Take the three screenshots** for *Setting Up Your Board* (`canvas_material/pages/Setting-Up-Your-Board.md`), into `canvas_material/resources/img/`:
+- [x] **Take the three screenshots** (done Oct 29) for *Setting Up Your Board* (`canvas_material/pages/Setting-Up-Your-Board.md`), into `canvas_material/resources/img/`:
   - `board-epic-subissues.png`: the *Find an item* epic, sub-issues and progress bar (§3);
   - `board-columns.png`: the board, five columns, cards in Backlog / Ready / In progress (§5);
   - `board-auto-add.png`: Workflows with *Auto-add to project* on (§5).
-- [ ] **Replace the three `📷 Screenshot to come` blockquotes** with `![alt text](../resources/img/….png)`. Alt text should say what the image shows; see the Backstage diagrams on `Sample-Design-Doc-Backstage.md` for the house style. Run the validator; it checks the image paths.
-- [ ] **Publish the page:** `pg-setting-up-your-board` → `true` in `canvas_material/pages/pages-args.md`.
-- [ ] **Check the Session 17 student page's links.** It's already marked to publish and goes live with the Oct 23 deploy, before the `session-17` tag, Prop Loft's `task.yml` at that tag, and the board page exist. Those links are dead until the steps above are done; once they are, confirm they resolve.
-- [ ] **Deploy sandbox, then `fall26`.** Goes live: the board page, its Course Resources link, the Session 17 page, and **CP8 with its Canvas rubric** (already marked to publish, and `deploy.sh` attaches the rubric). Deploy CP8 only once the page and the `session-17` tag exist: it links both.
-- [ ] **Spot-check in Canvas:** CP8's rubric is attached and the *What it measures* table renders; the Assignment Rubrics page lists CP8; the board page's links to Prop Loft resolve.
+- [x] **Replace the three `📷 Screenshot to come` blockquotes** (done Oct 29; §5 also rewritten from Tom's walk-through: the list was broken on Canvas by 3-space nesting, and the Workflows, linking, views, and Size-field steps matched an older GitHub UI) with `![alt text](../resources/img/….png)`. Alt text should say what the image shows; see the Backstage diagrams on `Sample-Design-Doc-Backstage.md` for the house style. Run the validator; it checks the image paths.
+- [x] **Publish the page:** `pg-setting-up-your-board` → `true` in `canvas_material/pages/pages-args.md`.
+- [x] **Check the Session 17 student page's links.** (Oct 29: all GitHub links on it and the board page return 200) It's already marked to publish and goes live with the Oct 23 deploy, before the `session-17` tag, Prop Loft's `task.yml` at that tag, and the board page exist. Those links are dead until the steps above are done; once they are, confirm they resolve.
+- [x] **Deploy sandbox, then `fall26`.** (done Oct 29) Goes live: the board page, its Course Resources link, the Session 17 page, and **CP8 with its Canvas rubric** (already marked to publish, and `deploy.sh` attaches the rubric). Deploy CP8 only once the page and the `session-17` tag exist: it links both.
+- [x] **Spot-check in Canvas:** (Oct 29) CP8's rubric is attached and the *What it measures* table renders; the Assignment Rubrics page lists CP8; the board page's links to Prop Loft resolve.
 
 ## Before Session 18 — by Tue, Nov 3: the live PR and board
 
 The Size field, sizes, `slice` label, and slice statement are made **live in class**, not before: don't pre-size the board. The steps are the run sheet in the Session 18 outline's appendix.
 
 - [ ] **Replay the PR branch onto the published `main`** (run sheet, before class step 2): `publish/docs/design-plain-forms` with one commit; `git diff --stat origin/main` shows only `README.md` and `docs/design.md`. Don't push.
-- [ ] **Add the *Plan* table view** to Prop Loft's board, grouped by milestone (run sheet, step 3).
+- [ ] **Add the *Plan* table view** to Prop Loft's board, grouped by milestone, **Show hierarchy off** (run sheet, step 3). Done early, Oct 29, while testing the page; check it's saved.
 - [ ] **Print the Fit Check Sheet** (`canvas_material/resources/Fit-Check-Sheet.pdf`), one per student.
 - [ ] **Session 18 page live.** It's marked to publish and goes out with whichever deploy comes first; the Oct 30 one is fine. It carries the deck, the Fit Check Sheet PDF, and the Session 18 Course Resources entry. Two links are dead until later: Prop Loft's `session-18` tree (tagged after class, and labeled so on the page) and *Setting Up Your Board* if its screenshots aren't done. If you deploy after the Oct 30 one, deploy sandbox first, then `fall26`.
 

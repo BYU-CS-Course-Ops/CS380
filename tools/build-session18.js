@@ -451,7 +451,7 @@ async function build() {
   s = mk(); s.background = { color: C.navy };
   darkHeader(s, "Workshop · 11 min", "Size your first milestone, then check that it fits");
   const est = [
-    ["1", "Add a Size field", "Board ⋯ → Settings → + New field → Single select, XS to XL. Or your own scheme, with its reason in CONTRIBUTING."],
+    ["1", "Add a Size field", "New view → Table; + → Add field → Create a project field → Single select, XS to XL. Or your own scheme, with its reason."],
     ["2", "Size silently, reveal together", "Talk only about the disagreements. Solo: trade with your review partner and size each other's cold."],
     ["3", "Question every L, split every XL", "An L: split it, or schedule it first?"],
     ["4", "Tally against your budget", "Sheet boxes 2 and 3. If it doesn't fit, cut now (box 5), then name your next cut."]
@@ -561,7 +561,7 @@ async function build() {
   s = mk(); s.background = { color: C.white };
   header(s, "On the board · live", "Five changes, then your turn");
   const boardSteps = [
-    ["Size field", "⋯ → Settings → + New field → Single select: XS, S, M, L, XL"],
+    ["Size field", "Plan table: + → Add field → Create a project field → Single select: XS to XL"],
     ["Sizes", "Fill them in from a table view; it's faster than opening each card"],
     ["slice label", "Create it, then put it on the issues the demo walks, and only those"],
     ["Order", "Ready top to bottom in sequence; what's blocked waits at the top of Backlog"],

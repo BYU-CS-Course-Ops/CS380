@@ -5,6 +5,7 @@ notes.md
 next_semester.md
 node_modules/
 *-png/
+tmp/
 
 # local-only: private correspondence and third-party copyrighted material
 development/*.eml
