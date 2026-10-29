@@ -62,7 +62,7 @@ Rehearse every Canvas deploy on the sandbox first (`./canvas_material/deploy.sh 
 The Size field, sizes, `slice` label, and slice statement are made **live in class**, not before: don't pre-size the board. The steps are the run sheet in the Session 18 outline's appendix.
 
 - [ ] **Replay the PR branch onto the published `main`** (run sheet, before class step 2): `publish/docs/design-plain-forms` with one commit; `git diff --stat origin/main` shows only `README.md` and `docs/design.md`. Don't push.
-- [ ] **Add the *Plan* table view** to Prop Loft's board, grouped by milestone, **Show hierarchy off** (run sheet, step 3). Done early, Oct 29, while testing the page; check it's saved.
+- [x] **Add the *Plan* table view** to Prop Loft's board, grouped by milestone, **Show hierarchy off** (run sheet, step 3). Done early, Oct 29, while testing the page; saved and confirmed.
 - [ ] **Print the Fit Check Sheet** (`canvas_material/resources/Fit-Check-Sheet.pdf`), one per student.
 - [ ] **Session 18 page live.** It's marked to publish and goes out with whichever deploy comes first; the Oct 30 one is fine. It carries the deck, the Fit Check Sheet PDF, and the Session 18 Course Resources entry. Two links are dead until later: Prop Loft's `session-18` tree (tagged after class, and labeled so on the page) and *Setting Up Your Board* if its screenshots aren't done. If you deploy after the Oct 30 one, deploy sandbox first, then `fall26`.
 
