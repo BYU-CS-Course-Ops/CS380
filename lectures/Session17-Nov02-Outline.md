@@ -98,7 +98,7 @@ By the end of this session, a student can:
 ### 4. Boards, labels, and pathways — 10 min
 - **Framing for the whole section: the job, then the default.** The tracker has jobs (describe work, notice what's new, group by value, group by date, show state); the columns, labels, and forms below are **suggested defaults, changeable with a reason written in CONTRIBUTING** — the same rule as the git policies in Session 13. Most students take the defaults; the instruction should still be about the jobs.
 - **Noticing what's new.** Session 16 asked each project how it will know which issues are still waiting (CP7's norms). Revisit the answer as triage: the default is a `needs triage` label the request forms apply (create it first: forms skip missing labels silently); a *New* column on the board or a fixed weekly read also work.
-- **A board isn't automatic** — a GitHub Project is a separate object that *holds* issues and PRs. Demo live on Prop Loft (or show the one built in prep):
+- **A board isn't automatic** — a GitHub Project is a separate object that *holds* issues and PRs. Walk through Prop Loft's board as it already exists (decided Oct 30: it was built by hand in prep, so show each step's result in its settings rather than re-creating it):
   1. **Create it at the organization:** org page → **Projects** → **New project** → start from **Board** (blank). Check **Import items from repository** and pick the project repo: that pulls in every existing issue and makes it the project's default repo.
   2. **Set the columns:** the board's columns are the **Status** field's options. A blank board starts with Todo / In Progress / Done; edit the field (column menu, or the project's ⋯ → **Settings** → Status) to the default **Backlog → Ready → In progress → In review → Done**, or the project's own states. Keep a review state whatever else changes: every project works through PRs, and that column is where the review policy lives.
   3. **Set up the workflows** (the **Workflows** button, top right of the project): check each one, since which start out on varies. On: *item closed → Done*, *PR merged → Done*, *item added to project → Backlog*, and **Auto-add to project** with the filter `is:issue is:open` so new issues arrive on their own. The board holds **issues only**: a PR shows on the card of the issue it closes, so each piece of work is one card (Prop Loft's #9 card shows the outside contributor's PR #11). (Free orgs get one auto-add workflow, and it only catches *new* items — which is why step 1 imports the existing ones.)
@@ -154,7 +154,6 @@ By the end of this session, a student can:
 
 ## Appendix — classroom handouts (Session 17)
 
-- **Decomposition ladder + request vs. work item + issue-size tests** (§2) — half-sheet
 - **Setting up the board** (§4, the five steps) — the *Setting Up Your Board* course page, not printed; students follow it at their laptops
 - **The calendar math** (§3) — slide
 - **CP8 rubric:** the Assignment Rubrics page (Project Plan & Roadmap)
