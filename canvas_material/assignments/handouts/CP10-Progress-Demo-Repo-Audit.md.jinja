@@ -8,7 +8,7 @@ Two live tests in one session. **The progress demo:** walk your vertical slice e
 
 This course argues that a founded project must be two things at once, and CP10 measures both with the only instruments that don't lie. A **live demo** is the honest test of "working" — slides can claim anything, but a slice walked in real time proves the need is served, the scary tech runs, and a user can get through. And a **cold audit by a stranger** is the honest test of "joinable" — your setup guide, your README, your issue tracker, your commit history, all read by someone with no context and no one to ask, which is exactly how every future contributor will meet your project.
 
-The deeper lessons are about honest evidence. Demo craft — claims stated up front, edges admitted, a fallback rehearsed — is how professionals show work-in-progress without overselling it, a skill you'll use in every sprint review and stakeholder meeting of your career. And *watching silently while a stranger struggles with your documentation* is one of the most instructive experiences in software: what they trip on is never what you expect, and every stumble is a gift — a precise, free specification of what to fix in the two weeks before launch. That's also why you audit someone else's repo: reading an unfamiliar codebase methodically (and grading it kindly and honestly) is the *Curious* strand made practical, and it sharpens exactly the eye you need on your own work.
+The deeper lessons are about honest evidence. Demo craft — claims stated up front, edges admitted, a fallback rehearsed — is how professionals show work-in-progress without overselling it, a skill you'll use in every sprint review and stakeholder meeting of your career. And *a stranger working through your documentation with no one to ask* is one of the most instructive tests in software: what they trip on is never what you expect, and every stumble they write down is a gift — a precise, free specification of what to fix in the two weeks before launch. That's also why you audit someone else's repo: reading an unfamiliar codebase methodically (and grading it kindly and honestly) is the *Curious* strand made practical, and it sharpens exactly the eye you need on your own work.
 
 ---
 
@@ -24,8 +24,8 @@ The deeper lessons are about honest evidence. Demo craft — claims stated up fr
 - What doesn't work yet goes where a newcomer will see it: by default a short `docs/known-issues.md`, linked from the README. Each entry says what happens, when it bites, any workaround, and links its issue.
 - Start it now, not the night before: every throwaway corner you label in your MVP Plan, every cut you make, and every bug you decide not to fix yet. It grows into the known-issues and tech-debt log in your launch package (CP11).
 
-**Your repo, audited (in pairs, ~15 min each way):**
-- Your paired auditor clones your `cp10` tag and works the audit sheet **out loud** — clone → follow the setup guide exactly → run → "where would I add [a good first issue]?" → skim the history, pull requests, and board for legibility — while you watch **silently**, taking notes. Then you swap: you audit their repo the same way. The sheet is posted {{ S21_DAY }}, {{ S21_DATE }}, so nothing on the day is a surprise.
+**Your repo, audited (in pairs, both directions at once):**
+- Your paired auditor clones your `cp10` tag and works the audit sheet **out loud** — clone → follow the setup guide exactly → run → "where would I add [a good first issue]?" → skim the history, pull requests, and board for legibility — while you audit their repo the same way, at the same time. Nobody is there to answer questions: the docs are all either of you gets. The sheet is here now, so nothing on the day is a surprise: <file path="../../resources/Repo-Audit-Sheet.pdf" canvas_folder="Course Handouts" />. Run it on your own repository before the day.
 - The sheet records **what happened**, not a grade: did it clone, build, and run from the guide as written? Did the auditor find the code? Where did they stall, guess, or work around something? It's signed and handed to you and the instructor. **The instructor assigns the score**, from the sheet and from watching or repeating the hardest step.
 
 *How the session is laid out depends on enrollment: with a few projects, demos run for the whole room and both directions of every audit happen in class; with more, demos split into small groups. The run of show is announced {{ S21_DAY }}.*
@@ -42,7 +42,7 @@ The deeper lessons are about honest evidence. Demo craft — claims stated up fr
   git push origin cp10
   ```
   The demo runs from the tag, the auditor clones the tag, and grading reads the tag, so the demoed build and the audited repo are one artifact. You may keep working on `main` afterward; it just isn't what's graded. Don't move the tag after the deadline.
-- **Authors are silent during their audit.** Rescuing the auditor destroys the data.
+- **No help during the audit.** The auditor works from your docs alone and asks no one; a hint would hide exactly the gap the next stranger falls into.
 - **Honesty beats polish, by rubric weight.** A working slice with admitted edges outscores a broad-shallow tour that proves nothing.
 - **CP9 (your portfolio) is due the same day** — assemble it beforehand.
 
@@ -64,7 +64,7 @@ Scored on a 100-point analytic rubric; **16% of the course grade.** One grade pe
 - **Demos fail for boring reasons:** login state, empty databases, wifi. Pre-stage all three; that's most of "demo readiness."
 - **"Prove, don't show."** Ten screens in six minutes proves less than one flow walked end to end.
 - **The audit is won a week earlier** — by the setup guide your review partner cold-tested on {{ S20_DATE }} and the fresh-clone pass on {{ S21_DATE }}. It can't be won the night before.
-- **Write down what your auditor trips on, verbatim.** That list, prioritized, is your launch plan: in class that day you turn it into a top-five fix list.
+- **Read your auditor's stall log closely.** What a stranger tripped on, prioritized, is your launch plan: in class that day you turn it into a top-five fix list.
 - **When auditing:** be the stranger, honestly — and kind. You're grading the *repo's* readiness, not its founders' worth.
 
 ---

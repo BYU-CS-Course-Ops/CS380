@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Repo Audit Sheet</title>
+<style>
+  @page { size: letter; margin: 0.4in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 9.6pt; line-height: 1.18; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 5pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 16pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 7.8pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .who { font-size: 9pt; color: #5F7284; white-space: nowrap; text-align: right; line-height: 1.55; }
+  .who span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 1.9in; }
+  .who span.sm { width: 0.55in; }
+
+  .intro { background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 4pt 8pt 5pt 8pt; font-size: 9.2pt; }
+  .intro b { color: #14233A; }
+
+  h2 { font-family: Cambria, Georgia, serif; font-size: 11pt; color: #14233A; margin: 8pt 0 2pt 0; }
+  h2 .n { color: #12908F; }
+  h2 .hint { font-family: Calibri, "Segoe UI", sans-serif; font-weight: normal; font-size: 8pt; color: #5F7284; font-style: italic; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 9pt; }
+  th { text-align: left; font-size: 7.6pt; color: #5F7284; text-transform: uppercase; letter-spacing: 0.3pt;
+       font-weight: bold; border-bottom: 1pt solid #12908F; padding: 2pt 4pt; }
+  td { border-bottom: 0.7pt solid #C9D4DC; padding: 0 4pt; height: 0.31in; vertical-align: middle; }
+  td.step { width: 2.35in; color: #14233A; }
+  td.step .s { color: #12908F; font-weight: bold; }
+  td.res { width: 3.1in; font-size: 8.4pt; white-space: nowrap; }
+  td.min { width: 0.5in; }
+  th.c, td.c { text-align: center; }
+
+  .legend { font-size: 7.8pt; color: #5F7284; margin-top: 2pt; }
+  .legend b { color: #14233A; }
+
+  .ln { display: flex; align-items: flex-end; border-bottom: 0.7pt solid #9BB0BF; height: 0.32in; font-size: 9pt; }
+  .ln .lbl { color: #0E6E6D; font-weight: bold; padding-bottom: 1pt; white-space: nowrap; margin-right: 6pt; }
+  .opts { font-size: 8.6pt; margin-top: 3pt; }
+  .opts b { color: #14233A; }
+
+  .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 2pt 14pt; font-size: 9pt; margin-top: 1pt; }
+
+  .stall td { height: 0.36in; }
+  .stall td.sn { width: 0.55in; }
+  .stall td.did { width: 2.6in; font-size: 8pt; color: #5F7284; white-space: nowrap; }
+
+  .box { margin-top: 7pt; background: #F2F6F8; border-left: 2.5pt solid #E8A33D; padding: 3pt 8pt 4pt 8pt; }
+  .box .q { color: #14233A; font-weight: bold; font-size: 9.4pt; }
+  .box .line { border-bottom: 0.7pt solid #B9C5CF; height: 0.3in; }
+
+  .sign { margin-top: 7pt; font-size: 9pt; display: flex; gap: 18pt; }
+  .sign span.b { display: inline-block; border-bottom: 0.8pt solid #9BB0BF; width: 2.2in; height: 11pt; vertical-align: bottom; }
+  .sign span.bs { width: 0.8in; }
+
+  .foot { margin-top: 5pt; font-size: 7.8pt; color: #5F7284; display: flex; justify-content: space-between; gap: 8pt; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Repo audit</p>
+    <h1>Can a Stranger Get In?</h1>
+  </div>
+  <div class="who">Auditor <span></span><br>Project audited <span></span><br>Tag or commit <span></span></div>
+</div>
+
+<div class="intro"><b>You are the stranger.</b> Clone the tag you were given into a new folder and follow the project's own docs <b>exactly as written</b>, thinking out loud. Don't fill gaps from what you know, and don't ask anyone for help. <b>Record what happened, not a grade.</b> Every place you stall, guess, or work around something goes in the stall log.</div>
+
+<h2><span class="n">1 ·</span> Get it running <span class="hint">Mark one result per step and the minutes it took; for any trouble, write its stall-log number (part 4) in the last column</span></h2>
+<table>
+  <tr><th>Step</th><th>Result</th><th class="c">Min</th><th>Stall #</th></tr>
+  <tr><td class="step"><span class="s">a</span> &nbsp;Find the setup guide from the README</td><td class="res">☐ as written &nbsp;☐ guess / workaround &nbsp;☐ step wrong or missing &nbsp;☐ couldn't</td><td class="min"></td><td></td></tr>
+  <tr><td class="step"><span class="s">b</span> &nbsp;Prerequisites: what, which versions</td><td class="res">☐ as written &nbsp;☐ guess / workaround &nbsp;☐ step wrong or missing &nbsp;☐ couldn't</td><td class="min"></td><td></td></tr>
+  <tr><td class="step"><span class="s">c</span> &nbsp;Install the dependencies</td><td class="res">☐ as written &nbsp;☐ guess / workaround &nbsp;☐ step wrong or missing &nbsp;☐ couldn't</td><td class="min"></td><td></td></tr>
+  <tr><td class="step"><span class="s">d</span> &nbsp;Configure: settings, secrets, database</td><td class="res">☐ as written &nbsp;☐ guess / workaround &nbsp;☐ step wrong or missing &nbsp;☐ couldn't</td><td class="min"></td><td></td></tr>
+  <tr><td class="step"><span class="s">e</span> &nbsp;Run the tests</td><td class="res">☐ as written &nbsp;☐ guess / workaround &nbsp;☐ step wrong or missing &nbsp;☐ couldn't</td><td class="min"></td><td></td></tr>
+  <tr><td class="step"><span class="s">f</span> &nbsp;Run it and see it work</td><td class="res">☐ as written &nbsp;☐ guess / workaround &nbsp;☐ step wrong or missing &nbsp;☐ couldn't</td><td class="min"></td><td></td></tr>
+</table>
+<div class="legend"><b>As written:</b> the docs alone got you through. <b>Guess / workaround:</b> you got through, but only by guessing or doing something the docs didn't say. <b>Step wrong or missing:</b> the docs were wrong or skipped something, and you had to find it yourself. <b>Couldn't:</b> you couldn't get past it.</div>
+
+<h2><span class="n">2 ·</span> Find your way <span class="hint">From the docs first; search the code only when they run out</span></h2>
+<div class="ln"><span class="lbl">What this project is, in one sentence of your own:</span></div>
+<div class="ln"><span class="lbl">A good first issue I picked: #</span><span style="width:0.6in"></span><span class="lbl">Where I'd change the code (file, function):</span></div>
+<div class="opts"><b>I found that place</b> &nbsp; ☐ from the issue's <i>where to start</i> or the docs &nbsp; ☐ by searching the code &nbsp; ☐ couldn't find it &nbsp; &nbsp; <b>Minutes:</b> <span style="display:inline-block;border-bottom:0.8pt solid #9BB0BF;width:0.5in;height:10pt"></span></div>
+
+<h2><span class="n">3 ·</span> Read the project's history <span class="hint">Two minutes of skimming; check what's true</span></h2>
+<div class="checks">
+  <span>☐ The commit log reads as a story of changes</span>
+  <span>☐ Pull requests say what changed and why</span>
+  <span>☐ The board matches what the repo shows</span>
+  <span>☐ Known issues are listed where a newcomer will see them</span>
+  <span>☐ The README's status matches what you just ran</span>
+  <span>☐ You can tell where to ask a question</span>
+</div>
+
+<h2><span class="n">4 ·</span> Stall log <span class="hint">Every stall, guess, or workaround; number them and put the number in part 1</span></h2>
+<table class="stall">
+  <tr><th>#</th><th>Step</th><th>What happened (the exact error or the confusing line)</th><th>What I did</th></tr>
+  <tr><td class="sn">1</td><td style="width:0.45in"></td><td></td><td class="did">☐ guessed ☐ searched ☐ skipped ☐ stopped</td></tr>
+  <tr><td class="sn">2</td><td></td><td></td><td class="did">☐ guessed ☐ searched ☐ skipped ☐ stopped</td></tr>
+  <tr><td class="sn">3</td><td></td><td></td><td class="did">☐ guessed ☐ searched ☐ skipped ☐ stopped</td></tr>
+  <tr><td class="sn">4</td><td></td><td></td><td class="did">☐ guessed ☐ searched ☐ skipped ☐ stopped</td></tr>
+  <tr><td class="sn">5</td><td></td><td></td><td class="did">☐ guessed ☐ searched ☐ skipped ☐ stopped</td></tr>
+  <tr><td class="sn">6</td><td></td><td></td><td class="did">☐ guessed ☐ searched ☐ skipped ☐ stopped</td></tr>
+</table>
+
+<div class="box">
+  <div class="q">The one thing that most stopped me, and what would have fixed it</div>
+  <div class="line"></div><div class="line"></div>
+</div>
+
+<div class="sign"><span>Auditor's signature <span class="b"></span></span><span>Received by the authors (initials) <span class="b bs"></span></span></div>
+
+<div class="foot">
+  <span><b>Facts, not a score.</b> Hand the signed sheet to the instructor. It's photographed and given back to the authors, who turn it into their fix list.</span>
+  <span>CS 301R</span>
+</div>
+
+</body>
+</html>

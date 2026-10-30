@@ -89,3 +89,13 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 
 - [ ] **Print** the MVP Plan Review sheet (`canvas_material/resources/MVP-Plan-Review-Sheet.pdf`), one page per pairing (two half-sheets; cut).
 - [ ] **Check which projects have a setup-guide PR open** (Session 20 outline, prep).
+
+## Before Session 21 — by Fri, Nov 13
+
+- [ ] **Deploy sandbox, then `fall26`** so the **Repo Audit Sheet** is on Canvas (linked from the CP10 handout) before Session 21 previews it. The Session 21 page goes with it if its prose is written by then (the deck is already wired to it).
+- [ ] **Write and publish the Session 22 student page** before this deploy: the Session 21 page and deck (slide 11) tell students to read it ahead.
+- [ ] **Print** a few Repo Audit Sheets (`canvas_material/resources/Repo-Audit-Sheet.pdf`) to pass around in Session 21.
+
+## Before Session 22 — by Tue, Nov 17
+
+- [ ] **Print** the Repo Audit Sheet, one per auditor (one per project at this enrollment).

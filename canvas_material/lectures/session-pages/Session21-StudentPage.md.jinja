@@ -1,0 +1,81 @@
+## Before class
+
+1. **Bring problems, not polish.** Know your top blocker (technical, scope, or process), what's left in your first milestone, and the one cut you'd make if you had to. You'll say all three out loud in a two-minute check-in.
+2. **Know whether your slice walks.** Run the path in your slice statement end to end on `main`. You'll be asked whether it works today: yes, almost, or no.
+3. **Read the Repo Audit Sheet** (in *Materials* below, and linked from <course-link type="assignment" id="cp10">CP10</course-link>). It's what your partner will work through on your repository on {{ S22_DAY }}. Better still, run it on your own repository first.
+4. **Check your CP9 portfolio.** Most of your eight artifacts should be picked out by now. It's due before class on {{ S22_DAY }}.
+5. **Bring a laptop.** Most of today is a working studio.
+
+---
+
+## Purpose
+
+Two days before a deadline, the most useful thing a team can do is find out exactly where it stands and decide what to cut while cutting is still a choice. On any project, that's the meeting before a release: what works, what's left, what's blocking, and what we're dropping. The teams that do it honestly ship on time with a smaller scope. The teams that don't find out at the last minute.
+
+Today is that meeting, then the time to act on it. A fast check-in makes every project's state visible, mostly to its own founder. Triage turns the blockers into decisions. Studio time is for the fixes, with help on hand, and for getting your repository ready for a stranger. *(In this course, the deadline is {{ S22_DAY }}, {{ S22_DATE }}: the progress demo and the repo audit for <course-link type="assignment" id="cp10">CP10</course-link>, and <course-link type="assignment" id="cp9">CP9</course-link> is due.)*
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Report your project's state honestly and fast:** done, at risk, or blocked, in numbers rather than adjectives.
+2. **Triage under a deadline:** cut, push through, or fall back, decided on purpose.
+3. **Re-scope a demo two days out without hiding it:** the plan is amended in the open.
+4. **Get a repository ready for a stranger:** the version someone else meets is `main` as it stands, not what you meant to push.
+
+---
+
+## What we'll do together
+
+**The blocker board.** Starting today, a column on the whiteboard: *Blocked > 30 min*. Anything that has stopped you for more than half an hour goes on it, one line with your project's name. It's not an admission that you're behind. It's the queue, and it gets worked in order. Being stuck in private is what costs the hour. The board stays up in every studio session from here to the end of term.
+
+**Lightning check-in (two minutes per project, no slides).**
+
+1. **The slice you'll demo:** the path in your slice statement. Does it work end to end today? Yes, almost, or no.
+2. **Your first milestone:** done versus remaining, in numbers. "Six of nine issues closed," not "going well."
+3. **Your top blocker:** one. It goes on the board as you say it.
+4. **The cut you're considering:** every project names one, even the ones that are ahead.
+
+Nobody is graded on these answers. Honest beats impressive.
+
+**Triage.** We work the board together, sorting each blocker:
+
+- **Technical:** find the next step. What have you tried? What's the cheapest next test? Who outside would know: the library's issue tracker, its documentation, a forum?
+- **Scope:** decide now. Cut it, shrink its acceptance criteria, or plan a fallback.
+- **Demo mechanics:** match it to a fallback: seed data, a local mode, or, as a declared last resort, a recorded clip.
+- **Team or process:** one on one with me, during studio.
+
+For anything you might cut, two questions: *Does keeping it prove one of your v1 claims?* *Does cutting it break the slice?* If both answers are no, cut it, and **amend your MVP Plan in the repository** so the change is visible. A visible cut is honesty; a quiet one looks like a miss. Every cut is also a line for your known-issues list.
+
+**Studio (40 minutes).** Build, and add to the blocker board when you get stuck. I'll go down the board in order. In the last ten minutes, every project runs the **audit-readiness pass** on `main`:
+
+1. **Fresh clone, one more time.** A new folder, your own setup guide, exactly as written. Is it still true after this week's changes?
+2. **The board tells the truth.** *In progress* means someone is on it today.
+3. **Your good first issues are still good.** Still open, still approachable, and the *where to start* still points at real code.
+4. **The README's first paragraph** still says what the project is, and what works, this week.
+
+Missing CP9 pieces? Use studio time to collect them. This week's pull requests, your demo-path issues, and your replies to cold-test issues all count.
+
+**{{ S22_DAY }}'s run of show.** We'll finish with the plan for {{ S22_DATE }}: the demo order, the audit pairings, and the timing. Demos run for the whole room, about six minutes each plus three of questions. Then every project audits its partner's repository while the partner audits theirs, at the same time, from the docs alone, with no one to ask.
+
+---
+
+## What you'll leave with
+
+- **A clear picture of where your project stands**, said out loud.
+- **Your cuts decided**, and your MVP Plan amended to match.
+- **A repository that's ready for a stranger:** a fresh clone that works, a truthful board, real good first issues, and an honest README.
+- **The run of show for {{ S22_DAY }}**, with your demo slot and your audit partner.
+
+### Coming up
+
+- **By 11:59 pm the night before the demo:** merge everything to `main`, then tag it and push the tag. The demo runs from the tag, your auditor clones it, and grading reads it. Paste its URL in <course-link type="assignment" id="cp10">CP10</course-link>.
+  ```
+  git tag -a cp10 -m "CP10: progress demo"
+  git push origin cp10
+  ```
+- **Rehearse your demo once from a fresh clone of the tag**, fallback included. Open with the claim, walk the slice, and name one honest edge. The <course-link type="assignment" id="cp10">CP10</course-link> assignment and the <course-link type="page" id="s22">{{ S22_DAY }} page</course-link> say how the demo and the audit run; read them before you rehearse.
+- **Submit <course-link type="assignment" id="cp9">CP9: Technical Communication Portfolio</course-link>** before class on {{ S22_DAY }}.
+- **<course-link type="page" id="s22">{{ S22_DAY }}, {{ S22_DATE }}</course-link>:** progress demos and the repo audit.
