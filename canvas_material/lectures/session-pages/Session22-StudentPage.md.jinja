@@ -1,0 +1,85 @@
+## Before class
+
+1. **Tag `cp10` and push it by 11:59 pm the night before**, and paste its URL in <course-link type="assignment" id="cp10">CP10</course-link>. The demo runs from the tag, your auditor clones it, and grading reads it. Pushes to `main` on the morning of the demo don't count.
+2. **Rehearse your demo once from a fresh clone of the tag**, fallback included. Time it: six minutes.
+3. **Have your fallback ready:** seed data, a local mode, or, as a declared last resort, a recorded clip.
+4. **Submit <course-link type="assignment" id="cp9">CP9: Technical Communication Portfolio</course-link>** before class.
+5. **Re-skim Amber Wilson's [*How to approach a new codebase*](https://amberwilson.co.uk/blog/how-to-approach-a-new-codebase/).** You're about to do exactly that, on a classmate's project.
+6. **Bring a laptop that can clone right now:** on the network, with your GitHub credentials working. Audit partners and their repository URLs go on the board at the start of class, once we know who's there.
+
+---
+
+## Purpose
+
+A project somebody founded has to be two things at once: **working**, so the need is actually served, and **joinable**, so someone new can get in and help. Both are easy to claim and hard to fake, and the only honest tests are the direct ones. Working is tested by walking the software, live, in front of people. Joinable is tested by handing the repository to a stranger with no one to ask.
+
+That's true of any project you'll ever work on. A sprint review, a release demo, and a pitch to a sponsor all ask the first question. Every new teammate and every would-be contributor asks the second, usually without telling you. *(In this course, both tests are <course-link type="assignment" id="cp10">CP10</course-link>, and both happen today.)*
+
+You'll leave with the most useful feedback you'll get before launch: a stranger's record of exactly where your front door stuck, and your classmates' read on what your demo proved.
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Demo working software**: claim first, honest about the edges, inside the time box.
+2. **Tell proving a claim from showing one**, in your own demo and in someone else's.
+3. **Audit an unfamiliar repository** methodically, and record what happened faithfully.
+4. **Turn demo and audit feedback into a ranked fix list** for the launch.
+
+---
+
+## What we'll do together
+
+**Setup (3 minutes).** Find your audit partner and their repository URL on the board, and start cloning their tag right away, so a slow network doesn't eat the audit later:
+
+```
+git clone --branch cp10 https://github.com/THEIR-ORG/THEIR-REPO.git
+```
+
+**Progress demos (whole room).** Each project gets **six minutes to demo, two minutes of questions, and one minute to change presenters.** The time box is hard: a demo that runs long takes someone else's time.
+
+1. **Open with the claim.** One sentence, first: "Version 1 proves a volunteer can find an item and check it out."
+2. **Walk the slice:** end to end, live, from the tag, on real data. The path in your slice statement.
+3. **Name one honest edge:** something that doesn't work yet, said before anyone has to ask.
+4. **If it breaks,** run your fallback calmly. No restarts, and no apologizing for the rest of the demo.
+
+**Proven or shown?** Every demo either proves its claim or only shows it, and one question tells them apart:
+
+> **If the claim were false, would the demo have looked different?**
+> Yes: it was **proven**. No: it was only **shown**.
+
+A demo **proves** a claim when it could have failed in front of you. The real code runs on real data, live, end to end. In Prop Loft's case: search finds the item, the checkout saves, the list now says who has it, and a second checkout of the same item is refused. Each of those would look different if the code didn't work.
+
+A demo only **shows** a claim when you'd see the same thing either way: a screen with hardcoded data, screenshots of what it will do, "and then this would save to the database," or ten screens toured with nothing connected behind them.
+
+A claim you say plainly isn't proven yet ("we haven't put it in front of a wardrobe lead") is neither. It's **honest**, and it counts in your favor. A tour that implies more than the code does counts against you. It's the same test as the falsifier in your MVP Plan, turned around: if no result could have shown you were wrong, nothing was proven.
+
+**While you watch,** fill in a **Demo Feedback Sheet** for each demo: the claim it set out to prove, whether it was proven or only shown and what convinced you, how the walk went, and the question you'd still ask. The sheets are anonymous, and they're feedback for the presenter, not a grade. Hand yours over when that presenter's questions end. Ask questions in the same spirit: *did that prove it, or show it?* Asked kindly, answered directly.
+
+**The repo audit (30 minutes, everyone at once).** Every project audits its partner's repository while the partner audits theirs, working through the **Repo Audit Sheet** out loud:
+
+1. **Get it running** from their README, exactly as written. Each step: as written, a guess or workaround, wrong or missing, or couldn't.
+2. **Find your way:** say what the project is, pick a good first issue, and find the code you'd change.
+3. **Read the history:** the commit log, pull requests, board, known issues, and where to ask.
+4. **Log every stall:** the step, the exact error or confusing line, and what you did.
+
+Work from the docs alone. There's no one to ask, and that's the point: a future contributor won't have anyone either. The sheet records facts, not a score. Sign it and hand it to me; I'll photograph it and give it to the authors.
+
+**Debrief (4 minutes).** With your audit sheet and your demo feedback in hand, write a **top-five fix list**, ranked by launch impact: what would stop a newcomer from joining, or a user from getting through? Then, round the room: *what was the most surprising thing a stranger tripped on?*
+
+---
+
+## What you'll leave with
+
+- **A stranger's record of your front door:** every place your docs stalled someone, in their words.
+- **Your classmates' read on your demo:** what it proved, what it only showed, and what they still want to know.
+- **A top-five fix list**, ranked. It's the studio agenda from here to launch, and whatever on it you don't fix goes in your known issues.
+
+### Coming up
+
+- **Before {{ S23_DAY }}:** finish and rank your top-five fix list, and bring it.
+- **<course-link type="page" id="s23">{{ S23_DAY }}, {{ S23_DATE }}</course-link>:** what a new contributor actually needs, built from what today's auditors tripped on. It's the last teaching session before launch work.
+- **{{ THANKSGIVING_NO_CLASS }}:** no class (Thanksgiving).
+- **<course-link type="assignment" id="cp11">CP11: Launch Package and Retrospective</course-link>** is due {{ S25_DAY }}, {{ S25_DATE }}.

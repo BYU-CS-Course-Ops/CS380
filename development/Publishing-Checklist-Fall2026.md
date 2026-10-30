@@ -99,3 +99,6 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 ## Before Session 22 — by Tue, Nov 17
 
 - [ ] **Print** the Repo Audit Sheet, one per auditor (one per project at this enrollment).
+- [ ] **Print** the Demo Feedback Sheet (`canvas_material/resources/Demo-Feedback-Sheet.pdf`), two pages per student (one half per demo watched; cut).
+- [ ] **Print** the CP10 Scoring Sheet (`lectures/Session22-CP10-Scoring-Sheet.pdf`) for yourself.
+- [ ] **Open each project's `cp10` tag URL** from its Canvas submission and confirm the tag exists, before the first demo.

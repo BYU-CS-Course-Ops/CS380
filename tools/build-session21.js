@@ -297,10 +297,10 @@ async function build() {
   s = mk(); s.background = { color: C.white };
   header(s, "Wednesday, Nov 18", "The run of show");
   const rs = [
-    ["4 min", "Setup", "Auditors start cloning their partner's cp10 tag right away"],
-    ["~34 min", "Progress demos, whole room", "About 6 min each, then 3 min of questions. Read ahead: the CP10 assignment and the Session 22 page."],
+    ["3 min", "Setup", "Auditors start cloning their partner's cp10 tag right away"],
+    ["36 min", "Progress demos, whole room", "6 min each, 2 of questions, 1 to swap. Read ahead: the CP10 assignment and the Session 22 page."],
     ["30 min", "Repo audits", "Everyone at once: you audit your partner's repo while they audit yours."],
-    ["5 min", "Debrief", "Your audit sheet and demo feedback become a top-five fix list"]
+    ["4 min", "Debrief", "Your audit sheet and demo feedback become a top-five fix list"]
   ];
   for (let i = 0; i < rs.length; i++) {
     const y = 1.95 + i * 0.95;
@@ -312,10 +312,10 @@ async function build() {
   card(s, 0.6, 5.85, 12.1, 0.9, C.navy);
   s.addText([
     { text: "On the board now:  ", options: { bold: true, color: C.amber } },
-    { text: "demo order and audit pairings. Write yours down.", options: { color: C.white } }
+    { text: "the demo order. Audit pairings are set Wednesday, from who's here.", options: { color: C.white } }
   ], { x: 0.95, y: 5.85, w: 11.4, h: 0.9, fontFace: F.body, fontSize: 18, valign: "middle", margin: 0 });
   footer(s);
-  s.addNotes("Five minutes with the next two slides. Write the demo order and audit pairings on the board before you show this; pairings are the review partners from Session 20. Time-boxes are hard on Wednesday: a demo that runs long takes time from someone else's. Class barely touches demo craft today, so point them at the CP10 assignment and the Session 22 page tonight. CP9 goes in through Canvas before class, not during it.");
+  s.addNotes("Five minutes with the next two slides. Write the demo order on the board before you show this. Audit pairings wait for Wednesday's attendance (the Session 20 review partners where both are there). Time-boxes are hard on Wednesday: a demo that runs long takes time from someone else's. Class barely touches demo craft today, so point them at the CP10 assignment and the Session 22 page tonight. CP9 goes in through Canvas before class, not during it.");
 
   // 12 Freeze by tag
   s = mk(); s.background = { color: C.white };

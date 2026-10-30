@@ -31,7 +31,7 @@ By the end of this session, a student can:
 ## Instructor prep / materials
 
 - **The check-in format** (below §2) posted; strict timer.
-- **Wednesday's run of show** ready to announce (demo groups, audit pairings, timing, what "bring" means).
+- **Wednesday's run of show** ready to announce (demo order, timing, what "bring" means). Audit pairings are set at the start of Session 22 from attendance.
 - **Audit sheet preview:** the **Repo Audit Sheet** (`canvas_material/resources/Repo-Audit-Sheet.pdf`, one page), linked from the CP10 handout. Bring a few printed copies to pass around during slide 9. Its four parts: get it running (six setup steps, each marked *as written · guess / workaround · step wrong or missing · couldn't*, with minutes); find your way (the project in one sentence, a good first issue located in the code); read the history (six checks); a stall log; and the one thing that most stopped the auditor. The four results line up with the rubric's *Repo audit* levels without the auditor scoring anything.
 - **The blocker board, introduced today:** a whiteboard column, *Blocked > 30 min*, one line per blocker with the project's name. It starts here, the first full studio session, and stays up in every studio session after (Weeks 11–13). Pre-load anything you noticed in the MVP Plans, repos, and Session 20 cold-test issues over the weekend.
 
@@ -66,7 +66,7 @@ By the end of this session, a student can:
 - **CP9 assembly corner:** anyone missing portfolio artifacts uses studio time to finish/collect them (there are legitimate ones everywhere: this week's PRs, the demo-path issues, review responses).
 
 ### 5. Wrap — Wednesday's run of show — 5 min
-- Announce: demo groups + order, audit pairings (from Week 10), timing (whole-room demos ~8–9 min each; audits: everyone at once, each project auditing its partner's repo while the partner audits theirs), and the deliverable mechanics (CP9 via LMS; CP10 evidenced live + repo state).
+- Announce: demo order, timing (whole-room demos 9 min each: 6 to demo, 2 of questions, 1 to swap; audits: everyone at once, each project auditing its partner's repo while the partner audits theirs), and the deliverable mechanics (CP9 via LMS; CP10 evidenced live + repo state).
 - Tonight through Tuesday: finish the slice, **tag `cp10` and push it by 11:59 pm Tuesday** (and paste its URL in Canvas), rehearse the demo once from the tag, fallback included.
 
 ---
@@ -103,4 +103,4 @@ By the end of this session, a student can:
 
 ---
 
-*Next step: finalize Wednesday's pairings and run of show. Student page written (`canvas_material/lectures/session-pages/Session21-StudentPage.md.jinja`, marked to publish, with the Repo Audit Sheet, CP10, and CP9 under Materials); it links the Session 22 page, which must be published before Nov 16. Deck built (13 slides: title · today · the blocker board · lightning check-in · triage · the scope test · studio · audit-readiness pass · the audit sheet · the audit rules · Wednesday's run of show · freeze by tag · wrap). Related: `Session20-Nov11-Outline.md`, `Session22-Nov18-Outline.md`, `rubrics.md` (CP9, CP10).*
+*Next step: finalize Wednesday's demo order and run of show (audit pairings are set Wednesday from attendance). Student page written (`canvas_material/lectures/session-pages/Session21-StudentPage.md.jinja`, marked to publish, with the Repo Audit Sheet, CP10, and CP9 under Materials); it links the Session 22 page, which must be published before Nov 16. Deck built (13 slides: title · today · the blocker board · lightning check-in · triage · the scope test · studio · audit-readiness pass · the audit sheet · the audit rules · Wednesday's run of show · freeze by tag · wrap). Related: `Session20-Nov11-Outline.md`, `Session22-Nov18-Outline.md`, `rubrics.md` (CP9, CP10).*
