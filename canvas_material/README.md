@@ -202,11 +202,17 @@ new that reads those args.
 **Write `&amp;`, not `&`, in any args value that lands in an XML attribute.**
 Titles do.
 
-**Escape inline HTML in a table cell: `&lt;code&gt;cp10&lt;/code&gt;`.**
-markdowndata renders each cell and keeps only its text, so a raw `<code>`,
-`<em>`, or `<strong>` (or Markdown backticks) is stripped along with the
-spaces around it: "the revised <code>docs/x.md</code> on" ships as "the
-reviseddocs/x.mdon". Escaped, the tag comes through as text and renders.
+**Escape inline markup in an args table cell.** markdowndata renders each
+cell and keeps only its text, so a raw `<em>`, `<strong>`, or Markdown
+backtick is stripped along with the spaces around it: "the revised
+`docs/x.md` on" ships as "the reviseddocs/x.mdon". Write `&lt;em&gt;…&lt;/em&gt;`
+for emphasis and `&#96;docs/x.md&#96;` for code.
+
+**Code is the exception: use backticks, never `<code>`.** mdxcanvas's markdown
+pass treats only `a`, `strong`, `em`, `span`, `br` (and its own tags) as
+inline. A `<code>` inside a `<p>` is pulled out as a block, splitting the
+sentence and losing the spaces around it. Backticks become proper inline
+code in the same pass.
 
 **Ids are permanent.** `s01`, `cp1`, `pg-mom-test-summary`, `grp-discovery`.
 Renaming one orphans the Canvas resource it names and every `content_id`
