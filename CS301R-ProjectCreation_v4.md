@@ -432,7 +432,7 @@ new contributors** (good-first-issues, labels, roadmap). *[adapts: Bug Reporting
 Communication]*
 - **Session A:** turn the proposal/design into epics, milestones, and issues; build board categories.
 - **Session B:** estimation & sequencing practice; plan the vertical slice for the MVP.
-- **Outside:** populate the issue tracker and roadmap; tag starter tasks for future contributors.
+- **Outside:** **the build starts** — a walking skeleton (the stack installs, runs, shows something, and has a passing test) through a PR before Session B, then the first slice issue; populate the issue tracker and roadmap; tag starter tasks for future contributors.
 - **Deliverable:** **Checkpoint 8 — Project Plan & Roadmap** (milestones, prioritized backlog, feature
   breakdown, labels, definition-of-done, roadmap into a future semester).
 

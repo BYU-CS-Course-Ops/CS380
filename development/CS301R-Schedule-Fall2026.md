@@ -76,7 +76,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 
 | # | Date | Day | Design Wk | Session | Topic & in-class focus | Due / Checkpoint |
 |---|---|---|---|---|---|---|
-| 17 | Nov 2 | Mon | Wk 9 | A | Turn proposal/design into epics, milestones, issues; build board categories | — |
+| 17 | Nov 2 | Mon | Wk 9 | A | **Build starts** (walking skeleton); turn proposal/design into epics, milestones, issues; build board categories | — |
 | 18 | Nov 4 | Wed | Wk 9 | B | Estimation & sequencing; plan the MVP vertical slice | **CP8 Project Plan & Roadmap** |
 | 19 | Nov 9 | Mon | Wk 10 | A | Evaluate example MVPs; "what must v1 prove?"; debugging reasoning model | — |
 | 20 | Nov 11 | Wed | Wk 10 | B | Prototype-plan review; studio build time | **MVP Plan** |

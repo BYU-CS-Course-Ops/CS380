@@ -1,0 +1,85 @@
+## Before class
+
+1. **Draft your <course-link type="assignment" id="mvp-plan">MVP Plan</course-link>** in `docs/mvp-plan.md`, and bring it printed or ready to share. A partner project reviews it in class; you revise it afterward, and the revision is due end of day.
+2. **Write your setup guide** (`docs/setup.md`) and open it as a pull request that links your setup placeholder's issue, so merging it closes the issue. How to write it is the next section. Class doesn't give time to write it: class is where someone else follows it.
+3. **Send your review partner your repository's URL and the guide's branch name.** They'll follow the guide from that branch.
+4. **Bring a laptop** with git and room to clone a classmate's project.
+
+---
+
+## Writing your setup guide
+
+A setup guide takes someone from nothing to a running copy of the project with its tests passing. It's the first thing a would-be contributor tries. If it fails, most of them leave without telling you.
+
+**Write it by doing it.** Clone your repository into a new folder, set it up from scratch, and write down every command as you run it. Anything you type that isn't in the guide is a missing step. Your usual folder hides things a newcomer won't have: the environment variable you set weeks ago, the tool you installed and forgot about.
+
+A guide that works has five parts:
+
+1. **Prerequisites, with versions.** "Python 3.12 or newer," not "Python." Give the command that checks each one and a link to install it.
+2. **Numbered steps, one command each, ready to copy and paste.** No "set up the database as usual."
+3. **"You should see…" checkpoints** after any step that can quietly go wrong, so the reader knows they're still on track.
+4. **How to run the tests**, and what passing looks like.
+5. **When a step fails:** the two or three failures you've already hit, and how to fix each one.
+
+Then make your README's quickstart the short version, with a link to the guide.
+
+**The model** is Prop Loft's [`docs/setup.md`](https://github.com/prop-loft/prop-loft/blob/session-20/docs/setup.md) at tag `session-20`. It has all five parts. Notice where its *You should see* lines go (after the steps that fail silently, not after every step), and that its *When a step fails* entries start with the exact error text a reader would search for.
+
+---
+
+## Purpose
+
+Your MVP Plan is a one-page promise: *this* is in, *that* is deferred, *this* risk gets retired, and *here's* how the demo will show it. Any plan like that should get a fast outside read before you're bound by it, while changing it is still cheap. That's the first half of today.
+
+The second half tests your setup guide the only way that works: someone who didn't write it follows it, exactly as written, while you stay out of it. The author is the worst possible tester of their own instructions, because the author's machine already has everything the guide forgot to mention. On any project, the first stranger to follow your guide finds more in fifteen minutes than you'll find in five rereads. *(In this course, a classmate follows the same guide cold at the repo audit on {{ S22_DAY }}, {{ S22_DATE }}, for a grade. Today is the practice round, a week early, while there's still time to fix what breaks.)*
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Review an MVP plan fast**: is the scope honest, are the deferrals wise, and is the demo realistic?
+2. **Answer a reviewer's three questions** about your own plan.
+3. **Check a setup guide against what it needs**: prerequisites with versions, copy-paste steps, checkpoints, tests, and failures with fixes.
+4. **Run a cold test**: follow someone else's guide exactly, and file an issue for every step that fails or confuses you.
+5. **Act on a cold test** by fixing your guide from the issues filed against it.
+
+---
+
+## What we'll do together
+
+**MVP Plan review (about 24 minutes).** Your project and a partner project swap plans. Read theirs, then answer three questions in writing on the review sheet:
+
+1. **Scope:** does the "in" list actually fit the time left? What would you cut first?
+2. **Proof:** does the demo plan prove the plan's claims (need, technical, usability), or does it just show screens?
+3. **Risk:** what's most likely to go wrong in the demo itself, and is there a fallback? Seed data, a local mode, or, as a declared last resort, a recorded clip.
+
+Then talk it through, one direction at a time. Keep the review sheet you get back: you'll revise your plan from it after class.
+
+**Your guide against the five parts (about 7 minutes).** We'll look at Prop Loft's guide together, then you'll check your own against the five parts and fix the one thing you can fix in two minutes. It's usually a missing version or a missing *You should see*.
+
+**The cold test (30 minutes).** You and your partner each follow the other's guide, on your own laptops, at the same time:
+
+- **Start from a fresh clone** of the guide's branch. Tools you already have from other courses can stay installed, but don't install anything the guide doesn't tell you to.
+- **Follow it exactly as written.** Don't fill gaps from what you know. A gap you fill silently is one the next reader falls into.
+- **Don't ask the author.** They're busy running your guide at the same time. A question you'd ask goes in an issue instead, unless you've been stuck for five minutes (below).
+- **Every step that fails or confuses you becomes an issue** on the author's repository, through their bug template, naming the step.
+- **Stuck on one step for five minutes?** File the issue, ask the author for just enough to get past it, and say in the issue that you needed help. A guide nobody can finish in half an hour is a finding, not your failure.
+
+**Read it back (about 5 minutes).** Read every issue filed against your guide before planning any fix, group them by cause (several usually share one), and put them at the top of your Ready column. The fixing happens after class.
+
+---
+
+## What you'll leave with
+
+- **A review sheet** from a partner project, with what to cut, what to prove, and what to protect in your demo.
+- **A setup guide that has met its first stranger**, and the issues that show exactly where it failed.
+- **Issues you filed** on a classmate's project. Good ones are portfolio material for you both.
+
+### Coming up
+
+- **Tonight:** revise your MVP Plan from the review sheet and submit the URL of `docs/mvp-plan.md` on `main`. The plan's quality is graded from this version, as part of CP10.
+- **Before {{ S21_DAY }}:** fix your guide from the cold-test issues, close them (leave them visible: they're the record of the fix), and merge it. Then **rehearse your demo path**: walk your slice end to end as it exists on `main`, and file an issue for every break.
+- **<course-link type="page" id="s21">{{ S21_DAY }}, {{ S21_DATE }}</course-link>:** a check-in and troubleshooting studio. We rerun the fresh-clone check on `main`. Bring problems, not polish.
+- **{{ S22_DAY }}, {{ S22_DATE }}:** <course-link type="assignment" id="cp10">CP10: Progress Demo and Repo Audit</course-link>, and <course-link type="assignment" id="cp9">CP9: Technical Communication Portfolio</course-link> is due. Put the portfolio together this weekend, not Tuesday night.

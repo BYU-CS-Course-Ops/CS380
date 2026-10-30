@@ -202,6 +202,12 @@ new that reads those args.
 **Write `&amp;`, not `&`, in any args value that lands in an XML attribute.**
 Titles do.
 
+**Escape inline HTML in a table cell: `&lt;code&gt;cp10&lt;/code&gt;`.**
+markdowndata renders each cell and keeps only its text, so a raw `<code>`,
+`<em>`, or `<strong>` (or Markdown backticks) is stripped along with the
+spaces around it: "the revised <code>docs/x.md</code> on" ships as "the
+reviseddocs/x.mdon". Escaped, the tag comes through as text and renders.
+
 **Ids are permanent.** `s01`, `cp1`, `pg-mom-test-summary`, `grp-discovery`.
 Renaming one orphans the Canvas resource it names and every `content_id`
 pointing at it starts referring to nothing. Change titles freely; never change

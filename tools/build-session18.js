@@ -632,14 +632,14 @@ async function build() {
   s.addText("Sizing surfaces assumptions. The fit check makes you cut while it's cheap. The order protects the slice.", { x: 0.9, y: 2.15, w: 11.9, h: 1.15, color: C.white, fontFace: F.head, fontSize: 25, bold: true, italic: true, margin: 0, lineSpacingMultiple: 1.06 });
   s.addText("BEFORE MONDAY, NOV 9", { x: 0.92, y: 3.5, w: 11, h: 0.35, color: C.amber, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   s.addText([
-    { text: "Start the first slice issue; have it in progress before Monday", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
+    { text: "Merge your walking skeleton, then start the first slice issue on it; in progress before Monday", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Send every ask to a person you depend on, with a date", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Monday: what must v1 prove, and a method for debugging. Kniberg carries over.", options: { bullet: { indent: 16 } } }
   ], { x: 0.95, y: 3.95, w: 11.7, h: 1.85, color: "CBD8E6", fontFace: F.body, fontSize: 17, valign: "top", margin: 0 });
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);
   s.addText("CP8 Project Plan & Roadmap is due end of day today. Submit your public board's URL.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 16, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Close in a minute or two. Say the one-liner. The slice statement is now the progress-demo script, and the next cut is already decided, so the midpoint check next Wednesday is a yes-or-no question: is the skateboard walking? Monday is MVP thinking and debugging, right before the heaviest build fortnight. Keep the Fit Check Sheet; it's a working copy, not a turn-in.");
+  s.addNotes("Close in a minute or two. Say the one-liner. The slice statement is now the progress-demo script, and the next cut is already decided, so the midpoint check next Wednesday is a yes-or-no question: is the skateboard walking? Then the build step, out loud: the skeleton from Monday merges this week, and the first slice issue is in progress on top of it before Monday. Show of hands on skeletons. Monday is MVP thinking and debugging, right before the heaviest build fortnight. Keep the Fit Check Sheet; it's a working copy, not a turn-in.");
 
   const OUT = "Session18-SizeFitOrder.pptx";
   await pres.writeFile({ fileName: OUT });

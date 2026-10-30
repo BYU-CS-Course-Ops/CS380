@@ -78,7 +78,14 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 - [ ] **Rebuild the debugging demo on `session-18`:** `demos/session19-debugging/setup.sh` (it falls back to `docs/design-plain-forms` until the tag exists; rerun after Nov 4 so it builds on the tag). Expect `OK` from the tests. Rehearse the run sheet (`DEMO-SCRIPT.md`) once, then run `setup.sh` again to reset.
 - [ ] **Print** the V1 Proof Sheet (`canvas_material/resources/V1-Proof-Sheet.pdf`), one per student, and the Debugging Loop Card (`Debugging-Loop-Card.pdf`), one half-sheet per student.
 
-## Before Session 20 — by Mon, Nov 9
+## Before Session 19 — by Fri, Nov 6: Prop Loft `session-20`
 
-- [ ] **Review Sessions 17–19**, then publish the setup guide: `demos/prop-loft-states/publish.sh` (no argument runs the rest of the stack). It should report `docs/design-plain-forms` as already on main (merged in class) and skip it; if it tries to open a PR for it instead, the in-class title didn't match the commit subject: stop it. Merges `docs/setup-guide`, tags `session-20`. Its PR closes the setup-guide issue, and the board's *Item closed* workflow should move that card to Done. Check it did.
-- [ ] **Check the tag:** `git ls-remote --tags https://github.com/prop-loft/prop-loft session-20`.
+*Moved up from "before Session 20" (Oct 30): students now write their setup guides **before** Session 20, from Prop Loft's as the model, and the Session 19 and 20 pages link the tag.*
+
+- [ ] **After the `session-18` tag is pushed**, publish the setup guide: `demos/prop-loft-states/publish.sh` (no argument runs the rest of the stack). It should report `docs/design-plain-forms` as already on main (merged in class) and skip it; if it tries to open a PR for it instead, the in-class title didn't match the commit subject: stop it. Merges `docs/setup-guide`, tags `session-20`. Its PR closes the setup-guide issue, and the board's *Item closed* workflow should move that card to Done. Check it did.
+- [ ] **Check the tag:** `git ls-remote --tags https://github.com/prop-loft/prop-loft session-20`, and open the Session 20 page's link to `docs/setup.md` at the tag.
+
+## Before Session 20 — by Tue, Nov 10
+
+- [ ] **Print** the MVP Plan Review sheet (`canvas_material/resources/MVP-Plan-Review-Sheet.pdf`), one page per pairing (two half-sheets; cut).
+- [ ] **Check which projects have a setup-guide PR open** (Session 20 outline, prep).

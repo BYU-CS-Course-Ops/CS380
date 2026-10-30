@@ -125,7 +125,7 @@ By the end of this session, a student can:
 ### 5. Sequence your M1 + commit the slice — 17 min
 - **Watch it once (~4 min, run sheet B):** on Prop Loft's board — add the Size field and fill it in, create the `slice` label and put it on the five slice issues, order Ready and the top of Backlog, replace M1's description with the slice statement.
 - **Then each project:**
-  - Order the M1 backlog — Ready holds what can start now, in order, and the top of Backlog what follows once its dependencies merge; write any "Needs" edges into the issues that lack them.
+  - Order the M1 backlog — the walking skeleton from Monday sits at the top (or in review) until it merges, because every slice issue lands on it; Ready holds what can start now, in order, and the top of Backlog what follows once its dependencies merge; write any "Needs" edges into the issues that lack them.
   - Create the `slice` label and mark the slice issues.
   - Assign owners for the first week's issues; ask any person you depend on, today.
   - Write the **slice statement** in M1's milestone description. That sentence is the demo script and the M1 exit criterion.
@@ -134,6 +134,7 @@ By the end of this session, a student can:
 ### 6. CP8 finalize + wrap — 11 min
 - CP8 checklist pass: milestones dated · M1 issues sized, sequenced, slice-labeled · slice statement on M1 · the fit check done and the cut made (if needed) · feature breakdown (epics) · labels incl. `good first issue` · definition of done revisited in `docs/git-standards.md` · roadmap-beyond-December written. Compare against Prop Loft's board as it now stands. Submit the board URL end of today.
 - Recap: estimation surfaces assumptions; the fit check forces the cut early, while it's cheap; sequencing protects the slice; the slice statement is a promise to yourselves.
+- **Say the build step out loud** (Session 17 started the build): the skeleton merges this week if it hasn't, and the first slice issue is in progress on top of it before Monday. Ask for a show of hands on whose skeleton is open or merged; anyone without one files it tonight.
 - Preview Monday (Nov 9): **MVP thinking** — what must v1 *prove*, evaluated on example MVPs — plus the debugging reasoning model, right before the heaviest build fortnight. Kniberg reading carries over.
 
 ---
@@ -163,7 +164,7 @@ By the end of this session, a student can:
 ## Deliverable / after class
 
 - **Due end of today:** **CP8 Project Plan & Roadmap** (tracker populated, estimated, sequenced; slice statement on M1; roadmap in repo; definition of done revisited in the git standards).
-- Build begins in earnest: first slice issues in progress before Monday, and every person-dependency asked.
+- Build continues (it started Monday with the walking skeleton): skeleton merged, the first slice issue in progress on it before Monday, and every person-dependency asked.
 
 ---
 

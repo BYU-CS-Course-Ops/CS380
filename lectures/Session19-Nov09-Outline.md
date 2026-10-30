@@ -90,7 +90,7 @@ By the end of this session, a student can:
 
 ### 7. Wrap + before next class — 7 min
 - Recap: v1 proves claims; label your throwaway corners; debug with a written loop; write down what doesn't work.
-- **Wednesday (Nov 11):** **MVP-plan review** (structured peer pass on your MVP Plan) + the setup guide, written and cold-tested. **MVP Plan due Wednesday:** what's in / what's deferred / what technical risk it addresses / demo plan — one page; it's the slice statement + today's sheet, formalized.
+- **Wednesday (Nov 11):** **MVP-plan review** (structured peer pass on your MVP Plan) + the setup guide's **cold test**. **Write the setup guide before Wednesday** (`docs/setup.md` on a PR, by redoing your setup in a fresh clone; anatomy and Prop Loft's model on the Session 20 page). **MVP Plan due Wednesday:** what's in / what's deferred / what technical risk it addresses / demo plan — one page; it's the slice statement + today's sheet, formalized.
 - Reminder: **CP10 progress demo + repo audit is Nov 18** — one week of building left before a stranger reads your repo. CP10's handout and rubric are now on Canvas.
 
 ---
@@ -118,6 +118,7 @@ By the end of this session, a student can:
 
 - **Due Wed, Nov 11:** **MVP Plan** (one page: in / deferred / risk addressed / demo plan).
 - Build continues; slice issues front of queue; debug log in force; `docs/known-issues.md` started.
+- **Before Wednesday:** write the setup guide on a PR (the cold test is in class Wednesday; v3 of Session 20 moved the writing out of class).
 
 ---
 

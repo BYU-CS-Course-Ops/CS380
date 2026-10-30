@@ -10,7 +10,7 @@
 - **Re-read:** your design doc's implementation plan and your MVP definition (CP3) — today they become the backlog.
 **Maps to:** Design Week 9, Session A — *turn the proposal/design into epics, milestones, and issues; build board categories.*
 
-> **Status: OUTLINE (v2).** Phase 4 begins — the build. This week turns paper into a plan: **CP8 Project Plan & Roadmap due Wed, Nov 4.** From here to Thanksgiving, class time tilts toward studio. *v2 (Tom's notes): the worked example is Prop Loft; requests vs. work items disambiguated (a Task form joins the issue forms); issue size flexes with the work; GitHub Projects is the standard tracker, with setup steps in §4; epics are parent issues with sub-issues (§2, §5); the definition of done stays in the git standards — no separate file (§4).*
+> **Status: OUTLINE (v2).** Phase 4 begins — the build. This week turns paper into a plan: **CP8 Project Plan & Roadmap due Wed, Nov 4.** From here to Thanksgiving, class time tilts toward studio. *v2 (Tom's notes): the worked example is Prop Loft; requests vs. work items disambiguated (a Task form joins the issue forms); issue size flexes with the work; GitHub Projects is the standard tracker, with setup steps in §4; epics are parent issues with sub-issues (§2, §5); the definition of done stays in the git standards — no separate file (§4). v3 (Oct 29): **the build starts today, said out loud** — §1 gains the walking-skeleton go signal (+2 min, taken from the wrap), the workshop files the skeleton as M1's first issue, and its PR opens before Wednesday. Until v3 no session told students to start writing code; Session 18's "first slice issue in progress" was the first instruction, a week later than Session 20's "two weeks into the build" assumes.*
 
 ---
 
@@ -65,8 +65,12 @@ By the end of this session, a student can:
 
 ## Timed outline (≈75 min)
 
-### 1. Framing — the tracker is the project's memory — 5 min
+### 1. Framing — the build starts today; the tracker is the project's memory — 7 min
 - The shift: Weeks 1–8 produced *documents*; Weeks 9–13 produce *working software* — and the tracker is where the two meet.
+- **The build starts today — say it plainly** (its own slide, ~2 min). Nothing waits on Wednesday's sizing, because every project's first issue is the same: a **walking skeleton** (Alistair Cockburn's term) — the thinnest end-to-end thing in the stack the design commits to. It installs, builds, and runs; it shows *something* (one page, one command, one endpoint); and it has a test command that passes, even if the test is trivial.
+  - **Why first, anywhere:** every later issue lands on it; it turns the stack choice into a fact before anything depends on it; and it's the first code to go through the project's own PR workflow. *(In this course, it's also what the setup guide in Session 20 documents, and what a stranger installs in the Week-11 audit.)*
+  - **Prop Loft's** is at [`session-13`](https://github.com/prop-loft/prop-loft/tree/session-13): three commits before any feature — the Django project, the item and bin models, and a page that lists items, with two tests. That's the size to aim for.
+  - **The ask:** file it as a task in today's workshop, first in M1, and open its PR before Wednesday. If a repo already runs end to end, the skeleton is done; say so, and the first slice issue starts instead.
 - Founder lens: a good backlog isn't for you — it's how a team coordinates (and how a solo founder remembers), how the instructor audits progress (Wk 11), and how a future contributor finds a way in (today's labels). Also the plain truth: **unwritten work doesn't get done.**
 
 ### 2. The decomposition ladder — 14 min
@@ -107,14 +111,15 @@ By the end of this session, a student can:
 - Each project, live in its own tracker:
   1. **Setup** (~5 min): create the Project (§4 steps 1–4); add the `epic` label and the Task form, or the project's alternative, with its reason in CONTRIBUTING (Prop Loft's `task.yml` is a copy-and-edit start — it goes in through a PR like everything else; it can be the first card on the new board).
   2. **Epics first** (~6 min): 3–5 parent issues, named as user value, each linked to its design-doc section; sanity-check against the design doc's goals.
-  3. **Issues for M1** (~12 min): decompose the *first* milestone fully as sub-issues of their epics, through the Task form; triage your CP7 seed issues into work items; write real acceptance criteria on each; assign owners to the first few.
+  3. **Issues for M1** (~12 min): decompose the *first* milestone fully as sub-issues of their epics, through the Task form; the **walking skeleton** is M1's first issue, in Ready, assigned (skip it if the repo already runs); triage your CP7 seed issues into work items; write real acceptance criteria on each; assign owners to the first few.
   4. **Milestones + board + labels** (~5 min): dates on M1/M2; issues into milestones; Status set on each card; `good first issue` × 2–3 tagged with a *Where to start*.
 - Instructor circulates with three questions: *"which issue is secretly an epic?"*, *"what must be true on Nov 18 — is that M1?"*, and *"what did you change from the defaults, and why?"*
 
-### 6. Wrap + before next class — 8 min
+### 6. Wrap + before next class — 6 min
 - Recap: decomposition is a founder skill — the tracker is the project's public memory and its welcome mat.
+- **Say it again: the build has started.** The skeleton's PR is open before Wednesday; Wednesday sizes and orders what comes next, on top of it.
 - **Wednesday (Nov 4):** estimation & sequencing — sizing M1's issues with **t-shirt sizes** and checking that M1 fits, finding the dependency chains, and locking the **vertical slice**. **CP8 Project Plan & Roadmap due end of Wednesday.**
-- Between now and then: finish decomposing M2 at epic/coarse-issue level (M1 fine-grained, M2 coarse is the right shape).
+- Between now and then: open the skeleton's PR, and finish decomposing M2 at epic/coarse-issue level (M1 fine-grained, M2 coarse is the right shape).
 
 ---
 
@@ -122,6 +127,7 @@ By the end of this session, a student can:
 
 - Acceptance criteria per issue + the project's definition of done = the **"done" discipline** that CP10's demo and the final demo are judged against.
 - `good first issue` labels + roadmap = the **contribution pathways** graded in CP8 and showcased in the launch package.
+- The **walking skeleton** is the base every slice lands on (Session 18 sequences on top of it) and the thing **Session 20's setup guide** documents; Session 20's "two weeks into the build" counts from today.
 - Milestone M1 *is* the **Nov 18 progress-demo scope** — the plan and the demo are the same commitment.
 - The tracker becomes primary evidence for **individual accountability** (issues/PRs per student).
 - Requests keep arriving through the forms all semester; **triage** (request → work item) is the maintainer habit the launch package should show.
@@ -140,6 +146,7 @@ By the end of this session, a student can:
 
 ## Deliverable / after class
 
+- **The build has started:** the walking skeleton's PR open before Wednesday (or the first slice issue, if the repo already runs).
 - No new checkpoint today; M1 decomposed by end of class, M2 coarse-decomposed before Wednesday.
 - **Due Wed, Nov 4:** **CP8 Project Plan & Roadmap** (milestones, prioritized backlog, feature breakdown, labels, definition-of-done, roadmap into a future semester).
 
@@ -154,4 +161,4 @@ By the end of this session, a student can:
 
 ---
 
-*Next step: publish Prop Loft's `session-17` state (after session-16), finish the board by hand, and screenshot it into `canvas_material/resources/img/` for the Setting Up Your Board page (three placeholders), then flip its `Publish`. The Session 17 student page is written and published (its Prop Loft and board-page links resolve once those exist). **Deck built:** `canvas_material/lectures/powerpoint/Session17-DesignToWork.pptx` (22 slides, `tools/build-session17.js`). Related: `Session16-Oct28-Outline.md`, `Session18-Nov04-Outline.md`, `rubrics.md` (CP8), `demos/prop-loft-states/`.*
+*Next step: publish Prop Loft's `session-17` state (after session-16), finish the board by hand, and screenshot it into `canvas_material/resources/img/` for the Setting Up Your Board page (three placeholders), then flip its `Publish`. The Session 17 student page is written and published (its Prop Loft and board-page links resolve once those exist). **Deck built:** `canvas_material/lectures/powerpoint/Session17-DesignToWork.pptx` (23 slides; v3 added slide 4, *The build starts today*; `tools/build-session17.js`). Related: `Session16-Oct28-Outline.md`, `Session18-Nov04-Outline.md`, `rubrics.md` (CP8), `demos/prop-loft-states/`.*

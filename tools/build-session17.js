@@ -100,12 +100,12 @@ async function build() {
   s = mk(); s.background = { color: C.white };
   header(s, "Today", "Turn your design into work someone can pick up");
   const plan = [
-    [FA.FaBrain, "The tracker is the project's memory", "5 min"],
+    [FA.FaBrain, "The build starts today; the tracker is its memory", "7 min"],
     [FA.FaSitemap, "The decomposition ladder: MVP → epics → issues", "14 min"],
     [FA.FaCalendarAlt, "Milestones and the honest calendar", "10 min"],
     [FA.FaColumns, "The board, labels, and pathways in", "10 min"],
     [FA.FaTools, "Workshop: decompose your own MVP", "28 min"],
-    [FA.FaRoute, "Wednesday: estimate, sequence, commit", "8 min"]
+    [FA.FaRoute, "Wednesday: estimate, sequence, commit", "6 min"]
   ];
   for (let i = 0; i < plan.length; i++) {
     const y = 1.95 + i * 0.8;
@@ -116,7 +116,7 @@ async function build() {
     s.addText(plan[i][2], { x: 10.6, y, w: 1.8, h: 0.68, color: hi ? C.amber : C.slate, fontFace: F.body, fontSize: 16, bold: true, align: "right", valign: "middle", margin: 0 });
   }
   footer(s);
-  s.addNotes("Thirty seconds. The first forty minutes are short teaching blocks, every one shown on Prop Loft. The highlighted row is the point of the day: 28 minutes building your own tracker, live, with me circulating. Anything you build today counts toward CP8, due Wednesday. Keep the teaching blocks moving; the workshop time is the part to protect.");
+  s.addNotes("Thirty seconds. Say the headline first: the build starts today, and the next slide says what to build first. The first forty minutes are short teaching blocks, every one shown on Prop Loft. The highlighted row is the point of the day: 28 minutes building your own tracker, live, with me circulating. Anything you build today counts toward CP8, due Wednesday. Keep the teaching blocks moving; the workshop time is the part to protect.");
 
   // 3 Framing
   s = mk(); s.background = { color: C.white };
@@ -152,6 +152,39 @@ async function build() {
   bar(s, 5.85, 0.9, C.amber, null, "Unwritten work doesn't get done. Vaguely written work gets done wrong.", 4);
   footer(s);
   s.addNotes("Five minutes. The shift: until now you've produced documents; from here you produce software, and the tracker is where one turns into the other. One click per reader. The first is obvious. The second is anyone checking on progress: a manager, a sponsor, and in this course the Week-11 auditor. The third is the founder's reason: a plan in public is how a stranger sees there's a future. Fourth click, say it plainly.");
+
+  // 4 The build starts today
+  s = mk(); s.background = { color: C.white };
+  header(s, "The build starts today", "Your first issue: a walking skeleton");
+  s.addText("WHAT IT IS", { x: 0.6, y: 1.9, w: 5.6, h: 0.35, color: C.slate, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
+  const skel = [
+    [FA.FaDownload, "Installs and runs", "On a fresh clone, in the stack your design chose"],
+    [FA.FaDesktop, "Shows something", "One page, one command, or one endpoint"],
+    [FA.FaCheckCircle, "A test passes", "Even a trivial one: the test command exists"]
+  ];
+  for (let i = 0; i < skel.length; i++) {
+    const y = 2.35 + i * 0.9;
+    card(s, 0.6, y, 5.6, 0.8, C.cardBg);
+    await iconCircle(s, skel[i][0], 0.82, y + 0.14, 0.52, C.teal, "FFFFFF");
+    s.addText([
+      { text: skel[i][1], options: { bold: true, color: C.ink, breakLine: true } },
+      { text: skel[i][2], options: { color: C.slate, fontSize: 15 } }
+    ], { x: 1.55, y, w: 4.5, h: 0.8, fontFace: F.body, fontSize: 17, valign: "middle", margin: 0 });
+  }
+  s.addText("PROP LOFT · TAG session-13", { x: 6.5, y: 1.9, w: 6.2, h: 0.35, color: C.slate, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
+  codeBlock(s, 6.5, 2.35, 6.2, 2.6, [
+    ["# three commits before any feature", C.codeDim],
+    "de16ce5 Add the Django project skeleton",
+    "7ba9dd2 Add catalog models for items and bins",
+    "6dccb57 Show the catalog as a list of items",
+    "",
+    "$ python manage.py test",
+    ["Ran 2 tests ... OK", C.codeAdd]
+  ]);
+  bar(s, 5.15, 0.75, C.cardBg, "Why first:", "every later issue lands on it · the stack becomes a fact · your PR workflow gets real code", 1);
+  bar(s, 6.05, 0.8, C.amber, null, "File it in today's workshop, first in M1. Open its PR before Wednesday.", 2);
+  footer(s);
+  s.addNotes("Two minutes, and say the title out loud: until today nobody has told you to start writing code, and now it's time. You don't need Wednesday's sizing for this, because every project's first issue is the same. Prop Loft's skeleton is three small commits and two tests; that's the size. Click: why it goes first, on any project. Click: the ask. If your repo already runs end to end, it's done; start your first slice issue instead.");
 
   // 4 Five jobs
   s = mk(); s.background = { color: C.white };
@@ -603,7 +636,7 @@ async function build() {
   const ws = [
     ["5 min", "Set up", "Create the project (public, linked); add the epic label and a task form, or your alternative with its reason"],
     ["6 min", "Epics", "3–5 parent issues, named for value, each linked to a goal in your design"],
-    ["12 min", "M1, in full", "Sub-issues with real acceptance criteria; triage your CP7 seed issues; owners on the first few"],
+    ["12 min", "M1, in full", "Walking skeleton first, in Ready; sub-issues with real acceptance criteria; triage your CP7 seeds"],
     ["5 min", "Dates and pathways", "M1 and M2 dated; issues placed and given a status; 2–3 good first issues with Where to start"]
   ];
   for (let i = 0; i < ws.length; i++) {
@@ -619,7 +652,7 @@ async function build() {
     { text: "Which issue is secretly an epic? · What must be true on Nov 18, and is that M1? · What did you change from the defaults, and why?" }
   ], { x: 0.95, y: 5.75, w: 11.4, h: 1.0, color: C.navy, fontFace: F.body, fontSize: 16.5, valign: "middle", margin: 0, lineSpacingMultiple: 1.04 });
   footer(s, "7E92A8");
-  s.addNotes("Keep time out loud at each step. Most students are solo, so circulate to every repo at least twice. Push epics first: projects that start writing issues before epics end up with a flat pile. In the M1 block, read acceptance criteria aloud back to their authors and ask if a reviewer could mark each true or false. Whatever isn't finished, M2 especially, is homework: M2 only needs to be coarse by Wednesday.");
+  s.addNotes("Keep time out loud at each step. Most students are solo, so circulate to every repo at least twice. Push epics first: projects that start writing issues before epics end up with a flat pile. Check every board has the walking skeleton first in Ready, with an owner. In the M1 block, read acceptance criteria aloud back to their authors and ask if a reviewer could mark each true or false. Whatever isn't finished, M2 especially, is homework: M2 only needs to be coarse by Wednesday.");
 
   // 22 Wrap
   s = mk(); s.background = { color: C.navy };
@@ -628,14 +661,15 @@ async function build() {
   s.addText("The tracker is your project's public memory, and its welcome mat.", { x: 0.9, y: 2.15, w: 11.9, h: 1.05, color: C.white, fontFace: F.head, fontSize: 26, bold: true, italic: true, margin: 0, lineSpacingMultiple: 1.06 });
   s.addText("BEFORE WEDNESDAY, NOV 4", { x: 0.92, y: 3.4, w: 11, h: 0.35, color: C.amber, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   s.addText([
+    { text: "Start building: open the walking skeleton's PR (or your first slice issue's, if the repo already runs)", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7, bold: true, color: C.white } },
     { text: "Finish M1's issues; break M2 down coarsely, at the epic or rough-issue level", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Write docs/roadmap.md, and revisit the definition of done in your git standards", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 7 } },
     { text: "Wednesday: size every M1 issue, find the dependencies, and commit to the vertical slice", options: { bullet: { indent: 16 } } }
-  ], { x: 0.95, y: 3.85, w: 11.7, h: 1.95, color: "CBD8E6", fontFace: F.body, fontSize: 17, valign: "top", margin: 0 });
+  ], { x: 0.95, y: 3.8, w: 11.7, h: 2.05, color: "CBD8E6", fontFace: F.body, fontSize: 17, valign: "top", margin: 0 });
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);
   s.addText("CP8 Project Plan & Roadmap is due end of day Wednesday, Nov 4. Submit your public board's URL.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 16, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Close in a few minutes. Say the one-liner. M1 fine-grained and M2 coarse is the right shape, not a shortcut. The roadmap and the definition of done are files, so they go in through PRs. Wednesday is estimation and sequencing, and the slice statement on M1 becomes the progress-demo commitment. Remind them to check that the board is public before submitting: a private board can't be graded.");
+  s.addNotes("Close in a few minutes. Say the one-liner, then say it again: the build has started, and the skeleton's PR is open before Wednesday. M1 fine-grained and M2 coarse is the right shape, not a shortcut. The roadmap and the definition of done are files, so they go in through PRs. Wednesday is estimation and sequencing, and the slice statement on M1 becomes the progress-demo commitment. Remind them to check that the board is public before submitting: a private board can't be graded.");
 
   const OUT = "Session17-DesignToWork.pptx";
   await pres.writeFile({ fileName: OUT });

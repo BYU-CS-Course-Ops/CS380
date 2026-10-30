@@ -14,6 +14,8 @@ Until now the project has produced documents. From here it produces software, an
 
 That's true on any team. A design nobody breaks down stays a design, and work nobody writes down doesn't get done. The tracker is also how everyone else sees the project: a teammate picking up their next task, a solo founder remembering where they left off, a stranger deciding whether there's a place for them. *(In this course, the instructor also reads it when auditing your progress in Week 11.)* A populated, prioritized tracker is how a project shows it has a future.
 
+**The build starts today.** You don't need a finished plan to write the first code, because every project's first issue is the same: a **walking skeleton**. It's the thinnest end-to-end version of the stack your design commits to: it installs, builds, and runs; it shows *something*, such as one page, one command, or one endpoint; and it has a test command that passes, even if the test is trivial. Build it first on any project. Everything after it lands on something that already runs, the stack choice becomes a fact before anything depends on it, and it's the first code to go through your own pull-request workflow. *(In this course, it's also what your setup guide documents on {{ S20_DAY }}, {{ S20_DATE }}, and what a stranger installs at the progress demo.)* Prop Loft's skeleton is at [`session-13`](https://github.com/prop-loft/prop-loft/tree/session-13): three commits before any feature (the Django project, the item and bin models, and a page that lists items, with two tests). Aim for that size.
+
 Today you turn your design into **epics** and **issues**, group them into **milestones** with honest dates, and set up a public **board** that shows where everything stands.
 
 ---
@@ -62,7 +64,7 @@ By the end of this session, you'll be able to:
 
 1. **Set up** (about 5 min): create the board, then add the `epic` label and the task form, or your alternative with its reason in CONTRIBUTING. Prop Loft's [`task.yml`](https://github.com/prop-loft/prop-loft/blob/session-17/.github/ISSUE_TEMPLATE/task.yml) is a starting point to copy and edit, through a pull request like any other change.
 2. **Epics first** (about 6 min): three to five, named as user value, each linked to its section of the design doc.
-3. **Your first milestone, in full** (about 12 min): break it into sub-issues of their epics, each with real acceptance criteria. Triage your seed issues from last week into work items. Assign owners to the first few.
+3. **Your first milestone, in full** (about 12 min): the walking skeleton goes first, in Ready, with your name on it (if your repository already runs end to end, it's done; skip it). Then break the rest of the milestone into sub-issues of their epics, each with real acceptance criteria. Triage your seed issues from last week into work items. Assign owners to the first few.
 4. **Milestones, board, labels** (about 5 min): put dates on both milestones, put issues in them, and set each card's status. Tag two or three genuinely approachable issues `good first issue`, each with a *Where to start* section naming the file, the code to imitate, and the test to copy.
 
 While you work, I'll come around and ask three questions: *Which issue is secretly an epic? What has to be true at the progress demo, and is that your first milestone? What did you change from the defaults, and why?*
@@ -75,10 +77,11 @@ While you work, I'll come around and ask three questions: *Which issue is secret
 - **Three to five epics**, each a parent issue linked to your design.
 - **Your first milestone broken down** into work items with acceptance criteria, owners on the first few, and your seed issues triaged.
 - **Two or three `good first issue` items**, each telling a newcomer where to start.
+- **Your walking skeleton filed and assigned**, the first card in Ready.
 
 ### Coming up
 
-- **Before next class:** break your second milestone down at a coarser grain, epic-level or rough issues. The first milestone in detail and the second in outline is the right shape for now.
+- **Before next class:** start building. Open the walking skeleton's pull request before {{ S18_DAY }}; if your repository already runs, start your first slice issue instead. Then break your second milestone down at a coarser grain, epic-level or rough issues. The first milestone in detail and the second in outline is the right shape for now.
 - **<course-link type="page" id="s18">{{ S18_DAY }}, {{ S18_DATE }}</course-link>:** estimation and sequencing. You'll size the first milestone's issues, check that it fits, find dependency chains, and lock your vertical slice.
 - **<course-link type="assignment" id="cp8">CP8: Project Plan and Roadmap</course-link> is due end of day {{ S18_DAY }}, {{ S18_DATE }}.** Submit your public board's URL; the roadmap and the revisited definition of done are read from your repository. The assignment page and its rubric have the details.
 - *Working solo? Every step applies. Your board is how you'll remember where you were after a week of other classes, and it's where a would-be contributor looks to see what's happening and where they could help.*
