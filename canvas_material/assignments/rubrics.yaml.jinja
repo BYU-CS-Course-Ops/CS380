@@ -721,49 +721,55 @@ rubrics:
     criteria:
       - name: Launch-package completeness
         weight: 30
-        measures: Architecture, roadmap, known-issues, tech-debt log, and onboarding all present and genuinely useful.
+        measures: "The package pieces are in the repository at the launch tag, each true and useful to a newcomer: the architecture overview, the roadmap, the known-issues and tech-debt log, and the onboarding guide."
         levels:
-          exemplary: Architecture overview, roadmap, known-issues, tech-debt log, onboarding all present and useful
-          proficient: Mostly complete
-          developing: Gaps
-          beginning: Skeletal
+          exemplary: All present, current, and genuinely useful; the architecture matches what was built, and the log names every corner, cut, and open finding
+          proficient: All present; one is thin or a little out of date
+          developing: One missing, or several stale or thin
+          beginning: Most missing, or present only as headings
       - name: Setup verification
         weight: 15
-        measures: Setup independently reproducible from the docs — evidenced by the round-2 test sheet.
+        measures: "A classmate who hadn't seen the project set it up from your docs alone in the onboarding test, and you fixed or logged whatever they hit. The signed checklist is the evidence."
         levels:
-          exemplary: Setup independently reproducible from docs
-          proficient: Reproducible with minor friction
-          developing: Unclear
-          beginning: Fails
+          exemplary: The tester got it running, tests passing, from the docs alone; anything they hit is fixed or logged
+          proficient: Running with minor friction, and the friction fixed or logged
+          developing: Ran only with help, or stalls left unaddressed
+          beginning: The tester couldn't get it running, or no test happened
       - name: Retrospective honesty & insight
         weight: 25
-        measures: Candid about what held, what the MVP validated, what's next — evidence over narrative, weighted heavily on purpose.
+        measures: "Your claims from the start of term checked against what happened: what held, what didn't, what the MVP validated, and what you'd do differently. Evidence over narrative, weighted heavily on purpose."
         levels:
-          exemplary: Candid about what held, what the MVP validated, what's next
-          proficient: Honest reflection
-          developing: Surface-level
-          beginning: Missing/spin
+          exemplary: Each major claim checked against evidence; refuted assumptions stated plainly with what was learned; changes you'd make are specific
+          proficient: Honest and mostly evidence-based; some claims asserted rather than checked
+          developing: Surface-level, or a victory lap, or a list of regrets
+          beginning: Missing, or spin the repository contradicts
       - name: Future-work framing
         weight: 20
-        measures: Compelling, realistic next steps without overselling — a roadmap a serious outside reader could believe (a potential contributor, a maintainer, a capstone faculty member).
+        measures: "Where the project goes next as others join: next steps a serious outside reader could believe, whether a potential contributor, a maintainer, or a faculty member weighing it for a capstone."
         levels:
-          exemplary: Compelling, realistic next steps without overselling
-          proficient: Reasonable
-          developing: Vague
-          beginning: Absent or inflated
+          exemplary: Specific, sequenced next steps a newcomer could start on; claims only what the foundation supports
+          proficient: Reasonable next steps, a little general
+          developing: Vague ("add more features"), or disconnected from the roadmap
+          beginning: Absent, or promises the code can't support
       - name: Contributor-readiness
         weight: 10
-        measures: A new contributor could get up to speed and start building — the course's through-line, at the finish.
+        measures: "Could a new contributor get up to speed and start building? The five newcomer needs answered, and at least one automated test on the core logic so a newcomer can tell whether they broke something."
         levels:
-          exemplary: A new contributor could get up to speed and start building
-          proficient: Mostly
-          developing: Partial
-          beginning: "No"
-    looking_for: []
+          exemplary: All five needs pass in the onboarding test, and the test on the core logic checks something real
+          proficient: The five needs mostly met, and the testing floor met
+          developing: Gaps in the five needs, or no automated test on the core logic (a missing test caps this here)
+          beginning: A newcomer couldn't get started
+    looking_for:
+      - "**Writing it down well enough to be picked up.** Everything in the package should be true at the launch tag. A short, accurate document beats a long, stale one, because a newcomer trusts what they read."
+      - "**Retrospective honesty** rewards checking claims, not defending them. A refuted assumption, documented with what you learned, scores *higher* than a victory lap. The retrospective is cross-checked against the repository and the onboarding test: a retro that claims \"smooth onboarding\" over a failed setup step reads as spin."
+      - "**Blameless means blameless.** Causes live in assumptions and systems (\"we assumed the API was free; it rate-limited us\"), never in named people."
+      - "**Future-work framing** is read by someone deciding whether to join. Say what a newcomer would do first, and claim only what the code supports."
+      - "**The testing floor:** at least one automated test on the slice's core logic, run by the command your setup guide names, passing at the launch tag. Without one, *Contributor-readiness* caps at Developing."
     instructor_notes:
-      - "**Launch-package completeness** and **Setup verification** assess whether a new contributor can actually get the project running and start building — the central deliverable of the course."
-      - "**Retrospective honesty & insight** is weighted heavily because honest reflection (what assumptions held, what the MVP truly validated) is graded over a rosy narrative."
+      - "**Launch-package completeness** and **Setup verification** assess whether a new contributor can actually get the project running and start building — the central deliverable of the course. Grade at the `v0.1-launch` tag; the signed Contributor-Readiness Checklist from the onboarding test is the evidence for Setup verification."
+      - "**Retrospective honesty & insight** is weighted heavily because honest reflection (what assumptions held, what the MVP truly validated) is graded over a rosy narrative. Cross-check it against the repo and the onboarding-test sheet."
       - "**Future-work framing** rewards a credible roadmap that doesn't oversell — the lead may pitch this to capstone faculty."
+      - "**Testing floor (decided Oct 30):** CP11 requires at least one automated test on the slice's core logic; missing it caps *Contributor-readiness* at Developing. This raises CP10's Exemplary-only rule because CP11 asks whether someone else can safely change the code."
 
   # ---------------------------------------------------------------- CP12
   cp12:

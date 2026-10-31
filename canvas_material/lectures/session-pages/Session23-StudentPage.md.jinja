@@ -1,0 +1,78 @@
+## Before class
+
+1. **Read Open Source Guides' [*Building Welcoming Communities*](https://opensource.guide/building-community/).** It's about what makes people join a project, stay, and grow into co-owners. Notice how often the answer is a small signal: a first reply, a tone, an issue nobody answered.
+2. **Bring your Repo Audit Sheet and your top-five fix list** from {{ S22_DAY }}. Today turns them into a plan.
+3. **Bring a laptop** with your repository and your project board open. The second half of class is a workshop.
+
+---
+
+## Purpose
+
+Think about the last time you were new to a codebase: a first week at a job or internship, an open-source library you wanted to fix, code someone handed you in a class or a lab. Before you could do anything useful, you needed answers to a handful of questions. What is this? Is it all right to ask things here? How do I get it running? What should I work on first? Will anyone look at what I do?
+
+Every project answers those questions, either on purpose or by accident. The ones that answer them on purpose get joined. Good teams use them to get a new hire productive in days instead of months, and open-source projects use them to turn a one-time visitor into a regular contributor. That skill outlasts any one project, and it's the focus today.
+
+Your own project is the worked example. Last week's audit showed whether a stranger could get into your repository. Today is about whether they'd stay. *(In this course, the answers become your launch package, <course-link type="assignment" id="cp11">CP11</course-link>, due {{ S25_DAY }}, {{ S25_DATE }}. It's what lets your project outlast the semester.)*
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Name the five questions every newcomer asks**, at work or in open source, and point to what answers each one in your own repository.
+2. **Check a project for joinability**: not just whether a stranger can build it, but whether they'd come back.
+3. **Say what any codebase owes the next person** who changes it, and what an early version doesn't need.
+4. **Plan a launch package** by sorting what exists, what needs refreshing, and what still needs writing.
+
+---
+
+## What we'll do together
+
+**The five newcomer needs.** Each one has a natural answer on an open-source project, and the same need shows up on any team at work:
+
+| The newcomer asks | On an open-source project | On a team at work | You'll know it's met when… |
+|---|---|---|---|
+| **What is this?** | The README's first screen | The team's one-page overview | A stranger explains it back in one sentence after a minute, and the status matches what runs |
+| **Am I welcome?** | CONTRIBUTING, the code of conduct, how past questions were answered | How the team treats new people's questions | The small signals all say yes |
+| **How do I start?** | The setup guide | The new-hire setup doc | It runs, with tests passing, from the docs alone |
+| **Where do I start?** | Good first issues, the roadmap | A starter task picked for you | Someone can attempt a starter task without asking anyone |
+| **Will anyone respond?** | The communication norms, and how long recent issues waited | Who reviews your work, and when | The promises are ones you'll keep: "reviews within a week," not "around the clock" |
+
+Last week's audit tested the first, third, and fourth. Nobody has yet checked whether a newcomer would feel welcome or get a reply.
+
+**What any codebase owes the next person.** Whoever changes your code next, whether a teammate, a contributor, or you after a long break, needs three things:
+
+- **A way to know they didn't break it.** Tests on the logic that matters, not coverage for its own sake.
+- **Docs that are true.** A short, accurate overview beats a complete, stale one, because newcomers trust what they read.
+- **What's broken, written down.** Every shortcut, cut, and known bug, where a newcomer will see it. Technical debt isn't shameful. *Undocumented* technical debt is.
+
+An early version doesn't owe anyone polish or completeness, but it does owe them those three. *(In this course, that means two concrete things by launch. First, **at least one automated test on your slice's core logic**, run by the command your setup guide names and passing at your launch tag. It has to be a test that would fail if that logic broke; one real test beats twenty that assert nothing. Second, a **known-issues and tech-debt log** that names your throwaway corners, your deliberate cuts, and any audit findings you haven't fixed.)*
+
+**The launch package.** Almost everything in it already exists in some draft, so the work is to refresh it, verify it, and make it true:
+
+1. An **architecture overview**: your design diagrams, redrawn as built.
+2. **Setup verification**: your setup guide, followed by a fresh tester on {{ S25_DAY }}.
+3. A **roadmap** beyond December, framed as an invitation.
+4. The **known-issues and tech-debt log**, as one file.
+5. An **onboarding guide**: the five needs, answered in one place.
+6. **A test a newcomer can run**.
+
+**The Contributor-Readiness Checklist.** You'll get a one-page checklist with the five needs, each with where a newcomer looks, the bar, and *pass / stall / fail*. Today you use it as a self-check on your own project. On {{ S25_DAY }}, a classmate who has never seen your project works through it cold, and their signed copy is the evidence for your launch. Before then, fill in its **Since the audit** section with the two stalls that most stopped your auditor last week. The tester will check whether each one is fixed, logged, or still there.
+
+**Workshop (25 minutes).** Merge three inputs into one **launch punch list**: your top-five fix list from the audit, every *stall* or *fail* from today's self-check, and whatever the launch package still needs written. Rank it by what would stop a newcomer first. Then put each item in your tracker as an issue, like everything else. I'll come around with one question: *if someone forked this in January, with no one to ask, what would stop them first?* That item goes to the top.
+
+---
+
+## What you'll leave with
+
+- **The five newcomer needs**, and a way to check any project against them.
+- **A launch punch list in your tracker**, ranked by what would stop a newcomer first.
+- **Your package mapped:** what exists, what needs refreshing, what still needs writing.
+- **The checklist**, with *Since the audit* filled in.
+
+### Coming up
+
+- **{{ THANKSGIVING_NO_CLASS }}: no class, and no expectation over Thanksgiving.** Enjoy the break. If you'd like to keep working, your punch list is ready, but that's up to you.
+- **<course-link type="page" id="s24">{{ S24_DAY }}, {{ S24_DATE }}</course-link>:** the retrospective, and framing your final pitch.
+- **<course-link type="page" id="s25">{{ S25_DAY }}, {{ S25_DATE }}</course-link>:** the launch studio and the onboarding test. <course-link type="assignment" id="cp11">CP11: Launch Package and Retrospective</course-link> is due end of day.

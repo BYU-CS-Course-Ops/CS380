@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contributor-Readiness Checklist</title>
+<style>
+  @page { size: letter; margin: 0.4in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 9.6pt; line-height: 1.18; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 5pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 16pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 7.8pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .who { font-size: 9pt; color: #5F7284; white-space: nowrap; text-align: right; line-height: 1.55; }
+  .who span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 1.9in; }
+
+  .intro { background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 4pt 8pt 5pt 8pt; font-size: 9.2pt; }
+  .intro b { color: #14233A; }
+  .uses { display: flex; gap: 10pt; margin-top: 4pt; font-size: 8.8pt; }
+  .uses div { flex: 1; }
+  .uses b { color: #0E6E6D; }
+
+  h2 { font-family: Cambria, Georgia, serif; font-size: 11pt; color: #14233A; margin: 8pt 0 2pt 0; }
+  h2 .hint { font-family: Calibri, "Segoe UI", sans-serif; font-weight: normal; font-size: 8pt; color: #5F7284; font-style: italic; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 7.6pt; color: #5F7284; text-transform: uppercase; letter-spacing: 0.3pt;
+       font-weight: bold; border-bottom: 1pt solid #12908F; padding: 2pt 4pt; }
+  table.needs td { border-bottom: 0.7pt solid #C9D4DC; padding: 4pt 4pt; vertical-align: top; font-size: 8.8pt; height: 0.74in; }
+  td.need { width: 1.45in; }
+  td.need .q { font-family: Cambria, Georgia, serif; font-weight: bold; color: #14233A; font-size: 10pt; display: block; }
+  td.need .n { color: #12908F; }
+  td.need .ex { font-size: 7.8pt; color: #5F7284; font-style: italic; }
+  td.look { width: 1.65in; color: #1E2A36; }
+  td.bar { width: 1.85in; color: #1E2A36; }
+  td.res { width: 0.85in; font-size: 8.4pt; line-height: 1.5; white-space: nowrap; }
+  td.why { border-left: 0.6pt solid #E1E8ED; }
+
+  .legend { font-size: 7.8pt; color: #5F7284; margin-top: 2pt; }
+  .legend b { color: #14233A; }
+
+  table.hood td { border-bottom: 0.7pt solid #C9D4DC; padding: 3pt 4pt; font-size: 9pt; vertical-align: top; }
+  table.hood td.cb { width: 0.25in; font-size: 10pt; }
+  table.hood td.where { width: 1.7in; color: #5F7284; font-size: 8.4pt; }
+
+  .since { margin-top: 7pt; }
+  .since .sr { display: flex; align-items: flex-end; gap: 8pt; height: 0.3in; border-bottom: 0.7pt solid #C9D4DC; font-size: 8.8pt; }
+  .since .sr .n { color: #12908F; font-weight: bold; width: 0.15in; padding-bottom: 2pt; }
+  .since .sr .gap { flex: 1; }
+  .since .sr .opts { white-space: nowrap; padding-bottom: 2pt; }
+  .box { margin-top: 7pt; background: #F2F6F8; border-left: 2.5pt solid #E8A33D; padding: 3pt 8pt 4pt 8pt; }
+  .box .q { color: #14233A; font-weight: bold; font-size: 9.4pt; }
+  .box .line { border-bottom: 0.7pt solid #B9C5CF; height: 0.3in; }
+
+  .sign { margin-top: 7pt; font-size: 9pt; display: flex; gap: 18pt; }
+  .sign span.b { display: inline-block; border-bottom: 0.8pt solid #9BB0BF; width: 2.2in; height: 11pt; vertical-align: bottom; }
+  .sign span.bs { width: 0.8in; }
+
+  .foot { margin-top: 5pt; font-size: 7.8pt; color: #5F7284; display: flex; justify-content: space-between; gap: 8pt; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Contributor readiness</p>
+    <h1>Could Someone Join This?</h1>
+  </div>
+  <div class="who">Project <span></span><br>Tester <span></span><br>Tag or commit <span></span></div>
+</div>
+
+<div class="intro"><b>Every newcomer to any project asks the same five questions</b>, whether it's a new hire's first week on a team, a first-time contributor to an open-source library, or you, eight months from now, reopening your own code. A project that answers them on purpose gets joined. One that answers them by accident mostly gets left.
+  <div class="uses">
+    <div><b>As a self-check:</b> mark your own project honestly. Every <i>stall</i> or <i>fail</i> goes on your launch punch list.</div>
+    <div><b>As a test script:</b> a tester who has never seen the project works through it cold, from the repository alone, and marks what happened.</div>
+  </div>
+</div>
+
+<h2>The five newcomer needs <span class="hint">For each: look where a newcomer would, hold it to the bar, mark one result, and say why in a line</span></h2>
+<table class="needs">
+  <tr><th>Need</th><th>Where a newcomer looks</th><th>The bar</th><th>Result</th><th>Why</th></tr>
+  <tr>
+    <td class="need"><span class="q"><span class="n">1</span> What is this?</span><span class="ex">New hire: "what does this team build?"</span></td>
+    <td class="look">The README's first screen: what it does, for whom, its status</td>
+    <td class="bar">After 60 seconds, the tester explains it back in one sentence, and the status matches what runs</td>
+    <td class="res">☐ pass<br>☐ stall<br>☐ fail</td><td class="why"></td>
+  </tr>
+  <tr>
+    <td class="need"><span class="q"><span class="n">2</span> Am I welcome?</span><span class="ex">New hire: "can I ask questions here?"</span></td>
+    <td class="look">CONTRIBUTING's tone, the code of conduct, how past issues and pull requests were answered</td>
+    <td class="bar">The small signals say yes: a warm first line, a real reporting contact, outside questions answered kindly</td>
+    <td class="res">☐ pass<br>☐ stall<br>☐ fail</td><td class="why"></td>
+  </tr>
+  <tr>
+    <td class="need"><span class="q"><span class="n">3</span> How do I start?</span><span class="ex">New hire: "how do I get it running?"</span></td>
+    <td class="look">The setup guide, followed exactly, then the test command</td>
+    <td class="bar">Running, with tests passing, from the docs alone; nothing the tester had to guess</td>
+    <td class="res">☐ pass<br>☐ stall<br>☐ fail</td><td class="why"></td>
+  </tr>
+  <tr>
+    <td class="need"><span class="q"><span class="n">4</span> Where do I start?</span><span class="ex">New hire: "what's my first task?"</span></td>
+    <td class="look">Issues labeled <i>good first issue</i>, the roadmap</td>
+    <td class="bar">The tester picks a starter issue and finds the code to change without asking anyone</td>
+    <td class="res">☐ pass<br>☐ stall<br>☐ fail</td><td class="why"></td>
+  </tr>
+  <tr>
+    <td class="need"><span class="q"><span class="n">5</span> Will anyone respond?</span><span class="ex">New hire: "who reviews my work, and when?"</span></td>
+    <td class="look">The communication norms; how long recent issues and pull requests waited</td>
+    <td class="bar">A stated response time the record shows is being kept, and a named place to ask</td>
+    <td class="res">☐ pass<br>☐ stall<br>☐ fail</td><td class="why"></td>
+  </tr>
+</table>
+<div class="legend"><b>Pass:</b> met the bar from the docs alone. <b>Stall:</b> got there, but only by guessing, searching, or working around something. <b>Fail:</b> couldn't get there.</div>
+
+<h2>Under the hood <span class="hint">The author checks these; a tester can confirm any of them</span></h2>
+<table class="hood">
+  <tr><td class="cb">☐</td><td><b>A newcomer can tell if they broke something:</b> at least one automated test exercises the core logic, runs with the command the setup guide names, and passes</td><td class="where">the test command, on the tagged version</td></tr>
+  <tr><td class="cb">☐</td><td><b>What's broken is written down:</b> throwaway corners, deliberate cuts, and open audit findings, each with its issue</td><td class="where">the known-issues log, linked from the README</td></tr>
+  <tr><td class="cb">☐</td><td><b>The map matches the territory:</b> the architecture overview describes what was built, not what was planned</td><td class="where">the architecture overview</td></tr>
+  <tr><td class="cb">☐</td><td><b>There's somewhere to go next:</b> the roadmap says what a newcomer would do first, and claims nothing the code can't support</td><td class="where">the roadmap</td></tr>
+  <tr><td class="cb">☐</td><td><b>Every promise is one you'll keep:</b> response times and review norms you can actually meet after the term ends</td><td class="where">the communication norms</td></tr>
+</table>
+
+<div class="since">
+  <h2 style="margin-top:0">Since the audit <span class="hint">Authors: before the test, write the two stalls that most stopped your last auditor. Tester: check each one.</span></h2>
+  <div class="sr"><span class="n">1</span><span class="gap"></span><span class="opts">☐ fixed &nbsp;☐ logged in known issues &nbsp;☐ still there</span></div>
+  <div class="sr"><span class="n">2</span><span class="gap"></span><span class="opts">☐ fixed &nbsp;☐ logged in known issues &nbsp;☐ still there</span></div>
+</div>
+
+<div class="box">
+  <div class="q">If someone found this project in a few months, with no one to ask, what would stop them first?</div>
+  <div class="line"></div>
+</div>
+
+<div class="sign"><span>Tester's signature <span class="b"></span></span><span>Received by the authors (initials) <span class="b bs"></span></span></div>
+
+<div class="foot">
+  <span><b>Fix it or log it.</b> Everything a tester marked <i>stall</i> or <i>fail</i> is either fixed or written into the known-issues log. Silence is the only failure.</span>
+  <span>CS 301R</span>
+</div>
+
+</body>
+</html>

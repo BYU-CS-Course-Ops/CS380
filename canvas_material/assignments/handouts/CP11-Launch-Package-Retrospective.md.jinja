@@ -1,0 +1,72 @@
+## The short version
+
+Ship the package that lets your project outlive the semester: an **as-built architecture overview**, a **setup guide verified by one more cold-eyed stranger** (onboarding test round 2), a **roadmap framed as an invitation**, an **honest known-issues and tech-debt log**, an **onboarding guide** answering a newcomer's five questions, and **at least one automated test** a newcomer can run — plus a **written retrospective** that checks your original claims against what actually happened. Tag the repo. That's launch.
+
+---
+
+## Why this assignment exists
+
+A semester project usually dies the day grades post — not because the code stops working, but because everything needed to continue it lived in its authors' heads. The launch package is the antidote: the founder's final responsibility of **writing the project down well enough that it can be picked up** — by a capstone team, a successor, a stranger on the internet, or you-in-eight-months, who is functionally a stranger too. This is the "lasting" half of the course's promise made real: projects built to last are projects whose knowledge survives their builders' attention.
+
+The retrospective trains a rarer and more valuable skill: **checking your own claims against evidence, in writing, without spin.** Fourteen weeks ago you claimed a need was real and a scope was feasible; now you have data. The discipline of writing "we assumed X; here's what happened; here's what we learned" — blamelessly, per the postmortem culture the best engineering organizations run on — is what turns experience into judgment. Note what the rubric rewards: a *refuted* assumption, honestly documented, scores **higher** than a victory lap, because a disproven assumption documented is discovery working. People and organizations that can do this improve; those that can't repeat themselves. It is also, plainly, the most credible artifact you'll show capstone faculty — and honesty here is verified live in Demo Day Q&A.
+
+---
+
+## What to produce
+
+**The Launch & Onboarding Package** (merged to the repo; tag `v0.1-launch`):
+
+1. **Architecture overview** (`docs/architecture.md`) — the design-doc diagrams refreshed to **as-built**; delete what you didn't build.
+2. **Setup verification** — your setup and onboarding docs, followed by a *fresh* classmate in the {{ S25_DATE }} **onboarding test round 2**, using the <file path="../../resources/Contributor-Readiness-Checklist.pdf" canvas_folder="Course Handouts" /> as the script. The signed checklist is the evidence; every *stall* or *fail* on it is fixed or logged.
+3. **Roadmap** (`docs/roadmap.md`) — beyond December, framed as invitation: what a joiner would do first, what the foundation supports (only if it does).
+4. **Known-issues and tech-debt log** (`docs/known-issues.md`, one file) — every labeled throwaway corner, deliberate cut, and unfixed audit or onboarding-test finding, written down. *Undocumented* debt is the failure mode; documented debt is a joinability feature.
+5. **Onboarding guide** (`docs/onboarding.md`) — the five newcomer needs answered: what is this / am I welcome / how do I start / where do I start / will anyone respond — with promises you'll actually keep.
+6. **A test a newcomer can run** — at least one automated test on your slice's core logic, run by the command your setup guide names, passing at the launch tag. Any codebase someone else will change owes them a way to know they didn't break it. One real test beats twenty that assert nothing.
+
+**The Retrospective** (one document per project, submitted with the package):
+
+- **What assumptions held — and which didn't** (claims from CP2/CP3/MVP Plan vs. evidence).
+- **What the MVP validated, and what it didn't** — open questions stated plainly.
+- **What we'd do differently** — process and product, each actionable.
+- **Where the project goes next as others join** — consistent with the roadmap, no overselling.
+
+---
+
+## Requirements & constraints
+
+- **Fix it or log it — silence is the only failure.** Nothing ships undocumented; nothing documented is untrue.
+- **The testing floor.** No automated test on the core logic caps *Contributor-readiness* at Developing, however good the rest is.
+- **The retro must agree with the repo.** A retrospective claiming "smooth onboarding" over a failed setup test gets rewritten — the two artifacts are cross-checked.
+- **Blameless means blameless.** Causes live in assumptions and systems ("we assumed the API was free; it rate-limited us"), never in named persons.
+- **Everything via PR**, to the end.
+
+---
+
+## Grading
+
+Scored on a 100-point analytic rubric; **≈5% of the course grade** (bundle with CP12). One grade per project; on team projects, adjusted by individual contribution.
+
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp11) }}
+
+**Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
+
+---
+
+## Tips and common pitfalls
+
+- **The package is assembly, not invention.** Almost everything exists in draft — the work is refresh, verify, and make true.
+- **The as-built pass matters most on the architecture doc:** stale diagrams are worse than no diagrams, because a newcomer trusts them.
+- **The two retro anti-patterns are equally graded:** the victory lap (nothing learned) and the flagellation (equally nothing learned). The middle is *claims, evidence, learning*.
+- **A newcomer-facing gap can become a `good first issue`** — that's not cheating; that's the system working.
+- **Ask the January question:** "if someone forked this with no one to ask — what kills them first?" Fix or log that item today.
+
+---
+
+## Submission
+
+Package merged, repo tagged `v0.1-launch`, retrospective + test sheet submitted via LMS by end of day **{{ S25_DAY }}, {{ S25_DATE }}.** The package is what capstone faculty browse before Demo Day — and the "where does it go next?" answer your final pitch (CP12) points at.
+
+---
+
+*Part of the Final bundle: **CP11 (the launch) + CP12 (the defense).** Readings: [Postmortem Culture](https://sre.google/sre-book/postmortem-culture/) (Google SRE), [Building Welcoming Communities](https://opensource.guide/building-community/). See the grading rubric above and the Contributor-Readiness Checklist from <course-link type="page" id="s23">Session 23</course-link>.*

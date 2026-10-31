@@ -92,8 +92,8 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 
 ## Before Session 21 — by Fri, Nov 13
 
-- [ ] **Deploy sandbox, then `fall26`** so the **Repo Audit Sheet** is on Canvas (linked from the CP10 handout) before Session 21 previews it. The Session 21 page goes with it if its prose is written by then (the deck is already wired to it).
-- [ ] **Write and publish the Session 22 student page** before this deploy: the Session 21 page and deck (slide 11) tell students to read it ahead.
+- [x] **Deploy sandbox, then `fall26`** (done Oct 30) so the **Repo Audit Sheet** is on Canvas (linked from the CP10 handout) before Session 21 previews it. The Session 21 page goes with it if its prose is written by then (the deck is already wired to it).
+- [x] **Write and publish the Session 22 student page** (done Oct 30) before this deploy: the Session 21 page and deck (slide 11) tell students to read it ahead.
 - [ ] **Print** a few Repo Audit Sheets (`canvas_material/resources/Repo-Audit-Sheet.pdf`) to pass around in Session 21.
 
 ## Before Session 22 — by Tue, Nov 17
@@ -102,3 +102,8 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 - [ ] **Print** the Demo Feedback Sheet (`canvas_material/resources/Demo-Feedback-Sheet.pdf`), two pages per student (one half per demo watched; cut).
 - [ ] **Print** the CP10 Scoring Sheet (`lectures/Session22-CP10-Scoring-Sheet.pdf`) for yourself.
 - [ ] **Open each project's `cp10` tag URL** from its Canvas submission and confirm the tag exists, before the first demo.
+
+## Before Session 23 — by Fri, Nov 20
+
+- [ ] **Print** the Contributor-Readiness Checklist (`canvas_material/resources/Contributor-Readiness-Checklist.pdf`), one per student.
+- [ ] **Pick 3–4 anonymized findings** from the Session 22 audit sheets for slide 7.

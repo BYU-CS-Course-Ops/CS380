@@ -379,23 +379,31 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 
 | Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
 |---|---|---|---|---|---|
-| Launch-package completeness | 30 | Architecture overview, roadmap, known-issues, tech-debt log, onboarding all present and useful | Mostly complete | Gaps | Skeletal |
-| Setup verification | 15 | Setup independently reproducible from docs | Reproducible with minor friction | Unclear | Fails |
-| Retrospective honesty & insight | 25 | Candid about what held, what the MVP validated, what's next | Honest reflection | Surface-level | Missing/spin |
-| Future-work framing | 20 | Compelling, realistic next steps without overselling | Reasonable | Vague | Absent or inflated |
-| Contributor-readiness | 10 | A new contributor could get up to speed and start building | Mostly | Partial | No |
+| Launch-package completeness | 30 | All present, current, and genuinely useful; the architecture matches what was built, and the log names every corner, cut, and open finding | All present; one is thin or a little out of date | One missing, or several stale or thin | Most missing, or present only as headings |
+| Setup verification | 15 | The tester got it running, tests passing, from the docs alone; anything they hit is fixed or logged | Running with minor friction, and the friction fixed or logged | Ran only with help, or stalls left unaddressed | The tester couldn't get it running, or no test happened |
+| Retrospective honesty & insight | 25 | Each major claim checked against evidence; refuted assumptions stated plainly with what was learned; changes you'd make are specific | Honest and mostly evidence-based; some claims asserted rather than checked | Surface-level, or a victory lap, or a list of regrets | Missing, or spin the repository contradicts |
+| Future-work framing | 20 | Specific, sequenced next steps a newcomer could start on; claims only what the foundation supports | Reasonable next steps, a little general | Vague ("add more features"), or disconnected from the roadmap | Absent, or promises the code can't support |
+| Contributor-readiness | 10 | All five needs pass in the onboarding test, and the test on the core logic checks something real | The five needs mostly met, and the testing floor met | Gaps in the five needs, or no automated test on the core logic (a missing test caps this here) | A newcomer couldn't get started |
 
 **What it measures** (handout table, Canvas criterion description).
-- **Launch-package completeness** — Architecture, roadmap, known-issues, tech-debt log, and onboarding all present and genuinely useful.
-- **Setup verification** — Setup independently reproducible from the docs — evidenced by the round-2 test sheet.
-- **Retrospective honesty & insight** — Candid about what held, what the MVP validated, what's next — evidence over narrative, weighted heavily on purpose.
-- **Future-work framing** — Compelling, realistic next steps without overselling — a roadmap a serious outside reader could believe (a potential contributor, a maintainer, a capstone faculty member).
-- **Contributor-readiness** — A new contributor could get up to speed and start building — the course's through-line, at the finish.
+- **Launch-package completeness** — The package pieces are in the repository at the launch tag, each true and useful to a newcomer: the architecture overview, the roadmap, the known-issues and tech-debt log, and the onboarding guide.
+- **Setup verification** — A classmate who hadn't seen the project set it up from your docs alone in the onboarding test, and you fixed or logged whatever they hit. The signed checklist is the evidence.
+- **Retrospective honesty & insight** — Your claims from the start of term checked against what happened: what held, what didn't, what the MVP validated, and what you'd do differently. Evidence over narrative, weighted heavily on purpose.
+- **Future-work framing** — Where the project goes next as others join: next steps a serious outside reader could believe, whether a potential contributor, a maintainer, or a faculty member weighing it for a capstone.
+- **Contributor-readiness** — Could a new contributor get up to speed and start building? The five newcomer needs answered, and at least one automated test on the core logic so a newcomer can tell whether they broke something.
+
+**What each criterion is looking for** (student-facing, rubrics page).
+- **Writing it down well enough to be picked up.** Everything in the package should be true at the launch tag. A short, accurate document beats a long, stale one, because a newcomer trusts what they read.
+- **Retrospective honesty** rewards checking claims, not defending them. A refuted assumption, documented with what you learned, scores *higher* than a victory lap. The retrospective is cross-checked against the repository and the onboarding test: a retro that claims "smooth onboarding" over a failed setup step reads as spin.
+- **Blameless means blameless.** Causes live in assumptions and systems ("we assumed the API was free; it rate-limited us"), never in named people.
+- **Future-work framing** is read by someone deciding whether to join. Say what a newcomer would do first, and claim only what the code supports.
+- **The testing floor:** at least one automated test on the slice's core logic, run by the command your setup guide names, passing at the launch tag. Without one, *Contributor-readiness* caps at Developing.
 
 **Instructor notes.**
-- **Launch-package completeness** and **Setup verification** assess whether a new contributor can actually get the project running and start building — the central deliverable of the course.
-- **Retrospective honesty & insight** is weighted heavily because honest reflection (what assumptions held, what the MVP truly validated) is graded over a rosy narrative.
+- **Launch-package completeness** and **Setup verification** assess whether a new contributor can actually get the project running and start building — the central deliverable of the course. Grade at the `v0.1-launch` tag; the signed Contributor-Readiness Checklist from the onboarding test is the evidence for Setup verification.
+- **Retrospective honesty & insight** is weighted heavily because honest reflection (what assumptions held, what the MVP truly validated) is graded over a rosy narrative. Cross-check it against the repo and the onboarding-test sheet.
 - **Future-work framing** rewards a credible roadmap that doesn't oversell — the lead may pitch this to capstone faculty.
+- **Testing floor (decided Oct 30):** CP11 requires at least one automated test on the slice's core logic; missing it caps *Contributor-readiness* at Developing. This raises CP10's Exemplary-only rule because CP11 asks whether someone else can safely change the code.
 
 ## CP12 — Final Pitch + Demo
 *Team (or solo) · Completes the 10% Final bundle · Defended at Demo Day (capstone faculty invited)* · **draft — not yet in student-facing wording**
