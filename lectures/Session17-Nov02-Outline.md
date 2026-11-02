@@ -65,13 +65,14 @@ By the end of this session, a student can:
 
 ## Timed outline (≈75 min)
 
-### 1. Framing — the build starts today; the tracker is the project's memory — 7 min
+### 1. Framing — the build starts today; the tracker is the project's memory — 9 min
 - The shift: Weeks 1–8 produced *documents*; Weeks 9–13 produce *working software* — and the tracker is where the two meet.
+- Founder lens: a good backlog isn't for you — it's how a team coordinates (and how a solo founder remembers), how the instructor audits progress (Wk 11), and how a future contributor finds a way in (today's labels). Also the plain truth: **unwritten work doesn't get done.**
 - **The build starts today — say it plainly** (its own slide, ~2 min). Nothing waits on Wednesday's sizing, because every project's first issue is the same: a **walking skeleton** (Alistair Cockburn's term) — the thinnest end-to-end thing in the stack the design commits to. It installs, builds, and runs; it shows *something* (one page, one command, one endpoint); and it has a test command that passes, even if the test is trivial.
   - **Why first, anywhere:** every later issue lands on it; it turns the stack choice into a fact before anything depends on it; and it's the first code to go through the project's own PR workflow. *(In this course, it's also what the setup guide in Session 20 documents, and what a stranger installs in the Week-11 audit.)*
   - **Prop Loft's** is at [`session-13`](https://github.com/prop-loft/prop-loft/tree/session-13): three commits before any feature — the Django project, the item and bin models, and a page that lists items, with two tests. That's the size to aim for.
   - **The ask:** file it as a task in today's workshop, first in M1, and open its PR before Wednesday. If a repo already runs end to end, the skeleton is done; say so, and the first slice issue starts instead.
-- Founder lens: a good backlog isn't for you — it's how a team coordinates (and how a solo founder remembers), how the instructor audits progress (Wk 11), and how a future contributor finds a way in (today's labels). Also the plain truth: **unwritten work doesn't get done.**
+- **What a tracker has to do — the map for the rest of the day** (~2 min). Every tracker, on any tool, has five jobs, each with a default this session sets up: **describe each piece of work** (a task form with acceptance criteria, §2) · **notice what's new** (a `needs triage` label, §4) · **group work by the value it delivers** (epics as parent issues with sub-issues, §2) · **group work by when it's due** (milestones, §3) · **show each item's state** (a public project board, §4). **Defaults, not rules:** change any of them with a reason written in CONTRIBUTING — the same rule as the git policies in Session 13. The one fixed piece is a review state, because every project works through PRs.
 
 ### 2. The decomposition ladder — 14 min
 - **MVP → epics → issues**, walked on Prop Loft's design:
@@ -95,8 +96,8 @@ By the end of this session, a student can:
 - Milestone honesty: capacity ≈ number of maintainers × ~7 outside hours × 2 weeks, minus review overhead. Count it, then cut. (The Session-8 arithmetic, now with real numbers.)
 - The roadmap beyond December is part of CP8: where the project goes **as others join** — epics you're *not* doing this semester, written down (`docs/roadmap.md`, §10).
 
-### 4. Boards, labels, and pathways — 10 min
-- **Framing for the whole section: the job, then the default.** The tracker has jobs (describe work, notice what's new, group by value, group by date, show state); the columns, labels, and forms below are **suggested defaults, changeable with a reason written in CONTRIBUTING** — the same rule as the git policies in Session 13. Most students take the defaults; the instruction should still be about the jobs.
+### 4. Boards, labels, and pathways — 8 min
+- **The job, then the default** — §1's five jobs, back for the two this section sets up (noticing what's new, showing state). The columns, labels, and forms below are the defaults from that slide, changeable with a reason in CONTRIBUTING. Most students take the defaults; the instruction should still be about the jobs.
 - **Noticing what's new.** Session 16 asked each project how it will know which issues are still waiting (CP7's norms). Revisit the answer as triage: the default is a `needs triage` label the request forms apply (create it first: forms skip missing labels silently); a *New* column on the board or a fixed weekly read also work.
 - **A board isn't automatic** — a GitHub Project is a separate object that *holds* issues and PRs. Walk through Prop Loft's board as it already exists (decided Oct 30: it was built by hand in prep, so show each step's result in its settings rather than re-creating it):
   1. **Create it at the organization:** org page → **Projects** → **New project** → start from **Board** (blank). Check **Import items from repository** and pick the project repo: that pulls in every existing issue and makes it the project's default repo.

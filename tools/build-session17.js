@@ -100,10 +100,10 @@ async function build() {
   s = mk(); s.background = { color: C.white };
   header(s, "Today", "Turn your design into work someone can pick up");
   const plan = [
-    [FA.FaBrain, "The build starts today; the tracker is its memory", "7 min"],
+    [FA.FaBrain, "The build starts today; the tracker is its memory", "9 min"],
     [FA.FaSitemap, "The decomposition ladder: MVP → epics → issues", "14 min"],
     [FA.FaCalendarAlt, "Milestones and the honest calendar", "10 min"],
-    [FA.FaColumns, "The board, labels, and pathways in", "10 min"],
+    [FA.FaColumns, "The board, labels, and pathways in", "8 min"],
     [FA.FaTools, "Workshop: decompose your own MVP", "28 min"],
     [FA.FaRoute, "Wednesday: estimate, sequence, commit", "6 min"]
   ];
