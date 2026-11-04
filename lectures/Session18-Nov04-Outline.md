@@ -7,7 +7,7 @@
 - **Read (short):** **Henrik Kniberg — [*Making sense of MVP*](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp)** — the skateboard picture, properly understood: deliver something *usable end-to-end* at every stage, not a pile of parts. (Assigned now because it drives today's slice-planning; it returns Monday for MVP thinking proper.)
 **Maps to:** Design Week 9, Session B — *estimation & sequencing practice; plan the vertical slice for the MVP.*
 
-> **Status: OUTLINE (v2) · deck built** (`canvas_material/lectures/powerpoint/Session18-SizeFitOrder.pptx`, 23 slides, `tools/build-session18.js`) · **Fit Check Sheet built.** A working session (Session B). Estimation is taught fast and practiced on each project's real backlog; the session's product is a **sequenced M1 with a committed vertical slice.** **CP8 Project Plan & Roadmap due end of today.** *v2: every demo runs on Prop Loft's real M1 and M2 issues (tag `session-17`, the canonical board); sizes are tied to the course week (S ≈ one sitting, L ≈ a whole week of one person's hours) instead of the v1 hour bands; the estimate → fit check → cut → sequence → slice statement chain is worked end to end on Prop Loft before students run it on their own.*
+> **Status: OUTLINE (v2) · deck built** (`canvas_material/lectures/powerpoint/Session18-SizeFitOrder.pptx`, 24 slides — Nov 4: the Size field demo moved ahead of the sizing workshop as slide 15, so students see it before they do it; §3 is now 20 min, §5 15 — `tools/build-session18.js`) · **Fit Check Sheet built.** A working session (Session B). Estimation is taught fast and practiced on each project's real backlog; the session's product is a **sequenced M1 with a committed vertical slice.** **CP8 Project Plan & Roadmap due end of today.** *v2: every demo runs on Prop Loft's real M1 and M2 issues (tag `session-17`, the canonical board); sizes are tied to the course week (S ≈ one sitting, L ≈ a whole week of one person's hours) instead of the v1 hour bands; the estimate → fit check → cut → sequence → slice statement chain is worked end to end on Prop Loft before students run it on their own.*
 
 ---
 
@@ -73,7 +73,7 @@ By the end of this session, a student can:
   > *On Nov 18 we will demo: a wardrobe volunteer searches "waistcoat," opens the men's size M waistcoat, checks it out to an actor for the fall show, due back Dec 5, and sees it marked out to that actor.*
 - **Live on Prop Loft, two moments** — step by step in the **run sheet** (appendix), with its before-class prep:
   - **§3, the design-doc PR** (~3 min): the cut is a design change, so it goes in through a pull request like any other — branch `docs/design-plain-forms`, already built locally (design §6 gains *Decision: plain forms for the MVP, HTMX later*; §4's Web UI row and §7's HTMX risk agree with it; the README's course-tags table gets the `session-18` row). Push, open, self-review, squash-merge, live.
-  - **§5, the board** (~4 min, and the students' own steps): the Size field and sizes, the `slice` label, the sequence, the slice statement on M1.
+  - **The board, in two parts** (~2 min each, and the students' own steps): **§3**, the Size field and sizes, just before students size their own; **§5**, the `slice` label, the sequence, the slice statement on M1.
   - After class, the merge commit is tagged **`session-18`**.
 - **Slides:** sizes in one slide (with the anchor); the capacity arithmetic; the demo round (three issues, each with the maintainer's size revealed after the vote); the M1 tally and the cut; the M2 check; sequencing heuristics; the skateboard figure (with Kniberg's caveat that it's about *learning something usable*, not shoddy work); the slice-statement format with Prop Loft's.
 - **Voting:** fingers, revealed together on "3-2-1": one finger XS through five fingers XL. No cards to print.
@@ -102,12 +102,13 @@ By the end of this session, a student can:
   - Keep it to about 2 minutes an issue; if one conversation is running long, that's the trap working — let it, and shorten the next.
 - **The capacity arithmetic:** members × ~7 outside hours/week × 2 weeks (a solo founder: 14 h for M1; a team of three: 42 h), minus review overhead. Prop Loft's is 1 × ~10 × 2 = 20. Reveal the maintainer's tally: **21 against 20.**
 
-### 3. The fit check and the cut, on Prop Loft — then yours — 18 min
+### 3. The fit check and the cut, on Prop Loft — then yours — 20 min
 - **Prop Loft first (~7 min, including the PR):** "fits on paper" isn't fitting — the self-reviews aren't in the 21. The cut takes the design's own fallback (plain forms; HTMX after the MVP) → 18. Then **name the next cut now** (the list's "Out" marker → M2), so that if Nov 11 shows M1 behind, the decision is already made and nobody argues about it under pressure. Close with the M2 check: 19 of 20, the next cut named, the two people booked.
   - Point out what the cut *didn't* touch: the slice. Cuts come from what's off the slice and from *how* things get built (the plain-form fallback), before they come from what the demo shows.
   - **A cut that changes the design gets written down where the design lives — so do it now (~3 min, run sheet A).** Push Prop Loft's prepared branch, open the PR so the room sees the template fill, show the §6 decision in *Files changed* (same shape as every other decision: chosen, alternative, why, evidence, what would change our mind), post the self-review, squash-merge. Then one comment on *Check an item out from its page* pointing at the merged PR: the issue's size changed because the design did.
+- **Watch the Size field go on (~2 min, run sheet B1–B2):** on Prop Loft's *Plan* view, create the Size field and fill in the maintainer's sizes (post-cut, so the checkout form is M). Epics stay unsized.
 - **Estimate your M1 (~11 min):**
-  - Add the **Size** field to your board (prep, live board steps) — or your project's own scheme, with its reason in CONTRIBUTING.
+  - Add the **Size** field to your board, as just shown — or your project's own scheme, with its reason in CONTRIBUTING.
   - Each member sizes every M1 issue silently, then reveal together and **discuss only the disagreements** (planning poker minus the theater). *Solo: size alone, then trade with your review partner — each sizes the other's M1 cold from the issue text. Where your partner can't size an issue, the acceptance criteria are missing something: fix them.*
   - Every **L** gets one question: *split it or schedule it first?* Every **XL** gets split now.
   - Tally against your budget. **If M1 doesn't fit, cut now** — move issues to M2, shrink acceptance criteria, take a fallback, or demote features to the roadmap. (The Session-8 narrowing moves, third appearance.) Then name your next cut.
@@ -122,8 +123,8 @@ By the end of this session, a student can:
 - Anti-pattern named: **broad-shallow** ("all the screens, none wired") — demos badly, proves nothing. The slice demos *itself*. *(Prop Loft's broad-shallow version would be a search page, a detail page, and a checkout form, all styled, with no checkout model behind them.)*
 - **The slice statement**, shown on Prop Loft (prep): *"On Nov 18 we will demo: [user] does [end-to-end action] and sees [result]."* Specific enough to rehearse: a real search term, a real item, a real due date.
 
-### 5. Sequence your M1 + commit the slice — 17 min
-- **Watch it once (~4 min, run sheet B):** on Prop Loft's board — add the Size field and fill it in, create the `slice` label and put it on the five slice issues, order Ready and the top of Backlog, replace M1's description with the slice statement.
+### 5. Sequence your M1 + commit the slice — 15 min
+- **Watch it once (~2 min, run sheet B3–B5):** on Prop Loft's board (the sizes went on in §3) — create the `slice` label and put it on the five slice issues, order Ready and the top of Backlog, replace M1's description with the slice statement.
 - **Then each project:**
   - Order the M1 backlog — the walking skeleton from Monday sits at the top (or in review) until it merges, because every slice issue lands on it; Ready holds what can start now, in order, and the top of Backlog what follows once its dependencies merge; write any "Needs" edges into the issues that lack them.
   - Create the `slice` label and mark the slice issues.
@@ -171,7 +172,7 @@ By the end of this session, a student can:
 ## Appendix — classroom handouts (Session 18)
 
 - **Fit Check Sheet** (`canvas_material/resources/Fit-Check-Sheet.html` + `.pdf`, one page, one per student; §2–§5) — **built.** The five sizes with their hours and a line for the project's anchor; the budget (people × hours × weeks − review); a sizing table for the first milestone (mine · theirs · agreed · hours · slice? · needs) with the total and a three-way verdict (fits with room · fits on paper, which means it doesn't · doesn't fit); where we disagreed and what the acceptance criteria now say; the cut moves in order (off the slice, a fallback, shrink the criteria, defer) with the cut made and the next cut; the slice statement. A working copy, not a turn-in. *(v1 planned a half-sheet of sizes and arithmetic; the sizing table needs the full page.)*
-- **Sequencing heuristics + slice statement format** (§4) — slides 16–19, with Prop Loft's sequence and statement.
+- **Sequencing heuristics + slice statement format** (§4) — slides 17–20, with Prop Loft's sequence and statement.
 - **CP8 rubric:** the Assignment Rubrics page (Project Plan & Roadmap).
 
 ---
@@ -211,7 +212,7 @@ Everything here happens on the canonical repo, `prop-loft/prop-loft`, in front o
 5. **Squash and merge.** Check that the title ends *(#N)*; keep the prefilled body. **Delete branch.**
 6. **Comment on *Check an item out from its page*:** *"Sized M rather than L after #N: the MVP uses plain forms (design §6)."*
 
-### B. The board — §5, "watch it once" (~4 min)
+### B. The board — in two parts: steps 1–2 in §3, before students size their own (~2 min); steps 3–5 in §5, "watch it once" (~2 min)
 
 1. **Size field:** in the *Plan* table, the **+** at the right end of the header row → **+ Add field** → the *Add issue fields* dialog → **Create a project field** (the link in its top line, not *Manage Issue Fields*) → **Single select** (fields are created from a table; a board's View → Fields only shows existing ones), name **Size**, options **XS, S, M, L, XL** → **Save**. *(Command line: `gh project field-create <number> --owner prop-loft --name Size --data-type SINGLE_SELECT --single-select-options XS,S,M,L,XL`.)*
 2. **Sizes,** in the *Plan* view:

@@ -133,9 +133,9 @@ async function build() {
   const plan = [
     [FA.FaComments, "Estimates are conversations, not promises", "5 min"],
     [FA.FaTshirt, "T-shirt sizes, demonstrated on Prop Loft", "12 min"],
-    [FA.FaCut, "The fit check and the cut, then size your own", "18 min"],
+    [FA.FaCut, "The fit check and the cut, then size your own", "20 min"],
     [FA.FaRoute, "Sequencing and the vertical slice", "12 min"],
-    [FA.FaColumns, "Order your M1 and commit the slice", "17 min"],
+    [FA.FaColumns, "Order your M1 and commit the slice", "15 min"],
     [FA.FaClipboardCheck, "CP8 check and wrap", "11 min"]
   ];
   for (let i = 0; i < plan.length; i++) {
@@ -447,11 +447,31 @@ async function build() {
   footer(s);
   s.addNotes("Ninety seconds. M2 only needs coarse sizes today, but the check still matters: nineteen of twenty means no slack for anything M1 doesn't finish. First click: so the next cut is named here too. Second click: the dependencies on people. A co-design session and a borrowed phone have calendars that aren't yours. The italic line: don't count on a contributor to do your good first issues; plan as if nobody comes.");
 
+  // 15a Live board: the Size field
+  s = mk(); s.background = { color: C.white };
+  header(s, "On the board · live", "Add a Size field, then size the milestone");
+  const sizeSteps = [
+    ["Size field", "Plan table: + → Add field → Create a project field → Single select: XS to XL"],
+    ["Sizes", "Fill them in from the table view; it's faster than opening each card"]
+  ];
+  for (let i = 0; i < sizeSteps.length; i++) {
+    const y = 1.95 + i * 1.05;
+    card(s, 0.6, y, 12.1, 0.9, C.cardBg);
+    s.addShape(pres.shapes.OVAL, { x: 0.8, y: y + 0.2, w: 0.5, h: 0.5, fill: { color: C.teal } });
+    s.addText(String(i + 1), { x: 0.8, y: y + 0.2, w: 0.5, h: 0.5, color: C.white, fontFace: F.head, fontSize: 18, bold: true, align: "center", valign: "middle", margin: 0 });
+    s.addText(sizeSteps[i][0], { x: 1.5, y, w: 3.0, h: 0.9, color: C.tealDk, fontFace: F.body, fontSize: 18, bold: true, valign: "middle", margin: 0 });
+    s.addText(sizeSteps[i][1], { x: 4.5, y, w: 8.0, h: 0.9, color: C.ink, fontFace: F.body, fontSize: 16.5, valign: "middle", margin: 0 });
+  }
+  bar(s, 4.25, 1.15, C.amberBg, "Epics stay unsized.", "Their sub-issues carry the sizes. A size on the epic would count the same work twice.", 0);
+  s.addText("The Size field step is in Canvas → Course Resources → Setting Up Your Board, §5.", { x: 0.6, y: 6.32, w: 12.1, h: 0.5, color: C.slate, fontFace: F.body, fontSize: 15, italic: true, valign: "middle", margin: 0 });
+  footer(s);
+  s.addNotes("About two minutes, live on Prop Loft; run sheet B, steps 1 and 2. Create the field from the Plan table: a board view's Fields menu only lists fields that already exist. Then fill in the six M1 sizes and the seven M2 sizes from the run sheet's table; they're the maintainer's sizes from the last few slides, after the cut, so the checkout form goes in as M. Point out that the epics stay blank. Then straight into the workshop: they do exactly this on their own board.");
+
   // 15 Workshop: estimate your M1
   s = mk(); s.background = { color: C.navy };
   darkHeader(s, "Workshop · 11 min", "Size your first milestone, then check that it fits");
   const est = [
-    ["1", "Add a Size field", "New view → Table; + → Add field → Create a project field → Single select, XS to XL. Or your own scheme, with its reason."],
+    ["1", "Add a Size field", "As you just saw: a table view, + → Add field → Create a project field → Single select, XS to XL. Or your own scheme, with its reason."],
     ["2", "Size silently, reveal together", "Talk only about the disagreements. Solo: trade with your review partner and size each other's cold."],
     ["3", "Question every L, split every XL", "An L: split it, or schedule it first?"],
     ["4", "Tally against your budget", "Sheet boxes 2 and 3. If it doesn't fit, cut now (box 5), then name your next cut."]
@@ -559,10 +579,8 @@ async function build() {
 
   // 20 Live board steps
   s = mk(); s.background = { color: C.white };
-  header(s, "On the board · live", "Five changes, then your turn");
+  header(s, "On the board · live", "Three more changes, then your turn");
   const boardSteps = [
-    ["Size field", "Plan table: + → Add field → Create a project field → Single select: XS to XL"],
-    ["Sizes", "Fill them in from a table view; it's faster than opening each card"],
     ["slice label", "Create it, then put it on the issues the demo walks, and only those"],
     ["Order", "Ready top to bottom in sequence; what's blocked waits at the top of Backlog"],
     ["Slice statement", "Milestones → M1 → Edit: replace the description with the sentence"]
@@ -575,9 +593,9 @@ async function build() {
     s.addText(boardSteps[i][0], { x: 1.5, y, w: 3.0, h: 0.76, color: C.tealDk, fontFace: F.body, fontSize: 17, bold: true, valign: "middle", margin: 0 });
     s.addText(boardSteps[i][1], { x: 4.5, y, w: 8.0, h: 0.76, color: C.ink, fontFace: F.body, fontSize: 15.5, valign: "middle", margin: 0 });
   }
-  s.addText("The Size field step is in Canvas → Course Resources → Setting Up Your Board, §5.", { x: 0.6, y: 6.32, w: 12.1, h: 0.5, color: C.slate, fontFace: F.body, fontSize: 15, italic: true, valign: "middle", margin: 0 });
+  s.addText("The sizes went on before you sized your own; these three build on today's sequencing.", { x: 0.6, y: 5.0, w: 12.1, h: 0.5, color: C.slate, fontFace: F.body, fontSize: 15, italic: true, valign: "middle", margin: 0 });
   footer(s);
-  s.addNotes("About four minutes, live on Prop Loft; the run sheet, part B, has the sizes table and the exact statement. Use the Plan table view for sizes. Leave the setup guide off the slice label: it's in M1 but not on the demo's path, and that distinction is the point. When you reorder, say out loud why the blocked issues wait in Backlog. Leave this slide up while they work.");
+  s.addNotes("About two minutes, live on Prop Loft; run sheet B, steps 3 to 5, with the exact statement. The sizes are already on from section 3. Leave the setup guide off the slice label: it's in M1 but not on the demo's path, and that distinction is the point. When you reorder, say out loud why the blocked issues wait in Backlog. Leave this slide up while they work.");
 
   // 21 Workshop: order + commit
   s = mk(); s.background = { color: C.navy };
