@@ -375,60 +375,76 @@ One analytic grid per graded checkpoint (CP1–CP12, design §6): weighted crite
 # Phase 5 — Launch & Reflect
 
 ## CP11 — Launch Package + Retrospective
-*Team (or solo) · Part of the 10% Final bundle, with CP12* · **draft — not yet in student-facing wording**
+*Team (or solo) · Part of the 10% Final bundle, with CP12* · **published**
 
 | Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
 |---|---|---|---|---|---|
 | Launch-package completeness | 30 | All present, current, and genuinely useful; the architecture matches what was built, and the log names every corner, cut, and open finding | All present; one is thin or a little out of date | One missing, or several stale or thin | Most missing, or present only as headings |
 | Setup verification | 15 | The tester got it running, tests passing, from the docs alone; anything they hit is fixed or logged | Running with minor friction, and the friction fixed or logged | Ran only with help, or stalls left unaddressed | The tester couldn't get it running, or no test happened |
-| Retrospective honesty & insight | 25 | Each major claim checked against evidence; refuted assumptions stated plainly with what was learned; changes you'd make are specific | Honest and mostly evidence-based; some claims asserted rather than checked | Surface-level, or a victory lap, or a list of regrets | Missing, or spin the repository contradicts |
+| Retrospective honesty & insight | 25 | Each major claim checked against evidence, and each verdict, held or not, backed by it; claims that held say why the call was right; claims that didn't are stated plainly with what was learned; changes you'd make are specific; the reflection names who was served and what was learned, specifically | Honest and mostly evidence-based; some claims asserted rather than checked | Surface-level, or verdicts asserted rather than shown, in either direction: success claimed without evidence, or setbacks listed to look reflective | Missing, or spin the repository contradicts |
 | Future-work framing | 20 | Specific, sequenced next steps a newcomer could start on; claims only what the foundation supports | Reasonable next steps, a little general | Vague ("add more features"), or disconnected from the roadmap | Absent, or promises the code can't support |
 | Contributor-readiness | 10 | All five needs pass in the onboarding test, and the test on the core logic checks something real | The five needs mostly met, and the testing floor met | Gaps in the five needs, or no automated test on the core logic (a missing test caps this here) | A newcomer couldn't get started |
 
 **What it measures** (handout table, Canvas criterion description).
 - **Launch-package completeness** — The package pieces are in the repository at the launch tag, each true and useful to a newcomer: the architecture overview, the roadmap, the known-issues and tech-debt log, and the onboarding guide.
 - **Setup verification** — A classmate who hadn't seen the project set it up from your docs alone in the onboarding test, and you fixed or logged whatever they hit. The signed checklist is the evidence.
-- **Retrospective honesty & insight** — Your claims from the start of term checked against what happened: what held, what didn't, what the MVP validated, and what you'd do differently. Evidence over narrative, weighted heavily on purpose.
+- **Retrospective honesty & insight** — Your claims from the start of term checked against what happened: what held, what didn't, what the MVP validated, and what you'd do differently; and each member's reflection on whom the work served. Evidence over narrative, weighted heavily on purpose.
 - **Future-work framing** — Where the project goes next as others join: next steps a serious outside reader could believe, whether a potential contributor, a maintainer, or a faculty member weighing it for a capstone.
 - **Contributor-readiness** — Could a new contributor get up to speed and start building? The five newcomer needs answered, and at least one automated test on the core logic so a newcomer can tell whether they broke something.
 
 **What each criterion is looking for** (student-facing, rubrics page).
 - **Writing it down well enough to be picked up.** Everything in the package should be true at the launch tag. A short, accurate document beats a long, stale one, because a newcomer trusts what they read.
-- **Retrospective honesty** rewards checking claims, not defending them. A refuted assumption, documented with what you learned, scores *higher* than a victory lap. The retrospective is cross-checked against the repository and the onboarding test: a retro that claims "smooth onboarding" over a failed setup step reads as spin.
+- **Retrospective honesty** rewards checking claims, not defending them, and **the verdict itself isn't graded; the evidence is.** A claim that held, shown with evidence, was a good call: say why it was right and whether you'd make it the same way again. A claim that didn't hold, written down with what you learned, is discovery working. Either earns full credit. There is no quota of failures, and an invented setback reads as spin just like an invented success.
+- **"Held" means it could have failed.** A claim counts as held when something could have shown it wrong and didn't, like the falsifier on your first-version plan. A claim nothing ever tested is *open*, and saying so is honest.
+- The retrospective is cross-checked against the repository and the onboarding test: a retro that claims "smooth onboarding" over a failed setup step reads as spin.
 - **Blameless means blameless.** Causes live in assumptions and systems ("we assumed the API was free; it rate-limited us"), never in named people.
+- **Where each part lives:** the project retrospective is `docs/retrospective.md` at the launch tag, public like the rest of the package. Your individual reflection is submitted privately on Canvas.
+- **The individual reflection** (whom did this work serve, and what did you learn about building for others?) is read for honesty and specifics, not sentiment. Name real people the project served or is built to welcome, and what building for them taught you.
 - **Future-work framing** is read by someone deciding whether to join. Say what a newcomer would do first, and claim only what the code supports.
 - **The testing floor:** at least one automated test on the slice's core logic, run by the command your setup guide names, passing at the launch tag. Without one, *Contributor-readiness* caps at Developing.
 
 **Instructor notes.**
 - **Launch-package completeness** and **Setup verification** assess whether a new contributor can actually get the project running and start building — the central deliverable of the course. Grade at the `v0.1-launch` tag; the signed Contributor-Readiness Checklist from the onboarding test is the evidence for Setup verification.
 - **Retrospective honesty & insight** is weighted heavily because honest reflection (what assumptions held, what the MVP truly validated) is graded over a rosy narrative. Cross-check it against the repo and the onboarding-test sheet.
+- **Don't grade the verdicts (decided Nov 2).** A student whose early calls were right is not penalized for it: a well-evidenced *held* with a clear account of why the call was right scores the same as a well-evidenced *refuted*. Penalize unearned verdicts in either direction, and never reward refuted rows for their own sake; a manufactured setback is spin.
 - **Future-work framing** rewards a credible roadmap that doesn't oversell — the lead may pitch this to capstone faculty.
+- **Individual reflection (decided Nov 2; location decided Nov 4):** the project retrospective is committed as `docs/retrospective.md` and graded at the `v0.1-launch` tag; each member submits about half a page privately on Canvas (with the tag URL and the checklist photo), never committed; its prompt is the service/stewardship question (v4 §14). Score it inside *Retrospective honesty & insight*; on team projects it is also where an individual's honesty shows, so read it alongside the contribution adjustment. Never reward piety or polish — reward specifics.
 - **Testing floor (decided Oct 30):** CP11 requires at least one automated test on the slice's core logic; missing it caps *Contributor-readiness* at Developing. This raises CP10's Exemplary-only rule because CP11 asks whether someone else can safely change the code.
 
 ## CP12 — Final Pitch + Demo
-*Team (or solo) · Completes the 10% Final bundle · Defended at Demo Day (capstone faculty invited)* · **draft — not yet in student-facing wording**
+*Team (or solo) · Completes the 10% Final bundle · Defended at Demo Day (capstone faculty invited)* · **published**
 
 | Criterion | Wt | Exemplary (4) | Proficient (3) | Developing (2) | Beginning (1) |
 |---|---|---|---|---|---|
-| "What need does this serve?" | 20 | Need is vivid, real, and evidence-backed | Clear need | Vague | Unconvincing |
-| "What has been built?" (live demo) | 25 | Confident live demo of a working slice | Working demo | Shaky/partial | Fails |
-| "Where does it go next, and how can others join?" | 20 | Compelling, concrete case for how others can join and keep building | Clear | Thin | Missing |
-| Integration | 15 | Ties discovery → proposal → design → build into one coherent story | Mostly coherent | Disjointed | No through-line |
-| Persuasiveness & delivery | 10 | Polished, persuasive, well-paced | Solid | Uneven | Poor |
-| Q&A handling | 10 | Direct, honest, composed with faculty | Handles most | Struggles | Cannot |
+| "What need does this serve?" | 20 | A specific user and a vivid need, backed by evidence from discovery and from people who used what you built | A clear need with evidence, though mostly from discovery or a little thin | The need is stated but vague, or asserted without evidence | No recognizable user or need |
+| "What has been built?" (live demo) | 25 | Claim first; the slice walked smoothly, live, from the tag; what it doesn't do yet named; trouble handled with a fallback rather than a restart | Works live, with minor hiccups or a loose frame; or a declared clip run calmly after the live path failed | Shaky or partial; unframed, or a failure with no fallback ready | No working demo |
+| "Where does it go next, and how can others join?" | 20 | Specific next steps a listener believes, and the on-ramp shown in the repository; claims only what the foundation supports | Clear next steps and a way to join, a little general | Thin, or a wish list disconnected from the roadmap | Missing, or promises the code can't support |
+| Integration | 15 | One coherent story; what discovery found visibly shaped what was built and where it goes next | Mostly coherent; a stage or two skipped or loosely tied | The stages presented as separate reports | No through-line |
+| Persuasiveness & delivery | 10 | Clear, persuasive, well-paced, and inside the time | Solid, with a rough patch or a little over time | Uneven or hard to follow, or well over time | Unprepared |
+| Q&A handling | 10 | Answers directly and honestly, including "we don't know yet; here's how we'd find out"; consistent with the retrospective and the repository | Handles most questions well; one answer vague or evasive | Struggles, deflects, or contradicts the retrospective | Can't engage the questions |
 
 **What it measures** (handout table, Canvas criterion description).
-- **"What need does this serve?"** — The need is vivid, real, and evidence-backed — the discovery arc, landed.
-- **"What has been built?" (live demo)** — A confident live demo of a working slice — the heaviest criterion; slides can't earn it.
-- **"Where does it go next, and how can others join?"** — A concrete, credible case for continuation — artifacts, not aspirations.
-- **Integration** — Discovery → proposal → design → build → launch told as one coherent story.
-- **Persuasiveness & delivery** — Polished, well-paced, professional.
-- **Q&A handling** — Direct, honest, composed — with faculty asking real questions.
+- **"What need does this serve?"** — The user and the need, made concrete, and the evidence behind them: what discovery found, and what the people who used what you built showed. Your first pitch's opening argument, now with receipts.
+- **"What has been built?" (live demo)** — A live demo of the slice, run from your cp12-demo tag: the claim stated first, the slice walked end to end, and what it doesn't do yet named plainly. The heaviest criterion; slides can't earn it. A declared recorded clip caps this at Proficient, unless the room failed.
+- **"Where does it go next, and how can others join?"** — A credible case for what comes next and how someone joins: the roadmap's next steps, and the on-ramp shown in the repository (the onboarding guide, a good first issue), not just described.
+- **Integration** — Discovery, proposal, design, build, and launch told as one story, where each stage's decisions show up in the next.
+- **Persuasiveness & delivery** — Clear, well-paced, and inside the time limit, with slides that support the talk rather than repeat it.
+- **Q&A handling** — Direct, honest answers to an audience that includes invited faculty, consistent with your retrospective and your repository.
+
+**What each criterion is looking for** (student-facing, rubrics page).
+- **The three questions are the outline.** A pitch that answers them in order almost can't lose the *Integration* points; one that wanders usually does.
+- **You're defending a record, not a possibility.** As with the retrospective, the evidence is graded, not whether things went your way. "It held, and here's how we know" and "v1 didn't prove that; here's how we'd find out" are both strong. Don't invent a setback to sound reflective.
+- **The demo runs from your `cp12-demo` tag**, pushed by 11:59 pm Thu, Dec 10. The demo, the faculty who browse your repository beforehand, and grading all read the tag.
+- **Name what the slice doesn't do yet.** Every first version has limits; saying where they are is part of showing what it does.
+- **Time is hard:** 9 minutes for the pitch and demo, then 5 minutes of questions. The room has no slack for an overrun.
+- **A minimally competent final presentation is required to pass the course.**
 
 **Instructor notes.**
 - The first three criteria are the **three questions the final must answer** (design §7, Week 14) — the spine of the mastery artifact, together carrying most of the weight.
 - **Integration** rewards showing the whole founding arc as one story, which is what distinguishes a *founded, defensible, contributor-ready project* from strong code alone.
-- **Q&A handling** matters because capstone faculty are in the room making carry-forward judgments.
+- **Q&A handling** matters because invited faculty ask real questions. Cross-check answers against the retrospective; reward a well-evidenced "it held" as fully as a well-evidenced "it didn't" (decided Nov 2).
+- **Freeze by tag (decided Nov 2):** grade the repository at `cp12-demo`, pushed by 11:59 pm on the last day of classes (university policy: nothing but the final is due after it). Post-freeze hotfixes only with instructor approval, documented in an issue, re-tagged. A declared recorded clip caps the demo criterion at Proficient unless the room failed, as in CP10.
+- **Run of show at four projects:** 9 min pitch + demo, 5 min Q&A, 2 min swap = 16 min each, about 64 of the 90 minutes (8:30–10:00), leaving room to open, close, and absorb one failure. Capstone carry-forward is not mentioned to students until the capstone instructors have been consulted.
 
 
 ---

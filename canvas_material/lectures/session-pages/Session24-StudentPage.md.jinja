@@ -1,0 +1,105 @@
+## Before class
+
+1. **Read Atlassian's [*Retrospectives*](https://www.atlassian.com/team-playbook/plays/retrospective)** for the mechanics of a good retrospective: safety, specifics, and actions. It's written for a team looking back on a two-week sprint; today you'll look back on a whole project.
+2. **Read Google's [*Postmortem Culture: Learning from Failure*](https://sre.google/sre-book/postmortem-culture/)** for the stance: blameless, factual, and aimed at doing better next time. A retrospective is a postmortem where, with luck, nothing died.
+3. **Bring what you wrote at the time:** your need statement (<course-link type="assignment" id="cp2">CP2</course-link>), your proposal (<course-link type="assignment" id="cp3">CP3</course-link>), your <course-link type="assignment" id="mvp-plan">MVP Plan</course-link> and V1 Proof Sheet, and your known-issues log. Today you check what you *said*, so you need it in front of you, not in your memory.
+4. **Bring a laptop.** Both halves of class are workshops.
+
+---
+
+## Purpose
+
+Every project starts on claims: that a need is real, that a plan fits the time, that the first version will prove something. They show up as a business case at work, a pitch at a startup, a grant proposal in a lab. Good teams go back afterward and check those claims against what happened. Most never do, and they make the same assumptions on the next project.
+
+Checking your own claims honestly is a rare skill. A retrospective that does it well tells a future teammate, a contributor, or an employer that you see clearly. That means seeing clearly in both directions: a call you got right, backed by evidence, is good judgment, and a call you got wrong, written down with what you learned, is discovery doing its job.
+
+Then we turn it around. A final presentation is the retrospective told forward: the same evidence, organized to persuade. *(In this course, the retrospective is half of <course-link type="assignment" id="cp11">CP11</course-link>, due {{ S25_DAY }}, {{ S25_DATE }}, and the presentation is <course-link type="assignment" id="cp12">CP12</course-link>, your final pitch at Demo Day.)*
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Write a blameless, evidence-based retrospective:** claims checked against what happened, with no spin in either direction.
+2. **Tell a claim that didn't hold from a failure,** and explain why a claim that did hold was a good call.
+3. **Describe what comes next without overselling it,** as an invitation someone could act on.
+4. **Structure a final presentation** around three questions, for an audience from outside the project.
+
+---
+
+## What we'll do together
+
+**Blameless.** Causes live in assumptions and systems, not in people. "Alex was slow" teaches nothing. "We assumed users would be easy to reach, and it took three times longer" is something the next project can plan for. That holds when you're the only person on the project, too: "I was lazy" is blame, and "I planned for ten hours a week and had six" is a finding.
+
+**The verdict isn't graded; the evidence is.** For each claim you made, the honest answer is one of three:
+
+| Verdict | It means… |
+|---|---|
+| **Held** | Something could have shown it wrong, and didn't. Say *why* the call was right, and whether you'd make it the same way again. |
+| **Refuted** | The evidence says no, and you can point at it. Say what you assumed and what you learned. |
+| **Open** | Nothing has tested it yet. Say what would settle it. |
+
+Neither *held* nor *refuted* is the better answer, and there's no quota of failures to report. What makes a *held* honest is that the claim was actually at risk. Remember the falsifier on your V1 Proof Sheet, the result that would have told you a claim was wrong? If that result could have happened and didn't, the claim held. If nothing could ever have failed it, the claim is open.
+
+**Spin runs both ways.** A retrospective teaches nothing if it claims success nothing ever tested ("it all worked!") or if it lists setbacks, real or invented, to look reflective ("everything went wrong"). What's left is the useful part: what you claimed, what happened, and what you took from it.
+
+**Workshop: the claims check (20 minutes).** You'll get a one-page **Claims-Check Worksheet** with four blocks:
+
+1. **The need:** the user, and how you'd reach them, from your need statement and proposal.
+2. **The plan:** the scope against the time, and the risk you named first, from your proposal.
+3. **The build:** the three ranked claims from your first-version plan.
+4. **The cuts:** what you deliberately didn't build, and whether each cut was the right call.
+
+For each claim: copy it from the document, point at the evidence (a demo moment, a line on an audit or test sheet, an issue, a conversation with a user), mark the verdict, and write what you learned or why it held. I'll come around with two questions: *where's the evidence?* and *could that claim have failed?*
+
+**Drafting the retrospective.** The worksheet becomes the first draft. A project's retrospective is public, like its roadmap and its known-issues log: it's part of what a newcomer reads before deciding to join, so write it for a stranger who finds your repository with no context. You'll write two to four sentences under each of four headings:
+
+1. **What held, and what didn't.**
+2. **What the first version proved, and what it didn't**: the open questions, stated plainly.
+3. **What you'd do differently**, in process and in product, each one something you could actually change next time.
+4. **Where the project goes next, as others join**: consistent with your roadmap, claiming only what the code supports.
+
+*(In this course, it's `docs/retrospective.md` in your repository, included in the `v0.1-launch` tag.)*
+
+**Your reflection.** Everyone's work ends up in someone else's hands: the people it was built for, and the people it's built to welcome. Each person on a project also writes a short reflection, about half a page in the first person. It's yours, so it stays private and isn't committed. It answers:
+
+- **Whom did this work serve, and what did you learn about building for others?**
+- **One thing you'll carry into the next project you start or join.**
+
+It's read for honesty and specifics, not sentiment. Name real people and what you learned from building for them. We'll take three quiet minutes to start it in class. *(In this course, you submit it on Canvas with CP11. Every project is solo this term, so you write both the retrospective and the reflection.)*
+
+**From retrospective to pitch.** The final presentation answers the three questions you first saw in Session 1, now with evidence:
+
+1. **What need does this serve?** Now with evidence your first pitch didn't have: what discovery found, a working slice, what users and testers showed.
+2. **What has been built?** The live demo, claims first: say what the walk-through proves before you click.
+3. **Where does it go next, and how can others join?** Your launch package is the answer. Show the way in, not just the destination.
+
+Your first pitch argued for a possibility. This one defends a record, the way a team at work moves from pitching a project to presenting its launch review. That's a stronger position, because you're arguing from evidence you generated. It also means the questions will test whether your demo and your retrospective agree. *(In this course: **9 minutes** for the pitch and demo, roughly 2 for the need, 5 for the demo, and 2 for what's next, then **5 minutes of questions**. The time limit is hard.)*
+
+**Workshop: your pitch skeleton (15 minutes).** Leave with:
+
+1. **One slide idea per question**, with the evidence for the need.
+2. **A demo plan:** the claim you'll state first, the path you'll walk, and the fallback if it breaks.
+3. **A plan for the laptop:** if you're presenting alone, script it so you can talk and drive, or set up every screen ahead of time.
+4. **The hardest question you expect**, and your honest answer. It's usually already in your retrospective.
+
+I'll come around with one question: *what would make a skeptical outsider believe this project has a future?*
+
+---
+
+## What you'll leave with
+
+- **A filled-in Claims-Check Worksheet**, each claim with its evidence and verdict.
+- **The retrospective in draft:** four sections of stubs for `docs/retrospective.md`, and your reflection started.
+- **A pitch skeleton:** a line per question, a demo plan with a fallback, and your hardest question answered.
+
+### Coming up
+
+- **<course-link type="page" id="s25">{{ S25_DAY }}, {{ S25_DATE }}</course-link>:** the launch studio and the onboarding test. <course-link type="assignment" id="cp11">CP11: Launch Package and Retrospective</course-link> is due end of day: the retrospective merged and tagged with the package, then the tag URL, your reflection, and a photo of the signed checklist on Canvas.
+- **<course-link type="page" id="s26">{{ S26_DAY }}, {{ S26_DATE }}</course-link>:** the dry run. Bring the full pitch and live demo ready to perform, not in draft.
+- **<course-link type="page" id="s27">{{ S27_DAY }}, {{ S27_DATE }}</course-link>:** the final studio, for polish only.
+- **{{ CP12_TAG_DUE_DAY }}, {{ CP12_TAG_DUE }}, 11:59 pm:** push your `cp12-demo` tag. Demo Day runs from it. See <course-link type="assignment" id="cp12">CP12</course-link> for the commands.
+- **{{ DEMO_DAY_DAY }}, {{ DEMO_DAY_DATE }}, {{ DEMO_DAY_START }}–{{ DEMO_DAY_END }}: Demo Day.** Capstone faculty are invited.
+
+**Tonight:** turn your retrospective stubs into prose, and start your pitch slides.

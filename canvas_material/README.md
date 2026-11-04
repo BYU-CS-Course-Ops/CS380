@@ -237,21 +237,17 @@ target an element the templates actually emit.
 
 ## Still open
 
-- ~~`CP12_DUE` is a placeholder~~ **confirmed:** Demo Day is Mon, Dec 14, 7:00-10:00 AM,
+- ~~`CP12_DUE` is a placeholder~~ **confirmed:** Demo Day is Mon, Dec 14 (registrar block 7:00-10:00 AM; the class meets 8:30-10:00),
   in `DEMO_DAY_DATE` / `DEMO_DAY_DAY` / `DEMO_DAY_START` / `DEMO_DAY_END`. Old note: BYU assigns the finals
   block by class meeting time — now known (M/W 9:30 AM) — so the slot can be
   confirmed with the registrar and pinned here.
 - Room is set: TMCB 1149 (`CLASSROOM`).
-- Rubrics CP1–CP5 are published. CP6–CP12 in `assignments/rubrics.yaml.jinja`
-  still carry the first-cut instructor wording (`publish: false`). As each
-  handout is reviewed: reword its grid for students, add `looking_for` notes,
-  set `publish: true`, and swap the handout's hand-written "What it measures"
-  table for `m.rubric_summary(...)` (as CP1–CP5 do).
-- **CP6–CP12, the Team Charter, and the MVP Plan deploy unpublished** — their
-  handouts are not finalized. The `Publish` column in
+- All twelve checkpoint rubrics, all twelve checkpoints, and every completion
+  item are published (CP11–CP12 on Nov 2). The `Publish` column in
   `assignments/checkpoints-args.md.jinja` and
-  `assignments/completion-items-args.md.jinja` is the switch; flip a row to
-  `true` when its handout is reviewed, and publish its rubric in the same pass.
+  `assignments/completion-items-args.md.jinja` is still the switch: a new
+  item starts `false`, and flips to `true` in the same pass that publishes its
+  rubric with student-facing wording and `looking_for` notes.
 - Session pages 10–27 deploy **unpublished** — they have no prose yet, only
   dates, due items, and module placement. Write the page, flip `Publish` to
   `"true"` in `session-pages-args.md.jinja`.

@@ -1,6 +1,6 @@
 ## The short version
 
-Ship the package that lets your project outlive the semester: an **as-built architecture overview**, a **setup guide verified by one more cold-eyed stranger** (onboarding test round 2), a **roadmap framed as an invitation**, an **honest known-issues and tech-debt log**, an **onboarding guide** answering a newcomer's five questions, and **at least one automated test** a newcomer can run — plus a **written retrospective** that checks your original claims against what actually happened. Tag the repo. That's launch.
+Ship the package that lets your project outlive the semester: an **as-built architecture overview**, a **setup guide verified by one more cold-eyed stranger** (onboarding test round 2), a **roadmap framed as an invitation**, an **honest known-issues and tech-debt log**, an **onboarding guide** answering a newcomer's five questions, and **at least one automated test** a newcomer can run — plus a **written retrospective** in the repository that checks your original claims against what actually happened, and a short **individual reflection** from each member, submitted privately, on whom the work served. Tag the repo. That's launch.
 
 ---
 
@@ -8,7 +8,7 @@ Ship the package that lets your project outlive the semester: an **as-built arch
 
 A semester project usually dies the day grades post — not because the code stops working, but because everything needed to continue it lived in its authors' heads. The launch package is the antidote: the founder's final responsibility of **writing the project down well enough that it can be picked up** — by a capstone team, a successor, a stranger on the internet, or you-in-eight-months, who is functionally a stranger too. This is the "lasting" half of the course's promise made real: projects built to last are projects whose knowledge survives their builders' attention.
 
-The retrospective trains a rarer and more valuable skill: **checking your own claims against evidence, in writing, without spin.** Fourteen weeks ago you claimed a need was real and a scope was feasible; now you have data. The discipline of writing "we assumed X; here's what happened; here's what we learned" — blamelessly, per the postmortem culture the best engineering organizations run on — is what turns experience into judgment. Note what the rubric rewards: a *refuted* assumption, honestly documented, scores **higher** than a victory lap, because a disproven assumption documented is discovery working. People and organizations that can do this improve; those that can't repeat themselves. It is also, plainly, the most credible artifact you'll show capstone faculty — and honesty here is verified live in Demo Day Q&A.
+The retrospective trains a rarer and more valuable skill: **checking your own claims against evidence, in writing, without spin.** Fourteen weeks ago you claimed a need was real and a scope was feasible; now you have data. The discipline of writing "we assumed X; here's what happened; here's what we learned" — blamelessly, per the postmortem culture the best engineering organizations run on — is what turns experience into judgment. Note what the rubric grades: **the evidence, not the verdict.** A claim that held, shown with evidence and with an account of why the call was right, was good judgment. A claim that didn't hold, documented with what you learned, is discovery working. Both earn full credit; there's no quota of failures to report. People and organizations that can do this improve; those that can't repeat themselves. It is also, plainly, the most credible artifact you'll show capstone faculty — and honesty here is verified live in Demo Day Q&A.
 
 ---
 
@@ -23,12 +23,21 @@ The retrospective trains a rarer and more valuable skill: **checking your own cl
 5. **Onboarding guide** (`docs/onboarding.md`) — the five newcomer needs answered: what is this / am I welcome / how do I start / where do I start / will anyone respond — with promises you'll actually keep.
 6. **A test a newcomer can run** — at least one automated test on your slice's core logic, run by the command your setup guide names, passing at the launch tag. Any codebase someone else will change owes them a way to know they didn't break it. One real test beats twenty that assert nothing.
 
-**The Retrospective** (one document per project, submitted with the package):
+**The Retrospective**, in two parts:
 
-- **What assumptions held — and which didn't** (claims from CP2/CP3/MVP Plan vs. evidence).
+*The project retrospective* (`docs/retrospective.md`, merged and included in the launch tag), written together. It's public, like the rest of the package, because a project's honest account of itself is part of what a newcomer reads before deciding to join. Write it for a stranger: the faculty member, contributor, or future teammate who finds your repository with no context.
+
+- **What assumptions held — and which didn't** (claims from CP2/CP3/MVP Plan vs. evidence). The <file path="../../resources/Claims-Check-Worksheet.pdf" canvas_folder="Course Handouts" /> from {{ S24_DATE }} is the raw material.
 - **What the MVP validated, and what it didn't** — open questions stated plainly.
 - **What we'd do differently** — process and product, each actionable.
 - **Where the project goes next as others join** — consistent with the roadmap, no overselling.
+
+*An individual reflection* from each member (about half a page, first person), **submitted privately on Canvas, not committed**:
+
+- **Whom did this work serve, and what did you learn about building for others?** Every engineer's work ends up in someone else's hands: the users it was built for, and the contributors it's built to welcome. Noticing who they are is part of doing the work well.
+- **One thing you'll carry into the next project you start or join.**
+
+*(On a solo project, you write both parts. The format is the same either way: the project's account is public, and each person's reflection is theirs.)*
 
 ---
 
@@ -37,7 +46,8 @@ The retrospective trains a rarer and more valuable skill: **checking your own cl
 - **Fix it or log it — silence is the only failure.** Nothing ships undocumented; nothing documented is untrue.
 - **The testing floor.** No automated test on the core logic caps *Contributor-readiness* at Developing, however good the rest is.
 - **The retro must agree with the repo.** A retrospective claiming "smooth onboarding" over a failed setup test gets rewritten — the two artifacts are cross-checked.
-- **Blameless means blameless.** Causes live in assumptions and systems ("we assumed the API was free; it rate-limited us"), never in named persons.
+- **Blameless means blameless**, and doubly so in public. Causes live in assumptions and systems ("we assumed the API was free; it rate-limited us"), never in named persons.
+- **The reflection is yours, and it's honest.** Specific beats eloquent: name the people the project served and what you learned from building for them. It's read for honesty, not for sentiment.
 - **Everything via PR**, to the end.
 
 ---
@@ -57,7 +67,8 @@ Scored on a 100-point analytic rubric; **≈5% of the course grade** (bundle wit
 
 - **The package is assembly, not invention.** Almost everything exists in draft — the work is refresh, verify, and make true.
 - **The as-built pass matters most on the architecture doc:** stale diagrams are worse than no diagrams, because a newcomer trusts them.
-- **The two retro anti-patterns are equally graded:** the victory lap (nothing learned) and the flagellation (equally nothing learned). The middle is *claims, evidence, learning*.
+- **Spin runs both ways.** Success claimed without evidence and setbacks listed to look reflective are the same mistake. Don't go looking for failures to report: if a call was right, say why it was right and whether you'd make it the same way again.
+- **"Held" means it could have failed.** A claim held if something could have shown it wrong and didn't (your first-version falsifier, a user who could have said no). A claim nothing ever tested is *open*. Say so.
 - **A newcomer-facing gap can become a `good first issue`** — that's not cheating; that's the system working.
 - **Ask the January question:** "if someone forked this with no one to ask — what kills them first?" Fix or log that item today.
 
@@ -65,7 +76,12 @@ Scored on a 100-point analytic rubric; **≈5% of the course grade** (bundle wit
 
 ## Submission
 
-Package merged, repo tagged `v0.1-launch`, retrospective + test sheet submitted via LMS by end of day **{{ S25_DAY }}, {{ S25_DATE }}.** The package is what capstone faculty browse before Demo Day — and the "where does it go next?" answer your final pitch (CP12) points at.
+By end of day **{{ S25_DAY }}, {{ S25_DATE }}**: the package and `docs/retrospective.md` merged, the repo tagged `v0.1-launch`, and the tag pushed:
+```
+git tag -a v0.1-launch -m "CP11: launch"
+git push origin v0.1-launch
+```
+Then each member submits on Canvas, in one text entry: the **URL of the `v0.1-launch` tag**, your **individual reflection**, and a **photo of the signed Contributor-Readiness Checklist** (add it with the editor's image button). Grading reads the tag. The package is what capstone faculty browse before Demo Day — and the "where does it go next?" answer your final pitch (CP12) points at.
 
 ---
 

@@ -1,0 +1,71 @@
+## The short version
+
+On Demo Day, your project delivers a **9-minute final pitch and live demo, then 5 minutes of questions**, answering three questions: **What need does this serve? What has been built? Where does it go next — and how can others join you in building it?** The demo runs from a `cp12-demo` tag you push by 11:59 pm {{ CP12_TAG_DUE_DAY }}, {{ CP12_TAG_DUE }}. Capstone faculty are invited.
+
+---
+
+## Why this assignment exists
+
+Everything this course claims about founding converges on a single performance: can you stand in front of a real audience and show — with evidence, working software, and honest answers — that you found a real need, built something that serves it, and left a door open for others? That's the difference the course has drawn since Session 1 between strong code and a *founded, defensible, contributor-ready project*, and the final pitch is where the whole arc — discovery, proposal, design, build, launch — has to hold together as **one coherent story**. Integration is graded on purpose: the story only coheres if the work actually connected.
+
+Two things make this different from Pitch #1, and both are worth internalizing for life. First, **you now defend a record, not a possibility** — your claims have receipts (discovery notes, a demo, audit sheets, a retrospective), which is a fundamentally stronger and more honest position, and learning to argue *from evidence you generated* is what senior engineers, founders, and researchers do. Second, **the audience is outside the project**, the kind of room where people decide what deserves their time and support: investors, program committees, promotion panels, a team choosing what to adopt *(on Demo Day, invited faculty among them)*. The Q&A is where honesty compounds: your retrospective already checked your claims against the evidence, so you can answer hard questions with composure instead of spin. Ending a project by presenting it well, in public, with its future explicitly offered to others, is the founder's last responsibility — and the course's definition of finishing.
+
+---
+
+## What to produce
+
+**The final pitch and demo (9 minutes, a hard limit), then 5 minutes of Q&A**, structured on the three questions:
+
+1. **What need does this serve?** (~2 min) — the user, the need, and the *evidence*: discovery findings, what real use and feedback showed, what the semester validated. This is Pitch #1's opening argument, now with receipts.
+2. **What has been built?** (~5 min) — the **live demo**, claims-first: say what this walk-through proves, run the slice from your `cp12-demo` tag, and name what it doesn't do yet. Have a fallback ready (seed data, local mode, or a declared clip); if the live path breaks, run the fallback calmly — recovery is craft.
+3. **Where does it go next — and how can others join?** (~2 min) — the roadmap as invitation, pointed at real artifacts: the onboarding guide, the `good first issue`s, what a newcomer or a future team would pick up first. Show the on-ramp, not just the destination.
+
+**Q&A:** direct, honest, composed — consistent with your retrospective. "It held, and here's how we know" and "v1 didn't prove that; here's how we'd find out" are both strong answers in this room.
+
+---
+
+## Requirements & constraints
+
+- **Freeze by tag, by 11:59 pm {{ CP12_TAG_DUE_DAY }}, {{ CP12_TAG_DUE }}** (the last day of classes; university policy allows nothing but the final to be due after it). Merge everything to `main`, then tag it and push the tag, as you did for CP10:
+  ```
+  git tag -a cp12-demo -m "CP12: Demo Day"
+  git push origin cp12-demo
+  ```
+  The demo runs from the tag, faculty browse the tag, and grading reads the tag. Don't move it after the deadline; a hotfix for a demo-breaking bug needs instructor approval, an issue describing it, and a new tag.
+- **Dry-run attendance ({{ S26_DAY }}, {{ S26_DATE }}) is required** — the full pitch and live demo under Demo Day conditions. Between the dry run and the tag, polish only: no new features.
+- **Time limits are hard.** Rehearse against the clock. Arrive early, load early, and test the display before the block starts.
+- **Every member speaks** on team projects; a solo founder carries it alone, at solo scope.
+- **A declared recorded clip** is a last-resort fallback and caps the demo criterion at Proficient, unless the room's equipment failed.
+
+---
+
+## Grading
+
+Scored on a 100-point analytic rubric; **≈5% of the course grade** (bundle with CP11) — and the pass-conditions capstone: a minimally competent final presentation is required to pass the course.
+
+{% import "macros.jinja" as m %}
+{{ m.rubric_summary(load('../rubrics.yaml.jinja').rubrics.cp12) }}
+
+**Performance levels:** Exemplary (4) · Proficient (3) · Developing (2) · Beginning (1) · Absent (0). Score per criterion = (level ÷ 4) × weight.
+
+---
+
+## Tips and common pitfalls
+
+- **Let the three questions be the outline, literally.** Pitches that wander lose the integration points; pitches that answer the questions in order almost can't.
+- **Claims-first demoing** (from {{ S22_DATE }}, higher stakes): say what the walk-through will prove *before* you click. The audience then watches it prove it.
+- **Name what it doesn't do yet.** Every first version has limits. Saying where they are is part of showing what it does, and it takes the sting out of the question you'd otherwise get.
+- **The Q&A is won by the retrospective.** Reread it the night before; your hardest questions are already answered there, honestly.
+- **Your audience reads the repository first.** The tagged repo, the launch package, and the pitch must agree — inconsistency is the credibility killer.
+- **Nine minutes goes fast.** If the demo needs five, the need and the invitation get two each. Cut words, not the demo.
+- **End on the invitation.** The last thing the room hears should be how someone joins — that's the founder's close.
+
+---
+
+## Submission
+
+Delivered live at **Demo Day — {{ DEMO_DAY_DAY }}, {{ DEMO_DAY_DATE }}, {{ DEMO_DAY_START }}–{{ DEMO_DAY_END }}**, from the `cp12-demo` tag pushed by 11:59 pm {{ CP12_TAG_DUE_DAY }}, {{ CP12_TAG_DUE }}. The tagged repo is the artifact of record. With CP11, this completes the Final bundle — and the course.
+
+---
+
+*The culminating experience: **CP11 (the launch) + CP12 (the defense).** The three questions are the spine of the final (introduced in Session 1, rehearsed at the Session 26 dry run). See the grading rubric above.*

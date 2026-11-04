@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Claims-Check Worksheet</title>
+<style>
+  @page { size: letter; margin: 0.4in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 9.6pt; line-height: 1.18; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 5pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 16pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 7.8pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .who { font-size: 9pt; color: #5F7284; white-space: nowrap; text-align: right; }
+  .who span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 2.1in; }
+
+  .intro { background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 4pt 8pt 5pt 8pt; font-size: 9.2pt; }
+  .intro b { color: #14233A; }
+
+  h2 { font-family: Cambria, Georgia, serif; font-size: 10.6pt; color: #14233A; margin: 6pt 0 1pt 0; }
+  h2 .n { color: #12908F; }
+  h2 .hint { font-family: Calibri, "Segoe UI", sans-serif; font-weight: normal; font-size: 8pt; color: #5F7284; font-style: italic; }
+
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  th { text-align: left; font-size: 7.4pt; color: #5F7284; text-transform: uppercase; letter-spacing: 0.3pt;
+       font-weight: bold; border-bottom: 1pt solid #12908F; padding: 2pt 4pt; }
+  td { border-bottom: 0.7pt solid #C9D4DC; padding: 3pt 4pt; vertical-align: top; font-size: 8.4pt; height: 0.64in; }
+  td + td { border-left: 0.6pt solid #E1E8ED; }
+  col.claim { width: 1.95in; } col.ev { width: 2.15in; } col.verdict { width: 0.82in; } col.learn { width: auto; }
+  td.prompt { color: #5F7284; font-style: italic; font-size: 7.8pt; }
+  td.v { font-size: 8.2pt; line-height: 1.45; white-space: nowrap; color: #1E2A36; }
+
+  .legend { font-size: 7.8pt; color: #5F7284; margin-top: 3pt; }
+  .legend b { color: #14233A; }
+
+  .box { margin-top: 6pt; background: #F2F6F8; border-left: 2.5pt solid #E8A33D; padding: 3pt 8pt 4pt 8pt; font-size: 8.8pt; }
+  .box .q { color: #14233A; font-weight: bold; font-size: 9.2pt; }
+  .box .line { border-bottom: 0.7pt solid #B9C5CF; height: 0.28in; }
+
+  .foot { margin-top: 5pt; font-size: 7.8pt; color: #5F7284; display: flex; justify-content: space-between; gap: 8pt; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · The honest retrospective</p>
+    <h1>What We Said vs. What Happened</h1>
+  </div>
+  <div class="who">Project <span></span></div>
+</div>
+
+<div class="intro"><b>Every project starts on claims:</b> that a need is real, that a plan fits the time, that the first version will prove something. A retrospective, at work or on any project, checks those claims against what actually happened. Copy each claim from what you <b>wrote at the time</b>, not from memory, then point at the evidence. A claim that held, shown with evidence, was a good call. A claim that didn't, written down with what you learned, is discovery working. Neither is the better answer.</div>
+
+<h2><span class="n">1 ·</span> The need <span class="hint">From your problem statement and proposal: who has the problem, and is it real?</span></h2>
+<table>
+  <colgroup><col class="claim"><col class="ev"><col class="verdict"><col class="learn"></colgroup>
+  <tr><th>What we claimed</th><th>What happened: the evidence</th><th>Verdict</th><th>What we learned / why it held</th></tr>
+  <tr><td class="prompt">The user, and the need</td><td></td><td class="v">☐ held<br>☐ refuted<br>☐ open</td><td></td></tr>
+  <tr><td class="prompt">How we'd reach them</td><td></td><td class="v">☐ held<br>☐ refuted<br>☐ open</td><td></td></tr>
+</table>
+
+<h2><span class="n">2 ·</span> The plan <span class="hint">From your proposal: did the scope fit the hours that existed? Which named risk fired?</span></h2>
+<table>
+  <colgroup><col class="claim"><col class="ev"><col class="verdict"><col class="learn"></colgroup>
+  <tr><td class="prompt">The scope, against the time</td><td></td><td class="v">☐ held<br>☐ refuted<br>☐ open</td><td></td></tr>
+  <tr><td class="prompt">The risk we named first</td><td></td><td class="v">☐ held<br>☐ refuted<br>☐ open</td><td></td></tr>
+</table>
+
+<h2><span class="n">3 ·</span> The build <span class="hint">From your first-version plan: the claims it was built to prove, in your ranked order</span></h2>
+<table>
+  <colgroup><col class="claim"><col class="ev"><col class="verdict"><col class="learn"></colgroup>
+  <tr><td class="prompt">Top-ranked claim</td><td></td><td class="v">☐ held<br>☐ refuted<br>☐ open</td><td></td></tr>
+  <tr><td class="prompt">Second claim</td><td></td><td class="v">☐ held<br>☐ refuted<br>☐ open</td><td></td></tr>
+  <tr><td class="prompt">Third claim</td><td></td><td class="v">☐ held<br>☐ refuted<br>☐ open</td><td></td></tr>
+</table>
+
+<h2><span class="n">4 ·</span> The cuts <span class="hint">What you deliberately didn't build, and whether each cut was the right call</span></h2>
+<table>
+  <colgroup><col class="claim"><col class="ev"><col class="verdict"><col class="learn"></colgroup>
+  <tr><td class="prompt">The cut</td><td></td><td class="v">☐ right call<br>☐ wrong call<br>☐ can't tell</td><td></td></tr>
+  <tr><td class="prompt">The cut</td><td></td><td class="v">☐ right call<br>☐ wrong call<br>☐ can't tell</td><td></td></tr>
+</table>
+
+<div class="legend"><b>The evidence rule:</b> every <i>held</i> or <i>refuted</i> points at something a reader could check: a demo moment, a line on an audit or test sheet, an issue or pull request, a conversation with a user. <b>Open</b> is an honest answer when you name what would settle it.</div>
+
+<div class="box">
+  <div class="q">Read your verdicts down the column. No mix of verdicts is the right one.</div>
+  Check that every verdict points at evidence, that every <i>held</i> was something that could have failed, and that it says why the call was right. Which row did you most want to skip? That's usually the one worth writing about.
+  <div class="line"></div>
+</div>
+
+<div class="foot">
+  <span><b>This becomes your retrospective:</b> the strongest rows are "what held and what didn't"; the open ones are "what the first version didn't prove."</span>
+  <span>CS 301R</span>
+</div>
+
+</body>
+</html>

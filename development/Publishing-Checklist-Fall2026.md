@@ -64,12 +64,12 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 - [x] **Replay the PR branch onto the published `main`** (done Nov 4: `14301a8` on `origin/main`; diff is README.md + docs/design.md only) (run sheet, before class step 2): `publish/docs/design-plain-forms` with one commit; `git diff --stat origin/main` shows only `README.md` and `docs/design.md`. Don't push.
 - [x] **Add the *Plan* table view** to Prop Loft's board, grouped by milestone, **Show hierarchy off** (run sheet, step 3). Done early, Oct 29, while testing the page; saved and confirmed.
 - [x] **Print the Fit Check Sheet** (done Nov 4) (`canvas_material/resources/Fit-Check-Sheet.pdf`), one per student.
-- [ ] **Session 18 page live.** It's marked to publish and goes out with whichever deploy comes first; the Oct 30 one is fine. It carries the deck, the Fit Check Sheet PDF, and the Session 18 Course Resources entry. Two links are dead until later: Prop Loft's `session-18` tree (tagged after class, and labeled so on the page) and *Setting Up Your Board* if its screenshots aren't done. If you deploy after the Oct 30 one, deploy sandbox first, then `fall26`.
+- [x] **Session 18 page live.** (confirmed Nov 4; deck v2 deployed Nov 4) It's marked to publish and goes out with whichever deploy comes first; the Oct 30 one is fine. It carries the deck, the Fit Check Sheet PDF, and the Session 18 Course Resources entry. Two links are dead until later: Prop Loft's `session-18` tree (tagged after class, and labeled so on the page) and *Setting Up Your Board* if its screenshots aren't done. If you deploy after the Oct 30 one, deploy sandbox first, then `fall26`.
 
 ## After Session 18 — Wed, Nov 4 (after class)
 
-- [ ] **Tag `session-18`** on the merge commit and push it; check with `git ls-remote --tags https://github.com/prop-loft/prop-loft session-18` (run sheet, *After class*).
-- [ ] **Tidy the clone**, keeping the local `docs/design-plain-forms` branch (`publish.sh` reads it).
+- [x] **Tag `session-18`** (done Nov 4 via `publish.sh session-18`, on `586a8bd`, the #29 merge; the PR was merged after class, not live) on the merge commit and push it; check with `git ls-remote --tags https://github.com/prop-loft/prop-loft session-18` (run sheet, *After class*).
+- [x] **Tidy the clone** (done Nov 4), keeping the local `docs/design-plain-forms` branch (`publish.sh` reads it).
 
 ## Before Session 19 — by Fri, Nov 6: the reading, CP10, and the debugging demo
 
@@ -107,3 +107,9 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 
 - [ ] **Print** the Contributor-Readiness Checklist (`canvas_material/resources/Contributor-Readiness-Checklist.pdf`), one per student.
 - [ ] **Pick 3–4 anonymized findings** from the Session 22 audit sheets for slide 7.
+
+## Before Session 24 — by Fri, Nov 27
+
+- [ ] **Invite capstone faculty for Demo Day at 8:30 AM, Mon Dec 14** (the class meets 8:30–10:00 inside the registrar's 7:00–10:00 block).
+- [ ] **Deploy sandbox, then `fall26`** so CP12's due time, the course home, and the syllabus read 8:30 AM (`DEMO_DAY_START`), the Claims-Check Worksheet PDF is on Canvas, and **CP11 and CP12 go live with their Canvas rubrics** (both rehearsed on the sandbox Nov 2; spot-check that each rubric is attached and the Assignment Rubrics page lists both).
+- [ ] **Print** the Claims-Check Worksheet (`canvas_material/resources/Claims-Check-Worksheet.pdf`), one per student.
