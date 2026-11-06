@@ -307,7 +307,7 @@ async function build() {
       { text: lp[i][1], options: { color: C.slate, fontSize: 16 } }
     ], { x: x + 0.3, y, w: 5.4, h: 1.28, fontFace: F.body, fontSize: 18, valign: "middle", margin: 0 });
   }
-  s.addText("Each piece traces to something you already have in draft. CP11 is due Dec 2.", { x: 0.6, y: 6.5, w: 12.1, h: 0.4, color: C.tealDk, fontFace: F.body, fontSize: 17, bold: true, italic: true, margin: 0 });
+  s.addText("Each piece traces to something you already have in draft. CP11 is due Thursday, Dec 3.", { x: 0.6, y: 6.5, w: 12.1, h: 0.4, color: C.tealDk, fontFace: F.body, fontSize: 17, bold: true, italic: true, margin: 0 });
   footer(s);
   s.addNotes("Four minutes. Walk the six pieces and, for each, ask where its draft already lives: the design doc, the setup guide, the roadmap from CP8, the known-issues file from CP10, CONTRIBUTING and the norms, the test command. The point to land is that the package is mostly refresh and verify. Students mark each one exists, needs refresh, or needs writing during the workshop.");
 
@@ -367,9 +367,9 @@ async function build() {
     { text: "Wednesday, Dec 2: launch studio and the onboarding test", options: { bullet: { indent: 16 } } }
   ], { x: 0.95, y: 3.62, w: 11.7, h: 2.15, color: "CBD8E6", fontFace: F.body, fontSize: 17, valign: "top", margin: 0 });
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);
-  s.addText("CP11 Launch Package + Retrospective is due end of day Wednesday, Dec 2.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 16, bold: true, align: "center", valign: "middle", margin: 0 });
+  s.addText("CP11 Launch Package + Retrospective is due Thursday, Dec 3, 11:59 pm, the day after the test.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 16, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Two minutes. Say the one-liner. Be clear that nothing is expected over Thanksgiving: this is a real break. Anyone who wants to close issues may, and the punch list makes that easy, but don't imply it. Monday after the break is the retrospective and the pitch frame; Wednesday is assembly and the onboarding test, with CP11 due that night.");
+  s.addNotes("Two minutes. Say the one-liner. Be clear that nothing is expected over Thanksgiving: this is a real break. Anyone who wants to close issues may, and the punch list makes that easy, but don't imply it. Monday after the break is the retrospective and the pitch frame; Wednesday is assembly and the onboarding test, and CP11 is due Thursday night, so there is a day to fix what the test turns up.");
 
   const OUT = "Session23-BuiltToBeJoined.pptx";
   await pres.writeFile({ fileName: OUT });

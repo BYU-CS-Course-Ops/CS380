@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Launch Package Checklist</title>
+<style>
+  @page { size: letter; margin: 0.4in 0.5in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 9.4pt; line-height: 1.18; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 5pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 16pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 7.8pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .who { font-size: 9pt; color: #5F7284; white-space: nowrap; text-align: right; line-height: 1.55; }
+  .who span { display: inline-block; border-bottom: 0.7pt solid #9BB0BF; width: 2.1in; }
+
+  .intro { background: #F2F6F8; border-left: 2.5pt solid #12908F; padding: 4pt 8pt 5pt 8pt; font-size: 9.1pt; }
+  .intro b { color: #14233A; }
+
+  h2 { font-family: Cambria, Georgia, serif; font-size: 11pt; color: #14233A; margin: 7pt 0 2pt 0; }
+  h2 .hint { font-family: Calibri, "Segoe UI", sans-serif; font-weight: normal; font-size: 8pt; color: #5F7284; font-style: italic; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 7.4pt; color: #5F7284; text-transform: uppercase; letter-spacing: 0.3pt;
+       font-weight: bold; border-bottom: 1pt solid #12908F; padding: 2pt 4pt; vertical-align: bottom; }
+  table.pkg td { border-bottom: 0.7pt solid #C9D4DC; padding: 3pt 4pt; vertical-align: top; font-size: 8.6pt; line-height: 1.15; }
+  td.item { width: 1.3in; font-family: Cambria, Georgia, serif; font-weight: bold; color: #14233A; font-size: 9.4pt; }
+  td.item .nd { display: block; font-family: Calibri, "Segoe UI", sans-serif; font-weight: normal; font-size: 7.4pt; color: #12908F; }
+  td.where { width: 1.48in; font-family: Consolas, "Courier New", monospace; font-size: 8pt; color: #0E6E6D; }
+  td.where i { font-family: Calibri, "Segoe UI", sans-serif; color: #5F7284; font-size: 8pt; }
+  td.today { width: 1.3in; white-space: nowrap; font-size: 8.2pt; text-align: left; }
+  td.tag { width: 0.42in; text-align: center; font-size: 11pt; }
+  th.c { text-align: center; }
+  tr.sub td { background: #F2F6F8; }
+
+  .legend { font-size: 7.8pt; color: #5F7284; margin-top: 2pt; }
+  .legend b { color: #14233A; }
+
+  .cols { display: flex; gap: 10pt; margin-top: 6pt; }
+  .col { flex: 1; background: #F2F6F8; padding: 4pt 8pt 5pt 8pt; font-size: 8.5pt; line-height: 1.15; }
+  .col.a { border-left: 2.5pt solid #E8A33D; }
+  .col.b { border-left: 2.5pt solid #12908F; }
+  .col h3 { font-family: Cambria, Georgia, serif; font-size: 10pt; color: #14233A; margin: 0 0 2pt 0; }
+  .col ol { margin: 0; padding-left: 13pt; }
+  .col li { margin-bottom: 1.5pt; }
+  .col p { margin: 2pt 0; }
+  .col b { color: #14233A; }
+  .pick { display: flex; align-items: flex-end; gap: 6pt; margin-top: 3pt; font-size: 8.6pt; }
+  .pick .l { white-space: nowrap; color: #14233A; font-weight: bold; }
+  .pick .ln { flex: 1; border-bottom: 0.7pt solid #9BB0BF; height: 12pt; }
+
+  .foot { margin-top: 5pt; font-size: 7.8pt; color: #5F7284; display: flex; justify-content: space-between; gap: 8pt; }
+  .foot b { color: #14233A; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <p class="kicker">CS 301R · Launch</p>
+    <h1>Is It Ready to Tag?</h1>
+  </div>
+  <div class="who">Project <span></span><br>Repository <span></span></div>
+</div>
+
+<div class="intro"><b>A release is a promise that everything in it is true.</b> Teams at work run a release checklist before they ship; open-source projects check a release candidate before they tag it. The work isn't new writing; it's making each piece meet its bar. Mark each row twice: <b>today</b>, before you start (it tells you where to spend class), and <b>tagged</b>, just before you release.</div>
+
+<h2>What's in the repository at the tag <span class="hint">Each row: where it lives, and what it has to say. A short, true file beats a long, stale one.</span></h2>
+<table class="pkg">
+  <tr><th>Item</th><th>Where it lives</th><th>What it must contain</th><th>Today</th><th class="c">Tagged</th></tr>
+  <tr>
+    <td class="item">README first screen<span class="nd">need 1 · What is this?</span></td>
+    <td class="where">README.md</td>
+    <td>What it does, for whom; a <b>status that matches what runs</b>; links to setup, onboarding, contributing, known issues</td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">Welcome<span class="nd">need 2 · Am I welcome?</span></td>
+    <td class="where">CONTRIBUTING.md<br>CODE_OF_CONDUCT.md</td>
+    <td>A warm first line; a <b>real, working</b> reporting contact; outside issues and PRs answered kindly</td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">Setup guide<span class="nd">need 3 · How do I start?</span></td>
+    <td class="where">docs/setup.md</td>
+    <td>Prerequisites with versions → install → configure → <b>the test command</b> → run it. Nothing a stranger has to guess.</td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">A test anyone can run<span class="nd">need 3 · under the hood</span></td>
+    <td class="where">the test suite</td>
+    <td>An automated test on the <b>core logic</b>, run by the setup guide's command, <b>passing</b>, asserting something real</td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">Onboarding guide<span class="nd">needs 1–5</span></td>
+    <td class="where">docs/onboarding.md</td>
+    <td>The five needs answered, linking setup; a <b>tour of the code</b>: where the core logic lives, where a feature would go</td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">Starter work<span class="nd">need 4 · Where do I start?</span></td>
+    <td class="where"><i>issues labeled</i><br>good first issue</td>
+    <td>Two or three, each doable <b>without asking</b>, with a where-to-start line (file or function)</td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">Response<span class="nd">need 5 · Will anyone respond?</span></td>
+    <td class="where">docs/communication-norms.md</td>
+    <td>A response time <b>you'll keep after the term</b>; how you'll spot a waiting issue; where to ask</td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">Known issues and tech debt<span class="nd">under the hood</span></td>
+    <td class="where">docs/known-issues.md<br><i>linked from the README</i></td>
+    <td>Every throwaway corner, cut, unfixed audit finding, and onboarding-test stall, <b>each with its issue</b></td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">Architecture, as built<span class="nd">under the hood</span></td>
+    <td class="where">docs/architecture.md</td>
+    <td>Diagrams refreshed to what exists; <b>anything not built is deleted</b></td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">Roadmap<span class="nd">need 4 · under the hood</span></td>
+    <td class="where">docs/roadmap.md</td>
+    <td>Sequenced next steps; <b>a newcomer's first step</b>; claims only what the code supports</td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr>
+    <td class="item">Retrospective<span class="nd">the project's account of itself</span></td>
+    <td class="where">docs/retrospective.md</td>
+    <td>Four headings (held or not · what v1 proved · what you'd change · what's next); every verdict backed by evidence; <b>agrees with the onboarding test</b></td>
+    <td class="today">☐ done ☐ draft ☐ missing</td><td class="tag">☐</td>
+  </tr>
+  <tr class="sub">
+    <td class="item">Submitted, per person<span class="nd">not in the repository</span></td>
+    <td class="where"><i>the course site</i></td>
+    <td>The <b>tag's URL</b> · your reflection (private, never committed) · a photo of the <b>signed Contributor-Readiness Checklist</b></td>
+    <td class="today"></td><td class="tag">☐</td>
+  </tr>
+</table>
+<div class="legend"><b>Done:</b> on <i>main</i> and meets the bar. <b>Draft:</b> on <i>main</i>, honest, not yet at the bar. <b>Missing:</b> not on <i>main</i>. Work on a branch doesn't count until it's merged.<br><b>Needs 1–5</b> are the newcomer questions from the Contributor-Readiness Checklist: what is this? · am I welcome? · how do I start? · where do I start? · will anyone respond?</div>
+
+<div class="cols">
+  <div class="col a">
+    <h3>Today's two work blocks: one item each</h3>
+    <p><b>Block 1, before the test: fix what your tester is about to hit.</b> The first of these that applies:</p>
+    <ol>
+      <li>The test is missing, isn't run by the setup guide's command, or fails.</li>
+      <li>A file the tester reads is missing or false: setup, onboarding, README, starter issues.</li>
+      <li>One of your two worst audit stalls is still there.</li>
+      <li>Otherwise: the item furthest from its bar.</li>
+    </ol>
+    <div class="pick"><span class="l">My block-1 item:</span><span class="ln"></span></div>
+    <p style="margin-top:4pt"><b>Block 2, after the test: one fix, the worst that fits.</b> The earliest <i>fail</i> on your signed checklist, or else the earliest <i>stall</i>. Too big to fix? Log it properly instead: that's the block.</p>
+    <div class="pick"><span class="l">My block-2 item:</span><span class="ln"></span></div>
+  </div>
+  <div class="col b">
+    <h3>Before you tag, in this order</h3>
+    <ol>
+      <li><b>Fix or log</b> every remaining stall and fail. Logging is a known-issues line and an issue (<i>good first issue</i> if a newcomer could fix it). No new features.</li>
+      <li>Bring every <b>draft</b> or <b>missing</b> row up to its bar.</li>
+      <li>Finish the <b>retrospective</b>, checked against the signed checklist, and merge it.</li>
+      <li>Run the <b>test command</b> from the setup guide on <i>main</i>. It passes.</li>
+      <li><b>Tag and push:</b> <span style="font-family:Consolas,monospace;font-size:8pt">git tag -a v0.1-launch -m "launch"</span> then <span style="font-family:Consolas,monospace;font-size:8pt">git push origin v0.1-launch</span></li>
+      <li><b>Submit</b> the last row above.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="foot">
+  <span><b>Fix it or log it.</b> Nothing ships undocumented, and nothing documented is untrue.</span>
+  <span>CS 301R</span>
+</div>
+
+</body>
+</html>

@@ -90,7 +90,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 23 | Nov 23 | Mon | Wk 12 | A | Contributor-readiness checklist; new-contributor needs | — |
 | — | *Nov 25* | *Wed* | *Wk 12* | *B* | *No class — Thanksgiving; peer onboarding test round 2 folds into Session 25* | — |
 | 24 | Nov 30 | Mon | Wk 13 | A | Retrospective prompts; presentation framing | — |
-| 25 | Dec 2 | Wed | Wk 13 | B | Studio — assemble launch package; absorbed peer onboarding test round 2 | **CP11 Launch Package + Retrospective** (assembled) |
+| 25 | Dec 2 | Wed | Wk 13 | B | Studio — assemble launch package; absorbed peer onboarding test round 2 | **CP11 Launch Package + Retrospective** assembled and tested (due Thu, Dec 3, 11:59 pm) |
 | 26 | Dec 7 | Mon | Wk 14 | A | Demo dry-run with peer feedback; tighten the three final questions | — |
 | 27 | Dec 9 | Wed | Wk 14 | B | Final studio; repo/document cleanup | **Launch package submitted**; presentation ready |
 
@@ -118,7 +118,7 @@ Legend — **A** = Session A (lecture/worked examples, normally Monday) · **B**
 | 8 | Project Plan & Roadmap | Wed, Nov 4 | 18 |
 | 9 | Technical Communication Portfolio | Wed, Nov 18 | 22 |
 | 10 | Progress Demo + Repo Audit | Wed, Nov 18 | 22 |
-| 11 | Launch Package + Retrospective | Wed, Dec 2 | 25 |
+| 11 | Launch Package + Retrospective | Thu, Dec 3 | 25 (finished outside class) |
 | 12 | Final Pitch + Demo (mastery artifact) | Mon, Dec 14, 8:30–10:00 AM | Demo Day |
 
 **Phase boundaries on real dates:** Individual work (CP1–4) runs **Sep 2 – Oct 7**; pitches are evaluated and ranked on **Oct 7**, students spend the weekend with the anchor projects' written proposals, and **teams are announced Mon, Oct 12**, running through finals. The hinge lands comfortably after the Sep 10 add/drop deadline, so rosters are stable before teams commit.

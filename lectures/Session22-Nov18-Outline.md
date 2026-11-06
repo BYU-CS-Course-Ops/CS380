@@ -70,7 +70,7 @@ By the end of this session, a student can:
 - One round-the-room prompt: *the most surprising thing a stranger tripped on.* (It's never what the authors expect — say so.)
 
 ### 5. Wrap — the road to launch — 2 min
-- What remains: **Mon Nov 23** contributor-readiness (last teaching session before launch work) · *no class Wed Nov 25 (Thanksgiving)* · **Wk 13** retrospective + launch-package assembly (CP11 due Dec 2) · **Wk 14** dry-run + final studio · **finals week: Demo Day.**
+- What remains: **Mon Nov 23** contributor-readiness (last teaching session before launch work) · *no class Wed Nov 25 (Thanksgiving)* · **Wk 13** retrospective + launch-package assembly (CP11 due Thu Dec 3) · **Wk 14** dry-run + final studio · **finals week: Demo Day.**
 - The audit sheet is a gift; the fix list is the plan. Happy Thanksgiving.
 
 ---

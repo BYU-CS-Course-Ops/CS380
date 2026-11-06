@@ -1,0 +1,110 @@
+## Before class
+
+There's no reading today. Today's studio can finish a package, not start one, so arrive with:
+
+1. **Every launch-package file on `main`, at least as an honest draft:** `docs/setup.md`, `docs/onboarding.md`, `docs/architecture.md`, `docs/roadmap.md`, and `docs/known-issues.md`.
+2. **Your test passing**, run by the command your setup guide names. It's the testing floor, and it's the first thing your tester runs.
+3. **Your retrospective in prose** on a branch (`docs/retrospective.md`, the four headings from Monday), and your individual reflection drafted wherever you keep private writing.
+4. **Your Repo Audit Sheet from {{ S22_DAY }}, {{ S22_DATE }}** (or its photo). You'll copy your two worst stalls from it.
+5. **A laptop that can clone a classmate's repository** and install what their setup guide asks for.
+
+Work on a branch doesn't count until it's merged. Your tester tests `main`.
+
+---
+
+## Purpose
+
+Shipping is its own skill, separate from building. It's the last pass where everything already drafted is made true, checked by someone who didn't write it, and released on purpose. Teams at work run it as a release checklist and an acceptance test. Open-source projects put out a release candidate for a few outside people to try before they tag it. In every version, the author is the worst tester, because they already know everything the docs leave out.
+
+Today is that pass for your project. The package already exists in draft. Class adds what you can't do alone: **a stranger's test**. Then you spend your time on what that test is most likely to break.
+
+The rule for the day is the one from Session 23: **fix it or log it. Silence is the only failure.** Anything your tester hits is either fixed or written into your known-issues log before you tag. Nothing ships undocumented, and nothing documented is untrue. *(In this course, the release is your `v0.1-launch` tag and <course-link type="assignment" id="cp11">CP11</course-link>, due {{ CP11_DUE_DAY }}, {{ CP11_DUE }}, by 11:59 pm.)*
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Check a release item by item** against an explicit bar, and say which item matters most to a newcomer.
+2. **Run an onboarding test on someone else's project** from the repository alone, and record what happened faithfully.
+3. **Triage what a test finds:** fix what fits the time, and log the rest honestly, as a known issue or a starter issue.
+4. **Cross-check a retrospective against fresh evidence**, and change it where the evidence disagrees, in either direction.
+
+---
+
+## What we'll do together
+
+You'll get two sheets at the door:
+
+- **The Launch Package Checklist** is yours all day. Each row is a piece of the package: where it lives in the repository and what it must contain at the tag. You mark each row twice: *today* (done, draft, or missing) and *tagged*, just before you release. Both work-block rules and the before-you-tag order are on it too.
+- **The Contributor-Readiness Checklist**, a clean copy of the one from Session 23, is your tester's script. Its five newcomer questions are the "needs 1–5" on your sheet. Your tester signs it, and a photo of the signed copy goes in your submission.
+
+**Standup (8 minutes).** Mark the *Today* column and copy your row onto the board. On the tester's sheet, fill in **Since the audit** with the two stalls that most stopped your Session 22 auditor. Then, round the room, name the one item you'll work on first.
+
+**Block 1: fix what your tester is about to hit (20 minutes).** One item, because one person does one thing well in twenty minutes. Take the first of these that applies:
+
+1. **The test floor isn't met:** there's no test on the core logic, the setup guide's command doesn't run it, or it fails.
+2. **A file the tester reads is missing or false:** the setup guide, the onboarding guide, the README's first screen, or the starter issues.
+3. **One of your two audit stalls is still there.** Your tester checks both by name.
+4. **Otherwise,** the item furthest from its bar, usually the architecture overview or the roadmap.
+
+The retrospective is never the block-1 item: it doesn't change what the tester sees, and it has to wait for the test anyway. Work on a branch, open a pull request, merge it. At pencils down, merge what's done, push `main`, and write the commit on your tester's sheet.
+
+**The onboarding test (22 minutes).** Everyone tests at once, each person on a partner's repository, so nobody can rescue their own. Your partner is someone who didn't audit your project in Session 22. Clone fresh, into a new folder, at the commit on the sheet. The repository is your only help. Think out loud, and write down what happened: facts, not a grade.
+
+| Question | What the tester does | Time |
+|---|---|---|
+| **1. What is this?** | Read the README's first screen for 60 seconds, look away, and write one sentence: what it does, for whom. After setup, check the status line against what ran. | 2 min |
+| **2. Am I welcome?** | Read the first lines of CONTRIBUTING and the code of conduct's reporting contact. Open two or three closed issues or pull requests from outside the project. | 3 min |
+| **3. How do I start?** | Follow the setup guide exactly: prerequisites, install, configure, the test command, then run it. Guess at nothing. **At 10 minutes, stop** and mark where you got to. | 10 min |
+| **4. Where do I start?** | Pick a `good first issue`. Find the file and function you'd change, from the issue and docs first, code search last. Write the path. | 4 min |
+| **5. Will anyone respond?** | Find the stated response time and where to ask. Check how long recent issues and pull requests waited. | 2 min |
+
+**Pass** means you met the bar from the docs alone. **Stall** means you got there by guessing, searching, or working around something; write which. **Fail** means you couldn't. In the last minute, tick the *Under the hood* items you confirmed, mark each *Since the audit* stall as fixed, logged, or still there, answer the closing question, and sign. Authors: initial the sheet and **photograph it right away.**
+
+**Block 2: one fix, the worst that fits (15 minutes).** Read your signed sheet. Take the earliest *fail*. The questions are in the order a newcomer meets them, so an early fail blocks everything after it. If there's no fail, take the earliest *stall*.
+
+- **If it fits in about 12 minutes, fix it:** branch, pull request, merge.
+- **If it doesn't, log it properly instead.** Write a known-issues entry with the workaround, and open its issue. If a newcomer could fix it, label it `good first issue` with a line on where to start. A gap a newcomer can close is the system working, not a failure.
+
+Everything else on the sheet gets fixed or logged before you tag. Write the list on the back of the sheet, each item marked *fix* or *log*. The extra day is for what the test found and the drafts still open. **No new features.**
+
+**Retrospective cross-check (5 minutes).** Put your retrospective draft beside the signed sheet and check three things:
+
+1. **Contradiction:** does any sentence claim what the sheet shows false, like "setup is straightforward" over a stall? Mark it to rewrite.
+2. **New evidence:** does a claim about newcomers, setup, or the docs now have evidence it didn't have before? A *pass* is evidence too. If a claim held, cite the test. Don't go looking for a setback to report: the evidence is graded, not the verdict.
+3. **Next steps:** does "where it goes next" agree with your roadmap and with what the tester found? A roadmap that starts with a new feature when the tester couldn't install the project is out of order.
+
+---
+
+## What you'll leave with
+
+- **A package on `main` that a stranger has tested**, with one more item brought up to its bar in each block.
+- **A signed Contributor-Readiness Checklist**, photographed.
+- **A fix-or-log list** on the back of that sheet, and your retrospective marked where the test disagrees with it.
+
+### Before you tag, in this order
+
+It's the bottom-right box on your Launch Package Checklist:
+
+1. **Fix or log** every remaining stall and fail from the test.
+2. **Bring every *draft* or *missing* row up to its bar**, and tick *Tagged* as each one gets there.
+3. **Finish the retrospective**, with today's marks, and merge it.
+4. **Run the test command** from your setup guide on `main`. It passes. A last-minute merge that breaks it costs you the testing floor.
+5. **Tag and push:**
+   ```
+   git tag -a v0.1-launch -m "CP11: launch"
+   git push origin v0.1-launch
+   ```
+6. **Submit on Canvas, in one text entry:** the tag's URL, your individual reflection, and the photo of your signed checklist.
+
+Grading reads the tag. Once it's pushed, your project is launched: public, joinable, and honest about itself. What's left is telling its story well.
+
+### Coming up
+
+- **{{ CP11_DUE_DAY }}, {{ CP11_DUE }}, 11:59 pm:** <course-link type="assignment" id="cp11">CP11: Launch Package and Retrospective</course-link>, tagged and submitted.
+- **<course-link type="page" id="s26">{{ S26_DAY }}, {{ S26_DATE }}</course-link>:** the dry run. The full 9-minute pitch and live demo, then questions, under Demo Day conditions. Bring it performance-ready, not in draft: the extra day for CP11 came out of pitch time, so the weekend is for the pitch.
+- **<course-link type="page" id="s27">{{ S27_DAY }}, {{ S27_DATE }}</course-link>:** the final studio, for polish only.
+- **{{ CP12_TAG_DUE_DAY }}, {{ CP12_TAG_DUE }}, 11:59 pm:** push your `cp12-demo` tag. See <course-link type="assignment" id="cp12">CP12</course-link>.
+- **{{ DEMO_DAY_DAY }}, {{ DEMO_DAY_DATE }}, {{ DEMO_DAY_START }}–{{ DEMO_DAY_END }}: Demo Day.** Capstone faculty are invited.

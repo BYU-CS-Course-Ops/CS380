@@ -292,7 +292,7 @@ async function build() {
   s.addText([
     { text: "Monday, Nov 23: contributor readiness, the last teaching session before launch work", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "Wednesday, Nov 25: no class (Thanksgiving)", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
-    { text: "Week 13: retrospective and the launch package (CP11, Dec 2)", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
+    { text: "Week 13: retrospective and the launch package (CP11, due Thu Dec 3)", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "Week 14: dry run and final studio. Then Demo Day, in finals week.", options: { bullet: { indent: 16 } } }
   ], { x: 0.95, y: 3.62, w: 11.7, h: 2.15, color: "CBD8E6", fontFace: F.body, fontSize: 17, valign: "top", margin: 0 });
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);

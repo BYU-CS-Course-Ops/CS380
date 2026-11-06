@@ -122,7 +122,7 @@ Fall 2026 runs **27 sessions**. The term opens on two isolated Wednesdays (Sep 2
 | 10 | Nov 9, 11 | Prototypes and MVPs: vertical slice vs. broad-shallow, what v1 must *prove*, systematic debugging; prototype-plan review and studio build time | MVP Plan (Nov 11) |
 | 11 | Nov 16, 18 | Studio: scope and direction troubleshooting; progress demos in small groups; **instructor + peer repo audit / onboarding test** | **CP9 Tech-Comm Portfolio** + **CP10 Progress Demo & Repo Audit** (Nov 18) |
 | 12 | Nov 23 | Contributor-readiness checklist; what a new contributor actually needs; known-issues and technical-debt logs *(Nov 25 — no class)* | — |
-| 13 | Nov 30, Dec 2 | Honest retrospective writing; framing future work without overselling; studio to assemble the launch package | **CP11 Launch Package + Retrospective** (Dec 2) |
+| 13 | Nov 30, Dec 2 | Honest retrospective writing; framing future work without overselling; studio to assemble the launch package | **CP11 Launch Package + Retrospective** (Thu, Dec 3) |
 | 14 | Dec 7, 9 | Demo dry-run with peer feedback; tightening the three final questions; final studio and repo cleanup | Launch package submitted (Dec 9) |
 | Finals | Mon, Dec 14 | **Final Pitch + Demo Day** — 8:30–10:00 AM, capstone faculty invited | **CP12 Final Pitch + Demo** |
 

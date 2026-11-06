@@ -77,7 +77,7 @@ By the end of this session, a student can:
 
 ### 6. Wrap — 5 min
 - Recap: five needs, honest quality, the package is assembly. The project's afterlife is decided by what's written down in the next nine days.
-- **No class Wednesday (Thanksgiving).** **Mon Nov 30:** retrospective + presentation framing. **Wed Dec 2:** studio — package assembled + peer onboarding test round 2; **CP11 due.**
+- **No class Wednesday (Thanksgiving).** **Mon Nov 30:** retrospective + presentation framing. **Wed Dec 2:** studio — package assembled + peer onboarding test round 2. **Thu Dec 3, 11:59 pm: CP11 due.**
 - **Thanksgiving week: no expectation** (decided Oct 30). Enjoy the holiday. Anyone who wants to close open issues or keep building may, and the punch list is ready for them — but nothing is due and nothing assumes it.
 
 ---
@@ -110,7 +110,7 @@ By the end of this session, a student can:
 ## Deliverable / after class
 
 - No deliverable this week, and no expectation over Thanksgiving. **Launch punch list** in the tracker by the end of class; package items owned.
-- **Due Wed, Dec 2:** **CP11 Launch Package + Retrospective** (assembled in the Dec 2 studio).
+- **Due Thu, Dec 3, 11:59 pm:** **CP11 Launch Package + Retrospective** (assembled and tested in the Dec 2 studio; moved from Dec 2 on Nov 6).
 
 ---
 

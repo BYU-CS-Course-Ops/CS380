@@ -75,15 +75,15 @@ By the end of this session, a student can:
 - Instructor circulates with the capstone-faculty ear: *"what would make a skeptical faculty member believe this project has a future?"*
 
 ### 6. Wrap — 7 min
-- **Wednesday (Dec 2): studio.** Assemble the launch package (punch list → done), run **onboarding test round 2** (the folded-in Thanksgiving session — fresh eyes on the five-needs checklist), finalize the retrospective. **CP11 due end of Wednesday.**
+- **Wednesday (Dec 2): studio.** Assemble the launch package (punch list → done), run **onboarding test round 2** (the folded-in Thanksgiving session — fresh eyes on the five-needs checklist), finalize the retrospective. **CP11 due Thu Dec 3, 11:59 pm** (the day after; moved Nov 6).
 - **Next week:** Mon Dec 7 dry-run (Session 26: full pitch + demo, peer-scored), Wed Dec 9 final studio + cleanup (Session 27). **Demo Day: Mon, Dec 14, 8:30–10:00 AM** (capstone faculty invited). The demo runs from a **`cp12-demo` tag pushed by 11:59 pm Thu, Dec 10** — the last day of classes; nothing but the final may be due after it. The registrar's block is 7:00–10:00; with four projects we start at 8:30 and still finish by 10.
-- Tonight: retro stubs → prose; pitch skeleton → slides started.
+- **Before Wednesday (said aloud, on the wrap slide):** every package file on `main` as an honest draft (`docs/setup.md`, `onboarding.md`, `architecture.md`, `roadmap.md`, `known-issues.md`), the test passing on the setup guide's command, and retro stubs → prose. Wednesday's studio is two one-item blocks plus the onboarding test (Session 25 §0–§4): it can finish a package, not start one. Pitch slides wait for the weekend.
 
 ---
 
 ## Threads to carry forward
 
-- The **retrospective** completes CP11 Wednesday; its honesty is re-tested live in Demo Day Q&A.
+- The **retrospective** completes CP11 (tagged Thursday night); its honesty is re-tested live in Demo Day Q&A.
 - The **three questions** structure the dry-run scoring (Session 26) and the CP12 rubric.
 - **Refuted-assumptions-as-learning** closes the loop opened in Week 1 (defer judgment, test claims) — say so explicitly; it's the course's epistemics, full circle.
 - The roadmap-as-invitation connects CP11 → capstone-seed decisions by faculty.
@@ -100,7 +100,7 @@ By the end of this session, a student can:
 
 ## Deliverable / after class
 
-- Retro spine drafted (headed for `docs/retrospective.md`); reflection started; pitch skeleton drafted. **Due Wed, Dec 2: CP11 Launch Package + Retrospective** (assembled in studio).
+- Retro spine drafted (headed for `docs/retrospective.md`); reflection started; pitch skeleton drafted. **Due Thu, Dec 3, 11:59 pm: CP11 Launch Package + Retrospective** (assembled in studio).
 - No end-of-term peer evaluations this term (no teams; decided at Session 22, removed here Nov 2).
 
 ---

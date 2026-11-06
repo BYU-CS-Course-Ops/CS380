@@ -82,8 +82,8 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 
 *Moved up from "before Session 20" (Oct 30): students now write their setup guides **before** Session 20, from Prop Loft's as the model, and the Session 19 and 20 pages link the tag.*
 
-- [ ] **After the `session-18` tag is pushed**, publish the setup guide: `demos/prop-loft-states/publish.sh` (no argument runs the rest of the stack). It should report `docs/design-plain-forms` as already on main (merged in class) and skip it; if it tries to open a PR for it instead, the in-class title didn't match the commit subject: stop it. Merges `docs/setup-guide`, tags `session-20`. Its PR closes the setup-guide issue, and the board's *Item closed* workflow should move that card to Done. Check it did.
-- [ ] **Check the tag:** `git ls-remote --tags https://github.com/prop-loft/prop-loft session-20`, and open the Session 20 page's link to `docs/setup.md` at the tag.
+- [x] **After the `session-18` tag is pushed**, publish the setup guide (done Nov 5: PR #30, merged as `3785b98`; #10 closed and its card moved to Done): `demos/prop-loft-states/publish.sh` (no argument runs the rest of the stack). It should report `docs/design-plain-forms` as already on main (merged in class) and skip it; if it tries to open a PR for it instead, the in-class title didn't match the commit subject: stop it. Merges `docs/setup-guide`, tags `session-20`. Its PR closes the setup-guide issue, and the board's *Item closed* workflow should move that card to Done. Check it did.
+- [x] **Check the tag:** (Nov 5: tag on `3785b98`; the Session 20 page's `docs/setup.md` link returns 200) `git ls-remote --tags https://github.com/prop-loft/prop-loft session-20`, and open the Session 20 page's link to `docs/setup.md` at the tag.
 
 ## Before Session 20 — by Tue, Nov 10
 
@@ -113,3 +113,8 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 - [ ] **Invite capstone faculty for Demo Day at 8:30 AM, Mon Dec 14** (the class meets 8:30–10:00 inside the registrar's 7:00–10:00 block).
 - [ ] **Deploy sandbox, then `fall26`** so CP12's due time, the course home, and the syllabus read 8:30 AM (`DEMO_DAY_START`), the Claims-Check Worksheet PDF is on Canvas, and **CP11 and CP12 go live with their Canvas rubrics** (both rehearsed on the sandbox Nov 2; spot-check that each rubric is attached and the Assignment Rubrics page lists both).
 - [ ] **Print** the Claims-Check Worksheet (`canvas_material/resources/Claims-Check-Worksheet.pdf`), one per student.
+
+## Before Session 25 — by Tue, Dec 1
+
+- [ ] **Print** the Launch Package Checklist (`canvas_material/resources/Launch-Package-Checklist.pdf`), one per student, plus clean Contributor-Readiness Checklists (one per student and spares) for the onboarding test.
+- [ ] **Set test pairings** that rotate the Session 22 audit pairs (A↔B, C↔D → A↔C, B↔D) and list each repo URL for the board.

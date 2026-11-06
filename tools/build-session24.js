@@ -119,7 +119,7 @@ async function build() {
     { text: "Session 24 — check your claims, then tell the story forward", options: { color: C.amber, bold: true, breakLine: true } },
     { text: "Monday, November 30, 2026", options: { color: "9FB4C7" } }
   ], { x: 0.92, y: 4.7, w: 11, h: 0.9, fontFace: F.body, fontSize: 19, margin: 0, lineSpacingMultiple: 1.2 });
-  s.addNotes("First class after Thanksgiving. Before class: print the Claims-Check Worksheet, one per student. Students bring their proposal, their MVP Plan and V1 Proof Sheet, and their known-issues log: the retrospective is written against what they said at the time, not from memory. Two workshops today; keep the talk short. CP11, which includes the retrospective, is due Wednesday night.");
+  s.addNotes("First class after Thanksgiving. Before class: print the Claims-Check Worksheet, one per student. Students bring their proposal, their MVP Plan and V1 Proof Sheet, and their known-issues log: the retrospective is written against what they said at the time, not from memory. Two workshops today; keep the talk short. CP11, which includes the retrospective, is due Thursday night, the day after the onboarding test.");
 
   // 2 Today
   s = mk(); s.background = { color: C.white };
@@ -141,7 +141,7 @@ async function build() {
     s.addText(plan[i][2], { x: 10.6, y, w: 1.8, h: 0.68, color: hi ? C.amber : C.slate, fontFace: F.body, fontSize: 16, bold: true, align: "right", valign: "middle", margin: 0 });
   }
   footer(s);
-  s.addNotes("Thirty seconds. Two products leave today in draft: the spine of the written retrospective, which is half of CP11 on Wednesday, and the skeleton of the final pitch for Demo Day. The two highlighted rows are workshops, and together they're most of the session; the talking in between is short on purpose.");
+  s.addNotes("Thirty seconds. Two products leave today in draft: the spine of the written retrospective, which is half of CP11, due Thursday night, and the skeleton of the final pitch for Demo Day. The two highlighted rows are workshops, and together they're most of the session; the talking in between is short on purpose.");
 
   // 3 Every project starts on claims
   s = mk(); s.background = { color: C.white };
@@ -385,16 +385,17 @@ async function build() {
   s.addText("Claims, evidence, learning. Then tell it forward.", { x: 0.9, y: 1.85, w: 11.9, h: 0.8, color: C.white, fontFace: F.head, fontSize: 25, bold: true, italic: true, margin: 0 });
   s.addText("THE LAST TWO WEEKS", { x: 0.92, y: 2.85, w: 11, h: 0.35, color: C.amber, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   s.addText([
-    { text: "Wednesday, Dec 2: launch studio and the onboarding test. CP11 due end of day", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6, bold: true, color: C.white } },
+    { text: "Wednesday, Dec 2: launch studio and the onboarding test", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
+    { text: "Thursday, Dec 3, 11:59 pm: CP11 tagged and submitted", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6, bold: true, color: C.white } },
     { text: "Monday, Dec 7: the dry run, full pitch and live demo against the clock", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "Wednesday, Dec 9: final studio, polish only", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "Thursday, Dec 10, 11:59 pm: cp12-demo tag pushed", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "Monday, Dec 14, 8:30–10:00 AM: Demo Day", options: { bullet: { indent: 16 }, bold: true, color: C.white } }
   ], { x: 0.95, y: 3.27, w: 11.7, h: 2.5, color: "CBD8E6", fontFace: F.body, fontSize: 17, valign: "top", margin: 0 });
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);
-  s.addText("Tonight: retrospective stubs into prose; pitch skeleton into slides.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 17, bold: true, align: "center", valign: "middle", margin: 0 });
+  s.addText("Before Wednesday: every package file on main as a draft, the test passing, the retrospective in prose.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 17, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Two minutes. Say the one-liner. Walk the dates once: Wednesday is assembly and the onboarding test with CP11 due that night; Monday is the dry run, so bring the pitch performance-ready; Thursday night is the tag. Demo Day starts at 8:30, not 7:00: the registrar's block opens earlier, but with four projects we don't need it. Faculty are invited.");
+  s.addNotes("Two minutes. Say the one-liner. Read the amber bar aloud and mean it: Wednesday has two short work blocks and the onboarding test, so it can only finish a package that already exists. Every package file on main as an honest draft, the test passing with the setup guide's command, and the retrospective in prose. Walk the dates once: Wednesday is assembly and the onboarding test; Thursday night CP11 is tagged and submitted, a day to fix what the test turns up, not to add features; Monday is the dry run, so bring the pitch performance-ready; Thursday night is the tag. Demo Day starts at 8:30, not 7:00: the registrar's block opens earlier, but with four projects we don't need it. Faculty are invited.");
 
   const OUT = "Session24-HonestRetrospective.pptx";
   await pres.writeFile({ fileName: OUT });
