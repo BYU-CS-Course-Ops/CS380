@@ -118,3 +118,8 @@ The Size field, sizes, `slice` label, and slice statement are made **live in cla
 
 - [ ] **Print** the Launch Package Checklist (`canvas_material/resources/Launch-Package-Checklist.pdf`), one per student, plus clean Contributor-Readiness Checklists (one per student and spares) for the onboarding test.
 - [ ] **Set test pairings** that rotate the Session 22 audit pairs (A↔B, C↔D → A↔C, B↔D) and list each repo URL for the board.
+
+## Before Session 26 — by Fri, Dec 4
+
+- [ ] **Print** the Dry-Run Score Sheet (`canvas_material/resources/Dry-Run-Score-Sheet.pdf`), two pages per student (one half per run watched), the question bank (`lectures/Session26-Question-Bank.md`), and the Dry-Run Scoring Sheet (`lectures/Session26-Dry-Run-Scoring-Sheet.pdf`) for yourself.
+- [ ] **Bring a phone stand or small tripod** for opt-in recording.

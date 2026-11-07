@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dry-Run Scoring Sheet</title>
+<style>
+  @page { size: letter landscape; margin: 0.4in 0.45in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 10pt; line-height: 1.18; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 5pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 17pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 8pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .tag { font-size: 8.4pt; color: #5F7284; font-style: italic; padding-bottom: 2pt; }
+
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+
+  /* rubric summary */
+  table.rub { margin-bottom: 7pt; background: #F2F6F8; }
+  table.rub th { font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284; text-align: left;
+                 padding: 2pt 4pt; border-bottom: 1pt solid #12908F; }
+  table.rub th .lv { color: #0E6E6D; }
+  table.rub td { font-size: 8.4pt; padding: 1.6pt 4pt; border-bottom: 0.5pt solid #DCE5EB; vertical-align: top; }
+  table.rub td.cn { font-weight: bold; color: #14233A; }
+  table.rub td.w { text-align: center; font-weight: bold; color: #0E6E6D; }
+  .p { color: #12908F; font-size: 7.6pt; padding-left: 3pt; }
+
+  /* scoring grid */
+  table.grid th { font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284; font-weight: bold;
+       text-align: center; padding: 0 2pt 3pt 2pt; border-bottom: 1.2pt solid #12908F; vertical-align: bottom; }
+  table.grid th.l { text-align: left; }
+  .wt { color: #0E6E6D; text-transform: none; font-size: 8.4pt; }
+  table.grid td { border: 0.6pt solid #C9D6DF; height: 0.86in; vertical-align: top; position: relative; padding: 2pt 3pt; }
+  td.num { text-align: center; vertical-align: middle !important; font-family: Cambria, Georgia, serif;
+           font-weight: bold; color: #12908F; font-size: 11pt; border-left: 0 !important; }
+  .time { position: absolute; left: 3pt; bottom: 2pt; font-size: 7pt; color: #9BB0BF; }
+  td.sc { text-align: center; }
+  .box { position: absolute; left: 50%; top: 50%; width: 0.36in; height: 0.3in; margin: -0.15in 0 0 -0.18in;
+          border: 0.9pt solid #12908F; border-radius: 2pt; background: #F2F6F8; }
+  td.tot { background: #FBF6EC; }
+
+  .foot { margin-top: 5pt; font-size: 8pt; color: #5F7284; display: flex; justify-content: space-between; gap: 10pt; }
+  .foot b { color: #14233A; }
+  table.grid th.grp { border-bottom: 0; padding-bottom: 1pt; font-size: 7.4pt; color: #0E6E6D; }
+  table.grid th.grp.live { color: #D9614C; }
+  td.carry { background: #F7F9FA; }
+  table.rub td.when { font-size: 7.6pt; color: #5F7284; font-style: italic; }
+  td.pitch { font-size: 7.4pt; color: #9BB0BF; }
+  .splits { position: absolute; left: 3pt; right: 3pt; bottom: 2pt; font-size: 7pt; color: #9BB0BF; line-height: 1.35; }
+  td.ck { font-size: 7.8pt; line-height: 1.38; white-space: nowrap; color: #1E2A36; }
+  td.ck .h { color: #5F7284; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="kicker">CS 301R · Dry run · instructor sheet</div>
+      <h1>Dry-Run Scoring Sheet</h1>
+    </div>
+    <div class="tag">One row per project, in run order · practice levels against CP12, not entered in Canvas</div>
+  </div>
+
+  <table class="rub">
+    <colgroup><col style="width:1.55in"><col style="width:0.42in"><col><col><col><col></colgroup>
+    <tr><th>CP12 criterion</th><th style="text-align:center">Wt</th>
+      <th><span class="lv">4 · Exemplary</span></th><th><span class="lv">3 · Proficient</span></th>
+      <th><span class="lv">2 · Developing</span></th><th><span class="lv">1 · Beginning</span></th></tr>
+<tr><td class="cn">Need (Q1)</td><td class="w">20</td><td>Specific user, vivid need; evidence from discovery and from users <span class="p">· 20</span></td><td>Clear need with evidence; mostly discovery, or thin <span class="p">· 15</span></td><td>Stated but vague, or asserted <span class="p">· 10</span></td><td>No recognizable user or need <span class="p">· 5</span></td></tr>
+<tr><td class="cn">Built: live demo (Q2)</td><td class="w">25</td><td>Claim first; slice walked live, smoothly; limits named; trouble met with a fallback <span class="p">· 25</span></td><td>Works live with hiccups or a loose frame; or a declared clip run calmly (cap) <span class="p">· 18.75</span></td><td>Shaky or partial; unframed; a failure with no fallback <span class="p">· 12.5</span></td><td>No working demo <span class="p">· 6.25</span></td></tr>
+<tr><td class="cn">Next &amp; join (Q3)</td><td class="w">20</td><td>Believable next steps; the on-ramp shown in the repo; claims only what the code supports <span class="p">· 20</span></td><td>Clear next steps and a way to join, a little general <span class="p">· 15</span></td><td>Thin, or a wish list off the roadmap <span class="p">· 10</span></td><td>Missing, or promises the code can't keep <span class="p">· 5</span></td></tr>
+<tr><td class="cn">Integration (story)</td><td class="w">15</td><td>One story: discovery visibly shaped what was built and what's next <span class="p">· 15</span></td><td>Mostly coherent; a stage loosely tied <span class="p">· 11.25</span></td><td>Stages as separate reports <span class="p">· 7.5</span></td><td>No through-line <span class="p">· 3.75</span></td></tr>
+<tr><td class="cn">Delivery</td><td class="w">10</td><td>Clear, persuasive, well paced, inside 9 minutes <span class="p">· 10</span></td><td>Solid; a rough patch or a little over <span class="p">· 7.5</span></td><td>Uneven, or well over time <span class="p">· 5</span></td><td>Unprepared <span class="p">· 2.5</span></td></tr>
+<tr><td class="cn">Q&amp;A</td><td class="w">10</td><td>Direct and honest, incl. “we don't know yet”; agrees with retro and repo <span class="p">· 10</span></td><td>One answer vague or evasive <span class="p">· 7.5</span></td><td>Deflects, or contradicts the retrospective <span class="p">· 5</span></td><td>Can't engage <span class="p">· 2.5</span></td></tr>
+  </table>
+
+  <table class="grid">
+    <colgroup>
+      <col style="width:0.28in"><col style="width:1.38in">
+      <col><col><col><col><col><col>
+      <col style="width:1.1in"><col style="width:1.1in"><col style="width:1.2in"><col style="width:1.5in">
+    </colgroup>
+    <tr><th></th><th></th><th class="grp live" colspan="6">Practice levels, live</th><th class="grp" colspan="3">What happened</th><th></th></tr>
+    <tr><th class="l">#</th><th class="l">Project · time splits</th><th>Need<br><span class="wt">20%</span></th><th>Demo<br><span class="wt">25%</span></th><th>Next &amp; join<br><span class="wt">20%</span></th><th>Story<br><span class="wt">15%</span></th><th>Delivery<br><span class="wt">10%</span></th><th>Q&amp;A<br><span class="wt">10%</span></th><th class="l">Mechanics</th><th class="l">The demo</th><th class="l">My question</th><th class="l">Notes · their top fix</th></tr>
+<tr><td class="num">1</td><td class="pitch"><span class="splits">need ___ · demo ___ · next ___<br>ended at ____ min</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="ck">☐ logged in ☐ data<br>☐ windows ☐ readable<br>☐ fallback ready</td><td class="ck">☐ clean ☐ fallback run<br>☐ declared clip<br>☐ restarted / narrated</td><td class="ck">bank Q# ____<br>☐ straight ☐ hedge<br>☐ contradicts retro/repo</td><td class="cm"></td></tr>
+<tr><td class="num">2</td><td class="pitch"><span class="splits">need ___ · demo ___ · next ___<br>ended at ____ min</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="ck">☐ logged in ☐ data<br>☐ windows ☐ readable<br>☐ fallback ready</td><td class="ck">☐ clean ☐ fallback run<br>☐ declared clip<br>☐ restarted / narrated</td><td class="ck">bank Q# ____<br>☐ straight ☐ hedge<br>☐ contradicts retro/repo</td><td class="cm"></td></tr>
+<tr><td class="num">3</td><td class="pitch"><span class="splits">need ___ · demo ___ · next ___<br>ended at ____ min</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="ck">☐ logged in ☐ data<br>☐ windows ☐ readable<br>☐ fallback ready</td><td class="ck">☐ clean ☐ fallback run<br>☐ declared clip<br>☐ restarted / narrated</td><td class="ck">bank Q# ____<br>☐ straight ☐ hedge<br>☐ contradicts retro/repo</td><td class="cm"></td></tr>
+<tr><td class="num">4</td><td class="pitch"><span class="splits">need ___ · demo ___ · next ___<br>ended at ____ min</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="ck">☐ logged in ☐ data<br>☐ windows ☐ readable<br>☐ fallback ready</td><td class="ck">☐ clean ☐ fallback run<br>☐ declared clip<br>☐ restarted / narrated</td><td class="ck">bank Q# ____<br>☐ straight ☐ hedge<br>☐ contradicts retro/repo</td><td class="cm"></td></tr>
+  </table>
+
+  <div class="foot">
+    <span><b>Boxes take a practice level, 4–1.</b> The dry run isn't graded: the levels show each presenter where they stand against CP12 and tell you whom to visit in Wednesday's studio. <b>Splits</b> from your stopwatch at the need → demo → next transitions; the clock stops at 9. <b>Mechanics</b> is what was ready before they began. <b>My question</b> is the one you asked from the question bank, and how it was answered. <b>Top fix</b> is what they said aloud in the debrief; check it on Wednesday.</span>
+    <span style="white-space:nowrap">CS 301R</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+## Before class
+
+1. **Have your pitch and demo performance-ready**, not in draft. Slides finished, on the laptop you'll present from. The demo running from `main` (what your `cp12-demo` tag will capture), already logged in, with its data loaded. A fallback ready if the live path breaks.
+2. **Rehearse it at least once against a clock: 9 minutes, hard.** Roughly 2 for the need, 5 for the demo, 2 for what's next.
+3. **Re-skim Guy Kawasaki's [*10/20/30 rule*](https://guykawasaki.com/the_102030_rule/).** The rules haven't changed since your first pitch; the stakes have.
+4. **Reread <course-link type="assignment" id="cp12">CP12</course-link> and its rubric** on the <course-link type="page" id="pg-rubrics">Assignment Rubrics</course-link> page, plus your retrospective and your signed onboarding checklist. Today's questions lean on them.
+5. **Want to watch your own run?** Bring a phone for the stand at the back, or set up a screen recording. It's optional.
+
+---
+
+## Purpose
+
+Every field that performs under pressure rehearses under the real conditions, including the parts that go wrong. A theater company's dress rehearsal runs in costume, under the lights, straight through. Pilots practice failures in the simulator so the real one isn't the first. A team at work gives its launch review a dry run in front of people who will push back. A rehearsal that pauses, restarts, or narrates what it *would* have shown is practicing something else.
+
+Today every project runs its full final presentation under Demo Day conditions: the clock, a cold open, a live demo, real questions. You get specific feedback on the only questions that matter now. **Did the need land? Did the demo prove what was built? Is the invitation to join believable?** Then you turn that feedback into a plan for the days before your tag. *(In this course, the final presentation is <course-link type="assignment" id="cp12">CP12</course-link> at Demo Day, {{ DEMO_DAY_DAY }}, {{ DEMO_DAY_DATE }}.)*
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Deliver a full final presentation and live demo inside the time limit**, transitions and all.
+2. **Field hard questions honestly**, including the ones your retrospective invites, like "what didn't the first version prove?"
+3. **Give a peer feedback they can use:** one specific moment for each question, not a verdict.
+4. **Turn feedback into a polish plan** for the days before a release, and nothing bigger.
+
+---
+
+## What we'll do together
+
+**The draw.** The run order is drawn at the start of class, so be ready to go first. Whoever is next sets up during the one-minute reset, so the laptop swap never comes out of anyone's time.
+
+**Each run, fifteen minutes:**
+
+| | Time | What happens |
+|---|---|---|
+| **Perform** | 9 min, hard | The need (~2), the live demo with its claim stated first (~5), and where it goes next and how others can join (~2). The clock stops at 9. |
+| **Questions** | 3 min | From the room, then one from me. (Demo Day has 5 minutes, from a room that includes invited faculty.) |
+| **Feedback** | 2 min | Two classmates each say one thing to keep and one to fix. Then the score sheets go to the presenter. |
+| **Reset** | 1 min | The next presenter loads. |
+
+**No restarts.** If the demo breaks, run your fallback. Recovering calmly is part of what you're rehearsing, and it's worth more today than a clean run.
+
+**When you're watching, you play two people:** a classmate, and a faculty member who has never seen the project. You'll fill in a **Dry-Run Score Sheet**, one half per run. For each of the three questions, mark whether it landed, and write the moment that sold it and the moment you doubted. Note the time, how ready the demo was, and whether the hardest question got a straight answer. Be specific: "good job" helps no one, and "the double-booking refusal sold question 2" does. It's feedback, not a grade.
+
+**Ask the questions faculty will ask.** What didn't the first version prove? Which claim held, and how do you know? What did your onboarding tester trip on? What would a newcomer do in their first hour? A strong answer is honest in either direction: "it held, and here's how we know" and "we don't know yet; here's how we'd find out" are both good answers.
+
+**Recording is opt-in.** Put your phone on the stand or start a screen recording before you begin. The file stays with you, and nothing is posted. Watching yourself once shows you more than any sheet. A clean recording of your demo can also become your declared fallback clip, if nothing on the demo path changes before the tag. *(A declared clip still caps CP12's demo criterion at Proficient unless the room's equipment fails.)*
+
+**Debrief: your polish plan (8 minutes).** Read your score sheets and write the plan before you leave:
+
+1. **List every fix the sheets point to**, and rank them by how much each one improves your answer to one of the three questions. There's no limit on the list. Work it from the top.
+2. **Polish-sized only.** Tighten the opening, stage the login, cut a slide, fix the bug the demo hit. No new features, no re-architecture.
+3. **Mark each fix *demo path* or *not*.** The demo path is anything that decides what appears on screen during your walk-through:
+   - the code the demo runs, and anything that code calls, including shared modules and library upgrades;
+   - the data it shows: seed scripts, fixtures, the database;
+   - what it runs on: configuration, the start command, your laptop, browser, and logged-in session.
+
+   Slides, speaking notes, and docs are off the path. The test: *would I have to run the demo again to know this didn't break it?* If the answer is yes, or you're not sure, it's on the path.
+4. **Say your top fix out loud**, one sentence, round the room.
+
+**Why the demo path matters:** a change you haven't run through since making it is how a demo that worked Monday breaks on Demo Day. So demo-path fixes land by the end of Wednesday's studio, where you'll do one more full run. Slides, notes, and docs can keep improving until the tag. It's the same rule any team uses before a release: freeze what users will see, then polish the rest.
+
+---
+
+## What you'll leave with
+
+- **Score sheets from your classmates**, and a run you can compare with Demo Day (and a recording, if you made one).
+- **A ranked polish plan**, each fix marked demo path or not.
+
+### Coming up
+
+- **<course-link type="page" id="s27">{{ S27_DAY }}, {{ S27_DATE }}</course-link>:** the final studio. Demo-path fixes done, and the full run once more against `main`. Watch your recording first, if you made one.
+- **{{ CP12_TAG_DUE_DAY }}, {{ CP12_TAG_DUE }}, 11:59 pm:** push your `cp12-demo` tag. Demo Day runs from it, and anything after it isn't seen. See <course-link type="assignment" id="cp12">CP12</course-link> for the commands.
+- **{{ DEMO_DAY_DAY }}, {{ DEMO_DAY_DATE }}, {{ DEMO_DAY_START }}–{{ DEMO_DAY_END }}: Demo Day.** Arrive early to load. Capstone faculty are invited.

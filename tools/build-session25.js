@@ -137,12 +137,12 @@ async function build() {
   s = mk(); s.background = { color: C.white };
   header(s, "Today", "Two work blocks, one stranger's test, and a release");
   const plan = [
-    [FA.FaTasks, "Standup: mark your sheet, pick your block-1 item", "8 min"],
-    [FA.FaWrench, "Block 1: fix what your tester is about to hit", "20 min"],
+    [FA.FaTasks, "Standup: mark your sheet, pick your block-1 item", "7 min"],
+    [FA.FaWrench, "Block 1: fix what your tester is about to hit", "18 min"],
     [FA.FaUserSecret, "The onboarding test, both directions at once", "22 min"],
     [FA.FaWrench, "Block 2: one fix, the worst that fits", "15 min"],
     [FA.FaPenFancy, "Retrospective cross-check", "5 min"],
-    [FA.FaTag, "Before you tag, and what's next", "5 min"]
+    [FA.FaTag, "Before you tag, and what Monday looks like", "8 min"]
   ];
   for (let i = 0; i < plan.length; i++) {
     const y = 1.95 + i * 0.8;
@@ -153,7 +153,7 @@ async function build() {
     s.addText(plan[i][2], { x: 10.6, y, w: 1.8, h: 0.68, color: hi ? C.amber : C.slate, fontFace: F.body, fontSize: 16, bold: true, align: "right", valign: "middle", margin: 0 });
   }
   footer(s);
-  s.addNotes("Thirty seconds. The three highlighted rows are the day: two short blocks of work and the test in between. One item per block, because one person does one thing well in twenty minutes; the sheet has a rule for choosing it. CP11 isn't due tonight: it's due Thursday at 11:59 pm, so there's a day to fix what the test turns up. Say that now so nobody spends block 1 panicking.");
+  s.addNotes("Thirty seconds. The three highlighted rows are the day: two short blocks of work and the test in between. One item per block, because one person does one thing well in a short block; the sheet has a rule for choosing it. CP11 isn't due tonight: it's due Thursday at 11:59 pm, so there's a day to fix what the test turns up. Say that now so nobody spends block 1 panicking.");
 
   // 3 Shipping is its own skill
   s = mk(); s.background = { color: C.white };
@@ -189,25 +189,25 @@ async function build() {
 
   // 5 Standup
   s = mk(); s.background = { color: C.white };
-  header(s, "Standup", "Eight minutes: where you are, and what you'll do first");
+  header(s, "Standup", "Seven minutes: where you are, and what you'll do first");
   numRow(s, 1.95, 0.85, 1, "Mark the Today column.", "Done: on main and at the bar. Draft: on main, not there yet. Missing: not on main.");
   numRow(s, 2.95, 0.85, 2, "Copy your row to the board.", "One mark per item. It shows the room, and me, where the day goes.");
   numRow(s, 3.95, 0.85, 3, "Fill in Since the audit.", "On the tester's sheet: the two stalls that most stopped your Session 22 auditor.");
   numRow(s, 4.95, 0.85, 4, "Name your block-1 item.", "Sixty seconds each, round the room. The rule is on the next slide, and on your sheet.");
   bar(s, 6.05, 0.75, C.navy, "A branch doesn't count.", "If it isn't merged to main, it's missing.", null);
   footer(s);
-  s.addNotes("Eight minutes. Students mark the sheet as they arrive, then copy the row to the whiteboard grid. Read the board while they fill in Since the audit: a row of missing marks means a private word now, not in block 2. In the round, each student says their row in one breath and their block-1 item; confirm or redirect using the rule. Anyone who names the retrospective gets redirected: it doesn't change what the tester sees.");
+  s.addNotes("Seven minutes. Students mark the sheet as they arrive, then copy the row to the whiteboard grid. Read the board while they fill in Since the audit: a row of missing marks means a private word now, not in block 2. In the round, each student says their row in one breath and their block-1 item; confirm or redirect using the rule. Anyone who names the retrospective gets redirected: it doesn't change what the tester sees.");
 
   // 6 Block 1
   s = mk(); s.background = { color: C.white };
-  header(s, "Block 1: fix what your tester is about to hit", "One item, twenty minutes. Take the first of these that applies:");
+  header(s, "Block 1: fix what your tester is about to hit", "One item, eighteen minutes. The first of these that applies:");
   numRow(s, 1.95, 0.78, 1, "The test floor.", "No test on the core logic, the setup guide's command doesn't run it, or it fails.");
   numRow(s, 2.85, 0.78, 2, "A file the tester reads.", "Setup, onboarding, the README's first screen, or the starter issues: missing or false.");
   numRow(s, 3.75, 0.78, 3, "An audit stall that's still there.", "Your tester checks both by name.");
   numRow(s, 4.65, 0.78, 4, "Otherwise:", "the item furthest from its bar, usually the architecture overview or the roadmap.");
-  bar(s, 5.7, 1.05, C.amber, null, "Pencils down at minute 28. Merge it or leave it on the branch, push main, and write the commit on your tester's sheet.", null);
+  bar(s, 5.7, 1.05, C.amber, null, "Pencils down at minute 25. Merge it or leave it on the branch, push main, and write the commit on your tester's sheet.", null);
   footer(s);
-  s.addNotes("Twenty minutes; leave this up. Branch, PR, merge, even solo. Done means the row meets its bar on the sheet, not that it improved. If it won't finish, cut it to what's true and merge that: a short, accurate setup guide beats a half-edited long one. Rove with one question: when your tester opens this in five minutes, what will they trip on first? If it isn't what they're working on, switch. Call time at minute 28 sharp.");
+  s.addNotes("Eighteen minutes; leave this up. Branch, PR, merge, even solo. Done means the row meets its bar on the sheet, not that it improved. If it won't finish, cut it to what's true and merge that: a short, accurate setup guide beats a half-edited long one. Rove with one question: when your tester opens this in five minutes, what will they trip on first? If it isn't what they're working on, switch. Call time at minute 25 sharp.");
 
   // 7 The test
   s = mk(); s.background = { color: C.white };
@@ -288,6 +288,26 @@ async function build() {
   bar(s, 6.15, 0.72, C.amber, null, "Due Thursday, Dec 3, 11:59 pm. The extra day is for the package; the pitch gets the weekend.", null);
   footer(s);
   s.addNotes("Two minutes. Walk the order once. Step 4 is the one people skip: a last-minute merge breaks the test, and the testing floor caps Contributor-readiness at Developing. Say the trade-off out loud: the extra day comes out of pitch time, so Thursday is fixes and drafts, not features, and Monday's dry run still needs the pitch performance-ready. Grading reads the tag; work pushed after it isn't seen.");
+
+  // 13 Monday: the dry run
+  s = mk(); s.background = { color: C.white };
+  header(s, "Monday: the dry run", "Demo Day conditions, so Demo Day isn't the first time");
+  const dr = [
+    [FA.FaStopwatch, "What it is", "9 minutes on a visible clock, 3 of questions, 2 of feedback. No restarts: if the demo breaks, run the fallback."],
+    [FA.FaLaptop, "What to bring", "Finished slides on the laptop you'll present from. The demo from main, logged in, data loaded, fallback ready."],
+    [FA.FaClipboardCheck, "How it's scored", "Classmates fill in a Dry-Run Score Sheet: did each question land, the time, the mechanics. You leave with a polish plan."]
+  ];
+  for (let i = 0; i < 3; i++) {
+    const x = 0.6 + i * 4.1;
+    card(s, x, 1.95, 3.9, 2.95, C.cardBg);
+    await iconCircle(s, dr[i][0], x + 0.3, 2.2, 0.66, C.teal, "FFFFFF");
+    s.addText(dr[i][1], { x: x + 0.3, y: 2.98, w: 3.4, h: 0.5, color: C.ink, fontFace: F.head, fontSize: 20, bold: true, valign: "top", margin: 0 });
+    s.addText(dr[i][2], { x: x + 0.3, y: 3.5, w: 3.35, h: 1.35, color: C.slate, fontFace: F.body, fontSize: 15, valign: "top", margin: 0 });
+  }
+  bar(s, 5.15, 0.85, C.navy, "Expect questions that check the record:", "what didn't v1 prove, which claim held, what your tester tripped on.", null);
+  bar(s, 6.1, 0.75, C.cardBg, "Before Monday:", "CP12 and its rubric, Kawasaki's 10/20/30, your pitch skeleton. Recording is optional.", null);
+  footer(s);
+  s.addNotes("Four minutes; this is why Monday isn't a surprise. Walk the three cards. Stress no restarts: the fallback is part of the rehearsal, and recovering calmly is worth more than a clean run. The questions will lean on the retrospective and the signed checklist, so students should reread both. Recording is opt-in: their own phone on the stand or a screen recording, and the file stays with them. Everything here is on the student page too.");
 
   // 13 Wrap
   s = mk(); s.background = { color: C.navy };

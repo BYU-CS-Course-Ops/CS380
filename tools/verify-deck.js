@@ -9,6 +9,8 @@
  * bit us:
  *   - TEXT OVERFLOW — a string that will not fit its box (width or height),
  *   - LOW CONTRAST  — text color too close to the fill *actually* behind it.
+ * It also flags GEOMETRY errors (a negative width or height), which make
+ * PowerPoint report the whole file as needing repair.
  *
  * Contrast resolves z-order: for each text box it finds the topmost filled
  * shape drawn beneath it (card, header band, icon circle) and compares against
@@ -197,6 +199,11 @@ function checkSlide(xml, slideNo, issues) {
   }
 
   shapes.forEach((s, i) => {
+    // --- geometry: PowerPoint refuses a deck with a negative width or height
+    // (e.g. a helper that computes h - offset for a box shorter than the offset)
+    if (s.b && (s.b.w < 0 || s.b.h < 0))
+      issues.push({ slide: slideNo, type: "GEOMETRY", text: "(shape " + (i + 1) + ")",
+        detail: `negative size ${(s.b.w / 914400).toFixed(2)} x ${(s.b.h / 914400).toFixed(2)} in — PowerPoint will report the file as damaged` });
     const hasText = s.paras.some((p) => toArr(p["a:r"]).some((r) => textOf(r["a:t"]).trim()));
     if (!hasText) return;
     const label = s.paras.map((p) => toArr(p["a:r"]).map((r) => textOf(r["a:t"])).join("")).join(" ⏎ ").trim().slice(0, 46);

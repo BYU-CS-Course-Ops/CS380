@@ -3,7 +3,7 @@
 **CS 301R · Software Engineering Studio I: Founding an Open-Source Project**
 **Session 27 of 27 · Wed, Dec 9, 2026 · 75-minute block — last class session**
 **Prior prep:**
-- **Bring:** the polish plan (three items max) from Monday, mostly done.
+- **Bring:** Monday's polish plan, ranked, with the demo-path items done or nearly done.
 **Maps to:** Design Week 14, Session B — *final studio; repo/document cleanup; submit launch package (final).*
 
 > **Status: OUTLINE (v1, synced Nov 2** with CP12: the `cp12-demo` tag is due 11:59 pm Thu Dec 10 — the last day of classes — and Demo Day is Mon Dec 14, 8:30–10:00; no peer evaluations this term; capstone carry-forward stays off student-facing material pending the capstone instructors**).** The last session before Demo Day. Pure studio: execute the polish plan, final repo/document cleanup, **tag `cp12-demo` — in class if ready, by 11:59 pm Thursday at the latest**, and a short deliberate close to fourteen weeks of work. No new anything — today is the discipline of *finishing*.
@@ -39,7 +39,7 @@ By the end of this session, a student can:
 ## Timed outline (≈75 min)
 
 ### 1. Standup — polish-plan status — 5 min
-- Each project, 60 seconds: three fixes — done / in flight / at risk. Anything "at risk" gets triaged now: finish by mid-session or drop it (a dropped polish item is fine; a half-applied one on Demo Day is not).
+- Each project, 60 seconds: the polish plan from the top — done / in flight / at risk. **Demo-path items finish today** so the full run in §2 rehearses them (Session 26 §3); anything at risk gets triaged now: finish by mid-session or drop it (a dropped polish item is fine; a half-applied one on Demo Day is not). Slides and docs can keep changing through Thursday night.
 
 ### 2. Polish + verify — 25 min
 - Execute what remains; every fix verified **against the actual demo path on main** (what the tag will capture), not on a branch, not from memory.

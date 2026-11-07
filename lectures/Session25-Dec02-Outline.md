@@ -10,7 +10,7 @@
 
 **Maps to:** Design Week 13, Session B — *studio: assemble the launch package; draft the retrospective* — **plus the absorbed Week-12 Session B: peer onboarding test round 2** (folded here when Thanksgiving took Nov 25).
 
-> **Status: OUTLINE (v2, Nov 6) · deck built** (`canvas_material/lectures/powerpoint/Session25-LaunchStudio.pptx`, 13 slides, `tools/build-session25.js`: title · today · shipping is its own skill · two sheets today · standup · block 1 · the onboarding test · five questions, twenty-two minutes · in the last minute · block 2 · retrospective cross-check · before you tag · wrap; one shipping slide of talk, the rest are segment slides left up while each one runs). *v2 (Tom's notes, Nov 6): made explicit. Every segment now says what students are doing, against which document, and what "done" looks like; §0 maps each CP11 item to the repo file and the bar it must meet, printed as the **Launch Package Checklist** (Nov 6: no slide can stay up all period, and the Contributor-Readiness Checklist doesn't name files, the retrospective, or the submission, so it's a new one-page handout rather than a reprint). **One item per assembly block:** at this enrollment every project is solo, and one person does one thing well in 20 minutes, so each block has a rule for choosing the item. The onboarding test runs **both directions at once, in class**, like the Session 22 audit (Oct 30 decision); the v1 "host silent, reverse test by end of day" plan is gone.* A shipping studio. Three things leave today: a **package on `main`** that a stranger has tested, a **signed Contributor-Readiness Checklist**, and a **retrospective that agrees with it**. **CP11 is due the next day, Thu Dec 3, by 11:59 pm** (moved Nov 6, so the test's findings get a day of fixing and Friday stays free for grading): tag `v0.1-launch`, then each student's Canvas text entry.
+> **Status: OUTLINE (v2, Nov 6) · deck built** (`canvas_material/lectures/powerpoint/Session25-LaunchStudio.pptx`, 14 slides, `tools/build-session25.js`: title · today · shipping is its own skill · two sheets today · standup · block 1 · the onboarding test · five questions, twenty-two minutes · in the last minute · block 2 · retrospective cross-check · before you tag · Monday: the dry run · wrap; one shipping slide of talk, the rest are segment slides left up while each one runs). *v2 (Tom's notes, Nov 6): made explicit. Every segment now says what students are doing, against which document, and what "done" looks like; §0 maps each CP11 item to the repo file and the bar it must meet, printed as the **Launch Package Checklist** (Nov 6: no slide can stay up all period, and the Contributor-Readiness Checklist doesn't name files, the retrospective, or the submission, so it's a new one-page handout rather than a reprint). **One item per assembly block:** at this enrollment every project is solo, and one person does one thing well in 20 minutes, so each block has a rule for choosing the item. The onboarding test runs **both directions at once, in class**, like the Session 22 audit (Oct 30 decision); the v1 "host silent, reverse test by end of day" plan is gone.* A shipping studio. Three things leave today: a **package on `main`** that a stranger has tested, a **signed Contributor-Readiness Checklist**, and a **retrospective that agrees with it**. **CP11 is due the next day, Thu Dec 3, by 11:59 pm** (moved Nov 6, so the test's findings get a day of fixing and Friday stays free for grading): tag `v0.1-launch`, then each student's Canvas text entry.
 
 ---
 
@@ -70,7 +70,7 @@ Printed as the **Launch Package Checklist** (`canvas_material/resources/Launch-P
 
 *Timings are for this term's enrollment: four solo projects, both test directions at once. With teams, each block takes one item per person, and the test pairs project-to-project.*
 
-### 1. Standup — status board + block-1 pick — 8 min
+### 1. Standup — status board + block-1 pick — 7 min
 - **Walk in, mark the sheet, then the board (as students arrive):** each student marks the *Today* column of the Launch Package Checklist, then copies it onto their row of the whiteboard grid. Draft means it exists on `main` and is honest; missing means it isn't on `main`.
 - **Fill in "Since the audit"** on your checklist now (2 min): the two Session 22 audit stalls that most stopped your auditor, copied from your Repo Audit Sheet. Your tester checks each one.
 - **Round the room, 60 seconds each:** your row, and **the one item you'll do in block 1**, chosen by the rule below (it's on the sheet) and written on its *My block-1 item* line. Instructor confirms or redirects.
@@ -81,10 +81,10 @@ Printed as the **Launch Package Checklist** (`canvas_material/resources/Launch-P
   4. **None of the above:** the item the tester *won't* touch that is furthest from its bar, usually `docs/architecture.md` (as-built) or `docs/roadmap.md`.
 - The retrospective is **never** the block-1 item: it doesn't change what the tester sees, and it has to wait for the test anyway (§5).
 
-### 2. Assembly block 1 — one item — 20 min
+### 2. Assembly block 1 — one item — 18 min
 - **One item, the one you named.** Work on a branch; open the PR; merge it. *Everything via PR, solo included.* Done means the §0 bar for that row is met, not "improved."
 - **If it's done early,** take the next item on the rule. If it won't finish, cut it to what's true and merge that. A short, accurate setup guide beats a long, half-edited one.
-- **Pencils down at minute 28.** Merge or leave it on the branch: the tester tests `main`, nothing else. Push, then write the **commit hash** in the checklist's *Tag or commit* box and hand the checklist to your tester.
+- **Pencils down at minute 25.** Merge or leave it on the branch: the tester tests `main`, nothing else. Push, then write the **commit hash** in the checklist's *Tag or commit* box and hand the checklist to your tester.
 - Instructor rove question: *"When your tester opens this in five minutes, what's the first thing they'll trip on?"* If the answer isn't the item being worked on, switch.
 
 ### 3. Onboarding test round 2 — both directions at once — 22 min
@@ -114,7 +114,7 @@ Printed as the **Launch Package Checklist** (`canvas_material/resources/Launch-P
   2. **New evidence:** does a claim about newcomers, setup, or the docs now have evidence it didn't have? A *pass* is evidence too. If a claim held, cite the test; don't go looking for a setback to report. *CP11 grades the evidence, not the verdict.*
   3. **Next steps:** does "where it goes next" agree with `docs/roadmap.md` and with what the tester found? A roadmap that starts with a feature when the tester couldn't install it is out of order.
 
-### 6. Ship it + wrap — 5 min
+### 6. Ship it, and what Monday looks like — 8 min
 - **Before you tag, in this order** (the bottom-right box on the Launch Package Checklist; it ends in the CP11 submission):
   1. Fix or log every remaining stall and fail (§4).
   2. Bring every *draft* or *missing* row on the checklist up to its bar, and tick the *Tagged* column as each one gets there.
@@ -124,7 +124,14 @@ Printed as the **Launch Package Checklist** (`canvas_material/resources/Launch-P
   6. On Canvas, one text entry: the tag URL, your reflection, the checklist photo.
 - **Name the moment:** after the tag, the project is launched. What remains is telling its story well.
 - **Say the trade-off out loud:** the extra day comes out of pitch time. Thursday is the package; the pitch gets the weekend, and Monday's dry run needs it performance-ready.
-- **Coming up:** **Mon Dec 7, dry run:** the full 9-minute pitch and live demo, then questions, performance-ready, not draft-ready. **Wed Dec 9:** final studio, polish only. **Thu Dec 10, 11:59 pm:** `cp12-demo` tag pushed (last day of classes); Demo Day runs from it. **Demo Day: Mon, Dec 14, 8:30–10:00 AM.**
+- **What Monday looks like (4 min; added Nov 6 so the dry run isn't a surprise).** Say each of these, with the slide up; the student page carries them too:
+  - **What it is:** a full rehearsal under Demo Day conditions. Run order drawn at the start; per project, **9 minutes** for the pitch and live demo on a visible clock, **3 minutes** of questions (Demo Day has 5), then 2 minutes of spoken feedback. **No restarts:** if the demo breaks, run the fallback, because recovering is part of the rehearsal.
+  - **What to bring:** the finished slides on the laptop you'll present from; the demo running from `main` (what the `cp12-demo` tag will capture) with the login staged and the data loaded; a fallback ready. Performance-ready, not draft-ready.
+  - **How it's scored:** classmates fill in the **Dry-Run Score Sheet** while they watch: for each of the three questions, did it land, and the moment that sold it and the moment they doubted; the time; the demo mechanics; whether the hardest question was answered straight. Feedback, not a grade. You leave with a **polish plan**.
+  - **The questions:** expect ones that test whether the demo, the retrospective, and the repository agree. What didn't the first version prove? Which claim held, and how do you know? What did your onboarding tester trip on? What would a newcomer do in their first hour?
+  - **Recording:** optional. Bring a phone or set up a screen recording if you want to watch your own run.
+  - **Read before Monday:** the CP12 handout and its rubric on the Assignment Rubrics page; a re-skim of Kawasaki's *10/20/30 rule*; your Session 24 pitch skeleton; and your retrospective and signed checklist, because the questions lean on them.
+- **Coming up (1 min):** **Thu Dec 3, 11:59 pm:** CP11. **Mon Dec 7, dry run.** **Wed Dec 9:** final studio, polish only. **Thu Dec 10, 11:59 pm:** `cp12-demo` tag pushed (last day of classes); Demo Day runs from it. **Demo Day: Mon, Dec 14, 8:30–10:00 AM.**
 
 ---
 
