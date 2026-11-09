@@ -128,21 +128,22 @@ async function build() {
   const plan = [
     [FA.FaBullseye, "The MVP is an instrument", "5 min"],
     [FA.FaTrashAlt, "Throwaway or evolutionary?", "8 min"],
+    [FA.FaMicroscope, "Two MVPs that made the moves", "7 min"],
     [FA.FaClipboardList, "Workshop: what must your v1 prove?", "20 min"],
-    [FA.FaMicroscope, "Three MVPs, evaluated as a room", "12 min"],
+    [FA.FaLayerGroup, "One that proves nothing: check yours", "5 min"],
     [FA.FaBug, "Debugging on purpose, with a live bug", "20 min"],
     [FA.FaFileAlt, "Known issues, and the wrap", "10 min"]
   ];
   for (let i = 0; i < plan.length; i++) {
-    const y = 1.95 + i * 0.8;
-    const hi = i === 2;
-    card(s, 0.6, y, 12.1, 0.68, hi ? C.navy : C.cardBg);
-    await iconCircle(s, plan[i][0], 0.88, y + 0.1, 0.48, hi ? C.amber : C.teal, hi ? C.navy : "FFFFFF");
-    s.addText(plan[i][1], { x: 1.6, y, w: 9.0, h: 0.68, color: hi ? C.white : C.ink, fontFace: F.body, fontSize: 18, bold: true, valign: "middle", margin: 0 });
-    s.addText(plan[i][2], { x: 10.6, y, w: 1.8, h: 0.68, color: hi ? C.amber : C.slate, fontFace: F.body, fontSize: 16, bold: true, align: "right", valign: "middle", margin: 0 });
+    const y = 1.85 + i * 0.71;
+    const hi = i === 3;
+    card(s, 0.6, y, 12.1, 0.6, hi ? C.navy : C.cardBg);
+    await iconCircle(s, plan[i][0], 0.9, y + 0.08, 0.44, hi ? C.amber : C.teal, hi ? C.navy : "FFFFFF");
+    s.addText(plan[i][1], { x: 1.6, y, w: 9.0, h: 0.6, color: hi ? C.white : C.ink, fontFace: F.body, fontSize: 18, bold: true, valign: "middle", margin: 0 });
+    s.addText(plan[i][2], { x: 10.6, y, w: 1.8, h: 0.6, color: hi ? C.amber : C.slate, fontFace: F.body, fontSize: 16, bold: true, align: "right", valign: "middle", margin: 0 });
   }
   footer(s);
-  s.addNotes("Thirty seconds. Two halves. The first is judgment: what your first version is for, which decides a hundred small build decisions over the next week. The highlighted row is your time, on the V1 Proof Sheet; hand it out now. The second half is method: the reading's debugging loop, run live on a real bug in Prop Loft, including a wrong guess. The last ten minutes preview known issues, which CP10 grades.");
+  s.addNotes("Thirty seconds. Two halves. The first is judgment: what your first version is for, which decides a hundred small build decisions over the next week. Prop Loft's sheet and two real MVPs come first, so you see the moves before you make them. The highlighted row is your time, on the V1 Proof Sheet; hand it out now. Then one MVP that proves nothing, held up against your own sheet. The second half is method: the reading's debugging loop, run live on a real bug in Prop Loft. The last ten minutes preview known issues, which CP10 grades.");
 
   // 3 The MVP is an instrument
   s = mk(); s.background = { color: C.white };
@@ -279,7 +280,31 @@ async function build() {
   footer(s);
   s.addNotes("Ninety seconds. The cut: the Out marker is convenience, not proof, so it's the first thing to defer. That's the same next cut Session 18 named, and now they know why. Click: the corners, each of which gets a line in known issues. Second click: the subtle one. Some work in your first milestone doesn't prove a v1 claim but has to stay anyway, because CP10 also asks whether a stranger can join. Don't cut the front door to save the demo.");
 
-  // 9 Workshop
+  // 9 Example: git
+  await example("Before you write · 1 of 2", "git's first commit, April 2005", FA.FaGitAlt, C.coral,
+    "Linus Torvalds: \"Initial revision of 'git', the information manager from hell.\" About 1,200 lines of C in 11 files: a handful of low-level commands to store, read, and commit content. No friendly commands, no merging.",
+    [
+      ["Need", "Linus needed it himself, at once: it managed its own source the next day."],
+      ["Technical, ranked first", "Fast enough for the kernel. His target: apply a patch in 3 seconds or less."],
+      ["Usability", "Deliberately not yet. No porcelain; merging came eleven days later."],
+      ["What it skipped", "Everything that didn't test the scary claim.", C.amberBg]
+    ],
+    "rank the claims, prove the scariest with the thinnest end-to-end thing, and defer the rest on purpose. Ten weeks later it managed a kernel release.",
+    "Three minutes. Read the left card, then ask the room the four prompts before each click. The point is the ranking: Linus bet everything on speed and left usability for later, knowingly. Say it plainly: technical ranked first because speed was his scariest unknown. Prop Loft ranked it last. Rank yours by your own risk, not by git's. The first multi-branch merge came on April 18; it managed the 2.6.12 kernel release on June 16. Evolutionary: the code he wrote that week is the ancestor of the git on your laptop. Source: the commit itself, on GitHub.");
+
+  // 10 Example: Denied -> Flask
+  await example("Before you write · 2 of 2", "Denied, then Flask, April 2010", FA.FaFlask, C.teal,
+    "Armin Ronacher's April Fools' joke: a one-file Python \"microframework,\" about 160 lines wrapping two existing libraries, with a website and a screencast. Over 10,000 screencast downloads and 50,000 site visits in days. A month later he started Flask, written fresh.",
+    [
+      ["Need, ranked first", "People really wanted a tiny, simple web framework."],
+      ["Technical", "None: it was a joke wrapper, and none of it was kept."],
+      ["Usability", "The snippets on the website were the product."],
+      ["Kind", "Throwaway. It answered a question, then went away.", C.amberBg]
+    ],
+    "a throwaway can answer the need question cheaply, and its job is to be thrown away. The answer is what you keep.",
+    "Three minutes. An accidental demand test: nobody meant it as an MVP, which makes it a clean example of what a throwaway is for. If there's time: Ronacher's own post-mortem lesson was \"don't be honest: be bold.\" Ask whether that survives a contributor who clones the repo. It's the opposite of CP10's honesty criterion, and a good argument. Source: his post, April 1st Post Mortem, on lucumr.pocoo.org. Then straight to the workshop.");
+
+  // 11 Workshop
   s = mk(); s.background = { color: C.navy };
   darkHeader(s, "Workshop · 20 min", "Fill in your V1 Proof Sheet");
   const ws = [
@@ -301,35 +326,11 @@ async function build() {
     { text: "one claim and one cut per project. Last 5 minutes." }
   ], { x: 0.95, y: 5.75, w: 11.4, h: 1.0, color: C.navy, fontFace: F.body, fontSize: 18, valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Twenty minutes: about fifteen writing and five sharing. Circulate. The common failure is a claim with no evidence line, or evidence nobody could see on Nov 18 (\"users like it\"). Push for a person and an observation. Second most common: no falsifier. Ask what would make them change the plan. For the cut, every project has one; if someone says they don't, ask which issue they'd defer first if they lost three days.");
-
-  // 10 Example: git
-  await example("Evaluate it · 1 of 3", "git's first commit, April 2005", FA.FaGitAlt, C.coral,
-    "Linus Torvalds: \"Initial revision of 'git', the information manager from hell.\" About 1,200 lines of C in 11 files: a handful of low-level commands to store, read, and commit content. No friendly commands, no merging.",
-    [
-      ["Need", "Linus needed it himself, at once: it managed its own source the next day."],
-      ["Technical, ranked first", "Fast enough for the kernel. His target: apply a patch in 3 seconds or less."],
-      ["Usability", "Deliberately not yet. No porcelain; merging came eleven days later."],
-      ["What it skipped", "Everything that didn't test the scary claim.", C.amberBg]
-    ],
-    "rank the claims, prove the scariest with the thinnest end-to-end thing, and defer the rest on purpose. Ten weeks later it managed a kernel release.",
-    "Three minutes. Read the left card, then ask the room the four prompts before each click. The point is the ranking: Linus bet everything on speed and left usability for later, knowingly. The first multi-branch merge came on April 18; it managed the 2.6.12 kernel release on June 16. Evolutionary: the code he wrote that week is the ancestor of the git on your laptop. Source: the commit itself, on GitHub.");
-
-  // 11 Example: Denied -> Flask
-  await example("Evaluate it · 2 of 3", "Denied, then Flask, April 2010", FA.FaFlask, C.teal,
-    "Armin Ronacher's April Fools' joke: a one-file Python \"microframework,\" about 160 lines wrapping two existing libraries, with a website and a screencast. Over 10,000 screencast downloads and 50,000 site visits in days. A month later he started Flask, written fresh.",
-    [
-      ["Need, ranked first", "People really wanted a tiny, simple web framework."],
-      ["Technical", "None: it was a joke wrapper, and none of it was kept."],
-      ["Usability", "The snippets on the website were the product."],
-      ["Kind", "Throwaway. It answered a question, then went away.", C.amberBg]
-    ],
-    "a throwaway can answer the need question cheaply, and its job is to be thrown away. The answer is what you keep.",
-    "Three minutes. An accidental demand test: nobody meant it as an MVP, which makes it a clean example of what a throwaway is for. If there's time: Ronacher's own post-mortem lesson was \"don't be honest: be bold.\" Ask whether that survives a contributor who clones the repo. It's the opposite of CP10's honesty criterion, and a good argument. Source: his post, April 1st Post Mortem, on lucumr.pocoo.org.");
+  s.addNotes("Twenty minutes: about fifteen writing and five sharing. They've now seen three sheets: Prop Loft's, git's, and Flask's. Circulate. The common failure is a claim with no evidence line, or evidence nobody could see on Nov 18 (\"users like it\"). Push for a person and an observation. Second most common: no falsifier. Ask what would make them change the plan. For the cut, every project has one; if someone says they don't, ask which issue they'd defer first if they lost three days.");
 
   // 12 Example: broad-shallow
   s = mk(); s.background = { color: C.white };
-  header(s, "Evaluate it · 3 of 3", "Prop Loft, built screen-first");
+  header(s, "Now check yours", "Prop Loft, built screen-first");
   card(s, 0.6, 1.95, 5.2, 3.75, C.weakBg);
   await iconCircle(s, FA.FaLayerGroup, 0.85, 2.15, 0.62, C.coral);
   s.addText("Same project, same hours as Session 18. A styled search page, a styled item page, a styled checkout form. Every screen demos. There's no checkout model behind them.", { x: 0.85, y: 2.95, w: 4.7, h: 2.65, color: C.ink, fontFace: F.body, fontSize: 16, valign: "top", margin: 0, lineSpacingMultiple: 1.04 });
@@ -349,7 +350,7 @@ async function build() {
   }
   bar(s, 5.95, 0.85, C.navy, "Not a student mistake:", "Chandler, a funded open-source project, spent years building broad before anything was usable.", 5);
   footer(s);
-  s.addNotes("Three minutes. Run the four prompts and let each one come back empty; the room usually gets there before the click. The contrast with Session 18 is exact: the same hours, spent screen-first instead of slice-first. Last click, one sentence only: Chandler, from Scott Rosenberg's Dreaming in Code, shipped 1.0 in 2008, years after work began. Accounts blame complexity, feature creep, and management. Don't claim more than that.");
+  s.addNotes("Five minutes, sheets still out. Run the four prompts and let each one come back empty; the room usually gets there before the click. After the fourth: look at your own sheet. Is any line that empty? A claim nothing on Nov 18 could show is this slide, smaller. Fix it now. The contrast with Session 18 is exact: the same hours, spent screen-first instead of slice-first. Last click, one sentence only: Chandler, from Scott Rosenberg's Dreaming in Code, shipped 1.0 in 2008, years after work began. Accounts blame complexity, feature creep, and management. Don't claim more than that.");
 
   // 13 Debugging divider + the loop
   s = mk(); s.background = { color: C.navy };
