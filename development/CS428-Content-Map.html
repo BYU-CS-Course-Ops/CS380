@@ -1,0 +1,314 @@
+<title>CS 428 Content Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<style>
+/* Layout: one reading column for the findings, then a full-width matrix that collapses to cards on phones. Course palette (navy / teal) with green-amber-coral reserved for verdicts. */
+:root {
+  --bg: #FBFCFD; --surface: #F2F6F8; --ink: #1E2A36; --muted: #5F7284; --rule: #D8E1E7;
+  --navy: #14233A; --accent: #0E6E6D; --accent-soft: #E3F1F0;
+  --ok: #2F7D55; --ok-bg: #E4F2EA; --mid: #9A6511; --mid-bg: #FBEFD9; --bad: #B4472F; --bad-bg: #F9E4DF;
+  --head: Cambria, "Source Serif 4", Georgia, serif;
+  --body: Calibri, "Source Sans 3", Carlito, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F1823; --surface: #172333; --ink: #E4EAF0; --muted: #9AABBB; --rule: #2A3A4D;
+  --navy: #DCE6EF; --accent: #4FC1BF; --accent-soft: #15313A;
+  --ok: #7DCCA0; --ok-bg: #173226; --mid: #E8B661; --mid-bg: #3A2C14; --bad: #F08F79; --bad-bg: #3D1F19;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F1823; --surface: #172333; --ink: #E4EAF0; --muted: #9AABBB; --rule: #2A3A4D;
+  --navy: #DCE6EF; --accent: #4FC1BF; --accent-soft: #15313A;
+  --ok: #7DCCA0; --ok-bg: #173226; --mid: #E8B661; --mid-bg: #3A2C14; --bad: #F08F79; --bad-bg: #3D1F19;
+  color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16.5px; line-height: 1.55; }
+.wrap { max-width: 1320px; margin: 0 auto; padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.col { max-width: 760px; }
+h1, h2, h3 { font-family: var(--head); color: var(--navy); text-wrap: balance; line-height: 1.2; margin: 0; }
+h1 { font-size: clamp(30px, 4.4vw, 42px); }
+h2 { font-size: 25px; margin-top: 52px; margin-bottom: 14px; }
+.eyebrow { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+.lede { font-size: 19px; color: var(--ink); margin: 16px 0 10px; }
+.meta { color: var(--muted); font-size: 14.5px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+p { margin: 0 0 12px; }
+code { font-family: Consolas, ui-monospace, monospace; font-size: .9em; background: var(--surface); padding: 1px 4px; border-radius: 3px; }
+
+.sources { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 22px 0 0; padding: 0; list-style: none; }
+.sources li { border-top: 3px solid var(--accent); background: var(--surface); padding: 12px 14px; font-size: 14.5px; }
+.sources b { display: block; font-family: var(--head); color: var(--navy); font-size: 16px; margin-bottom: 2px; }
+
+.tally { display: flex; flex-wrap: wrap; gap: 10px 26px; margin: 30px 0 4px; align-items: baseline; }
+.tally div { display: flex; align-items: baseline; gap: 8px; font-size: 15px; color: var(--muted); }
+.tally strong { font-family: var(--head); font-size: 30px; font-variant-numeric: tabular-nums; }
+.t-lost strong { color: var(--bad); } .t-partial strong { color: var(--mid); } .t-covered strong { color: var(--ok); }
+
+ol.losses { margin: 0; padding: 0; list-style: none; counter-reset: l; display: grid; gap: 14px; }
+ol.losses li { counter-increment: l; display: grid; grid-template-columns: 34px 1fr; gap: 0 12px; }
+ol.losses li::before { content: counter(l); font-family: var(--head); font-weight: 700; font-size: 20px; color: var(--bad); text-align: right; line-height: 1.3; }
+ol.losses b { color: var(--navy); }
+.kept { margin-top: 18px; padding: 14px 16px; background: var(--ok-bg); border-radius: 6px; }
+.kept b { color: var(--ok); }
+.check { display: grid; gap: 14px; }
+.check > div { padding: 14px 16px; border: 1px solid var(--rule); border-radius: 6px; }
+.check h3 { font-size: 17.5px; margin-bottom: 6px; }
+.check ul { margin: 6px 0 0; padding-left: 20px; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14.5px; color: var(--muted); margin: 0 0 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.mk { display: inline-block; width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--accent); vertical-align: -1px; margin-right: 6px; flex: none; }
+.mk-full { background: var(--accent); }
+.mk-part { background: linear-gradient(90deg, var(--accent) 50%, transparent 50%); }
+.mk-none { border-color: var(--muted); opacity: .7; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.filters button { font: inherit; font-size: 14.5px; font-weight: 600; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--rule); background: var(--bg); color: var(--ink); cursor: pointer; }
+.filters button[aria-pressed="true"] { background: var(--navy); color: var(--bg); border-color: var(--navy); }
+.filters .n { font-variant-numeric: tabular-nums; opacity: .75; font-weight: 400; margin-left: 4px; }
+
+.tablebox { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; line-height: 1.45; }
+thead th { position: sticky; top: 0; background: var(--navy); color: var(--bg); text-align: left; font-weight: 600; padding: 10px 12px; font-size: 14px; letter-spacing: .02em; }
+thead th small { display: block; font-weight: 400; opacity: .8; font-size: 12.5px; }
+tbody th, tbody td { text-align: left; vertical-align: top; padding: 10px 12px; border-top: 1px solid var(--rule); }
+tbody th[scope="row"] { font-weight: 600; color: var(--navy); width: 18%; }
+tbody td { width: 14.5%; } tbody td.verdict { width: 24%; }
+table { min-width: 1080px; }
+tr.grp th { background: var(--accent-soft); color: var(--accent); font-family: var(--head); font-size: 15.5px; padding: 8px 12px; letter-spacing: .02em; }
+tbody tr[data-v="lost"] td.verdict { background: color-mix(in srgb, var(--bad-bg) 55%, transparent); }
+.pill { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 1px 8px; border-radius: 999px; margin-right: 4px; }
+.pill-lost { background: var(--bad-bg); color: var(--bad); }
+.pill-partial { background: var(--mid-bg); color: var(--mid); }
+.pill-covered { background: var(--ok-bg); color: var(--ok); }
+.glossary { font-size: 14px; color: var(--muted); margin-top: 12px; }
+
+@media (max-width: 820px) {
+  .tablebox { border: none; overflow: visible; }
+  table, thead, tbody, tr, th, td { display: block; width: auto !important; min-width: 0 !important; }
+  thead { display: none; }
+  tbody tr[data-v] { border: 1px solid var(--rule); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+  tr.grp th { border-radius: 6px; margin: 18px 0 8px; border: none; }
+  tbody th, tbody td { border-top: none; padding: 6px 14px; }
+  tbody th[scope="row"] { padding-top: 12px; font-size: 15.5px; }
+  tbody td::before { content: attr(data-label); display: block; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  tbody td.verdict { padding-bottom: 12px; border-top: 1px solid var(--rule); margin-top: 6px; padding-top: 10px; }
+}
+@media (prefers-reduced-motion: no-preference) { .filters button { transition: background .15s, color .15s; } }
+</style>
+
+<main class="wrap">
+  <header class="col">
+    <div class="eyebrow">Software Engineering curriculum review</div>
+    <h1>CS 428 Content Map</h1>
+    <p class="lede">If CS 428 (Real-World Software Engineering) is dropped, where does each of its topics land in the studio sequence (CS 380 → 480 → 481) or the other required courses (CS 240, 340, 329, 452), and what is lost?</p>
+    <p class="meta">Prepared by Tom Stephens · November 2, 2026</p>
+  </header>
+
+  <ul class="sources">
+    <li><b>CS 428</b>The course website (captured Sep 2026), 29 lecture decks, and the status-report template.</li>
+    <li><b>CS 380 today</b>The studio course as built and taught in Fall 2026 (as CS 301R, <em>Founding an Open-Source Project</em>): 27 sessions and 12 checkpoints.</li>
+    <li><b>CS 380 v2</b>The <a href="https://leesjensen.com/sestudio/CS380-Course-Design.html">CS 380 Course Design</a> proposal: five three-week blocks; Weeks 1A–15B.</li>
+    <li><b>Full capstone</b>The <a href="https://leesjensen.com/sestudio/SE%20Studio%20Program%20Outline.html">SE Studio Program Outline</a>: CS 380 → 480 → 481, the cross-cutting teams, and the parallel CS 329, 452, and 348.</li>
+    <li><b>Required courses</b>The course materials for CS 240 (Advanced Software Construction), CS 340 (Software Design), and CS 329 (QA and DevOps). CS 452 is described only from the program outline.</li>
+  </ul>
+
+  <div class="tally" aria-label="Summary of 38 CS 428 topics">
+    <div class="t-lost"><strong>16</strong> lost</div>
+    <div class="t-partial"><strong>9</strong> partly covered</div>
+    <div class="t-covered"><strong>13</strong> covered</div>
+    <div>of 38 CS 428 topics, under CS 380 v2, the full capstone, and the required courses</div>
+  </div>
+
+  <section class="col">
+    <h2>What would be lost</h2>
+    <p>Ranked by how much each loss matters to the capstone.</p>
+    <ol class="losses">
+      <li><div><b>Large-team dynamics.</b> Brooks's law, communication overhead, conceptual integrity, and Conway's law. The capstone puts 50 students on 13 teams, and its org structure is built on these ideas. Students will experience every one of these effects, but no course in the sequence, and none of CS 240, 340, or 329, names them or gives a way to reason about them. This is the highest-value loss, and the cheapest to fix.</div></li>
+      <li><div><b>Estimation and scheduling.</b> Today's CS 380 teaches a light version (relative sizing and a fit check). Neither v2 nor the program outline covers estimation, scheduling, or the critical path. CS 480 asks teams to "plan iterations" without teaching how.</div></li>
+      <li><div><b>Honest status reporting and metrics.</b> The Thermocline of Truth, metric gaming, and reporting bad news upward early. The capstone has mentoring logs and release-readiness reports, and CS 329 teaches system metrics and customer status pages. None of them teaches reporting project status honestly.</div></li>
+      <li><div><b>The Peopleware material.</b> The work environment, hiring and retention, quality under schedule pressure, and jelled teams and teamicide. Teamicide matters most for v2, which reshuffles teams every three weeks.</div></li>
+      <li><div><b>Organizational politics and judgment about technology hype.</b> Webster's political and conceptual pitfalls, organization types, and adopting a technology for the wrong reason.</div></li>
+      <li><div><b>Legal practice beyond open-source licensing.</b> Patents, trade secrets, NDAs, non-competes, ownership of side projects, the CFAA, and litigation and discovery. v2 adds privacy and compliance law (FERPA, HIPAA, GDPR) but none of this.</div></li>
+      <li><div><b>The ACM Code of Ethics</b> as the named professional standard. Ethics is taught throughout the sequence, grounded in the BYU Aims and the IRB, but never in the profession's own code.</div></li>
+      <li><div><b>The failure-case literature as evidence:</b> why software projects fail, runaway projects, IT litigation patterns. With it goes the citation-based case exam that makes students apply that literature.</div></li>
+      <li><div><b>A comparison of process models.</b> CS 329 tells the history from Agile to DevOps and SRE, and the studio has students live one process. Nobody asks them to weigh one model against another.</div></li>
+    </ol>
+    <p class="kept"><b>Covered as well or better elsewhere:</b> requirements, architecture and design, organizational roles, risk, scope control, code review, configuration management, architecture and design (CS 340), test planning and testing fundamentals (CS 329, CS 240, CS 340), coding style and refactoring (CS 240), post-mortems (CS 329 incident reports), maintenance (CS 481), retrospectives, and the experience of building and demonstrating a product in public.</p>
+  </section>
+
+  <section class="col">
+    <h2>Where the lost material could go</h2>
+    <p>Losses 1–5 amount to roughly four or five reading-and-discussion sessions; 6–9 are one session or less each.</p>
+    <div class="check">
+      <div>
+        <h3>CS 380 v2</h3>
+        <p>Research, constraints, architecture, and probes (Weeks 4–5, 8B, 9A, 11A)</p>
+        <ul>
+          <li>Armour's orders of ignorance, as the frame for research</li>
+          <li>Throwaway prototypes, "plan to throw one away" (11A Probe Technology)</li>
+          <li>Estimation fallacies (9A Weigh Tradeoffs)</li>
+          <li>Judgment about technology hype (8B Explore Architecture)</li>
+          <li>IP beyond licensing, and employment agreements (5A Find Constraints, 5B license considerations)</li>
+          <li>The ACM Code, alongside the consent and ethics work in 2A</li>
+        </ul>
+      </div>
+      <div>
+        <h3>CS 480</h3>
+        <p>Weeks 1–3, "establish the engineering system"</p>
+        <ul>
+          <li>Brooks's law, communication overhead, and Conway's law, taught just as the 13 teams form</li>
+          <li>Estimation and scheduling, with the critical path applied to integration milestones</li>
+          <li>Status reporting and the Thermocline of Truth</li>
+                  </ul>
+      </div>
+      <div>
+        <h3>CS 481</h3>
+        <p>Weeks 12–15, maintainership and stewardship</p>
+        <ul>
+          <li>The Peopleware material: environment, retention, jelled teams, leadership</li>
+          <li>Organizational politics</li>
+          <li>Technology lifecycles and platform obsolescence</li>
+        </ul>
+      </div>
+      <div>
+        <h3>CS 340 (Software Design)</h3>
+        <p>Alongside Clean Architecture and the design principles</p>
+        <ul>
+          <li>No Silver Bullet: essential vs. accidental complexity</li>
+          <li>Conceptual integrity, and the second-system effect</li>
+          <li>Meier &amp; Rechtin's heuristics for systems architecting, next to the "Ten Design Commandments"</li>
+        </ul>
+      </div>
+      <div>
+        <h3>CS 329 (QA and DevOps)</h3>
+        <p>Extending lessons it already has</p>
+        <ul>
+          <li>Formal inspections, beside its testing-categories lesson</li>
+          <li>Project metrics and how they get gamed (Webster's "Lies, Damned Lies, and Project Metrics"), extending its metrics unit from system health to project progress</li>
+          <li>The Thermocline of Truth, extending its status-reporting lesson from customers to managers</li>
+          <li>A comparison of process models, extending its history lesson</li>
+        </ul>
+      </div>
+      <div>
+        <h3>CS 452 (Database)</h3>
+        <p>A weak fit. Records preservation for litigation and discovery could sit with its data-retention material. Nothing else from CS 428 maps naturally.</p>
+      </div>
+      <div>
+        <h3>CS 240</h3>
+        <p>Already covers coding style, refactoring, unit testing, code coverage, and git. Nothing new is needed.</p>
+      </div>
+      <div>
+        <h3>No natural home</h3>
+        <ul>
+          <li>The failure-case literature as a body of evidence, and the case exam that tests it. It could become a reading thread that runs through CS 380–481.</li>
+          <li>Unauthorized access (the CFAA). It would fit a security unit if one is added.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="col">
+    <h2>What CS 428 is</h2>
+    <p>CS 428 is a 3-credit course that meets once a week. It has three strands:</p>
+    <p><b>A reading canon, assessed by exam.</b> <em>The Mythical Man-Month</em>, <em>Peopleware</em>, and Glass's <em>Facts and Fallacies of Software Engineering</em>; Armour's "Five Orders of Ignorance"; Meier &amp; Rechtin's "Heuristics for Systems Architecting"; and about 20 of Bruce Webster's essays. Readings and podcasts are 30% of the grade. A 3-hour, open-book, case-based midterm requires students to cite those readings; it is 25% of the grade, and students must score at least 60% on it to pass the course.</p>
+    <p><b>Teams run as startup companies.</b> Each team has an org chart with a project manager and a chief architect, and keeps a public wiki. Deliverables are requirements, PERT and Gantt charts, an architecture and design document, a test plan, and prototype, work-in-progress, and final demos (27%).</p>
+    <p><b>Weekly status reports with billable hours</b> (10%), plus an individual code review and a post-mortem.</p>
+  </section>
+
+  <h2 id="table">Topic by topic</h2>
+  <div class="legend">
+    <span><span class="mk mk-full"></span>Taught as a topic</span>
+    <span><span class="mk mk-part"></span>Partial: practiced but not taught, or a narrower slice</span>
+    <span><span class="mk mk-none"></span>Absent</span>
+  </div>
+  <div class="filters" role="group" aria-label="Filter topics by outcome">
+    <button type="button" id="f-all" data-f="all" aria-pressed="true">All<span class="n">38</span></button>
+    <button type="button" id="f-lost" data-f="lost" aria-pressed="false">Lost<span class="n">16</span></button>
+    <button type="button" id="f-partial" data-f="partial" aria-pressed="false">Partial<span class="n">9</span></button>
+    <button type="button" id="f-covered" data-f="covered" aria-pressed="false">Covered<span class="n">13</span></button>
+  </div>
+  <div class="tablebox">
+    <table>
+      <thead><tr>
+        <th scope="col">CS 428 topic <small>and its source</small></th>
+        <th scope="col">CS 380 today <small>as taught Fall 2026</small></th>
+        <th scope="col">CS 380 v2 <small>proposal, by week</small></th>
+        <th scope="col">Full capstone <small>380 → 480 → 481 + support</small></th>
+        <th scope="col">Required courses <small>CS 240 · 340 · 329</small></th>
+        <th scope="col">If CS 428 is dropped</th>
+      </tr></thead>
+      <tbody>
+<tr class="grp"><th colspan="6" scope="colgroup">Foundations</th></tr>
+<tr data-v="partial"><th scope="row" data-label="CS 428 topic">Software as knowledge acquisition: the Five Orders of Ignorance (Armour)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>The CPS diverge/converge spine, <code>[E]</code>/<code>[A]</code> evidence tagging, and spikes ("red is a win") all practice it. Armour isn't taught.</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Outcome 2's "what is known and what remains uncertain"; 10A turns assumptions into hypotheses</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>The §1.1 Frame→Evaluate cycle</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-partial">Partial</span> <strong>The practice survives; the vocabulary is lost.</strong> Armour's essay is a cheap reading to add to today's CS 380 Session 5 or v2 4A.</td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Why software is hard: the Tar Pit, No Silver Bullet (essence vs. accident), complexity (MMM 1, 16–17; F&amp;F ch. 1)</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> </td></tr>
+<tr data-v="partial"><th scope="row" data-label="CS 428 topic">Heuristics for systems architecting: scoping, partitioning, integrating, certifying (Meier &amp; Rechtin)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Session 11 design-doc anatomy; Session 12 decisions and alternatives</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>8B Explore Architecture; 13A Map Architecture</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>as practice: the Architecture &amp; Integration team and the Technical Design Council</td><td data-label="Required courses"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>CS 340: design principles (the "Ten Design Commandments"), Clean Architecture layers, design patterns</td><td data-label="If dropped" class="verdict"><span class="pill pill-partial">Partial</span> <strong>The practice is covered</strong> (more fully than in 428). The heuristics themselves are lost.</td></tr>
+<tr class="grp"><th colspan="6" scope="colgroup">Project management</th></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Brooks's law; the man-month; communication overhead; the Tower of Babel (MMM 2, 7)</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>Teams of 1–4, so it never comes up</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>13B Coordinate Teams (interfaces, dependencies, communication), taught as practice, not as the law</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Lived at 50 people / 13 teams: council, escalation path, weekly rhythm</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> <strong>The theory is lost</strong>, and the capstone is exactly where students will run into it.</td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Conceptual integrity; aristocracy vs. democracy (MMM 4); Conway's law (Webster #2)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>"You lead, others join"; the governance model (Session 15, CP7)</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Faculty confirm architectural leads (15B); feature-team boundaries (13B)</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>The product steward; the Architecture team "intentionally small"; feature teams mapped to interfaces. That is Conway's law by design, but unnamed.</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> <strong>Lost as concepts.</strong> The 13-team org is built on both and never names either.</td></tr>
+<tr data-v="partial"><th scope="row" data-label="CS 428 topic">Second-system effect; plan to throw one away (MMM 5, 11)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Spikes; vertical slice vs. broad-shallow (Session 19); "boring stack"</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>11A Probe Technology; throwaway prototypes</td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-partial">Partial</span> Partial (throwaway prototyping only)</td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Estimation, and estimation fallacies (F&amp;F ch. 1 §3; Cost Estimation podcast; Parkinson's law)</th><td data-label="CS 380 today"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>Light: Session 18 t-shirt sizing, fit check, cut-to-fit; "the 10 × 14 = 140 hours" failure mode</td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>"Cost" appears only as a tradeoff in 9A</td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>Not mentioned</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> <strong>Only today's CS 380 teaches it.</strong> Lost under v2 + capstone unless 480's "plan iterations" picks it up.</td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Scheduling: PERT, Gantt, critical path</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Milestones, sequencing, the board (Sessions 17–18); no network scheduling</td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>"Integration milestones" (Architecture team); bi-weekly integrated demos</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> <strong>Formal scheduling and critical path are lost.</strong> Critical-path thinking matters for 13-team integration.</td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Status reporting, billable hours; Thermocline of Truth; project metrics and metric gaming (Webster #2–3)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Contribution logs, board state, peer-eval multiplier; no status report</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Team-meeting decisions and owners recorded in GitHub; block reflections</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Mentoring log; release-readiness reports; "metrics" as Evaluate evidence</td><td data-label="Required courses"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>CS 329: system-health metrics and customer status pages; "gamification of testing" (gamed coverage targets). Nothing on reporting project status.</td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> <strong>Status-reporting discipline, and honest reporting upward, are lost.</strong></td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Risk management; runaway projects; "do not defer the difficult"; hatching a catastrophe (MMM 14; Webster #2, #5, #6)</th><td data-label="CS 380 today"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>Session 5 Feasibility &amp; Risk worksheet; required spike graded in CP3; de-risk the top one or two</td><td data-label="CS 380 v2"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>9A, 10A, 12A</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>Risk statement, proofs of concept, escalation, release gates</td><td data-label="Required courses"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>CS 329: failure modes, chaos testing, recovery playbooks (operational risk only)</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> <strong>Covered.</strong> The failure-case literature (runaways, IT-litigation patterns) is lost.</td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Scope creep; specification drift (Webster #6)</th><td data-label="CS 380 today"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>Non-goals, cut-to-fit, scope narrowing (Session 8, Session 18)</td><td data-label="CS 380 v2"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>2B non-goals</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>MVP boundary; "smaller but safe" passes ahead</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> </td></tr>
+<tr class="grp"><th colspan="6" scope="colgroup">Organization and people</th></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Org charts and roles: PM, chief architect, test manager, etc. (Deliverable #2)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Roles in the Team Charter (small teams)</td><td data-label="CS 380 v2"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>13B leadership roles; 15B leads confirmed</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>§3–4 org chart; §7.3 leadership roles; §9 team roles</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> <strong>Covered, and more fully than in 428.</strong></td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Productive environment: noise, flow, brain time vs. body time, the "furniture police" (Peopleware II)</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> </td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Quality under pressure: "quality if time permits", overtime, Parkinson (Peopleware I)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Honest scope arithmetic</td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>"Smaller but safe … should pass ahead"</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> Mostly lost</td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Hiring, retention, turnover; the Dead Sea Effect; goal alignment (Peopleware III; Webster #1, #5)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Recruiting contributors (the Pitch Day ask)</td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>Team placement only</td><td data-label="Required courses"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>CS 240: a job-interview lesson (being hired, not hiring)</td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> </td></tr>
+<tr data-v="partial"><th scope="row" data-label="CS 428 topic">Jelled teams, teamicide, team chemistry (Peopleware IV)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Team Charter; Working Agreements reading; peer evaluation</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Team norms every block. Note that v2's team reshuffling every 3 weeks is itself a teamicide risk.</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>"Form balanced teams"; mentors coach retrospectives; belonging surveys</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-partial">Partial</span> <strong>The practice is partial; the theory is lost.</strong></td></tr>
+<tr data-v="partial"><th scope="row" data-label="CS 428 topic">Leadership; managing technical people (Peopleware 14–15; "Managing geeks")</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>The founder leads</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Lead roles</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Peer mentors "coach rather than manage"</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-partial">Partial</span> </td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Organizational politics and dysfunction: the politics of architecture, resistance, enlisting management, Westrum/<em>Accelerate</em> organization types, the Abilene paradox (Webster #6; last lecture)</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> </td></tr>
+<tr class="grp"><th colspan="6" scope="colgroup">Lifecycle</th></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Requirements (lecture; F&amp;F ch. 2)</th><td data-label="CS 380 today"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CP2; PRD-Reference</td><td data-label="CS 380 v2"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>8A, including quality goals</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> </td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Architecture and design document; quality goals that shape architecture</th><td data-label="CS 380 today"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>Sessions 11–12; CP5 Design Document</td><td data-label="CS 380 v2"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>8B, 13A, 14B ADRs</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span></td><td data-label="Required courses"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CS 340: Clean Architecture, layers, design patterns, UML modeling; CS 240: architectural phases of the Chess project</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> <strong>Covered</strong>, and more fully than in 428 (CS 340, CS 380 v2, the capstone)</td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">SQA and the test plan (Inside-Out SQA lifecycle; Deliverable #6)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Testing floor (CP10 Exemplary, CP11 floor); definition of done. No test plan.</td><td data-label="CS 380 v2"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>14A Plan Quality; CP4 validation test plan</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>480 Wk 1–3 test strategy and release criteria; QA team; CS 329</td><td data-label="Required courses"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CS 329: testing categories, TDD, coverage, CI, release evidence</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> <strong>Covered downstream</strong></td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Testing fundamentals: V&amp;V, white-box and black-box (Knutson podcasts I–V)</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>Left to CS 240 (unit testing, code coverage)</td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CS 329 QA and DevOps (required): test automation and release evidence; feature teams own unit tests</td><td data-label="Required courses"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CS 329: black-box and white-box, unit through penetration testing; CS 240: unit testing, coverage; CS 340: mocks and spies</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> <strong>Covered</strong> in CS 329, CS 240, and CS 340</td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Reviews and inspections; the individual code-review deliverable (F&amp;F ch. 2 §6)</th><td data-label="CS 380 today"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>PR review (Sessions 13–14); Review Protocol; CP9 review comments</td><td data-label="CS 380 v2"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>PRs from 1A; peer review every block</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>PR review; design reviews</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>No inspection instruction</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> <strong>Covered.</strong> Formal (Fagan) inspection is lost, which is minor.</td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Maintenance, technical debt, septic code, maintenance architect, keeping technology lifecycles in sync (F&amp;F ch. 2 §7; Webster #4, #5, #7)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Known-issues and tech-debt log (CP11); contributor-readiness</td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>A design-only course</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CS 481 maintainership, monitoring, support, technical debt</td><td data-label="Required courses"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>CS 240: quality code and refactoring; CS 340: designing for change (open-closed, dependency inversion)</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> <strong>Covered, two semesters later.</strong> Lifecycle planning (platform obsolescence) is lost.</td></tr>
+<tr data-v="partial"><th scope="row" data-label="CS 428 topic">Process models and process improvement: XP, the Spotify culture videos (Knutson podcasts)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>PR workflow, board, iterative build; models not surveyed</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>The iterative block template</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Iterations, stage gates, bi-weekly cadence, "squad coaches"</td><td data-label="Required courses"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>CS 329: history from Agile to DevOps, SRE, and platform engineering; CS 240: TDD's origins in XP</td><td data-label="If dropped" class="verdict"><span class="pill pill-partial">Partial</span> <strong>The comparison of process models is lost.</strong> CS 329 tells the history, and students live one process, but they never weigh one model against another.</td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Configuration management</th><td data-label="CS 380 today"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CP6 git workflow lab; branching; tags (Sessions 13–14)</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>1A repo, branches, PRs</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>480 Wk 1–3 CI/CD; CS 329</td><td data-label="Required courses"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CS 240: git; CS 329: versioning, merge conflicts, GitHub Actions, releases</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> </td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Coding style; refactoring (podcasts)</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>Left to CS 240</td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Implicit in 480</td><td data-label="Required courses"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CS 240: quality code, style checker, refactoring</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> <strong>Covered in CS 240</strong> (quality code, style checker, refactoring)</td></tr>
+<tr data-v="partial"><th scope="row" data-label="CS 428 topic">Safety-critical systems (podcast)</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>5A constraints; 11B Protect Data</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>"Humanitarian safety takes priority"; Security/Privacy team</td><td data-label="Required courses"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>CS 329: failure, chaos testing, self-healing, recovery (reliability, not safety)</td><td data-label="If dropped" class="verdict"><span class="pill pill-partial">Partial</span> </td></tr>
+<tr class="grp"><th colspan="6" scope="colgroup">Technology adoption</th></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Hype and fallacies: adopting technology for the wrong reason, buzzwords vs. concepts, training vs. skill, betting the company, picking the wrong horse (Webster #6 III; F&amp;F tools and techniques; "Windows Forever")</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>"Boring stack" (Feasibility worksheet); "AI is a tool, not the topic"</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>8B compare platforms</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>"Evaluate tools"; "ambitious but honest"</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> <strong>Critical judgment about technology hype is lost.</strong></td></tr>
+<tr class="grp"><th colspan="6" scope="colgroup">Legal and ethics</th></tr>
+<tr data-v="partial"><th scope="row" data-label="CS 428 topic">IP: copyright, patents, trade secrets, licensing (IT legal risks lecture)</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>OSS licensing only: Session 3 License Cheat Sheet (copyright and patent grants), CP7</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>5B "initial license considerations"</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Compliance team tracks licenses</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>CS 240 only says to include a license file</td><td data-label="If dropped" class="verdict"><span class="pill pill-partial">Partial</span> <strong>Patents and trade secrets as such are lost.</strong></td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Employment agreements: NDAs, non-competes, ownership of "non-work" projects</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> <strong>Lost.</strong> This is directly relevant to student founders: who owns a side project.</td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Unauthorized access: the CFAA, <em>Van Buren</em></th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> </td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Failed-project litigation; preserving files for discovery (Webster #7)</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> </td></tr>
+<tr data-v="partial"><th scope="row" data-label="CS 428 topic">ACM Code of Ethics and Professional Conduct</th><td data-label="CS 380 today"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>BYU Aims; interview ethics (BYU IRB); the ACM Code isn't cited</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Aims-based outcomes; consent</td><td data-label="Full capstone"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>"Ethical design reflection"; "work with integrity"</td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>CS 240 and CS 329 open with BYU's "Thinking Celestial" framing; no professional code</td><td data-label="If dropped" class="verdict"><span class="pill pill-partial">Partial</span> <strong>The ACM Code itself is lost.</strong> The ethics coverage is real, but it isn't grounded in the professional code.</td></tr>
+<tr class="grp"><th colspan="6" scope="colgroup">Pedagogy and assessment</th></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">A team "startup" that ships an MVP in public, with prototype, work-in-progress, and final demos</th><td data-label="CS 380 today"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>Founding, a public repo, CP10 progress demo, CP12 Demo Day</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Prototypes and probes only; no product</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CS 480 MVP / beta; CS 481 releases</td><td data-label="Required courses"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Instructor-provided course projects (CS 240 Chess, CS 340 Tweeter, CS 329 JWT Pizza); nothing founded by students</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> </td></tr>
+<tr data-v="covered"><th scope="row" data-label="CS 428 topic">Post-mortem / lessons learned</th><td data-label="CS 380 today"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CP11 retrospective (Session 24)</td><td data-label="CS 380 v2"><span class="mk mk-part" aria-hidden="true"></span><span class="sr">Partial: </span>Block reflections</td><td data-label="Full capstone"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>Retrospectives every course</td><td data-label="Required courses"><span class="mk mk-full" aria-hidden="true"></span><span class="sr">Taught: </span>CS 329: blameless incident reports</td><td data-label="If dropped" class="verdict"><span class="pill pill-covered">Covered</span> Covered (CS 380 today, CS 329 incident reports, the capstone)</td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">A case-based exam that requires citations to the canon</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span>No exam</td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> <strong>Lost as an instrument.</strong> Nothing else assesses whether students can apply the literature to a new case.</td></tr>
+<tr data-v="lost"><th scope="row" data-label="CS 428 topic">Extra-credit reading list (<em>Waltzing with Bears</em>, McConnell, <em>Death March</em>, Weinberg, etc.)</th><td data-label="CS 380 today"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="CS 380 v2"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Full capstone"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="Required courses"><span class="mk mk-none" aria-hidden="true"></span><span class="sr">Absent: </span></td><td data-label="If dropped" class="verdict"><span class="pill pill-lost">Lost</span> Lost; it could become an optional list</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="glossary">MMM = <em>The Mythical Man-Month</em> (Brooks). F&amp;F = <em>Facts and Fallacies of Software Engineering</em> (Glass). Webster #N = the course's Nth set of Webster essays. CPS = Creative Problem Solving (Osborn–Parnes), the diverge-then-converge method today's CS 380 is built on. In CS 380 v2, "13B" means Week 13, second meeting. <code>[E]</code>/<code>[A]</code> is today's CS 380 convention for tagging a claim as observed evidence or an assumption.</p>
+</main>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll('.filters button');
+  var rows = document.querySelectorAll('tbody tr');
+  function apply(f) {
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.f === f)); });
+    var lastGrp = null, any = false;
+    rows.forEach(function (r) {
+      if (r.classList.contains('grp')) { if (lastGrp) lastGrp.hidden = !any; lastGrp = r; any = false; return; }
+      var show = f === 'all' || r.dataset.v === f; r.hidden = !show; if (show) any = true;
+    });
+    if (lastGrp) lastGrp.hidden = !any;
+    try { localStorage.setItem('cs428-filter', f); } catch (e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { apply(b.dataset.f); }); });
+  var saved = 'all'; try { saved = localStorage.getItem('cs428-filter') || 'all'; } catch (e) {}
+  if (saved !== 'all') apply(saved);
+})();
+</script>
