@@ -202,7 +202,7 @@ async function build() {
   header(s, "After class, tonight", "Revise the plan from the sheet");
   const rev = [
     [FA.FaCut, "Move one thing to deferred", "If your reviewer named a cut, take it or say in the plan why not"],
-    [FA.FaListOl, "Tighten the demo script", "Three lines, the claims in rank order, nothing that only shows a screen"],
+    [FA.FaListOl, "Tighten the demo script", "Three beats, most important claim first; each one shows something working, not just a page"],
     [FA.FaShieldAlt, "Add the fallback", "Seed data ready, local mode tested; the clip only if declared"]
   ];
   for (let i = 0; i < 3; i++) {
@@ -221,7 +221,7 @@ async function build() {
     { text: "This is the version scored, as CP10's MVP plan quality criterion. Change it later if you must, visibly: the demo is judged against the plan as amended.", options: { color: "CBD8E6" } }
   ], { x: 0.95, y: 5.2, w: 11.4, h: 1.5, fontFace: F.body, fontSize: 17, valign: "middle", margin: 0, lineSpacingMultiple: 1.05 });
   footer(s);
-  s.addNotes("One minute, as the review closes. The revision used to happen in class; it's homework now, so say what a revision is: at least one thing moved or tightened. The navy box answers the question students ask: yes, this one is graded. The Canvas entry is complete or incomplete, but the plan is scored once, from tonight's version, inside CP10. Later amendments change what the demo is judged against, not this score.");
+  s.addNotes("One minute, as the review closes. The revision used to happen in class; it's homework now, so say what a revision is: at least one thing moved or tightened. On the script: it's the plan's three-line demo script, ordered by the ranked claims, so if time runs out or something breaks, the claim that matters most is already proven. Each beat must show something happen (a record saved and back, a user finishing unaided), not tour a page a mockup could show. The navy box answers the question students ask: yes, this one is graded. The Canvas entry is complete or incomplete, but the plan is scored once, from tonight's version, inside CP10. Later amendments change what the demo is judged against, not this score.");
 
   // 8 Why a cold test
   s = mk(); s.background = { color: C.white };
