@@ -7,7 +7,7 @@
 - **Re-skim:** Kawasaki's [*10/20/30*](https://guykawasaki.com/the_102030_rule/) — the rules haven't changed; the stakes have.
 **Maps to:** Design Week 14, Session A — *demo dry-run with peer feedback; tighten the three final questions.*
 
-> **Status: OUTLINE (v2, Nov 6) · deck built** (`canvas_material/lectures/powerpoint/Session26-DryRun.pptx`, 9 slides, `tools/build-session26.js`: title · today · rehearse under the real conditions · two roles when watching · fifteen minutes per project · run order (type the draw in) · up next, the three questions (between runs) · debrief: the polish plan · wrap). *v2 (Tom's notes, Nov 6): the **Dry-Run Score Sheet** and the **question bank** are built; the polish plan has **no item limit** (the real constraint is rehearsal: anything on the demo path lands by the end of Wednesday's studio so it is run at least once before the tag); **opt-in recording** added; students are told what to expect at the end of Session 25. Synced Nov 2 with CP12: 9-min pitch + 5-min Q&A on Demo Day, `cp12-demo` tag by 11:59 pm Thu Dec 10, Demo Day Mon Dec 14 8:30–10:00, no peer evaluations this term, no capstone carry-forward language student-facing yet.* Full-dress rehearsal for Demo Day (Mon, Dec 14, 8:30–10:00 AM, capstone faculty invited). Every project runs the complete pitch + live demo under Demo-Day conditions; peers score against the three questions; the fixes between now and the tag get aimed.
+> **Status: OUTLINE (v2, Nov 6; course-evaluation slide added Nov 16) · deck built** (`canvas_material/lectures/powerpoint/Session26-DryRun.pptx`, 10 slides, `tools/build-session26.js`: title · today · rehearse under the real conditions · two roles when watching · fifteen minutes per project · run order (type the draw in) · up next, the three questions (between runs) · debrief: the polish plan · wrap · course evaluation). *v2 (Tom's notes, Nov 6): the **Dry-Run Score Sheet** and the **question bank** are built; the polish plan has **no item limit** (the real constraint is rehearsal: anything on the demo path lands by the end of Wednesday's studio so it is run at least once before the tag); **opt-in recording** added; students are told what to expect at the end of Session 25. Synced Nov 2 with CP12: 9-min pitch + 5-min Q&A on Demo Day, `cp12-demo` tag by 11:59 pm Thu Dec 10, Demo Day Mon Dec 14 8:30–10:00, no peer evaluations this term, no capstone carry-forward language student-facing yet.* Full-dress rehearsal for Demo Day (Mon, Dec 14, 8:30–10:00 AM, capstone faculty invited). Every project runs the complete pitch + live demo under Demo-Day conditions; peers score against the three questions; the fixes between now and the tag get aimed.
 
 ---
 
@@ -53,7 +53,7 @@ By the end of this session, a student can:
 
 ### 3. Debrief — the polish plan — 8 min
 - Each project reads its sheets and writes the **polish plan**: every fix the sheets point to, **ranked** by how much it improves one of the three answers, each one polish-sized (tighten the open, pre-stage the login, cut a slide, fix the bug the demo hit) — *no new features, no re-architecture.* There's no item limit: there are four days until the tag, and a long list worked from the top is fine.
-- **The constraint that matters is rehearsal.** A change you haven't run through since making it is a Demo Day risk. So anything on the **demo path** (code, data, setup) lands by the end of **Wednesday's studio**, where the full run happens once more; slides, speaking notes, and docs can change through Thursday night. Mark each item on the plan *demo path* or *not*.
+- **The constraint that matters is rehearsal.** A change you haven't run through since making it is a Demo Day risk. So anything on the **demo path** (code, data, setup) should land by the end of **Wednesday's studio**, where each student runs their demo through once more on their own laptop (no class run); a little demo-path work after that is fine if the student runs the whole demo again before tagging. Docs can change until the tag (Thursday night); **slides, speaking notes, and rehearsal aren't in the tag** and can continue right up to Demo Day *(Tom, Nov 16)*. Mark each item on the plan *demo path* or *not*.
 - **What "on the demo path" means (for the instructor; say the test aloud).** The demo path is everything that decides what appears on screen between the presenter's first click and their last in the live walk-through. A change is on it if it touches:
   - **the code the walk-through runs:** the screens, routes, queries, and logic the demo script steps through, *and anything they call*, including shared modules and dependency upgrades, even when the file looks unrelated;
   - **the data it shows:** seed scripts, fixtures, the database or its state, uploaded sample files;
@@ -61,12 +61,13 @@ By the end of this session, a student can:
 
   **Off the path:** slides, speaking notes, the README, roadmap, known-issues log and other docs, issues and labels, and code the walk-through never reaches. *Example:* fixing a typo in the roadmap is off the path; renaming a CSS class the search page uses is on it; bumping a library version is on it even if no demo file changes.
   - **The test to give students:** *would I have to run the demo again to know this didn't break it?* Yes, or not sure, means demo path.
-  - **Why it matters:** a demo-path change made after the last full run is unrehearsed, and that's how a demo that worked Monday breaks on Demo Day. So demo-path changes land by the end of Wednesday's studio, where everyone does one more full run against `main`. After that, only off-path changes until the tag. If a demo-path fix can't wait (the demo is actually broken), the student makes it and then runs the whole demo once more before tagging. After the tag, a demo-breaking hotfix needs instructor approval, an issue, and a new tag (CP12).
+  - **Why it matters:** a demo-path change made after the last full run is unrehearsed, and that's how a demo that worked Monday breaks on Demo Day. So demo-path changes should land by the end of Wednesday's studio, where each student runs their demo through once more against `main`, on their own. Freeze as much as possible; a demo-path change after Wednesday is allowed, but the student runs the whole demo once more before tagging. After the tag, a demo-breaking hotfix needs instructor approval, an issue, and a new tag (CP12).
 - Round-the-room: each project names its top fix aloud (commitment device).
 
-### 4. Wrap — logistics — 3 min
+### 4. Wrap — logistics + course evaluation — 3 min
 - **Wed Dec 9:** final studio — polish plan executed, repo/doc cleanup. **Thu Dec 10, 11:59 pm:** `cp12-demo` tag pushed (last day of classes).
 - **Demo Day: Mon, Dec 14, 8:30–10:00 AM** — room, A/V, order, faculty attending. Arrive early; load early.
+- **Course evaluation (one slide, ≤ 1 min, nothing done in class):** BYU's course evaluation takes a few minutes on their own time. The feedback Tom wants in it: *what should change, and what should stay*, named specifically (a session, an assignment, a reading). This is the course's first run. *(Moved here from Session 27, Nov 16.)*
 
 ---
 
@@ -89,7 +90,7 @@ By the end of this session, a student can:
 
 ## Deliverable / after class
 
-- Polish plan written and ranked, demo-path items marked. **Wed Dec 9:** final studio; demo-path changes done and run once. **Thu Dec 10, 11:59 pm:** `cp12-demo` tag.
+- Polish plan written and ranked, demo-path items marked. **Wed Dec 9:** final studio; demo-path changes done and each demo run through once, solo. **Thu Dec 10, 11:59 pm:** `cp12-demo` tag.
 - **Mon, Dec 14, 8:30–10:00 AM:** **CP12 Final Pitch + Demo** — the mastery artifact, defended.
 
 ---

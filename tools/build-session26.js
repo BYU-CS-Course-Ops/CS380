@@ -141,7 +141,7 @@ async function build() {
     [FA.FaRandom, "Framing, and the draw for run order", "4 min"],
     [FA.FaPlay, "Four dry runs, fifteen minutes each", "60 min"],
     [FA.FaListOl, "Debrief: your polish plan", "8 min"],
-    [FA.FaRoute, "The last week", "3 min"]
+    [FA.FaRoute, "The last week, and your course evaluation", "3 min"]
   ];
   for (let i = 0; i < plan.length; i++) {
     const y = 2.0 + i * 0.95;
@@ -261,23 +261,34 @@ async function build() {
   numRow(s, 4.65, 0.8, 4, "Say your top fix out loud.", "One sentence each, round the room.");
   bar(s, 5.7, 1.05, C.amber, null, "No limit on the list. The limit is rehearsal: a change you haven't run since you made it is a Demo Day risk.", null);
   footer(s);
-  s.addNotes("Eight minutes. There's no cap on the number of fixes: there are four days to the tag, and a long list worked from the top is fine. What matters is that every change to the demo path gets rehearsed, which is why those land by the end of Wednesday's studio. Demo path is anything that changes what's on screen during the walk-through: its code and anything that code calls, its data, and what it runs on. Give them the test: would I have to run the demo again to know this didn't break it? Yes or not sure means demo path. Rove and push back on anything that's really a feature. The round-the-room top fix is a commitment device; keep it to one sentence.");
+  s.addNotes("Eight minutes. There's no cap on the number of fixes: there are four days to the tag, and a long list worked from the top is fine. What matters is that every change to the demo path gets rehearsed, which is why they should land by the end of Wednesday's studio; one after that is fine if they run the whole demo again before tagging. Demo path is anything that changes what's on screen during the walk-through: its code and anything that code calls, its data, and what it runs on. Give them the test: would I have to run the demo again to know this didn't break it? Yes or not sure means demo path. Rove and push back on anything that's really a feature. The round-the-room top fix is a commitment device; keep it to one sentence.");
 
   // 9 Wrap
   s = mk(); s.background = { color: C.navy };
   s.addShape(pres.shapes.OVAL, { x: -1.3, y: 5.2, w: 3.6, h: 3.6, fill: { color: "1C3252" } });
   await iconCircle(s, FA.FaStopwatch, 0.9, 0.85, 0.85, C.amber, C.navy);
-  s.addText("Freeze the demo Wednesday. Polish the words through Thursday.", { x: 0.9, y: 1.85, w: 11.9, h: 0.8, color: C.white, fontFace: F.head, fontSize: 25, bold: true, italic: true, margin: 0 });
+  s.addText("Freeze the demo Wednesday. Tag Thursday. Polish the talk until Monday.", { x: 0.9, y: 1.85, w: 11.9, h: 0.8, color: C.white, fontFace: F.head, fontSize: 25, bold: true, italic: true, margin: 0 });
   s.addText("THE LAST WEEK", { x: 0.92, y: 2.85, w: 11, h: 0.35, color: C.amber, fontFace: F.body, fontSize: 14, bold: true, charSpacing: 2, margin: 0 });
   s.addText([
-    { text: "Wednesday, Dec 9: final studio. Demo-path changes done, and the full run once more", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
+    { text: "Wednesday, Dec 9: final studio. Demo-path changes done, and run your demo through once on your own", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6 } },
     { text: "Thursday, Dec 10, 11:59 pm: cp12-demo tag pushed. Demo Day runs from it", options: { bullet: { indent: 16 }, breakLine: true, paraSpaceAfter: 6, bold: true, color: C.white } },
     { text: "Monday, Dec 14, 8:30–10:00 AM: Demo Day. Arrive early, load early", options: { bullet: { indent: 16 }, bold: true, color: C.white } }
   ], { x: 0.95, y: 3.27, w: 11.7, h: 2.2, color: "CBD8E6", fontFace: F.body, fontSize: 17, valign: "top", margin: 0 });
   card(s, 0.6, 5.95, 12.1, 0.8, C.amber);
   s.addText("Watch your recording, if you made one, before Wednesday.", { x: 0.9, y: 5.95, w: 11.5, h: 0.8, color: C.navy, fontFace: F.body, fontSize: 17, bold: true, align: "center", valign: "middle", margin: 0 });
   footer(s, "7E92A8");
-  s.addNotes("Three minutes. The one-liner is the whole plan: anything a user would see in the demo is frozen after Wednesday's run, and the words can keep improving until the tag. Thursday night the tag freezes everything; after that, a demo-breaking hotfix needs my approval, an issue, and a new tag. Demo Day starts at 8:30; ask everyone to be in the room by 8:20 to load. Collect nothing: the sheets go home with the presenters.");
+  s.addNotes("Two minutes. The one-liner is the whole plan: freeze as much of the demo as you can by Wednesday's run, and if something on the demo path changes after that, run the whole demo again before tagging. Thursday night the tag freezes the repository, docs included. Slides, speaking notes, and rehearsal aren't in the tag, so they can keep improving until Monday. After the tag, a demo-breaking hotfix needs my approval, an issue, and a new tag. Demo Day starts at 8:30; ask everyone to be in the room by 8:20 to load. Collect nothing: the sheets go home with the presenters. Then one more slide, the course evaluation, and you're done.");
+
+  // 10 Course evaluation
+  s = mk(); s.background = { color: C.white };
+  header(s, "Before you go", "Your course evaluation, and what I'd like in it");
+  pairCards(s, 2.05, 2.75, [
+    ["BYU COURSE EVALUATION", "A few minutes, on your own time", "Nothing about it happens in class. Look for the link in your BYU email.", C.cardBg, C.teal],
+    ["WHAT I'D LIKE IN IT", "What should change, and what should stay?", "Be specific: a session, an assignment, a reading, a sheet. \"The git lab needed a second day\" helps more than \"more time.\"", C.navy, C.amber]
+  ]);
+  bar(s, 5.2, 0.85, C.amber, null, "This is the course's first run. What you write shapes the next one.", null);
+  footer(s);
+  s.addNotes("One minute, at most; nothing gets done in class. Remind them the BYU evaluation takes a few minutes on their own time. Then say what you want from it: what should change and what should stay, named specifically, because \"more time\" can't be acted on and \"the git lab needed a second day\" can. Mention that this is the course's first run, so their answers directly shape the next one. Then end the session; Wednesday is studio.");
 
   const OUT = "Session26-DryRun.pptx";
   await pres.writeFile({ fileName: OUT });

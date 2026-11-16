@@ -1,0 +1,79 @@
+## Before class
+
+1. **Bring Monday's polish plan**, ranked, with the demo-path items done or nearly done.
+2. **Bring your Launch Package Checklist** from the launch studio. You'll run it again today. Lost it? There are spares in class, and it's posted here: <file path="../../resources/Launch-Package-Checklist.pdf" canvas_folder="Course Handouts" />
+3. **Bring the laptop you'll demo from**, with the demo running from `main` and your fallback ready.
+4. **Watch your dry-run recording**, if you made one.
+
+---
+
+## Purpose
+
+Every project ends twice: once when the work stops, and once when it's ready to stand behind. Teams at work call the second one a release: check the release candidate the way users will meet it, clean up what's been left lying around, tag it, and stop. Plenty of good projects never ship, because nobody decided they were done. Deciding is part of the job, and on a project you found, it's yours to make.
+
+Today is the second ending. You finish the polish plan and check it on `main`. You give the repository a last cleanup pass, the one a stranger opening it months from now will silently thank you for. Then you freeze it with a tag. *(In this course, that's the `cp12-demo` tag for <course-link type="assignment" id="cp12">CP12</course-link>, which Demo Day runs from.)* We end with a few minutes that look back at the first day on purpose.
+
+---
+
+## Learning objectives
+
+By the end of this session, you'll be able to:
+
+1. **Finish a polish plan without scope creep**, checking each fix on the branch you'll release.
+2. **Run a final cleanup pass** on a repository: everything true, nothing left hanging.
+3. **Freeze deliberately:** tag the release, declare it done, and let it stand.
+4. **Say what you founded, and who it's for**, in one sentence.
+
+---
+
+## What we'll do together
+
+**Standup (5 minutes).** Sixty seconds each: your polish plan from the top. Each item is *done*, *in flight* (say when it lands), or *at risk* (finish it or drop it, decided now). A dropped polish item costs you nothing. A half-finished one on Demo Day can cost you the demo.
+
+**What freezes when.**
+- **Your repository** (code, data, setup, docs) freezes with the tag, **{{ CP12_TAG_DUE_DAY }}, {{ CP12_TAG_DUE }}, 11:59 pm**.
+- **The demo path:** aim to finish it today, so your own run-through in the work block covers it. A change after today is fine, as long as you run the whole demo again before you tag.
+- **Slides, speaking notes, and rehearsal** aren't in the tag. Keep improving them right up to Demo Day.
+
+**Polish and verify (25 minutes).** Work the plan from the top, and check every fix **on `main`**, not on a branch and not from memory. `main` is what the tag will capture. Before the block ends, **run your whole demo once, start to finish, at your desk** (not for the room), then test your fallback: is the seed data there, does the clip load? If something breaks now, you found it today instead of on Demo Day.
+
+**Final cleanup and freeze (25 minutes).** This is about truth and loose ends, not new writing.
+- **Re-run your Launch Package Checklist against `main` as it stands today.** Anything that slipped since your launch tag gets fixed or logged: the README's status, the known-issues log (including anything the dry run found), your `good first issue` set, the roadmap.
+- **Then three checks the launch list doesn't have:**
+  - **Branches:** stale ones deleted. Any branch you keep links to an issue or a draft pull request that says what it's for.
+  - **Pull requests:** every open one merged, or closed with a comment. Nothing left hanging.
+  - **The board:** it matches reality. Done is done; leftovers are on the roadmap or labeled for newcomers.
+- **Freeze.** If you're ready, tag in class and tell me you're done. Otherwise, tag by **{{ CP12_TAG_DUE_DAY }}, {{ CP12_TAG_DUE }}, 11:59 pm** at the latest:
+  ```
+  git switch main && git pull
+  git tag -a cp12-demo -m "CP12: Demo Day"
+  git push origin cp12-demo
+  ```
+  The tag is the artifact of record: the demo runs from it, invited faculty browse it, and grading reads it. After the deadline it doesn't move. A demo-breaking hotfix needs my approval, an issue that describes it, and a new tag.
+
+**Demo Day logistics (8 minutes).** We'll walk through them once and settle any questions in the room:
+
+- **When:** {{ DEMO_DAY_DAY }}, {{ DEMO_DAY_DATE }}, {{ DEMO_DAY_START }}–{{ DEMO_DAY_END }}. Be in the room 10 minutes early to load.
+- **Where:** {{ CLASSROOM }}, our usual classroom.
+- **Run order:** drawn at random that morning. Be ready to go first.
+- **Each project:** 9 minutes for the pitch and live demo, 5 minutes of questions, 2 minutes to swap.
+- **Who's there:** your classmates, me, and invited capstone faculty.
+
+Demo from your `cp12-demo` tag, with your fallback loaded.
+
+**Close the loop (12 minutes).** On the first day you heard: *"Nearly every big open-source project you rely on started as one or two people deciding a problem was worth solving. This semester, that's you."* Today you answer it, in one sentence: **what did you found, and who is it for?**
+
+---
+
+## What you'll leave with
+
+- **A finished polish plan**, every fix checked on `main`, and a demo you've run through end to end since your last change.
+- **A clean repository**, true from the README to the board, and a `cp12-demo` tag pushed, or a plan to push it by Thursday night.
+- **The founder's portfolio, end to end:** a discovery trail, a defended proposal, a design, a governed repository, a working first version, a launch package, and on Monday, a public demo. Every piece has a link you can send someone.
+
+The repository is public, the on-ramps are built, and the roadmap is an invitation. What happens to your project next is a decision, and it's yours.
+
+### Coming up
+
+- **{{ CP12_TAG_DUE_DAY }}, {{ CP12_TAG_DUE }}, 11:59 pm:** push your `cp12-demo` tag. See <course-link type="assignment" id="cp12">CP12</course-link> for the details.
+- **{{ DEMO_DAY_DAY }}, {{ DEMO_DAY_DATE }}, {{ DEMO_DAY_START }}: Demo Day** in {{ CLASSROOM }}. Arrive early, load early, and answer the three questions: *What need does this serve? What has been built? Where does it go next, and how can others join you in building it?*

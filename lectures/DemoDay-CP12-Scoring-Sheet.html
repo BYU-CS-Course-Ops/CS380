@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CP12 Scoring Sheet</title>
+<style>
+  @page { size: letter landscape; margin: 0.4in 0.45in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; color: #1E2A36; font-size: 10pt; line-height: 1.18; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-end;
+          border-bottom: 2pt solid #12908F; padding-bottom: 3pt; margin-bottom: 5pt; }
+  h1 { font-family: Cambria, Georgia, serif; font-size: 17pt; color: #14233A; margin: 0; letter-spacing: -0.2pt; }
+  .kicker { font-size: 8pt; color: #5F7284; letter-spacing: 0.4pt; text-transform: uppercase; margin: 0 0 1pt 0; }
+  .tag { font-size: 8.4pt; color: #5F7284; font-style: italic; padding-bottom: 2pt; }
+
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+
+  /* rubric summary */
+  table.rub { margin-bottom: 7pt; background: #F2F6F8; }
+  table.rub th { font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284; text-align: left;
+                 padding: 2pt 4pt; border-bottom: 1pt solid #12908F; }
+  table.rub th .lv { color: #0E6E6D; }
+  table.rub td { font-size: 8.4pt; padding: 1.6pt 4pt; border-bottom: 0.5pt solid #DCE5EB; vertical-align: top; }
+  table.rub td.cn { font-weight: bold; color: #14233A; }
+  table.rub td.w { text-align: center; font-weight: bold; color: #0E6E6D; }
+  .p { color: #12908F; font-size: 7.6pt; padding-left: 3pt; }
+
+  /* scoring grid */
+  table.grid th { font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.3pt; color: #5F7284; font-weight: bold;
+       text-align: center; padding: 0 2pt 3pt 2pt; border-bottom: 1.2pt solid #12908F; vertical-align: bottom; }
+  table.grid th.l { text-align: left; }
+  .wt { color: #0E6E6D; text-transform: none; font-size: 8.4pt; }
+  table.grid td { border: 0.6pt solid #C9D6DF; height: 0.52in; vertical-align: top; position: relative; padding: 2pt 3pt; }
+  td.num { text-align: center; vertical-align: middle !important; font-family: Cambria, Georgia, serif;
+           font-weight: bold; color: #12908F; font-size: 11pt; border-left: 0 !important; }
+  .time { position: absolute; left: 3pt; bottom: 2pt; font-size: 7pt; color: #9BB0BF; }
+  td.sc { text-align: center; }
+  .box { position: absolute; left: 50%; top: 50%; width: 0.36in; height: 0.3in; margin: -0.15in 0 0 -0.18in;
+          border: 0.9pt solid #12908F; border-radius: 2pt; background: #F2F6F8; }
+  td.tot { background: #FBF6EC; }
+
+  .foot { margin-top: 5pt; font-size: 8pt; color: #5F7284; display: flex; justify-content: space-between; gap: 10pt; }
+  .foot b { color: #14233A; }
+  table.grid th.grp { border-bottom: 0; padding-bottom: 1pt; font-size: 7.4pt; color: #0E6E6D; }
+  table.grid th.grp.live { color: #D9614C; }
+  td.carry { background: #F7F9FA; }
+  table.rub td.when { font-size: 7.6pt; color: #5F7284; font-style: italic; }
+  .when { font-weight:normal; font-size:7.4pt; color:#5F7284; font-style:italic; }
+  table.grid td { height: 0.62in; }
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="kicker">CS 301R · Demo Day · instructor sheet</div>
+      <h1>CP12 Scoring Sheet</h1>
+    </div>
+    <div class="tag">One row per project · 9 + 5 min · scored live, checked against the tag and retrospective · transfer to SpeedGrader</div>
+  </div>
+
+  <table class="rub">
+    <colgroup><col style="width:1.85in"><col style="width:0.42in"><col><col><col><col></colgroup>
+    <tr><th>Criterion</th><th style="text-align:center">Wt</th>
+      <th><span class="lv">4 · Exemplary</span></th><th><span class="lv">3 · Proficient</span></th>
+      <th><span class="lv">2 · Developing</span></th><th><span class="lv">1 · Beginning</span></th></tr>
+<tr><td class="cn">“What need does this serve?”</td><td class="w">20</td><td>A specific user and a vivid need; evidence from discovery <i>and</i> from people who used it <span class="p">· 20 pts</span></td><td>A clear need with evidence, mostly from discovery or a little thin <span class="p">· 15 pts</span></td><td>Stated but vague, or asserted without evidence <span class="p">· 10 pts</span></td><td>No recognizable user or need <span class="p">· 5 pts</span></td></tr>
+<tr><td class="cn">“What has been built?”<br><span class="when">live demo · heaviest</span></td><td class="w">25</td><td>Claim first; slice walked smoothly, live, from the tag; what it doesn't do yet named; fallback, not restart <span class="p">· 25 pts</span></td><td>Works live with minor hiccups or a loose frame; or a declared clip run calmly (cap) <span class="p">· 18.75 pts</span></td><td>Shaky or partial; unframed, or a failure with no fallback <span class="p">· 12.5 pts</span></td><td>No working demo <span class="p">· 6.25 pts</span></td></tr>
+<tr><td class="cn">“Where next, and how can others join?”</td><td class="w">20</td><td>Next steps a listener believes; the on-ramp <i>shown</i> in the repo; claims only what the foundation supports <span class="p">· 20 pts</span></td><td>Clear next steps and a way to join, a little general <span class="p">· 15 pts</span></td><td>Thin, or a wish list disconnected from the roadmap <span class="p">· 10 pts</span></td><td>Missing, or promises the code can't support <span class="p">· 5 pts</span></td></tr>
+<tr><td class="cn">Integration</td><td class="w">15</td><td>One story: what discovery found visibly shaped what was built and where it goes <span class="p">· 15 pts</span></td><td>Mostly coherent; a stage or two loosely tied <span class="p">· 11.25 pts</span></td><td>Stages presented as separate reports <span class="p">· 7.5 pts</span></td><td>No through-line <span class="p">· 3.75 pts</span></td></tr>
+<tr><td class="cn">Persuasiveness &amp; delivery</td><td class="w">10</td><td>Clear, persuasive, well-paced, inside 9 minutes <span class="p">· 10 pts</span></td><td>Solid; a rough patch or a little over time <span class="p">· 7.5 pts</span></td><td>Uneven, hard to follow, or well over time <span class="p">· 5 pts</span></td><td>Unprepared <span class="p">· 2.5 pts</span></td></tr>
+<tr><td class="cn">Q&amp;A handling</td><td class="w">10</td><td>Direct and honest, incl. “we don't know yet; here's how we'd find out”; matches the retrospective <span class="p">· 10 pts</span></td><td>Most handled well; one answer vague or evasive <span class="p">· 7.5 pts</span></td><td>Struggles, deflects, or contradicts the retrospective <span class="p">· 5 pts</span></td><td>Can't engage the questions <span class="p">· 2.5 pts</span></td></tr>
+  </table>
+
+  <table class="grid">
+    <colgroup>
+      <col style="width:0.28in"><col style="width:1.55in">
+      <col><col><col><col><col><col>
+      <col style="width:0.55in"><col style="width:2.7in">
+    </colgroup>
+    <tr><th></th><th></th><th class="grp live" colspan="6">Live, at Demo Day</th><th></th><th></th></tr>
+    <tr><th class="l">#</th><th class="l">Project</th><th>Need<br><span class="wt">20%</span></th><th>Built (demo)<br><span class="wt">25%</span></th><th>Next &amp; join<br><span class="wt">20%</span></th><th>Integration<br><span class="wt">15%</span></th><th>Delivery<br><span class="wt">10%</span></th><th>Q&amp;A<br><span class="wt">10%</span></th><th>Total<br><span class="wt">/100</span></th><th class="l">Notes: clip declared? room failed? the hardest question, and the answer</th></tr>
+<tr><td class="num">1</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">2</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">3</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+<tr><td class="num">4</td><td class="pitch"><span class="time">time ____ : ____</span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="sc"><span class="box"></span></td><td class="tot"></td><td class="cm"></td></tr>
+  </table>
+
+  <div class="foot">
+    <span><b>Boxes take a level, 4–1</b> (0 = absent). Points = weight × level ÷ 4, the small numbers above; Canvas does the math. A declared clip caps <b>Built</b> at 3 unless the room failed. Score <b>Q&amp;A</b> against the retrospective: a well-evidenced “it held” earns as much as a well-evidenced “it didn't.” Check the repo at <b>cp12-demo</b>, not main. A minimally competent final presentation is required to pass the course. Faculty sheets are separate and don't enter the grade.</span>
+    <span style="white-space:nowrap">CS 301R</span>
+  </div>
+</body>
+</html>
